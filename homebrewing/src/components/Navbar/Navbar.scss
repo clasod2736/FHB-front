@@ -1,0 +1,393 @@
+.fixedNavbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 60%;
+    height: 4.5%;
+    margin: 20px;
+    margin-top: 0.7%;
+    border: 2px  #88796f solid;
+    border-radius: 20px;
+    background-color:#F9F6EA;
+    position: fixed;
+    z-index: 1;
+
+    padding-inline: 2%;
+
+    .navTitle {
+        display: flex;
+        width: auto;
+        font-size: 28px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        color: #582707;
+        text-shadow: 2px 2px #9F9980;
+        letter-spacing: 1px;
+        margin-block: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        -webkit-user-select: none;
+        transform: translateX(10%);
+    }
+    .guide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #A86B43;
+    letter-spacing: 2px;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+        color: #86481f;
+        transition: 0.2s;
+        }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 3px;
+        left: 0;
+        background-color: #86481f;
+        transform-origin: bottom;
+        transition: transform 0.25s ease-out;
+        }
+    &:hover::after {
+        color: #A86B43;
+        transform: scaleX(1);
+        transform-origin: bottom;
+        }
+    }
+    .shop {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        outline: none;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #A86B43;
+        letter-spacing: 2px;
+    
+        &:hover {
+            color: #86481f;
+            transition: 0.2s;
+            }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 2px;
+            left: 0;
+            background-color: #86481f;
+            transform-origin: bottom;
+            transition: transform 0.25s ease-out;
+            }
+        &:hover::after {
+            color: #A86B43;
+            transform: scaleX(1);
+            transform-origin: bottom;
+            }
+        }
+    .cart {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        outline: none;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #A86B43;
+        letter-spacing: 2px;
+    
+        &:hover {
+            color: #86481f;
+            transition: 0.2s;
+            }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0px;
+            left: 0;
+            background-color: #86481f;
+            transform-origin: bottom;
+            transition: transform 0.25s ease-out;
+            }
+        &:hover::after {
+            color: #A86B43;
+            transform: scaleX(1);
+            transform-origin: bottom;
+            }
+        }
+    .accounts {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        outline: none;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #A86B43;
+        letter-spacing: 2px;
+    
+        &:hover {
+            color: #86481f;
+            transition: 0.2s;
+            }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0px;
+            left: 0;
+            background-color: #86481f;
+            transform-origin: bottom;
+            transition: transform 0.25s ease-out;
+            }
+        &:hover::after {
+            color: #A86B43;
+            transform: scaleX(1);
+            transform-origin: bottom;
+            }
+        }
+    }
+    .shopMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 10%;
+        height: 10vh;
+        padding: 1%;
+        position: absolute;
+        top: 110%;
+        left: 20%;
+        border: #A86B43 3px solid;
+        border-radius: 20px;
+        color: #86481f;
+        font-size: 20px;
+        list-style: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        animation:  opacity 0.3s;
+        transition: 0.3s;
+        li {
+            margin-block: 3%
+        }
+    }
+
+
+// 슬라이드 메뉴(리액트 부트스트랩)
+// .menuBtn {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 30px;
+//     margin-left: 20px;
+//     color: #A86B43;
+//     background-color: transparent;
+//     border: none;
+//     transition: all 0.3s linear;
+//     cursor: pointer;
+// }
+
+// .menuBtn:hover {
+//     transform: scale(1.1);
+//     transition: 0.3s;
+//     color: #86481f;
+// }
+
+
+// 호버링시 밑줄 생기는 효과
+// .result {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-right: 30px;
+//     text-decoration: none;
+//     outline: none;
+//     font-size: 18px;
+//     font-family: Arial, Helvetica, sans-serif;
+//     color: #A86B43;
+//     letter-spacing: 2px;
+// }
+
+// .result:hover {
+//     color: #86481f;
+//     transition: 0.2s;
+// }
+
+// .result:after {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     transform: scaleX(0);
+//     height: 1px;
+//     bottom: 2px;
+//     left: 0;
+//     background-color: #86481f;
+//     transform-origin: bottom;
+//     transition: transform 0.25s ease-out;
+//   }
+
+// .result:hover::after {
+//     color: #A86B43;
+//     transform: scaleX(1);
+//     transform-origin: bottom;
+// }
+
+// 드롭다운 구현 해봤음 (드롭다운 애니메이션은 구현됬지만 되돌아오는 애니메이션은 실패.)
+
+// .menuContainer {
+//     display: flex;
+//     position: relative;
+//     top: 70px;
+//     flex-direction: row;
+//     width: 46%;
+//     height: 20%;
+// }
+
+// .show-menu {
+//     display: flex;
+//     position: fixed;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: flex-start;
+//     width: 80px;
+//     height: 20%;
+//     z-index: 100;
+//     padding: 0;
+//     margin-bottom: 0;
+//     margin-top: 10px;
+
+//     animation: 0.5s slidein ease;
+// }
+
+// @keyframes slidein {
+//     0% {
+//       margin-bottom: 100%;
+//       height: 0%;
+//       opacity: 0;
+//     }
+
+//     40% {
+//         opacity: 0;
+//     }
+//     100% {
+//       margin-bottom: 0%;
+//       height: 20%;
+//     }
+//   }
+
+//   @keyframes slideout {
+//     0% {
+//       margin-bottom: 100%;
+//       height: 0%;
+//       opacity: 0;
+//     }
+
+//     40% {
+//         opacity: 0;
+//     }
+//     100% {
+//       margin-bottom: 0%;
+//       height: 20%;
+//     }
+//   }
+
+// .hide-menu {
+//     display: none;
+// }
+
+// .menus {
+//     display: flex;
+//     width: 10px;
+//     font-family: Arial, Helvetica, sans-serif;
+//     font-size: 21px;
+//     font-weight: lighter;
+//     color: #975734;
+//     margin: 10px;
+//     list-style-type: none;
+//     padding: none;
+//     cursor: pointer;
+//     letter-spacing: 2px;
+// }
+
+// .menus:hover {
+//     transform: scale(1.1);
+//     color: brown;
+//     transition: 0.5s;
+// }
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-height: 900px) {
+
+    .fixedNavbar {
+        width:60%;
+        height: auto;
+    }
+
+    #navTitle {
+        width: 20%;
+        font-size: 25px;
+    }
+
+    .result {
+        font-size: 15px;
+    }
+
+    .menuBtn {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1900px) {
+
+    .fixedNavbar {
+        width: 60%;
+        height: auto;
+    }
+
+    #navTitle {
+        width: 30%;
+        font-size: 25px;
+    }
+
+    .result {
+        font-size: 15px;
+    }
+
+    .menuBtn {
+        font-size: 23px;
+    }
+}

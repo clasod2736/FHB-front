@@ -1,0 +1,248 @@
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 76vh;
+}
+.registerContainer .register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 80%;
+  margin-top: 5%;
+  animation: opacity 0.5s;
+}
+.registerContainer .register header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  font-size: 60px;
+  text-align: center;
+  color: rgb(137, 85, 48);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  padding-bottom: 1%;
+  border-bottom: #9c7c65 2px solid;
+}
+.registerContainer .register .contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 55%;
+  padding-top: 0.5%;
+}
+.registerContainer .register .contents .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 55%;
+  height: 100%;
+  padding-left: 1%;
+  padding-top: 2%;
+}
+.registerContainer .register .contents .form .getRegist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 12%;
+}
+.registerContainer .register .contents .form .getRegist button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 48%;
+  border: darkgoldenrod 2px solid;
+  border-radius: 5px;
+  background: wheat;
+  color: brown;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.registerContainer .register .contents .form .getRegist button:hover {
+  background-color: burlywood;
+}
+.registerContainer .register .contents .form .getRegist button .googleLogo {
+  font-size: 25px;
+  margin-right: 5%;
+  color: brown;
+}
+.registerContainer .register .contents .form .getRegist button .fbLogo {
+  font-size: 25px;
+  margin-right: 5%;
+  color: brown;
+}
+.registerContainer .register .contents .form .divide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(156, 89, 41);
+}
+.registerContainer .register .contents .form .divide p {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.registerContainer .register .contents .form .name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 13%;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.registerContainer .register .contents .form .name input {
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding-left: 3%;
+  text-align: left;
+  background-color: transparent;
+  outline: none;
+  color: saddlebrown;
+  border: rgb(190, 145, 29) 2px solid;
+  border-radius: 5px;
+  background-color: wheat;
+}
+.registerContainer .register .contents .form .name input:focus {
+  border: rgb(137, 71, 24) 2px solid;
+  border-radius: 5px;
+}
+.registerContainer .register .contents .form .email {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 13%;
+  text-align: left;
+  margin-top: 3%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.registerContainer .register .contents .form .email p {
+  margin-bottom: 0;
+}
+.registerContainer .register .contents .form .email input {
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding-left: 3%;
+  background-color: transparent;
+  outline: none;
+  color: saddlebrown;
+  border: rgb(190, 145, 29) 2px solid;
+  border-radius: 5px;
+  background-color: wheat;
+}
+.registerContainer .register .contents .form .email input:focus {
+  border: rgb(137, 71, 24) 2px solid;
+  border-radius: 5px;
+}
+.registerContainer .register .contents .form .emailConfirm {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 13%;
+  text-align: left;
+  margin-top: 3%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.registerContainer .register .contents .form .emailConfirm input {
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding-left: 3%;
+  background-color: transparent;
+  outline: none;
+  color: saddlebrown;
+  border: rgb(190, 145, 29) 2px solid;
+  border-radius: 5px;
+  background-color: wheat;
+}
+.registerContainer .register .contents .form .emailConfirm input:focus {
+  border: rgb(137, 71, 24) 2px solid;
+  border-radius: 5px;
+}
+.registerContainer .register .contents .form .submitRegist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  text-decoration: none;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.registerContainer .register .contents .form .submitRegist button {
+  width: 100%;
+  height: 70%;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: brown;
+  background-color: wheat;
+  border: darkgoldenrod 2px solid;
+  border-radius: 5px;
+}
+.registerContainer .register .contents .form .submitRegist button:hover {
+  background-color: burlywood;
+}
+.registerContainer .register .contents .form .login {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  text-align: bottom;
+}
+.registerContainer .register .contents .form .login p {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #57240f;
+}
+.registerContainer .register .contents .form .login .loginBtn {
+  font-size: 23px;
+  margin-left: 2%;
+  color: rgb(201, 121, 41);
+}
+.registerContainer .register .contents .form .login .loginBtn:hover {
+  color: brown;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Regitser.css.map */

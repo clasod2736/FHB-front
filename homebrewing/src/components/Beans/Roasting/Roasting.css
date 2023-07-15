@@ -1,0 +1,220 @@
+.roastingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.roastingContainer .roastingHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+}
+.roastingContainer .roastingHeader .roastingContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-inline: 3%;
+}
+.roastingContainer .roastingHeader .roastingContent h1 {
+  font-size: 55px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #412b1f;
+}
+.roastingContainer .roastingHeader .roastingContent p {
+  font-weight: bold;
+  text-align: center;
+}
+.roastingContainer .roasting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+}
+.roastingContainer .roasting .dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 10vh;
+  margin-bottom: 1%;
+  font-size: 25px;
+  color: wheat;
+  background-color: #412b1f;
+  border: linen 5px solid;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.roastingContainer .roasting .dark.active {
+  border: 5px solid darkgoldenrod;
+  transition: 0.2s;
+}
+.roastingContainer .roasting .medium {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 10vh;
+  margin-bottom: 1%;
+  font-size: 25px;
+  color: linen;
+  background-color: saddlebrown;
+  border: linen 5px solid;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.roastingContainer .roasting .light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 10vh;
+  margin-bottom: 1%;
+  font-size: 25px;
+  color: #412b1f;
+  background-color: wheat;
+  border: linen 5px solid;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.roastingContainer .roasting .dark:hover {
+  border: 5px solid darkgoldenrod;
+  transition: 0.2s;
+}
+.roastingContainer .roasting .medium:hover {
+  border: 5px solid #a68a64;
+  transition: 0.2s;
+}
+.roastingContainer .roasting .light:hover {
+  border: 5px solid #bc6c25;
+  transition: 0.2s;
+}
+.roastingContainer .roastingText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  border: #bc6c25 3px solid;
+  border-radius: 20px;
+  background-color: wheat;
+}
+.roastingContainer .roastingText .darkText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 3%;
+  animation: opacity 0.5s;
+}
+.roastingContainer .roastingText .darkText header {
+  width: 80%;
+  height: 18%;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: wheat;
+  letter-spacing: 5px;
+  background-color: #412b1f;
+  border-radius: 20px;
+}
+.roastingContainer .roastingText .darkText .darkIntro {
+  margin-top: 3%;
+}
+.roastingContainer .roastingText .darkText .darkIntro p {
+  text-align: center;
+  margin-bottom: 1.5%;
+  padding: 0;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.roastingContainer .roastingText .darkText .darkMeter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  font-size: 18px;
+  margin-top: 3%;
+  transition: 0.3s;
+}
+.roastingContainer .roastingText .darkText .darkMeter .darkCharacter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 25%;
+}
+.roastingContainer .roastingText .darkText .darkMeter .darkCharacter li {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-block: 3%;
+  margin-left: 3%;
+}
+.roastingContainer .roastingText .darkText .darkMeter .darkLevel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 20%;
+  transition: 0.3s;
+}
+.roastingContainer .roastingText .darkText .darkMeter .darkLevel li {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  font-size: 15px;
+  color: #412b1f;
+  margin-block: 3%;
+}
+.roastingContainer .roastingText .darkText .darkMeter .bestFor {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  height: 6vh;
+}
+.roastingContainer .roastingText .darkText .darkMeter .bestFor p {
+  margin-block: 1%;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: sienna;
+  font-size: 15px;
+}
+.roastingContainer .roastingText .darkText .darkMeter .bestFor svg {
+  width: 35px;
+  height: 35px;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Roasting.css.map */

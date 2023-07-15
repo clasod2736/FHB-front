@@ -1,0 +1,291 @@
+.mokapotContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  animation: opacity 0.5s;
+}
+.mokapotContainer .mokapotOutline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding-right: 1%;
+}
+.mokapotContainer .mokapotOutline .mokapotOutlineText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 60%;
+}
+.mokapotContainer .mokapotOutline .mokapotOutlineText header {
+  text-align: center;
+  height: 30%;
+  color: #702000;
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.mokapotContainer .mokapotOutline .mokapotOutlineText p {
+  color: #443730;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 3%;
+}
+.mokapotContainer .mokapotOutline .hashtag {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  height: 18%;
+  margin-top: 1%;
+}
+.mokapotContainer .mokapotOutline .hashtag span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+}
+.mokapotContainer .mokapotOutline .hashtag span p {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: sienna;
+  background-color: #eecdb7;
+  border: #7f5539 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 2.5%;
+  margin-bottom: 0%;
+  padding-block: 0.5%;
+  padding-inline: 2%;
+}
+.mokapotContainer .mokapotOutline .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 12%;
+}
+.mokapotContainer .mokapotOutline .links div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 2%;
+}
+.mokapotContainer .mokapotOutline .links div:hover {
+  background-color: moccasin;
+}
+.mokapotContainer .mokapotOutline .links div #linkIcon {
+  font-size: 30px;
+  color: #7f5539;
+}
+.mokapotContainer .mokapotOutline .links div p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7f5539;
+  margin-bottom: 0;
+  margin-left: 5%;
+}
+.mokapotContainer .mokapotOutline .btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 10%;
+}
+.mokapotContainer .mokapotOutline .btnContainer .backBtn {
+  width: 30%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #702000;
+  text-decoration: none;
+  background-color: wheat;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+}
+.mokapotContainer .mokapotOutline .btnContainer .backBtn:hover {
+  background-color: burlywood;
+  transition: 0.3s;
+}
+.mokapotContainer .mokapotOutline .btnContainer .recipeBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #702000;
+  text-decoration: none;
+  background-color: wheat;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+}
+.mokapotContainer .mokapotOutline .btnContainer .recipeBtn:hover {
+  background-color: burlywood;
+  transition: 0.3s;
+}
+.mokapotContainer .mokapotPresentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
+  padding-left: 1.5%;
+}
+.mokapotContainer .mokapotPresentation .carouselContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.mokapotContainer .mokapotPresentation .videoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  animation: opacity 0.5s;
+}
+.mokapotContainer .mokapotPresentation .videoContainer video {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.mokapotContainer .mokapotPresentation .shopContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: #7f5539 2px solid;
+  border-radius: 20px;
+  padding: 1%;
+  animation: opacity 0.5s;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands header {
+  text-align: center;
+  width: 70%;
+  font-size: 40px;
+  color: rgb(137, 85, 48);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-bottom: rgb(137, 85, 48) 2px solid;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 40%;
+  padding-inline: 3%;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsLogo svg {
+  margin-inline: 3%;
+  transition: 0.2s linear;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsLogo svg:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  border-top: rgb(137, 85, 48) 2px solid;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .brandsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 75%;
+  height: 100%;
+  padding-top: 2%;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .brandsText p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: saddlebrown;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .brandsText a {
+  font-size: 15px;
+  color: slategrey;
+  font-weight: bold;
+  margin-top: 2%;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .recommendProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  margin-top: 1%;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .recommendProduct h3 {
+  font-size: 20px;
+  margin-block: 1%;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .recommendProduct img {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .recommendProduct p {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0.5%;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Mokapot.css.map */

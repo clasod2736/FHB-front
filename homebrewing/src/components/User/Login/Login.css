@@ -1,0 +1,160 @@
+.LoginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 76vh;
+  animation: opacity 0.5s;
+}
+.LoginContainer header {
+  text-align: center;
+  width: 60%;
+  height: 10%;
+  font-size: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(137, 85, 48);
+  margin-bottom: 3%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #9c7c65;
+}
+.LoginContainer .login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 35%;
+}
+.LoginContainer .login .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-right: 3%;
+}
+.LoginContainer .login .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  padding-left: 3%;
+}
+.LoginContainer .login .form .formGuide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.LoginContainer .login .form .formGuide h1 {
+  font-size: 50px;
+  color: burlywood;
+  -webkit-text-stroke: 1px #400406;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.LoginContainer .login .form .formGuide p {
+  font-size: 18px;
+  margin-block: 1%;
+  color: #400406;
+  font-weight: bold;
+}
+.LoginContainer .login .form .formGuide .notice {
+  font-size: 15px;
+  color: chocolate;
+}
+.LoginContainer .login .form .email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 25%;
+  color: saddlebrown;
+  margin-top: 2%;
+}
+.LoginContainer .login .form .email p {
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 1%;
+}
+.LoginContainer .login .form .email input {
+  width: 90%;
+  height: 50%;
+  font-size: 22px;
+  padding: 2%;
+  border-radius: 5px;
+  border: 2px rgb(190, 145, 29) solid;
+  background-color: wheat;
+  outline: none;
+}
+.LoginContainer .login .form .email input:focus {
+  border: rgb(113, 55, 14) 2px solid;
+  border-radius: 5px;
+}
+.LoginContainer .login .form .submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 80%;
+  height: 30%;
+}
+.LoginContainer .login .form .submit .loginBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px darkgoldenrod solid;
+  border-radius: 5px;
+  width: 25%;
+  height: 40%;
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: saddlebrown;
+  text-align: center;
+  background-color: wheat;
+  text-decoration: none;
+  margin-top: 1%;
+}
+.LoginContainer .login .form .submit .loginBtn:hover {
+  background-color: burlywood;
+}
+.LoginContainer .login .form .submit .register {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  margin-top: 3%;
+}
+.LoginContainer .login .form .submit .register p {
+  font-size: 18px;
+  text-align: bottom;
+  margin-right: 2%;
+  margin-bottom: 0;
+  margin-top: 0.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.LoginContainer .login .form .submit .register .registerBtn {
+  display: flex;
+  font-size: 23px;
+  color: darkgoldenrod;
+  text-decoration: underline;
+}
+.LoginContainer .login .form .submit .register .registerBtn:hover {
+  color: brown;
+  transition: 0.3s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Login.css.map */

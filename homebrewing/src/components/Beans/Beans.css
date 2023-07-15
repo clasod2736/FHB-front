@@ -1,0 +1,324 @@
+.beanContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border: solid 1px #DEDCCD;
+  border-radius: 20px;
+  outline: solid 1px #DEDCCD;
+  background-color: #F9F6EA;
+}
+.beanContainer .outLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
+  height: 40%;
+  margin-top: 4%;
+}
+.beanContainer .outLine .beanHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 55%;
+  height: 100%;
+}
+.beanContainer .outLine .beanHeader .beanTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 30%;
+}
+.beanContainer .outLine .beanHeader .beanTitle header {
+  font-size: 100px;
+  font-family: "Italiana", serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Poltawski Nowy", serif;
+  font-weight: lighter;
+  color: #432818;
+  margin-left: 1%;
+}
+.beanContainer .outLine .beanHeader .beanText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding-left: 2%;
+}
+.beanContainer .outLine .beanHeader .beanText p {
+  font-size: 17px;
+  font-weight: bold;
+  margin-block: 1%;
+}
+.beanContainer .outLine .beanImg {
+  display: flex;
+  width: 45%;
+  height: 100%;
+}
+.beanContainer .outLine .beanImg img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  opacity: 1;
+}
+.beanContainer .category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 60%;
+  border-block: 1px solid #432818;
+  margin-top: 1%;
+  margin-bottom: 0.3%;
+  padding-block: 1%;
+}
+.beanContainer .category .beanType {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  border-right: #432818 1px solid;
+  padding-inline: 0.5%;
+}
+.beanContainer .category .roastContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  padding-inline: 1%;
+  border-right: #432818 1px solid;
+}
+.beanContainer .category .finesse {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  padding-inline: 1%;
+}
+.beanContainer .category .beanResult {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  height: 44vh;
+  padding-inline: 1%;
+  border-left: #341E13 1px solid;
+}
+.beanContainer .category .beanResult .recommendation {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  font-size: 30px;
+  margin-bottom: 3%;
+}
+.beanContainer .category .beanResult .choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  border-radius: 20px;
+  padding-block: 3%;
+  background-color: rgb(255, 230, 205);
+}
+.beanContainer .category .beanResult .choices .beanEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: saddlebrown;
+  font-weight: bold;
+  font-style: italic;
+  height: 8.5vh;
+  animation: opacity 0.3s;
+}
+.beanContainer .category .beanResult .choices .beanChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 100%;
+  border-right: #432818 1px solid;
+}
+.beanContainer .category .beanResult .choices .beanChoice .arabica {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  animation: opacity 0.5s;
+}
+.beanContainer .category .beanResult .choices .beanChoice .arabica h3 {
+  font-size: 30px;
+  color: #99582a;
+  margin-bottom: 1%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation: opacity 0.5s;
+}
+.beanContainer .category .beanResult .choices .beanChoice .robusta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  animation: opacity 0.5s;
+}
+.beanContainer .category .beanResult .choices .beanChoice .robusta h3 {
+  font-size: 30px;
+  color: rgb(116, 52, 6);
+  margin-bottom: 1%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation: opacity 0.5s;
+}
+.beanContainer .category .beanResult .choices .roastingChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 90%;
+  border-right: #432818 1px solid;
+}
+.beanContainer .category .beanResult .choices .roastingChoice .roastingEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #57321d;
+  border-radius: 30px;
+  animation: opacity 0.3s;
+}
+.beanContainer .category .beanResult .choices .roastingChoice .dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #432818;
+  border-radius: 20px;
+  letter-spacing: 3px;
+  animation: opacity 0.3s;
+}
+.beanContainer .category .beanResult .choices .grindChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 90%;
+}
+.beanContainer .category .beanResult .choices .grindChoice .grindEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90;
+  color: brown;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  animation: opacity 0.3s;
+}
+.beanContainer .category .beanResult .choices .grindChoice .coarse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: brown;
+  font-size: 30px;
+  animation: opacity 0.3s;
+}
+.beanContainer .category .beanResult .resultText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+}
+.beanContainer .category .beanResult .resultText p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.beanContainer .category .beanResult .resultText .goShop {
+  display: flex;
+  font-size: 30px;
+  width: auto;
+  text-align: center;
+  padding: 2%;
+  border-radius: 20px;
+  color: wheat;
+  background-color: saddlebrown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 5%;
+  text-decoration: none;
+}
+.beanContainer .category .beanResult .resultText .goRecipe {
+  display: flex;
+  font-size: 30px;
+  width: auto;
+  text-align: center;
+  padding: 2%;
+  border-radius: 20px;
+  display: flex;
+  color: #57321d;
+  background-color: wheat;
+  margin-top: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Beans.css.map */
