@@ -281,3 +281,87 @@
     }
 
 }
+
+@media (max-width: 1600px) {
+    .footerContainer {
+        padding-inline: 0;
+        
+        .footerSvg {
+            width: 15%;
+            height: 100%;
+        }
+        .recommend {
+            height: 95%;
+
+            .recommendTitle {
+                
+                h3 {
+                    font-size: 16px;
+                }
+            }
+            .recommendCoffee {
+                width: 90%;
+                height: 50%;
+            }
+            .recommendText {
+                font-size: 16px;
+            }
+        }
+
+        .footerShop {
+            width: 40%;
+
+            .products {
+                header {
+                    font-size: 16px;
+                }
+                li {
+                    font-size: 12px;
+                }
+            }
+            .branding {
+                header {
+                    font-size: 16px;
+                }
+                li {
+                    font-size: 12px;
+                }
+            }
+            .articles {
+                header {
+                    font-size: 16px;
+                }
+                li {
+                    font-size: 12px;
+                }
+            }
+        }
+        .subscription {
+            width: 22%;
+
+            header {
+                font-size: 16px;
+            }
+            input {
+                font-size: 15px;
+                padding-left: 3%;
+            }
+            .subsBtnContainer {
+                button {
+                    width: 40%;
+                    font-size: 12px;
+                    padding: 0;
+                }
+            }
+            p {
+                font-size: 14px;
+            }
+            .social {
+                width: 80%;
+                .socialBtn {
+                    margin-inline: 3%;
+                }
+            }
+        }
+    }
+}

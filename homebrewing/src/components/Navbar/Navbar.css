@@ -33,6 +33,7 @@
   transform: translateX(10%);
 }
 .fixedNavbar .guide {
+  width: auto;
   position: relative;
   display: flex;
   align-items: center;
@@ -100,7 +101,7 @@
   transform: scaleX(1);
   transform-origin: bottom;
 }
-.fixedNavbar .cart {
+.fixedNavbar .myRecipe {
   position: relative;
   display: flex;
   align-items: center;
@@ -112,11 +113,11 @@
   color: #A86B43;
   letter-spacing: 2px;
 }
-.fixedNavbar .cart:hover {
+.fixedNavbar .myRecipe:hover {
   color: #86481f;
   transition: 0.2s;
 }
-.fixedNavbar .cart:after {
+.fixedNavbar .myRecipe:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -128,7 +129,7 @@
   transform-origin: bottom;
   transition: transform 0.25s ease-out;
 }
-.fixedNavbar .cart:hover::after {
+.fixedNavbar .myRecipe:hover::after {
   color: #A86B43;
   transform: scaleX(1);
   transform-origin: bottom;
@@ -167,30 +168,6 @@
   transform-origin: bottom;
 }
 
-.shopMenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 10%;
-  height: 10vh;
-  padding: 1%;
-  position: absolute;
-  top: 110%;
-  left: 20%;
-  border: #A86B43 3px solid;
-  border-radius: 20px;
-  color: #86481f;
-  font-size: 20px;
-  list-style: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  animation: opacity 0.3s;
-  transition: 0.3s;
-}
-.shopMenu li {
-  margin-block: 3%;
-}
-
 @keyframes opacity {
   from {
     opacity: 0;
@@ -199,35 +176,25 @@
     opacity: 1;
   }
 }
-@media (max-height: 900px) {
+@media screen and (max-width: 1600px) {
   .fixedNavbar {
     width: 60%;
-    height: auto;
+    height: 6%;
   }
-  #navTitle {
-    width: 20%;
-    font-size: 25px;
+  .fixedNavbar .navTitle {
+    font-size: 18px;
   }
-  .result {
-    font-size: 15px;
+  .fixedNavbar .guide {
+    width: auto;
+    font-size: 16px;
   }
-  .menuBtn {
-    font-size: 23px;
+  .fixedNavbar .shop {
+    font-size: 16px;
   }
-}
-@media (max-width: 1900px) {
-  .fixedNavbar {
-    width: 60%;
-    height: auto;
+  .fixedNavbar .myRecipe {
+    font-size: 16px;
   }
-  #navTitle {
-    width: 30%;
-    font-size: 25px;
-  }
-  .result {
-    font-size: 15px;
-  }
-  .menuBtn {
-    font-size: 23px;
+  .fixedNavbar .accounts {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=Navbar.css.map */

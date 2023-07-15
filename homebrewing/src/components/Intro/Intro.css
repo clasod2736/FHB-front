@@ -21,40 +21,29 @@
   height: 80%;
   justify-content: center;
   align-items: center;
+  margin-top: 5%;
 }
-.introContainer .logoContainer .gate .logo {
-  display: flex;
-  width: 60%;
-  height: 80%;
-  justify-content: center;
-  align-items: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-  margin-top: 200px;
-  animation: appear 1s;
-}
-.introContainer .logoContainer .gate .pContatiner {
+.introContainer .logoContainer .gate .pContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 0.5%;
 }
-.introContainer .logoContainer .gate .pContatiner p {
+.introContainer .logoContainer .gate .pContainer p {
   font-size: 25px;
   color: #9A6E40;
   font-style: italic;
   margin: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.introContainer .logoContainer .gate .pContatiner .introduce1 {
+.introContainer .logoContainer .gate .pContainer .introduce1 {
   animation: pSlide1 1.3s;
 }
-.introContainer .logoContainer .gate .pContatiner .introduce2 {
+.introContainer .logoContainer .gate .pContainer .introduce2 {
   animation: pSlide1 1.6s;
 }
-.introContainer .logoContainer .gate .pContatiner .introduce3 {
+.introContainer .logoContainer .gate .pContainer .introduce3 {
   animation: pSlide1 1.8s;
 }
 .introContainer .logoContainer .gate .expContatiner {
@@ -86,83 +75,12 @@
   cursor: pointer;
   animation: appear 1s;
 }
-.introContainer .logoContainer .gate .exploreBtn:hover {
+.introContainer .logoContainer .gate .expContatiner .exploreBtn:hover {
   transition: 0.9s;
   color: white;
   box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;
 }
-.introContainer .contentBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 20%;
-  padding-block: 5px;
-}
-.introContainer .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 49.5%;
-  height: 100%;
-  border: 1px solid #DEDCCD;
-  border-radius: 15px;
-  outline: solid 1px #DEDCCD;
-  padding: 3px;
-}
-.introContainer .about .aboutImg {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-}
-.introContainer .about .aboutImg .coffeeman {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  z-index: -10;
-}
-.introContainer .about header {
-  font-size: 25px;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-  color: black;
-}
-.introContainer .about #emphasize {
-  font-size: 25px;
-  font-weight: 500;
-  color: brown;
-  margin: 0;
-  margin-bottom: 5px;
-}
-.introContainer .about p {
-  color: black;
-  margin-top: 5px;
-  font-size: 18px;
-}
-.introContainer .about p #last {
-  margin-bottom: 30px;
-}
-.introContainer .information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 100%;
-  border: 1px solid #DEDCCD;
-  border-radius: 15px;
-  outline: solid 1px #DEDCCD;
-  padding: 3px;
-}
+
 @keyframes pSlide1 {
   0% {
     transform: translateY(100%);
@@ -171,39 +89,27 @@
     transform: translateY(0%);
   }
 }
-@media (max-height: 900px) {
-  .introContainer .introContainer {
-    height: 95vh;
-  }
+@media screen and (max-width: 1600px) {
   .introContainer .logoContainer {
-    height: 70%;
+    height: 100%;
   }
-  .introContainer .logoContainer .logo {
-    width: 55%;
-    height: 55%;
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
   }
-  .introContainer .contentBox {
-    height: 30%;
+  .introContainer .logoContainer .gate .pContainer {
+    height: 25%;
   }
-  .introContainer .aboutImg {
-    text-align: center;
-    padding: 5px;
+  .introContainer .logoContainer .gate .pContainer p {
+    font-size: 15px;
   }
-  .introContainer .about p {
-    margin: 0;
+  .introContainer .logoContainer .gate .expContatiner {
+    width: 15%;
+    height: 8%;
+    margin-top: 0;
   }
-  .introContainer #aboutHeader {
-    font-size: 23px;
-    margin: 0;
-  }
-  .introContainer #emphasize {
+  .introContainer .logoContainer .gate .expContatiner .exploreBtn {
+    width: 100%;
     font-size: 20px;
-    font-weight: 500;
-    color: brown;
-    margin: 0;
-  }
-  .introContainer .exploreBtn {
-    margin-top: 20px;
-    height: 50px !important;
   }
 }/*# sourceMappingURL=Intro.css.map */

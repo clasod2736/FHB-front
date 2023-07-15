@@ -239,4 +239,72 @@
 .footerContainer .subscription .social .socialBtn:hover {
   transform: scale(1.1);
   transition: 0.3s;
+}
+
+@media (max-width: 1600px) {
+  .footerContainer {
+    padding-inline: 0;
+  }
+  .footerContainer .footerSvg {
+    width: 15%;
+    height: 100%;
+  }
+  .footerContainer .recommend {
+    height: 95%;
+  }
+  .footerContainer .recommend .recommendTitle h3 {
+    font-size: 16px;
+  }
+  .footerContainer .recommend .recommendCoffee {
+    width: 90%;
+    height: 50%;
+  }
+  .footerContainer .recommend .recommendText {
+    font-size: 16px;
+  }
+  .footerContainer .footerShop {
+    width: 40%;
+  }
+  .footerContainer .footerShop .products header {
+    font-size: 16px;
+  }
+  .footerContainer .footerShop .products li {
+    font-size: 12px;
+  }
+  .footerContainer .footerShop .branding header {
+    font-size: 16px;
+  }
+  .footerContainer .footerShop .branding li {
+    font-size: 12px;
+  }
+  .footerContainer .footerShop .articles header {
+    font-size: 16px;
+  }
+  .footerContainer .footerShop .articles li {
+    font-size: 12px;
+  }
+  .footerContainer .subscription {
+    width: 22%;
+  }
+  .footerContainer .subscription header {
+    font-size: 16px;
+  }
+  .footerContainer .subscription input {
+    font-size: 15px;
+    padding-left: 3%;
+  }
+  .footerContainer .subscription .subsBtnContainer button {
+    width: 40%;
+    font-size: 12px;
+    padding: 0;
+  }
+  .footerContainer .subscription p {
+    font-size: 14px;
+  }
+  .footerContainer .subscription .social {
+    width: 80%;
+  }
+  .footerContainer .subscription .social .socialBtn {
+    margin-inline: 3%;
+  }
 }/*# sourceMappingURL=Footer.css.map */

@@ -9,8 +9,6 @@ import Intro from './components/Intro/Intro';
 import Methods from './components/Methods/Methods';
 import Name from './components/User/Regitser/Register'
 import Preference from './components/User/Regitser/Preference/Preference'
-import Hand from './components/Methods/Hand/Hand';
-import Beans from './components/Beans/Beans';
 import Menu from './components/Menu/Menu';
 import Recipe from './components/Recipe/Recipe';
 import Login from './components/User/Login/Login';

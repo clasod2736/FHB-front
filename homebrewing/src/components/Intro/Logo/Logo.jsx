@@ -5,11 +5,12 @@ export default function Logo() {
   return (
     <div className='svgContainer'>
         <svg xmlns="http://www.w3.org/2000/svg"
-        className='coffeePeople'
+        className='introLogo'
         width="1000"
         height="550"
         version="1.0"
-        viewBox="0 120 375 150">
+        viewBox="0 120 375 150"
+        >
         <defs>
             <clipPath id="a">
                 <path d="M55 168h101v94.5H55Zm0 0"/>

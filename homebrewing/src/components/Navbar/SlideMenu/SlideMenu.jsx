@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import './Menu.css'
+import './SlideMenu.css'
 
-export default function Menu() {
+export default function SlideMenu() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);

@@ -11,15 +11,12 @@ import {BsFacebook, BsInstagram, BsTwitter, BsGithub, BsLinkedin} from 'react-ic
 export default function Footer() {
   return (
     <div className='footerContainer'>
-        {/* <svg width={'20px'} height={'200px'} viewBox='245 150 17 100'>
-          <BeanDevide/>
-        </svg> */}
         <span className='recommend'>
           <div className='recommendTitle'>
             <h3>Today's BREW</h3>
           </div>
           <div className='recommendCoffee'>
-            <svg width={'200px'} height={'150px'} viewBox='150 190 200 120'>
+            <svg width={'100%'} height={'100%'} viewBox='150 190 200 120'>
               <TodaysCoffee/>
             </svg>
           </div>
@@ -51,7 +48,7 @@ export default function Footer() {
           </span>
         </span>
         <span className='footerSvg'>
-          <svg width={'140px'} height={'280px'} viewBox='200 190 100 120' style={{ zIndex: '1'}}>
+          <svg width={'60%'} height={'100%'} viewBox='200 190 100 120' style={{ zIndex: '1'}}>
             <FooterLogo/>
           </svg>
         </span>
