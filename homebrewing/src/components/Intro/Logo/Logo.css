@@ -19,7 +19,7 @@
   animation: words 1.8s;
 }
 .svgContainer .words {
-  animation: words 5s;
+  animation: people 2.5s;
 }
 
 @keyframes people {

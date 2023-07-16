@@ -44,7 +44,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 80%;
-  height: 18%;
+  height: 15%;
   margin-top: 1%;
 }
 .mokapotContainer .mokapotOutline .hashtag span {
@@ -54,7 +54,7 @@
   align-items: center;
   width: 100%;
   height: auto;
-  margin-bottom: 2%;
+  margin-bottom: 1.5%;
 }
 .mokapotContainer .mokapotOutline .hashtag span p {
   font-size: 18px;
@@ -75,7 +75,8 @@
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 12%;
+  height: 10%;
+  margin-block: 2%;
 }
 .mokapotContainer .mokapotOutline .links div {
   display: flex;
@@ -161,6 +162,8 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  border: 2px sienna solid;
+  border-radius: 22px;
 }
 .mokapotContainer .mokapotPresentation .videoContainer {
   display: flex;
@@ -169,6 +172,8 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  border: 2px sienna solid;
+  border-radius: 18px;
   animation: opacity 0.5s;
 }
 .mokapotContainer .mokapotPresentation .videoContainer video {
@@ -203,9 +208,9 @@
   text-align: center;
   width: 70%;
   font-size: 40px;
-  color: rgb(137, 85, 48);
+  color: sienna;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-bottom: rgb(137, 85, 48) 2px solid;
+  border-bottom: sienna 2px solid;
 }
 .mokapotContainer .mokapotPresentation .shopContainer .brands .brandsLogo {
   display: flex;
@@ -250,7 +255,7 @@
   color: saddlebrown;
 }
 .mokapotContainer .mokapotPresentation .shopContainer .brands .brandsContents .brandsText a {
-  font-size: 15px;
+  font-size: 20px;
   color: slategrey;
   font-weight: bold;
   margin-top: 2%;

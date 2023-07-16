@@ -7,14 +7,7 @@
   height: 22vh;
   padding-inline: 1%;
   border-top: 2px solid #88796f;
-  animation: opacity 1.8s;
-}
-.footerContainer .footerSvg {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
+  animation: opacity 0.3s;
 }
 .footerContainer .recommend {
   display: flex;
@@ -23,6 +16,7 @@
   align-items: center;
   width: 15%;
   height: 90%;
+  animation: slidetoUp 0.7s;
 }
 .footerContainer .recommend .recommendTitle {
   display: flex;
@@ -70,6 +64,7 @@
   margin-bottom: 5%;
   border-radius: 10px;
   background-color: wheat;
+  margin-bottom: 0;
 }
 .footerContainer .footerShop {
   display: flex;
@@ -78,6 +73,7 @@
   align-items: center;
   width: 35%;
   height: 90%;
+  animation: slidetoUp 1.2s;
 }
 .footerContainer .footerShop .products {
   display: flex;
@@ -173,6 +169,7 @@
   align-items: flex-start;
   width: 25%;
   height: 90%;
+  animation: slidetoUp 1.5s;
 }
 .footerContainer .subscription header {
   font-size: 25px;
@@ -242,6 +239,14 @@
   transition: 0.3s;
 }
 
+@keyframes slidetoUp {
+  from {
+    transform: translateY(60%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 @media (max-width: 1600px) {
   .footerContainer {
     padding-inline: 0;

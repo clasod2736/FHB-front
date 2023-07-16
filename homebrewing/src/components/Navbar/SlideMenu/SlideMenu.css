@@ -9,10 +9,11 @@
   transition: all 0.3s linear !important;
   cursor: pointer !important;
   padding: 0 !important;
+  letter-spacing: 1px;
 }
 
 .canvas {
-  width: 15% !important;
+  width: 20% !important;
 }
 
 .offcanvas {

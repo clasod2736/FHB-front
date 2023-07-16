@@ -17,10 +17,10 @@ export default function Intro() {
           </div> */}
           <div className='expContatiner'>
             <Link to='/login' className='exploreBtn'>
-              Make Last Brew
+              Make Last Brew!
             </Link>
             <Link to='/login' className='exploreBtn'>
-              Make a New Brew
+              Make a New Brew!
             </Link>
           </div>
         </div>

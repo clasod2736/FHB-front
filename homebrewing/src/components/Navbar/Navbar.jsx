@@ -10,9 +10,9 @@ import SlideMenu from './SlideMenu/SlideMenu'
       <button className='guide'>
         <SlideMenu/>
       </button>
-      <Link className='shop'>Shop</Link>
-      <Link className='navTitle' to={'/'}>Home Brewing</Link>
       <Link className='myRecipe'>My Recipe</Link>
+      <Link className='navTitle' to={'/'}>For Home Barista</Link>
+      <Link className='shop'>Shop</Link>
       <Link className='accounts' to={'./login'}>Log In</Link>
     </div>
   )

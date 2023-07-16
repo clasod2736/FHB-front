@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 76vh;
+  height: 70vh;
   width: 100%;
   animation: slideContents 0.7s;
 }
@@ -21,7 +21,7 @@
   height: 90%;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 .introContainer .logoContainer .gate .pContainer {
   display: flex;
@@ -50,11 +50,11 @@
 .introContainer .logoContainer .gate .expContatiner {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 30%;
   height: 20%;
-  animation: opacity 1.3s;
+  animation: opacity 1.5s;
 }
 .introContainer .logoContainer .gate .expContatiner .exploreBtn {
   display: flex;
