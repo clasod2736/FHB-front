@@ -107,11 +107,10 @@
   .introContainer .logoContainer .gate .expContatiner {
     width: 40%;
     height: 10%;
-    margin-top: 1%;
   }
   .introContainer .logoContainer .gate .expContatiner .exploreBtn {
     width: 40%;
-    height: 70%;
+    height: 75%;
     font-size: 16px;
   }
 }/*# sourceMappingURL=Intro.css.map */

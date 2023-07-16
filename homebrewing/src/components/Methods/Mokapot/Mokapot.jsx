@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './Mokapot.css'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 // Component
 import Carousel from './Carousel/Carousel'
@@ -17,7 +17,6 @@ import { ReactComponent as Alessi } from '../../../assets/alessi.svg'
 
 export default function Basic({ getMethod, method }) {
 
-const { userName, menuName, methodName } = useParams();
 const navigate = useNavigate()
 
 const [link, setLink] = useState('');
@@ -88,15 +87,15 @@ const handleLinks = () => {
               </div>
               <div className='hashtag'>
                 <span>
-                  <p>#espresso</p>
-                  <p>#crema</p>
-                  <p>#portable</p>
-                  <p>#italiancoffee</p>
+                  <p>#Espresso</p>
+                  <p>#Crema</p>
+                  <p>#Portable</p>
+                  <p>#Italiancoffee</p>
                 </span>
                 <span>
-                  <p>#bialetti</p>
-                  <p>#durabillity</p>
-                  <p>#easytomake</p>
+                  <p>#Bialetti</p>
+                  <p>#Durabillity</p>
+                  <p>#Easytomake</p>
                 </span>
               </div>
               <span className='links'>

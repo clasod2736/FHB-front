@@ -3,7 +3,7 @@ import './Step1.css'
 
 import { Link, useParams } from 'react-router-dom'
 
-export default function Step1({getOrder}) {
+export default function Step1() {
 
   const {userName, menuName, methodName, serve, roasting, grind} = useParams()
 

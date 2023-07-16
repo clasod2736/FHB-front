@@ -2,23 +2,18 @@ import React, { useState, useEffect } from 'react'
 import './Recipe.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 
-// import { ReactComponent as CoffeeMan } from '../../assets/coffeeMan.svg'
-// import { ReactComponent as Latte } from '../../assets/latte.svg'
-// import { ReactComponent as Handdrip } from '../../assets/handdrip.svg'
-
 export default function Recipe() {
 
     const navigate = useNavigate();
     const { userName } = useParams();
     const { menuName } = useParams();
-    const { methodName } = useParams();
 
-const [serve, setServe] = useState(1);
-const [water, setWater] = useState(180);
-const [custom, setCustom] = useState('');
-const [roasting, setRoasting] = useState('');
-const [grind, setGrind] = useState('');
-const [amount, setAmount] = useState('?');
+    const [serve, setServe] = useState(1);
+    const [water, setWater] = useState(180);
+    const [custom, setCustom] = useState('');
+    const [roasting, setRoasting] = useState('');
+    const [grind, setGrind] = useState('');
+    const [amount, setAmount] = useState('?');
 
 useEffect(() => {
     console.log(serve);
@@ -160,65 +155,10 @@ useEffect(() => {
                                 alert('Please Choose Roasting Level and Grind Size!')
                             } else {
                                 navigate(`./brewing/${water}/${roasting}/${grind}/step1`)
-                            }
-                        }}>Start Brewing!</button>
+                            }}}>Start Brewing!</button>
                     </div>
             </div>
         </span>
-        {/* <div className='none'>
-        <div className='recipeTitle'>
-            <header>Recipe</header>
-            <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you."</p>
-        </div>
-        <div className='beforeSteps'>
-            <div className='firstRow'>
-                <div className='user'>
-                    <div className='userHeader'>
-                        <span className='userImg'>
-                            <svg width={'150px'} height={'250px'} viewBox='170 200 150 120'>
-                                <CoffeeMan/>
-                            </svg>
-                        </span>
-                        <span className='userGreetings'>
-                            <header>Good day! "{userName}"</header>
-                            <p>Are you ready for making coffee??</p>
-                            <p>Here's your choices for coffee.</p>
-                        </span>
-                    </div>
-                    <div className='preference'>
-                        <li>preference1</li>
-                        <li>preference2</li>
-                        <li>preference3</li>
-                    </div>
-                </div>
-                <div className='menu'>
-                    <span className='menuContents'>
-                        <header>Latte</header>
-                        <svg width={'200px'} height={'200px'} viewBox='50 150 400 120'>
-                            <Latte/>
-                        </svg>
-                    </span>
-                </div>
-                <div className='method'>
-                    <header>Hand drip</header>
-                    <svg width={'150px'} height={'200px'} viewBox='170 180 170 120' opacity={'0.7'}>
-                        <Handdrip/>
-                    </svg>
-                </div>
-                <div className='bean'>
-                    <div className='type'>
-                        Arabica
-                    </div>
-                    <div className='roasting'>
-                        Dark
-                    </div>
-                    <div className='grind'>
-                        Coarse
-                    </div> 
-                </div>
-            </div>
-        </div>
-        </div> */}
     </div>
   )
 }

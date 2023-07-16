@@ -1,12 +1,9 @@
 import React from 'react'
 import './Footer.css'
 
-import { ReactComponent as FooterLogo } from '../../assets/footerLogo.svg'
+//images and icons
 import { ReactComponent as TodaysCoffee } from '../../assets/chai2.svg'
-
 import {BsFacebook, BsInstagram, BsTwitter, BsGithub, BsLinkedin} from 'react-icons/bs'
-
-
 
 export default function Footer() {
   return (

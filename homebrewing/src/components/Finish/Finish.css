@@ -17,6 +17,7 @@
   background-image: url("../../../public/img/background/finalLogo2.jpg");
   background-position: center;
   background-size: cover;
+  border-radius: 50px;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;

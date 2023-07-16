@@ -2,10 +2,9 @@ import React from 'react'
 import './Login.css'
 
 import {ReactComponent as Logo} from '../../../assets/login.svg'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
-    const { userName } = useParams()
 
   return (
     <div className='LoginContainer'>
@@ -28,7 +27,7 @@ export default function Login() {
                     <input type="text"/>
                 </div>
                 <div className='submit'>
-                    <Link className='loginBtn' to={`/username/${userName}/menu`}>Log In</Link>
+                    <Link className='loginBtn' to={'/'}>Log In</Link>
                     <div className='register'>
                         <p>Or...you didn't register yet?</p>
                         <Link className='registerBtn' to={'/register'}>Join FHB</Link>

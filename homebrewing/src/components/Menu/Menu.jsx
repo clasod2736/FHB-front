@@ -1,24 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import './Menu.css'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
+//images and icons
 import {ReactComponent as MilkFoam } from '../../assets/milkFoam.svg'
-import {ReactComponent as MilkSvg } from '../../assets/milk.svg'
-
 import { BiSolidCoffeeBean } from 'react-icons/bi'
 
 export default function Menu() {
-
     const [menuName, setMenuName] = useState('off');
 
-    const { userName } = useParams();
     const navigate = useNavigate();
-
-    useEffect(() => {
-        if (menuName !== '') {
-        console.log(menuName);
-        // navigate(`/${userName}/menu/${menuName}/method`)
-    }}, [menuName, navigate, userName])
 
     const handleMenu = (menu) => {
         setMenuName(menu)
@@ -130,19 +121,6 @@ export default function Menu() {
                             <p> text of the printing</p>
                         </div>
                     </span>
-                    {/* <div className='menuRatio'>
-                        <header>Ratio</header>
-                        <div className='coffee'>
-                            <div className='top'>
-                            </div>
-                            <div className='middle'>
-                                Micro foam
-                            </div>
-                            <div className='bottom'>
-                                Espresso
-                            </div>
-                        </div>
-                    </div> */}
                     <div className='coffeeTitle'>
                         <header>Flat White</header>
                         <div className='ingredients'>

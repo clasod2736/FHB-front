@@ -64,14 +64,14 @@
                     
                     width: 100%;
                     height: auto;
-                    margin-bottom: 3%;
+                    margin-bottom: 2%;
     
                     p {
-                        font-size: 15px;
+                        font-size: 16px;
                         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                        color: brown;
-                        background-color: wheat;
-                        border: #7f5539 1px solid;
+                        color: saddlebrown;
+                        background-color: transparent;
+                        border: saddlebrown 1px solid;
                         border-radius: 20px;
     
                         margin-right: 2.5%;
@@ -99,6 +99,7 @@
                     align-items: center;
                     width: 30%;
                     height: 100%;
+                    letter-spacing: 1px;
                     cursor: pointer;
     
                     border-radius: 5px;
@@ -149,7 +150,7 @@
                     box-shadow: 2px 3px 0px 0px darkgoldenrod;
 
                     &:hover {
-                        color: brown;
+                        color: saddlebrown;
                         background-color: bisque;
                         transition: 0.3s;
                     }
@@ -180,7 +181,7 @@
                     box-shadow: 2px 3px 0px 0px darkgoldenrod;
 
                     &:hover {
-                            color: brown;
+                            color: saddlebrown;
                             background-color: bisque;
                             transition: 0.3s;
                     }

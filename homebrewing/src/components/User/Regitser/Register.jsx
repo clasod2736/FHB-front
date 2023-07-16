@@ -2,13 +2,12 @@ import React, {useState} from 'react'
 import './Regitser.css'
 import { Link, useNavigate } from 'react-router-dom'
 
+// images and icons
 import {ReactComponent as CoffeeWomen} from '../../../assets/coffeeWomen.svg'
 import { BsGoogle,BsFacebook } from 'react-icons/bs'
 
 export default function User() {
   const [name, setName] = useState('Are you...??')
-  const [email, setEmail] = useState('')
-  const [pref, setPref] = useState(0)
 
   const navigate = useNavigate();
 
@@ -28,57 +27,7 @@ export default function User() {
         } else { 
             navigate(`/${name}/menu`)
         }
-  }
-  const handlePreference = () => {
-    setPref((prev) => prev + 1)
-    if ( pref === 4) {
-      setPref(4)
-    }
-    console.log(pref)
-  }
-  const settingPref = () => {
-      if (pref === 0) {
-        return(
-          <div className='preferenceContainer'>
-              <div className='title'>
-                <h2>Wait! tell us your "Preferences"</h2>
-                <p>* Your preferences are helps we can pick recommend mark for you</p>
-                <p style={{marginLeft: '10px'}}>Otherwise you'll go without recommend mark, which is no problem!</p>
-              </div>
-              <div className='pfBtnContainer'>
-                <button className='preferenceBtn' onClick={() => {handlePreference()}}>Start!</button>
-            </div>
-          </div>
-        )
-      } else if (pref === 1) {
-        return (
-          <div className='preferenceContainer'>
-            <span className='preferences'>
-                  <div className='coffee'>
-                    <h1>What coffee kinds most you like?</h1>
-                    <div className='coffeeCheck'>
-                      <span className='black'>
-                        <input type="checkbox" id='black'/>
-                          <label htmlFor='black'></label>
-                          <p>Black</p>
-                      </span>
-                      <span className='white'>
-                        <input type="checkbox" id='white'/>
-                          <label htmlFor='white'></label>
-                          <p>White</p>
-                      </span>
-                      <span className='other'>
-                        <input type="checkbox" id='other'/>
-                          <label htmlFor='other'></label>
-                          <p>Other</p>
-                      </span>
-                    </div>
-                  </div>
-                </span>
-          </div>
-        )
       }
-  }
 
   return (
     <div className='registerContainer'>

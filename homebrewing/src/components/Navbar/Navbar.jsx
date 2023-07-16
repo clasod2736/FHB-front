@@ -1,6 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
+
+//Slide Menu component (react-bootstrap)
 import SlideMenu from './SlideMenu/SlideMenu'
 
  export default function Navbar() {

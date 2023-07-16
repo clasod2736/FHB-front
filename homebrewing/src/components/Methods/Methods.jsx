@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import './Methods.css'
-import { useParams, useNavigate, useLocation} from 'react-router-dom'
 
-//svg files
+//images
 import { ReactComponent as MokapotSvg } from '../../assets/mokapot.svg'
 import { ReactComponent as Frendpress } from '../../assets/frenchpress.svg'
 import { ReactComponent as Handdrip } from '../../assets/handdrip.svg'
@@ -23,10 +22,10 @@ export default function Methods() {
 
   const [method, setMethod] = useState('');
 
+  //Get state from child component as props
   const getMethod = (data) => {
     setMethod(data)
   }
-
   const settingMethod = () => {
     if (method === '') {
       return (
@@ -82,28 +81,6 @@ export default function Methods() {
                 <Frendpress/>
               </svg>
               <p>French Press</p>
-              {/* <header>French Press</header> */}
-              {/* <div className='pContainer'>
-                <p>Lorem Ipsum is simply dummy text of the</p>
-                <p> five centuries, but also the leap iopfjkj aisdnnvu</p>
-                <p> 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
-                <p>nd more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <p>ed to be sure there isn't anything embarrassing hidden in</p>
-              </div>
-              <div className='specialty'>
-                <div className='taste'>
-                  <header>✓</header>
-                  <p>Taste</p>
-                </div>
-                <div className='convenience'>
-                  <header>✓</header>
-                  <p>Convenience</p>
-                </div>
-                <div className='something'>
-                  <header>✓</header>
-                  <p>Something</p>
-                </div>
-              </div> */}
             </div>
             <div className='aeroPress' onClick={()=>{ setMethod('aeropress')}}>
               <svg width='180px' height='180px' viewBox=' 130 170 220 150' opacity='0.7'>
