@@ -10,6 +10,8 @@
 
     border-top: 2px solid #88796f;
 
+    animation: opacity 1.8s;
+
     .footerSvg {
         display: flex;
         flex-direction: column;
@@ -28,7 +30,7 @@
         height: 90%;
 
         .recommendTitle {
-            display: flex;
+            display: flex;  
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -313,26 +315,26 @@
 
             .products {
                 header {
-                    font-size: 16px;
+                    font-size: 15px;
                 }
                 li {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
             .branding {
                 header {
-                    font-size: 16px;
+                    font-size: 15px;
                 }
                 li {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
             .articles {
                 header {
-                    font-size: 16px;
+                    font-size: 15px;
                 }
                 li {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
         }
@@ -340,26 +342,26 @@
             width: 22%;
 
             header {
-                font-size: 16px;
+                font-size: 15px;
             }
             input {
-                font-size: 15px;
+                font-size: 12px;
                 padding-left: 3%;
             }
             .subsBtnContainer {
                 button {
                     width: 40%;
-                    font-size: 12px;
+                    font-size: 10px;
                     padding: 0;
                 }
             }
             p {
-                font-size: 14px;
+                font-size: 12px;
             }
             .social {
                 width: 80%;
                 .socialBtn {
-                    margin-inline: 3%;
+                    margin-inline: 4%;
                 }
             }
         }

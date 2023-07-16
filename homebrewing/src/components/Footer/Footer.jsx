@@ -47,11 +47,6 @@ export default function Footer() {
               <li>Cold brewing method</li>
           </span>
         </span>
-        <span className='footerSvg'>
-          <svg width={'60%'} height={'100%'} viewBox='200 190 100 120' style={{ zIndex: '1'}}>
-            <FooterLogo/>
-          </svg>
-        </span>
         <span className='subscription'>
             <header>Join subscription!</header>
             <input type="text" placeholder='Email'/>

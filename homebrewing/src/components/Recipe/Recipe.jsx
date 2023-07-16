@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import './Recipe.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 
-import { ReactComponent as CoffeeMan } from '../../assets/coffeeMan.svg'
-import { ReactComponent as Latte } from '../../assets/latte.svg'
-import { ReactComponent as Handdrip } from '../../assets/handdrip.svg'
+// import { ReactComponent as CoffeeMan } from '../../assets/coffeeMan.svg'
+// import { ReactComponent as Latte } from '../../assets/latte.svg'
+// import { ReactComponent as Handdrip } from '../../assets/handdrip.svg'
 
 export default function Recipe() {
 
