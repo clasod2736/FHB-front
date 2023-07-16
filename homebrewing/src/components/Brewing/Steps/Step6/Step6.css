@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 76vh;
+  height: 70vh;
 }
 
 .step6 {
@@ -14,7 +14,6 @@
   align-items: center;
   width: 70%;
   height: 85%;
-  margin-top: 5%;
   padding-inline: 3%;
   border: 2px darkgoldenrod solid;
   border-radius: 20px;

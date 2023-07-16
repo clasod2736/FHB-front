@@ -52,7 +52,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
+  width: 35%;
   height: 20%;
   animation: opacity 1.5s;
 }
