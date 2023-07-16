@@ -23,6 +23,13 @@
   align-items: center;
   margin-top: 5%;
 }
+.introContainer .logoContainer .gate img {
+  width: 30%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
 .introContainer .logoContainer .gate .pContainer {
   display: flex;
   flex-direction: column;

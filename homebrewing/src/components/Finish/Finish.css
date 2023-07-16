@@ -5,44 +5,80 @@
   align-items: center;
   width: 100%;
   height: 76vh;
+  animation: opacity 0.5s;
 }
 .finishContainer .finishContents {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  width: 40%;
-  height: 80%;
+  width: 45%;
+  height: 90%;
+  margin-top: 3%;
+  background-image: url("../../../public/img/background/finalLogo2.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.finishContainer .finishContents .finishText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+.finishContainer .finishContents .finishText header {
+  text-align: center;
+  width: 35%;
+  font-size: 25px;
+  font-weight: bold;
+  color: linen;
+  background-color: saddlebrown;
+  border-radius: 5px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.finishContainer .finishContents .finishText .pContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin-top: 3%;
 }
-.finishContainer .finishContents .btnContainer {
+.finishContainer .finishContents .finishText .pContainer p {
+  color: darkgoldenrod;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.finishContainer .finishContents .finishText .btnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  height: 10%;
-  font-size: 40px;
-  color: brown;
+  width: 70%;
+  height: 20%;
 }
-.finishContainer .finishContents .btnContainer button {
-  font-size: 30px;
+.finishContainer .finishContents .finishText .btnContainer button {
+  width: 25%;
+  height: 40%;
+  font-size: 22px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-style: italic;
+  border-radius: 10px;
   border: 0;
-  border-radius: 20px;
-  background-color: transparent;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
 }
-.finishContainer .finishContents .btnContainer button:hover {
-  transform: scale(1.1);
+.finishContainer .finishContents .finishText .btnContainer button:hover {
+  color: brown;
+  background-color: bisque;
   transition: 0.3s;
 }
-.finishContainer .finishContents .btnContainer #favourite {
-  color: chocolate;
-}
-.finishContainer .finishContents .btnContainer #restart {
-  color: saddlebrown;
-}
-.finishContainer .finishContents .btnContainer #shop {
-  color: darkgoldenrod;
+.finishContainer .finishContents .finishText .btnContainer button:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
 }/*# sourceMappingURL=Finish.css.map */
