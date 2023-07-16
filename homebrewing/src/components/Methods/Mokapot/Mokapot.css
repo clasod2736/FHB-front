@@ -54,16 +54,15 @@
   align-items: center;
   width: 100%;
   height: auto;
-  margin-bottom: 1.5%;
+  margin-bottom: 3%;
 }
 .mokapotContainer .mokapotOutline .hashtag span p {
-  font-size: 18px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: sienna;
-  background-color: #eecdb7;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: brown;
+  background-color: wheat;
   border: #7f5539 1px solid;
   border-radius: 20px;
-  cursor: pointer;
   margin-right: 2.5%;
   margin-bottom: 0%;
   padding-block: 0.5%;
@@ -116,15 +115,22 @@
   height: 90%;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #702000;
   text-decoration: none;
-  background-color: wheat;
   border-radius: 10px;
   border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
 }
 .mokapotContainer .mokapotOutline .btnContainer .backBtn:hover {
-  background-color: burlywood;
+  color: brown;
+  background-color: bisque;
   transition: 0.3s;
+}
+.mokapotContainer .mokapotOutline .btnContainer .backBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
 }
 .mokapotContainer .mokapotOutline .btnContainer .recipeBtn {
   display: flex;
@@ -135,15 +141,22 @@
   height: 90%;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #702000;
   text-decoration: none;
-  background-color: wheat;
   border-radius: 10px;
   border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
 }
 .mokapotContainer .mokapotOutline .btnContainer .recipeBtn:hover {
-  background-color: burlywood;
+  color: brown;
+  background-color: bisque;
   transition: 0.3s;
+}
+.mokapotContainer .mokapotOutline .btnContainer .recipeBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
 }
 .mokapotContainer .mokapotPresentation {
   display: flex;
