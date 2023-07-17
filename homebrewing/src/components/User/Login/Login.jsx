@@ -1,10 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Login.css'
 
-import {ReactComponent as Logo} from '../../../assets/login.svg'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+
+//image
+import {ReactComponent as Logo} from '../../../assets/login.svg'
 
 export default function Login() {
+    const [login, setLogin] = useState('')
+    const [userInfo, setUserInfo] = useState('')
+
+    const serverUrl = 'http://localhost:8080/login'
+    
+    // Get api from database for userinformation.
+    const fetchUser = async () => {
+        console.log(login)
+        await axios.get(serverUrl, { 
+            params: {
+                email: login
+        }})
+        .then((response) => {
+            console.log(response.data);
+            setUserInfo(response.data);
+            console.log(userInfo.name);
+        })
+    }
 
   return (
     <div className='LoginContainer'>
@@ -24,10 +45,10 @@ export default function Login() {
                 </div>
                 <div className='email'>
                     <p>Email</p>
-                    <input type="text"/>
+                    <input type="text" onChange={(e) => {setLogin(e.target.value)}}/>
                 </div>
                 <div className='submit'>
-                    <Link className='loginBtn' to={'/'}>Log In</Link>
+                    <Link className='loginBtn' onClick={() => {fetchUser()}}>Log In</Link>
                     <div className='register'>
                         <p>Or...you didn't register yet?</p>
                         <Link className='registerBtn' to={'/register'}>Join FHB</Link>
