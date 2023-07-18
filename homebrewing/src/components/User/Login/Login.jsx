@@ -16,10 +16,9 @@ export default function Login() {
 
     const navigate = useNavigate()
 
-    const serverUrl = 'http://localhost:8080/login'
-    
     // Get api from database for userinformation.
-    const checkUser = async () => {
+    const getLogIn = async () => {
+        const serverUrl = 'http://localhost:8080/login'
         console.log(email);
         try {
             const response = await axios.get(serverUrl, { 
@@ -35,7 +34,15 @@ export default function Login() {
         if (email === response.data.email) {
             dispatch({ type: 'loginSuccess' })
             setAlertUser(false);
-            navigate(`/${response.data.name}`)
+
+            // save user LoggedIn history in local storage
+            localStorage.setItem('userInfo', JSON.stringify(
+                {   userName : [response.data.name],
+                    isLoggedIn : true
+                }
+            ))
+
+            navigate(`/login/${response.data.name}`)
         } 
         else setAlertUser(true)
         } 
@@ -78,7 +85,7 @@ export default function Login() {
                         <div>
                             {settingAlertUser()}
                         </div>
-                        <Link className='loginBtn' onClick={() => {checkUser()}}>Log In</Link>
+                        <Link className='loginBtn' onClick={() => {getLogIn()}}>Log In</Link>
                     </div>
                     <div className='register'>
                         <p>Or...you didn't register yet?</p>

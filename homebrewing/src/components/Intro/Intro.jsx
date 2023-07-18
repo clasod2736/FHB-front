@@ -7,9 +7,10 @@ import { Link,useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 export default function Intro() {
-  const isLogin = useSelector((state) => state.login);
+  const isLogIn = useSelector((state) => state.logIn);
 
-  const {userName} = useParams();
+  const { userName } = useParams();
+  const name = userName
 
   return (
     <div className='introContainer'>
@@ -17,10 +18,10 @@ export default function Intro() {
         <div className='gate'>
           <Logo/>
           <div className='expContatiner'>
-            <Link to='/login' className='exploreBtn'>
+            <Link className='exploreBtn'>
               Make Recent Brew!
             </Link>
-            <Link to={isLogin ? `/${userName}/menu` : '/login'} className='exploreBtn'>
+            <Link to={isLogIn ? `/${name}/menu` : '/login'} className='exploreBtn'>
               Make a New Brew!
             </Link>
           </div>

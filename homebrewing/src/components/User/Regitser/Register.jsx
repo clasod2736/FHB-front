@@ -1,15 +1,35 @@
 import React, {useState} from 'react'
 import './Regitser.css'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 // images and icons
 import {ReactComponent as CoffeeWomen} from '../../../assets/coffeeWomen.svg'
 import { BsGoogle,BsFacebook } from 'react-icons/bs'
 
 export default function User() {
-  const [name, setName] = useState('Are you...??')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
 
   const navigate = useNavigate();
+
+  const postUser = async () => {
+    const serverUrl = 'http://localhost:8080/register'
+
+    console.log(name)
+
+    try {
+      const response = await axios.post(serverUrl, {
+        name : name,
+        email : email
+      })
+
+      console.log(response.data)
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const handleName = (e) => {
     const text = e.target.value

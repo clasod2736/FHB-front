@@ -16,7 +16,12 @@
   animation: people 1.5s;
 }
 .svgContainer .title {
-  animation: words 1.8s;
+  animation-name: people, shaking;
+  animation-delay: 0s, 3s;
+  animation-duration: 1.8s, 2s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
 }
 .svgContainer .words {
   animation-name: people, shaking;
@@ -29,7 +34,7 @@
 
 @keyframes people {
   0% {
-    transform: translateY(100%);
+    transform: translateY(70%);
   }
   100% {
     transform: translateY(0%);

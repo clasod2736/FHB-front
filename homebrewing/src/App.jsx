@@ -31,10 +31,10 @@ const router = createBrowserRouter([
     errorElement: <p>Not Found 404!!</p>,
     children: [
       {index: true, element: <Intro/>},
-      {path: '/:username', element:<Intro/>},
       {path: '/login', element:<Login/>},
+      {path: '/login/:userName', element:<Intro/>},
       {path: '/register', element:<Register/>},
-      {path: '/username/:userName/preference', element:<Preference/>},
+      {path: '/:username', element:<Intro/>},
       {path: '/:userName/menu', element:<Menu/>},
       {path: '/:userName/menu/:menuName/method', element:<Methods/>},
       {path: '/:userName/menu/:menuName/method/mokapot', element:<Methods/>},

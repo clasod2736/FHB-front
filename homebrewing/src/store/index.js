@@ -2,13 +2,16 @@ import {createStore} from 'redux';
 
 function reducer(state = {
 
-    login: false
+    logIn: false
 
     }, action)
     {
     const newState = {...state};
     if (action.type === 'loginSuccess') {
-        newState.login = true;
+        newState.logIn = true;
+    }
+    else if (action.type === 'loggedOut') {
+        newState.logIn = false;
     }
     return newState;
 }
