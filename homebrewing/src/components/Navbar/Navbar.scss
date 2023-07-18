@@ -146,7 +146,7 @@
             transform-origin: bottom;
             }
         }
-    .accounts {
+    .login {
         position: relative;
         display: flex;
         align-items: center;
@@ -169,6 +169,43 @@
             transform: scaleX(0);
             height: 1px;
             bottom: 0px;
+            left: 0;
+            background-color: #86481f;
+            transform-origin: bottom;
+            transition: transform 0.25s ease-out;
+            }
+        &:hover::after {
+            color: #A86B43;
+            transform: scaleX(1);
+            transform-origin: bottom;
+            }
+        }
+    .account {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        outline: none;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #A86B43;
+        letter-spacing: 2px;
+
+        animation: opacity 0.5s;
+        transition: 0.3s ease-in-out;
+    
+        &:hover {
+            color: #86481f;
+            transition: 0.2s;
+            }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 2px;
             left: 0;
             background-color: #86481f;
             transform-origin: bottom;
@@ -211,7 +248,10 @@
         .myRecipe {
             font-size: 16px;
         }
-        .accounts {
+        .login {
+            font-size: 16px;
+        }
+        .account {
             font-size: 16px;
         }
     }

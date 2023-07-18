@@ -140,7 +140,7 @@
   transform: scaleX(1);
   transform-origin: bottom;
 }
-.fixedNavbar .accounts {
+.fixedNavbar .login {
   position: relative;
   display: flex;
   align-items: center;
@@ -152,11 +152,11 @@
   color: #A86B43;
   letter-spacing: 2px;
 }
-.fixedNavbar .accounts:hover {
+.fixedNavbar .login:hover {
   color: #86481f;
   transition: 0.2s;
 }
-.fixedNavbar .accounts:after {
+.fixedNavbar .login:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -168,7 +168,42 @@
   transform-origin: bottom;
   transition: transform 0.25s ease-out;
 }
-.fixedNavbar .accounts:hover::after {
+.fixedNavbar .login:hover::after {
+  color: #A86B43;
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+.fixedNavbar .account {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: none;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #A86B43;
+  letter-spacing: 2px;
+  animation: opacity 0.5s;
+  transition: 0.3s ease-in-out;
+}
+.fixedNavbar .account:hover {
+  color: #86481f;
+  transition: 0.2s;
+}
+.fixedNavbar .account:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 2px;
+  left: 0;
+  background-color: #86481f;
+  transform-origin: bottom;
+  transition: transform 0.25s ease-out;
+}
+.fixedNavbar .account:hover::after {
   color: #A86B43;
   transform: scaleX(1);
   transform-origin: bottom;
@@ -200,7 +235,10 @@
   .fixedNavbar .myRecipe {
     font-size: 16px;
   }
-  .fixedNavbar .accounts {
+  .fixedNavbar .login {
+    font-size: 16px;
+  }
+  .fixedNavbar .account {
     font-size: 16px;
   }
 }/*# sourceMappingURL=Navbar.css.map */

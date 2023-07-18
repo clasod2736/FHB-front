@@ -31,7 +31,7 @@ const router = createBrowserRouter([
     errorElement: <p>Not Found 404!!</p>,
     children: [
       {index: true, element: <Intro/>},
-      {path: '/username', element:<Name/>},
+      {path: '/:username', element:<Intro/>},
       {path: '/login', element:<Login/>},
       {path: '/register', element:<Register/>},
       {path: '/username/:userName/preference', element:<Preference/>},
