@@ -1,19 +1,22 @@
 import React, { useState} from 'react'
 import './Menu.css'
-import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useNavigate, useParams } from 'react-router-dom'
 
 //images and icons
 import {ReactComponent as MilkFoam } from '../../assets/milkFoam.svg'
 import { BiSolidCoffeeBean } from 'react-icons/bi'
 
 export default function Menu() {
+
     const [menuName, setMenuName] = useState('off');
 
+    const { userName } = useParams();
     const navigate = useNavigate();
 
     const handleMenu = (menu) => {
         setMenuName(menu)
-        console.log(menuName)
+        console.log(menu)
     }
     const handleMenuClose = () => {
         setMenuName('');
@@ -23,21 +26,22 @@ export default function Menu() {
             return 'menuContentsOff'
         } else if (menuName === '') {
             return 'menuContentsClose'
-        } else if (menuName ===
-        'espresso'
-        || 'americano'
-        || 'longBlack'
-        || 'coldBrew'
-        || 'latte'
-        || 'flatWhite'
-        || 'cappuccino'
-        || 'mocha'
-        || 'macchiato'
-        || 'chai'
-        || 'tumeric'
-        || 'icedCoffee'
-        || 'affogato'
+        } else if (
+            menuName === 'espresso' || 
+            menuName === 'americano' || 
+            menuName ==='longBlack' || 
+            menuName === 'coldBrew' || 
+            menuName === 'latte' || 
+            menuName === 'flatWhite' || 
+            menuName === 'cappuccino' || 
+            menuName === 'mocha' || 
+            menuName === 'macchiato' || 
+            menuName === 'chai' || 
+            menuName === 'tumeric' || 
+            menuName === 'icedCoffee' || 
+            menuName === 'affogato'
         ) {
+            console.log(menuName)
             return 'menuContents'
             }
         }
@@ -145,7 +149,24 @@ export default function Menu() {
                         </div>
                     </div>
                     <span className='getMenuBtn'>
-                        <button onClick={() => {navigate(`./${menuName}/method`)}}>Choose this Coffee</button>
+                        <button onClick={async () => {
+                            const serverUrl = 'http://localhost:8080/menu'
+                            
+                            try {
+                                const response = await axios.put(serverUrl, {
+                                        name : userName,
+                                        currentBrews : {
+                                            menuName : menuName
+                                        } 
+                                })
+                                console.log(response.data)
+                                
+                                navigate(`./${menuName}/method`);
+                            } catch (error) {
+                                console.log(error)
+                            }
+
+                            }}>Choose this Coffee</button>
                     </span>
                 </div>
             </span>

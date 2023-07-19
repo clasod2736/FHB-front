@@ -27,7 +27,20 @@ export default function User() {
       const response = await axios.post(serverUrl, {
         name : name,
         email : email,
-        brews : {}
+        currentBrews : {
+          menuName: '',
+          methodName: '',
+          serve: 0,
+          roasting: '',
+          grind: ''
+        },
+        oldBrews : {
+          menuName: '',
+          methodName: '',
+          serve: 0,
+          roasting: '',
+          grind: ''          
+        }
       })
 
       console.log(response.data)

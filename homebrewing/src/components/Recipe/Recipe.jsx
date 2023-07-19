@@ -16,7 +16,6 @@ export default function Recipe() {
     const [amount, setAmount] = useState('?');
 
 useEffect(() => {
-    console.log(serve);
     setWater(serve * 180);
     setAmount(serve * 25)
   }, [serve, amount]);

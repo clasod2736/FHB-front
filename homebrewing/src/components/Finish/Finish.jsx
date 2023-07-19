@@ -1,9 +1,14 @@
 import React from 'react'
 import './Finish.css'
 
-// import {ReactComponent as FinalLogo} from '../../assets/finalLogo2.svg'
+import { Link, useParams, useLocation } from 'react-router-dom'
 
 export default function Finish() {
+
+  const { userName } = useParams();
+  const location = useLocation();
+  console.log(location.pathname)
+
   return (
     <div className='finishContainer'>
         <div className='finishContents'>
@@ -15,8 +20,12 @@ export default function Finish() {
               <p>publishing packages and web page</p>
             </div>
             <div className='btnContainer'>
-              <button className='recipe'>Save Recipe</button>
-              <button className='coffee'>Try Another</button>
+              <button className='recipe' onClick={
+                localStorage.setItem
+              }>Save Recipe</button>
+              <Link to={`/login/${userName}`} className='tryAnother'>
+                Try Another
+              </Link>
               <button className='shop'>Explore Shop</button>
             </div>
           </div>

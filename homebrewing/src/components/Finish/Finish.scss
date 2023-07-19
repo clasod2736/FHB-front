@@ -72,6 +72,36 @@
                     width: 70%;
                     height: 20%;
 
+                    .tryAnother{ 
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        width: 25%;
+                        height: 40%;
+                        font-size: 22px;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        border-radius: 10px;
+                        border: 0;    
+                        text-decoration: none;
+
+                        color: linen;
+                        background-color: sienna;
+                        box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                        &:hover {
+                            color: brown;
+                            background-color: bisque;
+                            transition: 0.3s;
+                        }
+                        &:active {
+                            box-shadow: 0px 0px 0px 0px;
+                            transform: translateY(3%);
+                            transition: 0s;
+                        }
+                    }
+
                     button {
                         width: 25%;
                         height: 40%;

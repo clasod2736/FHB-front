@@ -18,6 +18,7 @@ export default function Navbar() {
     const userInfo = JSON.parse(localInfo);
     const isLoggedIn = userInfo.isLoggedIn;
     console.log(userInfo);
+    
     if ( isLoggedIn === true) {
       dispatch({type: 'loginSuccess'})
     }
@@ -25,7 +26,6 @@ export default function Navbar() {
   }, [dispatch])
 
   const isLogIn = useSelector((state) => state.logIn);
-  console.log('isLogin??', isLogIn)
 
   return (
     <div className='fixedNavbar'>

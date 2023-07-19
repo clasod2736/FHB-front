@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import './Mokapot.css'
-import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useNavigate, useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 // Component
 import Carousel from './Carousel/Carousel'
@@ -18,6 +20,7 @@ import { ReactComponent as Alessi } from '../../../assets/alessi.svg'
 export default function Basic({ getMethod, method }) {
 
 const navigate = useNavigate()
+const { userName } = useParams();
 
 const [link, setLink] = useState('');
 
@@ -115,7 +118,24 @@ const handleLinks = () => {
               <span className='btnContainer'>
                 <button className='backBtn' onClick={() => {getMethod('')}}>Back</button>
                 <button className='recipeBtn'
-                onClick={() => {navigate(`./${method}/recipe`)}}
+                onClick={ async () => {
+                  const serverUrl = 'http://localhost:8080/method'
+                  console.log(method)
+
+                  try {
+                    const response = await axios.put(serverUrl, {
+                      name : userName,
+                      currentBrews : {
+                          methodName : method
+                      } 
+                    })
+                    console.log(response.data)
+                  } catch (error) {
+                    console.log(error)
+                  }
+
+                  navigate(`./${method}/recipe`);
+                }}
                 >Go to Recipe!</button>
               </span>
             </div>
