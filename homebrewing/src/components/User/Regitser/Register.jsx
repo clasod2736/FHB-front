@@ -65,9 +65,15 @@ export default function User() {
           console.log('confirm!')
         }
         else { 
+            //request for making user data in database to back end
             postUser()
+
             navigate(`/login/${name}`)
+
+            //make data in redux store
             dispatch({ type: 'loginSuccess' })
+
+            //make data in local storage
             localStorage.setItem('userInfo', JSON.stringify(
               {   userName : [name],
                   isLoggedIn : true
