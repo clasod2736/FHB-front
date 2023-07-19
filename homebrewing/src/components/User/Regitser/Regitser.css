@@ -214,6 +214,20 @@
 .registerContainer .register .contents .form .submitRegist button:hover {
   background-color: burlywood;
 }
+.registerContainer .register .contents .form .caution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 5%;
+}
+.registerContainer .register .contents .form .caution p {
+  color: darkred;
+  font-size: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
 .registerContainer .register .contents .form .login {
   display: flex;
   flex-direction: row;

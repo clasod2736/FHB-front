@@ -8,8 +8,8 @@ import axios from 'axios';
 import {ReactComponent as Logo} from '../../../assets/login.svg'
 
 export default function Login() {
+    
     const [email, setEmail] = useState('')
-    const [userInfo, setUserInfo] = useState('')
     const [alertUser, setAlertUser] = useState (false)
 
     const dispatch = useDispatch();
@@ -28,7 +28,6 @@ export default function Login() {
         })
 
         console.log(response.data);
-        setUserInfo(response.data);
         console.log(response.data.name);
 
         if (email === response.data.email) {

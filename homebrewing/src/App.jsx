@@ -7,8 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //Components
 import Intro from './components/Intro/Intro';
 import Methods from './components/Methods/Methods';
-import Name from './components/User/Regitser/Register'
-import Preference from './components/User/Regitser/Preference/Preference'
 import Menu from './components/Menu/Menu';
 import Recipe from './components/Recipe/Recipe';
 import Login from './components/User/Login/Login';
