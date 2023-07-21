@@ -22,6 +22,7 @@ import Step5 from './components/Brewing/Steps/Step5/Step5';
 import Step6 from './components/Brewing/Steps/Step6/Step6';
 import Step7 from './components/Brewing/Steps/Step7/Step7';
 import Finish from './components/Finish/Finish';
+import MyRecipe from './components/MyRecipe/MyRecipe';
 
 const router = createBrowserRouter([
   { path:'/',
@@ -33,21 +34,22 @@ const router = createBrowserRouter([
       {path: '/login/:userName', element:<Intro/>},
       {path: '/register', element:<Register/>},
       {path: '/:username', element:<Intro/>},
+      {path: '/:username/myRecipe', element:<MyRecipe/>},
       {path: '/:userName/menu', element:<Menu/>},
       {path: '/:userName/menu/:menuName/method', element:<Methods/>},
       {path: '/:userName/menu/:menuName/method/mokapot', element:<Methods/>},
       {path: '/:userName/menu/:menuName/method/:methodName/recipe', element:<Recipe/>},
       {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing', element:<Brewing/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/finish', element:<Finish/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/finish', element:<Finish/>},
       
       //Brewing Steps
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/step1', element:<Step1/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/step2', element:<Step2/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/step3', element:<Step3/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/step4', element:<Step4/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/step5', element:<Step5/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/step6', element:<Step6/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:roasting/:grind/step7', element:<Step7/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step1', element:<Step1/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step2', element:<Step2/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step3', element:<Step3/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step4', element:<Step4/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step5', element:<Step5/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step6', element:<Step6/>},
+      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step7', element:<Step7/>},
     ]}
 ]);
 export default function App() {

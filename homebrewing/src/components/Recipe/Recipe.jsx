@@ -14,7 +14,7 @@ export default function Recipe() {
     const [custom, setCustom] = useState('');
     const [roasting, setRoasting] = useState('');
     const [grind, setGrind] = useState('');
-    const [amount, setAmount] = useState('?');
+    const [amount, setAmount] = useState('');
 
 useEffect(() => {
     setWater(serve * 180);
@@ -161,6 +161,7 @@ useEffect(() => {
                                         name : userName,
                                         currentBrews : {
                                             serve : water,
+                                            coffee: amount,
                                             roasting: roasting,
                                             grind: grind
                                         }                                         
@@ -171,7 +172,7 @@ useEffect(() => {
                                     console.log(error)
                                 }
 
-                                navigate(`./brewing/${water}/${roasting}/${grind}/step1`)
+                                navigate(`./brewing/${water}/${amount}/${roasting}/${grind}/step1`)
                             }}}>Start Brewing!</button>
                     </div>
             </div>

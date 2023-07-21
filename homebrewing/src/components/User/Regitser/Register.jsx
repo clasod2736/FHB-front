@@ -31,6 +31,7 @@ export default function User() {
           menuName: '',
           methodName: '',
           serve: 0,
+          coffee: 0,
           roasting: '',
           grind: ''
         },

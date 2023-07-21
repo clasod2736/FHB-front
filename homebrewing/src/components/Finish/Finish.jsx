@@ -6,8 +6,9 @@ import axios from 'axios';
 
 export default function Finish() {
 
-  const { userName, menuName, methodName, serve, roasting, grind } = useParams();
+  const { userName, menuName, methodName, serve, coffee, roasting, grind } = useParams();
 
+  //fetch currenBrew data from DB
   useEffect(() => {
     async function getCurrentBrew() {
       const serverUrl = 'http://localhost:8080/finish'
@@ -34,7 +35,7 @@ export default function Finish() {
             </div>
             <div className='btnContainer'>
               <Link className='recipe'
-              to={`${userName}/myRecipe`}
+              to={`/${userName}/myRecipe`}
               onClick={ async () => {
                 const postOldUrl = 'http://localhost:8080/saveRecipe'
                 const putCurrentUrl = 'http://localhost:8080/deleteCurrentBrew'
@@ -47,7 +48,7 @@ export default function Finish() {
                 const day = date.getDate().toString();
                 const hour = date.getHours().toString();
                 const minute = date.getMinutes().toString();
-                const fullDate = hour + ":" + minute + ", " + day + ", " + month + ", " + year;
+                const fullDate = hour + ":" + minute + " / " + day + ". " + month + ". " + year;
                 console.log(fullDate)
 
                 //post oldBrews with currentBrews data first.
@@ -60,6 +61,7 @@ export default function Finish() {
                         menuName: menuName,
                         methodName : methodName,
                         serve: serve,
+                        coffee: coffee,
                         roasting: roasting,
                         grind: grind
                       }]
@@ -78,6 +80,7 @@ export default function Finish() {
                       menuName: '',
                       methodName : '',
                       serve: 0,
+                      coffee: 0,
                       roasting: '',
                       grind: ''
                     }
