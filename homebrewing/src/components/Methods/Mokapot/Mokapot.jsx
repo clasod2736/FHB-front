@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import './Mokapot.css'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
 
 // Component
 import Carousel from './Carousel/Carousel'
@@ -122,6 +121,7 @@ const handleLinks = () => {
                   const serverUrl = 'http://localhost:8080/method'
                   console.log(method)
 
+                  //update methodNamw in database
                   try {
                     const response = await axios.put(serverUrl, {
                       name : userName,
@@ -129,8 +129,10 @@ const handleLinks = () => {
                           methodName : method
                       } 
                     })
-                    console.log(response.data)
-                  } catch (error) {
+                    
+                    console.log(response.data.currentBrews);
+                  } 
+                  catch (error) {
                     console.log(error)
                   }
 

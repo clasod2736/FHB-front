@@ -25,6 +25,19 @@ export default function Navbar() {
     console.log('Local Storage :', isLoggedIn);
   }, [dispatch])
 
+  //render differrent Link element depends on LoggedIn
+  const settingMyRecipe = () => {
+    if (isLogIn === false) {
+      return (
+        <Link className='myRecipe' to={'/login'}>My Recipe</Link>
+      )
+    } else if (isLogIn === true) {
+      return (
+        <Link className='myRecipe' to={`${userName}/myRecipe`}>My Recipe</Link>
+      )
+    }
+  }
+
   const isLogIn = useSelector((state) => state.logIn);
 
   return (
@@ -32,7 +45,7 @@ export default function Navbar() {
       <button className='guide'>
         <SlideMenu/>
       </button>
-      <Link className='myRecipe'>My Recipe</Link>
+      {settingMyRecipe()}
       <Link className='navTitle' to={isLogIn ? `/login/${userName}` : '/'}>For Home Barista</Link>
       <Link className='shop'>Shop</Link>
       {isLogIn ? <Link className='account' to={'/'}

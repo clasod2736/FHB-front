@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Recipe.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import axios from 'axios';
 
 export default function Recipe() {
 
@@ -149,10 +150,27 @@ useEffect(() => {
                     <div className='startBrewing'>
                         <p>did you check<br/> everything?<br/>
                         then...</p>
-                        <button onClick={() => {
+                        <button onClick={ async () => {
                             if (roasting === '' || grind === '') {
                                 alert('Please Choose Roasting Level and Grind Size!')
                             } else {
+                                const serverUrl = 'http://localhost:8080/recipe'
+
+                                try {
+                                    const response = await axios.put (serverUrl, {
+                                        name : userName,
+                                        currentBrews : {
+                                            serve : water,
+                                            roasting: roasting,
+                                            grind: grind
+                                        }                                         
+                                    })
+
+                                    console.log(response.data.currentBrews)
+                                } catch (error) {
+                                    console.log(error)
+                                }
+
                                 navigate(`./brewing/${water}/${roasting}/${grind}/step1`)
                             }}}>Start Brewing!</button>
                     </div>

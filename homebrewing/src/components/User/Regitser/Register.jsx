@@ -34,13 +34,7 @@ export default function User() {
           roasting: '',
           grind: ''
         },
-        oldBrews : {
-          menuName: '',
-          methodName: '',
-          serve: 0,
-          roasting: '',
-          grind: ''          
-        }
+        oldBrews : []
       })
 
       console.log(response.data)

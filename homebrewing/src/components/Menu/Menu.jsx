@@ -159,7 +159,7 @@ export default function Menu() {
                                             menuName : menuName
                                         } 
                                 })
-                                console.log(response.data)
+                                console.log(response.data.currentBrews)
                                 
                                 navigate(`./${menuName}/method`);
                             } catch (error) {
