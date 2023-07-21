@@ -39,6 +39,7 @@ export default function Navbar() {
   }
 
   const isLogIn = useSelector((state) => state.logIn);
+  console.log(isLogIn)
 
   return (
     <div className='fixedNavbar'>

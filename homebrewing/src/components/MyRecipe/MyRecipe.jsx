@@ -4,22 +4,22 @@ import './MyRecipe.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 
-//image files
-// import { ReactComponent as Cappuccino } from '../../assets/cappuccino.svg';
-// import { ReactComponent as Mokapot } from '../../assets/mokapot2.svg';
+import {FaStar} from 'react-icons/fa'
 
 export default function MyRecipe() {
     const [oldBrews, setOldBrews] = useState([])
+    const [favourites, setFavourites] = useState([])
     const [fvMenu, setFvMenu] = useState('');
     const [fvMethod, setFvMethod] = useState('');
+    const [changeHistory, setChangeHistory] = useState(false)
 
     const { userName } = useParams();
 
 
     //fetch history of oldBrews from database with useEffect
     useEffect(() => {
-        async function fetchOldBrews() {
-            const serverUrl = 'http://localhost:8080/getOldBrews'
+        async function fetchDatas() {
+            const serverUrl = 'http://localhost:8080/getAllRecipes'
 
             try {
                 const response = await axios.get(serverUrl, {
@@ -28,14 +28,15 @@ export default function MyRecipe() {
                     }
                 })
                 console.log(response.data)
-                setOldBrews(response.data)
+                setOldBrews(response.data.oldBrews)
+                setFavourites(response.data.favourites)
             }
             catch (error) {
                 console.log(error)
             }
         }
-        fetchOldBrews();
-    }, [])
+        fetchDatas();
+    }, [userName])
     
 
 
@@ -46,17 +47,67 @@ export default function MyRecipe() {
 
 
 
-    // make lists use with "Map" method with fetched data.
+    // make history lists use with "Map" method with fetched data.
     const settingOldBrews = () => {
         if (oldBrews.length > 0 ) {
 
             const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
+            const recentBrews = sortedBrews.slice(0, 5);
+            const lastBrews = oldBrews.slice(6, 10);
 
+            if (changeHistory === false) {
+
+                return (
+                    <ul className='history'>
+                        {recentBrews.map((brew, index) => (
+                                
+                                <li key={index}>    
+                                    <p className='date'>{brew.date}</p>
+                                    <p className='menu'>{brew.menuName}</p>
+                                    <p className='method'>{brew.methodName}</p>
+                                    <p className='coffee'>{brew.coffee}g</p>
+                                    <p className='serve'>{brew.serve}ml</p>
+                                    <p className='roasting'>{brew.roasting}</p>
+                                    <p className='grind'>{brew.grind}</p>
+                                </li>
+                            
+                            ))}
+                    </ul>
+                )
+            } else if (changeHistory === true) {
+
+                return (
+                    <ul className='history'>
+                        {lastBrews.map((brew, index) => (
+                                
+                                <li key={index}>    
+                                    <p className='date'>{brew.date}</p>
+                                    <p className='menu'>{brew.menuName}</p>
+                                    <p className='method'>{brew.methodName}</p>
+                                    <p className='coffee'>{brew.coffee}g</p>
+                                    <p className='serve'>{brew.serve}ml</p>
+                                    <p className='roasting'>{brew.roasting}</p>
+                                    <p className='grind'>{brew.grind}</p>
+                                </li>
+                            
+                            ))}
+                    </ul>
+                )
+            }
+
+        }
+    }
+
+    //set favourite lists
+    const settingFavourites = () => {
+        const sortedFavs = oldBrews.sort((a, b) => b.order - a.order);
+
+        if (favourites.length > 0) {
+            
             return (
                 <ul className='history'>
-                    {sortedBrews.map((brew, index) => (
-                            
-                            <li key={index}>    
+                    {sortedFavs.map((brew, index) => (
+                            <li key={index}>
                                 <p className='date'>{brew.date}</p>
                                 <p className='menu'>{brew.menuName}</p>
                                 <p className='method'>{brew.methodName}</p>
@@ -65,13 +116,11 @@ export default function MyRecipe() {
                                 <p className='roasting'>{brew.roasting}</p>
                                 <p className='grind'>{brew.grind}</p>
                             </li>
-                        
                         ))}
                 </ul>
             )
         }
     }
-
 
 
     // pick most choosed Coffee and Method with "Reduce" and "Math" javascript method.
@@ -114,9 +163,6 @@ export default function MyRecipe() {
           console.log("Most frequent menu name:", mostFrequentMethodName);
           setFvMethod(mostFrequentMethodName)
     }
-
-
-
     const settingFvMenu = () => {
         if (fvMenu === 'cappuccino') {
             return (
@@ -136,14 +182,13 @@ export default function MyRecipe() {
         }
     }
 
-
   return (
     <div className='myRecipeContainer'>
         <div className='myRecipe'>
             <div className='myRecipeContents'>
                 <div className='myRecipTitle'>
-                    <header>Here is your History of Brewing.</header>
-                    <p>We save only your 10 recent Brews.</p>
+                    <header>Check your History of Brewing.</header>
+                    <p>FHB save maximum your 10 recent Brews. "Click" brew that you like to try Again!</p>
                 </div>
                 <div className='oldBrews'>
                     <div className='category'>
@@ -156,17 +201,25 @@ export default function MyRecipe() {
                         <p className='grind'>Grind</p>
                     </div>
                     {settingOldBrews()}
+                    <div className='moreBtn'>
+                        <button onClick={() => {setChangeHistory((prevChangeHistory) => !prevChangeHistory); console.log(changeHistory)}}>
+                            { changeHistory ? "Check first 5 Brews" : "Check rest of the Brews" }
+                            </button>
+                    </div>
                 </div>
                 <div className='favouritesContainer'>
-                    <h3>Your most favourite Coffee and Method.</h3>
+                    <div className='favTitle'>
+                        <header><FaStar className='favIcon'/>Your favourite brews.</header>
+                        <p>You can save maximum 5 favourite Brews.</p>
+                    </div>
                     <div className='favourites'>
-                        <div className='favouriteMenu'>
+                        {/* <div className='favouriteMenu'>
                             {settingFvMenu()}
                         </div>
                         <p className='words'>with</p>
                         <div className='favouriteMethod'>
                             {settingFvMethod()}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

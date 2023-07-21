@@ -27,6 +27,8 @@
         color: #672f0a;
         text-shadow: 2px 2px darkgoldenrod;
         letter-spacing: 1px;
+        border: 0;
+        background-color: transparent;
         border-radius: 5px;
         margin-block: 5px;
         padding-inline: 1%;
@@ -36,8 +38,7 @@
         transition: all 0.2s linear;
         
         &:hover {
-            letter-spacing: 1.5px;
-            transition: 0.3s;
+            text-shadow: 3px 3px darkgoldenrod;
         }
     }
     .guide {
@@ -49,7 +50,7 @@
     text-decoration: none;
     outline: none;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #A86B43;
     border: none;
     background-color: transparent;
@@ -86,7 +87,7 @@
         text-decoration: none;
         outline: none;
         font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 2px;
     
@@ -120,7 +121,7 @@
         text-decoration: none;
         outline: none;
         font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 1px;
     
@@ -154,7 +155,7 @@
         text-decoration: none;
         outline: none;
         font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 2px;
 
@@ -191,7 +192,7 @@
         text-decoration: none;
         outline: none;
         font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 2px;
 

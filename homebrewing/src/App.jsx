@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {path: '/login/:userName', element:<Intro/>},
       {path: '/register', element:<Register/>},
       {path: '/:username', element:<Intro/>},
-      {path: '/:username/myRecipe', element:<MyRecipe/>},
+      {path: '/:userName/myRecipe', element:<MyRecipe/>},
       {path: '/:userName/menu', element:<Menu/>},
       {path: '/:userName/menu/:menuName/method', element:<Methods/>},
       {path: '/:userName/menu/:menuName/method/mokapot', element:<Methods/>},

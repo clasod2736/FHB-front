@@ -35,7 +35,8 @@ export default function User() {
           roasting: '',
           grind: ''
         },
-        oldBrews : []
+        oldBrews : [],
+        favourites: []
       })
 
       console.log(response.data)
