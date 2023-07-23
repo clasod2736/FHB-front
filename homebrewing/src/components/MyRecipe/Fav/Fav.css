@@ -1,0 +1,304 @@
+.FavContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 95%;
+  height: 45%;
+}
+.FavContainer .favTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 25%;
+}
+.FavContainer .favTitle header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+}
+.FavContainer .favTitle header .favIcon {
+  font-size: 25px;
+  text-align: center;
+}
+.FavContainer .favTitle p {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 3%;
+  color: darkgoldenrod;
+  margin-bottom: 0;
+}
+.FavContainer .favContents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+.FavContainer .favContents .favourites {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 55%;
+  height: 100%;
+  background-color: wheat;
+  border-radius: 10px;
+  padding: 1%;
+  overflow: hidden;
+}
+.FavContainer .favContents .favourites .favList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  padding-left: 0%;
+}
+.FavContainer .favContents .favourites .favList li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-block: 1.5%;
+  padding-inline: 3%;
+  color: saddlebrown;
+}
+.FavContainer .favContents .favourites .favList li p {
+  width: 45%;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.FavContainer .favContents .favourites .favList li .btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+  height: 100%;
+}
+.FavContainer .favContents .favourites .favList li .btnContainer button {
+  height: 70%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: sienna;
+  background-color: transparent;
+  border: 0;
+  border-radius: 20px;
+  background-color: wheat;
+}
+.FavContainer .favContents .favourites .favList li .btnContainer button:hover {
+  box-shadow: 0px 0px 0px 3px bisque;
+}
+.FavContainer .favContents .favourites .favList li:hover {
+  color: wheat;
+  background-color: saddlebrown;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favourites .favList li:hover button {
+  color: bisque;
+  background-color: saddlebrown;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favourites .noneFav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FavContainer .favContents .favourites .noneFav .makeFavBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 30%;
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px burlywood;
+}
+.FavContainer .favContents .favourites .noneFav .makeFavBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favourites .noneFav .makeFavBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.FavContainer .favContents .favOthers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+}
+.FavContainer .favContents .favOthers .favDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  padding: 1%;
+  animation: opacity 0.3s;
+}
+.FavContainer .favContents .favOthers .favDetails .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FavContainer .favContents .favOthers .favDetails .details header {
+  width: 90%;
+  font-size: 20px;
+  font-weight: bold;
+  color: sienna;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding-bottom: 1%;
+  border-bottom: 1px sienna solid;
+}
+.FavContainer .favContents .favOthers .favDetails .details h3 {
+  font-size: 16px;
+  color: sienna;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  background-color: wheat;
+  padding: 2%;
+  margin-bottom: 0;
+}
+.FavContainer .favContents .favOthers .favDetails .details p {
+  display: flex;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: darkgoldenrod;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.FavContainer .favContents .favOthers .favDetails .details p:hover {
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favOthers .favDetails .details p:active {
+  opacity: 0;
+  letter-spacing: 0px;
+  transition: 0.07s;
+}
+.FavContainer .favContents .favOthers .favDetails .custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FavContainer .favContents .favOthers .favDetails .custom .menuName {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favOthers .favDetails .custom .menuName button {
+  font-size: 20px;
+  color: sienna;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-block: 2%;
+}
+.FavContainer .favContents .favOthers .favDetails .custom .menuName button:hover {
+  background-color: sienna;
+  color: wheat;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favOthers .favDetails .custom .menuName button:active {
+  animation: select 0.01s;
+  animation-fill-mode: forwards;
+}
+.FavContainer .favContents .favOthers .favDetailsNot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px sienna solid;
+}
+.FavContainer .favContents .favOthers .favDetailsNot p {
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.favouriteMethod {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 20%;
+  height: 100%;
+  padding-bottom: 1%;
+}
+.favouriteMethod .mokapot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.favouriteMethod .mokapot p {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: saddlebrown;
+  margin-bottom: 0;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Fav.css.map */

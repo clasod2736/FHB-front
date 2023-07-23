@@ -133,4 +133,76 @@
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
+}
+.finishContainer .finishContents .finishText .favSubmit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20%;
+  transition: all 0.3s linear;
+  animation: opacity 0.3s;
+  animation-direction: alternate;
+}
+.finishContainer .finishContents .finishText .favSubmit input {
+  font-size: 20px;
+  background-color: wheat;
+  color: brown;
+  border: 2px sienna solid;
+  border-radius: 5px;
+  outline: none;
+  padding: 1%;
+  padding-left: 5%;
+}
+.finishContainer .finishContents .finishText .favSubmit .btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+.finishContainer .finishContents .finishText .favSubmit .btnContainer button {
+  width: 20%;
+  height: 50%;
+  font-size: 20px;
+  border-radius: 100%;
+  background-color: sienna;
+  color: wheat;
+}
+.finishContainer .finishContents .finishText .favSubmit .btnContainer .submitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 60%;
+  height: 50%;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  border: 0;
+  color: lightslategray;
+  background-color: wheat;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+  transition: 0.3s;
+}
+.finishContainer .finishContents .finishText .favSubmit .btnContainer .submitBtn:hover {
+  color: slategrey;
+  background-color: antiquewhite;
+  transition: 0.3s;
+}
+.finishContainer .finishContents .finishText .favSubmit .btnContainer .submitBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.finishContainer .finishContents .finishText .favSubmit .none {
+  display: none;
+}
+.finishContainer .finishContents .finishText .savedText {
+  font-size: 30px;
+  color: sienna;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 0;
+  animation: opacity 0.5s;
 }/*# sourceMappingURL=Finish.css.map */

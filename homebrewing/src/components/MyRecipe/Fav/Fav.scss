@@ -1,0 +1,378 @@
+.FavContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 95%;
+    height: 45%;
+
+    .favTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+        height: 25%;
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: sienna;
+
+            .favIcon {
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            padding-left: 3%;
+            color: darkgoldenrod;
+
+            margin-bottom: 0;
+        }
+    }
+
+    .favContents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: 80%;
+        
+        .favourites {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            width: 55%;
+            height: 100%;
+
+            background-color: wheat;
+            border-radius: 10px;
+
+            padding: 1%;
+
+            overflow: hidden;
+
+
+            .favList {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                width: 100%;
+                height: 100%;
+
+                margin-bottom: 0;
+                padding-left: 0%;
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 15%;
+                    cursor: pointer;
+
+                    border-radius: 5px;
+                    
+                    margin-block: 1.5%;
+                    padding-inline: 3%;
+                    color: saddlebrown;
+                    
+                    p {
+                        width: 45%;
+                        font-size: 20px;
+                        font-weight: bold;
+                        overflow: hidden;
+
+                        margin-bottom: 0;
+                    }
+                    
+                    .btnContainer {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        width: 55%;
+                        height: 100%;
+
+                        button {
+                            height: 70%;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: bold;
+                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+                            color: sienna;
+                            background-color: transparent;
+                            border: 0;
+                            border-radius: 20px;
+                            background-color: wheat;
+        
+                            &:hover {
+                                box-shadow: 0px 0px 0px 3px bisque;
+                            }
+                        }
+                    }
+                    
+                    &:hover {
+                        color: wheat;
+                        background-color: saddlebrown;
+                        transition: 0.3s;
+
+                        button {
+                            color: bisque;
+                            background-color: saddlebrown;
+                            transition: 0.3s;
+                        }
+
+                    }
+
+                }
+            }
+            .noneFav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                height: 100%;
+
+                .makeFavBtn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+                    height: 30%;
+                    font-size: 22px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    border: 0;    
+
+                    color: linen;
+                    background-color: sienna;
+                    box-shadow: 2px 3px 0px 1px burlywood;
+
+                    &:hover {
+                        color: saddlebrown;
+                        background-color: bisque;
+                        transition: 0.3s;
+                    }
+                    &:active {
+                        box-shadow: 0px 0px 0px 0px;
+                        transform: translateY(3%);
+                        transition: 0s;
+                    }
+                }
+            }
+        }
+        .favOthers {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 45%;
+            height:100%;
+
+
+            .favDetails {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 95%;
+                height: 100%;
+
+                // border-block: 1px solid sienna;
+
+                padding: 1%;
+
+                animation: opacity 0.3s;
+                
+                .details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    width: 100%;
+                    height: 100%;
+
+                    header {
+                        width: 90%;
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: sienna;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+                        padding-bottom: 1%;
+                        border-bottom: 1px sienna solid;
+                    }
+
+                    h3 {
+                        font-size: 16px;
+                        color: sienna;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        font-weight: bold;
+                        background-color: wheat;
+                        padding: 2%;
+
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        display: flex;
+                        font-size: 15px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: bold;
+                        color: darkgoldenrod;
+                        text-transform: uppercase;
+                        cursor: pointer;
+    
+                        margin-bottom: 0;
+    
+                        &:hover {
+                            letter-spacing: 1px;
+                            transition: 0.3s;
+                        }
+    
+                        &:active {
+                            opacity: 0;
+                            letter-spacing: 0px;
+                            transition: 0.07s;
+                        }
+
+                    }
+                }
+                .custom {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    .menuName {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+
+                        overflow-y: scroll;
+                        scroll-behavior: smooth;
+
+                        animation: opacity 0.5s;
+                        
+                        button {
+                            font-size: 20px;
+                            color: sienna;
+                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            border: 0;
+                            border-radius: 5px;
+                            background-color: transparent;
+                            
+                            margin-block: 2%;
+
+                            &:hover {
+                                background-color: sienna;
+                                color: wheat;
+                                transition: 0.3s;
+                            }
+                            &:active {
+                                animation: select 0.01s;
+                                animation-fill-mode: forwards;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .favDetailsNot {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+
+                width: 95%;
+                height: 100%;
+
+                background-color: transparent;
+
+                border-radius: 10px;
+                border: 1px sienna solid;
+
+                p {
+                    font-size: 25px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    color: sienna;
+                    text-transform: uppercase;
+
+                    margin-bottom: 0;
+                }
+            }
+        }
+        }
+    }
+
+    .favouriteMethod {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        width: 20%;
+        height: 100%;
+
+        padding-bottom: 1%;
+
+        .mokapot {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100%;
+
+            p {
+                font-size: 40px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: saddlebrown;
+
+                margin-bottom: 0;
+            }                        
+        }
+    }
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }   
+    to {
+        opacity: 1;
+    }
+}
