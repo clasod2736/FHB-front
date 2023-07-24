@@ -152,7 +152,7 @@ export default function Finish() {
                 setFavOpen(true);
                 setSaved(false)
                 }}>Save Favourite</button>
-              <Link to={`/${userName}/login`} className='tryAnother'>
+              <Link to={`/login/${userName}`} className='tryAnother'>
                 Try Another
               </Link>
               <button className='shop'>Explore Shop</button>

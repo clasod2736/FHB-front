@@ -51,6 +51,7 @@
   align-items: flex-start;
   width: 95%;
   height: 45%;
+  min-height: 45%;
   border-block: 1px sienna solid;
   padding-top: 1.5%;
   padding-bottom: 1%;
@@ -131,7 +132,7 @@
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li p {
   margin-inline: 3%;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   color: rgb(156, 113, 2);

@@ -4,6 +4,8 @@ import './Fav.css'
 import axios from 'axios'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 
+// image and icon
+import {ReactComponent as FHBLogo} from '../../../assets/favLogo.svg'
 import {FaStar} from 'react-icons/fa'
 
 export default function Fav() {
@@ -11,7 +13,7 @@ export default function Fav() {
     const [favList, setFavList] = useState(undefined);
     const [description, setDescription] = useState('');
 
-    const {userName} = useParams();
+    const { userName } = useParams();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -81,7 +83,10 @@ const settingFavDetails = () => {
     if (typeof favList !== 'object') {
         return (
             <div className='favDetailsNot'>
-                <p>Details of Favourite Brew.</p>
+                <svg width={'100%'} height={'70%'} viewBox='-20 180 550 120'>
+                    <FHBLogo/>    
+                </svg>
+                <header>For Home Barista</header>
             </div>
         )
     } else {

@@ -33,13 +33,6 @@ export default function MyRecipe() {
         }
         fetchDatas();
     }, [])
-    
-
-
-    //set most favourite coffee and method with useEffect
-    // useEffect(() => {
-    //     getFavouriteName();
-    // }, [oldBrews])
 
     // make history lists use with fetched data.
     const settingOldBrews = () => {
@@ -55,7 +48,10 @@ export default function MyRecipe() {
                     <ul className='history'>
                         {recentBrews.map((brew, index) => (
                                 
-                                <li key={index}>    
+                                <li key={index}
+                                onClick={() => {
+                                    navigate(`/${userName}/menu/${brew.menuName}/method/${brew.methodName}/recipe/brewing/${brew.serve}/${brew.coffee}/${brew.roasting}/${brew.grind}/step1`)
+                                }}>    
                                     <p className='date'>{brew.date}</p>
                                     <p className='menu'>{brew.menuName}</p>
                                     <p className='method'>{brew.methodName}</p>
@@ -91,68 +87,6 @@ export default function MyRecipe() {
 
         }
     }
-
- 
-
-
-    // pick most choosed Coffee and Method with "Reduce" and "Math" javascript method.
-    // const getFavouriteName = () => {
-    //     //get frequency of coffee name from all objects in DB
-    //     const frequencyMenu = oldBrews.reduce((frequency, brew) => {
-    //         const menuName = brew.menuName;
-
-    //         frequency[menuName] = (frequency[menuName] || 0 ) + 1;
-    //         return frequency
-    //     }, {})
-    //     console.log(frequencyMenu)
-
-    //     //get frequency of method name from all objects in DB
-    //     const frequencyMethod = oldBrews.reduce((frequency, brew) => {
-    //         const methodName = brew.methodName;
-
-    //         frequency[methodName] = (frequency[methodName] || 0 ) + 1;
-    //         return frequency
-    //     }, {})
-    //     console.log(frequencyMethod)
-
-    //     //get coffee name have highest number of frequency
-    //     const maxMenuFrequency = Math.max(...Object.values(frequencyMenu));
-        
-    //     const mostFrequentMenuName = Object.keys(frequencyMenu).find(
-    //         menuName => frequencyMenu[menuName] === maxMenuFrequency
-    //         );
-            
-    //         console.log("Most frequent menu name:", mostFrequentMenuName);
-    //         setFvMenu(mostFrequentMenuName)
-            
-    //     //get method name have highest number of frequency
-    //     const maxMethodFrequency = Math.max(...Object.values(frequencyMethod));
-
-    //     const mostFrequentMethodName = Object.keys(frequencyMethod).find(
-    //         menuName => frequencyMethod[menuName] === maxMethodFrequency
-    //       );
-          
-    //       console.log("Most frequent menu name:", mostFrequentMethodName);
-    //       setFvMethod(mostFrequentMethodName)
-    // }
-    // const settingFvMenu = () => {
-    //     if (fvMenu === 'cappuccino') {
-    //         return (
-    //             <div className='cappuccino'>
-    //                 <p>Cappuccino</p>
-    //             </div>
-    //         )
-    //     } else return 'none'
-    // }
-    // const settingFvMethod = () => {
-    //     if (fvMethod === 'mokapot') {
-    //         return (
-    //             <div className='mokapot'>
-    //                 <p>Moka Pot</p>
-    //             </div>
-    //         )
-    //     }
-    // }
 
   return (
     <div className='myRecipeContainer'>
