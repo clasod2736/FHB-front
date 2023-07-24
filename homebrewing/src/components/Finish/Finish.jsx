@@ -121,7 +121,8 @@ export default function Finish() {
               serve: serve,
               coffee: coffee,
               roasting: roasting,
-              grind: grind
+              grind: grind,
+              description: ''
             }]
         })
         console.log(response)

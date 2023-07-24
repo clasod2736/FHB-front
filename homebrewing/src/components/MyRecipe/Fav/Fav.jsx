@@ -8,15 +8,8 @@ import {FaStar} from 'react-icons/fa'
 
 export default function Fav() {
     const [favourites, setFavourites] = useState([])
-    const [fav, setFav] = useState('');
-    const [favDetail, setFavDetail] = useState(false);
-    const [favChange, setFavChange] = useState(0)
-    const [fvMenu, setFvMenu] = useState('');
-    const [fvMethod, setFvMethod] = useState('');
-
-    //States for custom FavDetails
-    const [custom, setCustom] = useState('');
-    const [menuName, setMenuName] = useState(false);
+    const [favList, setFavList] = useState(undefined);
+    const [description, setDescription] = useState('');
 
     const {userName} = useParams();
     const navigate = useNavigate();
@@ -31,15 +24,14 @@ export default function Fav() {
                         name: userName
                     }
                 })
-                console.log(response.data)
-                setFavourites(response.data)
+                setFavourites(response.data);
             }
             catch (error) {
                 console.log(error)
             }
         }
         fetchDatas();
-    }, [])
+    }, [ description ])
 
 //set favourite lists with fetched data
 const settingFavourites = () => {
@@ -54,20 +46,20 @@ if (favourites.length > 0) {
                         <div className='btnContainer'>
                             <button onClick={() => {
 
-                            navigate(`/${userName}/menu/${favDetail.menuName}/method/${favDetail.methodName}/recipe`)
+                            navigate(`/${userName}/menu/${favList.menuName}/method/${favList.methodName}/recipe`)
 
                             }}>Go Brew</button>
-                            <button className='custom'
+                            <button className='detail'
                             onClick={() => {
 
-                            setFav(favourite.favName);
-                            setFavDetail(favourite);
+                            setFavList(favourite);
+                            setDescription(favourite.description)
+                            console.log(favourite.description)
 
-                            }}>Custom</button>
+                            }}>Detail</button>
                             <button onClick={() => {
 
-                            deleteFav();
-                            setFavChange((prev) => prev + 1);
+                            deleteFav(favourite.favName);
 
                             }}>Delete</button>
                         </div>
@@ -86,307 +78,72 @@ if (favourites.length > 0) {
 
 const settingFavDetails = () => {
     
-    if (!favDetail) {
+    if (typeof favList !== 'object') {
         return (
             <div className='favDetailsNot'>
                 <p>Details of Favourite Brew.</p>
             </div>
         )
-    } else if (favDetail) {
-
+    } else {
         return (
             <div className='favDetails'>
-                {settingCustomFavDetails()}
-                <div className='details' style={{ display: custom === '' ? 'flex' : 'none'}}>
-                    <header>Click and custom each recipe.</header>
-                    <h3>Name: {favDetail.favName}</h3>
-                    <p 
-                    onClick={() => {setCustom('menuName');
-                    }}>Coffee: {favDetail.menuName}</p>
-                    <p 
-                    >Method: {favDetail.methodName}</p>
-                    <p 
-                    >Water: {favDetail.serve}ml</p>
-                    <p 
-                    >Ground Coffee: {favDetail.coffee}g</p>
-                    <p 
-                    >Roasting Level: {favDetail.roasting}</p>
-                    <p 
-                    >Grind Size: {favDetail.grind}</p>
-                </div>
-            </div>
-        )
-    }
-
-}
-
-console.log(fav.menuName)
-
-const settingCustomFavDetails = () => {
-    if (custom === '') {
-        return (
-            <div style={{ display: 'none'}}></div>
-        )
-    }
-    else if (custom === 'menuName') {
-        return (
-            <div className='custom'>
-                <div className='menuName'>
-                    <button onClick={ async () => {
-                        setMenuName('espresso');
-
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                    }}
-                    style={{ display: favDetail.menuName === 'espresso'? 'none' : 'flex'}}
-                    >Espresso</button>
-                    <button onClick={ async () => {
-                        setMenuName('americano');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: [{
-                                    favName: fav,
-                                    menuName : menuName
-                                }]
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-
-                        console.log(custom)
-                        console.log(menuName)
-                        }}
-                        style={{ display: favDetail.menuName === 'americano' ? 'none' : 'flex'}}
-                        >Americano</button>
-                    <button onClick={ async () => {
-                        setMenuName('longBlack');
-
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'longBlack'? 'none' : 'flex'}}
-                        >Long Black</button>
-                    <button onClick={ async () => {
-                        setMenuName('coldBrew');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'clodBrew'? 'none' : 'flex'}}
-                        >Cold Brew</button>
-                    <button onClick={ async () => {
-                        setMenuName('latte');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'latte' ? 'none' : 'flex'}}
-                        >Latte</button>
-                    <button onClick={ async () => {
-                        setMenuName('flatWhite');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'flatWhite'? 'none' : 'flex'}}
-                        >Flat White</button>
-                    <button onClick={ async () => {
-                        setMenuName('cappuccino');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'cappuccino'? 'none' : 'flex'}}
-                        >Cappuccino</button>
-                    <button onClick={ async () => {
-                        setMenuName('mocha');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'mocha'? 'none' : 'flex'}}
-                        >Mocha</button>
-                    <button onClick={ async () => {
-                        setMenuName('macchiato');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'macchiato'? 'none' : 'flex'}}
-                        >Macchiato</button>
-                    <button onClick={ async () => {
-                        setMenuName('chai');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'chai' ? 'none' : 'flex'}}
-                        >Chai Latte</button>
-                    <button onClick={ async () => {
-                        setMenuName('tumeric');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'tumeric'? 'none' : 'flex'}}
-                        >Tumeric</button>
-                    <button onClick={ async () => {
-                        setMenuName('icedCoffee');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'icedCoffee'? 'none' : 'flex'}}
-                        >Iced Coffee</button>
-                    <button onClick={ async () => {
-                        setMenuName('affogato');
-                        
-                        try {
-                            const response = await axios.put('http://localhost:8080/putMenuName', {
-                                favourites: {
-                                    favName: fav,
-                                    menuName : menuName
-                                }
-                            })
-                            console.log(response.data)
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        setCustom('');
-                        }}
-                        style={{ display: favDetail.menuName === 'affogato'? 'none' : 'flex'}}
-                        >Affogato</button>
+                <header>Check details and Add description.</header>
+                <div className='detailsContainer'>
+                    <div className='details'>
+                        <h3>Name: {favList.favName}</h3>
+                        <p>Coffee: {favList.menuName}</p>
+                        <p>Method: {favList.methodName}</p>
+                        <p>Water: {favList.serve}ml</p>
+                        <p>Ground Coffee: {favList.coffee}g</p>
+                        <p>Roasting Level: {favList.roasting}</p>
+                        <p>Grind Size: {favList.grind}</p>
+                    </div>
+                    <div className='description'>
+                        <p>Description</p>
+                        <textarea className='descriptionInput' cols={'6'} rows={'6'} maxLength={100} 
+                        value={description}
+                        onChange={(e) => {setDescription(e.target.value); console.log(description)}}
+                        > <p>Hello!!</p>
+                        </textarea>
+                        <button type='submit' className='saveDescription' 
+                        onClick={() => {saveDescription()}}>Save</button>
+                    </div>
                 </div>
             </div>
         )
     }
 }
 
-//Delete Fav in database
-const deleteFav = () => {
+
+const saveDescription = async () => {
+
+        try {
+
+            const response = await axios.put('http://localhost:8080/updateDescription', {
+                favourites : {
+                    favName: favList.favName,
+                    description: description
+                }
+            })
+            console.log(response.data.favourites);
+        } 
+    catch (error) {
+        console.log(error)
+    }
+}
+
+//Delete Fav in web and database
+const deleteFav = (favName) => {
 
     try {
 
         const response = axios.delete('http://localhost:8080/deleteFav', {
             params: {
-                favName : fav
+                favName : favName
             }
         })
         console.log(response.data)
-        setFavourites(prevFavourites => prevFavourites.filter(item => item.favName !== fav));
+        setFavourites(prevFavourites => prevFavourites.filter(item => item.favName !== favName));
     }
     catch (error) {
         console.log(error)
@@ -407,14 +164,6 @@ const deleteFav = () => {
             <div className='favOthers'>
                 {settingFavDetails()}
             </div>
-                {/* <div className='favouriteMenu'>
-                    {settingFvMenu()}
-                </div>
-                <p className='words'>with</p>
-                <div className='favouriteMethod'>
-                    {settingFvMethod()}
-                </div> */}
-
         </div>
     </div>
   )

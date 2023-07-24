@@ -48,7 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 55%;
+  width: 50%;
   height: 100%;
   background-color: wheat;
   border-radius: 10px;
@@ -64,6 +64,7 @@
   height: 100%;
   margin-bottom: 0;
   padding-left: 0%;
+  animation: opacity 0.5s;
 }
 .FavContainer .favContents .favourites .favList li {
   display: flex;
@@ -104,6 +105,7 @@
   border: 0;
   border-radius: 20px;
   background-color: wheat;
+  padding-block: 0;
 }
 .FavContainer .favContents .favourites .favList li .btnContainer button:hover {
   box-shadow: 0px 0px 0px 3px bisque;
@@ -156,142 +158,111 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 45%;
+  width: 50%;
   height: 100%;
 }
 .FavContainer .favContents .favOthers .favDetails {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 95%;
   height: 100%;
-  padding: 1%;
   animation: opacity 0.3s;
 }
-.FavContainer .favContents .favOthers .favDetails .details {
+.FavContainer .favContents .favOthers .favDetails header {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: sienna;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 1%;
+  border-bottom: 1px sienna solid;
+}
+.FavContainer .favContents .favOthers .favDetails .detailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  padding-left: 3%;
+  padding: 1%;
+}
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .details h3 {
+  font-size: 18px;
+  color: wheat;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  background-color: sienna;
+  border-radius: 5px;
+  padding: 2%;
+  margin-bottom: 0;
+}
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .details p {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: saddlebrown;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding: 1%;
+}
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
-.FavContainer .favContents .favOthers .favDetails .details header {
-  width: 90%;
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .description p {
   font-size: 20px;
   font-weight: bold;
   color: sienna;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  padding-bottom: 1%;
-  border-bottom: 1px sienna solid;
+  margin-bottom: 0%;
 }
-.FavContainer .favContents .favOthers .favDetails .details h3 {
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .descriptionInput {
+  width: 80%;
+  min-height: 70%;
+  max-height: 70%;
+  outline: none;
+  border: 0;
+  resize: none;
   font-size: 16px;
   color: sienna;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+  overflow: hidden;
   background-color: wheat;
-  padding: 2%;
-  margin-bottom: 0;
-}
-.FavContainer .favContents .favOthers .favDetails .details p {
-  display: flex;
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: darkgoldenrod;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 0;
-}
-.FavContainer .favContents .favOthers .favDetails .details p:hover {
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-.FavContainer .favContents .favOthers .favDetails .details p:active {
-  opacity: 0;
-  letter-spacing: 0px;
-  transition: 0.07s;
-}
-.FavContainer .favContents .favOthers .favDetails .custom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.FavContainer .favContents .favOthers .favDetails .custom .menuName {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  animation: opacity 0.5s;
-}
-.FavContainer .favContents .favOthers .favDetails .custom .menuName button {
-  font-size: 20px;
-  color: sienna;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  border: 0;
   border-radius: 5px;
-  background-color: transparent;
-  margin-block: 2%;
+  padding: 5%;
 }
-.FavContainer .favContents .favOthers .favDetails .custom .menuName button:hover {
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .saveDescription {
+  width: 80%;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
   background-color: sienna;
-  color: wheat;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+}
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .saveDescription:hover {
+  color: brown;
+  background-color: bisque;
   transition: 0.3s;
 }
-.FavContainer .favContents .favOthers .favDetails .custom .menuName button:active {
-  animation: select 0.01s;
-  animation-fill-mode: forwards;
-}
-.FavContainer .favContents .favOthers .favDetailsNot {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 95%;
-  height: 100%;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 1px sienna solid;
-}
-.FavContainer .favContents .favOthers .favDetailsNot p {
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: sienna;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-.favouriteMethod {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 20%;
-  height: 100%;
-  padding-bottom: 1%;
-}
-.favouriteMethod .mokapot {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.favouriteMethod .mokapot p {
-  font-size: 40px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: saddlebrown;
-  margin-bottom: 0;
+.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .saveDescription:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
 }
 
 @keyframes opacity {
