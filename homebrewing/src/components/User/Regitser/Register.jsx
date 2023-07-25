@@ -40,31 +40,35 @@ export default function User() {
       })
 
       console.log(response.data)
-
+      navigate(`/login/${name}`)
     } catch (error) {
       console.log(error)
+      setCaution('emailExist')
     }
   }
 
   //check user input and post user data to redux and local
   const submitRegist = () => {
-    if (name === '' || name === Number) {
+    if (name.length <= 0) {
           setCaution('name')
-          console.log('name!')
+          console.log(caution)
         }
-        else if (email === '' || email === Number) {
+        else if (name === isNaN) {
+          setCaution('nameNum')
+          console.log('nameNum')
+        }
+        else if (email.length <= 0) {
           setCaution('email')
-          console.log('email!')
+        }
+        else if (!email.includes('@')) {
+          setCaution('emailForm')
         }
         else if (email !== confirmEmail) {
           setCaution('confirmEmail')
-          console.log('confirm!')
-        }
+        } 
         else { 
             //request for making user data in database to back end
             postUser()
-
-            navigate(`/login/${name}`)
 
             //make data in redux store
             dispatch({ type: 'loginSuccess' })
@@ -84,9 +88,21 @@ export default function User() {
       return (
         <p>***Plase put your Name.</p>
       )
+    } else if (caution === 'nameNum') {
+      return (
+        <p>***Plase put letter for Name.</p>
+      )
     } else if (caution === 'email') {
       return (
         <p>***Please put your email.</p>
+      )
+    } else if (caution === 'emailForm') {
+      return (
+        <p>***Please put proper form of email address.</p>
+      )
+    } else if (caution === 'emailExist') {
+      return (
+        <p>***This Email address already registerd.</p>
       )
     } else if (caution === 'confirmEmail') {
       return (

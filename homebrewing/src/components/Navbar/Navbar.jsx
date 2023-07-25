@@ -48,7 +48,7 @@ export default function Navbar() {
       </button>
       {settingMyRecipe()}
       <Link className='navTitle' to={isLogIn ? `/login/${userName}` : '/'}>For Home Barista</Link>
-      <Link className='shop'>Shop</Link>
+      <Link className='shop' to={'/shop'}>Shop</Link>
       {isLogIn ? <Link className='account' to={'/'}
       onClick={() => {
 

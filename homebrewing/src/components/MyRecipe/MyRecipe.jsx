@@ -9,7 +9,7 @@ export default function MyRecipe() {
     const [oldBrews, setOldBrews] = useState([]);
     const [changeHistory, setChangeHistory] = useState(false)
 
-    const { userName, menuName, methodName, serve, coffee, roasting, grind } = useParams();
+    const { userName } = useParams();
     const navigate = useNavigate();
 
 

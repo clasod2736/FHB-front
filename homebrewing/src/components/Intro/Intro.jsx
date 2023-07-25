@@ -13,6 +13,7 @@ export default function Intro() {
   const { userName, } = useParams();
   const navigate = useNavigate();
 
+  //fetch data for get recent brew data.
   useEffect(() => {
     async function fetchDatas() {
         const serverUrl = 'http://localhost:8080/getOldbrews'
@@ -33,8 +34,28 @@ export default function Intro() {
     fetchDatas();
 }, [])
 
+//state and sort recent brew data.
 function getRecentBrew() {
-  const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
+
+  if (isLogIn) {
+
+    const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
+  
+    if (sortedBrews.length > 0) {
+  
+      setOldBrews([sortedBrews[0]]);
+  
+      navigate(`/${userName}/menu/${oldBrews.menuName}/method/${oldBrews.methodName}/recipe/brewing/${oldBrews.serve}/${oldBrews.coffee}/${oldBrews.roasting}/${oldBrews.grind}/step1`)
+  
+      console.log(oldBrews)
+    } else {
+  
+      alert("You don't have Any History...make a New Brew!")
+  
+    }
+  }
+  else navigate('/login')
+
 }
 
   return (
@@ -44,9 +65,7 @@ function getRecentBrew() {
           <Logo/>
           <div className='expContatiner'>
             <button className='exploreBtn'
-            onClick={() => {
-              navigate(`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step1`)
-            }}>
+            onClick={() => {getRecentBrew()}}>
               Make Last Brew!
             </button>
             <Link to={isLogIn ? `/${userName}/menu` : '/login'} className='exploreBtn'>
