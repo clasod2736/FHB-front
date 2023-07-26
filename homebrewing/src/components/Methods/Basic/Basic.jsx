@@ -16,10 +16,9 @@ export default function Basic() {
                 <p>Hello there!! hard to choose gear?? first, click gear icon and check information.</p>
                 <p>Then compare all the informations and choose one that most suite you!</p>
                 <p>And if you choose method you like, just press "go to recipe" and start brewing!</p>
-                <span>
                     <p style={{ marginBottom:'0'}}>Still if you are hard to choose, this link might need help.</p>
-                    <a href="https://www.homegrounds.co/the-complete-guide-to-coffee-brewing-methods/">Link</a>
-                </span>
+                    <a href="https://www.homegrounds.co/the-complete-guide-to-coffee-brewing-methods/">
+                        Coffee Brewing Methods: 19 Ways To Brew Amazing Coffee</a>
             </div>
             <div className='guideSvg'>
                 <svg width={'400px'} height={'245px'} viewBox='120 185 310 120'>

@@ -48,7 +48,7 @@ if (favourites.length > 0) {
                         <div className='btnContainer'>
                             <button onClick={() => {
 
-                            navigate(`/${userName}/menu/${favList.menuName}/method/${favList.methodName}/recipe`)
+                            navigate(`/${userName}/menu/${favourite.menuName}/method/${favourite.methodName}/recipe`)
 
                             }}>Go Brew</button>
                             <button className='detail'
@@ -72,7 +72,7 @@ if (favourites.length > 0) {
 } else {
     return (
         <div className='noneFav'>
-            <Link className='makeFavBtn' to={`/${userName}/menu`}>Make Your Brews!</Link>
+            <Link className='makeFavBtn' to={`/${userName}/menu`}>Make Your Favourite Brews!</Link>
         </div>
     )
 }

@@ -46,9 +46,9 @@ export default function Navbar() {
       <button className='guide'>
         <SlideMenu/>
       </button>
-      {settingMyRecipe()}
+      <Link className='shop' to={`/shop/${userName}`}>Shop</Link>
       <Link className='navTitle' to={isLogIn ? `/login/${userName}` : '/'}>For Home Barista</Link>
-      <Link className='shop' to={'/shop'}>Shop</Link>
+      {settingMyRecipe()}
       {isLogIn ? <Link className='account' to={'/'}
       onClick={() => {
 

@@ -1,1 +1,154 @@
-/*# sourceMappingURL=Chemax.css.map */
+.chemaxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  animation: opacity 0.5s;
+}
+.chemaxContainer .chemaxOutline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding-right: 1%;
+}
+.chemaxContainer .chemaxOutline .chemaxOutlineText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 60%;
+}
+.chemaxContainer .chemaxOutline .chemaxOutlineText header {
+  text-align: center;
+  height: 30%;
+  color: #702000;
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.chemaxContainer .chemaxOutline .chemaxOutlineText p {
+  color: saddlebrown;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+.chemaxContainer .chemaxOutline .hashtag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  height: 20%;
+  margin-top: 1%;
+}
+.chemaxContainer .chemaxOutline .hashtag span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+}
+.chemaxContainer .chemaxOutline .hashtag span p {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: saddlebrown;
+  background-color: transparent;
+  border: saddlebrown 1px solid;
+  border-radius: 20px;
+  margin-right: 2.5%;
+  margin-bottom: 0%;
+  padding-block: 0.5%;
+  padding-inline: 2%;
+}
+.chemaxContainer .chemaxOutline .btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 10%;
+}
+.chemaxContainer .chemaxOutline .btnContainer .backBtn {
+  width: 30%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.chemaxContainer .chemaxOutline .btnContainer .backBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.chemaxContainer .chemaxOutline .btnContainer .backBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.chemaxContainer .chemaxOutline .btnContainer .recipeBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.chemaxContainer .chemaxOutline .btnContainer .recipeBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.chemaxContainer .chemaxOutline .btnContainer .recipeBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.chemaxContainer .videoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  border: 2px sienna solid;
+  border-radius: 18px;
+  animation: opacity 0.5s;
+}
+.chemaxContainer .videoContainer video {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Chemax.css.map */

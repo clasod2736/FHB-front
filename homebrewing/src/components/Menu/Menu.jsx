@@ -50,7 +50,7 @@ export default function Menu() {
     <div className='menuContainer'>
         <div className='menu'>
             <div className='menuTitle'>
-                Choose Today's Coffee.
+                Choose Today's Brewing.
             </div>
             <span className='eachMenu'>
                 <div className='eachMenuContainer'>

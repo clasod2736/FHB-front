@@ -33,6 +33,7 @@ export default function MyRecipe() {
         }
         fetchDatas();
     }, [])
+    console.log(oldBrews)
 
     // make history lists use with fetched data.
     const settingOldBrews = () => {

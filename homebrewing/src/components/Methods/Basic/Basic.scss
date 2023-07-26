@@ -39,20 +39,13 @@
                 font-family: Arial, Helvetica, sans-serif;
                 color: #5c653f;
 
-                margin-bottom: 1.5%;
+                margin-bottom: 1%;
             }
-
-            span {
-                display: flex;
-                flex-direction: row;
-
-                a {
-                    text-align: center;
-                    margin-left: 3%;
-                    color: brown;
-                    font-size: 20px;
-                }
-
+            
+            a {
+                text-align: center;
+                color: brown;
+                font-size: 13px;
             }
         }
         .guideSvg {
