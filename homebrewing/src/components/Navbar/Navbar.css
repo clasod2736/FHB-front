@@ -86,6 +86,8 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #A86B43;
   letter-spacing: 2px;
+  background-color: transparent;
+  border: 0;
 }
 .fixedNavbar .shop:hover {
   color: #86481f;
@@ -210,6 +212,39 @@
   color: #A86B43;
   transform: scaleX(1);
   transform-origin: bottom;
+}
+.fixedNavbar .none {
+  display: none;
+}
+.fixedNavbar .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+  left: 31.3%;
+  width: 4%;
+  height: 20%;
+  background-color: wheat;
+  border-radius: 10px;
+  z-index: 10;
+  animation: opacity 0.5s;
+  animation-direction: alternate;
+}
+.fixedNavbar .nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 80%;
+}
+.fixedNavbar .nav div .links {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: saddlebrown;
+  background-color: wheat;
+  text-decoration: none;
 }
 
 @keyframes opacity {

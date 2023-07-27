@@ -260,7 +260,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 30%;
+  width: 28%;
   height: 90%;
 }
 .footerContainer .explore header {
@@ -280,7 +280,7 @@
   height: 70%;
   background-color: wheat;
   border-radius: 10px;
-  padding: 4%;
+  padding: 3%;
 }
 .footerContainer .explore .exploreContents p {
   font-size: 15px;

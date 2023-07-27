@@ -11,13 +11,12 @@ export default function Recipe() {
 
     const [serve, setServe] = useState(1);
     const [water, setWater] = useState(180);
-    const [custom, setCustom] = useState('');
     const [roasting, setRoasting] = useState('');
     const [grind, setGrind] = useState('');
     const [amount, setAmount] = useState('');
 
 useEffect(() => {
-    setWater(serve * 180);
+    setWater(serve * 200);
     setAmount(serve * 25)
   }, [serve, amount]);
 
@@ -25,20 +24,6 @@ useEffect(() => {
   return (
     <div className='recipeContainer'>
         <span className='recipeBox'>
-            <div className='recipeTag'>
-                <div className='tag'>
-                    <p>R</p>
-                    <p>e</p>
-                    <p>c</p>
-                    <p>i</p>
-                    <p>p</p>
-                    <p>e</p>
-                    <p>b</p>
-                    <p>o</p>
-                    <p>o</p>
-                    <p>k</p>    
-                </div>
-            </div>
             <div className='menuContents'>
                     <div className='coffeeChoice'>
                         <header>Flat White</header>
@@ -66,7 +51,7 @@ useEffect(() => {
                                                                 if (serve === 10) {
                                                                     setServe(10);}}}>+</button>
                                     </div>
-                                    <div className='serveInput'>
+                                    {/* <div className='serveInput'>
                                         <input type="text" placeholder='Custom amount' value={custom}
                                         onChange={(e) => {setCustom(e.target.value)}}/>
                                         <button onClick={() => {
@@ -85,7 +70,7 @@ useEffect(() => {
                                                 setCustom('')
                                             }
                                         }}>✔</button>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className='serveBtn'>
                                     <p>{water}ml</p>
@@ -115,7 +100,7 @@ useEffect(() => {
                             </div>
                             <div className='groundCoffee'>
                                 <header>Ground Coffee</header>
-                                <h3>25G</h3>
+                                <h3>20G</h3>
                                 <p>per serve.</p>
                             </div>
                         </div>

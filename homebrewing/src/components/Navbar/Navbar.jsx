@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import {Link ,useParams} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 //Slide Menu component (react-bootstrap)
 import SlideMenu from './SlideMenu/SlideMenu'
+import Nav from './Nav/Nav'
 
 export default function Navbar() {
+  const [openNav, setOpenNav] = useState(false)
 
   const {userName} = useParams();
   
@@ -37,7 +39,6 @@ export default function Navbar() {
       )
     }
   }
-
   const isLogIn = useSelector((state) => state.logIn);
   console.log(isLogIn)
 
@@ -46,7 +47,8 @@ export default function Navbar() {
       <button className='guide'>
         <SlideMenu/>
       </button>
-      <Link className='shop' to={`/shop/${userName}`}>Shop</Link>
+      <button className='shop'
+      ><Nav/></button>
       <Link className='navTitle' to={isLogIn ? `/login/${userName}` : '/'}>For Home Barista</Link>
       {settingMyRecipe()}
       {isLogIn ? <Link className='account' to={'/'}

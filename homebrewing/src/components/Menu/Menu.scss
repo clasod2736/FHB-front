@@ -792,7 +792,7 @@
             .menuContents {
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
+                justify-content: space-between;
                 align-items: center;
                 width: 20%;
                 height: 100%;
@@ -826,13 +826,13 @@
                         align-items: center;
 
                         width: 100%;
-                        height: 25%;
+                        height: 30%;
                         min-width: 270px;
                         
                         button {
                             text-align: center;
-                            color: darkgoldenrod;
-                            font-size: 20px;
+                            color: saddlebrown;
+                            font-size: 25px;
                             font-family: Arial, Helvetica, sans-serif;
                             font-weight: bold;
                             background-color: transparent;
@@ -849,14 +849,14 @@
                         header {
                             width: 70%;
                             font-size: 25px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            color: white;
+                            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            color: linen;
+                            background-color: saddlebrown;
                             font-weight: bold;
                             text-align: center;
 
                             margin-left: 8%;
-                            border-radius: 10px;
-                            background-color: darkgoldenrod;
+                            border-radius: 5px;
                         }
                     }
 
@@ -870,9 +870,8 @@
                         height: 50%;
                         min-width: 300px;
                         p {
-                            color: sienna;
+                            color: saddlebrown;
                             font-family: Arial, Helvetica, sans-serif;
-                            font-weight: bold;
                             text-align: center;
 
                             margin-bottom: 3%;
@@ -883,15 +882,17 @@
                 .coffeeTitle {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                     align-items: center;
 
                     width: 90%;
-                    height: 60%;
+                    height: 55%;
 
                     border-block: 2px rgb(160, 130, 116) solid;
 
                     min-width: 240px;
+
+                    padding-block: 3%;
 
                     header {
                         width: 90%;
@@ -909,21 +910,20 @@
                     .ingredients {
                         display: flex;
                         flex-direction: column;
-                        justify-content: flex-start;
+                        justify-content: space-between;
                         align-items: center;
 
                         width: 100%;
-                        height: auto;
+                        height: 35%;
 
                         font-weight: bold;
                         font-size: 18px;
 
                         h3 {
-                            font-size: 22px;
-                            font-family: Georgia, 'Times New Roman', Times, serif;
-                            color: darkgoldenrod;
+                            font-size: 25px;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            color: sienna;
                             font-weight: bold;
-
 
                             margin-bottom: 5%;
                         }
@@ -935,7 +935,7 @@
                             align-items: center;
 
                             width: 100%;
-                            height: 70%;
+                            height: 60%;
                             
                             div {
                                 display: flex;
@@ -943,8 +943,8 @@
                                 justify-content: flex-end;
                                 align-items: center;
 
-                                width: 40%;
-                                height: 100%;
+                                width: 35%;
+                                height: 85%;
                             }
 
                             .milkFoam {
@@ -954,7 +954,7 @@
 
                                 p {
                                     width: 100%;
-                                    font-size: 16px;
+                                    font-size: 15px;
                                     text-align: center;
                                     color:white;
                                     margin-bottom: 1%;
@@ -967,7 +967,7 @@
 
                                 p {
                                     width: 100%;
-                                    font-size: 16px;
+                                    font-size: 15px;
                                     text-align: center;
                                     color: saddlebrown;
                                     margin-bottom: 1%;
@@ -981,23 +981,23 @@
                         }
 
                     }
-                }
-                .coffeeText {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 45%;
-
-                    p {
-                        text-align: center;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        color: darkgoldenrod;
-
-                        margin-bottom: 5%;
+                    .coffeeText {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+    
+                        width: 100%;
+                        height: 45%;
+    
+                        p {
+                            text-align: center;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: bold;
+                            color: darkgoldenrod;
+    
+                            margin-bottom: 5%;
+                        }
                     }
                 }
                 .getMenuBtn {
@@ -1007,9 +1007,17 @@
                     align-items: center;
 
                     width: 100%;
-                    height: 20%;
+                    height: 15%;
 
                     min-width: 300px;
+
+                    p {
+                        font-size: 12px;
+                        color: brown;
+                        font-weight: bold;
+
+                        margin-bottom: 0;
+                    }
 
                     button {
                         height: 50%;
@@ -1032,7 +1040,7 @@
             .menuContentsClose {
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
+                justify-content: space-between;
                 align-items: center;
                 width: 20%;
                 height: 100%;
@@ -1066,13 +1074,13 @@
                         align-items: center;
 
                         width: 100%;
-                        height: 25%;
+                        height: 30%;
                         min-width: 270px;
                         
                         button {
                             text-align: center;
-                            color: darkgoldenrod;
-                            font-size: 20px;
+                            color: saddlebrown;
+                            font-size: 25px;
                             font-family: Arial, Helvetica, sans-serif;
                             font-weight: bold;
                             background-color: transparent;
@@ -1089,14 +1097,14 @@
                         header {
                             width: 70%;
                             font-size: 25px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            color: white;
+                            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            color: linen;
+                            background-color: saddlebrown;
                             font-weight: bold;
                             text-align: center;
 
                             margin-left: 8%;
-                            border-radius: 10px;
-                            background-color: darkgoldenrod;
+                            border-radius: 5px;
                         }
                     }
 
@@ -1110,9 +1118,8 @@
                         height: 50%;
                         min-width: 300px;
                         p {
-                            color: sienna;
+                            color: saddlebrown;
                             font-family: Arial, Helvetica, sans-serif;
-                            font-weight: bold;
                             text-align: center;
 
                             margin-bottom: 3%;
@@ -1123,15 +1130,17 @@
                 .coffeeTitle {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                     align-items: center;
 
                     width: 90%;
-                    height: 60%;
+                    height: 55%;
 
                     border-block: 2px rgb(160, 130, 116) solid;
 
                     min-width: 240px;
+
+                    padding-block: 3%;
 
                     header {
                         width: 90%;
@@ -1149,21 +1158,20 @@
                     .ingredients {
                         display: flex;
                         flex-direction: column;
-                        justify-content: flex-start;
+                        justify-content: space-between;
                         align-items: center;
 
                         width: 100%;
-                        height: auto;
+                        height: 35%;
 
                         font-weight: bold;
                         font-size: 18px;
 
                         h3 {
-                            font-size: 22px;
-                            font-family: Georgia, 'Times New Roman', Times, serif;
-                            color: darkgoldenrod;
+                            font-size: 25px;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            color: sienna;
                             font-weight: bold;
-
 
                             margin-bottom: 5%;
                         }
@@ -1175,7 +1183,7 @@
                             align-items: center;
 
                             width: 100%;
-                            height: 70%;
+                            height: 60%;
                             
                             div {
                                 display: flex;
@@ -1183,8 +1191,8 @@
                                 justify-content: flex-end;
                                 align-items: center;
 
-                                width: 40%;
-                                height: 100%;
+                                width: 35%;
+                                height: 85%;
                             }
 
                             .milkFoam {
@@ -1194,7 +1202,7 @@
 
                                 p {
                                     width: 100%;
-                                    font-size: 16px;
+                                    font-size: 15px;
                                     text-align: center;
                                     color:white;
                                     margin-bottom: 1%;
@@ -1207,7 +1215,7 @@
 
                                 p {
                                     width: 100%;
-                                    font-size: 16px;
+                                    font-size: 15px;
                                     text-align: center;
                                     color: saddlebrown;
                                     margin-bottom: 1%;
@@ -1221,23 +1229,23 @@
                         }
 
                     }
-                }
-                .coffeeText {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 45%;
-
-                    p {
-                        text-align: center;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        color: darkgoldenrod;
-
-                        margin-bottom: 5%;
+                    .coffeeText {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+    
+                        width: 100%;
+                        height: 45%;
+    
+                        p {
+                            text-align: center;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: bold;
+                            color: darkgoldenrod;
+    
+                            margin-bottom: 5%;
+                        }
                     }
                 }
                 .getMenuBtn {
@@ -1247,9 +1255,17 @@
                     align-items: center;
 
                     width: 100%;
-                    height: 20%;
+                    height: 15%;
 
                     min-width: 300px;
+
+                    p {
+                        font-size: 12px;
+                        color: brown;
+                        font-weight: bold;
+
+                        margin-bottom: 0;
+                    }
 
                     button {
                         height: 50%;
@@ -1283,15 +1299,6 @@
     }
 }
 
-
-@keyframes menu {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 @keyframes menuContents {
     from {
         width: 0%;

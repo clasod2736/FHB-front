@@ -598,7 +598,7 @@
 .menuContainer .menu .eachMenu .menuContents {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 20%;
   height: 100%;
@@ -628,13 +628,13 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 25%;
+  height: 30%;
   min-width: 270px;
 }
 .menuContainer .menu .eachMenu .menuContents .title .titleandBtn button {
   text-align: center;
-  color: darkgoldenrod;
-  font-size: 20px;
+  color: saddlebrown;
+  font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   background-color: transparent;
@@ -649,13 +649,13 @@
 .menuContainer .menu .eachMenu .menuContents .title .titleandBtn header {
   width: 70%;
   font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: linen;
+  background-color: saddlebrown;
   font-weight: bold;
   text-align: center;
   margin-left: 8%;
-  border-radius: 10px;
-  background-color: darkgoldenrod;
+  border-radius: 5px;
 }
 .menuContainer .menu .eachMenu .menuContents .title .titleText {
   display: flex;
@@ -667,21 +667,21 @@
   min-width: 300px;
 }
 .menuContainer .menu .eachMenu .menuContents .title .titleText p {
-  color: sienna;
+  color: saddlebrown;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
   text-align: center;
   margin-bottom: 3%;
 }
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 90%;
-  height: 60%;
+  height: 55%;
   border-block: 2px rgb(160, 130, 116) solid;
   min-width: 240px;
+  padding-block: 3%;
 }
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle header {
   width: 90%;
@@ -697,17 +697,17 @@
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 35%;
   font-weight: bold;
   font-size: 18px;
 }
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients h3 {
-  font-size: 22px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: darkgoldenrod;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
   font-weight: bold;
   margin-bottom: 5%;
 }
@@ -717,15 +717,15 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 70%;
+  height: 60%;
 }
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients span div {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 40%;
-  height: 100%;
+  width: 35%;
+  height: 85%;
 }
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients span .milkFoam {
   border-radius: 5px;
@@ -733,7 +733,7 @@
 }
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients span .milkFoam p {
   width: 100%;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   color: white;
   margin-bottom: 1%;
@@ -744,7 +744,7 @@
 }
 .menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients span .Espresso p {
   width: 100%;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   color: saddlebrown;
   margin-bottom: 1%;
@@ -753,7 +753,7 @@
   font-size: 32px;
   color: #732400;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeText {
+.menuContainer .menu .eachMenu .menuContents .coffeeTitle .coffeeText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -761,7 +761,7 @@
   width: 100%;
   height: 45%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeText p {
+.menuContainer .menu .eachMenu .menuContents .coffeeTitle .coffeeText p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -774,8 +774,14 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 15%;
   min-width: 300px;
+}
+.menuContainer .menu .eachMenu .menuContents .getMenuBtn p {
+  font-size: 12px;
+  color: brown;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 .menuContainer .menu .eachMenu .menuContents .getMenuBtn button {
   height: 50%;
@@ -794,7 +800,7 @@
 .menuContainer .menu .eachMenu .menuContentsClose {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 20%;
   height: 100%;
@@ -824,13 +830,13 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 25%;
+  height: 30%;
   min-width: 270px;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .title .titleandBtn button {
   text-align: center;
-  color: darkgoldenrod;
-  font-size: 20px;
+  color: saddlebrown;
+  font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   background-color: transparent;
@@ -845,13 +851,13 @@
 .menuContainer .menu .eachMenu .menuContentsClose .title .titleandBtn header {
   width: 70%;
   font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: linen;
+  background-color: saddlebrown;
   font-weight: bold;
   text-align: center;
   margin-left: 8%;
-  border-radius: 10px;
-  background-color: darkgoldenrod;
+  border-radius: 5px;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .title .titleText {
   display: flex;
@@ -863,21 +869,21 @@
   min-width: 300px;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .title .titleText p {
-  color: sienna;
+  color: saddlebrown;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
   text-align: center;
   margin-bottom: 3%;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 90%;
-  height: 60%;
+  height: 55%;
   border-block: 2px rgb(160, 130, 116) solid;
   min-width: 240px;
+  padding-block: 3%;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle header {
   width: 90%;
@@ -893,17 +899,17 @@
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 35%;
   font-weight: bold;
   font-size: 18px;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients h3 {
-  font-size: 22px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: darkgoldenrod;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
   font-weight: bold;
   margin-bottom: 5%;
 }
@@ -913,15 +919,15 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 70%;
+  height: 60%;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span div {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 40%;
-  height: 100%;
+  width: 35%;
+  height: 85%;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .milkFoam {
   border-radius: 5px;
@@ -929,7 +935,7 @@
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .milkFoam p {
   width: 100%;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   color: white;
   margin-bottom: 1%;
@@ -940,7 +946,7 @@
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .Espresso p {
   width: 100%;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
   color: saddlebrown;
   margin-bottom: 1%;
@@ -949,7 +955,7 @@
   font-size: 32px;
   color: #732400;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeText {
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .coffeeText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -957,7 +963,7 @@
   width: 100%;
   height: 45%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeText p {
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .coffeeText p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -970,8 +976,14 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 15%;
   min-width: 300px;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .getMenuBtn p {
+  font-size: 12px;
+  color: brown;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .getMenuBtn button {
   height: 50%;
@@ -999,14 +1011,6 @@
   overflow: hidden;
 }
 
-@keyframes menu {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes menuContents {
   from {
     width: 0%;

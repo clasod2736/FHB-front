@@ -117,7 +117,7 @@ export default function Menu() {
                     <span className='title'>
                         <span className='titleandBtn'>
                             <button onClick={() => {setMenuName(''); handleMenuClose()}}>🅧</button>
-                            <header>White Coffee</header>
+                            <header>{menuName}</header>
                         </span>
                         <div className='titleText'>
                             <p>Lorem Ipsum is simply dummy text</p>
@@ -126,7 +126,6 @@ export default function Menu() {
                         </div>
                     </span>
                     <div className='coffeeTitle'>
-                        <header>Flat White</header>
                         <div className='ingredients'>
                             <h3>Ingredients</h3>
                             <span>

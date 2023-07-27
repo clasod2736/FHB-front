@@ -23,7 +23,6 @@ import Step6 from './components/Brewing/Steps/Step6/Step6';
 import Step7 from './components/Brewing/Steps/Step7/Step7';
 import Finish from './components/Finish/Finish';
 import MyRecipe from './components/MyRecipe/MyRecipe';
-import Shop from './components/Shop/Shop';
 
 const router = createBrowserRouter([
   { path:'/',
@@ -34,7 +33,6 @@ const router = createBrowserRouter([
       {path: '/login', element:<Login/>},
       {path: '/register', element:<Register/>},
       {path: '/login/:userName', element:<Intro/>},
-      {path: '/shop/:userName', element:<Shop/>},
       {path: '/:username', element:<Intro/>},
       {path: '/:userName/myRecipe', element:<MyRecipe/>},
       {path: '/:userName/menu', element:<Menu/>},
