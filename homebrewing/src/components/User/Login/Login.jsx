@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
 
 //image
@@ -11,6 +11,7 @@ export default function Login() {
     
     const [email, setEmail] = useState('')
     const [alertUser, setAlertUser] = useState (false)
+    const [userId, setUserId] = useState()
 
     const dispatch = useDispatch();
 
@@ -28,7 +29,7 @@ export default function Login() {
         })
 
         console.log(response.data);
-        console.log(response.data.name);
+        console.log(response.data._id);
 
         if (email === response.data.email) {
             dispatch({ type: 'loginSuccess' })
@@ -42,6 +43,7 @@ export default function Login() {
             ))
 
             navigate(`/login/${response.data.name}`)
+            dispatch({  })
         } 
         else setAlertUser(true)
         } 

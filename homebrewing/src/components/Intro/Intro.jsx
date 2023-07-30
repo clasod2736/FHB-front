@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux'
 
 export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
+  const userId = useSelector((state) => state.userId);
   const [oldBrews, setOldBrews] = useState([])
 
   const { userName, } = useParams();
@@ -21,7 +22,7 @@ export default function Intro() {
         try {
             const response = await axios.get(serverUrl, {
                 params: {
-                    name: userName
+                    _id: userId
                 }
             })
             console.log(response.data)
@@ -45,7 +46,7 @@ function getRecentBrew() {
   
       setOldBrews([sortedBrews[0]]);
   
-      navigate(`/${userName}/menu/${oldBrews.menuName}/method/${oldBrews.methodName}/recipe/brewing/${oldBrews.serve}/${oldBrews.coffee}/${oldBrews.roasting}/${oldBrews.grind}/step1`)
+      navigate(`/${userName}/menu`)
   
       console.log(oldBrews)
     } else {

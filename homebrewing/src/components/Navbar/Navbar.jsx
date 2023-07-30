@@ -8,7 +8,6 @@ import SlideMenu from './SlideMenu/SlideMenu'
 import Nav from './Nav/Nav'
 
 export default function Navbar() {
-  const [openNav, setOpenNav] = useState(false)
 
   const {userName} = useParams();
   
@@ -40,7 +39,6 @@ export default function Navbar() {
     }
   }
   const isLogIn = useSelector((state) => state.logIn);
-  console.log(isLogIn)
 
   return (
     <div className='fixedNavbar'>
@@ -61,7 +59,7 @@ export default function Navbar() {
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
 
         //give logOut info to redux store
-        dispatch({ type : 'loggedOut'}
+        dispatch({ type : 'loggedOut', userId: ''}
         )}}
       >Log Out</Link> : <Link className='login' to={'./login'}>Log In</Link>}
     </div>

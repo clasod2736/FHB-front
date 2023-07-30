@@ -25,18 +25,21 @@ export default function SlideMenu() {
         </Offcanvas.Header>
         <Offcanvas.Body className='canvasBody'>
             <div className='nav'>
+              <Link className='links' to={`/login/${userName}`}>
+                Intro
+              </Link>
               <Link 
-              className='menu'
+              className='links'
               to={`${userName}/menu`}>
                 Coffee Menu
               </Link>
               <Link
-              className='method'
+              className='links'
               to={`${userName}/menu/${menuName}/method`}>
                 Coffee Method
               </Link>
               <Link
-              className='recipe'
+              className='links'
               to={`${userName}/menu/${menuName}/method/${methodName}/recipe`}>
                 Recipe
               </Link>

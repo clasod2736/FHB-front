@@ -55,27 +55,7 @@
   width: 50%;
   height: 100%;
 }
-.canvasBody .nav header {
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: sienna;
-  border-bottom: 2px solid sienna;
-}
-.canvasBody .nav .menu {
-  font-size: 25px;
-  color: darkgoldenrod;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  letter-spacing: 3px;
-}
-.canvasBody .nav .method {
-  font-size: 25px;
-  color: darkgoldenrod;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  letter-spacing: 3px;
-}
-.canvasBody .nav .recipe {
+.canvasBody .nav .links {
   font-size: 25px;
   color: darkgoldenrod;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
