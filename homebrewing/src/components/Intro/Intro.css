@@ -47,7 +47,7 @@
 .introContainer .logoContainer .gate .pContainer .introduce3 {
   animation: pSlide1 1.8s;
 }
-.introContainer .logoContainer .gate .expContatiner {
+.introContainer .logoContainer .gate .expContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -56,7 +56,7 @@
   height: 20%;
   animation: opacity 1.5s;
 }
-.introContainer .logoContainer .gate .expContatiner .exploreBtn {
+.introContainer .logoContainer .gate .expContainer .exploreBtn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +76,41 @@
   cursor: pointer;
   animation: appear 1s;
 }
-.introContainer .logoContainer .gate .expContatiner .exploreBtn:hover {
+.introContainer .logoContainer .gate .expContainer .exploreBtn:hover {
+  transition: 0.9s;
+  color: white;
+  box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;
+}
+.introContainer .logoContainer .gate .loginContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+  height: 20%;
+  animation: opacity 1.5s;
+}
+.introContainer .logoContainer .gate .loginContainer .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 60px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  border: 1px #F9F6EA solid;
+  border-radius: 10px;
+  color: #F9F6EA;
+  background-color: #2F351A;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  cursor: pointer;
+  animation: appear 1s;
+}
+.introContainer .logoContainer .gate .loginContainer .login:hover {
   transition: 0.9s;
   color: white;
   box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;

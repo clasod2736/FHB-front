@@ -10,8 +10,9 @@ import {ReactComponent as Logo} from '../../../assets/login.svg'
 export default function Login() {
     
     const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [shownPassword, setShownPassword] = useState(false)
     const [alertUser, setAlertUser] = useState (false)
-    const [userId, setUserId] = useState()
 
     const dispatch = useDispatch();
 
@@ -20,18 +21,18 @@ export default function Login() {
     // Get api from database for userinformation.
     const getLogIn = async () => {
         const serverUrl = 'http://localhost:8080/login'
-        console.log(email);
         try {
             const response = await axios.get(serverUrl, { 
                 params: {
-                    email: email
+                    email: email,
+                    password: password
             },
         })
 
         console.log(response.data);
         console.log(response.data._id);
 
-        if (email === response.data.email) {
+        if (response) {
             dispatch({ type: 'loginSuccess' })
             setAlertUser(false);
 
@@ -42,9 +43,8 @@ export default function Login() {
                 }
             ))
 
-            navigate(`/login/${response.data.name}`)
-            dispatch({  })
-        } 
+            navigate(`/`)
+        }
         else setAlertUser(true)
         } 
         catch (error) {
@@ -56,7 +56,7 @@ export default function Login() {
     const settingAlertUser = () => {
         if (alertUser === true) {
             return (
-                    <p>* Sorry, We don't have matched email.</p>
+                    <p>* Sorry, We don't have matched user.</p>
             )
         } else return
     }
@@ -75,11 +75,14 @@ export default function Login() {
                     <h1>Welcome!</h1>
                     <p>Please login your email first for the better experience.</p>
                     <p>and let's make Great Coffee today!</p>
-                    <p className='notice'>* We don't register password for accounts, just put email please</p>
                 </div>
                 <div className='email'>
                     <p>Email</p>
                     <input type="text" onChange={(e) => {setEmail(e.target.value)}}/>
+                </div>
+                <div className='password'>
+                    <p>Password</p>
+                    <input type={shownPassword ? 'text' : 'password'} onChange={(e) => {setPassword(e.target.value)}} endado/>
                 </div>
                 <div className='submit'>
                     <div className='loginContainer'>

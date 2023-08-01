@@ -16,7 +16,7 @@
         font-size: 60px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: rgb(137, 85, 48);
-        margin-bottom: 3%;
+        margin-bottom: 2%;
         letter-spacing: 3px;
         text-transform: uppercase;
         border-bottom: 2px solid #9c7c65;
@@ -29,7 +29,7 @@
         align-items: center;
 
         width: 60%;
-        height: 35%;
+        height: 50%;
 
         .logo {
             display: flex;
@@ -60,34 +60,27 @@
                 
 
                 h1 {
-                    font-size: 50px;
+                    font-size: 45px;
                     color: burlywood;
                     -webkit-text-stroke: 1px #400406;
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                 }
                 p {
-                    font-size: 18px;
-                    margin-block: 1%;
+                    font-size: 15px;
+                    margin-bottom: 2%;
                     color: #400406;
                     font-weight: bold;
                 }
-                .notice {
-                    font-size: 15px;
-                    color:chocolate;
-                }
             }
-            .email {
+            .email {    
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                height: 25%;
-                color: saddlebrown;
-
-                
-                margin-top: 2%;
+                height: 20%;
+                color: sienna;
 
                 p {
-                    font-size: 22px;
+                    font-size: 18px;
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                     margin-bottom: 1%;
                 }
@@ -95,7 +88,7 @@
                     width: 90%;
                     height: 50%;
                     font-size: 22px;
-
+                    color: saddlebrown;
 
                     padding: 2%;
                     border-radius: 5px;
@@ -104,11 +97,43 @@
                     outline: none;
 
                     &:focus {
-                        border: rgb(113, 55, 14) 2px solid;
+                        border: saddlebrown 2px solid;
                         border-radius: 5px;
                     }
                 }
             }
+
+            .password {    
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 20%;
+                color: sienna;
+
+                p {
+                    font-size: 18px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    margin-bottom: 1%;
+                }
+                input {
+                    width: 90%;
+                    height: 50%;
+                    font-size: 22px;
+                    color: saddlebrown;
+
+                    padding: 2%;
+                    border-radius: 5px;
+                    border: 2px rgb(190, 145, 29) solid;
+                    background-color: wheat;
+                    outline: none;
+
+                    &:focus {
+                        border: saddlebrown 2px solid;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
             .submit {
                 display: flex;
                 flex-direction: column;
@@ -125,7 +150,7 @@
                     align-items: center;
 
                     width: 90%;
-                    height: 40%;
+                    height: 30%;
 
                     p {
                         font-size: 18px;
@@ -171,7 +196,7 @@
 
                     p{
                         color: saddlebrown  ;
-                        font-size: 16px;
+                        font-size: 15px;
                         text-align: bottom;
                         margin-right: 2%;
                         margin-bottom: 0;
@@ -181,7 +206,7 @@
                     
                     .registerBtn {
                         display: flex;
-                        font-size: 23px;
+                        font-size: 20px;
                         color: darkgoldenrod;
                         text-decoration: underline;
     

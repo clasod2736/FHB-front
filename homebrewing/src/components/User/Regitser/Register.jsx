@@ -10,9 +10,9 @@ import {ReactComponent as CoffeeWomen} from '../../../assets/coffeeWomen.svg'
 import { BsGoogle,BsFacebook } from 'react-icons/bs'
 
 export default function User() {
-  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [confirmEmail, setConfirmEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
   const [caution, setCaution] = useState('');
 
   const navigate = useNavigate();
@@ -25,22 +25,14 @@ export default function User() {
 
     try {
       const response = await axios.post(serverUrl, {
-        name : name,
         email : email,
-        currentBrews : {
-          menuName: '',
-          methodName: '',
-          serve: 0,
-          coffee: 0,
-          roasting: '',
-          grind: ''
-        },
+        password : "password",
         oldBrews : [],
         favourites: []
       })
 
       console.log(response.data)
-      navigate(`/login/${name}`)
+      navigate(`/login`)
     } catch (error) {
       console.log(error)
       setCaution('emailExist')
@@ -49,22 +41,22 @@ export default function User() {
 
   //check user input and post user data to redux and local
   const submitRegist = () => {
-    if (name.length <= 0) {
-          setCaution('name')
+    if (email.length <= 0) {
+          setCaution('eamil')
           console.log(caution)
         }
-        else if (name === isNaN) {
-          setCaution('nameNum')
-          console.log('nameNum')
+        else if (email === isNaN) {
+          setCaution('emailNum')
+          console.log('emailNum')
         }
-        else if (email.length <= 0) {
-          setCaution('email')
+        else if (password.length <= 0) {
+          setCaution('password')
         }
         else if (!email.includes('@')) {
           setCaution('emailForm')
         }
-        else if (email !== confirmEmail) {
-          setCaution('confirmEmail')
+        else if (password !== confirmPassword) {
+          setCaution('confirmPassword')
         } 
         else { 
             //request for making user data in database to back end
@@ -75,7 +67,7 @@ export default function User() {
 
             //make data in local storage
             localStorage.setItem('userInfo', JSON.stringify(
-              {   userName : [name],
+              {   userEmail : [email],
                   isLoggedIn : true
               }
           ))
@@ -84,11 +76,11 @@ export default function User() {
 
   //setting caution function.
   const settingCaution = () => {
-    if (caution === 'name') {
+    if (caution === 'email') {
       return (
-        <p>***Plase put your Name.</p>
+        <p>***Plase put your email.</p>
       )
-    } else if (caution === 'nameNum') {
+    } else if (caution === '') {
       return (
         <p>***Plase put letter for Name.</p>
       )
@@ -129,15 +121,15 @@ export default function User() {
               <div className='divide'>
                 <p>Or continue with Email</p>
               </div>
-              <div className='name'>
-                <input type="text" placeholder='Your Name'
-                onChange={(e) => {setName(e.target.value)}}/>
-              </div>
               <div className='email'>
-                <input type="text" placeholder='Your Email' onChange={(e) => {setEmail(e.target.value)}}/>
+                <input type="text" placeholder='Email'
+                onChange={(e) => {setEmail(e.target.value)}}/>
               </div>
-              <div className='emailConfirm'>
-                <input type="text" placeholder='Email confirm' onChange={(e) => {setConfirmEmail(e.target.value)}}/>
+              <div className='password'>
+                <input type="text" placeholder='Password' onChange={(e) => {setPassword(e.target.value)}}/>
+              </div>
+              <div className='passwordConfirm'>
+                <input type="text" placeholder='Password Confirm' onChange={(e) => {setConfirmPassword(e.target.value)}}/>
               </div>
               <Link className='submitRegist'>
                 <button type='submit' onClick={submitRegist}>Create</button>

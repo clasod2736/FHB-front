@@ -36,11 +36,11 @@ const router = createBrowserRouter([
       {path: '/:username', element:<Intro/>},
       {path: '/:userName/myRecipe', element:<MyRecipe/>},
       {path: '/:userName/menu', element:<Menu/>},
-      {path: '/:userName/menu/:menuName/method', element:<Methods/>},
-      {path: '/:userName/menu/:menuName/method/mokapot', element:<Methods/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe', element:<Recipe/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing', element:<Brewing/>},
-      {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/finish', element:<Finish/>},
+      {path: '/:menuName/method', element:<Methods/>},
+      // {path: '/:userName/menu/:menuName/method/mokapot', element:<Methods/>},
+      {path: '/:userName/recipe', element:<Recipe/>},
+      {path: '/:userName/brewing', element:<Brewing/>},
+      {path: '/:userName/finish', element:<Finish/>},
       
       //Brewing Steps
       {path: '/:userName/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step1', element:<Step1/>},

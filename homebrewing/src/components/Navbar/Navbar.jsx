@@ -18,12 +18,11 @@ export default function Navbar() {
     const localInfo =  localStorage.getItem('userInfo')
     const userInfo = JSON.parse(localInfo);
     const isLoggedIn = userInfo.isLoggedIn;
-    console.log(userInfo);
     
     if ( isLoggedIn === true) {
       dispatch({type: 'loginSuccess'})
     }
-    console.log('Local Storage :', isLoggedIn);
+    console.log('Local Storage Logged In? :', isLoggedIn);
   }, [dispatch])
 
   //render differrent Link element depends on LoggedIn
