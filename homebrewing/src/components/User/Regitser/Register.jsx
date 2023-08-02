@@ -26,10 +26,11 @@ export default function User() {
     try {
       const response = await axios.post(serverUrl, {
         email : email,
-        password : "password",
+        password : password,
         oldBrews : [],
         favourites: []
       })
+
 
       console.log(response.data)
       navigate(`/login`)
@@ -42,18 +43,14 @@ export default function User() {
   //check user input and post user data to redux and local
   const submitRegist = () => {
     if (email.length <= 0) {
-          setCaution('eamil')
+          setCaution('email')
           console.log(caution)
-        }
-        else if (email === isNaN) {
-          setCaution('emailNum')
-          console.log('emailNum')
-        }
-        else if (password.length <= 0) {
-          setCaution('password')
         }
         else if (!email.includes('@')) {
           setCaution('emailForm')
+        }
+        else if (password.length <= 0) {
+          setCaution('password')
         }
         else if (password !== confirmPassword) {
           setCaution('confirmPassword')
@@ -80,10 +77,6 @@ export default function User() {
       return (
         <p>***Plase put your email.</p>
       )
-    } else if (caution === '') {
-      return (
-        <p>***Plase put letter for Name.</p>
-      )
     } else if (caution === 'email') {
       return (
         <p>***Please put your email.</p>
@@ -96,9 +89,13 @@ export default function User() {
       return (
         <p>***This Email address already registerd.</p>
       )
-    } else if (caution === 'confirmEmail') {
+    } else if (caution === 'password') {
       return (
-        <p>***Email cannot be confirmed.</p>
+        <p>***Please Put password properly.</p>
+      )
+    } else if (caution === 'confirmPassword') {
+      return (
+        <p>***Password cannot be confirmed.</p>
       )
     }
   }
@@ -116,7 +113,6 @@ export default function User() {
             <div className='form'>
               <span className='getRegist'>
                 <button className='google'><BsGoogle className='googleLogo'/>Google</button>
-                <button className='facebook'><BsFacebook className='fbLogo'/>Facebook</button>
               </span>
               <div className='divide'>
                 <p>Or continue with Email</p>
@@ -126,10 +122,10 @@ export default function User() {
                 onChange={(e) => {setEmail(e.target.value)}}/>
               </div>
               <div className='password'>
-                <input type="text" placeholder='Password' onChange={(e) => {setPassword(e.target.value)}}/>
+                <input type="password" placeholder='Password' onChange={(e) => {setPassword(e.target.value)}}/>
               </div>
               <div className='passwordConfirm'>
-                <input type="text" placeholder='Password Confirm' onChange={(e) => {setConfirmPassword(e.target.value)}}/>
+                <input type="password" placeholder='Password Confirm' onChange={(e) => {setConfirmPassword(e.target.value)}}/>
               </div>
               <Link className='submitRegist'>
                 <button type='submit' onClick={submitRegist}>Create</button>

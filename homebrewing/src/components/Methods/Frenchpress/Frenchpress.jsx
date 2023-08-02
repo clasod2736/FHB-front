@@ -35,27 +35,7 @@ const { userName } = useParams();
               <span className='btnContainer'>
                 <button className='backBtn' onClick={() => {getMethod('')}}>Back</button>
                 <button className='recipeBtn'
-                onClick={ async () => {
-                  const serverUrl = 'http://localhost:8080/method'
-                  console.log(method)
-
-                  //update methodNamw in database
-                  try {
-                    const response = await axios.put(serverUrl, {
-                      name : userName,
-                      currentBrews : {
-                          methodName : method
-                      } 
-                    })
-                    
-                    console.log(response.data.currentBrews);
-                  } 
-                  catch (error) {
-                    console.log(error)
-                  }
-
-                  navigate(`./${method}/recipe`);
-                }}
+                onClick={() => {navigate(`./${method}/recipe`);}}
                 >Choose French Press</button>
               </span>
         </div>

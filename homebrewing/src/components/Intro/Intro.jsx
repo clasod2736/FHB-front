@@ -64,7 +64,7 @@ const settingButtons  = () => {
         onClick={() => {getRecentBrew()}}>
           Make Last Brew!
         </button>
-        <Link to={isLogIn ? `/${userName}/menu` : '/login'} className='exploreBtn'>
+        <Link to={isLogIn ? `/menu` : '/login'} className='exploreBtn'>
           Make a New Brew!
         </Link>
       </div>

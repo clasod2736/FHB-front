@@ -148,24 +148,7 @@ export default function Menu() {
                         </div>
                     </div>
                     <span className='getMenuBtn'>
-                        <button onClick={async () => {
-                            const serverUrl = 'http://localhost:8080/menu'
-                            
-                            try {
-                                const response = await axios.put(serverUrl, {
-                                        name : userName,
-                                        currentBrews : {
-                                            menuName : menuName
-                                        } 
-                                })
-                                console.log(response.data.currentBrews)
-                                
-                                navigate(`./${menuName}/method`);
-                            } catch (error) {
-                                console.log(error)
-                            }
-
-                            }}>Choose this Coffee</button>
+                        <button onClick={() => {navigate(`./${menuName}/method`)}}>Choose this Coffee</button>
                     </span>
                 </div>
             </span>

@@ -21,31 +21,7 @@
   height: 90%;
   justify-content: center;
   align-items: center;
-  margin-top: 3%;
-}
-.introContainer .logoContainer .gate .pContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 20%;
-  margin-top: 0.5%;
-}
-.introContainer .logoContainer .gate .pContainer p {
-  font-size: 22px;
-  color: #9A6E40;
-  font-style: italic;
-  margin-bottom: 2%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.introContainer .logoContainer .gate .pContainer .introduce1 {
-  animation: pSlide1 1.3s;
-}
-.introContainer .logoContainer .gate .pContainer .introduce2 {
-  animation: pSlide1 1.6s;
-}
-.introContainer .logoContainer .gate .pContainer .introduce3 {
-  animation: pSlide1 1.8s;
+  margin-top: 2%;
 }
 .introContainer .logoContainer .gate .expContainer {
   display: flex;
@@ -63,7 +39,7 @@
   align-items: center;
   width: 40%;
   height: 60px;
-  font-size: 25px;
+  font-size: 22px;
   letter-spacing: 2px;
   border: 1px #F9F6EA solid;
   border-radius: 10px;
@@ -124,7 +100,7 @@
     transform: translateY(0%);
   }
 }
-@media screen and (max-width: 1600px) {
+@media all and (min-width: 1681px) and (max-width: 2000px) {
   .introContainer .logoContainer {
     height: 100%;
   }
@@ -132,19 +108,105 @@
     height: 100%;
     margin-top: 0%;
   }
-  .introContainer .logoContainer .gate .pContainer {
-    height: 25%;
-  }
-  .introContainer .logoContainer .gate .pContainer p {
-    font-size: 15px;
-  }
-  .introContainer .logoContainer .gate .expContatiner {
+  .introContainer .logoContainer .gate .expContainer {
     width: 40%;
     height: 10%;
   }
-  .introContainer .logoContainer .gate .expContatiner .exploreBtn {
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
     width: 40%;
     height: 75%;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1680px) {
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    width: 40%;
+    height: 10%;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 40%;
+    height: 60%;
     font-size: 16px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    width: 40%;
+    height: 10%;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 45%;
+    height: 70%;
+    font-size: 13px;
+    margin-top: 10%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    width: 50%;
+    height: 10%;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 40%;
+    height: 75%;
+    font-size: 10px;
+    margin-top: 5%;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    width: 80%;
+    height: 10%;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 45%;
+    height: 75%;
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 479px) {
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    width: 100%;
+    height: 10%;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 45%;
+    height: 75%;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=Intro.css.map */

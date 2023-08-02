@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './Navbar.css'
 import {Link ,useParams} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -46,7 +46,7 @@ export default function Navbar() {
       </button>
       <button className='shop'
       ><Nav/></button>
-      <Link className='navTitle' to={isLogIn ? `/login/${userName}` : '/'}>For Home Barista</Link>
+      <Link className='navTitle' to={isLogIn ? `/` : '/'}>For Homey Barista</Link>
       {settingMyRecipe()}
       {isLogIn ? <Link className='account' to={'/'}
       onClick={() => {
