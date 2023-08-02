@@ -17,10 +17,10 @@ export default function Step3({getOrder}) {
                 <p>*Note: Don't put them together too strong, otherwise it won't open.</p>
             </div>
             <div className='btnContainer'>
-                <Link id='backBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${roasting}/${grind}/step2`}>
+                <Link id='backBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${roasting}/${grind}/step2`}>
                 <button>Back</button>
                 </Link>
-                <Link id='nextBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step4`}>
+                <Link id='nextBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step4`}>
                 <button>Next</button>
                 </Link>
             </div>

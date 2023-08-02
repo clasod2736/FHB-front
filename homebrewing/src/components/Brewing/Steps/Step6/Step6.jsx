@@ -20,10 +20,10 @@ export default function Step6() {
                 <p>Watch this video first and try them!</p>
             </div>
             <div className='btnContainer'>
-                <Link id='backBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${roasting}/${grind}/step5`}>
+                <Link id='backBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${roasting}/${grind}/step5`}>
                 <button>Back</button>
                 </Link>
-                <Link id='nextBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step7`}>
+                <Link id='nextBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step7`}>
                 <button>Next</button>
                 </Link>
             </div>

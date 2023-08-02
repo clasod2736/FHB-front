@@ -17,10 +17,10 @@ export default function Step1() {
               <p>Filling to the line inside the carafe (depends on what model you have).</p>
           </div>
           <div className='btnContainer'>
-            <Link id='backBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe`}>
+            <Link id='backBtn' to={`/menu/${menuName}/method/${methodName}/recipe`}>
               <button>Back</button>
             </Link>
-            <Link id='nextBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step2`}>
+            <Link id='nextBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step2`}>
               <button>Next</button>
             </Link>
           </div>

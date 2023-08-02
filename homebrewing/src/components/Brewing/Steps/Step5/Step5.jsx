@@ -17,10 +17,10 @@ export default function Step5() {
                 <p>When you hear a hissing sound, remove the Moka pot from the heat source and allow the coffee to finish brewing. </p>
             </div>
             <div className='btnContainer'>
-                <Link id='backBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${roasting}/${grind}/step4`}>
+                <Link id='backBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${roasting}/${grind}/step4`}>
                 <button>Back</button>
                 </Link>
-                <Link id='nextBtn' to={`/${userName}/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step6`}>
+                <Link id='nextBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step6`}>
                 <button>Next</button>
                 </Link>
             </div>
