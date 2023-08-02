@@ -86,7 +86,6 @@ const settingFavDetails = () => {
                 <svg width={'100%'} height={'70%'} viewBox='-20 180 550 120'>
                     <FHBLogo/>    
                 </svg>
-                <header>For Home Barista</header>
             </div>
         )
     } else {
