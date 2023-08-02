@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux'
 
 // images and icons
 import {ReactComponent as CoffeeWomen} from '../../../assets/coffeeWomen.svg'
-import { BsGoogle,BsFacebook } from 'react-icons/bs'
+import { BsGoogle } from 'react-icons/bs'
 
 export default function User() {
   const [email, setEmail] = useState('')

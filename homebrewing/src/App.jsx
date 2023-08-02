@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {path: '/register', element:<Register/>},
       {path: '/login/:userName', element:<Intro/>},
       {path: '/:username', element:<Intro/>},
-      {path: '/:userName/myRecipe', element:<MyRecipe/>},
+      {path: '/myRecipe', element:<MyRecipe/>},
       {path: '/menu', element:<Menu/>},
       {path: '/:userName/menu', element:<Menu/>},
       {path: 'menu/:menuName/method', element:<Methods/>},

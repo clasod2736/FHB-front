@@ -3,7 +3,6 @@ import './Footer.css'
 
 //images and icons
 import { ReactComponent as ContactSvg } from '../../assets/login.svg'
-import { ReactComponent as TodaysCoffee } from '../../assets/chai2.svg'
 import {BsFacebook, BsInstagram, BsTwitter, BsGithub, BsLinkedin} from 'react-icons/bs'
 import {HiShoppingBag} from 'react-icons/hi'
 import {DiCoffeescript} from 'react-icons/di'
@@ -76,13 +75,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        {/* <span className='subscription'>
-            <header>Join subscription!</header>
-            <input type="text" placeholder='Email'/>
-            <div className='subsBtnContainer'>
-              <button>Subscribe</button>
-            </div>
-        </span> */}
     </div>
   )
 }

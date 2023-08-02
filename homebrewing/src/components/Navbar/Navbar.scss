@@ -276,13 +276,13 @@
     }
 }
 
-@media all and (min-width:1681px)  and (max-width:1920px) {
+@media all and (min-width:1681px)  and (max-width:2100px) {
     .fixedNavbar {
         width:60%;
         height: 5%;
         
         .navTitle {
-            font-size: 18px;
+            font-size: 20px;
         }
     
         .guide {
@@ -334,7 +334,7 @@
 
 @media all and (min-width:1024px) and (max-width:1279px) {
     .fixedNavbar {
-        width:80%;
+        width:70%;
         height: 5%;
         
         .navTitle {
@@ -366,7 +366,7 @@
         height: 5%;
         
         .navTitle {
-            font-size: 15px;
+            font-size: 12px;
         }
     
         .guide {
@@ -391,10 +391,10 @@
 @media all and (min-width:480px) and (max-width:767px) {
     .fixedNavbar {
         width:90%;
-        height: 20%;
+        height: 4vh;
         
         .navTitle {
-            font-size: 15px;
+            display: none;
         }
     
         .guide {
@@ -418,11 +418,15 @@
 
 @media all and (max-width:479px) {
     .fixedNavbar {
-        width:100%;
-        height: 10%;
+        width:90%;
+        height: 4vh;
+
+        border-radius: 5px;
+
+        margin-top: 3%;
         
         .navTitle {
-            font-size: 12px;
+            display: none;
         }
     
         .guide {

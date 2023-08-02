@@ -15,7 +15,7 @@ export default function SlideMenu() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} className='menuBtn'>
+      <Button variant="primary" onClick={handleShow} className='navBtn'>
         Nav
       </Button>
 

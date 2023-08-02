@@ -65,7 +65,7 @@ const settingButtons  = () => {
           Make Last Brew!
         </button>
         <Link to={isLogIn ? `/menu` : '/login'} className='exploreBtn'>
-          Make a New Brew!
+          Make New Brew!
         </Link>
       </div>
     )

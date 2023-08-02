@@ -8,8 +8,6 @@ import SlideMenu from './SlideMenu/SlideMenu'
 import Nav from './Nav/Nav'
 
 export default function Navbar() {
-
-  const {userName} = useParams();
   
   const dispatch = useDispatch();
 
@@ -33,7 +31,7 @@ export default function Navbar() {
       )
     } else if (isLogIn === true) {
       return (
-        <Link className='myRecipe' to={`${userName}/myRecipe`}>My Recipe</Link>
+        <Link className='myRecipe' to={`/myRecipe`}>My Recipe</Link>
       )
     }
   }

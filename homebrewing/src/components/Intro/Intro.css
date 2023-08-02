@@ -100,7 +100,7 @@
     transform: translateY(0%);
   }
 }
-@media all and (min-width: 1681px) and (max-width: 2000px) {
+@media all and (min-width: 1681px) and (max-width: 2100px) {
   .introContainer .logoContainer {
     height: 100%;
   }
@@ -137,6 +137,9 @@
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1279px) {
+  .introContainer {
+    height: 66vh;
+  }
   .introContainer .logoContainer {
     height: 100%;
   }
@@ -156,6 +159,9 @@
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
+  .introContainer {
+    height: 68vh;
+  }
   .introContainer .logoContainer {
     height: 100%;
   }
@@ -171,15 +177,19 @@
     width: 40%;
     height: 75%;
     font-size: 10px;
-    margin-top: 5%;
+    margin-top: 10%;
   }
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
+  .introContainer {
+    justify-content: flex-start;
+    height: 50vh;
+  }
   .introContainer .logoContainer {
     height: 100%;
   }
   .introContainer .logoContainer .gate {
-    height: 100%;
+    height: 90%;
     margin-top: 0%;
   }
   .introContainer .logoContainer .gate .expContainer {
@@ -188,25 +198,29 @@
   }
   .introContainer .logoContainer .gate .expContainer .exploreBtn {
     width: 45%;
-    height: 75%;
+    height: 90%;
     font-size: 12px;
   }
 }
 @media all and (max-width: 479px) {
+  .introContainer {
+    justify-content: flex-start;
+    height: 50vh;
+  }
   .introContainer .logoContainer {
     height: 100%;
   }
   .introContainer .logoContainer .gate {
-    height: 100%;
+    height: 90%;
     margin-top: 0%;
   }
   .introContainer .logoContainer .gate .expContainer {
     width: 100%;
-    height: 10%;
+    height: 15%;
   }
   .introContainer .logoContainer .gate .expContainer .exploreBtn {
     width: 45%;
-    height: 75%;
+    height: 70%;
     font-size: 10px;
   }
 }/*# sourceMappingURL=Intro.css.map */

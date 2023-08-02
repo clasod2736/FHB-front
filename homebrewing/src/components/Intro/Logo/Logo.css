@@ -66,9 +66,9 @@
     opacity: 1;
   }
 }
-@media all and (min-width: 1681px) and (max-width: 2000px) {
+@media all and (min-width: 1681px) and (max-width: 2100px) {
   .svgContainer {
-    height: 90%;
+    height: 80%;
     width: 50%;
   }
   .svgContainer .introLogo {
@@ -79,7 +79,7 @@
 @media all and (min-width: 1280px) and (max-width: 1680px) {
   .svgContainer {
     height: 80%;
-    width: 50%;
+    width: 45%;
   }
   .svgContainer .introLogo {
     width: 85%;
@@ -89,7 +89,7 @@
 @media all and (min-width: 1024px) and (max-width: 1279px) {
   .svgContainer {
     height: 70%;
-    width: 45%;
+    width: 40%;
   }
   .svgContainer .introLogo {
     width: 85%;
@@ -98,8 +98,8 @@
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .svgContainer {
-    height: 75%;
-    width: 65%;
+    height: 60%;
+    width: 50%;
   }
   .svgContainer .introLogo {
     width: 85%;
@@ -108,9 +108,8 @@
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
   .svgContainer {
-    height: 70%;
-    width: 75%;
-    min-width: 40%;
+    height: 90%;
+    width: 85%;
   }
   .svgContainer .introLogo {
     width: 85%;
@@ -120,7 +119,7 @@
 @media all and (max-width: 479px) {
   .svgContainer {
     height: 75%;
-    width: 100%;
+    width: 95%;
   }
   .svgContainer .introLogo {
     width: 85%;

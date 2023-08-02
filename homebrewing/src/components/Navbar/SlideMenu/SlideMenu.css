@@ -2,7 +2,7 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  font-size: 20px !important;
+  font-size: 20px;
   color: #A86B43 !important;
   background-color: transparent !important;
   border: none !important;
@@ -144,12 +144,57 @@
   width: 100%;
 }
 
-@media screen and (max-width: 1600px) {
+@media all and (min-width: 1681px) and (max-width: 2100px) {
+  .menuBtn {
+    font-size: 18px !important;
+    margin-left: 0 !important;
+  }
+  .canvas {
+    width: 25% !important;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1680px) {
   .menuBtn {
     font-size: 16px !important;
     margin-left: 0 !important;
   }
   .canvas {
     width: 25% !important;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .menuBtn {
+    font-size: 13px !important;
+    margin-left: 0 !important;
+  }
+  .aboutCanvas {
+    width: 40% !important;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .menuBtn {
+    font-size: 12px !important;
+    margin-left: 0 !important;
+  }
+  .aboutCanvas {
+    width: 40% !important;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .menuBtn {
+    font-size: 12px !important;
+    margin-left: 0 !important;
+  }
+  .aboutCanvas {
+    width: 40% !important;
+  }
+}
+@media all and (max-width: 479px) {
+  .menuBtn {
+    font-size: 10px !important;
+    margin-left: 0 !important;
+  }
+  .aboutCanvas {
+    width: 70% !important;
   }
 }/*# sourceMappingURL=SlideMenu.css.map */

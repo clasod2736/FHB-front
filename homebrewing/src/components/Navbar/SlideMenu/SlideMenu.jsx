@@ -3,10 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './SlideMenu.css'
 
-import {Link, useParams} from 'react-router-dom'
-
 export default function SlideMenu() {
-  const { userName, menuName, methodName } = useParams()
 
   const [show, setShow] = useState(false);
 
@@ -19,7 +16,7 @@ export default function SlideMenu() {
         About
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose} className='canvas' scroll={false} backdrop={true} restoreFocus={true} aria-modal={false}>
+      <Offcanvas show={show} onHide={handleClose} className='aboutCanvas' scroll={false} backdrop={true} restoreFocus={true} aria-modal={false}>
         <Offcanvas.Header className='slideHeader'>
           <Offcanvas.Title className='slideTitle'>About FHB.</Offcanvas.Title>
         </Offcanvas.Header>
@@ -62,25 +59,6 @@ export default function SlideMenu() {
                 </div>
               </div>
           </div>
-          
-            {/* <div className='nav'>
-              <header>Navigation</header>
-              <Link 
-              className='menu'
-              to={`${userName}/menu`}>
-                Coffee Menu
-              </Link>
-              <Link
-              className='method'
-              to={`${userName}/menu/${menuName}/method`}>
-                Coffee Method
-              </Link>
-              <Link
-              className='recipe'
-              to={`${userName}/menu/${menuName}/method/${methodName}/recipe`}>
-                Recipe
-              </Link>
-            </div> */}
         </Offcanvas.Body>
       </Offcanvas>
     </>

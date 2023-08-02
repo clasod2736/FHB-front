@@ -10,74 +10,51 @@
 
     animation: opacity 0.3s;
 
-    .recommend {
+    .explore {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 15%;
-        height: 80%;
-        cursor: pointer;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-        border-radius: 10px;
+        width: 28%;
+        height: 90%;
 
-        background-color: wheat;
+        header {
 
-        &:hover {
-            box-shadow: 1px 1px 0px 3px lightgrey;
-            transition: 0.3s;   
-        }
-
-        .recommendTitle {
-            display: flex;  
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 20%;
-            text-align: center;
-            
-            h3 {
-                width: 100%;
-                color: saddlebrown;
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 22px;
-                margin-bottom: 0;
+            #exploreIcon {
+                font-size: 50px;
             }
-        }
-        .recommendCoffee {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-self: center;
-            width: 80%;
-            height: 70%;
-            cursor: pointer;
+
+            font-size: 25px;
+            color: sienna;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        .recommendText {
+        .exploreContents {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 30%;
+            justify-content: flex-start;
+            align-items: flex-start;
 
-            font-size: 20px;
-            color: saddlebrown;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            text-align: center;
+            width: 100%;
+            height: 70%;
+
+            background-color: wheat;
+            border-radius: 10px;
+
+            padding: 3%;
 
             p {
-                width: 50%;
-                margin-bottom: 5%;
-                border-radius: 10px;
-                background-color: wheat;
+                font-size: 15px;
+                font-weight: bold;
+                color: saddlebrown;
+                cursor: pointer;
 
-                margin-bottom: 0;
+                &:hover {
+                    text-decoration: underline 2px;
+                }
             }
         }
-
     }
 
     .footerShop {
@@ -170,76 +147,6 @@
         }
     }
 
-    .subscription {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-        width: 15%;
-        height: 90%;
-
-        header {
-            font-size: 18px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin-bottom: 1%;
-            color: #593d3b;
-        }
-        input {
-            width: 100%;
-            height: 13%;
-            color:sienna;
-            background-color: wheat;
-            border: burlywood 2px solid;
-            border-radius: 10px;
-            font-size: 16px;
-            padding-left: 2%;
-            outline: none;
-
-            &:focus {
-                border: saddlebrown 2px solid;
-                transition: 0.2s;
-            }
-        }
-
-        .subsBtnContainer {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-
-            width: 100%;
-            height: 12%;
-
-            margin-top: 2%;
-
-            button {
-                text-align: center;
-                font-weight: bold;
-    
-                color: saddlebrown;
-                background-color: wheat;
-                border-radius: 5px;
-                border: 2px darkgoldenrod solid;
-                font-size: 12px;
-
-                padding: 1.5%;
-    
-                &:hover {
-                    background-color: burlywood;
-                }
-            }
-        }
-
-        p {
-            margin-top: 10%;
-            margin-bottom: 0%;
-            font-size: 15px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: #593d3b;
-        }
-    }
-
     .contact {
         display: flex;
         flex-direction: row;
@@ -308,136 +215,964 @@
             }
         }
     }
+}
 
-    .explore {
+
+@media all and (min-width:1681px)  and (max-width:2100px) {
+
+    .footerContainer {
+        height: 22vh;
+
+        padding-inline: 0;
+
+        .explore {
+            justify-content: center;
+            width: 30%;
+
+            header {
+                font-size: 20px;
+
+                margin-bottom: 2%;
+
+                #exploreIcon {
+                    font-size: 25px;
+                }
+            }
+
+            .exploreContents {
+                width: 100%;
+                height: 70%;
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+        }
+
+        .footerShop {
+            justify-content: center;
+            width: 30%;
+
+            h1 {
+                font-size: 20px;
+
+                margin-bottom: 2%;
+
+                #shopIcon {
+                    font-size: 25px;
+                }
+            }
+
+            .shopLinks {
+                height: 80%;
+
+                .gears {
+                    header {
+                        font-size: 15px;
+                    }
+                    li {
+                        font-size: 12px;
+                    }
+                }
+                .beans {
+                    header {
+                        font-size: 15px;
+                    }
+                    li {
+                        font-size: 12px;
+                    }
+                }
+                .accessories {
+                    header {
+                        font-size: 15px;
+                    }
+                    li {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+        }
+
+        .contact {
+            width: 30%;
+
+            .contactImg {
+                width: 30%;
+                height: 100%;
+            }
+
+            .contactText {
+                width: 70%;
+                height: 60%;
+
+                header {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+
+                a {
+                    font-size: 10px;
+                    margin-left: 5%;
+
+                    color: brown;
+                }
+            }
+
+            .social {
+
+                .socialBtn {
+                    font-size: 12px;
+                }
+            }
+        }
+       
+    }
+}
+
+@media all and (min-width:1280px)  and (max-width:1680px) {
+
+    .footerContainer {
+        width: 70%;
+        height: 20vh;
+
+        padding-inline: 0;
+
+        .explore {
+            justify-content: center;
+            width: 30%;
+
+            header {
+                font-size: 15px;
+
+                margin-bottom: 2%;
+
+                #exploreIcon {
+                    font-size: 20px;
+                }
+            }
+
+            .exploreContents {
+                width: 100%;
+                height: 70%;
+
+                p {
+                    font-size: 10px;
+
+                    margin-bottom: 2.5%;
+                }
+            }
+
+        }
+
+        .footerShop {
+            justify-content: center;
+            width: 25%;
+
+            h1 {
+                font-size: 12px;
+
+                margin-bottom: 2%;
+
+                #shopIcon {
+                    font-size: 15px;
+
+                    margin-bottom: 2%;
+                }
+            }
+
+            .shopLinks {
+                height: 90%;
+
+                .gears {
+                    header {
+                        font-size: 10px;
+                    }
+                    li {
+                        font-size: 8px;
+                    }
+                }
+                .beans {
+                    header {
+                        font-size: 10px;
+                    }
+                    li {
+                        font-size: 8px;
+                    }
+                }
+                .accessories {
+                    header {
+                        font-size: 10px;
+                    }
+                    li {
+                        font-size: 8px;
+                    }
+                }
+            }
+
+        }
+
+        .contact {
+            width: 30%;
+
+            .contactImg {
+                width: 30%;
+                height: 100%;
+            }
+
+            .contactText {
+                width: 70%;
+                height: 90%;
+
+                header {
+                    font-size: 12px;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+
+                a {
+                    font-size: 10px;
+                    margin-left: 5%;
+
+                    color: brown;
+                }
+            }
+
+            .social {
+
+                .socialBtn {
+                    font-size: 12px;
+                }
+            }
+        }
+       
+    }
+}
+
+@media all and (min-width:1024px) and (max-width:1279px) {
+    .footerContainer {
+        height: 22vh;
+        width: 70%;
+
+        padding-inline: 0;
+
+        .explore {
+            justify-content: center;
+            width: 30%;
+
+            header {
+                font-size: 10px;
+
+                #exploreIcon {
+                    font-size: 20px;
+                    margin-bottom: 2%;
+                }
+            }
+
+            .exploreContents {
+                width: 100%;
+                height: 75%;
+
+                p {
+                    font-size: 7px;
+
+                    margin-bottom: 4%;
+                }
+            }
+
+        }
+
+        .footerShop {
+            justify-content: center;
+            width: 30%;
+
+            h1 {
+                font-size: 10px;
+
+                #shopIcon {
+                    font-size: 10px;
+
+                    margin-bottom: 1%; 
+                }
+            }
+
+            .shopLinks {
+                height: 85%;
+
+                .gears {
+                    header {
+                        font-size: 10px;
+                    }
+                    li {
+                        font-size: 7px;
+                    }
+                }
+                .beans {
+                    header {
+                        font-size: 10px;
+                    }
+                    li {
+                        font-size: 7px;
+                    }
+                }
+                .accessories {
+                    header {
+                        font-size: 10px;
+                    }
+                    li {
+                        font-size: 7px;
+                    }
+                }
+            }
+
+        }
+
+        .contact {
+            width: 30%;
+
+            .contactImg {
+                width: 25%;
+                height: 90%;
+            }
+
+            .contactText {
+                width: 70%;
+                height: 90%;
+
+                header {
+                    font-size: 10px;
+                }
+
+                p {
+                    font-size: 7px;
+                    margin-bottom: 1.5%;
+                }
+
+                a {
+                    font-size: 7px;
+                    margin-left: 5%;
+
+                    color: brown;
+                }
+            }
+
+            .social {
+                height: 20%;
+
+                margin-top: 2%;
+
+                .socialBtn {
+                    font-size: 8px;
+                }
+            }
+        }
+       
+    }
+}
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    .footerContainer {
+        height: 20vh;
+        width: 80%;
+
+        padding-inline: 0;
+
+        .explore {
+            justify-content: center;
+            width: 25%;
+
+            header {
+                font-size: 10px;
+
+                margin-bottom: 2%;
+
+                #exploreIcon {
+                    font-size: 15px;
+                    margin-bottom: 2%;
+                }
+            }
+
+            .exploreContents {
+                width: 100%;
+                height: 75%;
+
+                p {
+                    font-size: 6px;
+
+                    margin-bottom: 4%;
+                }
+            }
+
+        }
+
+        .footerShop {
+            justify-content: center;
+            width: 25%;
+
+            h1 {
+                font-size: 10px;
+
+                margin-bottom: 2%;
+
+                #shopIcon {
+                    font-size: 12px;
+
+                    margin-bottom: 2%; 
+                }
+            }
+
+            .shopLinks {
+                height: 80%;
+
+                .gears {
+                    header {
+                        font-size: 8px;
+                    }
+                    li {
+                        font-size: 6px;
+                    }
+                }
+                .beans {
+                    header {
+                        font-size: 8px;
+                    }
+                    li {
+                        font-size: 6px;
+                    }
+                }
+                .accessories {
+                    header {
+                        font-size: 8px;
+                    }
+                    li {
+                        font-size: 6px;
+                    }
+                }
+            }
+
+        }
+
+        .contact {
+            width: 30%;
+
+            .contactImg {
+                width: 30%;
+                height: 90%;
+            }
+
+            .contactText {
+                width: 80%;
+                height: 90%;
+
+                header {
+                    font-size: 10px;
+                }
+
+                p {
+                    font-size: 6px;
+                }
+
+                a {
+                    font-size: 6px;
+                    margin-left: 5%;
+
+                    color: brown;
+                }
+            }
+
+            .social {
+                height: 15%;
+                width: 80%;
+
+                .socialBtn {
+                    font-size: 7px;
+                }
+            }
+        }
+       
+    }
+}
+
+@media all and (min-width:480px) and (max-width:767px) {
+    .footerContainer {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
 
-        width: 28%;
-        height: 90%;
+        width: 95%;
+        height: 100%;
+        padding-inline: 3%;
 
-        header {
+        .explore {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+    
+            width: 100%;
+            height: 30%;
 
-            #exploreIcon {
-                font-size: 50px;
+            margin-top: 5%;
+    
+            header {
+    
+                #exploreIcon {
+                    font-size: 15px;
+                }
+    
+                font-size: 15px;
+                color: sienna;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
+    
+            .exploreContents {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+    
+                width: 100%;
+                height: 50%;
+    
+                background-color: wheat;
+                border-radius: 10px;
+    
+                padding-inline: 2%;
+                padding-bottom: 0;
+                padding-top: 2%;
+    
+                p {
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: saddlebrown;
+                    cursor: pointer;
 
-            font-size: 25px;
-            color: sienna;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    margin-bottom: 2%;
+    
+                    &:hover {
+                        text-decoration: underline 2px;
+                    }
+                }
+            }
         }
-
-        .exploreContents {
+        .footerShop {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: flex-start;
-
+            align-items: center;
+    
             width: 100%;
-            height: 70%;
+            height: 30%;
 
-            background-color: wheat;
-            border-radius: 10px;
+            margin-top: 5%;
+    
+            .shopLinks {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+    
+                width: 100%;
+                height: 100%;
 
-            padding: 3%;
+                padding-inline: 2%;
+            }
+    
+            h1 {
+    
+                #shopIcon {
+                    font-size: 20px;
 
-            p {
+                    margin-bottom: 1%;
+                }
                 font-size: 15px;
-                font-weight: bold;
+    
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: saddlebrown;
+    
+                width: 100%;
+    
+                margin-bottom: 0;
+                padding-bottom: 0%;
+            }
+    
+            header {
+                width: auto;
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: saddlebrown;
+                border-bottom: 2px solid sienna;
+                padding-inline: 3%;
+    
+                margin-bottom: 5%;
+            }
+            
+            li {
+                font-size: 10px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin-block: 2%;
+                list-style: none;
                 color: saddlebrown;
                 cursor: pointer;
-
+    
                 &:hover {
                     text-decoration: underline 2px;
+                    text-underline-offset: 2px;
+                    transition-property: 0.3s;
+                }
+            }
+    
+            .gears {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: auto;
+                height: 100%;
+            }
+        
+            .beans {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: auto;
+                height: 100%;
+            }
+        
+            .accessories {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: auto;
+                height: 100%;
+            }
+        }
+        .contact {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+    
+            width: 100%;
+            height: 30%;
+
+            margin-top: 5%;
+    
+            .contactImg {
+                width: 30%;
+                height: 25vh;
+            }
+    
+            .contactText {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+    
+                width: 70%;
+                height: 80%;
+                
+                margin-left: 5%;
+    
+                .emailAddress {
+                    display: flex;
+                    flex-direction: row;
+    
+                    margin-top: 1%;
+                }
+    
+                .social {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:flex-end;
+                    align-items: center;
+                    width: 100%;
+                    height: 20%;
+                    font-size: 12px;
+                    color: #593d3b;
+        
+        
+                    .socialBtn {
+                        cursor: pointer;
+                        margin-inline: 3%;
+        
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+    
+                header {
+                    font-size: 15px;
+                    font-weight: bold;
+                    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    color: sienna;
+                }
+    
+                p {
+                    font-size: 12px;
+                    color: saddlebrown;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+                    margin-bottom: 1.5%;
+                }
+
+                a {
+                    font-size: 12px;
+
+                    color: brown;
+                    margin-left: 3%;
                 }
             }
         }
     }
 }
 
-
-@media (max-width: 1600px) {
+@media all and (max-width:479px) {
     .footerContainer {
-        height: 19vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-        padding-inline: 0;
-        
-        .footerSvg {
-            width: 15%;
-            height: 100%;
-        }
-        .recommend {
-            height: 95%;
+        width: 95%;
+        height: 100%;
+        padding-inline: 3%;
 
-            .recommendTitle {
-                
-                h3 {
-                    font-size: 16px;
-                }
-            }
-            .recommendCoffee {
-                width: 90%;
-                height: 50%;
-            }
-            .recommendText {
-                font-size: 16px;
-            }
-        }
+        .explore {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+    
+            width: 100%;
+            height: 30%;
 
-        .footerShop {
-            width: 40%;
-
-            .products {
-                header {
-                    font-size: 15px;
-                }
-                li {
-                    font-size: 10px;
-                }
-            }
-            .branding {
-                header {
-                    font-size: 15px;
-                }
-                li {
-                    font-size: 10px;
-                }
-            }
-            .articles {
-                header {
-                    font-size: 15px;
-                }
-                li {
-                    font-size: 10px;
-                }
-            }
-        }
-        .subscription {
-            width: 22%;
-
+            margin-top: 5%;
+    
             header {
+    
+                #exploreIcon {
+                    font-size: 15px;
+                }
+    
                 font-size: 15px;
+                color: sienna;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
-            input {
-                font-size: 12px;
-                padding-left: 3%;
-            }
-            .subsBtnContainer {
-                button {
-                    width: 40%;
+    
+            .exploreContents {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+    
+                width: 100%;
+                height: 50%;
+    
+                background-color: wheat;
+                border-radius: 10px;
+    
+                padding-inline: 2%;
+                padding-bottom: 0;
+                padding-top: 2%;
+    
+                p {
                     font-size: 10px;
-                    padding: 0;
+                    font-weight: bold;
+                    color: saddlebrown;
+                    cursor: pointer;
+
+                    margin-bottom: 2%;
+    
+                    &:hover {
+                        text-decoration: underline 2px;
+                    }
                 }
             }
-            p {
-                font-size: 12px;
+        }
+        .footerShop {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+    
+            width: 100%;
+            height: 30%;
+
+            margin-top: 5%;
+    
+            .shopLinks {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+    
+                width: 100%;
+                height: 100%;
+
+                padding-inline: 2%;
             }
-            .social {
-                width: 80%;
-                .socialBtn {
-                    margin-inline: 4%;
+    
+            h1 {
+    
+                #shopIcon {
+                    font-size: 20px;
+
+                    margin-bottom: 1%;
+                }
+                font-size: 15px;
+    
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: saddlebrown;
+    
+                width: 100%;
+    
+                margin-bottom: 0;
+                padding-bottom: 0%;
+            }
+    
+            header {
+                width: auto;
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: saddlebrown;
+                border-bottom: 2px solid sienna;
+                padding-inline: 3%;
+    
+                margin-bottom: 5%;
+            }
+            
+            li {
+                font-size: 10px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin-block: 2%;
+                list-style: none;
+                color: saddlebrown;
+                cursor: pointer;
+    
+                &:hover {
+                    text-decoration: underline 2px;
+                    text-underline-offset: 2px;
+                    transition-property: 0.3s;
+                }
+            }
+    
+            .gears {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: auto;
+                height: 100%;
+            }
+        
+            .beans {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: auto;
+                height: 100%;
+            }
+        
+            .accessories {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: auto;
+                height: 100%;
+            }
+        }
+        .contact {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+    
+            width: 100%;
+            height: 30%;
+
+            margin-top: 5%;
+    
+            .contactImg {
+                width: 30%;
+                height: 25vh;
+            }
+    
+            .contactText {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+    
+                width: 70%;
+                height: 80%;
+                
+                margin-left: 5%;
+    
+                .emailAddress {
+                    display: flex;
+                    flex-direction: row;
+    
+                    margin-top: 1%;
+                }
+    
+                .social {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:flex-end;
+                    align-items: center;
+                    width: 100%;
+                    height: 20%;
+                    font-size: 10px;
+                    color: #593d3b;
+        
+        
+                    .socialBtn {
+                        cursor: pointer;
+                        margin-inline: 3%;
+        
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+    
+                header {
+                    font-size: 12px;
+                    font-weight: bold;
+                    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    color: sienna;
+                }
+    
+                p {
+                    font-size: 10px;
+                    color: saddlebrown;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+                    margin-bottom: 1.5%;
+                }
+
+                a {
+                    font-size: 10px;
+
+                    color: brown;
+                    margin-left: 3%;
                 }
             }
         }

@@ -2,7 +2,7 @@
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
-    font-size: 20px!important;
+    font-size: 20px;
     color: #A86B43!important;
     background-color: transparent!important;
     border: none!important;
@@ -169,54 +169,24 @@
             align-items: center;
     
             width: 100%;
-        }
-
-        
+            }   
         }
     }
-    // .nav {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: space-evenly;
-    //     align-items: center;
-
-    //     width:50%;
-    //     height: 100%;
-
-    //     header {
-    //         font-size: 30px;
-    //         font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //         color: sienna;
-    //         border-bottom: 2px solid sienna;
-    //     }
-
-    //     .menu {
-    //         font-size: 25px;
-    //         color: darkgoldenrod;
-    //         font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //         text-decoration: none;
-    //         letter-spacing: 3px;
-    //     }
-    //     .method {
-    //         font-size: 25px;
-    //         color: darkgoldenrod;
-    //         font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //         text-decoration: none;
-    //         letter-spacing: 3px;
-    //     }
-    //     .recipe {
-    //         font-size: 25px;
-    //         color: darkgoldenrod;
-    //         font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //         text-decoration: none;
-    //         letter-spacing: 3px;
-    //     }
-    // }
-
 }
 
 
-@media screen and (max-width: 1600px) {
+@media all and (min-width:1681px)  and (max-width:2100px) {
+    .menuBtn {
+        font-size: 18px!important;
+        margin-left: 0!important;
+    }
+
+    .canvas {
+        width: 25%!important;
+    }
+}
+
+@media all and (min-width:1280px)  and (max-width:1680px) {
     .menuBtn {
         font-size: 16px!important;
         margin-left: 0!important;
@@ -224,5 +194,49 @@
 
     .canvas {
         width: 25%!important;
+    }
+}
+
+@media all and (min-width:1024px) and (max-width:1279px) {
+    .menuBtn {
+        font-size: 13px!important;
+        margin-left: 0!important;
+    }
+
+    .aboutCanvas {
+        width: 40%!important;
+    }
+}
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    .menuBtn {
+        font-size: 12px!important;
+        margin-left: 0!important;
+    }
+
+    .aboutCanvas {
+        width: 40%!important;
+    }
+}
+
+@media all and (min-width:480px) and (max-width:767px) {
+    .menuBtn {
+        font-size: 12px!important;
+        margin-left: 0!important;
+    }
+
+    .aboutCanvas {
+        width: 40%!important;
+    }
+}
+
+@media all and (max-width:479px) {
+    .menuBtn {
+        font-size: 10px!important;
+        margin-left: 0!important;
+    }
+
+    .aboutCanvas {
+        width: 70%!important;
     }
 }
