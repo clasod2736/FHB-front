@@ -1,33 +1,30 @@
 import React from 'react'
 import './Frenchpress.css'
-import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Aeropress({ getMethod, method }) {
 
 const navigate = useNavigate()
-const { userName } = useParams();
 
   return (
     <div className='frenchPressContainer'>
         <div className='frenchPressOutline'>
               <div className='frenchPressOutlineText'>
                 <header>Frenchpress</header>
-                <p>Contrary to popular belief, Lorem is not simply random text roots</p>
-                <p>epeat predefined chunks as nece</p>
-                <p> embarrassing hid</p>
-                <p>ave suffered alteration in some form, by injected</p>
-                <p>popular belief, Lorem is not simply random</p>
+                <p>The French Press is a simple yet effective</p> 
+                <p>Mixing coarsely ground coffee and water</p>
+                <p>Pressing the plunger produces a rich</p>
+                <p>Smooth brew with balanced flavors.</p>
+
               </div>
               <div className='hashtag'>
                 <span>
                   <p>#Convenient</p>
-                  <p>#Softtaste</p>
-                  <p>#Compact</p>
+                  <p>#PressAndSip</p>
                   <p>#Aromatic</p>
                 </span>
                 <span>
-                  <p>#Aeropress</p>
+                  <p>#BrewingTradition</p>
                   <p>#Durabillity</p>
                   <p>#Easytomake</p>
                 </span>
@@ -40,7 +37,9 @@ const { userName } = useParams();
               </span>
         </div>
         <div className='videoContainer'>
-          <video src="/video/aeropress.mp4" controls></video>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2ziSri3o8Y8"
+        title="How To Use A French Press" frameBorder="0"
+        allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
     </div>
   )

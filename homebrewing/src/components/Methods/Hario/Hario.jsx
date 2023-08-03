@@ -1,35 +1,32 @@
 import React from 'react'
 import './Hario.css'
-import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Aeropress({ getMethod, method }) {
 
 const navigate = useNavigate()
-const { userName } = useParams();
 
   return (
     <div className='harioContainer'>
         <div className='harioOutline'>
               <div className='harioOutlineText'>
                 <header>Hario V6</header>
-                <p>Contrary to popular belief, Lorem is not simply random text roots</p>
-                <p>epeat predefined chunks as nece</p>
-                <p> embarrassing hid</p>
-                <p>ave suffered alteration in some form, by injected</p>
-                <p>popular belief, Lorem is not simply random</p>
+                <p>The Hario V60 is a manual drip coffee maker made</p>
+                <p>from iconic heat-resistant glass.</p>
+                <p>Its intricate design allows precise extraction.</p>
+                <p>Experience delicate bean flavors</p>
+                <p>and aromas with this choice.</p>
               </div>
               <div className='hashtag'>
                 <span>
-                  <p>#Convenient</p>
-                  <p>#Softtaste</p>
-                  <p>#Compact</p>
-                  <p>#Aromatic</p>
+                  <p>#PourOver</p>
+                  <p>#DripDelights</p>
+                  <p>#CraftedCoffee</p>
                 </span>
                 <span>
-                  <p>#Aeropress</p>
-                  <p>#Durabillity</p>
-                  <p>#Easytomake</p>
+                  <p>#BeanExpression</p>
+                  <p>#AromaUnleashed</p>
+                  <p>#BrewingMastery</p>
                 </span>
               </div>
               <span className='btnContainer'>
@@ -40,7 +37,11 @@ const { userName } = useParams();
               </span>
         </div>
         <div className='videoContainer'>
-          <video src="/video/aeropress.mp4" controls></video>
+          <iframe width="100%" height="100%"
+          src="https://www.youtube.com/embed/wJPAoplu_1I"
+          title="Simple Hario V60 Brew Method - My Everyday Recipe"
+          frameBorder="0"
+          allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
         </div>
     </div>
   )

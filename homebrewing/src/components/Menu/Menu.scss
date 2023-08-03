@@ -1226,6 +1226,7 @@
                             background-color: saddlebrown;
                             font-weight: bold;
                             text-align: center;
+                            text-transform: uppercase;
 
                             margin-left: 8%;
                             border-radius: 5px;
@@ -1239,12 +1240,18 @@
                         align-items: center;
 
                         width: 100%;
-                        height: 50%;
+                        height: 60%;
                         min-width: 300px;
+
+                        padding-inline: 2%;
+
                         p {
-                            color: saddlebrown;
-                            font-family: Arial, Helvetica, sans-serif;
                             text-align: center;
+                            font-size: 15px;
+                            color: saddlebrown;
+                            font-family:Verdana, Geneva, Tahoma, sans-serif;
+                            text-align: center;
+                            white-space: pre-line;
 
                             margin-bottom: 3%;
                         }
@@ -1257,7 +1264,7 @@
                     justify-content: space-evenly;
                     align-items: center;
 
-                    width: 90%;
+                    width: 100%;
                     height: 55%;
 
                     border-block: 2px rgb(160, 130, 116) solid;
@@ -1282,11 +1289,11 @@
                     .ingredients {
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-between;
+                        justify-content: center;
                         align-items: center;
 
                         width: 100%;
-                        height: 35%;
+                        height: 20%;
 
                         font-weight: bold;
                         font-size: 18px;
@@ -1297,62 +1304,179 @@
                             color: sienna;
                             font-weight: bold;
 
-                            margin-bottom: 5%;
+                            margin-bottom: 0%;
                         }
                         
-                        span {
+                        p {
+                            font-size: 13px;
+                            color: sandybrown;
+
+                            margin-bottom: 0;
+                        }
+                    }
+                    span {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        width: 110%;
+                        height: 30%;
+                        
+                        div {
                             display: flex;
-                            flex-direction: row;
-                            justify-content: space-around;
+                            flex-direction: column;
+                            justify-content: center;
                             align-items: center;
 
-                            width: 100%;
-                            height: 60%;
+                            width: 30%;
+                            height: 70%;
+                        }
+
+                        .espresso {
                             
-                            div {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: flex-end;
-                                align-items: center;
+                            border-radius: 5px;
+                            background-color:#ffe0b5;
 
-                                width: 35%;
-                                height: 85%;
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color: saddlebrown;
+                                margin-bottom: 1%;
                             }
-
-                            .milkFoam {
-
-                                border-radius: 5px;
-                                background-color: darkgoldenrod;
-
-                                p {
-                                    width: 100%;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color:white;
-                                    margin-bottom: 1%;
-                                }
-
+                            .beanIcon {
+                                height: 60%;
+                                font-size: 35px;
+                                color: #732400;
                             }
-                            .Espresso {
-                                border-radius: 5px;
-                                background-color:#ffe0b5;
+                        }
+                        .water {
+                            border-radius: 5px;
+                            background-color:#ffe0b5;
 
-                                p {
-                                    width: 100%;
-                                    font-size: 15px;
-                                    text-align: center;
-                                    color: saddlebrown;
-                                    margin-bottom: 1%;
-                                }
-                                .beanIcon {
-                                    font-size: 32px;
-                                    color: #732400;
-                                }
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color: lightslategray;
+                                margin-bottom: 1%;
+                            }
+                            .waterIcon {
+                                height: 60%;
+                                font-size: 40px;
+                                color: slategrey;
+                            }
+                        }
+                        .milk {
+                            border-radius: 5px;
+                            background-color: darkgoldenrod;
+
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color: linen;
+                                margin-bottom: 1%;
+                            }
+                            .milkIcon {
+                                height: 60%;
+                                font-size: 50px;
+                                color: linen;
+                            }
+                        }
+                        .milkFoam {
+
+                            border-radius: 5px;
+                            background-color: darkgoldenrod;
+
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color:white;
+                                margin-bottom: 1%;
                             }
 
                         }
+                        .choco {
+                            border-radius: 5px;
+                            background-color: burlywood;
 
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color: sienna;
+                                margin-bottom: 1%;
+                            }
+                            .chocoIcon {
+                                height: 60%;
+                                font-size: 50px;
+                                color: sienna;
+                            }
+                        }
+                        .chai {
+                            border-radius: 5px;
+                            background-color: burlywood;
+
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color: brown;
+                                margin-bottom: 1%;
+                            }
+                            .chaiIcon {
+                                height: 60%;
+                                font-size: 35px;
+                                color: brown;
+                            }
+                        }
+                        .turmericIng {
+                            border-radius: 5px;
+                            background-color: antiquewhite;
+
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color: goldenrod;
+                                margin-bottom: 1%;
+                            }
+                            .turmericIcon {
+                                height: 60%;
+                                font-size: 45px;
+                                color: goldenrod;
+                            }
+                        }
+                        .iceCream {
+                            border-radius: 5px;
+                            background-color: rgb(247, 181, 159);
+
+                            p {
+                                width: 100%;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                color: white;
+                                margin-bottom: 1%;
+                            }
+                            .iceCreamIcon {
+                                height: 60%;
+                                font-size: 50px;
+                                color: white;
+                            }
+                        }
                     }
+                    
                     .coffeeText {
                         display: flex;
                         flex-direction: column;
@@ -1360,8 +1484,8 @@
                         align-items: center;
     
                         width: 100%;
-                        height: 45%;
-    
+                        height: 50%;
+
                         p {
                             text-align: center;
                             font-family: Arial, Helvetica, sans-serif;

@@ -1,35 +1,32 @@
 import React from 'react'
 import './Syphon.css'
-import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Aeropress({ getMethod, method }) {
 
 const navigate = useNavigate()
-const { userName } = useParams();
 
   return (
     <div className='shyponContainer'>
         <div className='shyponOutline'>
               <div className='shyponOutlineText'>
                 <header>Shypon</header>
-                <p>Contrary to popular belief, Lorem is not simply random text roots</p>
-                <p>epeat predefined chunks as nece</p>
-                <p> embarrassing hid</p>
-                <p>ave suffered alteration in some form, by injected</p>
-                <p>popular belief, Lorem is not simply random</p>
+                <p>Syphon or Vacuum Coffee Maker</p>
+                <p>extracts coffee scientifically.</p>
+                <p>With water and coffee moving repeatedly</p>
+                <p>It delivers rich aroma and flavors</p>
+                <p>offering a unique coffee experience.</p>
               </div>
               <div className='hashtag'>
                 <span>
-                  <p>#Convenient</p>
-                  <p>#Softtaste</p>
-                  <p>#Compact</p>
-                  <p>#Aromatic</p>
+                  <p>#LabQuality</p>
+                  <p>#UniqueBrew</p>
+                  <p>#Full-body</p>
                 </span>
                 <span>
-                  <p>#Aeropress</p>
+                  <p>#SyphonBrew</p>
                   <p>#Durabillity</p>
-                  <p>#Easytomake</p>
+                  <p>#ScienceInCup</p>
                 </span>
               </div>
               <span className='btnContainer'>
@@ -40,7 +37,9 @@ const { userName } = useParams();
               </span>
         </div>
         <div className='videoContainer'>
-          <video src="/video/aeropress.mp4" controls></video>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/c2LjmkknaVA"
+          title="Brew Guide: Syphon" frameBorder="0"
+          allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
     </div>
   )

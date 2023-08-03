@@ -971,6 +971,7 @@
   background-color: saddlebrown;
   font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
   margin-left: 8%;
   border-radius: 5px;
 }
@@ -980,13 +981,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50%;
+  height: 60%;
   min-width: 300px;
+  padding-inline: 2%;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .title .titleText p {
-  color: saddlebrown;
-  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  font-size: 15px;
+  color: saddlebrown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  white-space: pre-line;
   margin-bottom: 3%;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle {
@@ -994,7 +999,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 55%;
   border-block: 2px rgb(160, 130, 116) solid;
   min-width: 240px;
@@ -1014,10 +1019,10 @@
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 35%;
+  height: 20%;
   font-weight: bold;
   font-size: 18px;
 }
@@ -1026,49 +1031,159 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   font-weight: bold;
-  margin-bottom: 5%;
+  margin-bottom: 0%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span {
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients p {
+  font-size: 13px;
+  color: sandybrown;
+  margin-bottom: 0;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  height: 60%;
+  width: 110%;
+  height: 30%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span div {
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  width: 35%;
-  height: 85%;
+  width: 30%;
+  height: 70%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .milkFoam {
-  border-radius: 5px;
-  background-color: darkgoldenrod;
-}
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .milkFoam p {
-  width: 100%;
-  font-size: 15px;
-  text-align: center;
-  color: white;
-  margin-bottom: 1%;
-}
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .Espresso {
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .espresso {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .Espresso p {
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .espresso p {
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
   color: saddlebrown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients span .Espresso .beanIcon {
-  font-size: 32px;
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .espresso .beanIcon {
+  height: 60%;
+  font-size: 35px;
   color: #732400;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .water {
+  border-radius: 5px;
+  background-color: #ffe0b5;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .water p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: lightslategray;
+  margin-bottom: 1%;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .water .waterIcon {
+  height: 60%;
+  font-size: 40px;
+  color: slategrey;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milk {
+  border-radius: 5px;
+  background-color: darkgoldenrod;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milk p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: linen;
+  margin-bottom: 1%;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milk .milkIcon {
+  height: 60%;
+  font-size: 50px;
+  color: linen;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milkFoam {
+  border-radius: 5px;
+  background-color: darkgoldenrod;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milkFoam p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 1%;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .choco {
+  border-radius: 5px;
+  background-color: burlywood;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .choco p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: sienna;
+  margin-bottom: 1%;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .choco .chocoIcon {
+  height: 60%;
+  font-size: 50px;
+  color: sienna;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .chai {
+  border-radius: 5px;
+  background-color: burlywood;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .chai p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: brown;
+  margin-bottom: 1%;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .chai .chaiIcon {
+  height: 60%;
+  font-size: 35px;
+  color: brown;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .turmericIng {
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .turmericIng p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: goldenrod;
+  margin-bottom: 1%;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .turmericIng .turmericIcon {
+  height: 60%;
+  font-size: 45px;
+  color: goldenrod;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .iceCream {
+  border-radius: 5px;
+  background-color: rgb(247, 181, 159);
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .iceCream p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 1%;
+}
+.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .iceCream .iceCreamIcon {
+  height: 60%;
+  font-size: 50px;
+  color: white;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .coffeeText {
   display: flex;
@@ -1076,7 +1191,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 45%;
+  height: 50%;
 }
 .menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .coffeeText p {
   text-align: center;

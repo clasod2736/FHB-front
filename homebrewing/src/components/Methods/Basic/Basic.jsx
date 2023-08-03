@@ -29,29 +29,35 @@ export default function Basic() {
         <span className='otherMethodsContainer'>
             <span className='otherMethods'>
                 <div>
-                    <svg width={'150'} height={'150px'} viewBox='130 180 250 120'>
-                        <EspressoMachine/>
-                    </svg>
+                    <a href="https://www.kitchenaid.com/pinch-of-help/countertop-appliances/how-to-use-an-espresso-machine.html">
+                        <svg width={'150'} height={'150px'} viewBox='130 180 250 120'>
+                            <EspressoMachine/>
+                        </svg>
+                    </a>
                     <p>Espresso Machine</p>
                 </div>
                 <div>
-                    <svg width={'150px'} height={'150px'} viewBox='130 180 250 120'>
-                        <DripMachine/>
-                    </svg>
+                    <a href="https://home.howstuffworks.com/coffee-maker.htm">
+                        <svg width={'150px'} height={'150px'} viewBox='130 180 250 120'>
+                            <DripMachine/>
+                        </svg>
+                    </a>
                     <p>Drip Machine</p>
                 </div>
                 <div className='percolator'>
-                    <svg width={'150px'} height={'150px'} viewBox='150 180 250 120'>
-                        <Percolator/>
-                    </svg>
+                    <a href="https://www.scienceabc.com/eyeopeners/what-is-a-coffee-percolator-and-how-does-it-work.html">
+                        <svg width={'150px'} height={'150px'} viewBox='150 180 250 120'>
+                            <Percolator/>
+                        </svg>
+                    </a>
                     <p>Percolator</p>
                 </div>
             </span>
             <div className='otherMethodsText'>
                 <header>More Methods...</header>
-                <p>voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem</p>
-                <p>architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem</p>
-                <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain </p>
+                <p>Of course We have a few more method for brewing coffee.</p>
+                <p>Here is 3 extra methods which is not really easy to try at home or less popular.</p>
+                <p>If you click each method image then explore relative web-site link, and find out more information!</p>
             </div>
         </span>
     </div>

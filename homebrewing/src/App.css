@@ -19,10 +19,6 @@ body {
     background-color: #F9F6EA;
 }
 
-iframe {
-    pointer-events: none;
-}
-
 a {
     text-decoration: none;
 }

@@ -1,23 +1,20 @@
 import React from 'react'
 import './Mokapot.css'
-import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Mokapot({ getMethod, method }) {
 
 const navigate = useNavigate()
-const { userName } = useParams();
 
   return (
     <div className='mokapotContainer'>
         <div className='mokapotOutline'>
           <div className='mokapotOutlineText'>
             <header>Moka Pot</header>
-            <p>Contrary to popular belief, Lorem is not simply</p>
-            <p>epeat predefined chunks as nece</p>
-            <p> embarrassing hid</p>
-            <p>ave suffered alteration in some form, by injected</p>
-            <p>popular belief, Lorem is not simply random</p>
+            <p>The Moka Pot, an Italian classic, brews</p>
+            <p>coffee by pressurizing hot water through coffee grounds.</p>
+            <p>It offers a distinct flavor between Americano and espresso</p>
+            <p>capturing the essence of both methods.</p>
           </div>
           <div className='hashtag'>
             <span>
@@ -40,7 +37,9 @@ const { userName } = useParams();
           </span>
         </div>
         <div className='videoContainer'>
-          <video src="/video/howToMoka.mp4" controls></video>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zzlFOkD4Kz4"
+        title="Bialetti - How to Moka" frameBorder="0"
+        allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
     </div>
   )

@@ -20,24 +20,24 @@
   height: 100%;
   border-radius: 20px;
   background-color: antiquewhite;
-  padding-block: 1%;
+  padding-block: 0.5%;
   padding-inline: 2%;
 }
 .basicContainer .outline .outlineText header {
   font-size: 45px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #5c653f;
+  color: lightslategray;
+  margin-bottom: 1%;
 }
 .basicContainer .outline .outlineText p {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #5c653f;
+  color: lightslategray;
   margin-bottom: 1%;
 }
 .basicContainer .outline .outlineText a {
-  text-align: center;
-  color: brown;
-  font-size: 13px;
+  color: sandybrown;
+  font-size: 15px;
 }
 .basicContainer .outline .guideSvg {
   display: flex;

@@ -1,10 +1,9 @@
 import React, { useState, useEffect} from 'react'
 import './Menu.css'
-import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
-//images and icons
-import {ReactComponent as MilkFoam } from '../../assets/milkFoam.svg'
+//Icons
+import { ReactComponent as MilkFoam } from '../../assets/milkFoam.svg'
 import { BiSolidCoffeeBean } from 'react-icons/bi'
 import { IoIosWater } from 'react-icons/io'
 import { GiMilkCarton,GiChocolateBar, GiThreeLeaves, GiPowder } from 'react-icons/gi'
@@ -14,24 +13,24 @@ import { LiaIceCreamSolid } from 'react-icons/lia'
 export default function Menu() {
 
     const [menuName, setMenuName] = useState('off');
-    const [coffeeInfo, setCoffeeInfo] = useState({})
+    const [sideMenu, setSideMenu] = useState('off')
 
-    const { userName } = useParams();
     const navigate = useNavigate();
 
+    //stating menuName
     const handleMenu = (menu) => {
         setMenuName(menu)
-        console.log(menu)
     }
-    const handleMenuClose = () => {
-        setMenuName('');
-    };
-    const handleMenuContents = () => {
-        if (menuName === 'off') {
-            return 'menuContentsOff'
-        } else if (menuName === '') {
-            return 'menuContentsClose'
-        } else if (
+
+    //handling Side-Menu
+    const handleSide = () => {
+        if (menuName === "off") {
+            setSideMenu('off')
+        }
+        else if (menuName === '') {
+            setSideMenu('close')
+        }
+        else if (
             menuName === 'espresso' || 
             menuName === 'americano' || 
             menuName ==='longBlack' || 
@@ -43,14 +42,28 @@ export default function Menu() {
             menuName === 'macchiato' || 
             menuName === 'chai' || 
             menuName === 'turmeric' || 
-            menuName === 'icedCoffee' || 
+            menuName === 'icedCoffee' ||    
             menuName === 'affogato'
         ) {
-            console.log(menuName)
+            setSideMenu("open")
+        }
+    }
+    const handleMenuContents = () => {
+        if (sideMenu === 'off') {
+            return 'menuContentsOff'
+        } else if (sideMenu === 'close') {
+            return 'menuContentsClose'
+        } else if (sideMenu ==='open') {
             return 'menuContents'
             }
     }
+    //re-render sideMenu when coffee choices are changed
+    useEffect(() => {
+        handleSide();
+    }, [menuName])
 
+
+    // rendering Mock information of Coffee menu in Sidemenu
     const settingDescription = () => {
 
         if (menuName === "espresso") {
@@ -564,7 +577,7 @@ export default function Menu() {
                 <div className={handleMenuContents()}>
                     <span className='title'>
                         <span className='titleandBtn'>
-                            <button onClick={() => {setMenuName(''); handleMenuClose()}}>🅧</button>
+                            <button onClick={() => {setSideMenu('close')}}>🅧</button>
                             <header>{menuName}</header>
                         </span>
                         {settingDescription()}

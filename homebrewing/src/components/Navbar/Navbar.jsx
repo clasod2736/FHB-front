@@ -39,11 +39,11 @@ export default function Navbar() {
 
   return (
     <div className='fixedNavbar'>
-      <button className='guide'>
+      <div className='guide'>
         <SlideMenu/>
-      </button>
-      <button className='shop'
-      ><Nav/></button>
+      </div>
+      <div className='shop'
+      ><Nav/></div>
       <Link className='navTitle' to={isLogIn ? `/` : '/'}>For Homey Barista</Link>
       {settingMyRecipe()}
       {isLogIn ? <Link className='account' to={'/'}

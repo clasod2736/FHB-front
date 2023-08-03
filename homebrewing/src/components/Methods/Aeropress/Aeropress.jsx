@@ -1,23 +1,20 @@
 import React from 'react'
 import './Aeropress.css'
-import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Aeropress({ getMethod, method }) {
 
 const navigate = useNavigate()
-const { userName } = useParams();
 
   return (
     <div className='aeropressContainer'>
         <div className='aeropressOutline'>
               <div className='aeropressOutlineText'>
                 <header>Aeropress</header>
-                <p>Contrary to popular belief, Lorem is not simply random text roots</p>
-                <p>epeat predefined chunks as nece</p>
-                <p> embarrassing hid</p>
-                <p>ave suffered alteration in some form, by injected</p>
-                <p>popular belief, Lorem is not simply random</p>
+                <p>The AeroPress is a portable marvel with</p>
+                <p>Versatile brewing techniques.</p>
+                <p>Its piston plunging method creates a rich, clean taste profile</p>
+                <p>Making it perfect for varied coffee lovers.</p>
               </div>
               <div className='hashtag'>
                 <span>
@@ -40,7 +37,9 @@ const { userName } = useParams();
               </span>
         </div>
         <div className='videoContainer'>
-          <video src="/video/aeropress.mp4" controls></video>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tRIX9G7D_9Q"
+        title="How To: AeroPress®" frameBorder="0"
+        allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
     </div>
   )

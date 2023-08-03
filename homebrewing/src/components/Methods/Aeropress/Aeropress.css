@@ -45,7 +45,6 @@
   align-items: flex-start;
   width: 80%;
   height: 20%;
-  margin-top: 1%;
 }
 .aeropressContainer .aeropressOutline .hashtag span {
   display: flex;
@@ -59,14 +58,14 @@
 .aeropressContainer .aeropressOutline .hashtag span p {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: saddlebrown;
-  background-color: transparent;
+  color: wheat;
+  background-color: saddlebrown;
   border: saddlebrown 1px solid;
   border-radius: 20px;
   margin-right: 2.5%;
   margin-bottom: 0%;
   padding-block: 0.5%;
-  padding-inline: 2%;
+  padding-inline: 3%;
 }
 .aeropressContainer .aeropressOutline .btnContainer {
   display: flex;
@@ -135,7 +134,7 @@
   border-radius: 18px;
   animation: opacity 0.5s;
 }
-.aeropressContainer .videoContainer video {
+.aeropressContainer .videoContainer iframe {
   width: 100%;
   height: 100%;
   overflow: hidden;
