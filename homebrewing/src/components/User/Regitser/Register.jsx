@@ -31,12 +31,13 @@ export default function User() {
         favourites: []
       })
 
-
       console.log(response.data)
-      navigate(`/login`)
+      navigate(`/`)
     } catch (error) {
+
       console.log(error)
       setCaution('emailExist')
+      return
     }
   }
 
@@ -56,20 +57,21 @@ export default function User() {
           setCaution('confirmPassword')
         } 
         else { 
+            //make data in local storage
+            localStorage.setItem('userInfo', JSON.stringify(
+              {   
+                userEmail : [email],
+                isLoggedIn : false
+              }
+            ))
+
             //request for making user data in database to back end
             postUser()
 
             //make data in redux store
             dispatch({ type: 'loginSuccess' })
-
-            //make data in local storage
-            localStorage.setItem('userInfo', JSON.stringify(
-              {   userEmail : [email],
-                  isLoggedIn : true
-              }
-          ))
+          }
         }
-      }
 
   //setting caution function.
   const settingCaution = () => {

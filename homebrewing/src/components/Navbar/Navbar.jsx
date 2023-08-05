@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Navbar.css'
-import {Link ,useParams} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 //Slide Menu component (react-bootstrap)
@@ -8,20 +8,10 @@ import SlideMenu from './SlideMenu/SlideMenu'
 import Nav from './Nav/Nav'
 
 export default function Navbar() {
-  
+  const isLogIn = useSelector((state) => state.logIn);
+  console.log("In redux store: ", isLogIn)
   const dispatch = useDispatch();
 
-  //get LoggedIn data from local storage 
-  useEffect(() => {
-    const localInfo =  localStorage.getItem('userInfo')
-    const userInfo = JSON.parse(localInfo);
-    const isLoggedIn = userInfo.isLoggedIn;
-    
-    if ( isLoggedIn === true) {
-      dispatch({type: 'loginSuccess'})
-    }
-    console.log('Local Storage Logged In? :', isLoggedIn);
-  }, [dispatch])
 
   //render differrent Link element depends on LoggedIn
   const settingMyRecipe = () => {
@@ -35,7 +25,7 @@ export default function Navbar() {
       )
     }
   }
-  const isLogIn = useSelector((state) => state.logIn);
+ 
 
   return (
     <div className='fixedNavbar'>
@@ -56,7 +46,8 @@ export default function Navbar() {
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
 
         //give logOut info to redux store
-        dispatch({ type : 'loggedOut', userId: ''}
+        dispatch({ type : 'loggedOut'}
+
         )}}
       >Log Out</Link> : <Link className='login' to={'./login'}>Log In</Link>}
     </div>

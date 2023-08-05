@@ -1,7 +1,8 @@
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 
 function reducer(state = {
 
+    userEmail: '',
     logIn: false
 
     }, action)
@@ -13,6 +14,10 @@ function reducer(state = {
     else if (action.type === 'loggedOut') {
         newState.logIn = false;
     }
+    else if (action.type === "userEmail") {
+        newState.userEmail = action.payload;
+    }
+
     return newState;
 }
 

@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch} from 'react-redux';
+import { updateEmail } from '../../../store/action';
 import axios from 'axios';
 
 //image
@@ -11,7 +12,6 @@ export default function Login() {
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [shownPassword, setShownPassword] = useState(false)
     const [alertUser, setAlertUser] = useState (false)
 
     const dispatch = useDispatch();
@@ -26,19 +26,20 @@ export default function Login() {
                 params: {
                     email: email,
                     password: password
-            },
+            }
         })
 
         console.log(response.data);
-        console.log(response.data._id);
 
         if (response) {
+
             dispatch({ type: 'loginSuccess' })
+            dispatch(updateEmail(email))
             setAlertUser(false);
 
             // save user LoggedIn history in local storage
             localStorage.setItem('userInfo', JSON.stringify(
-                {   userName : [response.data.name],
+                {   userEmail : [response.data.email],
                     isLoggedIn : true
                 }
             ))
@@ -46,6 +47,7 @@ export default function Login() {
             navigate(`/`)
         }
         else setAlertUser(true)
+
         } 
         catch (error) {
             console.log(error)
@@ -70,6 +72,8 @@ export default function Login() {
                     <Logo/>
                 </svg>
             </div>
+            <div>
+            </div>
             <div className='form'>
                 <div className='formGuide'>
                     <h1>Welcome!</h1>
@@ -82,7 +86,7 @@ export default function Login() {
                 </div>
                 <div className='password'>
                     <p>Password</p>
-                    <input type={shownPassword ? 'text' : 'password'} onChange={(e) => {setPassword(e.target.value)}} endado/>
+                    <input type='password'onChange={(e) => {setPassword(e.target.value)}} endado/>
                 </div>
                 <div className='submit'>
                     <div className='loginContainer'>

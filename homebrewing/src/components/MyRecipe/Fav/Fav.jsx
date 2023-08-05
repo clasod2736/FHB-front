@@ -2,20 +2,23 @@ import React, {useEffect, useState} from 'react'
 import './Fav.css'
 
 import axios from 'axios'
-import { useParams, useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 // image and icon
 import {ReactComponent as FHBLogo} from '../../../assets/favLogo.svg'
 import {FaStar} from 'react-icons/fa'
 
 export default function Fav() {
+    const userEmail = useSelector((state) => state.userEmail);
+
     const [favourites, setFavourites] = useState([])
     const [favList, setFavList] = useState(undefined);
     const [description, setDescription] = useState('');
 
-    const { userName } = useParams();
     const navigate = useNavigate();
 
+    //get favourites from DB
     useEffect(() => {
         async function fetchDatas() {
             const serverUrl = 'http://localhost:8080/getFavourites'
@@ -23,10 +26,11 @@ export default function Fav() {
             try {
                 const response = await axios.get(serverUrl, {
                     params: {
-                        name: userName
+                        name: userEmail
                     }
                 })
                 setFavourites(response.data);
+                console.log(favourites)
             }
             catch (error) {
                 console.log(error)
@@ -48,7 +52,7 @@ if (favourites.length > 0) {
                         <div className='btnContainer'>
                             <button onClick={() => {
 
-                            navigate(`/${userName}/menu/${favourite.menuName}/method/${favourite.methodName}/recipe`)
+                            navigate(`/menu/${favourite.menuName}/method/${favourite.methodName}/recipe`)
 
                             }}>Go Brew</button>
                             <button className='detail'
@@ -72,7 +76,7 @@ if (favourites.length > 0) {
 } else {
     return (
         <div className='noneFav'>
-            <Link className='makeFavBtn' to={`/${userName}/menu`}>Make Your Favourite Brews!</Link>
+            <Link className='makeFavBtn' to={'/menu'}>Make Your Favourite Brews!</Link>
         </div>
     )
 }

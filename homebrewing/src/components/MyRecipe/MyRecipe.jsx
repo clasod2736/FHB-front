@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import './MyRecipe.css'
-
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 import axios from 'axios';
+
+//component
 import Fav from './Fav/Fav';
 
 export default function MyRecipe() {
+    const userEmail = useSelector((state) => state.userEmail);
+    console.log("userEmail: ", userEmail)
     const [oldBrews, setOldBrews] = useState([]);
     const [changeHistory, setChangeHistory] = useState(false)
 
-    const { userName } = useParams();
     const navigate = useNavigate();
 
 
@@ -21,7 +24,7 @@ export default function MyRecipe() {
             try {
                 const response = await axios.get(serverUrl, {
                     params: {
-                        name: userName
+                        email: userEmail
                     }
                 })
                 console.log(response.data)
@@ -51,7 +54,7 @@ export default function MyRecipe() {
                                 
                                 <li key={index}
                                 onClick={() => {
-                                    navigate(`/${userName}/menu/${brew.menuName}/method/${brew.methodName}/recipe/brewing/${brew.serve}/${brew.coffee}/${brew.roasting}/${brew.grind}/step1`)
+                                    navigate(`/menu/${brew.menuName}/method/${brew.methodName}/recipe/brewing/${brew.serve}/${brew.coffee}/${brew.roasting}/${brew.grind}/step1`)
                                 }}>    
                                     <p className='date'>{brew.date}</p>
                                     <p className='menu'>{brew.menuName}</p>
@@ -85,7 +88,6 @@ export default function MyRecipe() {
                     </ul>
                 )
             }
-
         }
     }
 
@@ -110,7 +112,7 @@ export default function MyRecipe() {
                     </div>
                     {settingOldBrews()}
                     <div className='moreBtn'>
-                        <button onClick={() => {setChangeHistory((prevChangeHistory) => !prevChangeHistory); console.log(changeHistory)}}>
+                        <button onClick={() => {setChangeHistory((prevChangeHistory) => !prevChangeHistory);}}>
                             { changeHistory ? "Check first 5 Brews" : "Check rest of the Brews" }
                             </button>
                     </div>

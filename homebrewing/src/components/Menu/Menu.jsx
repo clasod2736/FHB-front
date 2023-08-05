@@ -45,7 +45,7 @@ export default function Menu() {
             menuName === 'icedCoffee' ||    
             menuName === 'affogato'
         ) {
-            setSideMenu("open")
+                setSideMenu("open")
         }
     }
     const handleMenuContents = () => {

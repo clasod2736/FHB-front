@@ -8,48 +8,42 @@ import { useSelector } from 'react-redux'
 
 export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
-  const userId = useSelector((state) => state.userId);
+  const userEmail = useSelector((state) => state.userEmail);
+  console.log(isLogIn)
   const [ oldBrews, setOldBrews ] = useState([])
-  const [ isLoggedIn, setIsLoggedIn ] = useState(false)
 
   const { userName, } = useParams();
   const navigate = useNavigate();
 
 //fetch data for get recent brew data.
   useEffect(() => {
-    const localInfo =  localStorage.getItem('userInfo')
-    const userInfo = JSON.parse(localInfo);
-    const isLoggedIn = userInfo.isLoggedIn;
-    console.log("User LoggedIn?:", isLoggedIn);
-
-    async function fetchDatas() {
-        const serverUrl = 'http://localhost:8080/getOldbrews'
-
-        try {
-            const response = await axios.get(serverUrl, {
-                params: {
-                    _id: userId
-                }
-            })
-            console.log(response.data)
-            setOldBrews(response.data)
-        }
-        catch (error) {
-            console.log(error)
-        }
-    }
-
-    if (isLoggedIn === false ) {
-      return
-    } else {
+    
+    if (isLogIn === true) {
+      
       fetchDatas();
-      setIsLoggedIn(true);
-    }
+
+      async function fetchDatas() {
+          const serverUrl = 'http://localhost:8080/getOldbrews'
+  
+          try {
+              const response = await axios.get(serverUrl, {
+                  params: {
+                      email: userEmail
+                  }
+              })
+              console.log(response.data)
+              setOldBrews(response.data)
+          }
+          catch (error) {
+              console.log(error)
+          }
+      }
+    } else if(isLogIn === false){ return }
 }, [])
 
 //Set right Buttons with loggedIn or not
 const settingButtons  = () => {
-  if (isLoggedIn === false ) {
+  if (isLogIn === false ) {
     return (
       <div className='loginContainer'>
         <Link className='login' to={'/login'}>
@@ -64,7 +58,7 @@ const settingButtons  = () => {
         onClick={() => {getRecentBrew()}}>
           Make Last Brew!
         </button>
-        <Link to={isLogIn ? `/menu` : '/login'} className='exploreBtn'>
+        <Link to={isLogIn ? '/menu' : '/login'} className='exploreBtn'>
           Make New Brew!
         </Link>
       </div>
@@ -87,9 +81,7 @@ function getRecentBrew() {
   
       console.log(oldBrews)
     } else {
-  
       alert("You don't have Any History...make a New Brew!")
-  
     }
   }
   else navigate('/login')

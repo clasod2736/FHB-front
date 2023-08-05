@@ -32,7 +32,7 @@ export default function Methods() {
         <Basic getMethod={getMethod} method={method}/>
       )
     }
-     else if (method === 'hario') {
+     else if (method === 'harioV6') {
       return (
         <Hario getMethod={getMethod} method={method}/>
       )
@@ -64,7 +64,7 @@ export default function Methods() {
         <p className='title'>Choose Your Brewing Method.</p>
        <div className='methods'>
           <div className='choiceContainer'>
-            <div className='hario' onClick={()=>{ setMethod('hario')}}>
+            <div className='hario' onClick={()=>{ setMethod('harioV6')}}>
               <svg width='180px' height='180px' viewBox=' 130 160 250 150 ' opacity='0.8'>
                 <Handdrip/>
               </svg>

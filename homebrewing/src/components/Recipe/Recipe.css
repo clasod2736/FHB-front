@@ -10,466 +10,492 @@
 .recipeContainer .recipeBox {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 60%;
   height: 90%;
   margin-top: 2%;
 }
-.recipeContainer .recipeBox .menuContents {
+.recipeContainer .recipeBox .left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 35%;
-  height: 100%;
-  border: 3px darkgoldenrod solid;
-  border-radius: 20px;
-  padding: 0.5%;
-}
-.recipeContainer .recipeBox .menuContents .coffeeChoice {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 15%;
-}
-.recipeContainer .recipeBox .menuContents .coffeeChoice header {
-  width: 70%;
-  text-align: center;
-  font-size: 70px;
-  color: sienna;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-.recipeContainer .recipeBox .menuContents .coffeeChoice button {
-  font-size: 13px;
-  background-color: transparent;
-  border: 0;
-  color: white;
-  background-color: #9d684b;
-  border-radius: 20px;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .coffeeChoice button:hover {
-  background-color: rgb(126, 63, 17);
-  color: wheat;
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .methodChoice {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  height: 18%;
-  border-bottom: burlywood 2px solid;
-}
-.recipeContainer .recipeBox .menuContents .methodChoice header {
-  width: 90%;
-  text-align: center;
-  font-size: 70px;
-  color: darkgoldenrod;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .methodChoice button {
-  font-size: 13px;
-  background-color: transparent;
-  border: 0;
-  color: white;
-  background-color: darkgoldenrod;
-  border-radius: 20px;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .methodChoice button:hover {
-  background-color: rgb(142, 103, 5);
-  color: wheat;
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 57%;
-  border-bottom: burlywood 2px solid;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 60%;
-  height: 100%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 30%;
-  border-bottom: burlywood 2px solid;
-  padding-block: 2%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 70%;
-  height: 100%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText p {
-  font-size: 20px;
-  color: sienna;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveNum {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 40%;
-  font-weight: bold;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveNum button {
-  font-size: 23px;
-  color: sienna;
-  background-color: transparent;
-  border: 0;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveNum button:hover {
-  transform: scale(1.5);
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveInput {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 40%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveInput input {
-  width: 70%;
-  border-radius: 10px;
-  border: 0;
-  color: saddlebrown;
-  outline: none;
-  background-color: wheat;
-  padding: 2%;
-  padding-left: 3%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveInput input:focus {
-  border: #9d684b 1px solid;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveInput button {
-  width: 15%;
-  height: 70%;
-  font-size: 12px;
-  background-color: wheat;
-  color: sienna;
-  border: 0;
-  border-radius: 50px;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveText .serveInput button:hover {
-  background-color: burlywood;
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveBtn {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 30%;
   height: 100%;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveBtn p {
-  font-size: 25px;
-  font-weight: bold;
-  color: sienna;
-  margin-bottom: 0;
+.recipeContainer .recipeBox .left .roastingOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50%;
+  animation: leftOpen 0.8s;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveBtn button {
-  width: 90%;
-  height: 40%;
-  font-size: 20px;
-  color: sienna;
-  border: 0;
-  background-color: wheat;
-  border-radius: 50px;
-  margin-top: 5%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .serve .serveBtn button:hover {
-  background-color: saddlebrown;
-  color: wheat;
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting {
+.recipeContainer .recipeBox .left .roastingOpen .roastingChoice {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 25%;
-  border-bottom: burlywood 2px solid;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting p {
-  font-size: 20px;
-  font-weight: bold;
-  color: sienna;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 60%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel button {
-  width: 25%;
-  font-size: 20px;
-  text-align: center;
-  color: saddlebrown;
-  border-radius: 10px;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel .light {
+  height: 90%;
   background-color: wheat;
-  color: saddlebrown;
+  border: 2px saddlebrown solid;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel .light:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+.recipeContainer .recipeBox .left .roastingClose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50%;
+  animation: leftClose 0.5s;
+  animation-fill-mode: forwards;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel .medium {
-  width: 35%;
-  background-color: darkgoldenrod;
-  color: linen;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel .medium:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel .dark {
-  background-color: saddlebrown;
-  color: wheat;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .roasting .roastingLevel .dark:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind {
+.recipeContainer .recipeBox .left .roastingClose .roastingChoice {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 25%;
-  border-bottom: burlywood 2px solid;
+  height: 90%;
+  background-color: wheat;
+  border: 2px saddlebrown solid;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind p {
-  font-size: 20px;
-  font-weight: bold;
-  color: sienna;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 60%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize button {
-  width: 25%;
-  font-size: 20px;
-  text-align: center;
-  color: saddlebrown;
-  border-radius: 10px;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize .fine {
-  background-color: bisque;
-  color: grey;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize .fine:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize .medium {
-  width: 35%;
-  background-color: burlywood;
-  color: sienna;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize .medium:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize .coarse {
-  width: 25%;
-  background-color: lightslategrey;
-  color: wheat;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .grind .grindSize .coarse:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .groundCoffee {
+.recipeContainer .recipeBox .left .coffeeOpen {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50%;
+  animation: leftOpen 0.8s;
+}
+.recipeContainer .recipeBox .left .coffeeOpen .coffeeChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 90%;
-  height: 20%;
+  height: 90%;
+  background-color: wheat;
+  border: 2px solid burlywood;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .groundCoffee header {
-  font-size: 20px;
-  font-weight: bold;
-  color: sienna;
-  margin-bottom: 0;
+.recipeContainer .recipeBox .left .coffeeClose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50%;
+  animation: leftClose 0.8s;
+  animation-fill-mode: forwards;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .groundCoffee h3 {
-  font-size: 25px;
-  color: brown;
-  font-weight: bold;
-  margin-bottom: 0;
+.recipeContainer .recipeBox .left .coffeeClose .coffeeChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: wheat;
+  border: 2px solid burlywood;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .ratioOption .groundCoffee p {
-  font-size: 18px;
-  color: sienna;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList {
+.recipeContainer .recipeBox .center {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 40%;
-  height: 90%;
-  border-left: burlywood 2px solid;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList header {
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: sienna;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList input {
-  margin-right: 5%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList li {
-  width: 90%;
-  list-style: none;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList label {
-  font-size: 18px;
-  list-style: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: sienna;
-  background-color: wheat;
+  width: 30%;
+  height: 100%;
+  background-color: antiquewhite;
   border-radius: 10px;
-  padding-inline: 3%;
-  margin-block: 6%;
+  z-index: 1;
+  padding: 1%;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList label .serve {
+.recipeContainer .recipeBox .center .header {
+  width: 95%;
+  height: 6%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25%;
-  width: 80%;
-  font-size: 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+.recipeContainer .recipeBox .center .header header {
+  font-size: 28px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
-  color: darkgoldenrod;
-  border-radius: 100%;
+  color: lightslategrey;
+  letter-spacing: 12px;
+  padding-left: 2%;
+  animation: centerHeader 1s;
 }
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList label .roasting {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 25%;
-  width: 100%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList label .roasting p {
-  width: 60%;
-  font-size: 30px;
-  background-color: saddlebrown;
-  color: wheat;
-  border-radius: 10px;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList label .grind {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 25%;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList label .grind p {
-  width: 65%;
-  font-size: 30px;
-  background-color: lightslategray;
-  color: wheat;
-  border-radius: 10px;
-  margin-bottom: 0;
-}
-.recipeContainer .recipeBox .menuContents .ratioChoice .prepList label .amount {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 25%;
-  font-size: 30px;
-  font-weight: bold;
-  color: sienna;
-}
-.recipeContainer .recipeBox .menuContents .startBrewing {
+.recipeContainer .recipeBox .center .userMenu {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-content: center;
-  width: 90%;
-  height: 8%;
-  margin-top: 2%;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  animation: opacity 0.8s;
 }
-.recipeContainer .recipeBox .menuContents .startBrewing p {
+.recipeContainer .recipeBox .center .userMenu .userMenuName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
   height: 100%;
-  text-align: center;
-  font-size: 15px;
-  color: darkred;
-  margin-bottom: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.recipeContainer .recipeBox .menuContents .startBrewing button {
-  width: 55%;
+.recipeContainer .recipeBox .center .userMenu .userMenuName header {
   font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: wheat;
-  background-color: #2F351A;
-  border: 0;
-  border-radius: 10px;
-  outline: none;
-  transition: all 0.3s linear;
-  text-decoration: none;
+  background-color: saddlebrown;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  padding: 0%;
+  padding-inline: 5%;
 }
-.recipeContainer .recipeBox .menuContents .startBrewing button:hover {
-  transition: 0.9s;
+.recipeContainer .recipeBox .center .userMenu .userMenuImg {
+  width: 40%;
+  height: 100%;
+}
+.recipeContainer .recipeBox .center .userMenuClose {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.recipeContainer .recipeBox .center .userMenuClose button {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: wheat;
+  background-color: saddlebrown;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  padding: 0%;
+  padding-inline: 5%;
+}
+.recipeContainer .recipeBox .center .userMethod {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  animation: opacity 0.8s;
+}
+.recipeContainer .recipeBox .center .userMethod .userMethodImg {
+  width: 40%;
+  height: 100%;
+  opacity: 0.7;
+}
+.recipeContainer .recipeBox .center .userMethod .userMethodName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+.recipeContainer .recipeBox .center .userMethod .userMethodName header {
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  color: saddlebrown;
+  background-color: burlywood;
+  border-radius: 10px;
+  letter-spacing: 3px;
+  padding-inline: 5%;
+}
+.recipeContainer .recipeBox .center .userMethodClose {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.recipeContainer .recipeBox .center .userMethodClose button {
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  color: saddlebrown;
+  background-color: burlywood;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  padding-inline: 5%;
+}
+.recipeContainer .recipeBox .center p {
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: salmon;
+  margin-block: 2%;
+  animation: opacity 0.5s;
+}
+.recipeContainer .recipeBox .center .options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  animation: opacity 0.8s;
+}
+.recipeContainer .recipeBox .center .options .firstRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+}
+.recipeContainer .recipeBox .center .options .firstRow .roasting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 80%;
+  border-radius: 100%;
+  background-color: saddlebrown;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.recipeContainer .recipeBox .center .options .firstRow .roasting p {
+  font-size: 20px;
+  color: wheat;
+}
+.recipeContainer .recipeBox .center .options .firstRow .roasting:hover {
+  box-shadow: 0px 0px 0px 5px darkgoldenrod;
+  transition: 0.5s;
+}
+.recipeContainer .recipeBox .center .options .firstRow .grind {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 80%;
+  border-radius: 100%;
+  background-color: darkgoldenrod;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.recipeContainer .recipeBox .center .options .firstRow .grind p {
+  font-size: 20px;
+  color: linen;
+}
+.recipeContainer .recipeBox .center .options .firstRow .grind:hover {
+  box-shadow: 0px 0px 0px 5px burlywood;
+  transition: 0.5s;
+}
+.recipeContainer .recipeBox .center .options .secondRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+}
+.recipeContainer .recipeBox .center .options .secondRow .coffee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 80%;
+  border-radius: 100%;
+  background-color: burlywood;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.recipeContainer .recipeBox .center .options .secondRow .coffee p {
+  font-size: 20px;
+  color: saddlebrown;
+}
+.recipeContainer .recipeBox .center .options .secondRow .coffee:hover {
+  box-shadow: 0px 0px 0px 5px sienna;
+  transition: 0.5s;
+}
+.recipeContainer .recipeBox .center .options .secondRow .water {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 80%;
+  border-radius: 100%;
+  background-color: lightslategrey;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.recipeContainer .recipeBox .center .options .secondRow .water p {
+  font-size: 20px;
   color: white;
-  box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;
+}
+.recipeContainer .recipeBox .center .options .secondRow .water:hover {
+  box-shadow: 0px 0px 0px 7px white;
+  transition: 0.5s;
+}
+.recipeContainer .recipeBox .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 30%;
+  height: 100%;
+}
+.recipeContainer .recipeBox .right .grindOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 50%;
+  animation: rightOpen 0.8s;
+}
+.recipeContainer .recipeBox .right .grindOpen .grindChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: wheat;
+  border: 2px darkgoldenrod solid;
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.recipeContainer .recipeBox .right .grindClose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 50%;
+  animation: rightClose 0.5s;
+  animation-fill-mode: forwards;
+}
+.recipeContainer .recipeBox .right .grindClose .grindChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: wheat;
+  border: 2px darkgoldenrod solid;
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.recipeContainer .recipeBox .right .waterOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 50%;
+  animation: rightOpen 0.8s;
+}
+.recipeContainer .recipeBox .right .waterOpen .waterChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: bisque;
+  border: 2px lightslategrey solid;
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.recipeContainer .recipeBox .right .waterClose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 50%;
+  animation: rightClose 0.5s;
+  animation-fill-mode: forwards;
+}
+.recipeContainer .recipeBox .right .waterClose .waterChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: bisque;
+  border: 2px lightslategrey solid;
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@keyframes centerHeader {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes leftOpen {
+  from {
+    transform: translatex(100%);
+  }
+  to {
+    transform: translatex(0%);
+  }
+}
+@keyframes leftClose {
+  from {
+    transform: translatex(0%);
+  }
+  to {
+    transform: translatex(100%);
+  }
+}
+@keyframes rightOpen {
+  from {
+    transform: translatex(-100%);
+  }
+  to {
+    transform: translatex(0%);
+  }
+}
+@keyframes rightClose {
+  from {
+    transform: translatex(0%);
+  }
+  to {
+    transform: translatex(-100%);
+  }
 }/*# sourceMappingURL=Recipe.css.map */

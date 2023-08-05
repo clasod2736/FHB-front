@@ -11,1056 +11,1447 @@
     .recipeBox {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
 
         width: 60%;
         height: 90%;
 
         margin-top: 2%;
-            
-            .menuContents {
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            width: 30%;
+            height: 100%;
+
+            //just animation name and fill-mode different
+            .roastingOpen {
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
+                justify-content: center;
+                align-items: flex-end;
 
-                width: 35%;
-                height: 100%;
+                width: 100%;
+                height: 50%;
 
-                border: 3px darkgoldenrod solid;
-                border-radius: 20px;
+                
+                animation: leftOpen 0.8s;
+                
+                .roastingChoice {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 90%;
+                    height: 90%;
 
-                padding: 0.5%;
+                    background-color: wheat;
+                    border: 2px saddlebrown solid;
+                    border-right: 0;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+            .roastingClose {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
 
+                width: 100%;
+                height: 50%;
+
+                
+                animation: leftClose 0.5s;
+                animation-fill-mode: forwards;
+                
+                .roastingChoice {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 90%;
+                    height: 90%;
+
+                    background-color: wheat;
+                    border: 2px saddlebrown solid;
+                    border-right: 0;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+
+            //just animation name and fill-mode different
+            .coffeeOpen {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+
+                width: 100%;
+                height: 50%;
+
+                animation: leftOpen 0.8s;
+                
                 .coffeeChoice {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-
-                    width: 100%;
-                    height: 15%;
-
-                    header {
-                        width: 70%;
-                        text-align: center;
-                        font-size: 70px;
-                        color: sienna;
-                        font-family: Georgia, 'Times New Roman', Times, serif;
-                    }
-
-                    button {
-                        font-size: 13px;
-                        background-color: transparent;
-                        border: 0;
-                        color: white;
-                        background-color: #9d684b;
-                        border-radius: 20px;
-                        margin-bottom: 0;
-
-                        &:hover {
-                            background-color: rgb(126, 63, 17);
-                            color: wheat;
-                            transition: 0.3s;
-                        }
-                    }
-
+                    
+                    width: 90%;
+                    height: 90%;
+                    
+                    background-color: wheat;
+                    border: 2px solid burlywood;
+                    border-right: 0;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
                 }
-                .methodChoice {
+            }
+            .coffeeClose {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+
+                width: 100%;
+                height: 50%;
+
+                animation: leftClose 0.8s;
+                animation-fill-mode: forwards;
+                
+                .coffeeChoice {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 90%;
+                    height: 90%;
+                    
+                    background-color: wheat;
+                    border: 2px solid burlywood;
+                    border-right: 0;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 30%;
+            height: 100%;
+
+            background-color: antiquewhite;
+            border-radius: 10px;
+
+            z-index: 1;
+
+            padding: 1%;
+
+            .header {
+                width: 95%;
+                height: 6%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                border-radius: 5px;
+
+                header {
+                    font-size: 28px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-weight: bold;
+                    color: lightslategrey;
+                    letter-spacing: 12px;
+
+                    padding-left: 2%;
+
+                    animation: centerHeader 1s;
+                }
+            }
+
+            .userMenu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 20%;
+
+                animation: opacity 0.8s;
+
+                .userMenuName {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
 
-                    width:  95%;
-                    height: 18%;
-
-                    border-bottom: burlywood 2px solid;
+                    width: 60%;
+                    height: 100%;
 
                     header {
-                        width: 90%;
-                        text-align: center;
-                        font-size: 70px;
-                        color: darkgoldenrod;
-                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                        margin-bottom: 0;
-                    }
+                        font-size: 30px;
+                        text-transform: uppercase;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        color: wheat;
+                        background-color: saddlebrown;
+                        border-radius: 5px;
+                        letter-spacing: 5px;
 
-                    button {
-                        font-size: 13px;
-                        background-color: transparent;
-                        border: 0;
-                        color: white;
-                        background-color: darkgoldenrod;
-                        border-radius: 20px;
-                        margin-bottom: 0;
-
-                        &:hover {
-                            background-color: rgb(142, 103, 5);
-                            color: wheat;
-                            transition: 0.3s;
-                        }
+                        padding: 0%;
+                        padding-inline: 5%;
                     }
                 }
 
-                .ratioChoice {
+                .userMenuImg {
+                    width: 40%;
+                    height: 100%;
+                }
+            }
+            .userMenuClose {
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                align-items: center;
+
+                width: 100%;
+                height: 20%;
+
+                button {
+                    font-size: 40px;
+                    text-transform: uppercase;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    color: wheat;
+                    background-color: saddlebrown;
+                    border-radius: 5px;
+                    letter-spacing: 5px;
+
+                    padding: 0%;
+                    padding-inline: 5%;
+                }
+            }
+
+            .userMethod {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 20%;
+
+                animation: opacity 0.8s;
+
+                .userMethodImg {
+                    width: 40%;
+                    height: 100%;
+
+                    opacity: 0.7;
+                }
+                .userMethodName {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
+                    flex-direction: column;
+                    justify-content: center;
                     align-items: center;
 
-                    width: 100%;
-                    height: 57%;
+                    width: 60%;
+                    height: 100%;
 
-                    border-bottom: burlywood 2px solid;
+                    header {
+                        font-size: 30px;
+                        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        text-transform: uppercase;
+                        color: saddlebrown;
+                        background-color: burlywood;
+                        border-radius: 10px;
+                        letter-spacing: 3px;
 
-                    .ratioOption {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        width: 60%;
-                        height: 100%;
-
-                        .serve {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-    
-                            width: 90%;
-                            height: 30%;
-
-                            border-bottom: burlywood 2px solid;
-
-                            padding-block: 2%;
-
-                            .serveText {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                                align-items: center;
-
-                                width: 70%;
-                                height: 100%;
-
-                                p {
-                                    font-size: 20px;
-                                    color: sienna;
-                                    margin-bottom: 0;
-                                }
-        
-                                .serveNum {
-                                    display: flex;
-                                    flex-direction: row;
-                                    justify-content: space-evenly;
-                                    align-items: center;
-        
-                                    width: 100%;
-                                    height: 40%;
-        
-                                    font-weight: bold;
-
-                                    button {
-                                        font-size: 23px;
-                                        color: sienna;
-                                        background-color: transparent;
-                                        border: 0;
-
-                                        &:hover {
-                                            transform: scale(1.5);
-                                            transition: 0.3s;
-                                        }
-                                    }
-                                }
-
-                                .serveInput {
-                                    display: flex;
-                                    flex-direction: row;
-                                    justify-content: space-evenly;
-                                    align-items: center;
-        
-                                    width: 100%;
-                                    height: 40%;
-        
-                                    input {
-                                        width: 70%;
-                                        border-radius: 10px;
-                                        border: 0;
-                                        color: saddlebrown;
-                                        outline: none;
-                                        background-color: wheat;
-        
-                                        padding: 2%;
-                                        padding-left: 3%;
-
-                                        &:focus {
-                                            border: #9d684b 1px solid;
-                                        }
-                                    }
-
-                                    button {
-                                        width: 15%;
-                                        height: 70%;
-                                        font-size: 12px;
-                                        background-color: wheat;
-                                        color: sienna;
-                                        border: 0;
-                                        border-radius: 50px;
-
-                                        &:hover {
-                                            background-color: burlywood;
-                                            transition: 0.3s;
-                                        }
-                                    }
-                                }
-                            }
-                            .serveBtn {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                                align-items: center;
-
-                                width: 30%;
-                                height: 100%;
-
-                                p {
-                                    font-size: 25px;
-                                    font-weight: bold;
-                                    color: sienna;
-
-                                    margin-bottom: 0;
-                                }
-
-                                button {
-                                    width: 90%;
-                                    height: 40%;
-                                    font-size: 20px;
-                                    color: sienna;
-                                    border: 0;
-                                    background-color: wheat;
-                                    border-radius: 50px;
-                                    margin-top: 5%;
-
-                                    &:hover {
-                                        background-color: saddlebrown;
-                                        color: wheat;
-                                        transition: 0.3s;
-                                    }
-                                }
-                            }
-
-                        }
-                        .roasting {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-    
-                            width: 90%;
-                            height: 25%;
-    
-                            border-bottom: burlywood 2px solid;
-    
-                            p {
-                                font-size: 20px;
-                                font-weight: bold;
-                                color: sienna;
-                                margin-bottom: 0;
-                            }
-                            
-                            .roastingLevel {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-evenly;
-                                align-items: center;
-
-                                width: 100%;
-                                height: 60%;
-                                
-                                button {
-                                    width: 25%;
-                                    font-size: 20px;
-                                    text-align: center;
-                                    color: saddlebrown;
-                                    border-radius: 10px;
-                                    border: 0;
-                                    cursor: pointer;
-
-                                    transition: all 0.2s linear;
-                                }
-                                
-                                .light {
-                                    background-color: wheat;
-                                    color: saddlebrown;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                        transition: 0.3s;
-                                    }
-                                }
-                                .medium {
-                                    width: 35%;
-                                    background-color: darkgoldenrod;
-                                    color: linen;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                        transition: 0.3s;
-                                    }
-                                }
-                                .dark {
-                                    background-color: saddlebrown;
-                                    color: wheat;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                        transition: 0.3s;
-                                    }
-                                }
-                            }
-
-                        }
-                        .grind {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-    
-                            width: 90%;
-                            height: 25%;
-    
-                            border-bottom: burlywood 2px solid;
-    
-                            p {
-                                font-size: 20px;
-                                font-weight: bold;
-                                color: sienna;
-                                margin-bottom: 0;
-                            }
-    
-                            .grindSize {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-evenly;
-                                align-items: center;
-
-                                width: 100%;
-                                height: 60%;
-                                
-                                button {
-                                    width: 25%;
-                                    font-size: 20px;
-                                    text-align: center;
-                                    color: saddlebrown;
-                                    border-radius: 10px;
-                                    border: 0;
-                                    cursor: pointer;
-
-                                    transition: all 0.2s linear;
-                                }
-                                
-                                .fine {
-                                    background-color:bisque;
-                                    color: grey;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                        transition: 0.3s;
-                                    }
-                                }
-                                .medium {
-                                    width: 35%;
-                                    background-color: burlywood;
-                                    color: sienna;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                        transition: 0.3s;
-                                    }
-                                }
-                                .coarse {
-                                    width: 25%;
-                                    background-color: lightslategrey;
-                                    color: wheat;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                        transition: 0.3s;
-                                    }
-                                }
-                            }
-                        }
-                        .groundCoffee {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-evenly;
-                            align-items: center;
-    
-                            width: 90%;
-                            height: 20%;
-    
-                            header {
-                                font-size: 20px;
-                                font-weight: bold;
-                                color: sienna;  
-                                margin-bottom: 0;
-                            }
-                            h3 {
-                                font-size: 25px;
-                                color:brown;
-                                font-weight: bold;
-                                margin-bottom: 0;
-                            }
-
-                            p {
-                                font-size: 18px;
-                                color: sienna;
-
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-
-                    .prepList {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        width: 40%;
-                        height: 90%;
-
-                        border-left: burlywood 2px solid;
-
-                        header {
-                            font-size: 25px;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color: sienna;
-                        }
-
-                        input {
-                            margin-right: 5%;
-                        }
-
-                        li {
-                            width: 90%;
-                            list-style: none;
-                        }
-
-                        label {
-                            font-size: 18px;
-                            list-style: none;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color:sienna;
-                            background-color: wheat;
-                            border-radius: 10px;
-
-                            padding-inline:3%;
-                            margin-block: 6%;
-
-                        .serve {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            height: 25%;
-                            width: 80%;
-                            font-size: 30px;
-                            font-weight: bold;
-                            color: darkgoldenrod;
-
-                            border-radius: 100%;
-                        }
-                        .roasting {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            text-align: center;
-                            height: 25%;
-                            width: 100%;
-                            
-                            p {
-                                width: 60%;
-                                font-size: 30px;
-                                background-color: saddlebrown;
-                                color: wheat;
-                                border-radius: 10px;
-
-                                margin-bottom: 0;
-                            }
-                        }
-                        .grind {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            text-align: center;
-                            width: 100%;
-                            height: 25%;
-                            
-                            p {
-                                width: 65%;
-                                font-size: 30px;
-                                background-color: lightslategray;
-                                color: wheat;
-                                border-radius: 10px;
-
-                                margin-bottom: 0;
-                            }
-                        }
-                        .amount {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            width: 90%;
-                            height: 25%;
-
-                            font-size: 30px;
-                            font-weight: bold;
-                            color: sienna;
-                        }
-                    }
+                        padding-inline: 5%;
                     }
                 }
-                .startBrewing {
+            }
+            .userMethodClose {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                height: 20%;
+        
+                button {
+                    font-size: 40px;
+                    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    text-transform: uppercase;
+                    color: saddlebrown;
+                    background-color: burlywood;
+                    border-radius: 5px;
+                    letter-spacing: 5px;
+
+                    padding-inline: 5%;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: salmon;
+
+                margin-block: 2%;
+
+                animation: opacity 0.5s;
+            }
+
+            .options {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                width: 100%;
+                height: 40%;
+
+                animation: opacity 0.8s;
+
+                .firstRow {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-evenly;
-                    align-content: center;
+                    justify-content: space-around;
+                    align-items: center;
+
                     width: 90%;
-                    height: 8%;
+                    height: 50%;
 
-                    margin-top: 2%;
+                    .roasting {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
 
-                    p {
-                        height: 100%;
-                        text-align: center;
-                        font-size: 15px;
-                        color: darkred;
-                        margin-bottom: 0;
-                        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                    }
+                        width: 35%;
+                        height: 80%;
+                        border-radius: 100%;
+                        background-color: saddlebrown;
+                        cursor: pointer;
 
-                    button {
-                        width: 55%;
-                        font-size: 30px;
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-                        color: wheat;
-                        background-color: #2F351A;
-                        border: 0;
-                        border-radius: 10px;
-                        outline: none;
                         transition: all 0.3s linear;
-                        text-decoration: none;
+
+                        p {
+                            font-size: 20px;
+                            color: wheat;
+                        }
 
                         &:hover {
-                            transition: 0.9s;
-                            color: white;
-                            box-shadow: 200px 0 0 0 #9A6E40 inset, 
-                            -200px 0 0 0 #9A6E40 inset;
+                            box-shadow: 0px 0px 0px 5px darkgoldenrod;
+                            transition: 0.5s;
+                        }
+                    }
+                    .grind {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 35%;
+                        height: 80%;
+                        border-radius: 100%;
+                        background-color: darkgoldenrod;
+                        cursor: pointer;
+                        transition: all 0.3s linear;
+
+                        p {
+                            font-size: 20px;
+                            color: linen;
+                        }
+
+                        &:hover {
+                            box-shadow: 0px 0px 0px 5px burlywood;
+                            transition: 0.5s;
                         }
                     }
                 }
-            // .recipeSteps{
-            //     display: flex;
-            //     flex-direction: column;
-            //     justify-content: flex-start;
-            //     align-items: flex-start;
+                .secondRow {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
 
-            //     width: 70%;
-            //     height: 100%;
+                    width: 90%;
+                    height: 50%;
 
-            //     // border: 2px darkgoldenrod solid;
-            //     background-color: wheat;
-            //     border-radius: 20px;
 
-            //     margin-left: 1%;
-            //     padding: 2%;
+                    .coffee {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
 
-            //     header {
-            //         color: sienna;
-            //         font-size: 30px;
-            //         font-family: Verdana, Geneva, Tahoma, sans-serif;
-            //         font-style: italic;
-            //     }
-            // }
+                        width: 35%;
+                        height: 80%;
+                        border-radius: 100%;
+                        background-color: burlywood;
+                        cursor: pointer;
+                        transition: all 0.3s linear;
 
-            //가로로 3열 구성 이미지, 타이틀 옵션, 준비품목록 확인하고 레시피로 넘어감.
-            // .coffeeImg {
-            //     display: flex;
+                        p {
+                            font-size: 20px;
+                            color: saddlebrown;
+                        }
 
-            //     width: 30%;
-            //     height: 100%;
+                        &:hover {
+                            box-shadow: 0px 0px 0px 5px sienna;
+                            transition: 0.5s;
+                        }
+                    }
+                    .water {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
 
-            //     background-image: url('../../../public/img/coffee/flatWhite2.jpg');
-            //     background-position: 30% 80%;
-            //     background-size: cover;
+                        width: 35%;
+                        height: 80%;
+                        border-radius: 100%;
+                        background-color: lightslategrey;
+                        cursor: pointer;
+                        transition: all 0.3s linear;
 
-            //     border-radius: 10px;
-            //     opacity: 0.8    ;
-            // }
-            // .recipeOutline {
-            //     display: flex;
-            //     flex-direction: column;
-            //     justify-content: flex-start;
-            //     align-items: center;
+                        p {
+                            font-size: 20px;
+                            color: white;
+                        }
 
-            //     width: 45%;
-            //     height: 100%;
-
-            //     .title {
-            //         display: flex;
-            //         flex-direction: column;
-            //         justify-content: flex-start;
-            //         align-items: center;
-
-            //         width: 100%;
-            //         height: 30%;
-
-            //         header {
-            //             height: 45%;
-            //             font-size: 90px;
-            //             font-family: Georgia, 'Times New Roman', Times, serif;
-            //             color: sienna;
-            //             text-align: top;
-            //         }
-
-            //         p {
-            //             font-size: 30px;
-            //             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            //             color:burlywood;
-            //             letter-spacing: 3px;
-            //             margin-bottom: 0;
-            //         }
-            //         h1 {
-            //             font-size: 70px;
-            //             color: darkgoldenrod;
-            //             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            //         }
-            //     }
-
-            //     .getInfo {
-            //         display: flex;
-            //         flex-direction: column;
-            //         justify-items: flex-start;
-            //         align-items: center;
-
-            //         width: 90%;
-            //         height: 70%;
-
-            //         .coffeeRatio {
-            //             display: flex;
-            //             flex-direction: row;
-            //             justify-content: center;
-            //             align-items: center;
-
-            //             width: 100%;
-            //             height: 25%;
-
-            //             border-top: 2px darkgoldenrod solid;
-            //             border-bottom: 2px solid darkgoldenrod;
-
-            //             .serve {
-            //                 display: flex;
-            //                 flex-direction:column;
-            //                 justify-content: space-evenly;
-            //                 align-items: center;
-    
-            //                 width: 90%;
-            //                 height: 90%;
-                            
-            //                 background-color: bisque;
-            //                 border-radius: 20px;
-
-            //                 padding-block: 1%;
-
-            //                 .number {
-            //                     display: flex;
-            //                     flex-direction: row;
-            //                     justify-content: space-evenly;
-            //                     align-items: center;
-
-            //                     width: 90%;
-            //                     height: 30%;
-
-            //                     p {
-            //                         font-size:18px;
-            //                         font-family: Verdana, Geneva, Tahoma, sans-serif;
-            //                         color: saddlebrown;
-            //                         font-weight: bold;
-        
-            //                         margin-bottom: 0;
-            //                     }
-                                
-            //                     button {
-            //                         border: none;
-            //                         background-color: transparent;
-            //                         font-size: 35px;
-            //                         color: sienna;
-            //                     }
-                                
-            //                     .serveCount {
-            //                         display: flex;
-            //                         flex-direction: row;
-            //                         justify-content: space-evenly;
-            //                         align-items: center;
-        
-            //                         width: 20%;
-            //                     }
-            //                 }
-            //                 .amount {
-            //                     display: flex;
-            //                     flex-direction: row;
-            //                     justify-content: space-around;
-            //                     align-items: center;
-
-            //                     width: 70%;
-            //                     height: 60%;
-
-            //                     .custom {
-            //                         display: flex;
-            //                         flex-direction: column;
-            //                         justify-content: space-between;
-            //                         align-items: flex-start;
-
-            //                         p {
-            //                             font-size: 18px;
-            //                             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            //                             font-weight: bold;
-            //                             color: saddlebrown;
-            
-            //                             margin-bottom: 5%;
-            //                         }
-
-            //                         input {
-            //                             width: 90%;
-            //                             outline: none;
-            //                             background-color: sienna;
-            //                             border: none;
-            //                             border-radius: 20px;
-            //                             font-size: 16px;
-            //                             font-weight: bold;
-            //                             color: white;
-
-            //                             padding-left: 6%;
-
-            //                         }
-                                    
-            //                     }
-            //                     .btnContainer {
-            //                         display: flex;
-            //                         flex-direction: row;
-            //                         justify-content: space-between;
-            //                         align-items: flex-end;
-
-            //                         height: 100%;
-            //                         width: 20%;
-
-            //                         button {
-            //                             width: 60%;
-            //                             height: 45%;
-            //                             border: none;
-            //                             border-radius: 10px;
-            //                             font-size: 20px;
-            //                             font-weight: bold;
-            //                             text-align: center;
-
-            //                             background-color: sienna;
-            //                             color: bisque;
-            //                             padding-inline: 10%;
-            //                             margin-inline: 3%;
-
-            //                             &:hover {
-            //                                 background-color: rgb(124, 57, 8);
-            //                                 color: white;
-            //                                 transition: 0.3s;
-            //                             }
-            //                         }
-            //                     }
-            //                 }
-            //             }
-            //             .grind {
-            //                 display: flex;
-            //                 flex-direction: column;
-            //                 justify-content: center;
-            //                 align-items: center;
-            //                 width: 33%;
-            //                 height: 90%;
-
-            //                 border-right: 2px darkgoldenrod solid;
-            //                 padding-block: 5%;
-
-            //                 header {
-            //                     font-size: 40px;
-            //                     color: linen;
-            //                     background-color: saddlebrown;
-            //                     width: 90%;
-            //                     text-align: center;
-            //                     border-radius: 20px;
-
-            //                     margin-bottom: 10%;
-            //                 }
-
-            //                 p {
-            //                     font-size: 20px;
-            //                     font-family: Verdana, Geneva, Tahoma, sans-serif;
-            //                     margin-bottom: 0;
-            //                 }
-            //             }
-            //             .bean {
-            //                 display: flex;
-            //                 flex-direction: column;
-            //                 justify-items: center;
-            //                 align-items: center;
-            //                 width: 33%;
-            //                 height: 90%;
-
-            //                 border-right: 2px darkgoldenrod solid;
-
-            //                 padding-block: 4%;
-
-            //                 header {
-            //                     font-size: 40px;
-            //                     color: saddlebrown;
-            //                     background-color: wheat;
-            //                     width: 90%;
-            //                     text-align: center;
-            //                     border-radius: 20px;
-
-            //                     margin-bottom: 10%;
-            //                 }
-
-            //                 p {
-            //                     font-size: 20px;
-            //                     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-            //                     margin-bottom: 0;
-            //                 }
-            //             }
-
-            //         }
-            //     }
-
-            // }
-            // .preperation {
-            //     display: flex;
-            //     flex-direction: column;
-            //     justify-content: center;
-            //     align-items: center;
-
-            //     width: 25%;
-            //     height: 85%;
-
-            //     border-left: 2px darkgoldenrod solid;
-            // }
-
+                        &:hover {
+                            box-shadow: 0px 0px 0px 7px white;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
         }
-        // .secondRow {
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            width: 30%;
+            height: 100%;
+
+            //just animation name and fill-mode different
+            .grindOpen {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                width: 100%;
+                height: 50%;
+
+                animation: rightOpen 0.8s;
+
+                .grindChoice {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 90%;
+                    height: 90%;
+
+                    background-color: wheat;
+                    border: 2px darkgoldenrod solid;
+                    border-left: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            .grindClose {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                width: 100%;
+                height: 50%;
+
+                animation: rightClose 0.5s;
+                animation-fill-mode: forwards;
+
+                .grindChoice {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 90%;
+                    height: 90%;
+
+                    background-color: wheat;
+                    border: 2px darkgoldenrod solid;
+                    border-left: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+
+            //just animation name and fill-mode different
+            .waterOpen {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                width: 100%;
+                height: 50%;
+
+                animation: rightOpen 0.8s;
+
+                .waterChoice {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 90%;
+                    height: 90%;
+
+                    background-color: bisque;
+                    border: 2px lightslategrey solid;
+                    border-left: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            .waterClose {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                width: 100%;
+                height: 50%;
+
+                animation: rightClose 0.5s;
+                animation-fill-mode: forwards;
+
+                .waterChoice {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 90%;
+                    height: 90%;
+
+                    background-color: bisque;
+                    border: 2px lightslategrey solid;
+                    border-left: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+        }
+            
+        // .menuContents {
         //     display: flex;
-        //     flex-direction: row;
-        //     justify-content: center;
+        //     flex-direction: column;
+        //     justify-content: flex-start;
         //     align-items: center;
 
-        //     width: 50%;
-        //     height: 50%;
+        //     width: 35%;
+        //     height: 100%;
+
+        //     border: 3px darkgoldenrod solid;
+        //     border-radius: 20px;
+
+        //     padding: 0.5%;
+
+        //     .coffeeChoice {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: center;
+        //         align-items: center;
+
+        //         width: 100%;
+        //         height: 15%;
+
+        //         header {
+        //             width: 70%;
+        //             text-align: center;
+        //             font-size: 70px;
+        //             color: sienna;
+        //             font-family: Georgia, 'Times New Roman', Times, serif;
+        //         }
+
+        //         button {
+        //             font-size: 13px;
+        //             background-color: transparent;
+        //             border: 0;
+        //             color: white;
+        //             background-color: #9d684b;
+        //             border-radius: 20px;
+        //             margin-bottom: 0;
+
+        //             &:hover {
+        //                 background-color: rgb(126, 63, 17);
+        //                 color: wheat;
+        //                 transition: 0.3s;
+        //             }
+        //         }
+
+        //     }
+        //     .methodChoice {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: center;
+        //         align-items: center;
+
+        //         width:  95%;
+        //         height: 18%;
+
+        //         border-bottom: burlywood 2px solid;
+
+        //         header {
+        //             width: 90%;
+        //             text-align: center;
+        //             font-size: 70px;
+        //             color: darkgoldenrod;
+        //             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        //             margin-bottom: 0;
+        //         }
+
+        //         button {
+        //             font-size: 13px;
+        //             background-color: transparent;
+        //             border: 0;
+        //             color: white;
+        //             background-color: darkgoldenrod;
+        //             border-radius: 20px;
+        //             margin-bottom: 0;
+
+        //             &:hover {
+        //                 background-color: rgb(142, 103, 5);
+        //                 color: wheat;
+        //                 transition: 0.3s;
+        //             }
+        //         }
+        //     }
+
+        //     .ratioChoice {
+        //         display: flex;
+        //         flex-direction: row;
+        //         justify-content: flex-start;
+        //         align-items: center;
+
+        //         width: 100%;
+        //         height: 57%;
+
+        //         border-bottom: burlywood 2px solid;
+
+        //         .ratioOption {
+        //             display: flex;
+        //             flex-direction: column;
+        //             justify-content: flex-start;
+        //             align-items: center;
+
+        //             width: 60%;
+        //             height: 100%;
+
+        //             .serve {
+        //                 display: flex;
+        //                 flex-direction: row;
+        //                 justify-content: center;
+        //                 align-items: center;
+
+        //                 width: 90%;
+        //                 height: 30%;
+
+        //                 border-bottom: burlywood 2px solid;
+
+        //                 padding-block: 2%;
+
+        //                 .serveText {
+        //                     display: flex;
+        //                     flex-direction: column;
+        //                     justify-content: space-evenly;
+        //                     align-items: center;
+
+        //                     width: 70%;
+        //                     height: 100%;
+
+        //                     p {
+        //                         font-size: 20px;
+        //                         color: sienna;
+        //                         margin-bottom: 0;
+        //                     }
+    
+        //                     .serveNum {
+        //                         display: flex;
+        //                         flex-direction: row;
+        //                         justify-content: space-evenly;
+        //                         align-items: center;
+    
+        //                         width: 100%;
+        //                         height: 40%;
+    
+        //                         font-weight: bold;
+
+        //                         button {
+        //                             font-size: 23px;
+        //                             color: sienna;
+        //                             background-color: transparent;
+        //                             border: 0;
+
+        //                             &:hover {
+        //                                 transform: scale(1.5);
+        //                                 transition: 0.3s;
+        //                             }
+        //                         }
+        //                     }
+
+        //                     .serveInput {
+        //                         display: flex;
+        //                         flex-direction: row;
+        //                         justify-content: space-evenly;
+        //                         align-items: center;
+    
+        //                         width: 100%;
+        //                         height: 40%;
+    
+        //                         input {
+        //                             width: 70%;
+        //                             border-radius: 10px;
+        //                             border: 0;
+        //                             color: saddlebrown;
+        //                             outline: none;
+        //                             background-color: wheat;
+    
+        //                             padding: 2%;
+        //                             padding-left: 3%;
+
+        //                             &:focus {
+        //                                 border: #9d684b 1px solid;
+        //                             }
+        //                         }
+
+        //                         button {
+        //                             width: 15%;
+        //                             height: 70%;
+        //                             font-size: 12px;
+        //                             background-color: wheat;
+        //                             color: sienna;
+        //                             border: 0;
+        //                             border-radius: 50px;
+
+        //                             &:hover {
+        //                                 background-color: burlywood;
+        //                                 transition: 0.3s;
+        //                             }
+        //                         }
+        //                     }
+        //                 }
+        //                 .serveBtn {
+        //                     display: flex;
+        //                     flex-direction: column;
+        //                     justify-content: space-evenly;
+        //                     align-items: center;
+
+        //                     width: 30%;
+        //                     height: 100%;
+
+        //                     p {
+        //                         font-size: 25px;
+        //                         font-weight: bold;
+        //                         color: sienna;
+
+        //                         margin-bottom: 0;
+        //                     }
+
+        //                     button {
+        //                         width: 90%;
+        //                         height: 40%;
+        //                         font-size: 20px;
+        //                         color: sienna;
+        //                         border: 0;
+        //                         background-color: wheat;
+        //                         border-radius: 50px;
+        //                         margin-top: 5%;
+
+        //                         &:hover {
+        //                             background-color: saddlebrown;
+        //                             color: wheat;
+        //                             transition: 0.3s;
+        //                         }
+        //                     }
+        //                 }
+
+        //             }
+        //             .roasting {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 justify-content: center;
+        //                 align-items: center;
+
+        //                 width: 90%;
+        //                 height: 25%;
+
+        //                 border-bottom: burlywood 2px solid;
+
+        //                 p {
+        //                     font-size: 20px;
+        //                     font-weight: bold;
+        //                     color: sienna;
+        //                     margin-bottom: 0;
+        //                 }
+                        
+        //                 .roastingLevel {
+        //                     display: flex;
+        //                     flex-direction: row;
+        //                     justify-content: space-evenly;
+        //                     align-items: center;
+
+        //                     width: 100%;
+        //                     height: 60%;
+                            
+        //                     button {
+        //                         width: 25%;
+        //                         font-size: 20px;
+        //                         text-align: center;
+        //                         color: saddlebrown;
+        //                         border-radius: 10px;
+        //                         border: 0;
+        //                         cursor: pointer;
+
+        //                         transition: all 0.2s linear;
+        //                     }
+                            
+        //                     .light {
+        //                         background-color: wheat;
+        //                         color: saddlebrown;
+
+        //                         &:hover {
+        //                             transform: scale(1.1);
+        //                             transition: 0.3s;
+        //                         }
+        //                     }
+        //                     .medium {
+        //                         width: 35%;
+        //                         background-color: darkgoldenrod;
+        //                         color: linen;
+
+        //                         &:hover {
+        //                             transform: scale(1.1);
+        //                             transition: 0.3s;
+        //                         }
+        //                     }
+        //                     .dark {
+        //                         background-color: saddlebrown;
+        //                         color: wheat;
+
+        //                         &:hover {
+        //                             transform: scale(1.1);
+        //                             transition: 0.3s;
+        //                         }
+        //                     }
+        //                 }
+
+        //             }
+        //             .grind {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 justify-content: center;
+        //                 align-items: center;
+
+        //                 width: 90%;
+        //                 height: 25%;
+
+        //                 border-bottom: burlywood 2px solid;
+
+        //                 p {
+        //                     font-size: 20px;
+        //                     font-weight: bold;
+        //                     color: sienna;
+        //                     margin-bottom: 0;
+        //                 }
+
+        //                 .grindSize {
+        //                     display: flex;
+        //                     flex-direction: row;
+        //                     justify-content: space-evenly;
+        //                     align-items: center;
+
+        //                     width: 100%;
+        //                     height: 60%;
+                            
+        //                     button {
+        //                         width: 25%;
+        //                         font-size: 20px;
+        //                         text-align: center;
+        //                         color: saddlebrown;
+        //                         border-radius: 10px;
+        //                         border: 0;
+        //                         cursor: pointer;
+
+        //                         transition: all 0.2s linear;
+        //                     }
+                            
+        //                     .fine {
+        //                         background-color:bisque;
+        //                         color: grey;
+
+        //                         &:hover {
+        //                             transform: scale(1.1);
+        //                             transition: 0.3s;
+        //                         }
+        //                     }
+        //                     .medium {
+        //                         width: 35%;
+        //                         background-color: burlywood;
+        //                         color: sienna;
+
+        //                         &:hover {
+        //                             transform: scale(1.1);
+        //                             transition: 0.3s;
+        //                         }
+        //                     }
+        //                     .coarse {
+        //                         width: 25%;
+        //                         background-color: lightslategrey;
+        //                         color: wheat;
+
+        //                         &:hover {
+        //                             transform: scale(1.1);
+        //                             transition: 0.3s;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //             .groundCoffee {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 justify-content: space-evenly;
+        //                 align-items: center;
+
+        //                 width: 90%;
+        //                 height: 20%;
+
+        //                 header {
+        //                     font-size: 20px;
+        //                     font-weight: bold;
+        //                     color: sienna;  
+        //                     margin-bottom: 0;
+        //                 }
+        //                 h3 {
+        //                     font-size: 25px;
+        //                     color:brown;
+        //                     font-weight: bold;
+        //                     margin-bottom: 0;
+        //                 }
+
+        //                 p {
+        //                     font-size: 18px;
+        //                     color: sienna;
+
+        //                     margin-bottom: 0;
+        //                 }
+        //             }
+        //         }
+
+        //         .prepList {
+        //             display: flex;
+        //             flex-direction: column;
+        //             justify-content: flex-start;
+        //             align-items: center;
+
+        //             width: 40%;
+        //             height: 90%;
+
+        //             border-left: burlywood 2px solid;
+
+        //             header {
+        //                 font-size: 25px;
+        //                 font-family: Verdana, Geneva, Tahoma, sans-serif;
+        //                 color: sienna;
+        //             }
+
+        //             input {
+        //                 margin-right: 5%;
+        //             }
+
+        //             li {
+        //                 width: 90%;
+        //                 list-style: none;
+        //             }
+
+        //             label {
+        //                 font-size: 18px;
+        //                 list-style: none;
+        //                 font-family: Verdana, Geneva, Tahoma, sans-serif;
+        //                 color:sienna;
+        //                 background-color: wheat;
+        //                 border-radius: 10px;
+
+        //                 padding-inline:3%;
+        //                 margin-block: 6%;
+
+        //             .serve {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 justify-content: center;
+        //                 align-items: center;
+        //                 height: 25%;
+        //                 width: 80%;
+        //                 font-size: 30px;
+        //                 font-weight: bold;
+        //                 color: darkgoldenrod;
+
+        //                 border-radius: 100%;
+        //             }
+        //             .roasting {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 justify-content: center;
+        //                 align-items: center;
+        //                 text-align: center;
+        //                 height: 25%;
+        //                 width: 100%;
+                        
+        //                 p {
+        //                     width: 60%;
+        //                     font-size: 30px;
+        //                     background-color: saddlebrown;
+        //                     color: wheat;
+        //                     border-radius: 10px;
+
+        //                     margin-bottom: 0;
+        //                 }
+        //             }
+        //             .grind {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 justify-content: center;
+        //                 align-items: center;
+        //                 text-align: center;
+        //                 width: 100%;
+        //                 height: 25%;
+                        
+        //                 p {
+        //                     width: 65%;
+        //                     font-size: 30px;
+        //                     background-color: lightslategray;
+        //                     color: wheat;
+        //                     border-radius: 10px;
+
+        //                     margin-bottom: 0;
+        //                 }
+        //             }
+        //             .amount {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 justify-content: center;
+        //                 align-items: center;
+        //                 width: 90%;
+        //                 height: 25%;
+
+        //                 font-size: 30px;
+        //                 font-weight: bold;
+        //                 color: sienna;
+        //             }
+        //         }
+        //         }
+        //     }
+        //     .startBrewing {
+        //         display: flex;
+        //         flex-direction: row;
+        //         justify-content: space-evenly;
+        //         align-content: center;
+        //         width: 90%;
+        //         height: 8%;
+
+        //         margin-top: 2%;
+
+        //         p {
+        //             height: 100%;
+        //             text-align: center;
+        //             font-size: 15px;
+        //             color: darkred;
+        //             margin-bottom: 0;
+        //             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        //         }
+
+        //         button {
+        //             width: 55%;
+        //             font-size: 30px;
+        //             font-family: Verdana, Geneva, Tahoma, sans-serif;
+        //             color: wheat;
+        //             background-color: #2F351A;
+        //             border: 0;
+        //             border-radius: 10px;
+        //             outline: none;
+        //             transition: all 0.3s linear;
+        //             text-decoration: none;
+
+        //             &:hover {
+        //                 transition: 0.9s;
+        //                 color: white;
+        //                 box-shadow: 200px 0 0 0 #9A6E40 inset, 
+        //                 -200px 0 0 0 #9A6E40 inset;
+        //             }
+        //         }
+        //     }
+        // // .recipeSteps{
+        // //     display: flex;
+        // //     flex-direction: column;
+        // //     justify-content: flex-start;
+        // //     align-items: flex-start;
+
+        // //     width: 70%;
+        // //     height: 100%;
+
+        // //     // border: 2px darkgoldenrod solid;
+        // //     background-color: wheat;
+        // //     border-radius: 20px;
+
+        // //     margin-left: 1%;
+        // //     padding: 2%;
+
+        // //     header {
+        // //         color: sienna;
+        // //         font-size: 30px;
+        // //         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        // //         font-style: italic;
+        // //     }
+        // // }
+
+        // //가로로 3열 구성 이미지, 타이틀 옵션, 준비품목록 확인하고 레시피로 넘어감.
+        // // .coffeeImg {
+        // //     display: flex;
+
+        // //     width: 30%;
+        // //     height: 100%;
+
+        // //     background-image: url('../../../public/img/coffee/flatWhite2.jpg');
+        // //     background-position: 30% 80%;
+        // //     background-size: cover;
+
+        // //     border-radius: 10px;
+        // //     opacity: 0.8    ;
+        // // }
+        // // .recipeOutline {
+        // //     display: flex;
+        // //     flex-direction: column;
+        // //     justify-content: flex-start;
+        // //     align-items: center;
+
+        // //     width: 45%;
+        // //     height: 100%;
+
+        // //     .title {
+        // //         display: flex;
+        // //         flex-direction: column;
+        // //         justify-content: flex-start;
+        // //         align-items: center;
+
+        // //         width: 100%;
+        // //         height: 30%;
+
+        // //         header {
+        // //             height: 45%;
+        // //             font-size: 90px;
+        // //             font-family: Georgia, 'Times New Roman', Times, serif;
+        // //             color: sienna;
+        // //             text-align: top;
+        // //         }
+
+        // //         p {
+        // //             font-size: 30px;
+        // //             font-family: Verdana, Geneva, Tahoma, sans-serif;
+        // //             color:burlywood;
+        // //             letter-spacing: 3px;
+        // //             margin-bottom: 0;
+        // //         }
+        // //         h1 {
+        // //             font-size: 70px;
+        // //             color: darkgoldenrod;
+        // //             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        // //         }
+        // //     }
+
+        // //     .getInfo {
+        // //         display: flex;
+        // //         flex-direction: column;
+        // //         justify-items: flex-start;
+        // //         align-items: center;
+
+        // //         width: 90%;
+        // //         height: 70%;
+
+        // //         .coffeeRatio {
+        // //             display: flex;
+        // //             flex-direction: row;
+        // //             justify-content: center;
+        // //             align-items: center;
+
+        // //             width: 100%;
+        // //             height: 25%;
+
+        // //             border-top: 2px darkgoldenrod solid;
+        // //             border-bottom: 2px solid darkgoldenrod;
+
+        // //             .serve {
+        // //                 display: flex;
+        // //                 flex-direction:column;
+        // //                 justify-content: space-evenly;
+        // //                 align-items: center;
+
+        // //                 width: 90%;
+        // //                 height: 90%;
+                        
+        // //                 background-color: bisque;
+        // //                 border-radius: 20px;
+
+        // //                 padding-block: 1%;
+
+        // //                 .number {
+        // //                     display: flex;
+        // //                     flex-direction: row;
+        // //                     justify-content: space-evenly;
+        // //                     align-items: center;
+
+        // //                     width: 90%;
+        // //                     height: 30%;
+
+        // //                     p {
+        // //                         font-size:18px;
+        // //                         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        // //                         color: saddlebrown;
+        // //                         font-weight: bold;
+    
+        // //                         margin-bottom: 0;
+        // //                     }
+                            
+        // //                     button {
+        // //                         border: none;
+        // //                         background-color: transparent;
+        // //                         font-size: 35px;
+        // //                         color: sienna;
+        // //                     }
+                            
+        // //                     .serveCount {
+        // //                         display: flex;
+        // //                         flex-direction: row;
+        // //                         justify-content: space-evenly;
+        // //                         align-items: center;
+    
+        // //                         width: 20%;
+        // //                     }
+        // //                 }
+        // //                 .amount {
+        // //                     display: flex;
+        // //                     flex-direction: row;
+        // //                     justify-content: space-around;
+        // //                     align-items: center;
+
+        // //                     width: 70%;
+        // //                     height: 60%;
+
+        // //                     .custom {
+        // //                         display: flex;
+        // //                         flex-direction: column;
+        // //                         justify-content: space-between;
+        // //                         align-items: flex-start;
+
+        // //                         p {
+        // //                             font-size: 18px;
+        // //                             font-family: Verdana, Geneva, Tahoma, sans-serif;
+        // //                             font-weight: bold;
+        // //                             color: saddlebrown;
+        
+        // //                             margin-bottom: 5%;
+        // //                         }
+
+        // //                         input {
+        // //                             width: 90%;
+        // //                             outline: none;
+        // //                             background-color: sienna;
+        // //                             border: none;
+        // //                             border-radius: 20px;
+        // //                             font-size: 16px;
+        // //                             font-weight: bold;
+        // //                             color: white;
+
+        // //                             padding-left: 6%;
+
+        // //                         }
+                                
+        // //                     }
+        // //                     .btnContainer {
+        // //                         display: flex;
+        // //                         flex-direction: row;
+        // //                         justify-content: space-between;
+        // //                         align-items: flex-end;
+
+        // //                         height: 100%;
+        // //                         width: 20%;
+
+        // //                         button {
+        // //                             width: 60%;
+        // //                             height: 45%;
+        // //                             border: none;
+        // //                             border-radius: 10px;
+        // //                             font-size: 20px;
+        // //                             font-weight: bold;
+        // //                             text-align: center;
+
+        // //                             background-color: sienna;
+        // //                             color: bisque;
+        // //                             padding-inline: 10%;
+        // //                             margin-inline: 3%;
+
+        // //                             &:hover {
+        // //                                 background-color: rgb(124, 57, 8);
+        // //                                 color: white;
+        // //                                 transition: 0.3s;
+        // //                             }
+        // //                         }
+        // //                     }
+        // //                 }
+        // //             }
+        // //             .grind {
+        // //                 display: flex;
+        // //                 flex-direction: column;
+        // //                 justify-content: center;
+        // //                 align-items: center;
+        // //                 width: 33%;
+        // //                 height: 90%;
+
+        // //                 border-right: 2px darkgoldenrod solid;
+        // //                 padding-block: 5%;
+
+        // //                 header {
+        // //                     font-size: 40px;
+        // //                     color: linen;
+        // //                     background-color: saddlebrown;
+        // //                     width: 90%;
+        // //                     text-align: center;
+        // //                     border-radius: 20px;
+
+        // //                     margin-bottom: 10%;
+        // //                 }
+
+        // //                 p {
+        // //                     font-size: 20px;
+        // //                     font-family: Verdana, Geneva, Tahoma, sans-serif;
+        // //                     margin-bottom: 0;
+        // //                 }
+        // //             }
+        // //             .bean {
+        // //                 display: flex;
+        // //                 flex-direction: column;
+        // //                 justify-items: center;
+        // //                 align-items: center;
+        // //                 width: 33%;
+        // //                 height: 90%;
+
+        // //                 border-right: 2px darkgoldenrod solid;
+
+        // //                 padding-block: 4%;
+
+        // //                 header {
+        // //                     font-size: 40px;
+        // //                     color: saddlebrown;
+        // //                     background-color: wheat;
+        // //                     width: 90%;
+        // //                     text-align: center;
+        // //                     border-radius: 20px;
+
+        // //                     margin-bottom: 10%;
+        // //                 }
+
+        // //                 p {
+        // //                     font-size: 20px;
+        // //                     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        // //                     margin-bottom: 0;
+        // //                 }
+        // //             }
+
+        // //         }
+        // //     }
+
+        // // }
+        // // .preperation {
+        // //     display: flex;
+        // //     flex-direction: column;
+        // //     justify-content: center;
+        // //     align-items: center;
+
+        // //     width: 25%;
+        // //     height: 85%;
+
+        // //     border-left: 2px darkgoldenrod solid;
+        // // }
 
         // }
+    }    
+}
+
+@keyframes centerHeader {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
     }
-
-
-
-
-    // .recipeTitle {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: flex-start;
-    //     align-items: center;
-
-
-    //     margin-top: 3%;
-
-    //     header {
-    //         width: 100%;
-    //         height: 90%;
-    //         font-size: 80px;
-    //         font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //         color: saddlebrown;
-    //         letter-spacing: 8px;
-    //         text-align: center;
-    //     }
-    //     p {
-    //         font-size: 18px;
-    //         color: rgb(90, 44, 12);
-    //         font-weight: bold;
-    //     }
-    // }
-    // .beforeSteps {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: flex-start;
-    //     align-items: center;
-    //     width: 60%;
-    //     height: 25%;
-
-    //     margin-top: 1%;
-        
-    //     .firstRow {
-    //         display: flex;
-    //         flex-direction: row;
-    //         justify-content: flex-start;
-    //         align-items: center;           
-    //         width: 100%; 
-    //         height: 100%;
-
-    //         .user {
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: space-evenly;
-    //             align-items: center;
-
-    //             width: 30%;
-    //             height: 100%;
-
-    //             .userHeader {
-    //                 display: flex;
-    //                 flex-direction: row;
-    //                 justify-content: flex-start;
-    //                 align-items: center;
-    //                 width: 100%;
-    //                 height: 40%;
-    //                 background-color: wheat;
-    //                 border-radius: 20px;
-    //                 padding: 1%;
-                
-    //                 .userGreetings {
-    //                     display: flex;
-    //                     flex-direction: column;
-    //                     justify-content: flex-start;
-    //                     align-items: center;
-    //                     width: 100%;
-    //                     height: 100%;
-                        
-    //                     header {
-    //                         font-size: 35px;
-    //                         margin-bottom: 3%;
-    //                     }
-    //                     p {
-    //                         font-weight: bold;
-    //                         margin-bottom: 3%;
-    //                     }
-    //                 }  
-    //             }
-    //             .preference {
-    //                 display: flex;
-    //                 flex-direction: column;
-    //                 justify-content: center;
-    //                 align-items: center;
-    //                 width: 100%;
-    //                 height: 50%;
-
-    //                 padding: 2%;
-    //                 margin-top: 3%;
-    //                 background-color: wheat;
-    //                 border-radius: 20px;
-    //             }
-    //         }
-
-    //         .menu {
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: space-evenly;
-    //             align-items: center;
-    //             width: 15%;
-    //             height: 95%;
-
-    //             border-radius: 20px;
-    //             background-color: rgb(255, 235, 216);
-    //             margin-inline: 1%;
-                
-    //             .menuTitle {
-    //                 display: flex;
-    //                 flex-direction: column;
-    //                 justify-content: center;
-    //                 align-items: center;
-    //                 width: 25%;
-    //                 height: 100%;
-
-    //                 font-size: 20px;
-    //                 font-weight: bold;
-
-    //                 text-transform: uppercase;
-
-    //                 p {
-    //                     margin-bottom: 3%;
-    //                 }
-    //             }
-    //             .menuContents {
-    //                 display: flex;
-    //                 flex-direction: column;
-
-    //                 header {
-    //                     font-size: 40px;
-    //                     text-align: center;
-    //                     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //                     color: rgb(187, 134, 1);
-    //                 }
-    //             }
-
-    //         }
-            
-    //         .method {
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: center;
-    //             align-items: center;
-
-    //             width: 15%;
-    //             height: 95%;
-
-    //             border-radius: 20px;
-    //             background-color: rgb(255, 235, 216);
-
-    //             header {
-    //                 font-size: 35px;
-    //                 font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //                 color:brown;
-    //             }
-    //         }
-
-    //         .bean {
-    //             display: flex;
-    //             flex-direction: column;
-    //             justify-content: space-evenly;
-    //             align-items: center;
-    //             width: 15%;
-    //             height: 95%;
-
-    //             background-color: rgb(255, 235, 216);
-    //             border-radius: 20px;
-
-    //             margin-inline: 1%;
-    //             font-size: 40px;
-    //             font-family: Verdana, Geneva, Tahoma, sans-serif;
-                
-    //             header {
-    //                 font-size: 40px;
-    //             }
-
-    //             .type {
-    //                 color: darkgoldenrod;
-    //             }
-    //             .roasting {
-    //                 color: #5d4030;
-    //             }
-    //             .grind {
-    //                 color:brown ;
-    //             }
-    //         }
-    //     }
-    // }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes leftOpen {
+    from {
+        transform: translatex(100%);
+    }
+    to {
+        transform: translatex(0%);
+    }
+}
+@keyframes leftClose {
+    from {
+        transform: translatex(0%);
+    }
+    to {
+        transform: translatex(100%);
+    }
+}
+@keyframes rightOpen {
+    from {
+        transform: translatex(-100%);
+    }
+    to {
+        transform: translatex(0%);
+    }
+}
+@keyframes rightClose {
+    from {
+        transform: translatex(0%);
+    }
+    to {
+        transform: translatex(-100%);
+    }
 }
