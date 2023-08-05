@@ -42,16 +42,16 @@ const router = createBrowserRouter([
       {path: 'menu/:menuName/method', element:<Methods/>},
       {path: '/menu/:menuName/method/:methodName/recipe', element:<Recipe/>},
       {path: '/:userName/brewing', element:<Brewing/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/finish', element:<Finish/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/finish', element:<Finish/>},
       
       //Brewing Steps
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step1', element:<Step1/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step2', element:<Step2/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step3', element:<Step3/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step4', element:<Step4/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step5', element:<Step5/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step6', element:<Step6/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:serve/:coffee/:roasting/:grind/step7', element:<Step7/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/step1', element:<Step1/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/step2', element:<Step2/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/step3', element:<Step3/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/step4', element:<Step4/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/step5', element:<Step5/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/step6', element:<Step6/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/step7', element:<Step7/>},
     ]}
 ]);
 

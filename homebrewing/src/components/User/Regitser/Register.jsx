@@ -3,8 +3,6 @@ import './Regitser.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-import { useDispatch } from 'react-redux'
-
 // images and icons
 import {ReactComponent as CoffeeWomen} from '../../../assets/coffeeWomen.svg'
 import { BsGoogle } from 'react-icons/bs'
@@ -16,8 +14,6 @@ export default function User() {
   const [caution, setCaution] = useState('');
 
   const navigate = useNavigate();
-
-  const dispatch = useDispatch();
 
   //post user data in mongoDB
   const postUser = async () => {
@@ -32,7 +28,7 @@ export default function User() {
       })
 
       console.log(response.data)
-      navigate(`/`)
+      navigate(`/login`)
     } catch (error) {
 
       console.log(error)
@@ -60,7 +56,7 @@ export default function User() {
             //make data in local storage
             localStorage.setItem('userInfo', JSON.stringify(
               {   
-                userEmail : [email],
+                userEmail : email,
                 isLoggedIn : false
               }
             ))
@@ -68,8 +64,7 @@ export default function User() {
             //request for making user data in database to back end
             postUser()
 
-            //make data in redux store
-            dispatch({ type: 'loginSuccess' })
+            alert("J@J Registered!!")
           }
         }
 

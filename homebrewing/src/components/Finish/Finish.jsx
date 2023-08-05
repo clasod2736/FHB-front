@@ -2,22 +2,24 @@ import React, { useEffect, useState } from 'react'
 import './Finish.css'
 
 import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 export default function Finish() {
+  const userEmail = useSelector((state) => state.userEmail);
+
   const [favOpen, setFavOpen] = useState(false);
   const [favName, setFavName] = useState('');
   const [favResponse, setFavResponse] = useState('');
   const [saved, setSaved] = useState(false);
 
-  const { userName, menuName, methodName, serve, coffee, roasting, grind } = useParams();
+  const { menuName, methodName, water, coffee, roasting, grind } = useParams();
   const navigate = useNavigate();
 
   //Automatically Post brew history in DB after finish brewing
   useEffect(() => {
     async function getCurrentBrew() {
       const postOldUrl = 'http://localhost:8080/saveHistory'
-      const putCurrentUrl = 'http://localhost:8080/deleteCurrentBrew'
 
       //use current time for organising recent brew and time that when make oldBrews.
       const order = Date.now();
@@ -33,36 +35,17 @@ export default function Finish() {
       //post oldBrews with currentBrews data first.
       try {
         const response = await axios.post(postOldUrl, {
-          name : userName,
+          email : userEmail,
             oldBrews : [{
               order: order, 
               date: fullDate,
               menuName: menuName,
               methodName : methodName,
-              serve: serve,
+              water: water,
               coffee: coffee,
               roasting: roasting,
               grind: grind
             }]
-        })
-        console.log(response.data)
-      } 
-      catch (error) {
-        console.log(error)
-      }
-
-      //And reset currentBrews data in DB
-      try {
-        const response = await axios.put(putCurrentUrl, {
-          name : userName,
-          currentBrews: {
-            menuName: '',
-            methodName : '',
-            serve: 0,
-            coffee: 0,
-            roasting: '',
-            grind: ''
-          }
         })
         console.log(response.data)
       } 
@@ -78,7 +61,7 @@ export default function Finish() {
     if (favResponse === "422") {
       alert('You have 5 favourite brew already! You can manage in My Recipe page.')
       setFavResponse('')
-      navigate(`/${userName}/myRecipe`)
+      navigate(`/myRecipe`)
       return
     }
   }, [ favResponse ])
@@ -111,17 +94,17 @@ export default function Finish() {
       //post favourites with currentBrews data
       try {
         const response = await axios.post(postFvUrl, {
-          name : userName,
+          email : userEmail,
             favourites : [{
               favName: favName,
               order: order, 
               date: fullDate,
               menuName: menuName,
               methodName : methodName,
-              serve: serve,
+              water: water,
               coffee: coffee,
               roasting: roasting,
-              grind: grind,
+              grind: grind, 
               description: ''
             }]
         })
@@ -133,6 +116,7 @@ export default function Finish() {
         const errMessage = error.response.status
         setFavResponse(JSON.stringify(errMessage));
         console.log(favResponse)
+        return
       }
     }
   }
@@ -152,7 +136,7 @@ export default function Finish() {
                 setFavOpen(true);
                 setSaved(false)
                 }}>Save Favourite</button>
-              <Link to={`/login/${userName}`} className='tryAnother'>
+              <Link to={'/menu'} className='tryAnother'>
                 Try Another
               </Link>
               <button className='shop'>Explore Shop</button>
@@ -163,14 +147,19 @@ export default function Finish() {
               value={favName}/>
               <div className='btnContainer'>
                 <button onClick={() => {setFavOpen(false)}}>X</button>
-                <button className='submitBtn' to={`/${userName}/myRecipe`}
-                onClick={() => {saveFavBrews();
-                                setFavOpen(false);
-                                setSaved((prev) => !prev);}}
+                <button className='submitBtn'
+                onClick={() => {
+                  saveFavBrews();
+                  setFavOpen(false);
+                  setSaved((prev) => !prev);
+                }}
                 >Submit</button>
               </div>
             </div>
-            <p className="savedText" style={{ display: saved ? 'flex' : 'none'}}>Saved!</p>
+            <div className='afterSaveFav' style={{ display: saved ? 'flex' : 'none'}}>
+              <p>Saved!</p>
+              <Link className='goMyRecipeBtn' to={'/myRecipe'}>Check in My Recipe Page</Link>
+            </div>
           </div>
         </div>
     </div>

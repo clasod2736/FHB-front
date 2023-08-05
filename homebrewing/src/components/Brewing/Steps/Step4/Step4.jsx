@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 
 export default function Step4() {
 
-    const {userName, menuName, methodName, serve, coffee, roasting ,grind} = useParams()
+    const { menuName, methodName, water, coffee, roasting ,grind} = useParams()
 
   return (
     <div className='brewingContainer'>
@@ -17,10 +17,10 @@ export default function Step4() {
                 <p>Let lid keep open and make sure the handle is not subjected to the heat.</p>
             </div>
             <div className='btnContainer'>
-                <Link id='backBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${roasting}/${grind}/step3`}>
+                <Link id='backBtn' to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${water}/${roasting}/${grind}/step3`}>
                 <button>Back</button>
                 </Link>
-                <Link id='nextBtn'to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${serve}/${coffee}/${roasting}/${grind}/step5`}>
+                <Link id='nextBtn'to={`/menu/${menuName}/method/${methodName}/recipe/brewing/${water}/${coffee}/${roasting}/${grind}/step5`}>
                 <button>Next</button>
                 </Link>
             </div>

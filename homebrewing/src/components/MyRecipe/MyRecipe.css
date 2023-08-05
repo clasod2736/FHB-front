@@ -86,7 +86,7 @@
   width: 15%;
   text-align: center;
 }
-.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .serve {
+.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .water {
   width: 12%;
   text-align: center;
 }
@@ -152,7 +152,7 @@
   text-align: center;
   text-transform: uppercase;
 }
-.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .serve {
+.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .water {
   width: 12%;
   text-align: center;
 }

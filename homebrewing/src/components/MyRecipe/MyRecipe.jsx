@@ -54,13 +54,13 @@ export default function MyRecipe() {
                                 
                                 <li key={index}
                                 onClick={() => {
-                                    navigate(`/menu/${brew.menuName}/method/${brew.methodName}/recipe/brewing/${brew.serve}/${brew.coffee}/${brew.roasting}/${brew.grind}/step1`)
+                                    navigate(`/menu/${brew.menuName}/method/${brew.methodName}/recipe/brewing/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/step1`)
                                 }}>    
                                     <p className='date'>{brew.date}</p>
                                     <p className='menu'>{brew.menuName}</p>
                                     <p className='method'>{brew.methodName}</p>
                                     <p className='coffee'>{brew.coffee}g</p>
-                                    <p className='serve'>{brew.serve}ml</p>
+                                    <p className='water'>{brew.water}ml</p>
                                     <p className='roasting'>{brew.roasting}</p>
                                     <p className='grind'>{brew.grind}</p>
                                 </li>
@@ -79,7 +79,7 @@ export default function MyRecipe() {
                                     <p className='menu'>{brew.menuName}</p>
                                     <p className='method'>{brew.methodName}</p>
                                     <p className='coffee'>{brew.coffee}g</p>
-                                    <p className='serve'>{brew.serve}ml</p>
+                                    <p className='water'>{brew.water}ml</p>
                                     <p className='roasting'>{brew.roasting}</p>
                                     <p className='grind'>{brew.grind}</p>
                                 </li>
@@ -106,7 +106,7 @@ export default function MyRecipe() {
                         <p className='menu'>Menu</p>
                         <p className='method'>Method</p>
                         <p className='coffee'>Coffee</p>
-                        <p className='serve'>Water</p>
+                        <p className='water'>Water</p>
                         <p className='roasting'>Roasting</p>
                         <p className='grind'>Grind</p>
                     </div>

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './Recipe.css'
-import { Link, useNavigate, useParams } from 'react-router-dom'
-import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom'
 
 //Svg
 import {ReactComponent as UserMenu} from '../../assets/userMenu.svg'
@@ -13,12 +12,14 @@ export default function Recipe() {
     const navigate = useNavigate();
     const { menuName, methodName } = useParams();
 
-    const [serve, setServe] = useState(1);
-    const [water, setWater] = useState(180);
-    const [roasting, setRoasting] = useState('');
-    const [grind, setGrind] = useState('');
-    const [coffee, setCoffee] = useState('');
+    //States for saving Recipes
+    // const [serve, setServe] = useState(1);
+    const [water, setWater] = useState(false);
+    const [roasting, setRoasting] = useState(false);
+    const [grind, setGrind] = useState(false);
+    const [coffee, setCoffee] = useState(false);
 
+    //States for choosing options
     const [userMenu, setUserMenu] = useState(false);
     const [userMethod, setUserMethod] = useState(false);
     const [roastingOpen, setRoastingOpen] = useState('');
@@ -27,10 +28,10 @@ export default function Recipe() {
     const [coffeeOpen, setCoffeeOpen] = useState('');
 
 
-useEffect(() => {
-    setWater(serve * 200);
-    setCoffee(serve * 25)
-  }, [serve, coffee]);
+// useEffect(() => {
+//     setWater(serve * 200);
+//     setCoffee(serve * 25)
+//   }, [serve, coffee]);
 
   //setting chosen coffee and method
   const settingUserMenu = () => {
@@ -95,7 +96,14 @@ useEffect(() => {
         return (
             <div className='roastingOpen'>
                 <div className='roastingChoice'>
-                    <button onClick={() => {setRoastingOpen(false)}}>active!</button>
+                    <button onClick={
+                        
+                        () => {
+                            setRoasting('dark');
+                            setRoastingOpen(false);
+                        }
+                        
+                        }>active!</button>
                 </div>
             </div>
         )
@@ -113,7 +121,15 @@ useEffect(() => {
         return (
             <div className='coffeeOpen'>
                 <div className='coffeeChoice'>
-                    <button onClick={() => {setCoffeeOpen(false)}}>active!</button>
+                    <button onClick={
+                        
+                        () => {
+                            
+                            setCoffee('25')
+                            setCoffeeOpen(false);
+                        }
+                        
+                        }>active!</button>
                 </div>
             </div>
         )
@@ -131,7 +147,13 @@ useEffect(() => {
         return (
             <div className='grindOpen'>
                 <div className='grindChoice'>
-                    <button onClick={() => {setGrindOpen(false)}}>active!</button>
+                    <button onClick={
+                        () => {
+                            
+                            setGrind('coarse')
+                            setGrindOpen(false);
+                        }
+                        }>active!</button>
                 </div>
             </div>
         )
@@ -149,7 +171,15 @@ useEffect(() => {
         return (
             <div className='waterOpen'>
                 <div className='waterChoice'>
-                    <button onClick={() => {setWaterOpen(false)}}>active!</button>
+                    <button onClick={
+                        
+                        () => {
+                            
+                            setWater('250')
+                            setWaterOpen(false);
+                        }
+                            
+                            }>active!</button>
                 </div>
             </div>
         )
@@ -158,6 +188,29 @@ useEffect(() => {
             <div className='waterClose'>
                 <div className='waterChoice'>
                 </div>
+            </div>
+        )
+    }
+  }
+
+  //setting button to start brewing
+  const settingBrewBtn = () => {
+    if (typeof water === 'string' &&
+        typeof coffee === 'string' &&
+        typeof roasting === 'string' &&
+        typeof grind === 'string' ) {
+            return (
+                <div className='goBrewContainer'>
+                    <button className='goBrewBtn'
+                    onClick={() => navigate(`./brewing/${coffee}/${water}/${roasting}/${grind}/step1`)}>
+                        Start Brewing!
+                    </button>
+                </div>
+            )
+    } else {
+        return (
+            <div className='goBrewContainer'>
+                <p>Pleas Choose fix all the recipes!</p>
             </div>
         )
     }
@@ -195,6 +248,7 @@ useEffect(() => {
                         </div>  
                     </div>
                 </div>
+                {settingBrewBtn()}
             </div>
             <div className='right' style={{ justifyContent: waterOpen ? 'flex-end' : 'space-between'}}>
                 {settingGrind()}

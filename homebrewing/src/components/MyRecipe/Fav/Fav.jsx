@@ -26,7 +26,7 @@ export default function Fav() {
             try {
                 const response = await axios.get(serverUrl, {
                     params: {
-                        name: userEmail
+                        email: userEmail
                     }
                 })
                 setFavourites(response.data);
@@ -52,7 +52,7 @@ if (favourites.length > 0) {
                         <div className='btnContainer'>
                             <button onClick={() => {
 
-                            navigate(`/menu/${favourite.menuName}/method/${favourite.methodName}/recipe`)
+                            navigate(`/menu/${favourite.menuName}/method/${favourite.methodName}/recipe/brewing/${favourite.water}/${favourite.coffee}/${favourite.roasting}/${favourite.grind}/step1`)
 
                             }}>Go Brew</button>
                             <button className='detail'
@@ -101,7 +101,7 @@ const settingFavDetails = () => {
                         <h3>Name: {favList.favName}</h3>
                         <p>Coffee: {favList.menuName}</p>
                         <p>Method: {favList.methodName}</p>
-                        <p>Water: {favList.serve}ml</p>
+                        <p>Water: {favList.water}ml</p>
                         <p>Ground Coffee: {favList.coffee}g</p>
                         <p>Roasting Level: {favList.roasting}</p>
                         <p>Grind Size: {favList.grind}</p>
@@ -110,7 +110,7 @@ const settingFavDetails = () => {
                         <p>Description</p>
                         <textarea className='descriptionInput' cols={'6'} rows={'6'} maxLength={100} 
                         value={description}
-                        onChange={(e) => {setDescription(e.target.value); console.log(description)}}
+                        onChange={(e) => {setDescription(e.target.value)}}
                         > <p>Hello!!</p>
                         </textarea>
                         <button type='submit' className='saveDescription' 

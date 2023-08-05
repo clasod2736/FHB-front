@@ -39,7 +39,7 @@ export default function Login() {
 
             // save user LoggedIn history in local storage
             localStorage.setItem('userInfo', JSON.stringify(
-                {   userEmail : [response.data.email],
+                {   userEmail : response.data.email,
                     isLoggedIn : true
                 }
             ))
