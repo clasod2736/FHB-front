@@ -96,14 +96,17 @@
                     margin-block: 1.5%;
                     padding-inline: 3%;
                     color: saddlebrown;
+
                     
                     p {
-                        width: 45%;
+                        width: 50%;
                         font-size: 20px;
                         font-weight: bold;
                         overflow: hidden;
 
                         margin-bottom: 0;
+
+                        animation: opacity 0.3s;
                     }
                     
                     .btnContainer {
@@ -112,7 +115,7 @@
                         justify-content: space-between;
                         align-items: center;
 
-                        width: 55%;
+                        width: 50%;
                         height: 100%;
 
                         button {
@@ -145,6 +148,16 @@
                             color: bisque;
                             background-color: saddlebrown;
                             transition: 0.3s;
+                        }
+
+                        input {
+                            border: 2px solid wheat;
+                            color: wheat;
+                            transition: 0s;
+                        }
+
+                        .submitFavName {
+
                         }
 
                     }
@@ -189,15 +202,15 @@
                 }
             }
         }
-        .favOthers {
+        .favDetailContainer {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
 
             width: 50%;
-            height:100%;
-
+            height: 100%;
+            max-height: 265px;
 
             .favDetails {
                 display: flex;
@@ -207,6 +220,7 @@
 
                 width: 95%;
                 height: 100%;
+                max-height: 265px;
 
                 animation: opacity 0.3s;
                 
@@ -225,10 +239,13 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    align-items: center;
+                    align-items: flex-start;
 
                     width: 100%;
                     height: 100%;
+
+                    //preventing stretch for overflow contents
+                    max-height: 240px;
 
                     .details {
                         display: flex;
@@ -242,17 +259,26 @@
                         padding-left: 3%;
                         padding: 1%;
     
+                        animation: opacity 0.5s;
     
-                        h3 {
+                        .favName {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            height: 12%;
+                            width: auto;
                             font-size: 18px;
                             color: wheat;
                             font-family: Verdana, Geneva, Tahoma, sans-serif;
                             font-weight: bold;
+                            text-transform: none;
                             background-color: sienna;
                             border-radius: 5px;
     
                             padding: 2%;
                             margin-bottom: 0;
+                            transition: all 0.3s linear;
                         }
     
                         p {
@@ -262,69 +288,545 @@
                             font-family:'Courier New', Courier, monospace;
                             color: saddlebrown;
                             text-transform: uppercase;
+                            transition: all 0.3s linear;
         
                             margin-bottom: 0;
                             padding: 1%;
+                            padding-inline: 2%;
                         }
                     }
-                    .description {
+                    .detailCustomSetting {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        align-items: center;
-
+                        align-items: flex-start;
+                        
                         width: 50%;
-                        height: 95%;
+                        height: 100%;
+    
+                        padding-left: 3%;
+                        padding: 1%;
 
-                        p {
-                            font-size: 20px;
-                            font-weight: bold;
+                        animation: opacity 0.5s;
+    
+    
+                        .favName {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            height: 12%;
+                            width: auto;
+                            font-size: 18px;
+                            color: sienna;
                             font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color: sienna;
-
-                            margin-bottom: 0%;
-                        }
-
-                        .descriptionInput {
-                            width: 80%;
-                            min-height: 70%;
-                            max-height: 70%;
-                            outline: none;
-                            border: 0;
-                            resize: none;   
-                            font-size: 16px;
-                            color: sienna;
-                            overflow:  hidden;
-
+                            font-weight: bold;
+                            text-transform: none;
                             background-color: wheat;
                             border-radius: 5px;
 
-                            padding: 5%;
-                        }
+                            box-shadow: 2px 2px 0px 2px burlywood;
+                            transition: 0.5s;
+    
+                            padding: 2%;
+                            margin-bottom: 0;
 
-                        .saveDescription {
-                            width: 80%;
-                            font-size: 16px;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            border-radius: 10px;
-                            border: 0;    
-    
-                            color: linen;
-                            background-color: sienna;
-                            box-shadow: 2px 3px 0px 1px darkgoldenrod;
-    
                             &:hover {
-                                color: brown;
-                                background-color: bisque;
+                                background-color: sienna;
+                                box-shadow: 2px 2px 0px 2px burlywood;
+                                color: wheat;
                                 transition: 0.3s;
                             }
-                            &:active {
-                                box-shadow: 0px 0px 0px 0px;
-                                transform: translateY(3%);
-                                transition: 0s;
+                        }
+    
+                        p {
+                            display: flex;
+                            font-size: 16px;
+                            font-weight: bold;
+                            font-family:'Courier New', Courier, monospace;
+                            color: saddlebrown;
+                            text-transform: uppercase;
+
+                            border-radius: 5px;
+                            cursor: pointer;
+                            box-shadow: 2px 2px 0px 2px lightgrey;
+                            transition: 0.5s;
+        
+                            margin-bottom: 0;
+                            padding: 1%;
+                            padding-inline: 2%;
+
+                            &:hover {
+                                background-color: wheat;
+                                transition: 0.3s;
                             }
                         }
                     }
+
+                    .customContainer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 50%;
+                        height: 100%;
+
+                        //preventing stretch for overflow contents
+                        max-height: 230px;
+
+                        .customOptions {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: center;
+
+                            width: 100%;
+                            height: 60%;
+
+                            animation: opacity 0.5s;
+                            
+                            p {
+                                font-size: 25px;
+                                font-weight: bold;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                color: sienna;
+    
+                                margin-bottom: 0%;
+                            }
+    
+                            button {
+                                width: 80%;
+                                font-size: 18px;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                border-radius: 10px;
+                                border: 0;    
+        
+                                color: linen;
+                                background-color: sienna;
+                                box-shadow: 2px 3px 0px 1px darkgoldenrod;
+        
+                                &:hover {
+                                    color: brown;
+                                    background-color: bisque;
+                                    transition: 0.3s;
+                                }
+                                &:active {
+                                    box-shadow: 0px 0px 0px 0px;
+                                    transform: translateY(3%);
+                                    transition: 0s;
+                                }
+                            }
+                        }
+
+                        //all the recipes of FAV
+                        .customDetail {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 100%;
+                            height: 100%;
+                            max-height: 265px;
+
+                            button {
+                                width: 80%;
+                                font-size: 15px;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                border-radius: 10px;
+                                border: 0;    
+        
+                                color: linen;
+                                background-color: sienna;
+                                box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                                animation: 0.5s;
+        
+                                &:hover {
+                                    color: brown;
+                                    background-color: bisque;
+                                    transition: 0.3s;
+                                }
+                                &:active {
+                                    box-shadow: 0px 0px 0px 0px;
+                                    transform: translateY(3%);
+                                    transition: 0s;
+                                }
+                            }
+
+                            .customDetailBasic {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                height: 100%;
+
+                                .customDetailBasicText {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    height: 50%;
+                                    
+                                    p {
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                        color: sienna;
+            
+                                        margin-bottom: 0%;
+                                    }
+
+                                }
+                                
+                                button {
+                                    width: 80%;
+                                    font-size: 15px;
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    border-radius: 10px;
+                                    border: 0;    
+            
+                                    color: linen;
+                                    background-color: sienna;
+                                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+            
+                                    &:hover {
+                                        color: brown;
+                                        background-color: bisque;
+                                        transition: 0.3s;
+                                    }
+                                    &:active {
+                                        box-shadow: 0px 0px 0px 0px;
+                                        transform: translateY(3%);
+                                        transition: 0s;
+                                    }
+                                }
+                            }
+
+                            .customfavName {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                width: 100%;
+                                height: 60%;
+
+                                animation: 0.5s;
+
+                                p {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    color: sienna;
+        
+                                    margin-bottom: 0%;
+                                }
+
+                                input {
+                                    width: 100%;
+                                    height: 25%;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    color: sienna;
+                                    outline: none;
+
+                                    border: 2px solid sienna;
+                                    background-color: wheat;
+                                    border-radius: 10px;
+
+                                    padding-left: 5%;
+
+                                    animation: opacity 0.3s;
+                                }
+
+                                button {
+                                    width: 100%;
+                                    font-size: 15px;
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    border-radius: 10px;
+                                    border: 0;    
+            
+                                    color: linen;
+                                    background-color: sienna;
+                                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+            
+                                    &:hover {
+                                        color: brown;
+                                        background-color: bisque;
+                                        transition: 0.3s;
+                                    }
+                                    &:active {
+                                        box-shadow: 0px 0px 0px 0px;
+                                        transform: translateY(3%);
+                                        transition: 0s;
+                                    }
+                                }
+                            }
+                            .customMenuName {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+
+                                width: 100%;
+                                height: 85%;
+                                max-height: 85%;
+                                list-style: none;
+
+                                margin-bottom: 3%;
+                                padding-left: 0;
+                                padding-block: 2%;
+
+                                overflow-y: scroll;
+                                overflow-x: hidden;
+
+                                animation: opacity 0.5s;
+
+                                li {
+                                    width: 100%;
+                                    font-size: 16px;
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    color: sienna;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    
+                                    padding-left: 3%;
+
+                                    &:hover {
+                                        color: wheat;
+                                        background-color: sienna;
+                                        transition: 0.3s;
+                                    }
+                                }
+                            }
+                            .customMethodName {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+
+                                width: 100%;
+                                height: 85%;
+                                max-height: 85%;
+                                list-style: none;
+
+                                margin-bottom: 2%;
+                                padding-left: 0;
+
+                                animation: opacity 0.5s;
+
+                                li {
+                                    width: 100%;
+                                    font-size: 18px;
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    color: sienna;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                    
+                                    padding-left: 3%;
+                                    margin-block: 1%;
+
+                                    &:hover {
+                                        color: wheat;
+                                        background-color: sienna;
+                                        transition: 0.3s;
+                                    }
+                                }
+                            }
+                            .customWater {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                width: 100%;
+                                height: 60%;
+
+                                animation: opacity 0.5s;
+
+                                margin-bottom: 5%;
+
+                                button {
+                                    height: 25%;
+                                }
+                            }
+                            .customCoffee {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                width: 100%;
+                                height: 50%;
+
+                                animation: opacity 0.5s;
+
+                                input {
+                                    border-radius: 5px;
+                                    color: saddlebrown;
+                                    background-color: wheat;
+                                    border: 0;
+                                    outline: none;
+
+                                    padding-left: 5%;
+                                }
+
+                                p {
+                                    font-size: 16px;
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    color: sienna;
+                                    margin-bottom: 1%;
+                                }
+
+                                button {
+                                    height: 22%;
+                                }
+                            }
+                            .customRoasting {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                width: 100%;
+                                height: 50%;
+
+                                animation: opacity 0.5s;
+
+                                button {
+                                    width: 30%;
+                                    height: 50%;
+                                }
+
+                                .light {
+                                    &:hover {
+                                        color: grey;
+                                        background: linen;
+                                    }
+                                }
+                                .dark {
+                                    &:hover {
+                                        color: #472c1b;
+                                        background-color: burlywood;
+                                    }
+                                }
+                            }
+                            .customGrind {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                width: 100%;
+                                height: 50%;
+
+                                animation: opacity 0.5s;
+
+                                button {
+                                    width: 30%;
+                                    height: 50%;
+
+                                    background-color: wheat;
+                                    color: sienna;
+                                }
+
+                                .fine {
+                                    &:hover {
+                                        color: grey;
+                                        background: bisque;
+                                    }
+                                }
+                                .medium {
+                                    &:hover {
+                                        color: wheat;
+                                        background-color: chocolate;
+                                    }
+                                }
+                                .coarse {
+                                    &:hover {
+                                        color: linen;
+                                        background-color:rgb(131, 147, 162);
+                                        box-shadow: 2px 2px 0px 2px grey;
+                                    }
+                                }
+                            }
+                        }
+
+
+                        .customDescription {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: center;
+    
+                            width: 100%;
+                            height: 100%;
+    
+                            p {
+                                height: 10%;
+                                font-size: 18px;
+                                font-weight: bold;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                color: sienna;
+    
+                                margin-bottom: 0%;
+                            }
+    
+                            .descriptionInput {
+                                width: 80%;
+                                min-height: 50%;
+                                max-height: 50%;
+                                outline: none;
+                                border: 0;
+                                resize: none;   
+                                font-size: 15px;
+                                color: sienna;
+                                overflow:  hidden;
+    
+                                background-color: wheat;
+                                border-radius: 5px;
+    
+                                padding: 5%;
+                            }
+                            .descriptionBtnContainer {
+                                display: flex ;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: center;
+    
+                                width: 100%;
+                                height: 25%;
+                                
+                                button {
+                                    width: 80%;
+                                    font-size: 15px;
+                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                    border-radius: 10px;
+                                    border: 0;    
+            
+                                    color: linen;
+                                    background-color: sienna;
+                                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+            
+                                    &:hover {
+                                        color: brown;
+                                        background-color: bisque;
+                                        transition: 0.3s;
+                                    }
+                                    &:active {
+                                        box-shadow: 0px 0px 0px 0px;
+                                        transform: translateY(3%);
+                                        transition: 0s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                 }
             }
 
@@ -343,6 +845,21 @@
     }
 }
 
+
+@keyframes jiggling {
+    0% {
+        transform: translateY(-5%);
+    }
+    33% {
+        transform: translateY(0%);
+    }
+    66% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
 
 @keyframes opacity {
     from {

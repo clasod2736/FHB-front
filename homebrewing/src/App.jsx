@@ -65,17 +65,23 @@ export default function App() {
     const localInfo =  localStorage.getItem('userInfo')
     const userInfo = JSON.parse(localInfo);
 
-    if (userInfo.isLoggedIn === true) {
-      const userInfo = JSON.parse(localInfo);
-      const isLoggedIn = userInfo.isLoggedIn;
-      const userEmail = userInfo.userEmail;
-      console.log(userEmail, isLoggedIn)
+    if (userInfo) {
 
-      dispatch(updateEmail(userEmail))
-      dispatch({ type: 'loginSuccess' })
-    } else if (userInfo.isLoggedIn === false) {
-      return
+      if (userInfo.isLoggedIn === true) {
+        const userInfo = JSON.parse(localInfo);
+        const isLoggedIn = userInfo.isLoggedIn;
+        const userEmail = userInfo.userEmail;
+        console.log(userEmail, isLoggedIn)
+  
+        dispatch(updateEmail(userEmail))
+        dispatch({ type: 'loginSuccess' })
+      } else if (userInfo.isLoggedIn === false) {
+        return
+      }
+    } else {
+      console.log('Cannot get Data from Local Storage')
     }
+
   })
 
   return (

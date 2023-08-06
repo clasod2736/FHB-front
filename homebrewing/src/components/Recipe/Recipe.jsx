@@ -202,7 +202,7 @@ export default function Recipe() {
             return (
                 <div className='goBrewContainer'>
                     <button className='goBrewBtn'
-                    onClick={() => navigate(`./brewing/${coffee}/${water}/${roasting}/${grind}/step1`)}>
+                    onClick={() => navigate(`./brewing/${water}/${coffee}/${roasting}/${grind}/step1`)}>
                         Start Brewing!
                     </button>
                 </div>

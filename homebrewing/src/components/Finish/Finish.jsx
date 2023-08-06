@@ -72,7 +72,7 @@ export default function Finish() {
     if (favName === '' ) {
       alert('Please put name.')
       return
-    } else if (favName.length > 15) {
+    } else if (favName.length > 10) {
       alert('Please put name less 10 letters')
       setFavName('')
     } 

@@ -9,7 +9,6 @@ import Fav from './Fav/Fav';
 
 export default function MyRecipe() {
     const userEmail = useSelector((state) => state.userEmail);
-    console.log("userEmail: ", userEmail)
     const [oldBrews, setOldBrews] = useState([]);
     const [changeHistory, setChangeHistory] = useState(false)
 
@@ -21,22 +20,26 @@ export default function MyRecipe() {
         async function fetchDatas() {
             const serverUrl = 'http://localhost:8080/getOldbrews'
 
-            try {
-                const response = await axios.get(serverUrl, {
-                    params: {
-                        email: userEmail
-                    }
-                })
-                console.log(response.data)
-                setOldBrews(response.data)
-            }
-            catch (error) {
-                console.log(error)
+            if (userEmail === 'undefiend') {
+                console.log('failed get userEmail from redux')
+            } else {
+                
+                try {
+                    const response = await axios.get(serverUrl, {
+                        params: {
+                            email: userEmail
+                        }
+                    })
+                    console.log(response.data)
+                    setOldBrews(response.data)
+                }
+                catch (error) {
+                    console.log(error)
+                }
             }
         }
         fetchDatas();
-    }, [])
-    console.log(oldBrews)
+    }, [userEmail])
 
     // make history lists use with fetched data.
     const settingOldBrews = () => {
@@ -95,7 +98,7 @@ export default function MyRecipe() {
     <div className='myRecipeContainer'>
         <div className='myRecipe'>
             <div className='myRecipeContents'>
-                <Fav/>
+                <Fav userEmail={userEmail}/>
                 <div className='myRecipTitle'>
                     <header>Check your History of Brewing.</header>
                     <p>FHB automatically save maximum your 10 recent Brews. "Click" brew that you like to try Again!</p>

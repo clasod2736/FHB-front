@@ -42,6 +42,7 @@ export default function Navbar() {
         //update info from local storage
         const localInfo = localStorage.getItem('userInfo');
         const userInfo = JSON.parse(localInfo);
+        userInfo.userEmail = '';
         userInfo.isLoggedIn = false;
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
 

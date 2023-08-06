@@ -80,18 +80,19 @@
   color: saddlebrown;
 }
 .FavContainer .favContents .favourites .favList li p {
-  width: 45%;
+  width: 50%;
   font-size: 20px;
   font-weight: bold;
   overflow: hidden;
   margin-bottom: 0;
+  animation: opacity 0.3s;
 }
 .FavContainer .favContents .favourites .favList li .btnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 55%;
+  width: 50%;
   height: 100%;
 }
 .FavContainer .favContents .favourites .favList li .btnContainer button {
@@ -119,6 +120,11 @@
   color: bisque;
   background-color: saddlebrown;
   transition: 0.3s;
+}
+.FavContainer .favContents .favourites .favList li:hover input {
+  border: 2px solid wheat;
+  color: wheat;
+  transition: 0s;
 }
 .FavContainer .favContents .favourites .noneFav {
   display: flex;
@@ -153,24 +159,26 @@
   transform: translateY(3%);
   transition: 0s;
 }
-.FavContainer .favContents .favOthers {
+.FavContainer .favContents .favDetailContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 50%;
   height: 100%;
+  max-height: 265px;
 }
-.FavContainer .favContents .favOthers .favDetails {
+.FavContainer .favContents .favDetailContainer .favDetails {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 95%;
   height: 100%;
+  max-height: 265px;
   animation: opacity 0.3s;
 }
-.FavContainer .favContents .favOthers .favDetails header {
+.FavContainer .favContents .favDetailContainer .favDetails header {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -179,15 +187,16 @@
   margin-bottom: 1%;
   border-bottom: 1px sienna solid;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
+  max-height: 240px;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .details {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -196,59 +205,119 @@
   height: 100%;
   padding-left: 3%;
   padding: 1%;
+  animation: opacity 0.5s;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .details h3 {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details .favName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 12%;
+  width: auto;
   font-size: 18px;
   color: wheat;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
+  text-transform: none;
   background-color: sienna;
   border-radius: 5px;
   padding: 2%;
   margin-bottom: 0;
+  transition: all 0.3s linear;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .details p {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details p {
   display: flex;
   font-size: 16px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   color: saddlebrown;
   text-transform: uppercase;
+  transition: all 0.3s linear;
   margin-bottom: 0;
   padding: 1%;
+  padding-inline: 2%;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .description {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  padding-left: 3%;
+  padding: 1%;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting .favName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 12%;
+  width: auto;
+  font-size: 18px;
+  color: sienna;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-transform: none;
+  background-color: wheat;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px 2px burlywood;
+  transition: 0.5s;
+  padding: 2%;
+  margin-bottom: 0;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting .favName:hover {
+  background-color: sienna;
+  box-shadow: 2px 2px 0px 2px burlywood;
+  color: wheat;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting p {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: saddlebrown;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px 2px lightgrey;
+  transition: 0.5s;
+  margin-bottom: 0;
+  padding: 1%;
+  padding-inline: 2%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting p:hover {
+  background-color: wheat;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 50%;
-  height: 95%;
+  height: 100%;
+  max-height: 230px;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .description p {
-  font-size: 20px;
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions p {
+  font-size: 25px;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   margin-bottom: 0%;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .descriptionInput {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions button {
   width: 80%;
-  min-height: 70%;
-  max-height: 70%;
-  outline: none;
-  border: 0;
-  resize: none;
-  font-size: 16px;
-  color: sienna;
-  overflow: hidden;
-  background-color: wheat;
-  border-radius: 5px;
-  padding: 5%;
-}
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .saveDescription {
-  width: 80%;
-  font-size: 16px;
+  font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 10px;
   border: 0;
@@ -256,17 +325,343 @@
   background-color: sienna;
   box-shadow: 2px 3px 0px 1px darkgoldenrod;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .saveDescription:hover {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions button:hover {
   color: brown;
   background-color: bisque;
   transition: 0.3s;
 }
-.FavContainer .favContents .favOthers .favDetails .detailsContainer .description .saveDescription:active {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions button:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
 }
-.FavContainer .favContents .favOthers .favDetailsNot {
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 265px;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail button {
+  width: 80%;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+  animation: 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail button:hover {
+  color: brown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail button:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customDetailBasic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customDetailBasic .customDetailBasicText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customDetailBasic .customDetailBasicText p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+  margin-bottom: 0%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customDetailBasic button {
+  width: 80%;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customDetailBasic button:hover {
+  color: brown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customDetailBasic button:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  animation: 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName p {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+  margin-bottom: 0%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName input {
+  width: 100%;
+  height: 25%;
+  font-size: 18px;
+  font-weight: bold;
+  color: sienna;
+  outline: none;
+  border: 2px solid sienna;
+  background-color: wheat;
+  border-radius: 10px;
+  padding-left: 5%;
+  animation: opacity 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName button {
+  width: 100%;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName button:hover {
+  color: brown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName button:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMenuName {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 85%;
+  max-height: 85%;
+  list-style: none;
+  margin-bottom: 3%;
+  padding-left: 0;
+  padding-block: 2%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMenuName li {
+  width: 100%;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-left: 3%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMenuName li:hover {
+  color: wheat;
+  background-color: sienna;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMethodName {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 85%;
+  max-height: 85%;
+  list-style: none;
+  margin-bottom: 2%;
+  padding-left: 0;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMethodName li {
+  width: 100%;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-left: 3%;
+  margin-block: 1%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMethodName li:hover {
+  color: wheat;
+  background-color: sienna;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customWater {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  animation: opacity 0.5s;
+  margin-bottom: 5%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customWater button {
+  height: 25%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customCoffee {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customCoffee input {
+  border-radius: 5px;
+  color: saddlebrown;
+  background-color: wheat;
+  border: 0;
+  outline: none;
+  padding-left: 5%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customCoffee p {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+  margin-bottom: 1%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customCoffee button {
+  height: 22%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customRoasting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customRoasting button {
+  width: 30%;
+  height: 50%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customRoasting .light:hover {
+  color: grey;
+  background: linen;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customRoasting .dark:hover {
+  color: #472c1b;
+  background-color: burlywood;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customGrind {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  animation: opacity 0.5s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customGrind button {
+  width: 30%;
+  height: 50%;
+  background-color: wheat;
+  color: sienna;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customGrind .fine:hover {
+  color: grey;
+  background: bisque;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customGrind .medium:hover {
+  color: wheat;
+  background-color: chocolate;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customGrind .coarse:hover {
+  color: linen;
+  background-color: rgb(131, 147, 162);
+  box-shadow: 2px 2px 0px 2px grey;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription p {
+  height: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: sienna;
+  margin-bottom: 0%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionInput {
+  width: 80%;
+  min-height: 50%;
+  max-height: 50%;
+  outline: none;
+  border: 0;
+  resize: none;
+  font-size: 15px;
+  color: sienna;
+  overflow: hidden;
+  background-color: wheat;
+  border-radius: 5px;
+  padding: 5%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer button {
+  width: 80%;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer button:hover {
+  color: brown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer button:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.FavContainer .favContents .favDetailContainer .favDetailsNot {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -276,6 +671,20 @@
   animation: opacity 0.5s;
 }
 
+@keyframes jiggling {
+  0% {
+    transform: translateY(-5%);
+  }
+  33% {
+    transform: translateY(0%);
+  }
+  66% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @keyframes opacity {
   from {
     opacity: 0;
