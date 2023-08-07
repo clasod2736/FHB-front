@@ -33,7 +33,8 @@
 
             padding-bottom: 2%;
         }
-        .eachMenu {
+        
+        .chociesContainer {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -44,7 +45,7 @@
 
             transition: all 0.8s linear;
 
-            .eachMenuContainer {
+            .choices {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -789,6 +790,7 @@
                 }
             }
             
+            //CSS for side pop-up
             .menuContents {
                 display: flex;
                 flex-direction: column;
@@ -1547,6 +1549,7 @@
     }
 }
 
+//open and clode side pop-up
 @keyframes menuContents {
     from {
         width: 0%;

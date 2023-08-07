@@ -12,8 +12,7 @@ import Methods from './components/Methods/Methods';
 import Menu from './components/Menu/Menu';
 import Recipe from './components/Recipe/Recipe';
 import Login from './components/User/Login/Login';
-import Register from './components/User/Regitser/Register';
-import Brewing from './components/Brewing/Brewing';
+import Register from './components/User/Regitser/Register'; 
 
 // Brewing Steps Components
 import Step1 from './components/Brewing//Steps/Step1/Step1';
@@ -34,14 +33,10 @@ const router = createBrowserRouter([
       {index: true, element: <Intro/>},
       {path: '/login', element:<Login/>},
       {path: '/register', element:<Register/>},
-      {path: '/login/:userName', element:<Intro/>},
-      {path: '/:username', element:<Intro/>},
       {path: '/myRecipe', element:<MyRecipe/>},
       {path: '/menu', element:<Menu/>},
-      {path: '/:userName/menu', element:<Menu/>},
-      {path: 'menu/:menuName/method', element:<Methods/>},
+      {path: '/menu/:menuName/method', element:<Methods/>},
       {path: '/menu/:menuName/method/:methodName/recipe', element:<Recipe/>},
-      {path: '/:userName/brewing', element:<Brewing/>},
       {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/finish', element:<Finish/>},
       
       //Brewing Steps
@@ -68,6 +63,7 @@ export default function App() {
     if (userInfo) {
 
       if (userInfo.isLoggedIn === true) {
+
         const userInfo = JSON.parse(localInfo);
         const isLoggedIn = userInfo.isLoggedIn;
         const userEmail = userInfo.userEmail;
@@ -75,6 +71,7 @@ export default function App() {
   
         dispatch(updateEmail(userEmail))
         dispatch({ type: 'loginSuccess' })
+
       } else if (userInfo.isLoggedIn === false) {
         return
       }

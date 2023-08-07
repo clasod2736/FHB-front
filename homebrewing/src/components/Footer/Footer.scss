@@ -218,6 +218,7 @@
 }
 
 
+//Responsive Web codes
 @media all and (min-width:1681px)  and (max-width:2100px) {
 
     .footerContainer {
@@ -333,7 +334,6 @@
        
     }
 }
-
 @media all and (min-width:1280px)  and (max-width:1680px) {
 
     .footerContainer {
@@ -454,7 +454,6 @@
        
     }
 }
-
 @media all and (min-width:1024px) and (max-width:1279px) {
     .footerContainer {
         height: 22vh;
@@ -575,7 +574,6 @@
        
     }
 }
-
 @media all and (min-width:768px) and (max-width:1023px) {
     .footerContainer {
         height: 20vh;
@@ -698,7 +696,6 @@
        
     }
 }
-
 @media all and (min-width:480px) and (max-width:767px) {
     .footerContainer {
         display: flex;
@@ -938,7 +935,6 @@
         }
     }
 }
-
 @media all and (max-width:479px) {
     .footerContainer {
         display: flex;

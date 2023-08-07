@@ -72,8 +72,6 @@ export default function Login() {
                     <Logo/>
                 </svg>
             </div>
-            <div>
-            </div>
             <div className='form'>
                 <div className='formGuide'>
                     <h1>Welcome!</h1>

@@ -6,88 +6,80 @@
 
     width: 60%;
     height: 70vh;
-}
-
-.step1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    width: 70%;
-    height: 85%;
-
-    padding-inline: 3%;
-
-    border: 2px darkgoldenrod solid;
-    border-radius: 20px;
-
-    animation: opacity 0.5s;
-
-    header {   
-        width: 70%;
-        text-align: center;
-        font-size: 40px;
-        color: sienna;
-        font-family: Arial, Helvetica, sans-serif;
-
-        border-bottom: 2px solid sienna;
-    }
-
-    img {
-        width: 70%;
-        height: 50%;
-
-        object-fit: cover;
-        overflow: hidden;
-
-        margin-top: 3%;
-    }
-
-    .step1Text {
+    
+    .step1 {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        width: 80%;
-        height: 20%;
-    }
-    p {
-        font-size: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: sienna;
-        text-align: center;
-    }
-
-    .btnContainer {
-        display: flex;
-        flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-
-        width: 80%;
-        height: 10%;
-
-        #backBtn, #nextBtn{
-            width: 30%;
-        }
-        
-        button {
-            width: 100%;
-            font-size: 40px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: darkgoldenrod;
-            background-color: wheat;
-            border:0;
-            border-radius: 20px;
     
-            &:hover {
-                color: saddlebrown;
-                background-color: burlywood;
-                transition: 0.3s;
+        width: 70%;
+        height: 85%;
+    
+        padding-inline: 3%;
+    
+        border: 2px darkgoldenrod solid;
+        border-radius: 20px;
+    
+        animation: opacity 0.5s;
+    
+        header {   
+            width: 70%;
+            text-align: center;
+            font-size: 40px;
+            color: sienna;
+            font-family: Arial, Helvetica, sans-serif;
+    
+            border-bottom: 2px solid sienna;
+        }
+    
+        img {
+            width: 70%;
+            height: 50%;
+    
+            object-fit: cover;
+            overflow: hidden;
+    
+            margin-top: 3%;
+        }
+    
+        .step1Text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            width: 80%;
+            height: 20%;
+        }
+        .btnContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            width: 80%;
+            height: 10%;
+    
+            #backBtn, #nextBtn{
+                width: 30%;
+            }
+            
+            button {
+                width: 100%;
+                font-size: 40px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: darkgoldenrod;
+                background-color: wheat;
+                border:0;
+                border-radius: 20px;
+        
+                &:hover {
+                    color: saddlebrown;
+                    background-color: burlywood;
+                    transition: 0.3s;
+                }
             }
         }
     }
-
 }

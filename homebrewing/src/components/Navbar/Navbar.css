@@ -39,7 +39,7 @@
 .fixedNavbar .navTitle:hover {
   text-shadow: 3px 3px darkgoldenrod;
 }
-.fixedNavbar .guide {
+.fixedNavbar .about {
   width: auto;
   position: relative;
   display: flex;
@@ -54,11 +54,11 @@
   background-color: transparent;
   padding: 0;
 }
-.fixedNavbar .guide:hover {
+.fixedNavbar .about:hover {
   color: #86481f;
   transition: 0.2s;
 }
-.fixedNavbar .guide:after {
+.fixedNavbar .about:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -70,7 +70,7 @@
   transform-origin: bottom;
   transition: transform 0.25s ease-out;
 }
-.fixedNavbar .guide:hover::after {
+.fixedNavbar .about:hover::after {
   color: #A86B43;
   transform: scaleX(1);
   transform-origin: bottom;
@@ -143,7 +143,7 @@
   transform: scaleX(1);
   transform-origin: bottom;
 }
-.fixedNavbar .login {
+.fixedNavbar .logIn {
   position: relative;
   display: flex;
   align-items: center;
@@ -157,11 +157,11 @@
   animation: opacity 0.5s;
   transition: 0.3s;
 }
-.fixedNavbar .login:hover {
+.fixedNavbar .logIn:hover {
   color: #86481f;
   transition: 0.2s;
 }
-.fixedNavbar .login:after {
+.fixedNavbar .logIn:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -173,12 +173,12 @@
   transform-origin: bottom;
   transition: transform 0.25s ease-out;
 }
-.fixedNavbar .login:hover::after {
+.fixedNavbar .logIn:hover::after {
   color: #A86B43;
   transform: scaleX(1);
   transform-origin: bottom;
 }
-.fixedNavbar .account {
+.fixedNavbar .logOut {
   position: relative;
   display: flex;
   align-items: center;
@@ -192,11 +192,11 @@
   animation: opacity 0.5s;
   transition: 0.3s ease-in-out;
 }
-.fixedNavbar .account:hover {
+.fixedNavbar .logOut:hover {
   color: #86481f;
   transition: 0.2s;
 }
-.fixedNavbar .account:after {
+.fixedNavbar .logOut:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -208,43 +208,13 @@
   transform-origin: bottom;
   transition: transform 0.25s ease-out;
 }
-.fixedNavbar .account:hover::after {
+.fixedNavbar .logOut:hover::after {
   color: #A86B43;
   transform: scaleX(1);
   transform-origin: bottom;
 }
 .fixedNavbar .none {
   display: none;
-}
-.fixedNavbar .nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 5%;
-  left: 31.3%;
-  width: 4%;
-  height: 20%;
-  background-color: wheat;
-  border-radius: 10px;
-  z-index: 10;
-  animation: opacity 0.5s;
-  animation-direction: alternate;
-}
-.fixedNavbar .nav div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 80%;
-}
-.fixedNavbar .nav div .links {
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: saddlebrown;
-  background-color: wheat;
-  text-decoration: none;
 }
 
 @keyframes opacity {

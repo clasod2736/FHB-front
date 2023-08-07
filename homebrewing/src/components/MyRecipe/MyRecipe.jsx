@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 
-//component
+//Component
 import Fav from './Fav/Fav';
 
 export default function MyRecipe() {

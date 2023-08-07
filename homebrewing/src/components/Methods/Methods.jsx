@@ -22,10 +22,11 @@ export default function Methods() {
 
   const [method, setMethod] = useState('');
 
-  //Get state from child component as props
+  //Get props from child component(all the mothod components)
   const getMethod = (data) => {
     setMethod(data)
   }
+  //And setting method component as props from child components
   const settingMethod = () => {
     if (method === '') {
       return (

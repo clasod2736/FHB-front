@@ -9,7 +9,6 @@ import { useSelector } from 'react-redux'
 export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
   const userEmail = useSelector((state) => state.userEmail);
-  console.log(isLogIn)
   const [ oldBrews, setOldBrews ] = useState([])
 
   const { userName, } = useParams();

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -26,31 +26,31 @@ export default function Navbar() {
     }
   }
  
-
-  return (
-    <div className='fixedNavbar'>
-      <div className='guide'>
-        <SlideMenu/>
-      </div>
-      <div className='shop'
-      ><Nav/></div>
-      <Link className='navTitle' to={isLogIn ? `/` : '/'}>For Homey Barista</Link>
-      {settingMyRecipe()}
-      {isLogIn ? <Link className='account' to={'/'}
-      onClick={() => {
-
-        //update info from local storage
-        const localInfo = localStorage.getItem('userInfo');
+  //update logIn information to local strogae, redux store
+  const postingLogIn = () => {
+    const localInfo = localStorage.getItem('userInfo');
         const userInfo = JSON.parse(localInfo);
         userInfo.userEmail = '';
         userInfo.isLoggedIn = false;
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
 
-        //give logOut info to redux store
         dispatch({ type : 'loggedOut'}
+        )}
 
-        )}}
-      >Log Out</Link> : <Link className='login' to={'./login'}>Log In</Link>}
+  return (
+    <div className='fixedNavbar'>
+      <div className='about'>
+        <SlideMenu/>
+      </div>
+      <div className='shop'
+      ><Nav/></div>
+      <Link className='navTitle' to={'/'}>For Homey Barista</Link>
+
+      {settingMyRecipe()}
+      
+      {isLogIn ? <Link className='logOut' to={'/'}
+      onClick={() => {postingLogIn()}}>Log Out</Link>
+      : <Link className='logIn' to={'./login'}>Log In</Link>}
     </div>
   )
 }

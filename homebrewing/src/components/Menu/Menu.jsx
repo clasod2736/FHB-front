@@ -17,11 +17,6 @@ export default function Menu() {
 
     const navigate = useNavigate();
 
-    //stating menuName
-    const handleMenu = (menu) => {
-        setMenuName(menu)
-    }
-
     //handling Side-Menu
     const handleSide = () => {
         if (menuName === "off") {
@@ -57,6 +52,7 @@ export default function Menu() {
             return 'menuContents'
             }
     }
+
     //re-render sideMenu when coffee choices are changed
     useEffect(() => {
         handleSide();
@@ -513,62 +509,62 @@ export default function Menu() {
             <div className='menuTitle'>
                 Choose Today's Brewing.
             </div>
-            <span className='eachMenu'>
-                <div className='eachMenuContainer'>
+            <span className='chociesContainer'>
+                <div className='choices'>
                     <div className='blackCategory'>
-                        <div className='espresso' onClick={() => {handleMenu('espresso')}}>
+                        <div className='espresso' onClick={() => {setMenuName('espresso')}}>
                             <div className='espressoImg'></div>
                             <p>Espresso</p>
                         </div>
-                        <div className='americano' onClick={() => {handleMenu('americano')}}>
+                        <div className='americano' onClick={() => {setMenuName('americano')}}>
                             <div className='americanoImg'></div>
                             <p>Americano</p>
                         </div>
-                        <div className='longBlack' onClick={() => {handleMenu('longBlack')}}>
+                        <div className='longBlack' onClick={() => {setMenuName('longBlack')}}>
                             <div className='longBlackImg'></div>
                             <p>Long Black</p>
                         </div>
-                        <div className='coldBrew' onClick={() => {handleMenu('coldBrew')}}>
+                        <div className='coldBrew' onClick={() => {setMenuName('coldBrew')}}>
                             <div className='coldBrewImg'></div>
                             <p>Cold Brew</p>
                         </div>
                     </div>
                     <div className='whiteCategory'>
-                        <div className='latte' onClick={() => {handleMenu('latte')}}>
+                        <div className='latte' onClick={() => {setMenuName('latte')}}>
                             <div className='latteImg'></div>
                             <p>Latte</p>
                         </div>
-                        <div className='flatWhite' onClick={() => {handleMenu('flatWhite')}}>
+                        <div className='flatWhite' onClick={() => {setMenuName('flatWhite')}}>
                             <div className='flatWhiteImg'></div>
                             <p>Flat White</p>
                         </div>
-                        <div className='cappuccino' onClick={() => {handleMenu('cappuccino')}}>
+                        <div className='cappuccino' onClick={() => {setMenuName('cappuccino')}}>
                             <div className='cappuccinoImg'></div>
                             <p>Capuccino</p>
                         </div>
-                        <div className='mocha' onClick={() => {handleMenu('mocha')}}>
+                        <div className='mocha' onClick={() => {setMenuName('mocha')}}>
                             <div className='mochaImg'></div>
                             <p>Mocha</p>
                         </div>
-                        <div className='macchiato' onClick={() => {handleMenu('macchiato')}}>
+                        <div className='macchiato' onClick={() => {setMenuName('macchiato')}}>
                             <div className='macchiatoImg'></div>
                             <p>Macchiato</p>
                         </div>
                     </div>
                     <div className='othersCategory'>
-                        <div className='chai' onClick={() => {handleMenu('chai')}}>
+                        <div className='chai' onClick={() => {setMenuName('chai')}}>
                             <div className='chaiImg'></div>
                             <p>Chai Latte</p>
                         </div>
-                        <div className='turmeric' onClick={() => {handleMenu('turmeric')}}>
+                        <div className='turmeric' onClick={() => {setMenuName('turmeric')}}>
                             <div className='turmericImg'></div>
                             <p>Turmeric Latte</p>
                         </div>
-                        <div className='icedCoffee' onClick={() => {handleMenu('icedCoffee')}}>
+                        <div className='icedCoffee' onClick={() => {setMenuName('icedCoffee')}}>
                             <div className='icedCoffeeImg'></div>
                             <p>Iced Coffee</p>
                         </div>
-                        <div className='affogato' onClick={() => {handleMenu('affogato')}}>
+                        <div className='affogato' onClick={() => {setMenuName('affogato')}}>
                             <div className='affogatoImg'></div>
                             <p>Affogato</p>
                         </div>

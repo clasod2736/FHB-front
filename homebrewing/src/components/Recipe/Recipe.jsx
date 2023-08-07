@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import './Recipe.css'
 import { useNavigate, useParams } from 'react-router-dom'
 
-//Svg
+//Svg files
 import {ReactComponent as UserMenu} from '../../assets/userMenu.svg'
 import {ReactComponent as UserMethod} from '../../assets/userMethod.svg'
-
 
 export default function Recipe() {
 
@@ -13,7 +12,6 @@ export default function Recipe() {
     const { menuName, methodName } = useParams();
 
     //States for saving Recipes
-    // const [serve, setServe] = useState(1);
     const [water, setWater] = useState(false);
     const [roasting, setRoasting] = useState(false);
     const [grind, setGrind] = useState(false);
@@ -28,12 +26,7 @@ export default function Recipe() {
     const [coffeeOpen, setCoffeeOpen] = useState('');
 
 
-// useEffect(() => {
-//     setWater(serve * 200);
-//     setCoffee(serve * 25)
-//   }, [serve, coffee]);
-
-  //setting chosen coffee and method
+  //setting information what user chose
   const settingUserMenu = () => {
     if (userMenu === false) {
         return (
@@ -90,12 +83,13 @@ export default function Recipe() {
     }
   }
 
-  //setting ingredients
+  //setting ingredients slides
   const settingRoasting = () => {
     if (roastingOpen === true) {
         return (
             <div className='roastingOpen'>
                 <div className='roastingChoice'>
+                    <p>Just push the "Active" button for moving to next.</p>
                     <button onClick={
                         
                         () => {
@@ -121,6 +115,7 @@ export default function Recipe() {
         return (
             <div className='coffeeOpen'>
                 <div className='coffeeChoice'>
+                <p>Just push the "Active" button for moving to next.</p>
                     <button onClick={
                         
                         () => {
@@ -147,6 +142,7 @@ export default function Recipe() {
         return (
             <div className='grindOpen'>
                 <div className='grindChoice'>
+                <p>Just push the "Active" button for moving to next.</p>
                     <button onClick={
                         () => {
                             
@@ -171,6 +167,7 @@ export default function Recipe() {
         return (
             <div className='waterOpen'>
                 <div className='waterChoice'>
+                <p>Just push the "Active" button for moving to next.</p>
                     <button onClick={
                         
                         () => {
@@ -193,7 +190,7 @@ export default function Recipe() {
     }
   }
 
-  //setting button to start brewing
+  //setting start brewing button
   const settingBrewBtn = () => {
     if (typeof water === 'string' &&
         typeof coffee === 'string' &&
@@ -210,7 +207,7 @@ export default function Recipe() {
     } else {
         return (
             <div className='goBrewContainer'>
-                <p>Pleas Choose fix all the recipes!</p>
+                <p>Pleas Fix all the recipes!</p>
             </div>
         )
     }
@@ -254,123 +251,6 @@ export default function Recipe() {
                 {settingGrind()}
                 {settingWater()}
             </div>
-            {/* <div className='menuContents'>
-                    <div className='coffeeChoice'>
-                        <header>Flat White</header>
-                        <Link to={`/${userName}/menu`}>
-                            <button>Change Coffee?</button>
-                        </Link>
-                    </div>
-                    <div className='methodChoice'>
-                        <header>Moka Pot</header>
-                        <Link to={`/${userName}/menu/${menuName}/method`}>
-                            <button>Change Method?</button>
-                        </Link>
-                    </div>
-                    <div className='ratioChoice'>
-                        <div className='ratioOption'>
-                            <div className='serve'>
-                                <div className='serveText'>
-                                    <div className='serveNum'>
-                                        <p>NO. of Serve</p>
-                                        <button onClick={()=>{setServe((prev => prev - 1));
-                                                                if (serve === 1) {
-                                                                    setServe(1);}}}>-</button>
-                                        <p>{serve}</p>
-                                        <button onClick={()=>{setServe((prevServe => prevServe + 1));
-                                                                if (serve === 10) {
-                                                                    setServe(10);}}}>+</button>
-                                    </div>
-                                </div>
-                                <div className='serveBtn'>
-                                    <p>{water}ml</p>
-                                </div>
-                            </div>
-                            <div className='roasting'>
-                                <p>Roasting Level</p>
-                                <div className='roastingLevel'>
-                                    <button className='light' onClick={()=>{setRoasting('light')}}
-                                    style={{opacity: roasting === 'light' ? '1' : '0.3'}}>Light</button>
-                                    <button className='medium' onClick={()=>{setRoasting('medium')}}
-                                    style={{opacity: roasting === 'medium' ? '1' : '0.3'}}>Medium</button>
-                                    <button className='dark' onClick={()=>{setRoasting('dark')}}
-                                    style={{opacity: roasting === 'dark' ? '1' : '0.3'}}>Dark</button>
-                                </div>
-                            </div>
-                            <div className='grind'>
-                                <p>Grind Size</p>
-                                <div className='grindSize'>
-                                    <button className='fine' onClick={()=>{setGrind('fine')}}
-                                    style={{opacity: grind === 'fine' ? '1' : '0.3'}}>Fine</button>
-                                    <button className='medium' onClick={()=>{setGrind('medium')}}
-                                    style={{opacity: grind === 'medium' ? '1' : '0.3'}}>Medium</button>
-                                    <button className='coarse' onClick={()=>{setGrind('coarse')}}
-                                    style={{opacity: grind === 'coarse' ? '1' : '0.3'}}>Coarse</button>
-                                </div>
-                            </div>
-                            <div className='groundCoffee'>
-                                <header>Ground Coffee</header>
-                                <h3>20G</h3>
-                                <p>per serve.</p>
-                            </div>
-                        </div>
-                        <div className='prepList'>
-                            <header>Stuff List</header>
-                            <li>
-                                <input type="checkbox" name='firstList'/>
-                                    <label htmlFor="firstList">Moka Pot</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name='secondList'/>
-                                    <label htmlFor="secondList">Milk Foamer</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name='thirdList'/>
-                                    <label htmlFor="thirdList">Milk 100ml</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name='fourthList'/>
-                                    <label htmlFor="fourthList">{amount}g of coffee</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name='fifthList'/>
-                                    <label htmlFor="fifthList">{water}ml Water</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name='sixthList'/>
-                                    <label htmlFor="sixthList">Bean Grinder</label>
-                            </li>
-                        </div>
-                    </div>
-                    <div className='startBrewing'>
-                        <p>did you check<br/> everything?<br/>
-                        then...</p>
-                        <button onClick={ async () => {
-                            if (roasting === '' || grind === '') {
-                                alert('Please Choose Roasting Level and Grind Size!')
-                            } else {
-                                const serverUrl = 'http://localhost:8080/recipe'
-
-                                try {
-                                    const response = await axios.put (serverUrl, {
-                                        name : userName,
-                                        currentBrews : {
-                                            serve : water,
-                                            coffee: amount,
-                                            roasting: roasting,
-                                            grind: grind
-                                        }                                         
-                                    })
-
-                                    console.log(response.data.currentBrews)
-                                } catch (error) {
-                                    console.log(error)
-                                }
-
-                                navigate(`./brewing/${water}/${amount}/${roasting}/${grind}/step1`)
-                            }}}>Start Brewing!</button>
-                    </div>
-            </div> */}
         </span>
     </div>
   )

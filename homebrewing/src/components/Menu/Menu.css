@@ -29,7 +29,7 @@
   color: rgb(137, 85, 48);
   padding-bottom: 2%;
 }
-.menuContainer .menu .eachMenu {
+.menuContainer .menu .chociesContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -38,7 +38,7 @@
   height: 90%;
   transition: all 0.8s linear;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer {
+.menuContainer .menu .chociesContainer .choices {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -48,7 +48,7 @@
   border-radius: 10px;
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory {
+.menuContainer .menu .chociesContainer .choices .blackCategory {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -56,14 +56,14 @@
   width: 80%;
   height: 90%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory p {
+.menuContainer .menu .chociesContainer .choices .blackCategory p {
   text-align: center;
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .espresso {
+.menuContainer .menu .chociesContainer .choices .blackCategory .espresso {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,27 +74,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .espresso:hover {
+.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .espresso:hover p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:hover p {
   text-shadow: 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .espresso:hover .espressoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:hover .espressoImg {
   box-shadow: 2px 2px 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .espresso:active p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .espresso:active .espressoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:active .espressoImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .espresso .espressoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .espresso .espressoImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -102,7 +102,7 @@
   background-position: 50% 80%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .americano {
+.menuContainer .menu .chociesContainer .choices .blackCategory .americano {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,27 +113,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .americano:hover {
+.menuContainer .menu .chociesContainer .choices .blackCategory .americano:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .americano:hover .americanoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .americano:hover .americanoImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .americano:hover p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .americano:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .americano:active p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .americano:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .americano:active .americanoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .americano:active .americanoImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .americano .americanoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .americano .americanoImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -141,7 +141,7 @@
   background-position: 30%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .longBlack {
+.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,27 +152,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .longBlack:hover {
+.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .longBlack:hover .longBlackImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:hover .longBlackImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .longBlack:hover p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .longBlack:active p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .longBlack:active .longBlackImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:active .longBlackImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .longBlack .longBlackImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack .longBlackImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -180,7 +180,7 @@
   background-position: 100% 80%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .coldBrew {
+.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,27 +191,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .coldBrew:hover {
+.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .coldBrew:hover .coldBrewImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:hover .coldBrewImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .coldBrew:hover p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .coldBrew:active p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .coldBrew:active .coldBrewImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:active .coldBrewImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .blackCategory .coldBrew .coldBrewImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew .coldBrewImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -219,7 +219,7 @@
   background-position: 100% 70%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory {
+.menuContainer .menu .chociesContainer .choices .whiteCategory {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -227,14 +227,14 @@
   width: 100%;
   height: 90%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory p {
   text-align: center;
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .latte {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .latte {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -244,27 +244,27 @@
   border-radius: 20000px;
   cursor: pointer;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .latte:hover {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .latte:hover p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:hover p {
   text-shadow: 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .latte:hover .latteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:hover .latteImg {
   box-shadow: 2px 2px 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .latte:active p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .latte:active .latteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:active .latteImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .latte .latteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .latte .latteImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -272,7 +272,7 @@
   background-position: 50% 80%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .flatWhite {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,27 +282,27 @@
   border-radius: 20000px;
   cursor: pointer;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .flatWhite:hover {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .flatWhite:hover .flatWhiteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:hover .flatWhiteImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .flatWhite:hover p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .flatWhite:active p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .flatWhite:active .flatWhiteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:active .flatWhiteImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .flatWhite .flatWhiteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite .flatWhiteImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -310,7 +310,7 @@
   background-position: 20% 100%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .cappuccino {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -320,27 +320,27 @@
   border-radius: 20000px;
   cursor: pointer;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .cappuccino:hover {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .cappuccino:hover .cappuccinoImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:hover .cappuccinoImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .cappuccino:hover p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .cappuccino:active p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .cappuccino:active .cappuccinoImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:active .cappuccinoImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .cappuccino .cappuccinoImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino .cappuccinoImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -348,7 +348,7 @@
   background-position: 100% 70%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .mocha {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -358,27 +358,27 @@
   border-radius: 20000px;
   cursor: pointer;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .mocha:hover {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .mocha:hover .mochaImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:hover .mochaImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .mocha:hover p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .mocha:active p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .mocha:active .mochaImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:active .mochaImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .mocha .mochaImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha .mochaImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -386,7 +386,7 @@
   background-position: 100% 90%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .macchiato {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -396,27 +396,27 @@
   border-radius: 20000px;
   cursor: pointer;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .macchiato:hover {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .macchiato:hover .macchiatoImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:hover .macchiatoImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .macchiato:hover p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .macchiato:active p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .macchiato:active .macchiatoImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:active .macchiatoImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .whiteCategory .macchiato .macchiatoImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato .macchiatoImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -424,7 +424,7 @@
   background-position: 100% 70%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory {
+.menuContainer .menu .chociesContainer .choices .othersCategory {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -432,14 +432,14 @@
   width: 80%;
   height: 90%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory p {
+.menuContainer .menu .chociesContainer .choices .othersCategory p {
   text-align: center;
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .chai {
+.menuContainer .menu .chociesContainer .choices .othersCategory .chai {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -450,27 +450,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .chai:hover {
+.menuContainer .menu .chociesContainer .choices .othersCategory .chai:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .chai:hover p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .chai:hover p {
   text-shadow: 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .chai:hover .chaiImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .chai:hover .chaiImg {
   box-shadow: 2px 2px 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .chai:active p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .chai:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .chai:active .chaiImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .chai:active .chaiImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .chai .chaiImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .chai .chaiImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -478,7 +478,7 @@
   background-position: 50% 60%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .turmeric {
+.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -489,27 +489,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .turmeric:hover {
+.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .turmeric:hover .turmericImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:hover .turmericImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .turmeric:hover p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .turmeric:active p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .turmeric:active .turmericImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:active .turmericImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .turmeric .turmericImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric .turmericImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -517,7 +517,7 @@
   background-position: 30%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .icedCoffee {
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -528,27 +528,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .icedCoffee:hover {
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .icedCoffee:hover .icedCoffeeImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:hover .icedCoffeeImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .icedCoffee:hover p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .icedCoffee:active p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .icedCoffee:active .icedCoffeeImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:active .icedCoffeeImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .icedCoffee .icedCoffeeImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee .icedCoffeeImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -556,7 +556,7 @@
   background-position: 100% 30%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .affogato {
+.menuContainer .menu .chociesContainer .choices .othersCategory .affogato {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -567,27 +567,27 @@
   cursor: pointer;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .affogato:hover {
+.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .affogato:hover .affogatoImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:hover .affogatoImg {
   box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .affogato:hover p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:hover p {
   text-shadow: 3px 3px rgb(177, 177, 177);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .affogato:active p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .affogato:active .affogatoImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:active .affogatoImg {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .eachMenu .eachMenuContainer .othersCategory .affogato .affogatoImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .affogato .affogatoImg {
   width: 80%;
   height: 80%;
   border-radius: 2000000px;
@@ -595,7 +595,7 @@
   background-position: 100% 70%;
   background-size: cover;
 }
-.menuContainer .menu .eachMenu .menuContents {
+.menuContainer .menu .chociesContainer .menuContents {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -614,7 +614,7 @@
   transition: all 0.8s linear;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .title {
+.menuContainer .menu .chociesContainer .menuContents .title {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -622,7 +622,7 @@
   width: 100%;
   height: 25%;
 }
-.menuContainer .menu .eachMenu .menuContents .title .titleandBtn {
+.menuContainer .menu .chociesContainer .menuContents .title .titleandBtn {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -631,7 +631,7 @@
   height: 30%;
   min-width: 270px;
 }
-.menuContainer .menu .eachMenu .menuContents .title .titleandBtn button {
+.menuContainer .menu .chociesContainer .menuContents .title .titleandBtn button {
   text-align: center;
   color: saddlebrown;
   font-size: 25px;
@@ -642,11 +642,11 @@
   border-radius: 100%;
   padding-inline: 0;
 }
-.menuContainer .menu .eachMenu .menuContents .title .titleandBtn button:hover {
+.menuContainer .menu .chociesContainer .menuContents .title .titleandBtn button:hover {
   transform: scale(1.3);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .menuContents .title .titleandBtn header {
+.menuContainer .menu .chociesContainer .menuContents .title .titleandBtn header {
   width: 70%;
   font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -658,7 +658,7 @@
   margin-left: 8%;
   border-radius: 5px;
 }
-.menuContainer .menu .eachMenu .menuContents .title .titleText {
+.menuContainer .menu .chociesContainer .menuContents .title .titleText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -668,7 +668,7 @@
   min-width: 300px;
   padding-inline: 2%;
 }
-.menuContainer .menu .eachMenu .menuContents .title .titleText p {
+.menuContainer .menu .chociesContainer .menuContents .title .titleText p {
   text-align: center;
   font-size: 15px;
   color: saddlebrown;
@@ -677,7 +677,7 @@
   white-space: pre-line;
   margin-bottom: 3%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -688,7 +688,7 @@
   min-width: 240px;
   padding-block: 3%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle header {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle header {
   width: 90%;
   height: 15%;
   font-size: 40px;
@@ -699,7 +699,7 @@
   background-color: wheat;
   margin-top: 5%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .ingredients {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -709,19 +709,19 @@
   font-weight: bold;
   font-size: 18px;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients h3 {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .ingredients h3 {
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   font-weight: bold;
   margin-bottom: 0%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle .ingredients p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .ingredients p {
   font-size: 13px;
   color: sandybrown;
   margin-bottom: 0;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -729,7 +729,7 @@
   width: 110%;
   height: 30%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span div {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -737,11 +737,11 @@
   width: 30%;
   height: 70%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .espresso {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .espresso {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .espresso p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .espresso p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -749,16 +749,16 @@
   color: saddlebrown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .espresso .beanIcon {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .espresso .beanIcon {
   height: 60%;
   font-size: 35px;
   color: #732400;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .water {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .water {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .water p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .water p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -766,16 +766,16 @@
   color: lightslategray;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .water .waterIcon {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .water .waterIcon {
   height: 60%;
   font-size: 40px;
   color: slategrey;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .milk {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milk {
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .milk p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milk p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -783,16 +783,16 @@
   color: linen;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .milk .milkIcon {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milk .milkIcon {
   height: 60%;
   font-size: 50px;
   color: linen;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .milkFoam {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milkFoam {
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .milkFoam p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milkFoam p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -800,11 +800,11 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .choco {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .choco {
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .choco p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .choco p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -812,16 +812,16 @@
   color: sienna;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .choco .chocoIcon {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .choco .chocoIcon {
   height: 60%;
   font-size: 50px;
   color: sienna;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .chai {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .chai {
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .chai p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .chai p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -829,16 +829,16 @@
   color: brown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .chai .chaiIcon {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .chai .chaiIcon {
   height: 60%;
   font-size: 35px;
   color: brown;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .turmericIng {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .turmericIng {
   border-radius: 5px;
   background-color: antiquewhite;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .turmericIng p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .turmericIng p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -846,16 +846,16 @@
   color: goldenrod;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .turmericIng .turmericIcon {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .turmericIng .turmericIcon {
   height: 60%;
   font-size: 45px;
   color: goldenrod;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .iceCream {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .iceCream {
   border-radius: 5px;
   background-color: rgb(247, 181, 159);
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .iceCream p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .iceCream p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -863,12 +863,12 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle span .iceCream .iceCreamIcon {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .iceCream .iceCreamIcon {
   height: 60%;
   font-size: 50px;
   color: white;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle .coffeeText {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .coffeeText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -876,14 +876,14 @@
   width: 100%;
   height: 50%;
 }
-.menuContainer .menu .eachMenu .menuContents .coffeeTitle .coffeeText p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .coffeeText p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: darkgoldenrod;
   margin-bottom: 5%;
 }
-.menuContainer .menu .eachMenu .menuContents .getMenuBtn {
+.menuContainer .menu .chociesContainer .menuContents .getMenuBtn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -892,13 +892,13 @@
   height: 15%;
   min-width: 300px;
 }
-.menuContainer .menu .eachMenu .menuContents .getMenuBtn p {
+.menuContainer .menu .chociesContainer .menuContents .getMenuBtn p {
   font-size: 12px;
   color: brown;
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .eachMenu .menuContents .getMenuBtn button {
+.menuContainer .menu .chociesContainer .menuContents .getMenuBtn button {
   height: 50%;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -907,12 +907,12 @@
   border: #ad9984;
   border-radius: 10px;
 }
-.menuContainer .menu .eachMenu .menuContents .getMenuBtn button:hover {
+.menuContainer .menu .chociesContainer .menuContents .getMenuBtn button:hover {
   background-color: saddlebrown;
   color: wheat;
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .menuContentsClose {
+.menuContainer .menu .chociesContainer .menuContentsClose {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -931,7 +931,7 @@
   transition: all 0.8s linear;
   padding: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .title {
+.menuContainer .menu .chociesContainer .menuContentsClose .title {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -939,7 +939,7 @@
   width: 100%;
   height: 25%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .title .titleandBtn {
+.menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -948,7 +948,7 @@
   height: 30%;
   min-width: 270px;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .title .titleandBtn button {
+.menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn button {
   text-align: center;
   color: saddlebrown;
   font-size: 25px;
@@ -959,11 +959,11 @@
   border-radius: 100%;
   padding-inline: 0;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .title .titleandBtn button:hover {
+.menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn button:hover {
   transform: scale(1.3);
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .title .titleandBtn header {
+.menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn header {
   width: 70%;
   font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -975,7 +975,7 @@
   margin-left: 8%;
   border-radius: 5px;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .title .titleText {
+.menuContainer .menu .chociesContainer .menuContentsClose .title .titleText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -985,7 +985,7 @@
   min-width: 300px;
   padding-inline: 2%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .title .titleText p {
+.menuContainer .menu .chociesContainer .menuContentsClose .title .titleText p {
   text-align: center;
   font-size: 15px;
   color: saddlebrown;
@@ -994,7 +994,7 @@
   white-space: pre-line;
   margin-bottom: 3%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1005,7 +1005,7 @@
   min-width: 240px;
   padding-block: 3%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle header {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle header {
   width: 90%;
   height: 15%;
   font-size: 40px;
@@ -1016,7 +1016,7 @@
   background-color: wheat;
   margin-top: 5%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .ingredients {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1026,19 +1026,19 @@
   font-weight: bold;
   font-size: 18px;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients h3 {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .ingredients h3 {
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   font-weight: bold;
   margin-bottom: 0%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .ingredients p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .ingredients p {
   font-size: 13px;
   color: sandybrown;
   margin-bottom: 0;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -1046,7 +1046,7 @@
   width: 110%;
   height: 30%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span div {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1054,11 +1054,11 @@
   width: 30%;
   height: 70%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .espresso {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .espresso {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .espresso p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .espresso p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1066,16 +1066,16 @@
   color: saddlebrown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .espresso .beanIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .espresso .beanIcon {
   height: 60%;
   font-size: 35px;
   color: #732400;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .water {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .water {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .water p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .water p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1083,16 +1083,16 @@
   color: lightslategray;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .water .waterIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .water .waterIcon {
   height: 60%;
   font-size: 40px;
   color: slategrey;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milk {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milk {
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milk p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milk p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1100,16 +1100,16 @@
   color: linen;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milk .milkIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milk .milkIcon {
   height: 60%;
   font-size: 50px;
   color: linen;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milkFoam {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milkFoam {
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .milkFoam p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milkFoam p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1117,11 +1117,11 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .choco {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .choco {
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .choco p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .choco p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1129,16 +1129,16 @@
   color: sienna;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .choco .chocoIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .choco .chocoIcon {
   height: 60%;
   font-size: 50px;
   color: sienna;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .chai {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .chai {
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .chai p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .chai p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1146,16 +1146,16 @@
   color: brown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .chai .chaiIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .chai .chaiIcon {
   height: 60%;
   font-size: 35px;
   color: brown;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .turmericIng {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .turmericIng {
   border-radius: 5px;
   background-color: antiquewhite;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .turmericIng p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .turmericIng p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1163,16 +1163,16 @@
   color: goldenrod;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .turmericIng .turmericIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .turmericIng .turmericIcon {
   height: 60%;
   font-size: 45px;
   color: goldenrod;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .iceCream {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .iceCream {
   border-radius: 5px;
   background-color: rgb(247, 181, 159);
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .iceCream p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .iceCream p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1180,12 +1180,12 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle span .iceCream .iceCreamIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .iceCream .iceCreamIcon {
   height: 60%;
   font-size: 50px;
   color: white;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .coffeeText {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .coffeeText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1193,14 +1193,14 @@
   width: 100%;
   height: 50%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .coffeeTitle .coffeeText p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .coffeeText p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: darkgoldenrod;
   margin-bottom: 5%;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .getMenuBtn {
+.menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1209,13 +1209,13 @@
   height: 15%;
   min-width: 300px;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .getMenuBtn p {
+.menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn p {
   font-size: 12px;
   color: brown;
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .getMenuBtn button {
+.menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn button {
   height: 50%;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -1224,12 +1224,12 @@
   border: #ad9984;
   border-radius: 10px;
 }
-.menuContainer .menu .eachMenu .menuContentsClose .getMenuBtn button:hover {
+.menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn button:hover {
   background-color: saddlebrown;
   color: wheat;
   transition: 0.3s;
 }
-.menuContainer .menu .eachMenu .menuContentsOff {
+.menuContainer .menu .chociesContainer .menuContentsOff {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

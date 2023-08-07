@@ -623,7 +623,6 @@ const updateFavRoasting = async (oldFav, newFavRoasting) => {
         console.log(error)
     }
 }
-
 //7. custom Grind Size
 const updateFavGrind = async (oldFav, newFavGrind) => {
     console.log(oldFav, newFavGrind)

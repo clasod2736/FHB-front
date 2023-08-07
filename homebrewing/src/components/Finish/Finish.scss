@@ -9,7 +9,7 @@
 
     animation: opacity 0.5s;
 
-    .finishContents {
+    .finish {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -27,244 +27,194 @@
         overflow: hidden;
         object-fit: cover;
 
+        .finishContents {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 100%;
+            height: 60%;
+            
+            header {
+                text-align: center;
+                width: 35%;
+                font-size: 25px;
+                font-weight: bold;
+                color: brown;
+                background-color: wheat;
+                border-radius: 5px;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
             .finishText {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
 
-                width: 100%;
-                height: 60%;
-                
-                header {
-                    text-align: center;
-                    width: 35%;
-                    font-size: 25px;
+                margin-top: 3%;
+
+                p {
+                    color: darkgoldenrod;
+                    font-size: 16px;
                     font-weight: bold;
-                    color: brown;
-                    background-color: wheat;
-                    border-radius: 5px;
-                    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                 }
-    
-                .pContainer {
+
+            }
+            .btnContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+
+                width: 70%;
+                height: 20%;
+
+                .tryAnother{ 
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-start;
+                    justify-content: center;
                     align-items: center;
-    
-                    margin-top: 3%;
-    
-                    p {
-                        color: darkgoldenrod;
-                        font-size: 16px;
-                        font-weight: bold;
-                        font-family: Arial, Helvetica, sans-serif;
+
+                    width: 25%;
+                    height: 40%;
+                    font-size: 22px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    border-radius: 10px;
+                    border: 0;    
+                    text-decoration: none;
+
+                    color: linen;
+                    background-color: sienna;
+                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                    &:hover {
+                        color: brown;
+                        background-color: bisque;
+                        transition: 0.3s;
                     }
-    
+                    &:active {
+                        box-shadow: 0px 0px 0px 0px;
+                        transform: translateY(3%);
+                        transition: 0s;
+                    }
                 }
+
+                .recipe { 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: 25%;
+                    height: 40%;
+                    font-size: 22px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    border-radius: 10px;
+                    border: 0;    
+                    text-decoration: none;
+
+                    color: linen;
+                    background-color: sienna;
+                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                    &:hover {
+                        color: brown;
+                        background-color: bisque;
+                        transition: 0.3s;
+                    }
+                    &:active {
+                        box-shadow: 0px 0px 0px 0px;
+                        transform: translateY(3%);
+                        transition: 0s;
+                    }
+                }
+
+                button {
+                    width: 25%;
+                    height: 40%;
+                    font-size: 22px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    border-radius: 10px;
+                    border: 0;    
+
+                    color: linen;
+                    background-color: sienna;
+                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                    &:hover {
+                        color: brown;
+                        background-color: bisque;
+                        transition: 0.3s;
+                    }
+                    &:active {
+                        box-shadow: 0px 0px 0px 0px;
+                        transform: translateY(3%);
+                        transition: 0s;
+                    }
+
+                }
+            }
+            .favSubmit {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 20%;
+
+                transition: all 0.3s linear;
+                animation: opacity 0.3s;
+                animation-direction: alternate;
+
+                input {
+                    font-size: 20px;
+                    background-color: wheat;
+                    color: brown;
+                    border: 2px sienna solid;
+                    border-radius: 5px;
+                    outline: none;
+
+                    padding: 1%;
+                    padding-left: 5%;
+                }
+
                 .btnContainer {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-evenly;
                     align-items: center;
 
-                    width: 70%;
-                    height: 20%;
-
-                    .tryAnother{ 
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        width: 25%;
-                        height: 40%;
-                        font-size: 22px;
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-                        border-radius: 10px;
-                        border: 0;    
-                        text-decoration: none;
-
-                        color: linen;
-                        background-color: sienna;
-                        box-shadow: 2px 3px 0px 1px darkgoldenrod;
-
-                        &:hover {
-                            color: brown;
-                            background-color: bisque;
-                            transition: 0.3s;
-                        }
-                        &:active {
-                            box-shadow: 0px 0px 0px 0px;
-                            transform: translateY(3%);
-                            transition: 0s;
-                        }
-                    }
-
-                    .recipe { 
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        
-                        width: 25%;
-                        height: 40%;
-                        font-size: 22px;
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-                        border-radius: 10px;
-                        border: 0;    
-                        text-decoration: none;
-
-                        color: linen;
-                        background-color: sienna;
-                        box-shadow: 2px 3px 0px 1px darkgoldenrod;
-
-                        &:hover {
-                            color: brown;
-                            background-color: bisque;
-                            transition: 0.3s;
-                        }
-                        &:active {
-                            box-shadow: 0px 0px 0px 0px;
-                            transform: translateY(3%);
-                            transition: 0s;
-                        }
-                    }
-
+                    height: 100%;
+                    width: 80%;
+                    
                     button {
-                        width: 25%;
-                        height: 40%;
-                        font-size: 22px;
+                        width: 20%;
+                        height: 50%;
+                        font-size: 20px;
+                        border-radius: 100%;
+                        background-color:sienna;
+                        color: wheat;
+                    }
+
+                    .submitBtn {
+                        display: flex;
+
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        width: 60%;
+                        height: 50%;
+                        font-size: 18px;
                         font-family: Verdana, Geneva, Tahoma, sans-serif;
                         border-radius: 10px;
                         border: 0;    
 
-                        color: linen;
-                        background-color: sienna;
-                        box-shadow: 2px 3px 0px 1px darkgoldenrod;
-
-                        &:hover {
-                            color: brown;
-                            background-color: bisque;
-                            transition: 0.3s;
-                        }
-                        &:active {
-                            box-shadow: 0px 0px 0px 0px;
-                            transform: translateY(3%);
-                            transition: 0s;
-                        }
-
-                    }
-                }
-                .favSubmit {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    height: 20%;
-
-                    transition: all 0.3s linear;
-                    animation: opacity 0.3s;
-                    animation-direction: alternate;
-
-                    input {
-                        font-size: 20px;
-                        background-color: wheat;
-                        color: brown;
-                        border: 2px sienna solid;
-                        border-radius: 5px;
-                        outline: none;
-
-                        padding: 1%;
-                        padding-left: 5%;
-                    }
-
-                    .btnContainer {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-evenly;
-                        align-items: center;
-
-                        height: 100%;
-                        width: 80%;
-                        
-                        button {
-                            width: 20%;
-                            height: 50%;
-                            font-size: 20px;
-                            border-radius: 100%;
-                            background-color:sienna;
-                            color: wheat;
-                        }
-
-                        .submitBtn {
-                            display: flex;
-    
-                            justify-content: center;
-                            align-items: center;
-                            text-decoration: none;
-                            width: 60%;
-                            height: 50%;
-                            font-size: 18px;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            border-radius: 10px;
-                            border: 0;    
-    
-                            color: lightslategray;
-                            background-color: wheat;
-                            box-shadow: 2px 3px 0px 1px darkgoldenrod;
-                            transition: 0.3s;
-    
-                            &:hover {
-                                color: slategrey;
-                                background-color:antiquewhite;
-                                transition: 0.3s;
-                            }
-                            &:active {
-                                box-shadow: 0px 0px 0px 0px;
-                                transform: translateY(3%);
-                                transition: 0s;
-                            }
-                        }
-                    }
-                    .none {
-                        display: none;
-                    }
-
-                }
-
-                .afterSaveFav {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 18%;
-
-                    p {
-                        font-size: 30px;
-                        color: sienna;
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-                        margin-bottom: 0;
-    
-                        animation: opacity 0.5s;
-                    }
-
-                    .goMyRecipeBtn {
-                        text-decoration: none;
-                        font-size: 18px;
-                        font-weight: bold;
-                        
                         color: lightslategray;
                         background-color: wheat;
                         box-shadow: 2px 3px 0px 1px darkgoldenrod;
                         transition: 0.3s;
-
-                        padding-inline: 1%;
-                        border-radius: 5px;
 
                         &:hover {
                             color: slategrey;
@@ -278,6 +228,55 @@
                         }
                     }
                 }
+                .none {
+                    display: none;
+                }
+
             }
+            .afterSaveFav {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                width: 100%;
+                height: 18%;
+
+                p {
+                    font-size: 30px;
+                    color: sienna;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                    margin-bottom: 0;
+
+                    animation: opacity 0.5s;
+                }
+
+                .goMyRecipeBtn {
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: bold;
+                    
+                    color: lightslategray;
+                    background-color: wheat;
+                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+                    transition: 0.3s;
+
+                    padding-inline: 1%;
+                    border-radius: 5px;
+
+                    &:hover {
+                        color: slategrey;
+                        background-color:antiquewhite;
+                        transition: 0.3s;
+                    }
+                    &:active {
+                        box-shadow: 0px 0px 0px 0px;
+                        transform: translateY(3%);
+                        transition: 0s;
+                    }
+                }
+            }
+        }
     }
 }

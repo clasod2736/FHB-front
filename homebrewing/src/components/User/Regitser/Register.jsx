@@ -64,7 +64,7 @@ export default function User() {
             //request for making user data in database to back end
             postUser()
 
-            alert("J@J Registered!!")
+            alert("User J@J Registered!!")
           }
         }
 

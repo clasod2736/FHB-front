@@ -92,14 +92,6 @@
   box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;
 }
 
-@keyframes pSlide1 {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 @media all and (min-width: 1681px) and (max-width: 2100px) {
   .introContainer .logoContainer {
     height: 100%;

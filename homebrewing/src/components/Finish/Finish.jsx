@@ -59,6 +59,7 @@ export default function Finish() {
   //get error response if Fav store is full.
   useEffect(() => {
     if (favResponse === "422") {
+      setSaved(false);
       alert('You have 5 favourite brew already! You can manage in My Recipe page.')
       setFavResponse('')
       navigate(`/myRecipe`)
@@ -66,7 +67,7 @@ export default function Finish() {
     }
   }, [ favResponse ])
 
-  //Post favourite brew in DB
+  //Post NEW favourite brew in DB
   const saveFavBrews = async () => {
     
     if (favName === '' ) {
@@ -108,33 +109,39 @@ export default function Finish() {
               description: ''
             }]
         })
+
         console.log(response)
         setFavResponse(JSON.stringify(response.status))
+        setFavName('')
       } 
       catch (error) {
+
         console.log(error)
         const errMessage = error.response.status
         setFavResponse(JSON.stringify(errMessage));
         console.log(favResponse)
         return
+
       }
     }
   }
   
   return (
     <div className='finishContainer'>
-        <div className='finishContents'>
-          <div className='finishText'>
+        <div className='finish'>
+          <div className='finishContents'>
             <header>How was your Coffee today?</header>
-            <div className='pContainer'>
+            <div className='finishText'>
               <p>It is a long established fact that a reader will be distracted</p>
               <p>it look like readable English. Many desktop</p>
             </div>
             <div className='btnContainer'>
               <button className='recipe'
               onClick={() => {
+
                 setFavOpen(true);
                 setSaved(false)
+
                 }}>Save Favourite</button>
               <Link to={'/menu'} className='tryAnother'>
                 Try Another
@@ -149,9 +156,10 @@ export default function Finish() {
                 <button onClick={() => {setFavOpen(false)}}>X</button>
                 <button className='submitBtn'
                 onClick={() => {
+
                   saveFavBrews();
                   setFavOpen(false);
-                  setSaved((prev) => !prev);
+
                 }}
                 >Submit</button>
               </div>

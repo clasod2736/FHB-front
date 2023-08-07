@@ -6,8 +6,7 @@
   width: 60%;
   height: 70vh;
 }
-
-.step7 {
+.brewingContainer .step7 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +18,7 @@
   border-radius: 20px;
   animation: opacity 0.5s;
 }
-.step7 header {
+.brewingContainer .step7 header {
   width: 70%;
   text-align: center;
   font-size: 40px;
@@ -27,7 +26,7 @@
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: 2px solid sienna;
 }
-.step7 img {
+.brewingContainer .step7 img {
   width: 70%;
   height: 50%;
   -o-object-fit: cover;
@@ -35,7 +34,7 @@
   overflow: hidden;
   margin-top: 3%;
 }
-.step7 .step7Text {
+.brewingContainer .step7 .step7Text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,14 +42,7 @@
   width: 90%;
   height: 25%;
 }
-.step7 p {
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: sienna;
-  text-align: center;
-  margin-block: 1.5%;
-}
-.step7 .btnContainer {
+.brewingContainer .step7 .btnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -58,10 +50,10 @@
   width: 80%;
   height: 10%;
 }
-.step7 .btnContainer #backBtn, .step7 .btnContainer #nextBtn {
+.brewingContainer .step7 .btnContainer #backBtn, .brewingContainer .step7 .btnContainer #nextBtn {
   width: 30%;
 }
-.step7 .btnContainer button {
+.brewingContainer .step7 .btnContainer button {
   width: 100%;
   font-size: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -70,7 +62,7 @@
   border: 0;
   border-radius: 20px;
 }
-.step7 .btnContainer button:hover {
+.brewingContainer .step7 .btnContainer button:hover {
   color: saddlebrown;
   background-color: burlywood;
   transition: 0.3s;

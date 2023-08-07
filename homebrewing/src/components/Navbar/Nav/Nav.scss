@@ -67,184 +67,179 @@
             letter-spacing: 3px;
         }
     }
-
 }
 
-    @media all and (min-width:1681px)  and (max-width:2100px) {
-        .navBtn {
-            font-size: 18px!important;
-            margin-left: 0!important;
+//Responsiv eWeb codes
+@media all and (min-width:1681px)  and (max-width:2100px) {
+    .navBtn {
+        font-size: 18px!important;
+        margin-left: 0!important;
+    }
+
+    .canvas {
+        width: 25%!important;
+    }
+
+
+    .slideHeader {
+
+        .slideTitle {
+            font-size: 23px!important;
         }
-    
-        .canvas {
-            width: 25%!important;
-        }
+    }
 
+    .canvasBody {
 
-        .slideHeader {
+        .nav {
+            width: 100%;
 
-            .slideTitle {
-                font-size: 23px!important;
-            }
-        }
-
-        .canvasBody {
-
-            .nav {
-                width: 100%;
-
-                .links {
-                    font-size: 18px!important;
-                }
+            .links {
+                font-size: 18px!important;
             }
         }
     }
-    
-    @media all and (min-width:1280px)  and (max-width:1680px) {
-        .navBtn {
-            font-size: 16px!important;
-            margin-left: 0!important;
+}
+@media all and (min-width:1280px)  and (max-width:1680px) {
+    .navBtn {
+        font-size: 16px!important;
+        margin-left: 0!important;
+    }
+
+    .canvas {
+        width: 25%!important;
+    }
+
+
+    .slideHeader {
+
+        .slideTitle {
+            font-size: 23px!important;
         }
-    
-        .canvas {
-            width: 25%!important;
-        }
+    }
 
+    .canvasBody {
 
-        .slideHeader {
+        .nav {
+            width: 100%;
 
-            .slideTitle {
-                font-size: 23px!important;
-            }
-        }
-
-        .canvasBody {
-
-            .nav {
-                width: 100%;
-
-                .links {
-                    font-size: 18px!important;
-                }
+            .links {
+                font-size: 18px!important;
             }
         }
     }
-    
-    @media all and (min-width:1024px) and (max-width:1279px) {
-        .navBtn {
-            font-size: 13px!important;
-            margin-left: 0!important;
+}
+@media all and (min-width:1024px) and (max-width:1279px) {
+    .navBtn {
+        font-size: 13px!important;
+        margin-left: 0!important;
+    }
+
+    .canvas {
+        width: 30%!important;
+    }
+
+
+    .slideHeader {
+
+        .slideTitle {
+            font-size: 23px!important;
         }
-    
-        .canvas {
-            width: 30%!important;
-        }
+    }
 
+    .canvasBody {
 
-        .slideHeader {
+        .nav {
+            width: 100%;
 
-            .slideTitle {
-                font-size: 23px!important;
-            }
-        }
-
-        .canvasBody {
-
-            .nav {
-                width: 100%;
-
-                .links {
-                    font-size: 18px!important;
-                }
+            .links {
+                font-size: 18px!important;
             }
         }
     }
-    
-    @media all and (min-width:768px) and (max-width:1023px) {
-        .navBtn {
-            font-size: 12px!important;
-            margin-left: 0!important;
+}
+@media all and (min-width:768px) and (max-width:1023px) {
+    .navBtn {
+        font-size: 12px!important;
+        margin-left: 0!important;
+    }
+
+    .canvas {
+        width: 35%!important;
+    }
+
+
+    .slideHeader {
+
+        .slideTitle {
+            font-size: 20px!important;
         }
-    
-        .canvas {
-            width: 35%!important;
-        }
+    }
 
+    .canvasBody {
 
-        .slideHeader {
+        .nav {
+            width: 100%;
 
-            .slideTitle {
-                font-size: 20px!important;
-            }
-        }
-
-        .canvasBody {
-
-            .nav {
-                width: 100%;
-
-                .links {
-                    font-size: 16px!important;
-                }
+            .links {
+                font-size: 16px!important;
             }
         }
     }
-    
-    @media all and (min-width:480px) and (max-width:767px) {
-        .navBtn {
-            font-size: 12px!important;
-            margin-left: 0!important;
+}
+@media all and (min-width:480px) and (max-width:767px) {
+    .navBtn {
+        font-size: 12px!important;
+        margin-left: 0!important;
+    }
+
+    .canvas {
+        width: 40%!important;
+    }
+
+    .slideHeader {
+
+        .slideTitle {
+            font-size: 20px!important;
         }
-    
-        .canvas {
-            width: 40%!important;
-        }
+    }
 
-        .slideHeader {
+    .canvasBody {
 
-            .slideTitle {
-                font-size: 20px!important;
-            }
-        }
+        .nav {
+            width: 100%;
 
-        .canvasBody {
-
-            .nav {
-                width: 100%;
-
-                .links {
-                    font-size: 16px!important;
-                }
+            .links {
+                font-size: 16px!important;
             }
         }
     }
-    
-    @media all and (max-width:479px) {
-        .navBtn {
-            font-size: 10px!important;
-            margin-left: 0!important;
-        }
-    
-        .canvas {
-            width: 60%!important;
-        }
-
-        .slideHeader {
-
-            .slideTitle {
-                font-size: 20px!important;
-            }
-        }
-
-        .canvasBody {
-
-            .nav {
-                width: 100%;
-
-                .links {
-                    font-size: 16px!important;
-                }
-            }
-        }
-
+}
+@media all and (max-width:479px) {
+    .navBtn {
+        font-size: 10px!important;
+        margin-left: 0!important;
     }
+
+    .canvas {
+        width: 60%!important;
+    }
+
+    .slideHeader {
+
+        .slideTitle {
+            font-size: 20px!important;
+        }
+    }
+
+    .canvasBody {
+
+        .nav {
+            width: 100%;
+
+            .links {
+                font-size: 16px!important;
+            }
+        }
+    }
+
+}

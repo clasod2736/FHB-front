@@ -7,7 +7,7 @@
   height: 70vh;
   animation: opacity 0.5s;
 }
-.finishContainer .finishContents {
+.finishContainer .finish {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -22,7 +22,7 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.finishContainer .finishContents .finishText {
+.finishContainer .finish .finishContents {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -30,7 +30,7 @@
   width: 100%;
   height: 60%;
 }
-.finishContainer .finishContents .finishText header {
+.finishContainer .finish .finishContents header {
   text-align: center;
   width: 35%;
   font-size: 25px;
@@ -40,20 +40,20 @@
   border-radius: 5px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-.finishContainer .finishContents .finishText .pContainer {
+.finishContainer .finish .finishContents .finishText {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: 3%;
 }
-.finishContainer .finishContents .finishText .pContainer p {
+.finishContainer .finish .finishContents .finishText p {
   color: darkgoldenrod;
   font-size: 16px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
-.finishContainer .finishContents .finishText .btnContainer {
+.finishContainer .finish .finishContents .btnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -61,7 +61,7 @@
   width: 70%;
   height: 20%;
 }
-.finishContainer .finishContents .finishText .btnContainer .tryAnother {
+.finishContainer .finish .finishContents .btnContainer .tryAnother {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,17 +77,17 @@
   background-color: sienna;
   box-shadow: 2px 3px 0px 1px darkgoldenrod;
 }
-.finishContainer .finishContents .finishText .btnContainer .tryAnother:hover {
+.finishContainer .finish .finishContents .btnContainer .tryAnother:hover {
   color: brown;
   background-color: bisque;
   transition: 0.3s;
 }
-.finishContainer .finishContents .finishText .btnContainer .tryAnother:active {
+.finishContainer .finish .finishContents .btnContainer .tryAnother:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
 }
-.finishContainer .finishContents .finishText .btnContainer .recipe {
+.finishContainer .finish .finishContents .btnContainer .recipe {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,17 +103,17 @@
   background-color: sienna;
   box-shadow: 2px 3px 0px 1px darkgoldenrod;
 }
-.finishContainer .finishContents .finishText .btnContainer .recipe:hover {
+.finishContainer .finish .finishContents .btnContainer .recipe:hover {
   color: brown;
   background-color: bisque;
   transition: 0.3s;
 }
-.finishContainer .finishContents .finishText .btnContainer .recipe:active {
+.finishContainer .finish .finishContents .btnContainer .recipe:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
 }
-.finishContainer .finishContents .finishText .btnContainer button {
+.finishContainer .finish .finishContents .btnContainer button {
   width: 25%;
   height: 40%;
   font-size: 22px;
@@ -124,17 +124,17 @@
   background-color: sienna;
   box-shadow: 2px 3px 0px 1px darkgoldenrod;
 }
-.finishContainer .finishContents .finishText .btnContainer button:hover {
+.finishContainer .finish .finishContents .btnContainer button:hover {
   color: brown;
   background-color: bisque;
   transition: 0.3s;
 }
-.finishContainer .finishContents .finishText .btnContainer button:active {
+.finishContainer .finish .finishContents .btnContainer button:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
 }
-.finishContainer .finishContents .finishText .favSubmit {
+.finishContainer .finish .finishContents .favSubmit {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -144,7 +144,7 @@
   animation: opacity 0.3s;
   animation-direction: alternate;
 }
-.finishContainer .finishContents .finishText .favSubmit input {
+.finishContainer .finish .finishContents .favSubmit input {
   font-size: 20px;
   background-color: wheat;
   color: brown;
@@ -154,7 +154,7 @@
   padding: 1%;
   padding-left: 5%;
 }
-.finishContainer .finishContents .finishText .favSubmit .btnContainer {
+.finishContainer .finish .finishContents .favSubmit .btnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -162,7 +162,7 @@
   height: 100%;
   width: 80%;
 }
-.finishContainer .finishContents .finishText .favSubmit .btnContainer button {
+.finishContainer .finish .finishContents .favSubmit .btnContainer button {
   width: 20%;
   height: 50%;
   font-size: 20px;
@@ -170,7 +170,7 @@
   background-color: sienna;
   color: wheat;
 }
-.finishContainer .finishContents .finishText .favSubmit .btnContainer .submitBtn {
+.finishContainer .finish .finishContents .favSubmit .btnContainer .submitBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,20 +186,20 @@
   box-shadow: 2px 3px 0px 1px darkgoldenrod;
   transition: 0.3s;
 }
-.finishContainer .finishContents .finishText .favSubmit .btnContainer .submitBtn:hover {
+.finishContainer .finish .finishContents .favSubmit .btnContainer .submitBtn:hover {
   color: slategrey;
   background-color: antiquewhite;
   transition: 0.3s;
 }
-.finishContainer .finishContents .finishText .favSubmit .btnContainer .submitBtn:active {
+.finishContainer .finish .finishContents .favSubmit .btnContainer .submitBtn:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
 }
-.finishContainer .finishContents .finishText .favSubmit .none {
+.finishContainer .finish .finishContents .favSubmit .none {
   display: none;
 }
-.finishContainer .finishContents .finishText .afterSaveFav {
+.finishContainer .finish .finishContents .afterSaveFav {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -207,14 +207,14 @@
   width: 100%;
   height: 18%;
 }
-.finishContainer .finishContents .finishText .afterSaveFav p {
+.finishContainer .finish .finishContents .afterSaveFav p {
   font-size: 30px;
   color: sienna;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 0;
   animation: opacity 0.5s;
 }
-.finishContainer .finishContents .finishText .afterSaveFav .goMyRecipeBtn {
+.finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn {
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -225,12 +225,12 @@
   padding-inline: 1%;
   border-radius: 5px;
 }
-.finishContainer .finishContents .finishText .afterSaveFav .goMyRecipeBtn:hover {
+.finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn:hover {
   color: slategrey;
   background-color: antiquewhite;
   transition: 0.3s;
 }
-.finishContainer .finishContents .finishText .afterSaveFav .goMyRecipeBtn:active {
+.finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;

@@ -175,6 +175,7 @@
 }
 
 
+//Responsive Web codes
 @media all and (min-width:1681px)  and (max-width:2100px) {
     .menuBtn {
         font-size: 18px!important;
@@ -185,7 +186,6 @@
         width: 25%!important;
     }
 }
-
 @media all and (min-width:1280px)  and (max-width:1680px) {
     .menuBtn {
         font-size: 16px!important;
@@ -196,7 +196,6 @@
         width: 25%!important;
     }
 }
-
 @media all and (min-width:1024px) and (max-width:1279px) {
     .menuBtn {
         font-size: 13px!important;
@@ -207,7 +206,6 @@
         width: 40%!important;
     }
 }
-
 @media all and (min-width:768px) and (max-width:1023px) {
     .menuBtn {
         font-size: 12px!important;
@@ -218,7 +216,6 @@
         width: 40%!important;
     }
 }
-
 @media all and (min-width:480px) and (max-width:767px) {
     .menuBtn {
         font-size: 12px!important;
@@ -229,7 +226,6 @@
         width: 40%!important;
     }
 }
-
 @media all and (max-width:479px) {
     .menuBtn {
         font-size: 10px!important;
