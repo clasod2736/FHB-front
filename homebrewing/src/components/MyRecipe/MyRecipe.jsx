@@ -14,6 +14,7 @@ export default function MyRecipe() {
     const [changeHistory, setChangeHistory] = useState(false)
 
     const navigate = useNavigate();
+    console.log(11)
 
 
     //fetch history of oldBrews from database
