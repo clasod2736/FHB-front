@@ -9,6 +9,7 @@ import Fav from './Fav/Fav';
 
 export default function MyRecipe() {
     const userEmail = useSelector((state) => state.userEmail);
+
     const [oldBrews, setOldBrews] = useState([]);
     const [changeHistory, setChangeHistory] = useState(false)
 
@@ -17,7 +18,7 @@ export default function MyRecipe() {
 
     //fetch history of oldBrews from database
     useEffect(() => {
-        async function fetchDatas() {
+        async function fetchData() {
             const serverUrl = 'http://localhost:8080/getOldbrews'
 
             if (userEmail === 'undefiend') {
@@ -38,7 +39,7 @@ export default function MyRecipe() {
                 }
             }
         }
-        fetchDatas();
+        fetchData();
     }, [userEmail])
 
     // make history lists use with fetched data.
