@@ -9,7 +9,7 @@ export default function Root() {
     <div className='rootContainer'>
       <Navbar/>
       <Outlet/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

@@ -2,7 +2,7 @@
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
-    font-size: 20px!important;
+    font-size: 22px!important;
     color: #A86B43!important;
     background-color: transparent!important;
     border: none!important;
@@ -70,7 +70,7 @@
 }
 
 //Responsiv eWeb codes
-@media all and (min-width:1681px)  and (max-width:2100px) {
+@media all  and (max-width:1680px) {
     .navBtn {
         font-size: 18px!important;
         margin-left: 0!important;
@@ -99,38 +99,9 @@
         }
     }
 }
-@media all and (min-width:1280px)  and (max-width:1680px) {
+@media all and (max-width:1279px) {
     .navBtn {
         font-size: 16px!important;
-        margin-left: 0!important;
-    }
-
-    .canvas {
-        width: 25%!important;
-    }
-
-
-    .slideHeader {
-
-        .slideTitle {
-            font-size: 23px!important;
-        }
-    }
-
-    .canvasBody {
-
-        .nav {
-            width: 100%;
-
-            .links {
-                font-size: 18px!important;
-            }
-        }
-    }
-}
-@media all and (min-width:1024px) and (max-width:1279px) {
-    .navBtn {
-        font-size: 13px!important;
         margin-left: 0!important;
     }
 
@@ -157,9 +128,9 @@
         }
     }
 }
-@media all and (min-width:768px) and (max-width:1023px) {
+@media all and (max-width:1023px) {
     .navBtn {
-        font-size: 12px!important;
+        font-size: 15px!important;
         margin-left: 0!important;
     }
 
@@ -186,7 +157,7 @@
         }
     }
 }
-@media all and (min-width:480px) and (max-width:767px) {
+@media all and (max-width:767px) {
     .navBtn {
         font-size: 12px!important;
         margin-left: 0!important;

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './Intro.css'
 import Logo from './Logo/NewLogo'
 
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useSelector } from 'react-redux'
 
@@ -10,8 +10,8 @@ export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
   const userEmail = useSelector((state) => state.userEmail);
   const [ oldBrews, setOldBrews ] = useState([])
+  const [recentBrew, setRecentBrew] = useState();
 
-  const { userName, } = useParams();
   const navigate = useNavigate();
 
 //fetch data for get recent brew data.
@@ -32,6 +32,10 @@ export default function Intro() {
               })
               console.log(response.data)
               setOldBrews(response.data)
+
+              //state and sort recent brew data.
+              const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
+              setRecentBrew(sortedBrews[0]);
           }
           catch (error) {
               console.log(error)
@@ -54,7 +58,12 @@ const settingButtons  = () => {
     return (
       <div className='expContainer'>
         <button className='exploreBtn'
-        onClick={() => {getRecentBrew()}}>
+        onClick={() => {
+          isLogIn ? 
+          navigate(`/menu/${recentBrew.menuName}/method/${recentBrew.methodName}/recipe/brewing/${recentBrew.water}/${recentBrew.coffee}/${recentBrew.roasting}/${recentBrew.grind}/step1`)
+          :
+          alert("You don't have Any History...make a New Brew!")
+          }}>
           Make Last Brew!
         </button>
         <Link to={isLogIn ? '/menu' : '/login'} className='exploreBtn'>
@@ -63,28 +72,6 @@ const settingButtons  = () => {
       </div>
     )
   }
-}
-
-//state and sort recent brew data.
-function getRecentBrew() {
-
-  if (isLogIn) {
-
-    const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
-  
-    if (sortedBrews.length > 0) {
-  
-      setOldBrews([sortedBrews[0]]);
-  
-      navigate(`/${userName}/menu`)
-  
-      console.log(oldBrews)
-    } else {
-      alert("You don't have Any History...make a New Brew!")
-    }
-  }
-  else navigate('/login')
-
 }
 
   return (

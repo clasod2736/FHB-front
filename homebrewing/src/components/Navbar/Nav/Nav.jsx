@@ -16,7 +16,7 @@ export default function SlideMenu() {
   return (
     <>
       <Button variant="primary" onClick={handleShow} className='navBtn'>
-        Nav
+        Navigation
       </Button>
 
       <Offcanvas show={show} onHide={handleClose} className='canvas' placement='end' scroll={false} backdrop={true} restoreFocus={true} aria-modal={false}>

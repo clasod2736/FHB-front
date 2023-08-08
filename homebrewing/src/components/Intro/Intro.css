@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 92vh;
   width: 100%;
   animation: slideContents 0.7s;
 }
@@ -18,18 +18,19 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 90%;
+  height: 1000px;
   justify-content: center;
   align-items: center;
-  margin-top: 2%;
+  margin-top: 1%;
+  transition: 0.5s;
 }
 .introContainer .logoContainer .gate .expContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 35%;
-  height: 20%;
+  width: 950px;
+  height: 80px;
   animation: opacity 1.5s;
 }
 .introContainer .logoContainer .gate .expContainer .exploreBtn {
@@ -37,7 +38,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 350px;
   height: 60px;
   font-size: 22px;
   letter-spacing: 2px;
@@ -62,8 +63,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 35%;
-  height: 20%;
+  width: 900px;
+  height: 80px;
   animation: opacity 1.5s;
 }
 .introContainer .logoContainer .gate .loginContainer .login {
@@ -71,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 300px;
   height: 60px;
   font-size: 28px;
   letter-spacing: 2px;
@@ -92,127 +93,156 @@
   box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;
 }
 
-@media all and (min-width: 1681px) and (max-width: 2100px) {
+@media all and (max-width: 1680px) {
   .introContainer .logoContainer {
     height: 100%;
   }
   .introContainer .logoContainer .gate {
-    height: 100%;
+    height: 800px;
     margin-top: 0%;
   }
   .introContainer .logoContainer .gate .expContainer {
-    width: 40%;
-    height: 10%;
+    width: 650px;
+    height: 60px;
   }
   .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 40%;
-    height: 75%;
+    width: 280px;
+    height: 55px;
+    font-size: 20px;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 600px;
+    height: 60px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 250px;
+    height: 55px;
+    font-size: 25px;
+  }
+}
+@media all and (max-width: 1279px) {
+  .introContainer {
+    height: 98vh;
+  }
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 700px;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    width: 700px;
+    height: 60px;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 600px;
+    height: 60px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 250px;
+    height: 55px;
+    font-size: 25px;
+  }
+}
+@media all and (max-width: 1023px) {
+  .introContainer {
+    height: 98vh;
+  }
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 500px;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    width: 600px;
+    height: 60px;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 600px;
+    height: 60px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 180px;
+    height: 40px;
     font-size: 20px;
   }
 }
-@media all and (min-width: 1280px) and (max-width: 1680px) {
-  .introContainer .logoContainer {
-    height: 100%;
-  }
-  .introContainer .logoContainer .gate {
-    height: 100%;
-    margin-top: 0%;
-  }
-  .introContainer .logoContainer .gate .expContainer {
-    width: 40%;
-    height: 10%;
-  }
-  .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 40%;
-    height: 60%;
-    font-size: 16px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1279px) {
-  .introContainer {
-    height: 66vh;
-  }
-  .introContainer .logoContainer {
-    height: 100%;
-  }
-  .introContainer .logoContainer .gate {
-    height: 100%;
-    margin-top: 0%;
-  }
-  .introContainer .logoContainer .gate .expContainer {
-    width: 40%;
-    height: 10%;
-  }
-  .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 45%;
-    height: 70%;
-    font-size: 13px;
-    margin-top: 10%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  .introContainer {
-    height: 68vh;
-  }
-  .introContainer .logoContainer {
-    height: 100%;
-  }
-  .introContainer .logoContainer .gate {
-    height: 100%;
-    margin-top: 0%;
-  }
-  .introContainer .logoContainer .gate .expContainer {
-    width: 50%;
-    height: 10%;
-  }
-  .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 40%;
-    height: 75%;
-    font-size: 10px;
-    margin-top: 10%;
-  }
-}
-@media all and (min-width: 480px) and (max-width: 767px) {
+@media all and (max-width: 767px) {
   .introContainer {
     justify-content: flex-start;
-    height: 50vh;
+    height: 98vh;
   }
   .introContainer .logoContainer {
     height: 100%;
   }
   .introContainer .logoContainer .gate {
-    height: 90%;
+    height: 500px;
     margin-top: 0%;
   }
   .introContainer .logoContainer .gate .expContainer {
-    width: 80%;
-    height: 10%;
+    width: 500px;
+    height: 60px;
   }
   .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 45%;
-    height: 90%;
-    font-size: 12px;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 300px;
+    height: 60px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 @media all and (max-width: 479px) {
   .introContainer {
     justify-content: flex-start;
-    height: 50vh;
+    height: 98vh;
   }
   .introContainer .logoContainer {
     height: 100%;
   }
   .introContainer .logoContainer .gate {
-    height: 90%;
+    height: 400px;
     margin-top: 0%;
   }
   .introContainer .logoContainer .gate .expContainer {
-    width: 100%;
-    height: 15%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 100px;
   }
   .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 45%;
-    height: 70%;
-    font-size: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 300px;
+    height: 60px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=Intro.css.map */
