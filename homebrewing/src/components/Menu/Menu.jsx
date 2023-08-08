@@ -513,7 +513,7 @@ export default function Menu() {
                 <div className='choices'>
                     <div className='blackCategory'>
                         <div className='espresso' onClick={() => {setMenuName('espresso')}}>
-                            <div className='espressoImg'></div>
+                            <img src="/img/coffee/espresso" alt="espressoImg" />
                             <p>Espresso</p>
                         </div>
                         <div className='americano' onClick={() => {setMenuName('americano')}}>
@@ -573,7 +573,7 @@ export default function Menu() {
                 <div className={handleMenuContents()}>
                     <span className='title'>
                         <span className='titleandBtn'>
-                            <button onClick={() => {setSideMenu('close')}}>🅧</button>
+                            <button onClick={() => {setSideMenu('close'); setMenuName('')}}>🅧</button>
                             <header>{menuName}</header>
                         </span>
                         {settingDescription()}

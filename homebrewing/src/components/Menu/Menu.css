@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 60%;
+  width: 100%;
   height: 92vh;
   animation: opacity 0.5s;
 }
@@ -12,22 +12,21 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: 95%;
+  width: 1600px;
+  height: 80%;
 }
 .menuContainer .menu .menuTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 10%;
+  width: 1000px;
+  height: 100px;
   font-size: 60px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-bottom: 2px solid rgb(137, 85, 48);
   letter-spacing: 3px;
   color: rgb(137, 85, 48);
-  padding-bottom: 2%;
 }
 .menuContainer .menu .chociesContainer {
   display: flex;
@@ -35,15 +34,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90%;
-  transition: all 0.8s linear;
+  height: 1000px;
+  transition: all 0.5s linear;
 }
 .menuContainer .menu .chociesContainer .choices {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
+  width: 1300px;
   height: 100%;
   border-radius: 10px;
   transition: 0.3s;
@@ -70,7 +69,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -109,7 +108,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -148,7 +147,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -187,7 +186,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -241,7 +240,7 @@
   align-items: center;
   width: 30%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
 }
 .menuContainer .menu .chociesContainer .choices .whiteCategory .latte:hover {
@@ -279,7 +278,7 @@
   align-items: center;
   width: 30%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
 }
 .menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:hover {
@@ -317,7 +316,7 @@
   align-items: center;
   width: 30%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
 }
 .menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:hover {
@@ -355,7 +354,7 @@
   align-items: center;
   width: 30%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
 }
 .menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:hover {
@@ -393,7 +392,7 @@
   align-items: center;
   width: 30%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
 }
 .menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:hover {
@@ -446,7 +445,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -485,7 +484,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -524,7 +523,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -563,7 +562,7 @@
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
   padding: 1%;
 }
@@ -600,7 +599,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 20%;
+  width: 300px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1243,19 +1242,19 @@
 
 @keyframes menuContents {
   from {
-    width: 0%;
+    width: 0;
     height: 90%;
     opacity: 0;
   }
   to {
-    width: 20%;
+    width: 300px;
     height: 90%;
     opacity: 1;
   }
 }
 @keyframes menuContentsClose {
   0% {
-    width: 20%;
+    width: 300px;
     height: 90%;
     opacity: 1;
   }
@@ -1266,5 +1265,68 @@
     width: 0;
     height: 90%;
     opacity: 0;
+  }
+}
+@media all and (max-width: 1680px) {
+  .menuContainer {
+    width: 80%;
+  }
+  .menuContainer .menu {
+    width: 1200px;
+  }
+  .menuContainer .menu .menuTitle {
+    width: 800px;
+    height: 100px;
+    font-size: 50px;
+  }
+  .menuContainer .menu .chociesContainer {
+    width: 1200px;
+  }
+  .menuContainer .menu .chociesContainer .choices {
+    justify-content: space-around;
+    width: 900px;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory {
+    width: 80%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .espresso .espressoImg {
+    width: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .longBlack .longBlackImg {
+    width: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory {
+    width: 100%;
+    height: 33%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory {
+    width: 80%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents {
+    width: 300px;
+  }
+}
+@media all and (max-width: 1279px) {
+  .menuContainer {
+    width: 80%;
+  }
+  .menuContainer .menu {
+    width: 1200px;
+  }
+  .menuContainer .menu .menuTitle {
+    width: 700px;
+    height: 100px;
+    font-size: 50px;
+  }
+  .menuContainer .menu .chociesContainer {
+    width: 1000px;
+  }
+  .menuContainer .menu .chociesContainer .choices {
+    width: 800px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents {
+    width: 200px;
   }
 }/*# sourceMappingURL=Menu.css.map */
