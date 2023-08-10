@@ -42,21 +42,27 @@
   height: 60px;
   font-size: 22px;
   letter-spacing: 2px;
-  border: 1px #F9F6EA solid;
-  border-radius: 10px;
-  color: #F9F6EA;
-  background-color: #2F351A;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   outline: none;
-  transition: all 0.3s linear;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s linear;
   animation: appear 1s;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
 }
 .introContainer .logoContainer .gate .expContainer .exploreBtn:hover {
-  transition: 0.9s;
-  color: white;
-  box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;
+  color: brown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.introContainer .logoContainer .gate .expContainer .exploreBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
 }
 .introContainer .logoContainer .gate .loginContainer {
   display: flex;
@@ -76,151 +82,41 @@
   height: 60px;
   font-size: 28px;
   letter-spacing: 2px;
-  border: 1px #F9F6EA solid;
-  border-radius: 10px;
-  color: #F9F6EA;
-  background-color: #2F351A;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   outline: none;
   transition: all 0.3s linear;
   text-decoration: none;
   cursor: pointer;
   animation: appear 1s;
+  border-radius: 10px;
+  border: 0;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 1px darkgoldenrod;
 }
 .introContainer .logoContainer .gate .loginContainer .login:hover {
-  transition: 0.9s;
-  color: white;
-  box-shadow: 200px 0 0 0 #9A6E40 inset, -200px 0 0 0 #9A6E40 inset;
+  color: brown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.introContainer .logoContainer .gate .loginContainer .login:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
 }
 
-@media all and (max-width: 1680px) {
-  .introContainer .logoContainer {
-    height: 100%;
-  }
-  .introContainer .logoContainer .gate {
-    height: 800px;
-    margin-top: 0%;
-  }
-  .introContainer .logoContainer .gate .expContainer {
-    width: 650px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 280px;
-    height: 55px;
-    font-size: 20px;
-  }
-  .introContainer .logoContainer .gate .loginContainer {
-    width: 600px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .loginContainer .login {
-    width: 250px;
-    height: 55px;
-    font-size: 25px;
-  }
-}
-@media all and (max-width: 1279px) {
-  .introContainer {
-    height: 98vh;
-  }
-  .introContainer .logoContainer {
-    height: 100%;
-  }
-  .introContainer .logoContainer .gate {
-    height: 700px;
-    margin-top: 0%;
-  }
-  .introContainer .logoContainer .gate .expContainer {
-    width: 700px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 250px;
-    height: 50px;
-    font-size: 20px;
-  }
-  .introContainer .logoContainer .gate .loginContainer {
-    width: 600px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .loginContainer .login {
-    width: 250px;
-    height: 55px;
-    font-size: 25px;
-  }
-}
-@media all and (max-width: 1023px) {
-  .introContainer {
-    height: 98vh;
-  }
-  .introContainer .logoContainer {
-    height: 100%;
-  }
-  .introContainer .logoContainer .gate {
-    height: 500px;
-    margin-top: 0%;
-  }
-  .introContainer .logoContainer .gate .expContainer {
-    width: 600px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
-  }
-  .introContainer .logoContainer .gate .loginContainer {
-    width: 600px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .loginContainer .login {
-    width: 180px;
-    height: 40px;
-    font-size: 20px;
-  }
-}
-@media all and (max-width: 767px) {
+@media all and (min-width: 320px) {
   .introContainer {
     justify-content: flex-start;
+    min-height: 450px;
     height: 98vh;
   }
   .introContainer .logoContainer {
     height: 100%;
   }
   .introContainer .logoContainer .gate {
-    height: 500px;
-    margin-top: 0%;
-  }
-  .introContainer .logoContainer .gate .expContainer {
-    width: 500px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .expContainer .exploreBtn {
-    width: 200px;
-    height: 40px;
-    font-size: 15px;
-  }
-  .introContainer .logoContainer .gate .loginContainer {
-    width: 300px;
-    height: 60px;
-  }
-  .introContainer .logoContainer .gate .loginContainer .login {
-    width: 150px;
-    height: 40px;
-    font-size: 18px;
-  }
-}
-@media all and (max-width: 479px) {
-  .introContainer {
     justify-content: flex-start;
-    height: 98vh;
-  }
-  .introContainer .logoContainer {
     height: 100%;
-  }
-  .introContainer .logoContainer .gate {
-    height: 400px;
     margin-top: 0%;
   }
   .introContainer .logoContainer .gate .expContainer {
@@ -229,20 +125,135 @@
     justify-content: space-evenly;
     align-items: center;
     width: 300px;
-    height: 100px;
+    height: 30%;
+    max-height: 150px;
   }
   .introContainer .logoContainer .gate .expContainer .exploreBtn {
     width: 250px;
-    height: 40px;
+    height: 50px;
     font-size: 15px;
   }
   .introContainer .logoContainer .gate .loginContainer {
     width: 300px;
-    height: 60px;
+    height: 8%;
+    max-height: 150px;
   }
   .introContainer .logoContainer .gate .loginContainer .login {
     width: 200px;
-    height: 40px;
-    font-size: 18px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 767px) {
+  .introContainer {
+    justify-content: flex-start;
+    min-height: 700px;
+    height: 100vh;
+  }
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    height: 8%;
+    max-height: 70px;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 300px;
+    height: 8%;
+    max-height: 150px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .introContainer {
+    justify-content: flex-start;
+    min-height: 900px;
+    height: 98vh;
+  }
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 100%;
+    margin-top: 0%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    height: 10%;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 350px;
+    height: 60px;
+    font-size: 25px;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 300px;
+    height: 8%;
+    max-height: 150px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1680px) {
+  .introContainer {
+    justify-content: flex-start;
+    min-height: 1152px;
+    height: 98vh;
+  }
+  .introContainer .logoContainer {
+    height: 100%;
+  }
+  .introContainer .logoContainer .gate {
+    height: 90%;
+    margin-top: 2%;
+  }
+  .introContainer .logoContainer .gate .expContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1100px;
+    height: 10%;
+  }
+  .introContainer .logoContainer .gate .expContainer .exploreBtn {
+    width: 400px;
+    height: 80px;
+    font-size: 35px;
+    margin-inline: 3%;
+  }
+  .introContainer .logoContainer .gate .loginContainer {
+    width: 50%;
+    height: 10%;
+    max-height: 150px;
+  }
+  .introContainer .logoContainer .gate .loginContainer .login {
+    width: 500px;
+    height: 80px;
+    font-size: 40px;
   }
 }/*# sourceMappingURL=Intro.css.map */

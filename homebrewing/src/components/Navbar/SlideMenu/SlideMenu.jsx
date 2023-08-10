@@ -17,10 +17,10 @@ export default function SlideMenu() {
       </Button>
 
       <Offcanvas show={show} onHide={handleClose} className='aboutCanvas' scroll={false} backdrop={true} restoreFocus={true} aria-modal={false}>
-        <Offcanvas.Header className='slideHeader'>
-          <Offcanvas.Title className='slideTitle'>About FHB.</Offcanvas.Title>
+        <Offcanvas.Header className='aboutHeader'>
+          <Offcanvas.Title className='aboutTitle'>About FHB.</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className='canvasBody'>
+        <Offcanvas.Body className='aboutBody'>
           <div className='about'>
             <div className='aboutText'>
               <p>Hi! I'm Joon this is my first Full-Stack React project.</p>
