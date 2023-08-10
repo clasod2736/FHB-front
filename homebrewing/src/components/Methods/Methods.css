@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  height: 91vh;
   background-color: #F9F6EA;
   border-radius: 15px;
 }
@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   text-align: start;
-  width: 40%;
+  width: 80%;
   height: 8%;
   font-size: 60px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -45,7 +45,7 @@
 }
 .mtContainer .choiceContainer div {
   background-color: bisque;
-  border-radius: 1000px;
+  border-radius: 100%;
   border: #7f5539 1px solid;
   transition: 0.2s linear;
 }
@@ -163,5 +163,36 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@media all and (min-width: 767px) {
+  .mtContainer {
+    justify-content: flex-start;
+    min-height: 580px;
+    height: 100vh;
+  }
+  .mtContainer .title {
+    width: 100%;
+    max-width: 550px;
+    height: 5%;
+    font-size: 15px;
+    border-bottom: rgb(137, 85, 48) 1px solid;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  .mtContainer .method .hario {
+    height: 10%;
+  }
+  .mtContainer .method .mokaPot {
+    height: 10%;
+  }
+  .mtContainer .method .frenchPress {
+    height: 10%;
+  }
+  .mtContainer .choiceContainer {
+    flex-direction: row;
+  }
+  .mtContainer .choiceContainer p {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=Methods.css.map */

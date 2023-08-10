@@ -933,14 +933,14 @@
   }
   to {
     width: 300px;
-    height: 200px;
+    height: 190px;
     opacity: 1;
   }
 }
 @keyframes menuContentsCloseMobile320 {
   0% {
     width: 300px;
-    height: 200px;
+    height: 190px;
     opacity: 1;
   }
   70% {
@@ -983,7 +983,7 @@
     width: 80%;
     min-width: 300px;
     max-width: 400px;
-    min-height: 300px;
+    height: 65%;
     max-height: 350px;
   }
   .menuContainer .menu .chociesContainer .choices .blackCategory {

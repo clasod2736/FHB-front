@@ -131,9 +131,10 @@
   }
   .aboutCanvas {
     width: 80% !important;
+    min-height: 480px;
   }
   .aboutHeader {
-    margin-top: 5% !important;
+    margin-top: 0% !important;
   }
   .aboutHeader .aboutTitle {
     font-size: 20px !important;
@@ -142,23 +143,27 @@
     padding: 2% !important;
   }
   .aboutBody .about {
-    height: 65%;
+    height: 60%;
   }
   .aboutBody .about .aboutText {
     padding-inline: 3%;
   }
   .aboutBody .about .aboutText p {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 5% !important;
   }
   .aboutBody .bottom .title header {
+    font-weight: bold;
     font-size: 12px;
   }
   .aboutBody .bottom .title h1 {
     font-size: 10px;
   }
+  .aboutBody .bottom .techs {
+    height: 55%;
+  }
   .aboutBody .bottom .techs p {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 @media all and (min-width: 767px) {

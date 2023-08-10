@@ -1,0 +1,213 @@
+.harioContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  animation: opacity 0.5s;
+}
+.harioContainer .harioOutline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding-right: 1%;
+}
+.harioContainer .harioOutline .harioOutlineText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 60%;
+}
+.harioContainer .harioOutline .harioOutlineText header {
+  text-align: center;
+  height: 30%;
+  color: #702000;
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.harioContainer .harioOutline .harioOutlineText p {
+  color: saddlebrown;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+.harioContainer .harioOutline .hashtag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  height: 20%;
+}
+.harioContainer .harioOutline .hashtag span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+}
+.harioContainer .harioOutline .hashtag span p {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: wheat;
+  background-color: saddlebrown;
+  border: saddlebrown 1px solid;
+  border-radius: 20px;
+  margin-right: 2.5%;
+  margin-bottom: 0%;
+  padding-block: 0.5%;
+  padding-inline: 3%;
+}
+.harioContainer .harioOutline .btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 10%;
+}
+.harioContainer .harioOutline .btnContainer .backBtn {
+  width: 30%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.harioContainer .harioOutline .btnContainer .backBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.harioContainer .harioOutline .btnContainer .backBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.harioContainer .harioOutline .btnContainer .recipeBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.harioContainer .harioOutline .btnContainer .recipeBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.harioContainer .harioOutline .btnContainer .recipeBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.harioContainer .videoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  border: 2px sienna solid;
+  border-radius: 18px;
+  animation: opacity 0.5s;
+}
+.harioContainer .videoContainer iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media all and (min-width: 320px) {
+  .harioContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .harioContainer .harioContainerMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 580px;
+    height: 100%;
+    width: 100%;
+    min-height: 580px;
+  }
+  .harioContainer .harioContainerMobile .videoContainer {
+    width: 100%;
+    height: 50%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline {
+    width: 100%;
+    height: 50%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .harioOutlineText {
+    height: 60%;
+    width: 100%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .harioOutlineText header {
+    height: auto;
+    font-size: 25px;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .harioOutlineText p {
+    font-size: 12px;
+    margin-bottom: 1%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .hashtag {
+    justify-content: space-evenly;
+    height: 20%;
+    width: 100%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .hashtag span {
+    margin-bottom: 0%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .hashtag span p {
+    font-size: 10px;
+    margin-bottom: 0%;
+    padding-block: 0.3%;
+    padding-inline: 2%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .btnContainer {
+    width: 100%;
+    height: 20%;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .btnContainer .backBtn {
+    font-size: 18px;
+  }
+  .harioContainer .harioContainerMobile .harioOutline .btnContainer .recipeBtn {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=Hario.css.map */

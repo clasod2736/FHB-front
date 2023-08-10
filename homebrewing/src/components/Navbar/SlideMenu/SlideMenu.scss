@@ -158,25 +158,27 @@
 
     .aboutCanvas {
         width: 80%!important;
+        min-height: 480px;
     }
 
     .aboutHeader {
-        margin-top: 5%!important;
+        margin-top: 0%!important;
 
         .aboutTitle {
             font-size: 20px!important;
         }
     }
     .aboutBody {
+
         padding: 2%!important;
 
         .about {
-            height: 65%;
+            height: 60%;
 
             .aboutText {
                 padding-inline: 3%;
                 p {
-                    font-size: 12px;
+                    font-size: 10px;
                     margin-bottom: 5%!important;
                 }
             }
@@ -186,6 +188,7 @@
             .title {
 
                 header {
+                    font-weight: bold;
                     font-size: 12px;
                 }
                 h1 {
@@ -194,9 +197,10 @@
             }
 
             .techs {
+                height: 55%;
 
                 p {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
         }
