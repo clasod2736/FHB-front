@@ -36,7 +36,6 @@ useEffect(() => {
 }, [width]);
 
 const isMobile = width <= 766;
-console.log(isMobile, width)
 
   //Get props from child component(all the mothod components)
   const getMethod = (data) => {
@@ -89,9 +88,7 @@ console.log(isMobile, width)
 
   return (
     <div className='mtContainer'>
-
       {settingMobileMethod()}
-
       <div className='methods' style={{display : isMobile ? 'none' : 'flex'}}>
         <p className='title'>Choose Your Brewing Method.</p>
         <div className='choiceContainer'>
@@ -133,9 +130,9 @@ console.log(isMobile, width)
           </div>
         </div>
         <span className='choiceContents'>
-            {settingMethod()}
+          {settingMethod()}
         </span>
-       </div>  
+      </div>  
     </div>
   )
 }
