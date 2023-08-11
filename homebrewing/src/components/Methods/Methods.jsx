@@ -96,7 +96,7 @@ const isMobile = width <= 766;
             <svg width='180px' height='180px' viewBox=' 130 160 250 150 ' opacity='0.8'>
               <Handdrip/>
             </svg>
-            <p>Hario</p>
+            <p>Hario V6</p>
           </div>
           <div className='mokaPot'onClick={()=>{setMethod('mokapot')}}>
             <svg width='180px' height='180px' viewBox=' 125 165 230 150 ' opacity='0.8'>

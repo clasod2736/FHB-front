@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import './Recipe.css'
 import { useNavigate, useParams } from 'react-router-dom'
 
+import Roasting from './components/Roasting/Roasting'
+import Grind from './components/Grind/Grind'
+import Coffee from './components/Coffee/Coffee'
+import Water from './components/Water/Water'
+
 //Svg files
 import {ReactComponent as UserMenu} from '../../assets/userMenu.svg'
 import {ReactComponent as UserMethod} from '../../assets/userMethod.svg'
@@ -25,6 +30,31 @@ export default function Recipe() {
     const [waterOpen, setWaterOpen] = useState('');
     const [coffeeOpen, setCoffeeOpen] = useState('');
 
+//get props from components
+const getWater = (water) => {
+    setWater(water)
+}
+const waterClose = (waterClose) => {
+    setWaterOpen(waterClose)
+}
+const getRoasting = (roasting) => {
+    setRoasting(roasting)
+}
+const roastingClose = (roastingClose) => {
+    setRoastingOpen(roastingClose)
+}
+const getGrind = (grind) => {
+    setGrind(grind)
+}
+const grindClose =(grindClose) => {
+    setGrindOpen(grindClose)
+}
+const getCoffee = (coffee) => {
+    setCoffee(coffee)
+}
+const coffeeClose = (coffeeClose) => {
+    setCoffeeOpen(coffeeClose)
+}
 
   //setting information what user chose
   const settingUserMenu = () => {
@@ -83,21 +113,13 @@ export default function Recipe() {
     }
   }
 
-  //setting ingredients slides
+  //setting ingredients side-slides
   const settingRoasting = () => {
     if (roastingOpen === true) {
         return (
             <div className='roastingOpen'>
                 <div className='roastingChoice'>
-                    <p>Just push the "Active" button for moving to next.</p>
-                    <button onClick={
-                        
-                        () => {
-                            setRoasting('dark');
-                            setRoastingOpen(false);
-                        }
-                        
-                        }>active!</button>
+                    <Roasting getRoasting={getRoasting} roastingClose={roastingClose}/>
                 </div>
             </div>
         )
@@ -116,15 +138,10 @@ export default function Recipe() {
             <div className='coffeeOpen'>
                 <div className='coffeeChoice'>
                 <p>Just push the "Active" button for moving to next.</p>
-                    <button onClick={
-                        
-                        () => {
-                            
+                    <button onClick={() => {    
                             setCoffee('25')
                             setCoffeeOpen(false);
-                        }
-                        
-                        }>active!</button>
+                        }}>active!</button>
                 </div>
             </div>
         )
@@ -142,14 +159,7 @@ export default function Recipe() {
         return (
             <div className='grindOpen'>
                 <div className='grindChoice'>
-                <p>Just push the "Active" button for moving to next.</p>
-                    <button onClick={
-                        () => {
-                            
-                            setGrind('coarse')
-                            setGrindOpen(false);
-                        }
-                        }>active!</button>
+                <Grind getGrind={getGrind} grindClose={grindClose}/>
                 </div>
             </div>
         )
@@ -168,15 +178,10 @@ export default function Recipe() {
             <div className='waterOpen'>
                 <div className='waterChoice'>
                 <p>Just push the "Active" button for moving to next.</p>
-                    <button onClick={
-                        
-                        () => {
-                            
+                    <button onClick={() => {   
                             setWater('250')
                             setWaterOpen(false);
-                        }
-                            
-                            }>active!</button>
+                        }}>active!</button>
                 </div>
             </div>
         )
@@ -230,9 +235,11 @@ export default function Recipe() {
                 <div className='options'>
                     <div className='firstRow'>
                         <div className='roasting' onClick={() => {setRoastingOpen(true)}}>
+                            <p style={{textTransform:'uppercase'}}>{roasting}</p>
                             <p>Roasting</p>
                         </div>
                         <div className='grind' onClick={() => {setGrindOpen(true)}}>
+                        <p style={{textTransform:'uppercase'}}>{grind}</p>
                             <p>Grind Size</p>
                         </div>
                     </div>

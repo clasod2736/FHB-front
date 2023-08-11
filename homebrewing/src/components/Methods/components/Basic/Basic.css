@@ -908,7 +908,7 @@
   }
   .basicContainer .mobileLayout .otherMethodsContainer {
     flex-direction: row;
-    height: 50%;
+    height: 35%;
     justify-content: space-between;
   }
   .basicContainer .mobileLayout .otherMethodsContainer .otherMethods {
@@ -933,7 +933,7 @@
   .basicContainer .mobileLayout .otherMethodsContainer .otherMethodsText {
     width: 60%;
     max-width: 700px;
-    height: 80%;
+    height: 100%;
     justify-content: center;
     min-height: 150px;
   }

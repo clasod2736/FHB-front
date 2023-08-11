@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: 91vh;
 
     animation: opacity 0.5s;
 
@@ -26,7 +26,7 @@
             align-items: flex-end;
 
             width: 30%;
-            height: 100%;
+            height: 90%;
 
             //just animation name and fill-mode different
             .roastingOpen {
@@ -151,9 +151,10 @@
             justify-content: flex-start;
             align-items: center;
 
-            width: 30%;
-            height: 100%;
+            width: 35%;
+            height: 90%;
 
+            border: 2px solid sienna;
             background-color: antiquewhite;
             border-radius: 10px;
 
@@ -490,7 +491,7 @@
             align-items: flex-start;
 
             width: 30%;
-            height: 100%;
+            height: 90%;
 
             //just animation name and fill-mode different
             .grindOpen {
