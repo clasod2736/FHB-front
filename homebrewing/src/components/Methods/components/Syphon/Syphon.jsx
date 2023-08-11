@@ -9,15 +9,15 @@ const navigate = useNavigate()
 const settingMobile = () => {
   if (isMobile) {
     return (
-      <div className='shyponContainerMobile'>
+      <div className='syphonContainerMobile'>
         <div className='videoContainer'>
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/c2LjmkknaVA"
             title="Brew Guide: Syphon" frameBorder="0"
             allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
           </div>
-          <div className='shyponOutline'>
-                <div className='shyponOutlineText'>
-                  <header>Shypon</header>
+          <div className='syphonOutline'>
+                <div className='syphonOutlineText'>
+                  <header>Syphon</header>
                   <p>Syphon or Vacuum Coffee Maker</p>
                   <p>extracts coffee scientifically.</p>
                   <p>With water and coffee moving repeatedly</p>
@@ -49,10 +49,10 @@ const settingMobile = () => {
 }
 
   return (
-    <div className='shyponContainer'>
-        <div className='shyponOutline'  style={{display: isMobile ? 'none' : 'flex'}}>
-              <div className='shyponOutlineText'>
-                <header>Shypon</header>
+    <div className='syphonContainer'>
+        <div className='syphonOutline'  style={{display: isMobile ? 'none' : 'flex'}}>
+              <div className='syphonOutlineText'>
+                <header>Syphon</header>
                 <p>Syphon or Vacuum Coffee Maker</p>
                 <p>extracts coffee scientifically.</p>
                 <p>With water and coffee moving repeatedly</p>

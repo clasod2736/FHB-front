@@ -186,10 +186,18 @@
 }
 
 //Responsive Web codes
+
+@media all and (min-width:320px) {
+ .mtContainer {
+    min-height: 600px;
+ }   
+}
+
 @media all and (min-width:767px) {
     .mtContainer {
         justify-content: flex-start;
-        min-height: 580px;
+        min-height: 680px;
+        max-height: 800px;
         height: 100vh;
 
         .methods {
@@ -248,7 +256,9 @@
             }
             
             .choiceContents {
-                height: 70%;
+                height: 80%;
+                justify-content: space-between;
+                align-items: center;
             }
         }
     }
@@ -258,7 +268,8 @@
     .mtContainer {
         justify-content: flex-start;
         min-height: 1100px;
-        height: 100vh;
+        height: 1200px;
+        max-height: 1200px;
 
         .methods {
             width: 80%;
@@ -339,11 +350,13 @@
 @media all and (min-width:1680px) {
     .mtContainer {
         justify-content: flex-start;
-        min-height: 900px;
+        min-height:1100px;
         height: 91vh;
+        max-height: 100vh;
 
         .methods {
             width: 100%;
+            min-height: 900px;
             height: 100%;
             min-width: 1200px;
             max-width: 1300px;
@@ -354,7 +367,7 @@
                 width: 70%;
                 min-width: 900px;
                 max-width: 1100px; 
-                height: 5%;
+                height: 10%;
                 font-size: 60px;
     
                 border-bottom: rgb(137, 85, 48) 1px solid;

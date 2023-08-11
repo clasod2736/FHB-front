@@ -58,12 +58,7 @@ const settingMobile = () => {
             <p>Its piston plunging method creates a rich, clean taste profile</p>
             <p>Making it perfect for varied coffee lovers.</p>
           </div>
-          <button className='backBtn' onClick={() => {getMethod('')}}>Back</button>
-          <button className='recipeBtn'
-          onClick={() => {navigate(`./${method}/recipe`);}}
-          >Choose Aeropress</button>
-          <span className='hashTagContainerMobile'>
-            <div className='hashtag'>
+          <div className='hashtag'>
             <span>
               <p>#Convenient</p>
               <p>#Softtaste</p>
@@ -76,7 +71,12 @@ const settingMobile = () => {
               <p>#Easytomake</p>
             </span>
           </div>
-          </span>
+          <div className='btnContainer'>
+            <button className='backBtn' onClick={() => {getMethod('')}}>Back</button>
+            <button className='recipeBtn'
+            onClick={() => {navigate(`./${method}/recipe`);}}
+            >Choose Aeropress</button>
+          </div>
         </div>
         <div className='videoContainer' style={{display: isMobile ? 'none' : 'flex'}}>
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tRIX9G7D_9Q"

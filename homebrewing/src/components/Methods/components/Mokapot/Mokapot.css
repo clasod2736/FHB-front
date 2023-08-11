@@ -210,4 +210,199 @@
   .mokapotContainer .mokapotContainerMobile .mokapotOutline .btnContainer .recipeBtn {
     font-size: 18px;
   }
+}
+@media all and (min-width: 767px) {
+  .mokapotContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .mokapotContainer .mokapotOutline {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText {
+    width: 45%;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText header {
+    font-size: 25px;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText p {
+    font-size: 10px;
+    margin-bottom: 3%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag {
+    flex-direction: row;
+    justify-content: center;
+    width: 35%;
+    height: 95%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag span {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer {
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 15px;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 15px;
+  }
+  .mokapotContainer .videoContainer {
+    width: 100%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1279px) {
+  .mokapotContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .mokapotContainer .mokapotOutline {
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: 70%;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText header {
+    font-size: 50px;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText p {
+    font-size: 16px;
+    margin-bottom: 3%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer {
+    height: 25%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .mokapotContainer .videoContainer {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1680px) {
+  .mokapotContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .mokapotContainer .mokapotOutline {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    height: 100%;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText header {
+    font-size: 60px;
+  }
+  .mokapotContainer .mokapotOutline .mokapotOutlineText p {
+    font-size: 20px;
+    margin-bottom: 3%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .mokapotContainer .mokapotOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer {
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .mokapotContainer .mokapotOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .mokapotContainer .videoContainer {
+    width: 70%;
+    height: 80%;
+    justify-content: center;
+    margin-top: 2%;
+  }
 }/*# sourceMappingURL=Mokapot.css.map */

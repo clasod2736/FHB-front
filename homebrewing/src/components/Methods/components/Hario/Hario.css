@@ -210,4 +210,199 @@
   .harioContainer .harioContainerMobile .harioOutline .btnContainer .recipeBtn {
     font-size: 18px;
   }
+}
+@media all and (min-width: 767px) {
+  .harioContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .harioContainer .harioOutline {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+  }
+  .harioContainer .harioOutline .harioOutlineText {
+    width: 40%;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .harioContainer .harioOutline .harioOutlineText header {
+    font-size: 25px;
+  }
+  .harioContainer .harioOutline .harioOutlineText p {
+    font-size: 10px;
+    margin-bottom: 3%;
+  }
+  .harioContainer .harioOutline .hashtag {
+    flex-direction: row;
+    justify-content: center;
+    width: 40%;
+    height: 95%;
+  }
+  .harioContainer .harioOutline .hashtag span {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+  }
+  .harioContainer .harioOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .harioContainer .harioOutline .btnContainer {
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .harioContainer .harioOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 15px;
+  }
+  .harioContainer .harioOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 15px;
+  }
+  .harioContainer .videoContainer {
+    width: 100%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1279px) {
+  .harioContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .harioContainer .harioOutline {
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: 70%;
+  }
+  .harioContainer .harioOutline .harioOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .harioContainer .harioOutline .harioOutlineText header {
+    font-size: 50px;
+  }
+  .harioContainer .harioOutline .harioOutlineText p {
+    font-size: 16px;
+    margin-bottom: 3%;
+  }
+  .harioContainer .harioOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .harioContainer .harioOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .harioContainer .harioOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  .harioContainer .harioOutline .btnContainer {
+    height: 25%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .harioContainer .harioOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .harioContainer .harioOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .harioContainer .videoContainer {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1680px) {
+  .harioContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .harioContainer .harioOutline {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    height: 100%;
+  }
+  .harioContainer .harioOutline .harioOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .harioContainer .harioOutline .harioOutlineText header {
+    font-size: 60px;
+  }
+  .harioContainer .harioOutline .harioOutlineText p {
+    font-size: 20px;
+    margin-bottom: 3%;
+  }
+  .harioContainer .harioOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .harioContainer .harioOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .harioContainer .harioOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .harioContainer .harioOutline .btnContainer {
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .harioContainer .harioOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .harioContainer .harioOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .harioContainer .videoContainer {
+    width: 70%;
+    height: 80%;
+    justify-content: center;
+    margin-top: 2%;
+  }
 }/*# sourceMappingURL=Hario.css.map */
