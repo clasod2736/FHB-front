@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 60%;
-  height: 70vh;
+  width: 100%;
+  height: 92vh;
   animation: opacity 0.5s;
 }
 .menuContainer .menu {
@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 1600px;
   height: 95%;
 }
 .menuContainer .menu .menuTitle {
@@ -20,14 +20,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 10%;
+  width: 1000px;
+  height: 100px;
   font-size: 60px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-bottom: 2px solid rgb(137, 85, 48);
   letter-spacing: 3px;
   color: rgb(137, 85, 48);
-  padding-bottom: 2%;
 }
 .menuContainer .menu .chociesContainer {
   display: flex;
@@ -35,15 +34,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90%;
-  transition: all 0.8s linear;
+  height: 1000px;
+  transition: all 0.5s linear;
 }
 .menuContainer .menu .chociesContainer .choices {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
+  width: 1300px;
   height: 100%;
   border-radius: 10px;
   transition: 0.3s;
@@ -54,7 +53,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
-  height: 90%;
+  height: 30%;
 }
 .menuContainer .menu .chociesContainer .choices .blackCategory p {
   text-align: center;
@@ -63,161 +62,52 @@
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .chociesContainer .choices .blackCategory .espresso {
+.menuContainer .menu .chociesContainer .choices .blackCategory img {
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menuContainer .menu .chociesContainer .choices .blackCategory div {
+  transition: all 0.3s linear;
+}
+.menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
+  transition: all 0.3s linear;
   padding: 1%;
 }
-.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:hover {
+.menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee .longBlackImg {
+  -o-object-position: 50% 70%;
+     object-position: 50% 70%;
+}
+.menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:hover p {
+.menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover p {
   text-shadow: 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:hover .espressoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover Img {
   box-shadow: 2px 2px 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:active p {
-  text-shadow: 0px 0px;
+.menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover:active p {
+  text-shadow: 0px 0px lightgrey;
   transition: 0s;
 }
-.menuContainer .menu .chociesContainer .choices .blackCategory .espresso:active .espressoImg {
+.menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover:active Img {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .espresso .espressoImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/espresso.jpg");
-  background-position: 50% 80%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .americano {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-  padding: 1%;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .americano:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .americano:hover .americanoImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .americano:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .americano:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .americano:active .americanoImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .americano .americanoImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/americano.jpg");
-  background-position: 30%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-  padding: 1%;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:hover .longBlackImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack:active .longBlackImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .longBlack .longBlackImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/longBlack.jpg");
-  background-position: 100% 80%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-  padding: 1%;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:hover .coldBrewImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew:active .coldBrewImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .blackCategory .coldBrew .coldBrewImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/coldBrew.jpg");
-  background-position: 100% 70%;
-  background-size: cover;
 }
 .menuContainer .menu .chociesContainer .choices .whiteCategory {
   display: flex;
@@ -225,7 +115,23 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 90%;
+  height: 33%;
+}
+.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhiteImg {
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+.menuContainer .menu .chociesContainer .choices .whiteCategory .mochaImg {
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+}
+.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccinoImg {
+  -o-object-position: 50% 70%;
+     object-position: 50% 70%;
+}
+.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiatoImg {
+  -o-object-position: 50% 70%;
+     object-position: 50% 70%;
 }
 .menuContainer .menu .chociesContainer .choices .whiteCategory p {
   text-align: center;
@@ -234,195 +140,44 @@
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .chociesContainer .choices .whiteCategory .latte {
+.menuContainer .menu .chociesContainer .choices .whiteCategory img {
+  width: 90%;
+  height: 80%;
+  border-radius: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 20%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
+  transition: all 0.3s linear;
 }
-.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:hover {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:hover p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee:hover p {
   text-shadow: 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:hover .latteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee:hover img {
   box-shadow: 2px 2px 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:active p {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee:hover:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .chociesContainer .choices .whiteCategory .latte:active .latteImg {
+.menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee:hover:active img {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .latte .latteImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/latte.jpg");
-  background-position: 50% 80%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:hover .flatWhiteImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite:active .flatWhiteImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .flatWhite .flatWhiteImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/flatWhite.jpg");
-  background-position: 20% 100%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:hover .cappuccinoImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino:active .cappuccinoImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .cappuccino .cappuccinoImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/cappuccino.jpg");
-  background-position: 100% 70%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:hover .mochaImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha:active .mochaImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .mocha .mochaImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/mocha.jpg");
-  background-position: 100% 90%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:hover .macchiatoImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato:active .macchiatoImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .whiteCategory .macchiato .macchiatoImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/macchiato.jpg");
-  background-position: 100% 70%;
-  background-size: cover;
 }
 .menuContainer .menu .chociesContainer .choices .othersCategory {
   display: flex;
@@ -430,7 +185,11 @@
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
-  height: 90%;
+  height: 30%;
+}
+.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffeeImg {
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
 }
 .menuContainer .menu .chociesContainer .choices .othersCategory p {
   text-align: center;
@@ -439,168 +198,52 @@
   font-weight: bold;
   margin-bottom: 0;
 }
-.menuContainer .menu .chociesContainer .choices .othersCategory .chai {
+.menuContainer .menu .chociesContainer .choices .othersCategory img {
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 25%;
   height: 90%;
-  border-radius: 20000px;
+  border-radius: 100%;
   cursor: pointer;
+  transition: all 0.3s linear;
   padding: 1%;
 }
-.menuContainer .menu .chociesContainer .choices .othersCategory .chai:hover {
+.menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee:hover {
   transform: scale(1.05);
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .othersCategory .chai:hover p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee:hover p {
   text-shadow: 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .othersCategory .chai:hover .chaiImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee:hover img {
   box-shadow: 2px 2px 3px 3px lightgrey;
   transition: 0.2s;
 }
-.menuContainer .menu .chociesContainer .choices .othersCategory .chai:active p {
+.menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee:active p {
   text-shadow: 0px 0px;
   transition: 0s;
 }
-.menuContainer .menu .chociesContainer .choices .othersCategory .chai:active .chaiImg {
+.menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee:active img {
   box-shadow: 0px 0px lightgrey;
   transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .chai .chaiImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/chai.jpg");
-  background-position: 50% 60%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-  padding: 1%;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:hover .turmericImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric:active .turmericImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .turmeric .turmericImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/turmeric.jpg");
-  background-position: 30%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-  padding: 1%;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:hover .icedCoffeeImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee:active .icedCoffeeImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .icedCoffee .icedCoffeeImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/icedCoffee.jpg");
-  background-position: 100% 30%;
-  background-size: cover;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .affogato {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 90%;
-  border-radius: 20000px;
-  cursor: pointer;
-  padding: 1%;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:hover .affogatoImg {
-  box-shadow: 2px 2px 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:hover p {
-  text-shadow: 3px 3px rgb(177, 177, 177);
-  transition: 0.3s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:active p {
-  text-shadow: 0px 0px;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .affogato:active .affogatoImg {
-  box-shadow: 0px 0px lightgrey;
-  transition: 0s;
-}
-.menuContainer .menu .chociesContainer .choices .othersCategory .affogato .affogatoImg {
-  width: 80%;
-  height: 80%;
-  border-radius: 2000000px;
-  background-image: url("../../../public/img/coffee/affogato.jpg");
-  background-position: 100% 70%;
-  background-size: cover;
 }
 .menuContainer .menu .chociesContainer .menuContents {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 20%;
+  width: 300px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -632,6 +275,10 @@
   min-width: 270px;
 }
 .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: saddlebrown;
   font-size: 25px;
@@ -677,7 +324,7 @@
   white-space: pre-line;
   margin-bottom: 3%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle {
+.menuContainer .menu .chociesContainer .menuContents .ingredients {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -688,18 +335,7 @@
   min-width: 240px;
   padding-block: 3%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle header {
-  width: 90%;
-  height: 15%;
-  font-size: 40px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: sienna;
-  border-radius: 5px;
-  text-align: center;
-  background-color: wheat;
-  margin-top: 5%;
-}
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .ingredients {
+.menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -709,19 +345,19 @@
   font-weight: bold;
   font-size: 18px;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .ingredients h3 {
+.menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle h3 {
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   font-weight: bold;
-  margin-bottom: 0%;
+  margin-bottom: 0;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .ingredients p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle p {
   font-size: 13px;
   color: sandybrown;
   margin-bottom: 0;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -729,19 +365,17 @@
   width: 110%;
   height: 30%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span div {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 30%;
   height: 70%;
-}
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .espresso {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .espresso p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -749,16 +383,22 @@
   color: saddlebrown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .espresso .beanIcon {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso .beanIcon {
   height: 60%;
   font-size: 35px;
   color: #732400;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .water {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .water {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .water p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .water p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -766,16 +406,22 @@
   color: lightslategray;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .water .waterIcon {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .water .waterIcon {
   height: 60%;
   font-size: 40px;
   color: slategrey;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milk {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .milk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milk p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .milk p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -783,16 +429,22 @@
   color: linen;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milk .milkIcon {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .milk .milkIcon {
   height: 60%;
   font-size: 50px;
   color: linen;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milkFoam {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .milkFoam p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -800,11 +452,17 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .choco {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .choco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .choco p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .choco p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -812,16 +470,22 @@
   color: sienna;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .choco .chocoIcon {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .choco .chocoIcon {
   height: 60%;
   font-size: 50px;
   color: sienna;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .chai {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .chai {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .chai p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .chai p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -829,16 +493,22 @@
   color: brown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .chai .chaiIcon {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .chai .chaiIcon {
   height: 60%;
   font-size: 35px;
   color: brown;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .turmericIng {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
   border-radius: 5px;
   background-color: antiquewhite;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .turmericIng p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -846,16 +516,22 @@
   color: goldenrod;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .turmericIng .turmericIcon {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng .turmericIcon {
   height: 60%;
   font-size: 45px;
   color: goldenrod;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .iceCream {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
   border-radius: 5px;
   background-color: rgb(247, 181, 159);
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .iceCream p {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -863,12 +539,12 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle span .iceCream .iceCreamIcon {
+.menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream .iceCreamIcon {
   height: 60%;
   font-size: 50px;
   color: white;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .coffeeText {
+.menuContainer .menu .chociesContainer .menuContents .coffeeText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -876,7 +552,7 @@
   width: 100%;
   height: 50%;
 }
-.menuContainer .menu .chociesContainer .menuContents .coffeeTitle .coffeeText p {
+.menuContainer .menu .chociesContainer .menuContents .coffeeText p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -891,12 +567,6 @@
   width: 100%;
   height: 15%;
   min-width: 300px;
-}
-.menuContainer .menu .chociesContainer .menuContents .getMenuBtn p {
-  font-size: 12px;
-  color: brown;
-  font-weight: bold;
-  margin-bottom: 0;
 }
 .menuContainer .menu .chociesContainer .menuContents .getMenuBtn button {
   height: 50%;
@@ -917,7 +587,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 20%;
+  width: 300px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -949,6 +619,10 @@
   min-width: 270px;
 }
 .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: saddlebrown;
   font-size: 25px;
@@ -994,7 +668,7 @@
   white-space: pre-line;
   margin-bottom: 3%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1005,18 +679,7 @@
   min-width: 240px;
   padding-block: 3%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle header {
-  width: 90%;
-  height: 15%;
-  font-size: 40px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: sienna;
-  border-radius: 5px;
-  text-align: center;
-  background-color: wheat;
-  margin-top: 5%;
-}
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .ingredients {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1026,19 +689,19 @@
   font-weight: bold;
   font-size: 18px;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .ingredients h3 {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle h3 {
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   font-weight: bold;
-  margin-bottom: 0%;
+  margin-bottom: 0;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .ingredients p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle p {
   font-size: 13px;
   color: sandybrown;
   margin-bottom: 0;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -1046,7 +709,7 @@
   width: 110%;
   height: 30%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span div {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1054,11 +717,11 @@
   width: 30%;
   height: 70%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .espresso {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .espresso p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1066,16 +729,16 @@
   color: saddlebrown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .espresso .beanIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso .beanIcon {
   height: 60%;
   font-size: 35px;
   color: #732400;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .water {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water {
   border-radius: 5px;
   background-color: #ffe0b5;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .water p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1083,16 +746,16 @@
   color: lightslategray;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .water .waterIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water .waterIcon {
   height: 60%;
   font-size: 40px;
   color: slategrey;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milk {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk {
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milk p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1100,16 +763,16 @@
   color: linen;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milk .milkIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk .milkIcon {
   height: 60%;
   font-size: 50px;
   color: linen;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milkFoam {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam {
   border-radius: 5px;
   background-color: darkgoldenrod;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .milkFoam p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1117,11 +780,11 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .choco {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco {
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .choco p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1129,16 +792,16 @@
   color: sienna;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .choco .chocoIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco .chocoIcon {
   height: 60%;
   font-size: 50px;
   color: sienna;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .chai {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai {
   border-radius: 5px;
   background-color: burlywood;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .chai p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1146,16 +809,16 @@
   color: brown;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .chai .chaiIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai .chaiIcon {
   height: 60%;
   font-size: 35px;
   color: brown;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .turmericIng {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng {
   border-radius: 5px;
   background-color: antiquewhite;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .turmericIng p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1163,16 +826,16 @@
   color: goldenrod;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .turmericIng .turmericIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng .turmericIcon {
   height: 60%;
   font-size: 45px;
   color: goldenrod;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .iceCream {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream {
   border-radius: 5px;
   background-color: rgb(247, 181, 159);
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .iceCream p {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream p {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
@@ -1180,12 +843,12 @@
   color: white;
   margin-bottom: 1%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle span .iceCream .iceCreamIcon {
+.menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream .iceCreamIcon {
   height: 60%;
   font-size: 50px;
   color: white;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .coffeeText {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1193,7 +856,7 @@
   width: 100%;
   height: 50%;
 }
-.menuContainer .menu .chociesContainer .menuContentsClose .coffeeTitle .coffeeText p {
+.menuContainer .menu .chociesContainer .menuContentsClose .coffeeText p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -1208,12 +871,6 @@
   width: 100%;
   height: 15%;
   min-width: 300px;
-}
-.menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn p {
-  font-size: 12px;
-  color: brown;
-  font-weight: bold;
-  margin-bottom: 0;
 }
 .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn button {
   height: 50%;
@@ -1235,7 +892,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 0%;
-  height: 90%;
+  height: 10%;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
@@ -1243,20 +900,20 @@
 
 @keyframes menuContents {
   from {
-    width: 0%;
-    height: 90%;
+    width: 0;
+    height: 80%;
     opacity: 0;
   }
   to {
-    width: 20%;
-    height: 90%;
+    width: 30%;
+    height: 80%;
     opacity: 1;
   }
 }
 @keyframes menuContentsClose {
   0% {
-    width: 20%;
-    height: 90%;
+    width: 30%;
+    height: 80%;
     opacity: 1;
   }
   70% {
@@ -1264,7 +921,1786 @@
   }
   100% {
     width: 0;
-    height: 90%;
+    height: 80%;
     opacity: 0;
+  }
+}
+@keyframes menuContentsMobile320 {
+  from {
+    width: 300px;
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    width: 300px;
+    height: 190px;
+    opacity: 1;
+  }
+}
+@keyframes menuContentsCloseMobile320 {
+  0% {
+    width: 300px;
+    height: 190px;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    width: 300px;
+    height: 0;
+    opacity: 0;
+  }
+}
+@media all and (min-width: 320px) {
+  .menuContainer {
+    width: 100%;
+  }
+  .menuContainer .menu {
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+  }
+  .menuContainer .menu .menuTitle {
+    width: 70%;
+    height: 5%;
+    min-width: 280px;
+    max-width: 350px;
+    min-height: 40px;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(137, 85, 48);
+  }
+  .menuContainer .menu .chociesContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 300px;
+    width: 100%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices {
+    justify-content: space-around;
+    width: 80%;
+    min-width: 300px;
+    max-width: 400px;
+    height: 65%;
+    max-height: 350px;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee img {
+    width: 100%;
+    min-height: 60%;
+    height: 70%;
+    max-height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover p {
+    text-shadow: 2px 2px lightgrey;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory {
+    width: 100%;
+    height: 33%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee {
+    width: 18%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee img {
+    width: 100%;
+    min-height: 60%;
+    height: 60%;
+    max-height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee img {
+    width: 100%;
+    min-height: 60%;
+    height: 70%;
+    max-height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents {
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    border: rgb(160, 130, 116) 2px solid;
+    border-radius: 5px;
+    animation: menuContentsMobile320 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title {
+    width: 100%;
+    height: 25px;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn {
+    height: 100%;
+    justify-content: flex-start;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn button {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn header {
+    width: 90%;
+    font-size: 15px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleText {
+    display: none;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients {
+    height: 80px;
+    min-height: 50px;
+    justify-content: space-around;
+    border-bottom: 1px rgb(160, 130, 116) solid;
+    border-top: 0;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle h3 {
+    font-size: 12px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle p {
+    display: none;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span {
+    flex-direction: row;
+    height: 60%;
+    width: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso p {
+    width: 100%;
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso .beanIcon {
+    font-size: 20px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText {
+    height: 30%;
+    margin-top: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText p {
+    font-size: 8px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn {
+    height: 15%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn button {
+    width: 80%;
+    height: 100%;
+    font-size: 12px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose {
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    border: rgb(160, 130, 116) 2px solid;
+    border-radius: 5px;
+    animation: menuContentsCloseMobile320 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title {
+    width: 100%;
+    height: 25px;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn {
+    height: 100%;
+    justify-content: flex-start;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn button {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn header {
+    width: 90%;
+    font-size: 15px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleText {
+    display: none;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients {
+    height: 80px;
+    min-height: 50px;
+    justify-content: space-around;
+    border-bottom: 1px rgb(160, 130, 116) solid;
+    border-top: 0;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle h3 {
+    font-size: 12px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle p {
+    display: none;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span {
+    flex-direction: row;
+    height: 60%;
+    width: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso p {
+    width: 100%;
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso .beanIcon {
+    font-size: 20px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream p {
+    font-size: 8px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText {
+    height: 30%;
+    margin-top: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText p {
+    font-size: 8px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn {
+    height: 15%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn button {
+    width: 80%;
+    height: 100%;
+    font-size: 12px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsOff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 0%;
+    height: 10%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 767px) {
+  .menuContainer {
+    width: 100%;
+    min-height: 600px;
+  }
+  .menuContainer .menu {
+    justify-content: flex-start;
+    width: 97%;
+    min-width: 700px;
+    height: 100%;
+  }
+  .menuContainer .menu .menuTitle {
+    width: 50%;
+    height: 5%;
+    min-width: 500px;
+    max-width: 80%;
+    min-height: 60px;
+    font-size: 30px;
+    border-bottom: 1px solid rgb(137, 85, 48);
+  }
+  .menuContainer .menu .chociesContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 700px;
+    min-height: 550px;
+    max-height: 600px;
+    width: 70%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .choices {
+    justify-content: space-around;
+    width: 70%;
+    min-width: 400px;
+    max-width: 600px;
+    min-height: 550px;
+    max-height: 600px;
+    height: 90%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee img {
+    min-height: 70%;
+    max-height: 70%;
+    width: 100%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover p {
+    text-shadow: 2px 2px lightgrey;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory {
+    width: 100%;
+    height: 33%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee {
+    width: 18%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee img {
+    min-height: 70%;
+    max-height: 70%;
+    width: 100%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee img {
+    min-height: 70%;
+    max-height: 70%;
+    width: 100%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents {
+    flex-direction: column;
+    border: rgb(160, 130, 116) 2px solid;
+    min-height: 400px;
+    border-radius: 10px;
+    animation: menuContents 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding: 1%;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title {
+    justify-content: flex-start;
+    width: 100%;
+    height: 130px;
+    min-width: 100px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn {
+    height: 30%;
+    justify-content: flex-start;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn button {
+    font-size: 20px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn header {
+    width: 90%;
+    font-size: 15px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleText {
+    display: flex;
+    height: 70%;
+    min-width: 200px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleText p {
+    font-size: 12px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients {
+    width: 95%;
+    min-width: 180px;
+    height: 130px;
+    min-height: 80px;
+    justify-content: space-around;
+    border-block: 1px rgb(160, 130, 116) solid;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle h3 {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle p {
+    display: flex;
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span {
+    flex-direction: row;
+    width: 110%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso p {
+    width: 100%;
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso .beanIcon {
+    font-size: 30px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam .milkFoamIcon {
+    width: 100%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText {
+    min-width: 200px;
+    height: 25%;
+    margin-top: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText p {
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn {
+    width: 100%;
+    height: 10%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn button {
+    min-width: 200px;
+    width: 60%;
+    height: 100%;
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose {
+    flex-direction: column;
+    border: rgb(160, 130, 116) 2px solid;
+    min-height: 400px;
+    border-radius: 10px;
+    animation: menuContentsClose 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding: 1%;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title {
+    justify-content: flex-start;
+    width: 100%;
+    height: 130px;
+    min-width: 100px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn {
+    height: 30%;
+    justify-content: flex-start;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn button {
+    font-size: 20px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn header {
+    width: 90%;
+    font-size: 15px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleText {
+    display: flex;
+    height: 70%;
+    min-width: 200px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleText p {
+    font-size: 12px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients {
+    width: 95%;
+    min-width: 180px;
+    height: 130px;
+    min-height: 80px;
+    justify-content: space-around;
+    border-block: 1px rgb(160, 130, 116) solid;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle h3 {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle p {
+    display: flex;
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span {
+    flex-direction: row;
+    width: 110%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso p {
+    width: 100%;
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso .beanIcon {
+    font-size: 30px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam .milkFoamIcon {
+    width: 100%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream p {
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText {
+    min-width: 200px;
+    height: 25%;
+    margin-top: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText p {
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn {
+    width: 100%;
+    height: 10%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn button {
+    min-width: 200px;
+    width: 60%;
+    height: 100%;
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsOff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 0%;
+    height: 0%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 1279px) {
+  .menuContainer {
+    width: 100%;
+    min-height: 600px;
+  }
+  .menuContainer .menu {
+    justify-content: flex-start;
+    width: 97%;
+    min-width: 700px;
+    height: 100%;
+  }
+  .menuContainer .menu .menuTitle {
+    width: 50%;
+    height: 8%;
+    min-width: 800px;
+    max-width: 80%;
+    min-height: 70px;
+    font-size: 40px;
+    border-bottom: 1px solid rgb(137, 85, 48);
+  }
+  .menuContainer .menu .chociesContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 900px;
+    min-height: 550px;
+    max-height: 720px;
+    width: 70%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices {
+    justify-content: space-around;
+    min-width: 600px;
+    max-width: 650px;
+    min-height: 600px;
+    max-height: 650px;
+    height: 90%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee img {
+    min-height: 70%;
+    max-height: 70%;
+    width: 100%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover p {
+    text-shadow: 2px 2px lightgrey;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory {
+    width: 100%;
+    height: 33%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee {
+    width: 18%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee img {
+    min-height: 70%;
+    max-height: 70%;
+    width: 100%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee img {
+    min-height: 70%;
+    max-height: 70%;
+    width: 100%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents {
+    flex-direction: column;
+    border: rgb(160, 130, 116) 2px solid;
+    min-height: 400px;
+    border-radius: 10px;
+    animation: menuContents 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding: 1%;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title {
+    justify-content: flex-start;
+    width: 100%;
+    height: 150px;
+    min-width: 100px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn {
+    height: 30%;
+    justify-content: flex-start;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn button {
+    font-size: 25px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn header {
+    width: 90%;
+    font-size: 20px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleText {
+    display: flex;
+    height: 70%;
+    min-width: 200px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleText p {
+    font-size: 15px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients {
+    width: 95%;
+    min-width: 200px;
+    height: 180px;
+    min-height: 50px;
+    justify-content: space-around;
+    border-block: 1px rgb(160, 130, 116) solid;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle h3 {
+    font-size: 25px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle p {
+    display: flex;
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span {
+    flex-direction: row;
+    width: 100%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso p {
+    width: 100%;
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso .beanIcon {
+    font-size: 40px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam .milkFoamIcon {
+    width: 100%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 75%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream p {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText {
+    min-width: 200px;
+    height: 25%;
+    margin-top: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText p {
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn {
+    width: 100%;
+    height: 12%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn button {
+    min-width: 200px;
+    width: 80%;
+    height: 100%;
+    font-size: 20px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose {
+    flex-direction: column;
+    border: rgb(160, 130, 116) 2px solid;
+    min-height: 400px;
+    border-radius: 10px;
+    animation: menuContentsClose 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding: 1%;
+    padding-block: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title {
+    justify-content: flex-start;
+    width: 100%;
+    height: 100px;
+    min-width: 100px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn {
+    height: 30%;
+    justify-content: flex-start;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn button {
+    font-size: 25px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn header {
+    width: 90%;
+    font-size: 15px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleText {
+    display: flex;
+    height: 70%;
+    min-width: 200px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleText p {
+    font-size: 12px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients {
+    width: 95%;
+    height: 120px;
+    min-height: 50px;
+    justify-content: space-around;
+    border-block: 0;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle h3 {
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle p {
+    display: flex;
+    font-size: 10px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span {
+    flex-direction: row;
+    width: 90%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 90%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso p {
+    width: 100%;
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso .beanIcon {
+    font-size: 30px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream p {
+    font-size: 13px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText {
+    min-width: 200px;
+    height: 25%;
+    margin-top: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText p {
+    font-size: 12px;
+    margin-bottom: 0.5%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn {
+    width: 100%;
+    height: 10%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn button {
+    min-width: 200px;
+    width: 60%;
+    height: 100%;
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsOff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 0%;
+    height: 0%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 1680px) {
+  .menuContainer {
+    width: 100%;
+    min-height: 1080px;
+  }
+  .menuContainer .menu {
+    justify-content: flex-start;
+    width: 97%;
+    min-width: 1680px;
+    height: 90%;
+  }
+  .menuContainer .menu .menuTitle {
+    width: 50%;
+    height: 8%;
+    min-width: 800px;
+    min-height: 80px;
+    font-size: 50px;
+    border-bottom: 1px solid rgb(137, 85, 48);
+  }
+  .menuContainer .menu .chociesContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 900px;
+    max-width: 1250px;
+    min-height: 550px;
+    max-height: 900px;
+    width: 72%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices {
+    justify-content: space-around;
+    min-width: 900px;
+    max-width: 900px;
+    min-height: 750px;
+    max-height: 85%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee img {
+    min-height: 80%;
+    max-height: 100%;
+    width: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee p {
+    font-size: 18px;
+  }
+  .menuContainer .menu .chociesContainer .choices .blackCategory .blackCoffee:hover p {
+    text-shadow: 2px 2px lightgrey;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory {
+    width: 100%;
+    height: 33%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee {
+    width: 18%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee img {
+    min-height: 80%;
+    max-height: 100%;
+    width: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .whiteCategory .whiteCoffee p {
+    font-size: 18px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory {
+    width: 85%;
+    height: 30%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory p {
+    font-size: 18px;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee {
+    width: 25%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .choices .othersCategory .otherCoffee img {
+    min-height: 80%;
+    max-height: 100%;
+    width: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents {
+    flex-direction: column;
+    border: rgb(160, 130, 116) 2px solid;
+    min-height: 400px;
+    border-radius: 10px;
+    animation: menuContents 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding: 1%;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title {
+    justify-content: flex-start;
+    width: 100%;
+    height: 200px;
+    min-width: 300px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn {
+    height: 30%;
+    justify-content: center;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn button {
+    font-size: 30px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleandBtn header {
+    width: 80%;
+    font-size: 25px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleText {
+    display: flex;
+    height: 70%;
+    min-width: 200px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .title .titleText p {
+    font-size: 18px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients {
+    width: 95%;
+    min-width: 300px;
+    height: 200px;
+    min-height: 50px;
+    justify-content: space-around;
+    border-block: 1px rgb(160, 130, 116) solid;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle h3 {
+    font-size: 25px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients .ingredientsTitle p {
+    display: flex;
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span {
+    flex-direction: row;
+    width: 110%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso p {
+    width: 100%;
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .espresso .beanIcon {
+    font-size: 45px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .water .waterIcon {
+    font-size: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milk p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .milkFoam .milkFoamIcon {
+    width: 100%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .choco p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .chai p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .turmericIng p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .ingredients span .iceCream p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText {
+    min-width: 300px;
+    height: 25%;
+    margin-top: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .coffeeText p {
+    font-size: 16px;
+    margin-bottom: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn {
+    width: 100%;
+    min-width: 300px;
+    height: 10%;
+  }
+  .menuContainer .menu .chociesContainer .menuContents .getMenuBtn button {
+    min-width: 250px;
+    width: 90%;
+    height: 100%;
+    font-size: 25px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose {
+    flex-direction: column;
+    border: rgb(160, 130, 116) 2px solid;
+    min-height: 400px;
+    border-radius: 10px;
+    animation: menuContentsClose 0.8s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    padding: 1%;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title {
+    justify-content: flex-start;
+    width: 100%;
+    height: 200px;
+    min-width: 300px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn {
+    height: 30%;
+    justify-content: center;
+    min-width: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn button {
+    font-size: 30px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleandBtn header {
+    width: 80%;
+    font-size: 25px;
+    margin-left: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleText {
+    display: flex;
+    height: 70%;
+    min-width: 200px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .title .titleText p {
+    font-size: 18px;
+    margin-bottom: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients {
+    width: 95%;
+    min-width: 300px;
+    height: 200px;
+    min-height: 50px;
+    justify-content: space-around;
+    border-block: 1px rgb(160, 130, 116) solid;
+    padding-block: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle {
+    height: auto;
+    flex-direction: column;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle h3 {
+    font-size: 25px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients .ingredientsTitle p {
+    display: flex;
+    font-size: 15px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span {
+    flex-direction: row;
+    width: 110%;
+    height: 70%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso p {
+    width: 100%;
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .espresso .beanIcon {
+    font-size: 45px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .water .waterIcon {
+    font-size: 50px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milk p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .milkFoam .milkFoamIcon {
+    width: 100%;
+    height: 100%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .choco p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .chai p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .turmericIng p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .ingredients span .iceCream p {
+    font-size: 16px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText {
+    min-width: 300px;
+    height: 25%;
+    margin-top: 1%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .coffeeText p {
+    font-size: 16px;
+    margin-bottom: 2%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn {
+    width: 100%;
+    min-width: 300px;
+    height: 10%;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsClose .getMenuBtn button {
+    min-width: 250px;
+    width: 90%;
+    height: 100%;
+    font-size: 25px;
+  }
+  .menuContainer .menu .chociesContainer .menuContentsOff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 0%;
+    height: 0%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
   }
 }/*# sourceMappingURL=Menu.css.map */

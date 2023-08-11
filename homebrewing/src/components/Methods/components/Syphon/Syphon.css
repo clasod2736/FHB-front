@@ -1,0 +1,408 @@
+.syphonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  animation: opacity 0.5s;
+}
+.syphonContainer .syphonOutline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding-right: 1%;
+}
+.syphonContainer .syphonOutline .syphonOutlineText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 60%;
+}
+.syphonContainer .syphonOutline .syphonOutlineText header {
+  text-align: center;
+  height: 30%;
+  color: #702000;
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.syphonContainer .syphonOutline .syphonOutlineText p {
+  color: saddlebrown;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+.syphonContainer .syphonOutline .hashtag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  height: 20%;
+}
+.syphonContainer .syphonOutline .hashtag span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+}
+.syphonContainer .syphonOutline .hashtag span p {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: wheat;
+  background-color: saddlebrown;
+  border: saddlebrown 1px solid;
+  border-radius: 20px;
+  margin-right: 2.5%;
+  margin-bottom: 0%;
+  padding-block: 0.5%;
+  padding-inline: 3%;
+}
+.syphonContainer .syphonOutline .btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 10%;
+}
+.syphonContainer .syphonOutline .btnContainer .backBtn {
+  width: 30%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.syphonContainer .syphonOutline .btnContainer .backBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.syphonContainer .syphonOutline .btnContainer .backBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.syphonContainer .syphonOutline .btnContainer .recipeBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.syphonContainer .syphonOutline .btnContainer .recipeBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.syphonContainer .syphonOutline .btnContainer .recipeBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.syphonContainer .videoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  border: 2px sienna solid;
+  border-radius: 18px;
+  animation: opacity 0.5s;
+}
+.syphonContainer .videoContainer iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media all and (min-width: 320px) {
+  .syphonContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .syphonContainer .syphonContainerMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 580px;
+    height: 100%;
+    width: 100%;
+    min-height: 580px;
+  }
+  .syphonContainer .syphonContainerMobile .videoContainer {
+    width: 100%;
+    height: 50%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline {
+    width: 100%;
+    height: 50%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .syphonOutlineText {
+    height: 60%;
+    width: 100%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .syphonOutlineText header {
+    height: auto;
+    font-size: 25px;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .syphonOutlineText p {
+    font-size: 12px;
+    margin-bottom: 1%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .hashtag {
+    justify-content: space-evenly;
+    height: 20%;
+    width: 100%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .hashtag span {
+    margin-bottom: 0%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .hashtag span p {
+    font-size: 10px;
+    margin-bottom: 0%;
+    padding-block: 0.3%;
+    padding-inline: 2%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .btnContainer {
+    width: 100%;
+    height: 20%;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .btnContainer .backBtn {
+    font-size: 18px;
+  }
+  .syphonContainer .syphonContainerMobile .syphonOutline .btnContainer .recipeBtn {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 767px) {
+  .syphonContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .syphonContainer .syphonOutline {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText {
+    width: 35%;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText header {
+    font-size: 25px;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText p {
+    font-size: 10px;
+    margin-bottom: 3%;
+  }
+  .syphonContainer .syphonOutline .hashtag {
+    flex-direction: row;
+    justify-content: center;
+    width: 35%;
+    height: 95%;
+  }
+  .syphonContainer .syphonOutline .hashtag span {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+  }
+  .syphonContainer .syphonOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .syphonContainer .syphonOutline .btnContainer {
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .syphonContainer .syphonOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 15px;
+  }
+  .syphonContainer .syphonOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 15px;
+  }
+  .syphonContainer .videoContainer {
+    width: 100%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1279px) {
+  .syphonContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .syphonContainer .syphonOutline {
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: 70%;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText header {
+    font-size: 50px;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText p {
+    font-size: 16px;
+    margin-bottom: 3%;
+  }
+  .syphonContainer .syphonOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .syphonContainer .syphonOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .syphonContainer .syphonOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .syphonContainer .syphonOutline .btnContainer {
+    height: 25%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .syphonContainer .syphonOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .syphonContainer .syphonOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .syphonContainer .videoContainer {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1680px) {
+  .syphonContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .syphonContainer .syphonOutline {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    height: 100%;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText header {
+    font-size: 60px;
+  }
+  .syphonContainer .syphonOutline .syphonOutlineText p {
+    font-size: 20px;
+    margin-bottom: 3%;
+  }
+  .syphonContainer .syphonOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .syphonContainer .syphonOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .syphonContainer .syphonOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .syphonContainer .syphonOutline .btnContainer {
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .syphonContainer .syphonOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .syphonContainer .syphonOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .syphonContainer .videoContainer {
+    width: 70%;
+    height: 80%;
+    justify-content: center;
+    margin-top: 2%;
+  }
+}/*# sourceMappingURL=Syphon.css.map */

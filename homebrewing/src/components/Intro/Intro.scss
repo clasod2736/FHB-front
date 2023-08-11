@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 92vh;
     width: 100%;
 
     animation: slideContents 0.7s;
@@ -19,19 +19,21 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 90%;
+            height: 1000px;
             justify-content: center;
             align-items: center;
 
-            margin-top: 2%;
+            margin-top: 1%;
+
+            transition: 0.5s;
 
             .expContainer {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
-                width: 35%;
-                height: 20%;
+                width: 950px;
+                height: 80px;
 
                 animation: opacity 1.5s;
                 
@@ -40,27 +42,33 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    width: 40%;
+                    width: 350px;
                     height: 60px;
                     font-size: 22px;
                     letter-spacing: 2px;
-                    border: 1px #F9F6EA solid; 
-                    border-radius: 10px;
-                    color: #F9F6EA;
-                    background-color: #2F351A;
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                     outline: none;
-                    transition: all 0.3s linear;
                     text-decoration: none;
                     cursor: pointer;
-                    
+
+                    transition: all 0.3s linear;
                     animation: appear 1s;
                     
+                    border-radius: 10px;
+                    border: 0;    
+                    color: linen;
+                    background-color: sienna;
+                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
                     &:hover {
-                        transition: 0.9s;
-                        color: white;
-                        box-shadow: 200px 0 0 0 #9A6E40 inset, 
-                        -200px 0 0 0 #9A6E40 inset;
+                        color: brown;
+                        background-color: bisque;
+                        transition: 0.3s;
+                    }
+                    &:active {
+                        box-shadow: 0px 0px 0px 0px;
+                        transform: translateY(3%);
+                        transition: 0s;
                     }
                 }
             }
@@ -69,8 +77,8 @@
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
-                width: 35%;
-                height: 20%;
+                width: 900px;
+                height: 80px;
 
                 animation: opacity 1.5s;
 
@@ -79,27 +87,33 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    width: 40%;
+                    width: 300px;
                     height: 60px;
                     font-size: 28px;
                     letter-spacing: 2px;
-                    border: 1px #F9F6EA solid; 
-                    border-radius: 10px;
-                    color: #F9F6EA;
-                    background-color: #2F351A;
                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                     outline: none;
                     transition: all 0.3s linear;
                     text-decoration: none;
                     cursor: pointer;
-                    
+
                     animation: appear 1s;
-                    
+
+                    border-radius: 10px;
+                    border: 0;    
+                    color: linen;
+                    background-color: sienna;
+                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
                     &:hover {
-                        transition: 0.9s;
-                        color: white;
-                        box-shadow: 200px 0 0 0 #9A6E40 inset, 
-                        -200px 0 0 0 #9A6E40 inset;
+                        color: brown;
+                        background-color: bisque;
+                        transition: 0.3s;
+                    }
+                    &:active {
+                        box-shadow: 0px 0px 0px 0px;
+                        transform: translateY(3%);
+                        transition: 0s;
                     }
                 }
             }
@@ -108,24 +122,45 @@
 }
 
 // Responsive Web codes
-@media all and (min-width:1681px)  and (max-width:2100px) {
-    
+@media all and (min-width:320px) {
     .introContainer {
+        justify-content: flex-start;
+        min-height: 450px;
+        height: 98vh;
+
         .logoContainer {
             height: 100%;
             
             .gate {
+                justify-content: flex-start;
                 height: 100%;
 
                 margin-top: 0%;
                 
                 .expContainer {
-                    width: 40%;
-                    height: 10%;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    width: 300px;
+                    height: 30%;
+                    max-height: 150px;
 
                     .exploreBtn {
-                        width: 40%;
-                        height: 75%;
+                        width: 250px;
+                        height: 50px;
+                        font-size: 15px;
+                    }
+                }
+                .loginContainer {
+                    width: 300px;
+                    height: 8%;
+                    max-height: 150px;
+
+                    .login {
+                        width: 200px;
+                        height: 50px;
                         font-size: 20px;
                     }
                 }
@@ -135,118 +170,45 @@
     }
 }
 
-@media all and (min-width:1280px)  and (max-width:1680px) {
-    
-    .introContainer {
-        .logoContainer {
-            height: 100%;
-            
-            .gate {
-                height: 100%;
-
-                margin-top: 0%;
-                
-                .expContainer {
-                    width: 40%;
-                    height: 10%;
-
-                    .exploreBtn {
-                        width: 40%;
-                        height: 60%;
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    
-    }  
-}
-
-
-@media all and (min-width:1024px) and (max-width:1279px) {
-    
-    .introContainer {
-        height: 66vh;
-
-        .logoContainer {
-            height: 100%;
-            
-            .gate {
-                height: 100%;
-
-                margin-top: 0%;
-            
-                .expContainer {
-                    width: 40%;
-                    height: 10%;
-
-                    .exploreBtn {
-                        width: 45%;
-                        height: 70%;
-                        font-size: 13px;
-
-                        margin-top: 10%;
-                    }
-                }
-            }
-        }
-    
-    }  
-}
-
-@media all and (min-width:768px) and (max-width:1023px) {
-    
-    .introContainer {
-        height: 68vh;
-
-        .logoContainer {
-            height: 100%;
-            
-            .gate {
-                height: 100%;
-
-                margin-top: 0%;
-                
-                .expContainer {
-                    width: 50%;
-                    height: 10%;
-
-                    .exploreBtn {
-                        width: 40%;
-                        height: 75%;
-                        font-size: 10px;
-
-                        margin-top: 10%;
-                    }
-                }
-            }
-        }
-    
-    } 
-}
-
-@media all and (min-width:480px) and (max-width:767px) {
-  
+@media all and (min-width:767px) {
     .introContainer {
         justify-content: flex-start;
-        height: 50vh;
+        min-height: 700px; 
+        height:100vh;
 
         .logoContainer {
             height: 100%;
             
             .gate {
-                height: 90%;
+                height: 100%;
 
                 margin-top: 0%;
                 
                 .expContainer {
-                    width: 80%;
-                    height: 10%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    width: 70%;
+                    height: 8%;
+                    max-height:70px;
 
                     .exploreBtn {
-                        width: 45%;
-                        height: 90%;
-                        font-size: 12px;
+                        width: 250px;
+                        height: 50px;
+                        font-size: 15px;
+                    }
+                }
+                .loginContainer {
+                    width: 300px;
+                    height: 8%;
+                    max-height: 150px;
+
+                    .login {
+                        width: 200px;
+                        height: 50px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -255,11 +217,57 @@
     }
 }
 
-@media all and (max-width:479px) {
-    
+@media all and (min-width:1279px) {
     .introContainer {
         justify-content: flex-start;
-        height: 50vh;
+        min-height: 900px; 
+        height: 98vh;
+
+        .logoContainer {
+            height: 100%;
+            
+            .gate {
+                height: 100%;
+
+                margin-top: 0%;
+                
+                .expContainer {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    width: 60%;
+                    height: 10%;
+
+                    .exploreBtn {
+                        width: 350px;
+                        height: 60px;
+                        font-size: 25px;
+                    }
+                }
+                .loginContainer {
+                    width: 300px;
+                    height: 8%;
+                    max-height: 150px;
+
+                    .login {
+                        width: 200px;
+                        height: 50px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+@media all and (min-width:1680px) {
+    .introContainer {
+        justify-content: flex-start;
+        min-height: 1152px; 
+        height: 98vh;
 
         .logoContainer {
             height: 100%;
@@ -267,16 +275,34 @@
             .gate {
                 height: 90%;
 
-                margin-top: 0%;
+                margin-top: 2%;
                 
                 .expContainer {
-                    width: 100%;
-                    height: 15%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    width: 1100px;
+                    height: 10%;
 
                     .exploreBtn {
-                        width: 45%;
-                        height: 70%;
-                        font-size: 10px;
+                        width: 400px;
+                        height: 80px;
+                        font-size: 35px;
+
+                        margin-inline: 3%;
+                    }
+                }
+                .loginContainer {
+                    width: 50%;
+                    height: 10%;
+                    max-height: 150px;
+
+                    .login {
+                        width: 500px;
+                        height: 80px;
+                        font-size: 40px;
                     }
                 }
             }

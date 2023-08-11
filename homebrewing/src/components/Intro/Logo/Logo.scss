@@ -4,11 +4,13 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 900px;
 
     .introLogo {
-        width: 35%;
-        height: 100%;
+        width: 1100px;
+        height: 900px;
+
+        transition: 0.8s;
     }
 
     .firstMan {
@@ -71,69 +73,58 @@
 }
 
 //Responsive Web codes
-@media all and (min-width:1681px)  and (max-width:2100px) {
+@media all and (max-width:1680px) {
     .svgContainer {
-        height:80%;
-        width: 50%;
-        
-        .introLogo {
-            width: 85%;
-            height: 100%;
-        }
-    }   
-}
-@media all and (min-width:1280px)  and (max-width:1680px) {
-    .svgContainer {
-        height:80%;
+        height: 800px;
         width: 45%;
         
         .introLogo {
-            width: 85%;
-            height: 100%;
+            width: 900px;
+            height: 800px;
         }
     }   
 }
-@media all and (min-width:1024px) and (max-width:1279px) {
+@media all and (max-width:1279px) {
     .svgContainer {
-        height:70%;
-        width: 40%;
-        
-        .introLogo {
-            width: 85%;
-            height: 100%;
-        }
-    }   
-}
-@media all and (min-width:768px) and (max-width:1023px) {
-    .svgContainer {
-        height:60%;
+        height: 600px;
         width: 50%;
         
         .introLogo {
-            width: 85%;
-            height: 100%;
+            width: 750px;
+            height: 600px;
         }
     }   
 }
-@media all and (min-width:480px) and (max-width:767px) {
+@media all and (max-width:1023px) {
     .svgContainer {
-        height: 90%;
+        height: 480px;
+        width: 50%;
+        
+        .introLogo {
+            width: 550px;
+            height: 400px;
+        }
+    }   
+}
+@media all and (max-width:767px) {
+    .svgContainer {
+        height: 400px;
         width: 85%;
         
         .introLogo {
-            width: 85%;
-            height: 100%;
+            width: 450px;
+            height: 350px;
         }
     }  
 }
 @media all and (max-width:479px) {
     .svgContainer {
-        height: 75%;
+        height: 250px;
         width: 95%;
         
         .introLogo {
-            width: 85%;
-            height: 100%;
+            width: 300px;
+            height: 250px;
         }
     }  
 }

@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  width: 60%;
-  height: 4vh;
+  width: 1600px;
+  height: 60px;
   margin: 20px;
   margin-top: 0.5%;
   border: 1px rgb(184, 184, 184) solid;
@@ -82,7 +82,7 @@
   justify-content: center;
   text-decoration: none;
   outline: none;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #A86B43;
   letter-spacing: 2px;
@@ -117,7 +117,7 @@
   justify-content: center;
   text-decoration: none;
   outline: none;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #A86B43;
   letter-spacing: 1px;
@@ -150,7 +150,7 @@
   justify-content: center;
   text-decoration: none;
   outline: none;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #A86B43;
   letter-spacing: 2px;
@@ -185,7 +185,7 @@
   justify-content: center;
   text-decoration: none;
   outline: none;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #A86B43;
   letter-spacing: 2px;
@@ -225,155 +225,104 @@
     opacity: 1;
   }
 }
-@media all and (min-width: 1681px) and (max-width: 2100px) {
+@media all and (min-width: 320px) {
   .fixedNavbar {
-    width: 60%;
-    height: 5%;
+    min-width: 300px;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 1%;
   }
   .fixedNavbar .navTitle {
-    font-size: 20px;
-  }
-  .fixedNavbar .guide {
-    width: auto;
-    font-size: 16px;
-  }
-  .fixedNavbar .shop {
-    font-size: 16px;
+    display: none;
   }
   .fixedNavbar .myRecipe {
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 10px;
   }
-  .fixedNavbar .login {
-    font-size: 16px;
+  .fixedNavbar .logIn {
+    font-weight: bold;
+    font-size: 10px;
   }
-  .fixedNavbar .account {
-    font-size: 16px;
+  .fixedNavbar .logOut {
+    font-weight: bold;
+    font-size: 10px;
   }
 }
-@media all and (min-width: 1280px) and (max-width: 1680px) {
+@media all and (min-width: 767px) {
   .fixedNavbar {
-    width: 70%;
-    height: 5%;
+    min-width: 500px;
+    max-width: 900px;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 0.5%;
   }
   .fixedNavbar .navTitle {
+    display: none;
+  }
+  .fixedNavbar .myRecipe {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fixedNavbar .logIn {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fixedNavbar .logOut {
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .fixedNavbar {
+    min-width: 900px;
+    max-width: 1200px;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 1%;
+  }
+  .fixedNavbar .navTitle {
+    display: flex;
+    font-size: 22px;
+  }
+  .fixedNavbar .myRecipe {
+    font-weight: bold;
     font-size: 18px;
   }
-  .fixedNavbar .guide {
-    width: auto;
-    font-size: 16px;
+  .fixedNavbar .logIn {
+    font-weight: bold;
+    font-size: 18px;
   }
-  .fixedNavbar .shop {
-    font-size: 16px;
-  }
-  .fixedNavbar .myRecipe {
-    font-size: 16px;
-  }
-  .fixedNavbar .login {
-    font-size: 16px;
-  }
-  .fixedNavbar .account {
-    font-size: 16px;
+  .fixedNavbar .logOut {
+    font-weight: bold;
+    font-size: 18px;
   }
 }
-@media all and (min-width: 1024px) and (max-width: 1279px) {
+@media all and (min-width: 1680px) {
   .fixedNavbar {
-    width: 70%;
-    height: 5%;
-  }
-  .fixedNavbar .navTitle {
-    font-size: 16px;
-  }
-  .fixedNavbar .guide {
-    width: auto;
-    font-size: 13px;
-  }
-  .fixedNavbar .shop {
-    font-size: 13px;
-  }
-  .fixedNavbar .myRecipe {
-    font-size: 13px;
-  }
-  .fixedNavbar .login {
-    font-size: 13px;
-  }
-  .fixedNavbar .account {
-    font-size: 13px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  .fixedNavbar {
+    min-width: 1000px;
+    max-width: 1500px;
     width: 80%;
-    height: 5%;
+    height: 55px;
+    border-radius: 10px;
+    margin-top: 1%;
   }
   .fixedNavbar .navTitle {
-    font-size: 12px;
-  }
-  .fixedNavbar .guide {
-    width: auto;
-    font-size: 12px;
-  }
-  .fixedNavbar .shop {
-    font-size: 12px;
+    display: flex;
+    font-size: 25px;
   }
   .fixedNavbar .myRecipe {
-    font-size: 12px;
+    font-weight: bold;
+    font-size: 22px;
   }
-  .fixedNavbar .login {
-    font-size: 12px;
+  .fixedNavbar .logIn {
+    font-weight: bold;
+    font-size: 22px;
   }
-  .fixedNavbar .account {
-    font-size: 12px;
-  }
-}
-@media all and (min-width: 480px) and (max-width: 767px) {
-  .fixedNavbar {
-    width: 90%;
-    height: 4vh;
-  }
-  .fixedNavbar .navTitle {
-    display: none;
-  }
-  .fixedNavbar .guide {
-    width: auto;
-    font-size: 12px;
-  }
-  .fixedNavbar .shop {
-    font-size: 12px;
-  }
-  .fixedNavbar .myRecipe {
-    font-size: 12px;
-  }
-  .fixedNavbar .login {
-    font-size: 12px;
-  }
-  .fixedNavbar .account {
-    font-size: 12px;
-  }
-}
-@media all and (max-width: 479px) {
-  .fixedNavbar {
-    width: 90%;
-    height: 4vh;
-    border-radius: 5px;
-    margin-top: 3%;
-  }
-  .fixedNavbar .navTitle {
-    display: none;
-  }
-  .fixedNavbar .guide {
-    width: auto;
-    font-size: 10px;
-  }
-  .fixedNavbar .shop {
-    font-size: 10px;
-  }
-  .fixedNavbar .myRecipe {
-    font-size: 10px;
-  }
-  .fixedNavbar .login {
-    font-size: 10px;
-  }
-  .fixedNavbar .account {
-    font-size: 10px;
+  .fixedNavbar .logOut {
+    font-weight: bold;
+    font-size: 22px;
   }
 }/*# sourceMappingURL=Navbar.css.map */

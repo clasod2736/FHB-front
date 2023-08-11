@@ -28,7 +28,7 @@ export default function Menu() {
         else if (
             menuName === 'espresso' || 
             menuName === 'americano' || 
-            menuName ==='longBlack' || 
+            menuName === 'longBlack' || 
             menuName === 'coldBrew' || 
             menuName === 'latte' || 
             menuName === 'flatWhite' || 
@@ -252,9 +252,11 @@ export default function Menu() {
                         <p>Espresso</p>
                     </div>
                     <div className='milkFoam'>
-                        <svg width={'100%'} height={'100%'} viewBox='0 180 500 120'>
-                            <MilkFoam className='milkFoam'/>
-                        </svg>
+                        <div className='milkFoamIcon'>
+                            <svg width={'100%'} height={'100%'} viewBox='50 180 400 120'>
+                                <MilkFoam/>
+                            </svg>
+                        </div>
                         <p>Milkfoam</p>
                     </div>
                 </span>
@@ -268,9 +270,11 @@ export default function Menu() {
                         <p>Espresso</p>
                     </div>
                     <div className='milkFoam'>
-                        <svg width={'100%'} height={'100%'} viewBox='0 180 500 120'>
-                            <MilkFoam className='milkFoam'/>
-                        </svg>
+                        <div className='milkFoamIcon'>
+                            <svg width={'100%'} height={'100%'} viewBox='50 180 400 120'>
+                                <MilkFoam/>
+                            </svg>
+                        </div>
                         <p>Milkfoam</p>
                     </div>
                 </span>
@@ -302,9 +306,11 @@ export default function Menu() {
                         <p>Espresso</p>
                     </div>
                     <div className='milkFoam'>
-                        <svg width={'100%'} height={'100%'} viewBox='0 180 500 120'>
-                            <MilkFoam className='milkFoam'/>
-                        </svg>
+                        <div className='milkFoamIcon'>
+                            <svg width={'100%'} height={'100%'} viewBox='50 180 400 120'>
+                                <MilkFoam/>
+                            </svg>
+                        </div>
                         <p>Milkfoam</p>
                     </div>
                 </span>
@@ -512,60 +518,60 @@ export default function Menu() {
             <span className='chociesContainer'>
                 <div className='choices'>
                     <div className='blackCategory'>
-                        <div className='espresso' onClick={() => {setMenuName('espresso')}}>
-                            <div className='espressoImg'></div>
+                        <div className='blackCoffee' onClick={() => {setMenuName('espresso')}}>
+                            <img src="/img/coffee/espresso.jpg" alt="img"/>
                             <p>Espresso</p>
                         </div>
-                        <div className='americano' onClick={() => {setMenuName('americano')}}>
-                            <div className='americanoImg'></div>
+                        <div className='blackCoffee' onClick={() => {setMenuName('americano')}}>
+                            <img src="/img/coffee/americano.jpg" alt="img"/>
                             <p>Americano</p>
                         </div>
-                        <div className='longBlack' onClick={() => {setMenuName('longBlack')}}>
-                            <div className='longBlackImg'></div>
+                        <div className='blackCoffee' onClick={() => {setMenuName('longBlack')}}>
+                            <img src="/img/coffee/longBlack.jpg" alt="img" className='longBlackImg'/>
                             <p>Long Black</p>
                         </div>
-                        <div className='coldBrew' onClick={() => {setMenuName('coldBrew')}}>
-                            <div className='coldBrewImg'></div>
+                        <div className='blackCoffee' onClick={() => {setMenuName('coldBrew')}}>
+                            <img src="/img/coffee/coldBrew.jpg" alt="img"/>
                             <p>Cold Brew</p>
                         </div>
                     </div>
                     <div className='whiteCategory'>
-                        <div className='latte' onClick={() => {setMenuName('latte')}}>
-                            <div className='latteImg'></div>
+                        <div className='whiteCoffee' onClick={() => {setMenuName('latte')}}>
+                            <img src="/img/coffee/latte.jpg" alt="img"/>
                             <p>Latte</p>
                         </div>
-                        <div className='flatWhite' onClick={() => {setMenuName('flatWhite')}}>
-                            <div className='flatWhiteImg'></div>
+                        <div className='whiteCoffee' onClick={() => {setMenuName('flatWhite')}}>
+                            <img src="/img/coffee/flatWhite.jpg" alt="img" className='flatWhiteImg'/>
                             <p>Flat White</p>
                         </div>
-                        <div className='cappuccino' onClick={() => {setMenuName('cappuccino')}}>
-                            <div className='cappuccinoImg'></div>
+                        <div className='whiteCoffee' onClick={() => {setMenuName('cappuccino')}}>
+                            <img src="/img/coffee/cappuccino.jpg" alt="img" className='cappuccinoImg'/>
                             <p>Capuccino</p>
                         </div>
-                        <div className='mocha' onClick={() => {setMenuName('mocha')}}>
-                            <div className='mochaImg'></div>
+                        <div className='whiteCoffee' onClick={() => {setMenuName('mocha')}}>
+                            <img src="/img/coffee/mocha.jpg" alt="img" className='mochaImg'/>
                             <p>Mocha</p>
                         </div>
-                        <div className='macchiato' onClick={() => {setMenuName('macchiato')}}>
-                            <div className='macchiatoImg'></div>
+                        <div className='whiteCoffee' onClick={() => {setMenuName('macchiato')}}>
+                            <img src="/img/coffee/macchiato.jpg" alt="img" className='macchiatoImg'/>
                             <p>Macchiato</p>
                         </div>
                     </div>
                     <div className='othersCategory'>
-                        <div className='chai' onClick={() => {setMenuName('chai')}}>
-                            <div className='chaiImg'></div>
-                            <p>Chai Latte</p>
+                        <div className='otherCoffee' onClick={() => {setMenuName('chai')}}>
+                            <img src="/img/coffee/chai.jpg" alt="img"/>
+                            <p>Chai</p>
                         </div>
-                        <div className='turmeric' onClick={() => {setMenuName('turmeric')}}>
-                            <div className='turmericImg'></div>
-                            <p>Turmeric Latte</p>
+                        <div className='otherCoffee' onClick={() => {setMenuName('turmeric')}}>
+                            <img src="/img/coffee/turmeric.jpg" alt="img"/>
+                            <p>Turmeric</p>
                         </div>
-                        <div className='icedCoffee' onClick={() => {setMenuName('icedCoffee')}}>
-                            <div className='icedCoffeeImg'></div>
+                        <div className='otherCoffee' onClick={() => {setMenuName('icedCoffee')}}>
+                            <img src="/img/coffee/icedCoffee.jpg" alt="img" className='icedCoffeeImg'/>
                             <p>Iced Coffee</p>
                         </div>
-                        <div className='affogato' onClick={() => {setMenuName('affogato')}}>
-                            <div className='affogatoImg'></div>
+                        <div className='otherCoffee' onClick={() => {setMenuName('affogato')}}>
+                            <img src="/img/coffee/affogato.jpg" alt="img"/>
                             <p>Affogato</p>
                         </div>
                     </div>
@@ -573,19 +579,22 @@ export default function Menu() {
                 <div className={handleMenuContents()}>
                     <span className='title'>
                         <span className='titleandBtn'>
-                            <button onClick={() => {setSideMenu('close')}}>🅧</button>
+                            <button onClick={() => {
+                                setSideMenu('close');
+                                setMenuName('')
+                                }}>🅧</button>
                             <header>{menuName}</header>
                         </span>
                         {settingDescription()}
                     </span>
-                    <div className='coffeeTitle'>
-                        <div className='ingredients'>
+                    <div className='ingredients'>
+                        <div className='ingredientsTitle'>
                             <h3>Ingredients</h3>
                             <p>and breif specialty</p>
                         </div>
                         {settingIngredients()}
-                        {settingSpecialty()}
                     </div>
+                    {settingSpecialty()}
                     <span className='getMenuBtn'>
                         <button onClick={() => {navigate(`./${menuName}/method`)}}>Choose this Coffee</button>
                     </span>

@@ -2,7 +2,7 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  font-size: 20px !important;
+  font-size: 22px !important;
   color: #A86B43 !important;
   background-color: transparent !important;
   border: none !important;
@@ -18,20 +18,21 @@
 
 .aboutCanvas {
   width: 20% !important;
+  background-color: #F9F6EA !important;
 }
 
 .offcanvas {
   transition: transform 0.5s ease-in-out !important;
 }
 
-.slideHeader {
+.aboutHeader {
   display: flex !important;
   flex-direction: row !important;
   justify-items: center !important;
   align-items: center !important;
   margin-top: 15% !important;
 }
-.slideHeader .slideTitle {
+.aboutHeader .aboutTitle {
   width: 100%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: sienna;
@@ -39,7 +40,7 @@
   font-size: 50px !important;
 }
 
-.canvasBody {
+.aboutBody {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,7 +48,7 @@
   width: 100%;
   height: 100%;
 }
-.canvasBody .about {
+.aboutBody .about {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,16 +56,7 @@
   height: 55%;
   margin-block: 10%;
 }
-.canvasBody .about header {
-  font-size: 30px;
-  color: linen;
-  background-color: darkgoldenrod;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  border-radius: 5px;
-  padding-inline: 3%;
-}
-.canvasBody .about .aboutText {
+.aboutBody .about .aboutText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,27 +64,14 @@
   width: 100%;
   height: 100%;
 }
-.canvasBody .about .aboutText p {
+.aboutBody .about .aboutText p {
   text-align: center;
   font-size: 18px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: saddlebrown;
   margin-bottom: 8%;
 }
-.canvasBody .about .aboutText div h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: sienna;
-}
-.canvasBody .about .aboutText div p {
-  font-size: 16px;
-  font-weight: bold;
-  color: wheat;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: sienna;
-  border-radius: 10px;
-  margin-bottom: 8%;
-}
-.canvasBody .bottom {
+.aboutBody .bottom {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -100,7 +79,7 @@
   width: 100%;
   height: 25%;
 }
-.canvasBody .bottom .title {
+.aboutBody .bottom .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,17 +87,17 @@
   width: 100%;
   height: 25%;
 }
-.canvasBody .bottom .title header {
+.aboutBody .bottom .title header {
   font-size: 25px;
   color: sienna;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.canvasBody .bottom .title h1 {
+.aboutBody .bottom .title h1 {
   font-size: 15px;
   color: darkgoldenrod;
   margin-bottom: 0;
 }
-.canvasBody .bottom .techs {
+.aboutBody .bottom .techs {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,7 +105,7 @@
   height: 45%;
   width: 100%;
 }
-.canvasBody .bottom .techs p {
+.aboutBody .bottom .techs p {
   font-size: 20px;
   color: wheat;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -136,7 +115,7 @@
   margin-bottom: 0;
   margin-inline: 1%;
 }
-.canvasBody .bottom .techs div {
+.aboutBody .bottom .techs div {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -144,57 +123,171 @@
   width: 100%;
 }
 
-@media all and (min-width: 1681px) and (max-width: 2100px) {
-  .menuBtn {
-    font-size: 18px !important;
-    margin-left: 0 !important;
-  }
-  .canvas {
-    width: 25% !important;
-  }
-}
-@media all and (min-width: 1280px) and (max-width: 1680px) {
-  .menuBtn {
-    font-size: 16px !important;
-    margin-left: 0 !important;
-  }
-  .canvas {
-    width: 25% !important;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1279px) {
-  .menuBtn {
-    font-size: 13px !important;
-    margin-left: 0 !important;
-  }
-  .aboutCanvas {
-    width: 40% !important;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  .menuBtn {
-    font-size: 12px !important;
-    margin-left: 0 !important;
-  }
-  .aboutCanvas {
-    width: 40% !important;
-  }
-}
-@media all and (min-width: 480px) and (max-width: 767px) {
-  .menuBtn {
-    font-size: 12px !important;
-    margin-left: 0 !important;
-  }
-  .aboutCanvas {
-    width: 40% !important;
-  }
-}
-@media all and (max-width: 479px) {
+@media all and (min-width: 320px) {
   .menuBtn {
     font-size: 10px !important;
+    font-weight: bold !important;
     margin-left: 0 !important;
   }
   .aboutCanvas {
-    width: 70% !important;
+    width: 80% !important;
+    min-height: 480px;
+  }
+  .aboutHeader {
+    margin-top: 0% !important;
+  }
+  .aboutHeader .aboutTitle {
+    font-size: 20px !important;
+  }
+  .aboutBody {
+    padding: 2% !important;
+  }
+  .aboutBody .about {
+    height: 60%;
+  }
+  .aboutBody .about .aboutText {
+    padding-inline: 3%;
+  }
+  .aboutBody .about .aboutText p {
+    font-size: 10px;
+    margin-bottom: 5% !important;
+  }
+  .aboutBody .bottom .title header {
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .aboutBody .bottom .title h1 {
+    font-size: 10px;
+  }
+  .aboutBody .bottom .techs {
+    height: 55%;
+  }
+  .aboutBody .bottom .techs p {
+    font-size: 10px;
+  }
+}
+@media all and (min-width: 767px) {
+  .menuBtn {
+    font-size: 15px !important;
+    font-weight: bold !important;
+    margin-left: 0 !important;
+  }
+  .aboutCanvas {
+    width: 40% !important;
+    max-width: 350px !important;
+  }
+  .aboutHeader {
+    margin-top: 10% !important;
+  }
+  .aboutHeader .aboutTitle {
+    font-size: 25px !important;
+  }
+  .aboutBody {
+    padding: 2% !important;
+  }
+  .aboutBody .about {
+    height: 55%;
+  }
+  .aboutBody .about .aboutText {
+    padding-inline: 3%;
+  }
+  .aboutBody .about .aboutText p {
+    font-size: 13px;
+    margin-bottom: 5% !important;
+  }
+  .aboutBody .bottom .title header {
+    font-size: 18px;
+  }
+  .aboutBody .bottom .title h1 {
+    font-size: 12px;
+  }
+  .aboutBody .bottom .techs p {
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .menuBtn {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin-left: 0 !important;
+  }
+  .aboutCanvas {
+    min-width: 380px !important;
+    width: 30% !important;
+    max-width: 400px !important;
+  }
+  .aboutHeader {
+    margin-top: 10% !important;
+  }
+  .aboutHeader .aboutTitle {
+    font-size: 35px !important;
+  }
+  .aboutBody {
+    padding: 2% !important;
+  }
+  .aboutBody .about {
+    height: 55%;
+  }
+  .aboutBody .about .aboutText {
+    padding-inline: 1%;
+  }
+  .aboutBody .about .aboutText p {
+    font-size: 16px;
+    margin-bottom: 5% !important;
+  }
+  .aboutBody .bottom .title header {
+    font-size: 22px;
+  }
+  .aboutBody .bottom .title h1 {
+    font-size: 15px;
+  }
+  .aboutBody .bottom .techs {
+    height: 50%;
+  }
+  .aboutBody .bottom .techs p {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1680px) {
+  .menuBtn {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    margin-left: 0 !important;
+  }
+  .aboutCanvas {
+    min-width: 400px !important;
+    width: 25% !important;
+    max-width: 550px !important;
+  }
+  .aboutHeader {
+    margin-top: 15% !important;
+  }
+  .aboutHeader .aboutTitle {
+    font-size: 50px !important;
+  }
+  .aboutBody {
+    padding: 2% !important;
+  }
+  .aboutBody .about {
+    height: 55%;
+  }
+  .aboutBody .about .aboutText {
+    padding-inline: 2%;
+  }
+  .aboutBody .about .aboutText p {
+    font-size: 20px;
+    margin-bottom: 5% !important;
+  }
+  .aboutBody .bottom .title header {
+    font-size: 26px;
+  }
+  .aboutBody .bottom .title h1 {
+    font-size: 20px;
+  }
+  .aboutBody .bottom .techs {
+    height: 50%;
+  }
+  .aboutBody .bottom .techs p {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=SlideMenu.css.map */

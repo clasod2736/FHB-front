@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 1500px;
     height: 22vh;
 
     border-top: 2px solid #88796f;
@@ -222,6 +222,7 @@
 @media all and (min-width:1681px)  and (max-width:2100px) {
 
     .footerContainer {
+        width: 1500px;
         height: 22vh;
 
         padding-inline: 0;

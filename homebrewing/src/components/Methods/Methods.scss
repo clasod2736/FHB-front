@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: 91vh;
     background-color: #F9F6EA;
     border-radius: 15px;
     
@@ -14,7 +14,7 @@
         justify-content: center;
         align-items: center;
         text-align: start;
-        width: 40%;
+        width: 80%;
         height: 8%;
         font-size: 60px;
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -33,154 +33,149 @@
         align-items: center;
         width: 60%;
         height: 90%;
-    }
+        
+        .choiceContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+        
+            margin-top: 1%;
     
-    .choiceContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: 30%;
+            animation: opacity 0.7s;
     
-        margin-top: 1%;
-
-        animation: opacity 0.7s;
-
-        div {
-            background-color: bisque;
-            border-radius: 1000px;
-            border: #7f5539 1px solid;
-
-            transition: 0.2s linear;
-
-            &:hover {
-                transform: scale(1.1);
-                background-color:#eecdb7;
-                transition: 0.3s;
-
-                p {
-                    width: auto;
-                    height: auto;
-                    opacity: 1;
-                    transition: 0.5s;
+            div {
+                background-color: bisque;
+                border-radius: 100%;
+                border: #7f5539 1px solid;
+    
+                transition: 0.2s linear;
+    
+                &:hover {
+                    transform: scale(1.1);
+                    background-color:#eecdb7;
+                    transition: 0.3s;
+    
+                    p {
+                        width: auto;
+                        height: auto;
+                        opacity: 1;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            p {
+                width: 0;
+                height: 0;
+                opacity: 0;
+                position: relative;
+                font-size: 28px;
+                overflow: hidden;
+                color: white;
+                font-weight: bold;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                left: 0%;
+                top: 0%;
+                margin-bottom: 0;
+            }
+    
+            //CSS for SVG files
+            .hario {
+                width: 13%;
+                height: 85%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                svg {
+                    position: absolute;
+                }
+            }
+            .mokaPot {
+                width: 13%;
+                height: 85%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                svg {
+                    position: absolute;
+                }
+            }
+            .frenchPress {
+                width: 13%;
+                height: 85%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                svg {
+                    position: absolute;
+                }
+            }
+            .aeroPress {
+                width: 13%;
+                height: 85%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                svg {
+                    position: absolute;
+                }
+            }
+            .chemax {
+                width: 13%;
+                height: 85%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                svg {
+                    position: absolute;
+                }
+            }
+            .syphon {
+                width: 13%;
+                height: 85%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                svg {
+                    position: absolute;
                 }
             }
         }
-        p {
-            width: 0;
-            height: 0;
-            opacity: 0;
-            position: relative;
-            font-size: 28px;
-            overflow: hidden;
-            color: white;
-            font-weight: bold;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            left: 0%;
-            top: 0%;
-            margin-bottom: 0;
-        }
-
-        //CSS for SVG files
-        .hario {
-            width: 13%;
-            height: 85%;
+        .choiceContents {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            svg {
-                position: absolute;
-            }
-        }
-        .mokaPot {
-            width: 13%;
-            height: 85%;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            svg {
-                position: absolute;
-            }
-        }
-        .frenchPress {
-            width: 13%;
-            height: 85%;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            svg {
-                position: absolute;
-            }
-        }
-        .aeroPress {
-            width: 13%;
-            height: 85%;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            svg {
-                position: absolute;
-            }
-        }
-        .chemax {
-            width: 13%;
-            height: 85%;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            svg {
-                position: absolute;
-            }
-        }
-        .syphon {
-            width: 13%;
-            height: 85%;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            svg {
-                position: absolute;
-            }
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+    
+            width: 100%;
+            height: 62%;
+    
+            padding-inline: 2%;
+            margin-top: 1%;
         }
     }
-    .choiceContents {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-        width: 100%;
-        height: 62%;
-
-        padding-inline: 2%;
-        margin-top: 1%;
-    }
+    
 }
-
-
-@media (max-height: 900px) {
-
-}
-
 @keyframes opacity {
     0% {
         opacity: 0;
@@ -189,3 +184,262 @@
         opacity: 1;
     }
 }
+
+//Responsive Web codes
+
+@media all and (min-width:320px) {
+ .mtContainer {
+    min-height: 600px;
+ }   
+}
+
+@media all and (min-width:767px) {
+    .mtContainer {
+        justify-content: flex-start;
+        min-height: 680px;
+        max-height: 800px;
+        height: 100vh;
+
+        .methods {
+            min-width: 700px;
+            max-width: 800px;
+
+            .title {
+                width: 100%;
+                max-width: 550px; 
+                height: 5%;
+                font-size: 25px;
+    
+                border-bottom: rgb(137, 85, 48) 1px solid;
+    
+                margin-top: 0;
+                padding-bottom: 1%;
+            }
+
+            .choiceContainer {
+                min-width: 700px;
+                max-height: 160px;
+                
+                div {
+                    border-radius: 10px;
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                svg {
+                    min-width: 110px;
+                    max-width: 110px;
+                }
+
+                .hario {
+                    min-height: 130px;
+                }
+                .aeroPress {
+                    min-height: 130px;
+                }
+                .mokaPot {
+                    min-height: 130px;
+                    svg {
+                        transform: translateX(-3%);
+                    }
+                }
+                .frenchPress {
+                    min-height: 130px;
+                }
+                .chemax {
+                    min-height: 130px;
+                }
+                .syphon {
+                    min-height: 130px;
+                }
+            }
+            
+            .choiceContents {
+                height: 80%;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media all and (min-width:1279px) {
+    .mtContainer {
+        justify-content: flex-start;
+        min-height: 1100px;
+        height: 1200px;
+        max-height: 1200px;
+
+        .methods {
+            width: 80%;
+            height: 100%;
+            min-width: 800px;
+            max-width: 1200px;
+
+            .title {
+                width: 70%;
+                min-width: 900px;
+                max-width: 1100px; 
+                height: 5%;
+                font-size: 40px;
+    
+                border-bottom: rgb(137, 85, 48) 1px solid;
+    
+                margin-top: 0;
+                padding-bottom: 1%;
+            }
+
+            .choiceContainer {
+                min-width: 700px;
+                max-height: 300px;
+                
+                
+                div {
+                    max-height: 250px;
+                    border-radius: 10px;
+
+                    transition: 0.3s;
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                svg {
+                    min-width: 120px;
+                    max-width: 170px;
+                    max-height: 180px;
+                }
+
+                .hario {
+                    max-width: 170px;
+                    min-height: 150px;
+                }
+                .aeroPress {
+                    min-height: 150px;
+                    max-width: 170px;
+                }
+                .mokaPot {
+                    min-height: 150px;
+                    max-width: 170px;
+                    svg {
+                        transform: translateX(-3%);
+                    }
+                }
+                .frenchPress {
+                    min-height: 150px;
+                    max-width: 170px;
+                }
+                .chemax {
+                    min-height: 150px;
+                    max-width: 170px;
+                }
+                .syphon {
+                    min-height: 150px;
+                    max-width: 170px;
+                }
+            }
+            
+            .choiceContents {
+                height: 90%;
+            }
+        }
+    }
+}
+
+@media all and (min-width:1680px) {
+    .mtContainer {
+        justify-content: flex-start;
+        min-height:1100px;
+        height: 91vh;
+        max-height: 100vh;
+
+        .methods {
+            width: 100%;
+            min-height: 900px;
+            height: 100%;
+            min-width: 1200px;
+            max-width: 1300px;
+
+            margin-top: 1%;
+
+            .title {
+                width: 70%;
+                min-width: 900px;
+                max-width: 1100px; 
+                height: 10%;
+                font-size: 60px;
+    
+                border-bottom: rgb(137, 85, 48) 1px solid;
+    
+                margin-top: 0;
+                padding-bottom: 1%;
+            }
+
+            .choiceContainer {
+                min-width: 700px;
+                min-height: 280px;
+                max-height: 280px;
+                
+                
+                div {
+                    max-height: 250px;
+                    border-radius: 10px;
+
+                    transition: 0.3s;
+                    p {
+                        font-size: 25px;
+                    }
+                }
+
+                svg {
+                    min-width: 120px;
+                    max-width: 180px;
+                    max-height: 180px;
+                }
+
+                .hario {
+                    max-width: 180px;
+                    width: 14%;
+                    min-height: 150px;
+                }
+                .aeroPress {
+                    min-height: 150px;
+                    max-width: 180px;
+                    width: 14%;
+                }
+                .mokaPot {
+                    min-height: 150px;
+                    max-width: 180px;
+                    width: 14%;
+                    svg {
+                        transform: translateX(-3%);
+                    }
+                }
+                .frenchPress {
+                    min-height: 150px;
+                    max-width: 180px;
+                    width: 14%;
+                }
+                .chemax {
+                    min-height: 150px;
+                    width: 14%;
+                    max-width: 180px;
+                    width: 14%;
+                }
+                .syphon {
+                    min-height: 150px;
+                    max-width: 180px;
+                    width: 14%;
+                }
+            }
+            
+            .choiceContents {
+                height: 65%;
+            }
+        }
+    }
+}
+
+
+

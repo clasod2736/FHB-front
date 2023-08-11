@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    width: 60%;
-    height: 4vh;
+    width: 1600px;
+    height: 60px;
     margin: 20px;
     margin-top: 0.5%;
     border: 1px  rgb(184, 184, 184) solid;
@@ -86,7 +86,7 @@
         justify-content: center;
         text-decoration: none;
         outline: none;
-        font-size: 20px;
+        font-size: 25px;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 2px;
@@ -123,7 +123,7 @@
         justify-content: center;
         text-decoration: none;
         outline: none;
-        font-size: 20px;
+        font-size: 22px;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 1px;
@@ -157,7 +157,7 @@
         justify-content: center;
         text-decoration: none;
         outline: none;
-        font-size: 20px;
+        font-size: 22px;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 2px;
@@ -194,7 +194,7 @@
         justify-content: center;
         text-decoration: none;
         outline: none;
-        font-size: 20px;
+        font-size: 22px;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         color: #A86B43;
         letter-spacing: 2px;
@@ -239,169 +239,119 @@
 }
 
 //Responsive Web codes
-@media all and (min-width:1681px)  and (max-width:2100px) {
+@media all and (min-width:320px) {
     .fixedNavbar {
-        width:60%;
-        height: 5%;
+        min-width: 300px;
+        width: 80%;
+        height: 30px;
+
+        border-radius: 10px;
+
+        margin-top: 1%;
         
         .navTitle {
-            font-size: 20px;
-        }
-    
-        .guide {
-            width: auto;
-            font-size: 16px;
-        }
-        .shop {
-            font-size: 16px;
+            display: none;
         }
         .myRecipe {
-            font-size: 16px;
+            font-weight: bold;
+            font-size: 10px;
         }
-        .login {
-            font-size: 16px;
+        .logIn {
+            font-weight: bold;
+            font-size: 10px;
         }
-        .account {
-            font-size: 16px;
+        .logOut {
+            font-weight: bold;
+            font-size: 10px;
         }
     }
 }
-@media all and (min-width:1280px)  and (max-width:1680px) {
+
+@media all and (min-width:767px) {
     .fixedNavbar {
-        width: 70%;
-        height: 5%;
+        min-width: 500px;
+        max-width: 900px;
+        width: 80%;
+        height: 40px;
+
+        border-radius: 10px;
+
+        margin-top:0.5%;
         
         .navTitle {
+            display: none;
+        }
+        .myRecipe {
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .logIn {
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .logOut {
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+}
+
+@media all and (min-width:1279px) {
+    .fixedNavbar {
+        min-width: 900px;
+        max-width: 1200px;
+        width: 80%;
+        height: 50px;
+
+        border-radius: 10px;
+
+        margin-top: 1%;
+        
+        .navTitle {
+            display: flex;
+            font-size: 22px;
+        }
+        .myRecipe {
+            font-weight: bold;
             font-size: 18px;
         }
-    
-        .guide {
-            width: auto;
-            font-size: 16px;
+        .logIn {
+            font-weight: bold;
+            font-size: 18px;
         }
-        .shop {
-            font-size: 16px;
-        }
-        .myRecipe {
-            font-size: 16px;
-        }
-        .login {
-            font-size: 16px;
-        }
-        .account {
-            font-size: 16px;
+        .logOut {
+            font-weight: bold;
+            font-size: 18px;
         }
     }
 }
-@media all and (min-width:1024px) and (max-width:1279px) {
+
+@media all and (min-width:1680px) {
     .fixedNavbar {
-        width:70%;
-        height: 5%;
-        
-        .navTitle {
-            font-size: 16px;
-        }
-    
-        .guide {
-            width: auto;
-            font-size: 13px;
-        }
-        .shop {
-            font-size: 13px;
-        }
-        .myRecipe {
-            font-size: 13px;
-        }
-        .login {
-            font-size: 13px;
-        }
-        .account {
-            font-size: 13px;
-        }
-    }
-}
-@media all and (min-width:768px) and (max-width:1023px) {
-    .fixedNavbar {
+        min-width: 1000px;
+        max-width: 1500px;
         width: 80%;
-        height: 5%;
-        
-        .navTitle {
-            font-size: 12px;
-        }
-    
-        .guide {
-            width: auto;
-            font-size: 12px;
-        }
-        .shop {
-            font-size: 12px;
-        }
-        .myRecipe {
-            font-size: 12px;
-        }
-        .login {
-            font-size: 12px;
-        }
-        .account {
-            font-size: 12px;
-        }
-    }
-}
-@media all and (min-width:480px) and (max-width:767px) {
-    .fixedNavbar {
-        width:90%;
-        height: 4vh;
-        
-        .navTitle {
-            display: none;
-        }
-    
-        .guide {
-            width: auto;
-            font-size: 12px;
-        }
-        .shop {
-            font-size: 12px;
-        }
-        .myRecipe {
-            font-size: 12px;
-        }
-        .login {
-            font-size: 12px;
-        }
-        .account {
-            font-size: 12px;
-        }
-    }
-}
-@media all and (max-width:479px) {
-    .fixedNavbar {
-        width:90%;
-        height: 4vh;
+        height: 55px;
 
-        border-radius: 5px;
+        border-radius: 10px;
 
-        margin-top: 3%;
+        margin-top: 1%;
         
         .navTitle {
-            display: none;
-        }
-    
-        .guide {
-            width: auto;
-            font-size: 10px;
-        }
-        .shop {
-            font-size: 10px;
+            display: flex;
+            font-size: 25px;
         }
         .myRecipe {
-            font-size: 10px;
+            font-weight: bold;
+            font-size: 22px;
         }
-        .login {
-            font-size: 10px;
+        .logIn {
+            font-weight: bold;
+            font-size: 22px;
         }
-        .account {
-            font-size: 10px;
+        .logOut {
+            font-weight: bold;
+            font-size: 22px;
         }
     }
 }

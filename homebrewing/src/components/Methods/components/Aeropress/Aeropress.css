@@ -1,0 +1,447 @@
+.aeropressContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  animation: opacity 0.5s;
+}
+.aeropressContainer .aeropressOutline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding-right: 1%;
+}
+.aeropressContainer .aeropressOutline .aeropressOutlineText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 60%;
+}
+.aeropressContainer .aeropressOutline .aeropressOutlineText header {
+  text-align: center;
+  height: 30%;
+  color: #702000;
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.aeropressContainer .aeropressOutline .aeropressOutlineText p {
+  color: saddlebrown;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+.aeropressContainer .aeropressOutline .hashtag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  height: 20%;
+}
+.aeropressContainer .aeropressOutline .hashtag span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2%;
+}
+.aeropressContainer .aeropressOutline .hashtag span p {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: wheat;
+  background-color: saddlebrown;
+  border: saddlebrown 1px solid;
+  border-radius: 20px;
+  margin-right: 2.5%;
+  margin-bottom: 0%;
+  padding-block: 0.5%;
+  padding-inline: 3%;
+}
+.aeropressContainer .aeropressOutline .btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 10%;
+}
+.aeropressContainer .aeropressOutline .btnContainer .backBtn {
+  width: 30%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.aeropressContainer .aeropressOutline .btnContainer .backBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.aeropressContainer .aeropressOutline .btnContainer .backBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.aeropressContainer .aeropressOutline .btnContainer .recipeBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 90%;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  border: saddlebrown 2px solid;
+  color: linen;
+  background-color: sienna;
+  box-shadow: 2px 3px 0px 0px darkgoldenrod;
+}
+.aeropressContainer .aeropressOutline .btnContainer .recipeBtn:hover {
+  color: saddlebrown;
+  background-color: bisque;
+  transition: 0.3s;
+}
+.aeropressContainer .aeropressOutline .btnContainer .recipeBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3%);
+  transition: 0s;
+}
+.aeropressContainer .videoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  border: 2px sienna solid;
+  border-radius: 18px;
+  animation: opacity 0.5s;
+}
+.aeropressContainer .videoContainer iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media all and (min-width: 320px) {
+  .aeropressContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aeropressContainer .aeropressContainerMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 580px;
+    width: 100%;
+    min-height: 580px;
+  }
+  .aeropressContainer .aeropressContainerMobile .videoContainer {
+    width: 100%;
+    height: 50%;
+  }
+  .aeropressContainer .aeropressContainerMobile .aeropressOutline {
+    height: 30%;
+    width: 100%;
+    flex-direction: row;
+  }
+  .aeropressContainer .aeropressContainerMobile .aeropressOutline .aeropressOutlineText {
+    height: 100%;
+    width: 100%;
+  }
+  .aeropressContainer .aeropressContainerMobile .aeropressOutline .aeropressOutlineText header {
+    height: auto;
+    font-size: 25px;
+  }
+  .aeropressContainer .aeropressContainerMobile .aeropressOutline .aeropressOutlineText p {
+    font-size: 12px;
+    margin-bottom: 1%;
+  }
+  .aeropressContainer .aeropressContainerMobile .hashtag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 8%;
+    width: 100%;
+  }
+  .aeropressContainer .aeropressContainerMobile .hashtag span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .aeropressContainer .aeropressContainerMobile .hashtag span p {
+    font-size: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: wheat;
+    background-color: saddlebrown;
+    border: saddlebrown 1px solid;
+    border-radius: 20px;
+    margin-right: 2.5%;
+    margin-bottom: 0%;
+    padding-block: 0.5%;
+    padding-inline: 3%;
+  }
+  .aeropressContainer .aeropressContainerMobile .btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+  }
+  .aeropressContainer .aeropressContainerMobile .btnContainer .backBtn {
+    width: 30%;
+    height: 80%;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    border-radius: 10px;
+    border: saddlebrown 2px solid;
+    color: linen;
+    background-color: sienna;
+    box-shadow: 2px 3px 0px 0px darkgoldenrod;
+  }
+  .aeropressContainer .aeropressContainerMobile .btnContainer .recipeBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 80%;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    border-radius: 10px;
+    border: saddlebrown 2px solid;
+    color: linen;
+    background-color: sienna;
+    box-shadow: 2px 3px 0px 0px darkgoldenrod;
+  }
+}
+@media all and (min-width: 767px) {
+  .aeropressContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .aeropressContainer .aeropressOutline {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText {
+    width: 45%;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText header {
+    font-size: 25px;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText p {
+    font-size: 10px;
+    margin-bottom: 3%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag {
+    flex-direction: row;
+    justify-content: center;
+    width: 30%;
+    height: 95%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag span {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer {
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 15px;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 15px;
+  }
+  .aeropressContainer .videoContainer {
+    width: 100%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1279px) {
+  .aeropressContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .aeropressContainer .aeropressOutline {
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: 70%;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText header {
+    font-size: 50px;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText p {
+    font-size: 16px;
+    margin-bottom: 3%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer {
+    height: 25%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .aeropressContainer .videoContainer {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media all and (min-width: 1680px) {
+  .aeropressContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .aeropressContainer .aeropressOutline {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    height: 100%;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText {
+    width: 100%;
+    height: 55%;
+    justify-content: flex-start;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText header {
+    font-size: 60px;
+  }
+  .aeropressContainer .aeropressOutline .aeropressOutlineText p {
+    font-size: 20px;
+    margin-bottom: 3%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag {
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag span {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .aeropressContainer .aeropressOutline .hashtag span p {
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer {
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer .backBtn {
+    width: 100%;
+    height: 30%;
+    font-size: 25px;
+  }
+  .aeropressContainer .aeropressOutline .btnContainer .recipeBtn {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+  }
+  .aeropressContainer .videoContainer {
+    width: 70%;
+    height: 80%;
+    justify-content: center;
+    margin-top: 2%;
+  }
+}/*# sourceMappingURL=Aeropress.css.map */
