@@ -1,10 +1,10 @@
 .grindContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 .grindContainer .grindTitle {
   display: flex;
@@ -15,7 +15,7 @@
 .grindContainer .grindTitle header {
   font-size: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: sienna;
+  color: darkgoldenrod;
 }
 .grindContainer .grindChoices {
   display: flex;
@@ -36,12 +36,11 @@
   border-radius: 10px;
   font-size: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: wheat;
-  background-color: sienna;
+  color: brown;
+  background-color: bisque;
 }
 .grindContainer .grindChoices div:hover {
-  color: saddlebrown;
-  background-color: bisque;
+  background-color: burlywood;
   transition: 0.3s;
 }
 .grindContainer .grindChoices div .light {
@@ -55,10 +54,10 @@
   transition: 0.3s;
 }
 .grindContainer .grindText {
+  height: 25%;
   text-align: center;
   padding-inline: 2%;
   padding-block: 1%;
-  margin-block: 3%;
 }
 .grindContainer .grindText p {
   font-size: 16px;
@@ -73,7 +72,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
   border-radius: 10px;
-  border: saddlebrown 1px solid;
+  border: 0;
   color: linen;
   background-color: sienna;
   box-shadow: 2px 3px 0px 0px darkgoldenrod;

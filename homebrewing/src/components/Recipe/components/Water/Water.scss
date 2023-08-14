@@ -1,0 +1,99 @@
+.waterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 90%;
+
+    header {
+        font-size: 40px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: slategrey;
+
+    }
+    .waterText {
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+        height: 40%;
+
+        padding-inline: 5%;
+
+        p {
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: darksalmon;
+
+            margin-bottom: 2%;
+        }
+    }
+    
+    .waterRatio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        height: 25%;
+        width: 90%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 30%;
+            height: 90%;
+            border-radius: 10px;
+            cursor: pointer;
+
+            background-color:floralwhite;
+            color: burlywood;
+
+            p {
+                font-size: 20px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                background-color: lightslategray;
+                transition: 0.3s;
+            }
+
+        }
+    }
+    button {
+        width: 50%;
+        height: 10%;
+
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+        border-radius: 10px;
+        border: 0;
+        
+        color: linen;
+        background-color: sienna;
+        box-shadow: 2px 3px 0px 0px darkgoldenrod;
+
+        &:hover {
+            color: saddlebrown;
+            background-color: bisque;
+            transition: 0.3s;
+        }
+        &:active {
+            box-shadow: 0px 0px 0px 0px;
+            transform: translateY(3%);
+            transition: 0s;
+        }
+    }
+}

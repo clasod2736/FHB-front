@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import './Grind.css'
 
 export default function Grind({getGrind, grindClose}) {
-const [text, setText] = useState('');
-console.log(text)
+const [text, setText] = useState(false);
 
 const settingGrindText = () => {
-    if (text === '') {
+    if (text === false) {
         return (
             <div className='grindText'>
                 <p>Grind Your Way.</p>
@@ -17,24 +16,25 @@ const settingGrindText = () => {
     } else if (text === 'fine') {
         return (
             <div className='grindText'>
-                <p>Ideal for intense espresso shots</p>
-                <p>capturing intricate notes and aromas.</p>
+                <p style={{fontWeight: 'bold'}}>0.2mm ~ 0.4mm</p>
+                <p>Tailored for espresso.</p>
+                <p>Delivers a bold and concentrated taste experience.</p>
             </div>
         )
     } else if (text === 'medium') {
         return (
             <div className='grindText'>
-                <p>Slightly longer roast. Deeper, balanced flavor.</p>
-                <p>Smooth taste, medium body and sweetness.</p>
-                <p>Versatile for various coffee styles.</p>
+                <p style={{fontWeight: 'bold'}}>0.5mm ~ 0.9mm</p>
+                <p>Versatile grind suits drip methods.</p>
+                <p>Balancing strength and clarity.</p>
             </div>
         )
     } else if (text === 'coarse') {
         return (
             <div className='grindText'>
-                <p>Extended roasting. Rich, dark color.</p>
-                <p>Heavy body, intensified flavor,and nutty notes.</p>
-                <p>Great for espresso-style coffee.</p>
+                <p style={{fontWeight: 'bold'}}>Bigger Than 1.00mm</p>
+                <p>Perfect for French press.</p>
+                <p>Offering bold flavors and rich texture.</p>
             </div>
         )
     }
@@ -46,12 +46,15 @@ const settingGrindText = () => {
             <header>Grind Size</header>
         </div>
         <div className='grindChoices'>
-            <div onClick={() => {setText('fine')}}>Fine</div>
-            <div onClick={() => {setText('medium')}}>Medium</div>
-            <div onClick={() => {setText('coarse')}}>Coarse</div>
+            <div onClick={() => {setText('fine')}} style={{backgroundColor: text === 'fine' ? 'burlywood' : ''}}>Fine</div>
+            <div onClick={() => {setText('medium')}} style={{backgroundColor: text === 'medium' ? 'burlywood' : ''}}>Medium</div>
+            <div onClick={() => {setText('coarse')}} style={{backgroundColor: text === 'coarse' ? 'burlywood' : ''}}>Coarse</div>
         </div>
         {settingGrindText()}
-        <button onClick={() => {getGrind(text); grindClose(false)}}>Save It!</button>
+        <button onClick={() => {
+                grindClose(false);
+                getGrind(text);
+            }}>Save It!</button>
     </div>
   )
 }

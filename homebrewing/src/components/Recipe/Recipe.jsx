@@ -23,8 +23,6 @@ export default function Recipe() {
     const [coffee, setCoffee] = useState(false);
 
     //States for choosing options
-    const [userMenu, setUserMenu] = useState(false);
-    const [userMethod, setUserMethod] = useState(false);
     const [roastingOpen, setRoastingOpen] = useState('');
     const [grindOpen, setGrindOpen] = useState('');
     const [waterOpen, setWaterOpen] = useState('');
@@ -58,7 +56,10 @@ const coffeeClose = (coffeeClose) => {
 
   //setting ingredients side-slides
   const settingRoasting = () => {
-    if (roastingOpen === true) {
+    if (roastingOpen === '') {
+        return (<div className='noneDisplay'></div>)
+    }
+    else if (roastingOpen === true) {
         return (
             <div className='roastingOpen'>
                 <div className='roastingChoice'>
@@ -81,11 +82,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='coffeeOpen'>
                 <div className='coffeeChoice'>
-                <p>Just push the "Active" button for moving to next.</p>
-                    <button onClick={() => {    
-                            setCoffee('25')
-                            setCoffeeOpen(false);
-                        }}>active!</button>
+                    <Coffee getCoffee={getCoffee} coffeeClose={coffeeClose}/>
                 </div>
             </div>
         )
@@ -93,17 +90,21 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='coffeeClose'>
                 <div className='coffeeChoice'>
+                    <Coffee getCoffee={getCoffee} coffeeClose={coffeeClose}/>
                 </div>
             </div>
         )
     }
   }
   const settingGrind = () => {
-    if (grindOpen === true) {
+    if (grindOpen === '') {
+        return (<div className='noneDisplay'></div>)
+    }
+    else if (grindOpen === true) {
         return (
             <div className='grindOpen'>
                 <div className='grindChoice'>
-                    <Grind getGrind={getGrind} grindClose={grindClose}/>
+                    <Grind  getGrind={getGrind} grindClose={grindClose}/>
                 </div>
             </div>
         )
@@ -111,7 +112,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='grindClose'>
                 <div className='grindChoice'>
-                    <Grind getGrind={getGrind} grindClose={grindClose}/>
+                    <Grind  getGrind={getGrind} grindClose={grindClose}/>
                 </div>
             </div>
         )
@@ -122,11 +123,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='waterOpen'>
                 <div className='waterChoice'>
-                <p>Just push the "Active" button for moving to next.</p>
-                    <button onClick={() => {   
-                            setWater('250')
-                            setWaterOpen(false);
-                        }}>active!</button>
+                    <Water getWater={getWater} waterClose={waterClose}/>
                 </div>
             </div>
         )
@@ -134,6 +131,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='waterClose'>
                 <div className='waterChoice'>
+                    <Water getWater={getWater} waterClose={waterClose}/>
                 </div>
             </div>
         )
@@ -176,6 +174,7 @@ const coffeeClose = (coffeeClose) => {
                 </div>
                 <div className='userMenu'>
                     <div className='userMenuName'>
+                        <p>Your Coffee is</p>
                         <header>{menuName}</header>
                     </div>
                     <div className='userMenuImg'>
@@ -191,9 +190,11 @@ const coffeeClose = (coffeeClose) => {
                         </svg>
                     </div>
                     <div className='userMethodName'>
+                        <p>Your Method is</p>
                         <header>{methodName}</header>
                     </div>
                 </div>
+                <h3>Click and choose recipes for your Coffee</h3>
                 <div className='options'>
                     <div className='firstRow'>
                         <div className='roasting' onClick={() => {setRoastingOpen(true)}}>
@@ -207,16 +208,18 @@ const coffeeClose = (coffeeClose) => {
                     </div>
                     <div className='secondRow'>
                         <div className='coffee' onClick={() => {setCoffeeOpen(true)}}>
+                            <p>{coffee}</p>
                             <p>Coffee</p>
                         </div>
                         <div className='water' onClick={() => {setWaterOpen(true)}}>
+                            <p style={{textTransform:'uppercase'}}>{water}</p>
                             <p>Water</p>
                         </div>  
                     </div>
                 </div>
                 {settingBrewBtn()}
             </div>
-            <div className='right' style={{ justifyContent: waterOpen ? 'flex-end' : 'space-between'}}>
+            <div className={waterClose ? 'right' : 'right reverse' } style={{ justifyContent: waterOpen ? 'flex-end' : 'space-between'}}>
                 {settingGrind()}
                 {settingWater()}
             </div>

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import './Roasting.css'
 
-export default function Roasting({getRoasting, roastingClose}) {
-const [text, setText] = useState('');
-const [caution, setCaution] = useState(false);
+export default function Roasting({ getRoasting, roastingClose}) {
+const [text, setText] = useState(false);
 
 const settingRoastingText = () => {
-    if (text === '') {
+    if (text === false) {
         return (
             <div className='roastingText'>
                 <p>Explore Our Roast Spectrum.</p>
@@ -46,20 +45,15 @@ const settingRoastingText = () => {
             <header>Roasting Level</header>
         </div>
         <div className='roastingChoices'>
-            <div onClick={() => {setText('light')}}>Light</div>
-            <div onClick={() => {setText('medium')}}>Medium</div>
-            <div onClick={() => {setText('dark')}}>Dark</div>
+            <div onClick={() => {setText('light')}} style={{backgroundColor: text === 'light' ? 'saddlebrown' : ''}}>Light</div>
+            <div onClick={() => {setText('medium')}} style={{backgroundColor: text === 'medium' ? 'saddlebrown' : ''}}>Medium</div>
+            <div onClick={() => {setText('dark')}} style={{backgroundColor: text === 'dark' ? 'saddlebrown' : ''}}>Dark</div>
         </div>
         {settingRoastingText()}
         <button onClick={() => {
-            if (text === '') {
-                setCaution(true);
-            } else {
                 getRoasting(text);
                 roastingClose(false);
-            }
             }}>Save It!</button>
-        {caution ? <p>Please choose Roasting!</p> : ''}
     </div>
   )
 }
