@@ -56,63 +56,6 @@ const coffeeClose = (coffeeClose) => {
     setCoffeeOpen(coffeeClose)
 }
 
-  //setting information what user chose
-  const settingUserMenu = () => {
-    if (userMenu === false) {
-        return (
-            <div className='userMenuClose'>
-                <button onClick={() => {setUserMenu(true)}}>Coffee</button>
-            </div>
-        )
-    } else if (userMenu === true) {
-        return (
-            <div className='userMenu'>
-                <div className='userMenuName'>
-                    <header>{menuName}</header>
-                </div>
-                <div className='userMenuImg'>
-                    <svg width={"100%"} height={"100%"} viewBox='140 180 230 120' opacity={'0.8'}>
-                        <UserMenu/>
-                    </svg>
-                </div>
-            </div>
-        )
-    }
-  }
-  const settingUserMethod = () => {
-    if (userMethod === false) {
-        return (
-            <div className='userMethodClose'>
-                <button onClick={() => {setUserMethod(true)}}>Method</button>
-            </div>
-        )
-    } else if (userMethod === true) {
-        return (
-            <div className='userMethod'>
-                <div className='userMethodImg'>
-                    <svg width={"100%"} height={"100%"} viewBox='140 190 230 120'>
-                        <UserMethod/>
-                    </svg>
-                </div>
-                <div className='userMethodName'>
-                    <header>{methodName}</header>
-                </div>
-            </div>
-        )
-    }
-  }
-  const settingMidText = () => {
-    if (userMenu === false || userMethod === false) {
-        return (
-            <p>Check Coffee and Method First!</p>
-        )
-    } else if (userMenu === true && userMethod === true) {
-        return (
-            <p>Then you choose 4 Ingredients!</p>
-        )
-    }
-  }
-
   //setting ingredients side-slides
   const settingRoasting = () => {
     if (roastingOpen === true) {
@@ -127,6 +70,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='roastingClose'>
                 <div className='roastingChoice'>
+                    <Roasting getRoasting={getRoasting} roastingClose={roastingClose}/>
                 </div>
             </div>
         )
@@ -159,7 +103,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='grindOpen'>
                 <div className='grindChoice'>
-                <Grind getGrind={getGrind} grindClose={grindClose}/>
+                    <Grind getGrind={getGrind} grindClose={grindClose}/>
                 </div>
             </div>
         )
@@ -167,6 +111,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='grindClose'>
                 <div className='grindChoice'>
+                    <Grind getGrind={getGrind} grindClose={grindClose}/>
                 </div>
             </div>
         )
@@ -229,9 +174,26 @@ const coffeeClose = (coffeeClose) => {
                 <div className='header'>
                     <header>Brewing Recipe</header>
                 </div>
-                {settingUserMenu()}
-                {settingUserMethod()}
-                {settingMidText()}
+                <div className='userMenu'>
+                    <div className='userMenuName'>
+                        <header>{menuName}</header>
+                    </div>
+                    <div className='userMenuImg'>
+                        <svg width={"100%"} height={"100%"} viewBox='140 180 230 120' opacity={'0.8'}>
+                            <UserMenu/>
+                        </svg>
+                    </div>
+                </div>
+                <div className='userMethod'>
+                    <div className='userMethodImg'>
+                        <svg width={"100%"} height={"100%"} viewBox='140 190 230 120'>
+                            <UserMethod/>
+                        </svg>
+                    </div>
+                    <div className='userMethodName'>
+                        <header>{methodName}</header>
+                    </div>
+                </div>
                 <div className='options'>
                     <div className='firstRow'>
                         <div className='roasting' onClick={() => {setRoastingOpen(true)}}>

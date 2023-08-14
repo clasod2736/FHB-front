@@ -3,7 +3,7 @@ import './Roasting.css'
 
 export default function Roasting({getRoasting, roastingClose}) {
 const [text, setText] = useState('');
-console.log(text)
+const [caution, setCaution] = useState(false);
 
 const settingRoastingText = () => {
     if (text === '') {
@@ -51,7 +51,15 @@ const settingRoastingText = () => {
             <div onClick={() => {setText('dark')}}>Dark</div>
         </div>
         {settingRoastingText()}
-        <button onClick={() => {getRoasting(text); roastingClose(false)}}>Save It!</button>
+        <button onClick={() => {
+            if (text === '') {
+                setCaution(true);
+            } else {
+                getRoasting(text);
+                roastingClose(false);
+            }
+            }}>Save It!</button>
+        {caution ? <p>Please choose Roasting!</p> : ''}
     </div>
   )
 }
