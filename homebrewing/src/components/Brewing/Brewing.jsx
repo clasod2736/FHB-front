@@ -1,14 +1,22 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Brewing.css'
-import Step1 from './Steps/Step1/Step1'
-import Step2 from './Steps/Step2/Step2'
-import Step3 from './Steps/Step3/Step3'
+import { useParams } from 'react-router-dom'
+import StuffList from './StuffList/StuffList';
 
 export default function Brewing() {
 
+const { menuName, methodName, coffee, water, roasting, grind } = useParams();
+
   return (
     <div className='brewingContainer'>
-        <Step1/>
+      <div className='brewing'>
+        <div className='stuffListContainer'>
+          <StuffList/>
+        </div>
+        <div className='brewSteps'>
+          
+        </div>
+      </div>
     </div>
   )
 }

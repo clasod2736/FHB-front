@@ -504,9 +504,6 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.recipeContainer .recipeBox .right.reverse {
-  flex-direction: column;
-}
 
 @keyframes centerHeader {
   from {

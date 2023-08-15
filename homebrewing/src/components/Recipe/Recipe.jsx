@@ -123,7 +123,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='waterOpen'>
                 <div className='waterChoice'>
-                    <Water getWater={getWater} waterClose={waterClose}/>
+                    <Water getWater={getWater} waterClose={waterClose} coffee={coffee}/>
                 </div>
             </div>
         )
@@ -131,7 +131,7 @@ const coffeeClose = (coffeeClose) => {
         return (
             <div className='waterClose'>
                 <div className='waterChoice'>
-                    <Water getWater={getWater} waterClose={waterClose}/>
+                    <Water getWater={getWater} waterClose={waterClose} coffee={coffee}/>
                 </div>
             </div>
         )
@@ -147,7 +147,7 @@ const coffeeClose = (coffeeClose) => {
             return (
                 <div className='goBrewContainer'>
                     <button className='goBrewBtn'
-                    onClick={() => navigate(`./brewing/${water}/${coffee}/${roasting}/${grind}/step1`)}>
+                    onClick={() => navigate(`./brewing/${water}/${coffee}/${roasting}/${grind}/brewing`)}>
                         Start Brewing!
                     </button>
                 </div>
@@ -212,14 +212,14 @@ const coffeeClose = (coffeeClose) => {
                             <p>Coffee</p>
                         </div>
                         <div className='water' onClick={() => {setWaterOpen(true)}}>
-                            <p style={{textTransform:'uppercase'}}>{water}</p>
+                            <p>{water}</p>
                             <p>Water</p>
                         </div>  
                     </div>
                 </div>
                 {settingBrewBtn()}
             </div>
-            <div className={waterClose ? 'right' : 'right reverse' } style={{ justifyContent: waterOpen ? 'flex-end' : 'space-between'}}>
+            <div className='right' style={{ justifyContent: waterOpen ? 'flex-end' : 'space-between'}}>
                 {settingGrind()}
                 {settingWater()}
             </div>

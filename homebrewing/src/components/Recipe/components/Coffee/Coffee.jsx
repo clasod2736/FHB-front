@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Coffee.css'
 
 export default function Coffee({ getCoffee, coffeeClose }) {
-    const [serve, setServe] = useState(0)
+    const [serve, setServe] = useState(1)
     const [text, setText] = useState(false);
 
     useEffect(() => {

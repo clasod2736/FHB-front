@@ -1,8 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Water.css'
 
-export default function Water({ getWater, waterClose }) {
+export default function Water({ getWater, waterClose, coffee }) {
 const [text, setText] = useState(false);
+const [coffeeAmount, setCoffeeAmount] = useState(0)
+
+//calculate amount of water with coffee amount
+useEffect(() => {
+    if (!coffee) {
+        return    
+    } else if ( typeof coffee === 'string') {
+        const coffeeAmount = coffee[0] + coffee[1]
+        setCoffeeAmount(coffeeAmount)
+    }
+}, [coffee])
 
   return (
     <div className='waterContainer'>
@@ -14,22 +25,22 @@ const [text, setText] = useState(false);
             <p>and flavor of your coffee.</p>
         </div> 
         <div className='waterRatio'>
-            <div onClick={() => {setText('7:1')}} style={{backgroundColor: text === '7:1' ? 'lightslategrey' : ''}}>
+            <div onClick={() => {setText('7')}} style={{backgroundColor: text === '7' ? 'lightslategrey' : ''}}>
                 <p>Strong</p>
                 <p>7:1</p>
                 </div>
-            <div onClick={() => {setText('10:1')}} style={{backgroundColor: text === '10:1' ? 'lightslategrey' : ''}}>
+            <div onClick={() => {setText('10')}} style={{backgroundColor: text === '10' ? 'lightslategrey' : ''}}>
                 <p>Normal</p>
                 <p>10:1</p>
             </div>
-            <div onClick={() => {setText('12:1')}} style={{backgroundColor: text === '12:1' ? 'lightslategrey' : ''}}>
+            <div onClick={() => {setText('12')}} style={{backgroundColor: text === '12' ? 'lightslategrey' : ''}}>
                 <p>Mild</p>
                 <p>12:1</p>
             </div>
         </div>
         <button onClick={() => {
                 waterClose(false);
-                getWater(text);
+                getWater(text * coffeeAmount + 'ml of');
             }}>Save It!</button>
     </div>
   )

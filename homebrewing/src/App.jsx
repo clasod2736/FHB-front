@@ -24,6 +24,7 @@ import Step6 from './components/Brewing/Steps/Step6/Step6';
 import Step7 from './components/Brewing/Steps/Step7/Step7';
 import Finish from './components/Finish/Finish';
 import MyRecipe from './components/MyRecipe/MyRecipe';
+import Brewing from './components/Brewing/Brewing';
 
 const router = createBrowserRouter([
   { path:'/',
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
       {path: '/menu', element:<Menu/>},
       {path: '/menu/:menuName/method', element:<Methods/>},
       {path: '/menu/:menuName/method/:methodName/recipe', element:<Recipe/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/brewing', element:<Brewing/>},
       {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/finish', element:<Finish/>},
       
       //Brewing Steps
