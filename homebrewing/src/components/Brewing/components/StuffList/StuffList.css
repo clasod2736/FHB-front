@@ -1,6 +1,10 @@
-.stuffListContainer {
+.stuffList {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 25%;
+  height: 80%;
+  border: 2px solid sienna;
+  border-radius: 10px;
 }/*# sourceMappingURL=StuffList.css.map */

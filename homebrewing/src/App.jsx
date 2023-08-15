@@ -15,13 +15,13 @@ import Login from './components/User/Login/Login';
 import Register from './components/User/Regitser/Register'; 
   
 // Brewing Steps Components
-import Step1 from './components/Brewing//Steps/Step1/Step1';
-import Step3 from './components/Brewing/Steps/Step3/Step3';
-import Step2 from './components/Brewing/Steps/Step2/Step2';
-import Step4 from './components/Brewing/Steps/Step4/Step4';
-import Step5 from './components/Brewing/Steps/Step5/Step5';
-import Step6 from './components/Brewing/Steps/Step6/Step6';
-import Step7 from './components/Brewing/Steps/Step7/Step7';
+import Step1 from './components/Brewing/components/Steps/Step1/Step1';
+import Step3 from './components/Brewing/components/Steps/Step3/Step3';
+import Step2 from './components/Brewing/components/Steps/Step2/Step2';
+import Step4 from './components/Brewing/components/Steps/Step4/Step4';
+import Step5 from './components/Brewing/components/Steps/Step5/Step5';
+import Step6 from './components/Brewing/components/Steps/Step6/Step6';
+import Step7 from './components/Brewing/components/Steps/Step7/Step7';
 import Finish from './components/Finish/Finish';
 import MyRecipe from './components/MyRecipe/MyRecipe';
 import Brewing from './components/Brewing/Brewing';

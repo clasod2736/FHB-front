@@ -9,9 +9,8 @@ const [coffeeAmount, setCoffeeAmount] = useState(0)
 useEffect(() => {
     if (!coffee) {
         return    
-    } else if ( typeof coffee === 'string') {
-        const coffeeAmount = coffee[0] + coffee[1]
-        setCoffeeAmount(coffeeAmount)
+    } else if ( typeof coffee === 'number') {
+        setCoffeeAmount(coffee)
     }
 }, [coffee])
 
@@ -39,8 +38,13 @@ useEffect(() => {
             </div>
         </div>
         <button onClick={() => {
+            if (text * coffeeAmount === 0) {
+                waterClose(true);
+                alert('Please fix Coffee Amount First')
+            } else {
                 waterClose(false);
-                getWater(text * coffeeAmount + 'ml of');
+                getWater(text * coffeeAmount);
+            }
             }}>Save It!</button>
     </div>
   )

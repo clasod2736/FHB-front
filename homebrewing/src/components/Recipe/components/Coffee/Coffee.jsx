@@ -7,7 +7,7 @@ export default function Coffee({ getCoffee, coffeeClose }) {
 
     useEffect(() => {
         serve > 0 ?
-        setText(serve * 20 + 'g of')
+        setText(serve * 20)
         :
         <div></div>
     }, [serve])
@@ -36,8 +36,8 @@ export default function Coffee({ getCoffee, coffeeClose }) {
         </div>
         <p className='coffeeAmount'>Your Coffee Amount is {serve * 20}g</p>
         <button className='saveBtn' onClick={() => {
-                coffeeClose(false);
-                getCoffee(text);
+                    coffeeClose(false);
+                    getCoffee(text);
             }}>Save It!</button>
     </div>
   )
