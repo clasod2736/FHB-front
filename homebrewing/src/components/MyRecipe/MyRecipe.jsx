@@ -151,6 +151,12 @@ export default function MyRecipe() {
                     </ul>
                 )
             }
+        } else if (oldBrews.length === 0) {
+            return (
+                <div>
+                    You don't have history yet.
+                </div>
+            )
         }
     }
 
@@ -171,6 +177,7 @@ export default function MyRecipe() {
                         <p className='water'>Water</p>
                         <p className='roasting'>Roasting</p>
                         <p className='grind'>Grind</p>
+                        <p className='functions'>Functions</p>
                     </div>
                     {settingOldBrews()}
                     <div className='moreBtn'>

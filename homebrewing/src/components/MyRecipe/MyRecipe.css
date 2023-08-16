@@ -99,6 +99,10 @@
   width: 15%;
   text-align: center;
 }
+.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .functions {
+  width: 14%;
+  text-align: right;
+}
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history {
   display: flex;
   flex-direction: column;
