@@ -1,12 +1,39 @@
-.stuffList {
+.stuffListContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
-    width: 25%;
-    height: 80%;
+    width: 20%;
+    height: 90%;
 
-    border: 2px solid sienna;
+    background-color: wheat;
     border-radius: 10px;
+
+    .recipeInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        width: 100%;
+        height: 35%;
+
+        padding: 5%;
+
+        header {
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: sienna;
+        }
+
+        p {
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: darkgoldenrod;
+            text-transform: uppercase;
+
+            margin-bottom: 1%;
+        }
+    }
 }

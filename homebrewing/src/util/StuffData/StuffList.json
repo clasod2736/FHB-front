@@ -18,7 +18,7 @@
     "method": 
         {
         "harioV6": ["Hario V6", "V60 Paper Filters", "Carafe or Mug", "Gooseneck Kettle"],
-        "frenchPress": ["French Press", "Gooseneck Kettle"],
+        "frenchpress": ["French Press", "Gooseneck Kettle"],
         "mokapot": ["Mokapot", "Heat Source"],
         "chemax": ["chemax", "Chemex Filters", "Gooseneck Kettle"],
         "aeropress": ["AeroPress", "AeroPress Filter"],
