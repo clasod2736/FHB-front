@@ -210,7 +210,7 @@
 
             width: 50%;
             height: 100%;
-            max-height: 265px;
+            max-height: 350px;
 
             .favDetails {
                 display: flex;
@@ -220,7 +220,7 @@
 
                 width: 95%;
                 height: 100%;
-                max-height: 265px;
+                max-height: 350px;
 
                 animation: opacity 0.3s;
                 
@@ -245,7 +245,7 @@
                     height: 100%;
 
                     //preventing stretch for overflow contents
-                    max-height: 240px;
+                    max-height: 350px;
 
                     .details {
                         display: flex;
@@ -253,7 +253,7 @@
                         justify-content: space-between;
                         align-items: flex-start;
                         
-                        width: 50%;
+                        width: 55%;
                         height: 100%;
     
                         padding-left: 3%;
@@ -268,7 +268,7 @@
 
                             height: 12%;
                             width: auto;
-                            font-size: 18px;
+                            font-size: 20px;
                             color: wheat;
                             font-family: Verdana, Geneva, Tahoma, sans-serif;
                             font-weight: bold;
@@ -283,7 +283,7 @@
     
                         p {
                             display: flex;
-                            font-size: 15px;
+                            font-size: 18px;
                             font-weight: bold;
                             font-family:'Courier New', Courier, monospace;
                             color: saddlebrown;
@@ -301,7 +301,7 @@
                         justify-content: space-between;
                         align-items: flex-start;
                         
-                        width: 50%;
+                        width: 55%;
                         height: 100%;
     
                         padding-left: 3%;
@@ -317,7 +317,7 @@
 
                             height: 12%;
                             width: auto;
-                            font-size: 18px;
+                            font-size: 20px;
                             color: sienna;
                             font-family: Verdana, Geneva, Tahoma, sans-serif;
                             font-weight: bold;
@@ -341,7 +341,7 @@
     
                         p {
                             display: flex;
-                            font-size: 15px;
+                            font-size: 18px;
                             font-weight: bold;
                             font-family:'Courier New', Courier, monospace;
                             color: saddlebrown;
@@ -369,11 +369,11 @@
                         justify-content: center;
                         align-items: center;
 
-                        width: 50%;
+                        width: 45%;
                         height: 100%;
 
                         //preventing stretch for overflow contents
-                        max-height: 230px;
+                        max-height: 350px;
 
                         .customOptions {
                             display: flex;
@@ -387,7 +387,7 @@
                             animation: opacity 0.5s;
                             
                             p {
-                                font-size: 25px;
+                                font-size: 30px;
                                 font-weight: bold;
                                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                                 color: sienna;
@@ -397,7 +397,8 @@
     
                             button {
                                 width: 80%;
-                                font-size: 18px;
+                                height: 20%;
+                                font-size: 20px;
                                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                                 border-radius: 10px;
                                 border: 0;    
@@ -688,18 +689,18 @@
                             }
                             .customRoasting {
                                 display: flex;
-                                flex-direction: row;
-                                justify-content: space-around;
+                                flex-direction: column-reverse;
+                                justify-content: space-evenly;
                                 align-items: center;
 
                                 width: 100%;
-                                height: 50%;
+                                height: 70%;
 
                                 animation: opacity 0.5s;
 
                                 button {
-                                    width: 30%;
-                                    height: 50%;
+                                    width: 80%;
+                                    height: 20%;
                                 }
 
                                 .light {
@@ -717,18 +718,18 @@
                             }
                             .customGrind {
                                 display: flex;
-                                flex-direction: row;
-                                justify-content: space-around;
+                                flex-direction: column-reverse;
+                                justify-content: space-evenly;
                                 align-items: center;
 
                                 width: 100%;
-                                height: 50%;
+                                height: 70%;
 
                                 animation: opacity 0.5s;
 
                                 button {
-                                    width: 30%;
-                                    height: 50%;
+                                    width: 80%;
+                                    height: 20%;
 
                                     background-color: wheat;
                                     color: sienna;
@@ -768,7 +769,7 @@
     
                             p {
                                 height: 10%;
-                                font-size: 18px;
+                                font-size: 25px;
                                 font-weight: bold;
                                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                                 color: sienna;
@@ -777,13 +778,13 @@
                             }
     
                             .descriptionInput {
-                                width: 80%;
+                                width: 100%;
                                 min-height: 50%;
                                 max-height: 50%;
                                 outline: none;
                                 border: 0;
                                 resize: none;   
-                                font-size: 15px;
+                                font-size: 18px;
                                 color: sienna;
                                 overflow:  hidden;
     
@@ -795,15 +796,15 @@
                             .descriptionBtnContainer {
                                 display: flex ;
                                 flex-direction: column;
-                                justify-content: space-between;
+                                justify-content: space-around;
                                 align-items: center;
     
                                 width: 100%;
                                 height: 25%;
                                 
                                 button {
-                                    width: 80%;
-                                    font-size: 15px;
+                                    width: 100%;
+                                    font-size: 18px;
                                     font-family: Verdana, Geneva, Tahoma, sans-serif;
                                     border-radius: 10px;
                                     border: 0;    

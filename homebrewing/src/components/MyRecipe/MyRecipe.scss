@@ -5,7 +5,7 @@
     align-items: center;
 
     width: 100%;
-    height: 70vh;
+    height: 91vh;
 
     animation: opacity 0.5s;
     
@@ -74,7 +74,7 @@
                 .category {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     align-items: center;
 
                     width: 100%;
@@ -93,31 +93,28 @@
                         margin-bottom: 0;
 
                     }
-                    .date {
-                        width: 20%;
-                    }
                     .menu {
-                        width: 15%;
+                        width: 10%;
                         text-align: center;
                     }
                     .method {
-                        width: 15%;
+                        width: 20%;
                         text-align: center;
                     }
                     .water {
-                        width: 12%;
+                        width: 17%;
                         text-align: center;
                     }
                     .coffee {
-                        width: 5%;
-                        text-align: center;
+                        width: 7%;
+                        text-align: left;
                     }
                     .roasting {
-                        width: 10%;
+                        width: 11%;
                         text-align: center;
                     }
                     .grind {
-                        width: 10%;
+                        width: 15%;
                         text-align: center;
                     }
                 }
@@ -145,18 +142,11 @@
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
-                        cursor: pointer;
 
                         border-radius: 5px;
     
-                        margin-block: 1.5%;
+                        margin-block: 2.5%;
 
-                        &:hover {
-                            box-shadow: 2px 2px 0px 1px lightgrey;
-                            background-color: wheat;
-                            transition: 0.3s;
-                        }
-    
                         p {
                             margin-inline: 3%;
                             font-size: 18px;
@@ -167,12 +157,35 @@
                             margin: 0;
                         }
 
-                        .date {
-                            text-align: left;
+                        .historyBtnContainer {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            height: 100%;
                             width: 20%;
+
+                            button {
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family:'Courier New', Courier, monospace;
+                                color: saddlebrown;
+                                background-color: transparent;
+                                border: 2px solid sienna;  
+                                border-radius: 10px;
+
+                                &:hover {
+                                    background-color: sienna;
+                                    color: wheat;
+                                    transition: 0.3s;
+                                }
+
+                            }
                         }
+
                         .menu {
-                            width: 15%;
+                            width: 10%;
                             text-align: center;
                             text-transform: uppercase;
                         }

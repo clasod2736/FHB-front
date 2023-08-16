@@ -9,7 +9,7 @@ import {useSelector} from 'react-redux'
 import {ReactComponent as FHBLogo} from '../../../assets/favLogo.svg'
 import {FaStar} from 'react-icons/fa'
 
-export default function Fav() {
+export default function Fav({ favUpdated }) {
     const userEmail = useSelector((state) => state.userEmail);
 
     const [favourites, setFavourites] = useState([]);
@@ -55,7 +55,7 @@ useEffect(() => {
         }
     }
     fetchDatas();
-}, [ description, customFav, userEmail, fixedFav, favList ])
+}, [ description, customFav, userEmail, fixedFav, favList, favUpdated])
 
 
 //setting favourite lists with fetched data
@@ -139,7 +139,7 @@ const settingFavDetailCustom = () => {
                 <p onClick={() => {setCustomDetail('grind')}}>Grind Size: {favList.grind}</p>
             </div>
         )
-    } else if (customFav === '') {
+    } else if (customFav === '' || customFav === 'description') {
         return (
             <div className='details'>
             <p className='favName'>Name: {favList.favName}</p>
@@ -393,7 +393,7 @@ const settingCustomDetail = () => {
                         } else if ( coffeeUpdate > 10) {
                             alert("Put Serve maximum Ten Please!!")
                         } else {
-                            updateFavCoffee(favList, coffeeUpdate  * 25);
+                            updateFavCoffee(favList, coffeeUpdate  * 20);
                             setCustomDetail('')
                         }
                     }}>Fix</button>

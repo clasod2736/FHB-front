@@ -132,8 +132,9 @@ export default function Finish() {
           <div className='finishContents'>
             <header>How was your Coffee today?</header>
             <div className='finishText'>
-              <p>It is a long established fact that a reader will be distracted</p>
-              <p>it look like readable English. Many desktop</p>
+              <p>Thanks for your journey with FHB.</p>
+              <p>You can check your brew history in MyRecipe page.</p>
+              <p>Try different coffee everytime!</p>
             </div>
             <div className='btnContainer'>
               <button className='recipe'
@@ -146,7 +147,7 @@ export default function Finish() {
               <Link to={'/menu'} className='tryAnother'>
                 Try Another
               </Link>
-              <button className='shop'>Explore Shop</button>
+              <button className='shop'>About Developer</button>
             </div>
             <div className='favSubmit' style={{ display: favOpen ? 'flex' : 'none'}}>
               <input type="text" className='favNameInput' placeholder='Name of Fav'

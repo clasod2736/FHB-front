@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  height: 91vh;
   animation: opacity 0.5s;
 }
 .myRecipeContainer .myRecipe {
@@ -60,7 +60,7 @@
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 10%;
@@ -75,31 +75,28 @@
   text-decoration: underline;
   margin-bottom: 0;
 }
-.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .date {
-  width: 20%;
-}
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .menu {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .method {
-  width: 15%;
+  width: 20%;
   text-align: center;
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .water {
-  width: 12%;
+  width: 17%;
   text-align: center;
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .coffee {
-  width: 5%;
-  text-align: center;
+  width: 7%;
+  text-align: left;
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .roasting {
-  width: 10%;
+  width: 11%;
   text-align: center;
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category .grind {
-  width: 10%;
+  width: 15%;
   text-align: center;
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history {
@@ -121,14 +118,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
   border-radius: 5px;
-  margin-block: 1.5%;
-}
-.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li:hover {
-  box-shadow: 2px 2px 0px 1px lightgrey;
-  background-color: wheat;
-  transition: 0.3s;
+  margin-block: 2.5%;
 }
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li p {
   margin-inline: 3%;
@@ -138,12 +129,30 @@
   color: rgb(156, 113, 2);
   margin: 0;
 }
-.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .date {
-  text-align: left;
+.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
   width: 20%;
 }
+.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer button {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: saddlebrown;
+  background-color: transparent;
+  border: 2px solid sienna;
+  border-radius: 10px;
+}
+.myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer button:hover {
+  background-color: sienna;
+  color: wheat;
+  transition: 0.3s;
+}
 .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .menu {
-  width: 15%;
+  width: 10%;
   text-align: center;
   text-transform: uppercase;
 }

@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  height: 91vh;
   animation: opacity 0.5s;
 }
 .finishContainer .finish {
@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 45%;
+  width: 55%;
   height: 100%;
   background-image: url("../../../public/img/background/finalLogo2.jpg");
   background-position: center;
@@ -35,7 +35,7 @@
   width: 35%;
   font-size: 25px;
   font-weight: bold;
-  color: brown;
+  color: saddlebrown;
   background-color: wheat;
   border-radius: 5px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -49,9 +49,9 @@
 }
 .finishContainer .finish .finishContents .finishText p {
   color: darkgoldenrod;
-  font-size: 16px;
+  font-size: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .finishContainer .finish .finishContents .btnContainer {
   display: flex;
@@ -164,7 +164,7 @@
 }
 .finishContainer .finish .finishContents .favSubmit .btnContainer button {
   width: 20%;
-  height: 50%;
+  height: 35%;
   font-size: 20px;
   border-radius: 100%;
   background-color: sienna;

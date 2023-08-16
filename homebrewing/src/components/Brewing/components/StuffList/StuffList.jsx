@@ -13,6 +13,7 @@ export default function StuffList() {
 
   const { menuName, methodName, coffee, water, roasting, grind } = useParams();
 
+  //fetch data from json file
   useEffect(() => {
     setMenuStuffs(stuffList.menu[menuName])
     setMethodStuffs(stuffList.method[methodName])
