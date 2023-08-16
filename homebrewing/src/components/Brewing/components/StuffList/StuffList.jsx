@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import './StuffList.css'
 
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import stuffList from '../../../../util/StuffData/StuffList.json'
 
 export default function StuffList() {
+
+  const navigate = useNavigate()
+
   const [menuStuffs, setMenuStuffs] = useState([])
   const [methodStuffs, setMethodStuffs] = useState([])
 
   const { menuName, methodName, coffee, water, roasting, grind } = useParams();
 
   useEffect(() => {
-    const menu = Object.keys(stuffList.menu).find(menu => menu === menuName);
-    const method = Object.keys(stuffList.method).find(method => method === methodName);
-    setMenuStuffs(stuffList.menu[menu])
-    setMethodStuffs(stuffList.method[method])
-    console.log(menuStuffs, methodStuffs)
-  })
+    setMenuStuffs(stuffList.menu[menuName])
+    setMethodStuffs(stuffList.method[methodName])
+  }, [])
 
   return (
     <div className='stuffListContainer'>
@@ -29,11 +29,23 @@ export default function StuffList() {
         <p>Bean Roasting Level: {roasting}</p>
         <p>Bean Grind Size: {grind}</p>
       </div>
-      <ul className='stuffList'>
-        {menuStuffs.map((stuff, index) => (
-          <li key={stuff} >{coffee} + {stuff}</li>
-        ))}
-      </ul>
+      <div className='listContainer'>
+        <header>Stuff List</header>
+        <ul className='stuffList'>
+          <li>{coffee}g of Ground Coffee</li>
+          <li>{water}ml of Water</li>
+          <li>Scale</li>
+          <li>Cup or Mug</li>
+          <li>Coffee Bean Grinder</li>
+          {methodStuffs.map((method) => (
+            <li key={method} >{method}</li>
+          ))}
+          {menuStuffs.map((menu) => (
+            <li key={menu} >{menu}</li>
+          ))}
+        </ul>
+      </div>
+      <button onClick={() => {navigate(-1)}}>Back to Recipe</button>
     </div>
   )
 }

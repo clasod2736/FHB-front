@@ -1,0 +1,287 @@
+{
+    "mokapot": [
+        {
+            "step": [
+                {"title": "POUR THE WATER"},
+                {"gif": "https://cdn.buttercms.com/FGVyfsYTlqEl6x4v80ig"},
+                {"description": "Add your heated water to the bottom of the Moka pot, filling to the line inside the carafe."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "WEIGH YOUR MOKA POT ON THE SCALE "},
+                {"gif": "https://cdn.buttercms.com/Sqc27hX1QPKJegQaFvcp"},
+                {"description": "Put the metal filter basket into the brewer and add freshly ground coffee into the filter"}
+            ]
+        },
+        {
+            "step": [
+                {"title": "PUT THE MOKA POT TOGETHER"},
+                {"gif": "https://cdn.buttercms.com/hkD6EUHRH2fFHC6RcqzZ"},
+                {"description": "Remove the brewer from the scale. Screw the top and bottom together."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "TURN ON THE HEAT"},
+                {"gif": "https://cdn.buttercms.com/0UsCiHJzTTab2hCyC8qB"},
+                {"description": "Turn on your heat source to medium-low and put the Moka pot on top. Make sure the handle is not subjected to the heat."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Wait for the Hiss"},
+                {"gif": "https://cdn.buttercms.com/S52FHYpoQ0mhUAijygMf"},
+                {"description": "Leave the top lid open. The coffee will begin to come out of the spout. Close the lid. When you hear a hissing sound, remove the Moka pot from the heat source and allow the coffee to finish brewing. "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "ENJOY!"},
+                {"gif": "https://cdn.buttercms.com/xJJq6jUuQKavJc6tRWOA"},
+                {"description": "Pour your coffee, let it cool a bit, and enjoy!"}
+            ]
+        }
+    ],
+    "frenchpress": [
+        {
+            "step": [
+                {"title": "HEAT YOUR WATER / ADD COFFEE INTO THE FILTER"},
+                {"gif": "https://cdn.buttercms.com/SvARCyZR7Oy11vkhN2bQ"},
+                {"description": "Make boiling water and allow the kettle wating for 30 seconds to cool. And add ground coffee in to filter"}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Start the Brew"},
+                {"gif": "https://cdn.buttercms.com/QFvGffNfT4SRA8SP0Dc5"},
+                {"description": "There will be two pours in total. This is the first. Start your timer and pour 100g of your heated water onto the grounds. This first pour, called the “bloom,” should be about double the weight of your coffee. The goal here is to saturate all of the grounds. Give the press a little swirl and let the coffee bloom for 30 seconds. Enjoy the aroma! "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Pour Again"},
+                {"gif": "https://cdn.buttercms.com/TTz1K6DNThmlbNymQrHw"},
+                {"description": "Pour your next round of water to 1-inch away from the top of the French press."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Push the Plunger"},
+                {"gif": "https://cdn.buttercms.com/NTt6bjN2RpGCbl21jkbS"},
+                {"description": "Let sit for four minutes first and slowly push it down."}
+            ]
+        },
+        {
+            "step": [
+                {"title": " Serve"},
+                {"gif": "https://cdn.buttercms.com/fovX1ylcQe62Juod0RMR"},
+                {"description": "Your coffee is ready—enjoy! "}
+            ]
+        }
+    ],
+    "harioV6": [
+        {
+            "step": [
+                {"title": "Heat Your Water / Prepare The Filter"},
+                {"gif": "https://cdn.buttercms.com/7OcevGlmQzm6GzsCNLks"},
+                {"description": "Heat up the water and fold your paper filter at the seam. Place it inside of the V60 dripper atop your carafe or mug. Rinse the filter with heated water to remove the paper smell/taste and heat the carafe. Pour out the rinse water from your carafe."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Place Your Coffee"},
+                {"gif": "https://cdn.buttercms.com/1LlnaNckSaeLAA9ZnqOn"},
+                {"description": "Place you ground coffee in to the filter. Give it a gentle shake to level out the grounds. Tare your scale again."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Start the Brew"},
+                {"gif": "https://cdn.buttercms.com/uOZo5hwbSjK0B1vuUOR0"},
+                {"description": "There will be three pours in total. This is the first. Start your timer and bloom the coffee by pouring 50g of your heated water onto the grounds, starting in the center of the coffee and working your way out. This first pour, called the “bloom”, should be about double the weight of your coffee. The goal here is to saturate all of the grounds. Let bloom for 30 seconds and enjoy the aroma! "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Pour Your Next Round of Water"},
+                {"gif": "https://cdn.buttercms.com/L9iWuqzZQvYQx5k7vFIf"},
+                {"description": "Do this in the same concentric fashion and use around half of your remaining water. As the coffee drains down, repeat this for your last pour to finish up."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Let the Coffee Finish Dripping"},
+                {"gif": "https://cdn.buttercms.com/69ht4ADoRDen8SDOlTHc"},
+                {"description": "Then compost the filter and remove the dripper. Enjoy!"}
+            ]
+        }
+    ],
+    "chemax": [
+        {
+            "step": [
+                {"title": "HEAT THE WATER / PREPARE THE FILTER"},
+                {"gif": "https://cdn.buttercms.com/c4oS8SFTaSaeliwlbmtP"},
+                {"description": "Heat up the water and open the paper filter so there are three layers on one side, and one layer on the other. Place the three-layered side on the spout side of the Chemex. Pour your heated water over the filter to preheat the carafe and set the filter in place. Called “rinsing,” this step also removes the paper smell/taste from making its way into your coffee. When you’re done rinsing, pour out the water. "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Place Your coffee"},
+                {"gif": "https://cdn.buttercms.com/bXToi9iTaekHl1VmwpDQ"},
+                {"description": "Grind the coffee to a table salt-like consistency so the beans can fully absorb the water. This grind gives you a cleaner cup of coffee with less sediment when using a Chemex."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "START YOUR FIRST POUR "},
+                {"gif": "https://cdn.buttercms.com/X2PvGvhQ7Z2nlhv7yhQG"},
+                {"description": "Place your ground coffee into the filter and slowly pour over 100 grams of heated water, starting in the center and working your way out. It's important to have a slow, controlled pour, which is why we recommend using a gooseneck kettle when using the Chemex. This will be one of four pours in total."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "COMPLETE THREE MORE POURS"},
+                {"gif": "https://cdn.buttercms.com/FPBXXhuXTTGouTBor9JF"},
+                {"description": "The next three pours should be split into three equal parts. Pour your next round of water in the same concentric fashion and use about rest of water. As the coffee drains down, repeat this for your last pour to finish up"}
+            ]
+        },
+        {
+            "step": [
+                {"title": "REMOVE THE FILTER"},
+                {"gif": "https://cdn.buttercms.com/SWSFEFSiKvYCbM446xFw"},
+                {"description": "Let the coffee finish dripping, then compost the filter."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "SWIRL AND SERVE"},
+                {"gif": "https://cdn.buttercms.com/N8GZl3RTvmAaLzH0aeh7"},
+                {"description": "Give your carafe a swirl, pour, and enjoy!"}
+            ]
+        }
+    ],
+    "aeropress": [
+        {
+            "step": [
+                {"title": "HEAT THE WATER / PREPARE THE FILTER"},
+                {"gif": "https://cdn.buttercms.com/zwcxS93gSKCmYyUPPtWL"},
+                {"description": "Heat up water. Unscrew the black AeroPress cap before placing the circular paper filter inside of it. Rinse the filter with heated water to remove the paper smell/taste. Shake out the rinse water from your AeroPress cap and set aside. "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Place Your coffee"},
+                {"gif": "https://cdn.buttercms.com/JuYcxK4iTcKXQeFjdoz4"},
+                {"description": "Freshly ground coffee into the filter. Give it a gentle shake to level out the grounds."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "START THE BREW"},
+                {"gif": "https://cdn.buttercms.com/1i1C6CATQGu1d2WdzOOP"},
+                {"description": "There will be two pours in total. This is the first. Start your timer and bloom the coffee by pouring heated water onto the grounds. This first pour should be about double the weight of your coffee. The goal is to saturate all of the grounds. Let bloom for 30 seconds and enjoy the aroma! "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "POUR AGAIN"},
+                {"gif": "https://cdn.buttercms.com/sCShb29tTu4m12ScssWA"},
+                {"description": "Pour your next round of water about 1-inch away from the top of the AeroPress. After your pour, attach the cap with the filter and screw it in place. "}
+            ]
+        },
+        {
+            "step": [
+                {"title": " ATTACH THE CAP"},
+                {"gif": "https://cdn.buttercms.com/tcE60afTVKFNjlLk4vuM"},
+                {"description": "Secure the cap in place. "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Invert the AeroPress"},
+                {"gif": "https://cdn.buttercms.com/0NsGz6aMSY6mtvYTDsX1"},
+                {"description": "At the 2-minute mark, prepare to invert the AeroPress. We like to hold a mug over the cap before flipping it, but the plunger’s seal should prevent most leaks."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "WAIT FOR THE HISS"},
+                {"gif": "https://cdn.buttercms.com/EjEW1PtIQqSHY8bcPcML"},
+                {"description": "Slowly push the plunger down until you hear a hissing sound. This step should take about 30 seconds. "}
+            ]
+        },
+        {
+            "step": [
+                {"title": "SERVE"},
+                {"gif": "https://cdn.buttercms.com/8RBOaiT0TknJsnSfYZaC"},
+                {"description": "Pour your coffee and enjoy! "}
+            ]
+        }
+    ],
+    "syphon": [
+        {
+            "step": [
+                {"title": "Add Water to Siphon Base Vesse"},
+                {"gif": "/img/coffee/syphon1.jpg"},
+                {"description": "Your water can be preheated or cold, but make sure it is filtered for best results. Measure your water in to the bottom portion of the siphon brewer."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Apply Heat to Siphon Base"},
+                {"gif": "/img/coffee/syphon2.jpeg"},
+                {"description": "Place your burner under the bottom siphon bowl. Fire up your burner and let the water in the bottom globe of the siphon come to a boil."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Add Filter to Top Siphon Section"},
+                {"gif": "/img/coffee/syphon3.jpeg"},
+                {"description": "Our siphon uses a cloth filter, which is extremely important to keep clean and sanitary between uses. Insert and attach your siphon brewer’s clean filter into the top glass portion. Make sure the spring catch is attached to the bottom of the siphon, and the cloth filter is flat."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Attach Top and Bottom Siphon Sections"},
+                {"gif": "/img/coffee/syphon4.jpeg"},
+                {"description": "Once the filter is securely attached, insert the top part of the siphon into the bottom glob. Make sure the gasket is sealed"}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Add Coffee to Assembled Siphon"},
+                {"gif": "/img/coffee/syphon5.jpeg"},
+                {"description": "A lot is about to happen; as the water in the lower bowl heats up, water will move to the top portion of your siphon and this is when you add your ground coffee to the water in the top vessel."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Stir the Coffee"},
+                {"gif": "/img/coffee/syphon6.jpeg"},
+                {"description": "As soon as you see most of the brewing water has reached the top vessel, and you’ve added your coffee, give the mixture a good, controlled stir to fully saturate the grinds. Just a few quick stirs."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Time the Brew"},
+                {"gif": "/img/coffee/syphon7.jpeg"},
+                {"description": "Grab your smartphone or look at your watch and start a timer. We like a full immersion contact time of 90 seconds with this three cup model (try 100 seconds with a 5 cup model)."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Remove Heat Source / Watch Coffee Filter Down"},
+                {"gif": "/img/coffee/syphon8.jpeg"},
+                {"description": "Remove and turn off your burner,  With the removal of heat, steam stops being produced in the lower vessel, and indeed, the gasses trapped inside that chamber contract and phase change back to water, creating a vacuum."}
+            ]
+        },
+        {
+            "step": [
+                {"title": "Remove Top Chamber and Serve"},
+                {"gif": "/img/coffee/syphon9.jpeg"},
+                {"description": "It’s time to separate the two parts of the brewer. Place the upper brewing chamber in the included lid/stand, and pour your coffee out and enjoy!"}
+            ]
+        }
+    ]
+}

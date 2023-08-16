@@ -1,0 +1,54 @@
+{
+    "espresso": [
+        {"img": "https://images.unsplash.com/photo-1561087548-73f9f131ae36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"},
+        {"direction": ["Add some sugar or cream optionally", "Sip, don't drink."]}
+    ],
+    "americano": [
+        {"img": "/img/coffee/americano.jpg"},
+        {"direction": ["Pour single or double Espresso", "Add hot water into the Mug", "(Must add water after espresso!)"]}
+        ],
+    "longBlack": [
+        {"img": "/img/coffee/longBlack.jpg"},
+        {"direction": ["Fill a mug approx 2/3rds full with hot water.", "Pour single or double espresso (as per taste or order) directly into the mug containing hot water."]}
+        ],
+    "coldBrew": [
+        {"img": "/img/coffee/coldBrew.jpg"},
+        {"direction": ["Add water if wat to have more mild taste", "Add some Ice, Enjoy!"]}
+        ],
+    "latte": [
+        {"img": "/img/coffee/latte.jpg"},
+        {"direction": ["Steam the Milk", "Pour the Milk", "Top Off with Foam"]}
+        ],
+    "flat White": [
+        {"img": "/img/coffee/flatWhite2.jpg"},
+        {"direction": ["Pull a double espresso into a cup or glass.", "Steam the Milk", "Pour in to the cup"]}
+        ],
+    "cappuccino": [
+        {"img": "/img/coffee/cappuccino.jpg"},
+        {"direction": ["Pull a espresso into a cup.", "Froth hot milk.", "Slowly pour the milk into the cup, and finish with a foam layer."]}
+        ],
+    "mocha": [
+        {"img": "/img/coffee/mocha.jpg"},
+        {"direction": ["Put two teaspoons of chocolate mix or cocoa powder.", "mix with espresso", "Add the milk to the cup containing the chocolate espresso and top with whipped cream.", "Dust with more cocoa powder before serving."]}
+        ],
+    "macchiato": [
+        {"img": "/img/coffee/macchiato.jpg"},
+        {"direction": ["Put espresso into a small cup", "Add 1-2 teaspoons of milk foam on the top"]}
+        ],
+    "chai": [
+        {"img": "/img/coffee/chai.jpg"},
+        {"direction": ["Prepare some of dried loose chai tea leaves.", "Put chai leaves in hot milk or simmer together.", "Strain and add some honey or sugar."]}
+        ],
+    "turmeric": [
+        {"img": "/img/coffee/turmeric.jpg"},
+        {"direction": ["put turmeric, ginger, milk in the pot", "Simmering 5 minuites", "Strain and add some honey"]}
+        ],
+    "icedCoffee": [
+        {"img": "/img/coffee/icedCoffee.jpg"},
+        {"direction": ["Put double espresso and mlik in the long glass.", "Put some ice in it, put icecream on the top.", "Serve with long teasppoon."]}
+        ],
+    "affogato": [
+        {"img": "/img/coffee/affogato.jpg"},
+        {"direction": ["Put vanila icecream in the cup", "Pour over double espresso on top of icecream", "Add some liquer to your affogato(optional)."]}
+        ]
+}

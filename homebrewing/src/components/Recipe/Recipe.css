@@ -159,7 +159,6 @@
   color: sienna;
   letter-spacing: 12px;
   padding-left: 2%;
-  animation: centerHeader 1s;
 }
 .recipeContainer .recipeBox .center .userMenu {
   display: flex;
@@ -505,16 +504,6 @@
   border-bottom-right-radius: 10px;
 }
 
-@keyframes centerHeader {
-  from {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 @keyframes leftOpen {
   from {
     transform: translatex(100%);
