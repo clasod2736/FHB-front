@@ -103,7 +103,7 @@ export default function User() {
           <header>Register</header>
           <div className='contents'>
             <span>
-              <svg width={'350px'} height={'400px'} viewBox='160 195 190 120'>
+              <svg width={'350px'} height={'400px'} viewBox='160 195 190 120' className='registerImg'>
                 <CoffeeWomen/>
               </svg>
             </span>
