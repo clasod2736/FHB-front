@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  height: 91vh;
 }
 .registerContainer .register {
   display: flex;
@@ -55,7 +55,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 12%;
+  height: 10%;
 }
 .registerContainer .register .contents .form .getRegist button {
   display: flex;
@@ -91,12 +91,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 16px;
+}
+.registerContainer .register .contents .form .divide p {
+  font-size: 18px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(156, 89, 41);
-}
-.registerContainer .register .contents .form .divide p {
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -106,7 +106,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 13%;
+  height: 10%;
   text-align: left;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -135,7 +135,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 13%;
+  height: 10%;
   text-align: left;
   margin-top: 3%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -167,7 +167,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 13%;
+  height: 10%;
   text-align: left;
   margin-top: 3%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -203,8 +203,9 @@
 }
 .registerContainer .register .contents .form .submitRegist button {
   width: 100%;
-  height: 70%;
+  height: 65%;
   font-size: 20px;
+  font-weight: bold;
   letter-spacing: 2px;
   color: brown;
   background-color: wheat;

@@ -28,7 +28,8 @@ export default function SlideMenu() {
               <div className='navText'>
                 <p>These navigation links set only for browser.</p>
                 <p>It won't not working to next steps.</p>
-                <p>So just only can browsing page.</p>
+                <p>If you are a user start from home page</p>
+                <p>and please follow te guide.</p>
               </div>
               <div className='linksContainer'>
                 <Link className='links' to={'/'}>
@@ -47,12 +48,12 @@ export default function SlideMenu() {
                 </Link>
                 <Link
                 className='links'
-                to={`/menu/${menuName}/method`}>
+                to={`/method`}>
                   Coffee Method
                 </Link>
                 <Link
                 className='links'
-                to={`/menu/${menuName}/method/${methodName}/recipe`}>
+                to={`/recipe`}>
                   Recipe
                 </Link>
                 <Link className='links' to={'/menu/latte/method/chemax/recipe/0/0/medium/medium/brewing'}>

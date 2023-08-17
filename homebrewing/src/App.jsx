@@ -32,7 +32,9 @@ const router = createBrowserRouter([
       {path: '/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing', element:<Brewing/>},
       {path: '/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing/finish', element:<Finish/>},
       //Just for browsing
+      {path: '/method', element:<Methods/>},
       {path: '/finish', element:<Finish/>},
+      {path: '/recipe', element:<Recipe/>},
     ]}
 ]);
 

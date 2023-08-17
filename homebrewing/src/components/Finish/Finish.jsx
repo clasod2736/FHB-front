@@ -18,42 +18,47 @@ export default function Finish() {
 
   //Automatically Post brew history in DB after finish brewing
   useEffect(() => {
-    async function getCurrentBrew() {
-      const postOldUrl = 'http://localhost:8080/saveHistory'
 
-      //use current time for organising recent brew and time that when make oldBrews.
-      const order = Date.now();
-      const date = new Date();
-      const year = date.getFullYear().toString();
-      const month = (date.getMonth() + 1).toString();
-      const day = date.getDate().toString();
-      const hour = date.getHours().toString();
-      const minute = date.getMinutes().toString();
-      const fullDate = hour + ":" + minute + " / " + day + "." + month + "." + year;
-      console.log(fullDate)
-
-      //post oldBrews with currentBrews data first.
-      try {
-        const response = await axios.post(postOldUrl, {
-          email : userEmail,
-            oldBrews : [{
-              order: order, 
-              date: fullDate,
-              menuName: menuName,
-              methodName : methodName,
-              water: water,
-              coffee: coffee,
-              roasting: roasting,
-              grind: grind
-            }]
-        })
-        console.log(response.data)
-      } 
-      catch (error) {
-        console.log(error)
+    if (menuName !== undefined) {
+      async function getCurrentBrew() {
+        const postOldUrl = 'http://localhost:8080/saveHistory'
+  
+        //use current time for organising recent brew and time that when make oldBrews.
+        const order = Date.now();
+        const date = new Date();
+        const year = date.getFullYear().toString();
+        const month = (date.getMonth() + 1).toString();
+        const day = date.getDate().toString();
+        const hour = date.getHours().toString();
+        const minute = date.getMinutes().toString();
+        const fullDate = hour + ":" + minute + " / " + day + "." + month + "." + year;
+        console.log(fullDate)
+  
+        //post oldBrews with currentBrews data first.
+        try {
+          const response = await axios.post(postOldUrl, {
+            email : userEmail,
+              oldBrews : [{
+                order: order, 
+                date: fullDate,
+                menuName: menuName,
+                methodName : methodName,
+                water: water,
+                coffee: coffee,
+                roasting: roasting,
+                grind: grind
+              }]
+          })
+          console.log(response.data)
+        } 
+        catch (error) {
+          console.log(error)
+        }
       }
+      getCurrentBrew();
+    } else {
+      return
     }
-    getCurrentBrew();
   }, [])
 
   //get error response if Fav store is full.
@@ -76,7 +81,10 @@ export default function Finish() {
     } else if (favName.length > 10) {
       alert('Please put name less 10 letters')
       setFavName('')
-    } 
+    } else if (menuName === undefined) {
+      alert('This is just Browsing Page!')
+      return
+    }
     
     else {
 
@@ -139,10 +147,8 @@ export default function Finish() {
             <div className='btnContainer'>
               <button className='recipe'
               onClick={() => {
-
                 setFavOpen(true);
                 setSaved(false)
-
                 }}>Save Favourite</button>
               <Link to={'/menu'} className='tryAnother'>
                 Try Another
@@ -157,11 +163,15 @@ export default function Finish() {
                 <button onClick={() => {setFavOpen(false)}}>X</button>
                 <button className='submitBtn'
                 onClick={() => {
-
-                  saveFavBrews();
-                  setFavOpen(false);
-                  setSaved(true);
-
+                  if (menuName === undefined) {
+                    saveFavBrews();
+                    setSaved(false)
+                    return
+                  } else if (favResponse !== '422'){
+                    saveFavBrews();
+                    setFavOpen(false)
+                    setSaved(true)
+                  }
                 }}
                 >Submit</button>
               </div>

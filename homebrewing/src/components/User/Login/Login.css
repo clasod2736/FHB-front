@@ -4,17 +4,16 @@
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 70vh;
+  height: 91vh;
   animation: opacity 0.5s;
 }
 .LoginContainer header {
   text-align: center;
   width: 60%;
-  height: 10%;
+  height: 7%;
   font-size: 60px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(137, 85, 48);
-  margin-bottom: 2%;
   letter-spacing: 3px;
   text-transform: uppercase;
   border-bottom: 2px solid #9c7c65;
@@ -42,7 +41,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 70%;
-  height: 100%;
+  height: 90%;
   padding-left: 3%;
 }
 .LoginContainer .login .form .formGuide {
@@ -79,7 +78,7 @@
 .LoginContainer .login .form .email input {
   width: 90%;
   height: 50%;
-  font-size: 22px;
+  font-size: 25px;
   color: saddlebrown;
   padding: 2%;
   border-radius: 5px;
@@ -106,7 +105,7 @@
 .LoginContainer .login .form .password input {
   width: 90%;
   height: 50%;
-  font-size: 22px;
+  font-size: 25px;
   color: saddlebrown;
   padding: 2%;
   border-radius: 5px;
@@ -170,7 +169,7 @@
 }
 .LoginContainer .login .form .submit .register p {
   color: saddlebrown;
-  font-size: 15px;
+  font-size: 18px;
   text-align: bottom;
   margin-right: 2%;
   margin-bottom: 0;
@@ -179,7 +178,7 @@
 }
 .LoginContainer .login .form .submit .register .registerBtn {
   display: flex;
-  font-size: 20px;
+  font-size: 25px;
   color: darkgoldenrod;
   text-decoration: underline;
 }
