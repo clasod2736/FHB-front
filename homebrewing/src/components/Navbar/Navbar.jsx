@@ -9,7 +9,6 @@ import Nav from './Nav/Nav'
 
 export default function Navbar() {
   const isLogIn = useSelector((state) => state.logIn);
-  console.log("In redux store: ", isLogIn)
   const dispatch = useDispatch();
 
 

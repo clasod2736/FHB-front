@@ -29,8 +29,10 @@ const router = createBrowserRouter([
       {path: '/menu', element:<Menu/>},
       {path: '/menu/:menuName/method', element:<Methods/>},
       {path: '/menu/:menuName/method/:methodName/recipe', element:<Recipe/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/brewing', element:<Brewing/>},
-      {path: '/menu/:menuName/method/:methodName/recipe/brewing/:water/:coffee/:roasting/:grind/brewing/finish', element:<Finish/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing', element:<Brewing/>},
+      {path: '/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing/finish', element:<Finish/>},
+      //Just for browsing
+      {path: '/finish', element:<Finish/>},
     ]}
 ]);
 

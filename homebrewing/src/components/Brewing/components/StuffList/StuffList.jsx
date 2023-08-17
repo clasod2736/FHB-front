@@ -46,7 +46,7 @@ export default function StuffList() {
           ))}
         </ul>
       </div>
-      <button onClick={() => {navigate(-1)}}>Back to Recipe</button>
+      <button onClick={() => {navigate(-1)}}>Back to Before</button>
     </div>
   )
 }

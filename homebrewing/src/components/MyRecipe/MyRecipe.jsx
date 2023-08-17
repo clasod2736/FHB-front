@@ -58,14 +58,11 @@ export default function MyRecipe() {
         if (oldBrews.length > 0 ) {
 
             const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
-            const recentBrews = sortedBrews.slice(0, 5);
-            const lastBrews = sortedBrews.slice(6, 10);
-
-            if (!changeHistory) {
+            const displayBrews = changeHistory ? sortedBrews.slice(6, 10) : sortedBrews.slice(0, 5);
 
                 return (
                     <ul className='history'>
-                        {recentBrews.map((brew, index) => (
+                        {displayBrews.map((brew, index) => (
                                 <li key={index}>    
                                     <p className='menu'>{brew.menuName}</p>
                                     <p className='method'>{brew.methodName}</p>
@@ -131,30 +128,10 @@ export default function MyRecipe() {
                             ))}
                     </ul>
                 )
-            } else if (changeHistory === true) {
-
-                return (
-                    <ul className='history'>
-                        {lastBrews.map((brew, index) => (
-                                
-                                <li key={index}>    
-                                    <p className='date'>{brew.date}</p>
-                                    <p className='menu'>{brew.menuName}</p>
-                                    <p className='method'>{brew.methodName}</p>
-                                    <p className='coffee'>{brew.coffee}g</p>
-                                    <p className='water'>{brew.water}ml</p>
-                                    <p className='roasting'>{brew.roasting}</p>
-                                    <p className='grind'>{brew.grind}</p>
-                                </li>
-                            
-                            ))}
-                    </ul>
-                )
-            }
         } else if (oldBrews.length === 0) {
             return (
-                <div>
-                    You don't have history yet.
+                <div className='noHistory'>
+                    <p>Wait! You don't have any history yet.</p>
                 </div>
             )
         }

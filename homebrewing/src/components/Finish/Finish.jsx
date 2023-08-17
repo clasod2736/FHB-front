@@ -160,6 +160,7 @@ export default function Finish() {
 
                   saveFavBrews();
                   setFavOpen(false);
+                  setSaved(true);
 
                 }}
                 >Submit</button>

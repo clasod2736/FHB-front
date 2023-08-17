@@ -147,7 +147,7 @@ const coffeeClose = (coffeeClose) => {
             return (
                 <div className='goBrewContainer'>
                     <button className='goBrewBtn'
-                    onClick={() => navigate(`./brewing/${water}/${coffee}/${roasting}/${grind}/brewing`)}>
+                    onClick={() => navigate(`./${water}/${coffee}/${roasting}/${grind}/brewing`)}>
                         Go Brewing!
                     </button>
                 </div>
