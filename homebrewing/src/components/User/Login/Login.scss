@@ -229,3 +229,202 @@
     opacity: 1;
     }
 }
+
+@media all and (min-width:320px) {
+    .LoginContainer {
+        height: 100vh;
+        width: 100%;
+
+        header {
+            width: 90%;
+            max-width: 290px;
+            height: 8%;
+            font-size: 35px;
+
+            margin-bottom: 0;
+        }
+
+        .login {
+            flex-direction: column;
+            width: 100%;
+            height: 60%;
+
+            .logo {
+                display: none;
+            }
+            
+            .form {
+                width: 100%;
+                max-width: 290px;
+                height: 95%;
+
+                .formGuide {
+
+                    h1 {
+                        font-size: 30px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                .email {
+                    height: 15%;
+
+                    p {
+                        font-size: 15px;
+                    }
+                    input {
+                        font-size: 15px;
+                        padding: 0;
+                        padding-left: 2%;
+                    }
+                }
+                .password {
+                    height: 15%;
+
+                    p{
+                        font-size: 15px;
+                    }
+                    input {
+                        font-size: 15px;
+                        padding:0;
+                        padding-left: 2%;
+                    }
+                }
+                .submit {
+                    height: 20%;
+
+
+                    margin-top: 3%;
+
+                    .loginContainer {
+                        p {
+                            font-size: 15px;
+                        }
+
+                        .loginBtn {
+                            width: 30%;
+                            font-size: 15px;
+                        }
+                    }
+
+                    .register {
+
+                        p {
+                            font-size: 12px;
+                        }
+                        .registerBtn {
+                            font-size: 15px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:767px) {
+    .LoginContainer {
+        height: 100vh;
+        min-height: 700px;
+        max-height: 1000px;
+        width: 100%;
+
+        header {
+            width: 55%;
+            max-width: 800px;
+            height: 8%;
+            min-height: 80px;
+            font-size: 50px;
+
+            margin-bottom: 0;
+        }
+
+        .login {
+            flex-direction: column;
+            width: 100%;
+            height: 70%;
+
+            .logo {
+                display: none;
+            }
+            
+            .form {
+                width: 60%;
+                max-width: 900px;
+                height: 95%;
+
+                .formGuide {
+
+                    h1 {
+                        font-size: 40px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                .email {
+                    height: 15%;
+
+                    p {
+                        font-size: 16px;
+                    }
+                    input {
+                        font-size: 18px;
+                        padding: 0;
+                        padding-left: 2%;
+                    }
+                }
+                .password {
+                    height: 15%;
+
+                    p{
+                        font-size: 16px;
+                    }
+                    input {
+                        font-size: 18px;
+                        padding:0;
+                        padding-left: 2%;
+                    }
+                }
+                .submit {
+                    height: 20%;
+
+
+                    margin-top: 3%;
+
+                    .loginContainer {
+                        p {
+                            font-size: 18px;
+                        }
+
+                        .loginBtn {
+                            width: 30%;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .register {
+
+                        p {
+                            font-size: 12px;
+                        }
+                        .registerBtn {
+                            font-size: 15px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:1279px) {
+
+}
+
+@media all and (min-width:1680px) {
+
+}

@@ -194,4 +194,149 @@
   100% {
     opacity: 1;
   }
+}
+@media all and (min-width: 320px) {
+  .LoginContainer {
+    height: 100vh;
+    width: 100%;
+  }
+  .LoginContainer header {
+    width: 90%;
+    max-width: 290px;
+    height: 8%;
+    font-size: 35px;
+    margin-bottom: 0;
+  }
+  .LoginContainer .login {
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+  }
+  .LoginContainer .login .logo {
+    display: none;
+  }
+  .LoginContainer .login .form {
+    width: 100%;
+    max-width: 290px;
+    height: 95%;
+  }
+  .LoginContainer .login .form .formGuide h1 {
+    font-size: 30px;
+  }
+  .LoginContainer .login .form .formGuide p {
+    font-size: 12px;
+  }
+  .LoginContainer .login .form .email {
+    height: 15%;
+  }
+  .LoginContainer .login .form .email p {
+    font-size: 15px;
+  }
+  .LoginContainer .login .form .email input {
+    font-size: 15px;
+    padding: 0;
+    padding-left: 2%;
+  }
+  .LoginContainer .login .form .password {
+    height: 15%;
+  }
+  .LoginContainer .login .form .password p {
+    font-size: 15px;
+  }
+  .LoginContainer .login .form .password input {
+    font-size: 15px;
+    padding: 0;
+    padding-left: 2%;
+  }
+  .LoginContainer .login .form .submit {
+    height: 20%;
+    margin-top: 3%;
+  }
+  .LoginContainer .login .form .submit .loginContainer p {
+    font-size: 15px;
+  }
+  .LoginContainer .login .form .submit .loginContainer .loginBtn {
+    width: 30%;
+    font-size: 15px;
+  }
+  .LoginContainer .login .form .submit .register p {
+    font-size: 12px;
+  }
+  .LoginContainer .login .form .submit .register .registerBtn {
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 767px) {
+  .LoginContainer {
+    height: 100vh;
+    min-height: 700px;
+    max-height: 1000px;
+    width: 100%;
+  }
+  .LoginContainer header {
+    width: 55%;
+    max-width: 800px;
+    height: 8%;
+    min-height: 80px;
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+  .LoginContainer .login {
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+  }
+  .LoginContainer .login .logo {
+    display: none;
+  }
+  .LoginContainer .login .form {
+    width: 60%;
+    max-width: 900px;
+    height: 95%;
+  }
+  .LoginContainer .login .form .formGuide h1 {
+    font-size: 40px;
+  }
+  .LoginContainer .login .form .formGuide p {
+    font-size: 16px;
+  }
+  .LoginContainer .login .form .email {
+    height: 15%;
+  }
+  .LoginContainer .login .form .email p {
+    font-size: 16px;
+  }
+  .LoginContainer .login .form .email input {
+    font-size: 18px;
+    padding: 0;
+    padding-left: 2%;
+  }
+  .LoginContainer .login .form .password {
+    height: 15%;
+  }
+  .LoginContainer .login .form .password p {
+    font-size: 16px;
+  }
+  .LoginContainer .login .form .password input {
+    font-size: 18px;
+    padding: 0;
+    padding-left: 2%;
+  }
+  .LoginContainer .login .form .submit {
+    height: 20%;
+    margin-top: 3%;
+  }
+  .LoginContainer .login .form .submit .loginContainer p {
+    font-size: 18px;
+  }
+  .LoginContainer .login .form .submit .loginContainer .loginBtn {
+    width: 30%;
+    font-size: 18px;
+  }
+  .LoginContainer .login .form .submit .register p {
+    font-size: 12px;
+  }
+  .LoginContainer .login .form .submit .register .registerBtn {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=Login.css.map */
