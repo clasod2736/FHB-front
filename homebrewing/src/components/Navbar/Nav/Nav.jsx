@@ -6,7 +6,7 @@ import './Nav.css'
 import {Link, useParams} from 'react-router-dom'
 
 export default function SlideMenu() {
-  const { menuName, methodName } = useParams()
+  const { menuName, methodName } = useParams();
 
   const [show, setShow] = useState(false);
 
