@@ -96,3 +96,51 @@
         }
     }
 }
+
+@media all and (min-width:320px) {
+    .roastingContainer {
+        background-color: wheat;
+
+        border: 2px solid sienna;
+        border-radius: 5px;
+
+        .roastingTitle {
+
+            header {
+                font-size: 25px;
+            }
+        }
+
+        .roastingChoices {
+            height: 20%;
+        }
+
+        .roastingText {
+            height: 35%;
+
+            padding-top: 0;
+
+            p {
+                font-size: 14px!important;
+
+                margin-block: 3%!important;
+            }
+        }
+        
+        button {
+            height: 15%;
+        }
+    }
+}
+
+@media all and (min-width:767px) {
+
+}
+
+@media all and (min-width:1279px) {
+
+}
+
+@media all and (min-width:1680px) {
+
+}

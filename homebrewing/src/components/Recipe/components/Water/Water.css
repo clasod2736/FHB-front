@@ -77,4 +77,27 @@
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
+}
+
+@media all and (min-width: 320px) {
+  .waterContainer {
+    background-color: antiquewhite;
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+  }
+  .waterContainer header {
+    font-size: 30px;
+  }
+  .waterContainer .waterText {
+    height: 35%;
+  }
+  .waterContainer .waterText p {
+    font-size: 13px;
+  }
+  .waterContainer .waterRatio {
+    width: 100%;
+  }
+  .waterContainer button {
+    height: 15%;
+  }
 }/*# sourceMappingURL=Water.css.map */
