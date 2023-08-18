@@ -225,7 +225,6 @@ const coffeeClose = (coffeeClose) => {
                 {settingRoasting()}
                 {settingCoffee()}
             </div>
-            
             <div className='center'>
                 {settingMobileSlide()}
                 <div className='header'>
