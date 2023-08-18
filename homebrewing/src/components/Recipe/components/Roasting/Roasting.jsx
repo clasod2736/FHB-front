@@ -23,7 +23,7 @@ const settingRoastingText = () => {
     } else if (text === 'medium') {
         return (
             <div className='roastingText'>
-                <p>Slightly longer roast. Deeper, balanced flavor.</p>
+                <p>Slightly longer roast.</p>
                 <p>Smooth taste, medium body and sweetness.</p>
                 <p>Versatile for various coffee styles.</p>
             </div>

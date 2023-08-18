@@ -100,4 +100,82 @@
   .waterContainer button {
     height: 15%;
   }
+}
+@media all and (min-width: 767px) {
+  .waterContainer {
+    height: 95%;
+    background-color: transparent;
+    border: 0;
+  }
+  .waterContainer header {
+    font-size: 25px;
+  }
+  .waterContainer .waterText {
+    height: 40%;
+  }
+  .waterContainer .waterText p {
+    font-size: 10px;
+  }
+  .waterContainer .waterRatio {
+    width: 100%;
+  }
+  .waterContainer .waterRatio div p {
+    font-size: 13px;
+  }
+  .waterContainer button {
+    height: 15%;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .waterContainer {
+    height: 95%;
+    background-color: transparent;
+    border: 0;
+  }
+  .waterContainer header {
+    font-size: 35px;
+  }
+  .waterContainer .waterText {
+    height: 40%;
+  }
+  .waterContainer .waterText p {
+    font-size: 16px;
+  }
+  .waterContainer .waterRatio {
+    width: 100%;
+  }
+  .waterContainer .waterRatio div p {
+    font-size: 18px;
+  }
+  .waterContainer button {
+    height: 15%;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1680px) {
+  .waterContainer {
+    height: 95%;
+    background-color: transparent;
+    border: 0;
+  }
+  .waterContainer header {
+    font-size: 40px;
+  }
+  .waterContainer .waterText {
+    height: 40%;
+  }
+  .waterContainer .waterText p {
+    font-size: 18px;
+  }
+  .waterContainer .waterRatio {
+    width: 100%;
+  }
+  .waterContainer .waterRatio div p {
+    font-size: 20px;
+  }
+  .waterContainer button {
+    height: 15%;
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=Water.css.map */

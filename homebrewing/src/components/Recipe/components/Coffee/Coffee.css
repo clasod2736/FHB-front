@@ -107,4 +107,109 @@
   .coffeeContainer .saveBtn {
     height: 15%;
   }
+}
+@media all and (min-width: 767px) {
+  .coffeeContainer {
+    height: 95%;
+    background-color: transparent;
+    border: 0;
+  }
+  .coffeeContainer header {
+    font-size: 20px;
+  }
+  .coffeeContainer .coffeeText {
+    height: 25%;
+  }
+  .coffeeContainer .coffeeText p {
+    font-size: 10px;
+  }
+  .coffeeContainer .coffeeForm {
+    height: 20%;
+    width: 40%;
+  }
+  .coffeeContainer .coffeeForm p {
+    font-size: 25px;
+    color: wheat;
+  }
+  .coffeeContainer .coffeeForm button {
+    font-size: 30px;
+  }
+  .coffeeContainer .coffeeAmount {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .coffeeContainer .saveBtn {
+    height: 15%;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .coffeeContainer {
+    height: 95%;
+    background-color: transparent;
+    border: 0;
+  }
+  .coffeeContainer header {
+    font-size: 35px;
+  }
+  .coffeeContainer .coffeeText {
+    height: 25%;
+  }
+  .coffeeContainer .coffeeText p {
+    font-size: 15px;
+  }
+  .coffeeContainer .coffeeForm {
+    height: 20%;
+    width: 40%;
+  }
+  .coffeeContainer .coffeeForm p {
+    font-size: 35px;
+    color: wheat;
+  }
+  .coffeeContainer .coffeeForm button {
+    font-size: 35px;
+  }
+  .coffeeContainer .coffeeAmount {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .coffeeContainer .saveBtn {
+    height: 15%;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1680px) {
+  .coffeeContainer {
+    height: 95%;
+    background-color: transparent;
+    border: 0;
+  }
+  .coffeeContainer header {
+    font-size: 40px;
+  }
+  .coffeeContainer .coffeeText {
+    height: 25%;
+  }
+  .coffeeContainer .coffeeText p {
+    font-size: 17px;
+  }
+  .coffeeContainer .coffeeForm {
+    height: 20%;
+    width: 35%;
+  }
+  .coffeeContainer .coffeeForm p {
+    font-size: 40px;
+    color: wheat;
+  }
+  .coffeeContainer .coffeeForm button {
+    font-size: 45px;
+  }
+  .coffeeContainer .coffeeAmount {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .coffeeContainer .saveBtn {
+    height: 15%;
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=Coffee.css.map */

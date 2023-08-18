@@ -127,13 +127,110 @@
 }
 
 @media all and (min-width:767px) {
+    .waterContainer {
+        height: 95%;
 
+        background-color: transparent;
+        border: 0;
+
+        header {
+            font-size: 25px;
+        }
+
+        .waterText {
+            height: 40%;
+
+            p {
+                font-size: 10px;
+            }
+        }
+
+        .waterRatio {
+            width: 100%;
+
+            div {
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        button {
+            height: 15%;
+            font-size: 16px;
+        }
+    }
 }
 
 @media all and (min-width:1279px) {
+    .waterContainer {
+        height: 95%;
 
+        background-color: transparent;
+        border: 0;
+
+        header {
+            font-size: 35px;
+        }
+
+        .waterText {
+            height: 40%;
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .waterRatio {
+            width: 100%;
+
+            div {
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        button {
+            height: 15%;
+            font-size: 20px;
+        }
+    }
 }
 
 @media all and (min-width:1680px) {
+    .waterContainer {
+        height: 95%;
 
+        background-color: transparent;
+        border: 0;
+
+        header {
+            font-size: 40px;
+        }
+
+        .waterText {
+            height: 40%;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .waterRatio {
+            width: 100%;
+
+            div {
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        button {
+            height: 15%;
+            font-size: 25px;
+        }
+    }
 }
