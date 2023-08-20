@@ -29,9 +29,9 @@ export default function StuffList({isMobile, getBrewMobile}) {
         <p>Water: {water}ml</p>
         <p>Roasting Level: {roasting}</p>
         <p>Grind Size: {grind}</p>
-        <div className='startBrewingMobile'>
+        <div className='startBrewingMobile' style={{display: isMobile ? 'flex' : 'none'}}>
           <p>Did you check everything? then...</p>
-          <button onClick={() => {getBrewMobile(true)}}>Start Brewing</button>
+          <button onClick={() => {getBrewMobile(true);}}>Start Brewing</button>
         </div>
       </div>
       <div className='listContainer'>
@@ -50,7 +50,7 @@ export default function StuffList({isMobile, getBrewMobile}) {
           ))}
         </ul>
       </div>
-      <button onClick={() => {navigate(-1)}} style={{display: isMobile ? 'none' : 'flex'}}>Back to Before</button>
+      <button className='backBtn' onClick={() => {navigate(-1)}} style={{display: isMobile ? 'none' : 'flex'}}>Back to Before</button>
     </div>
   )
 }

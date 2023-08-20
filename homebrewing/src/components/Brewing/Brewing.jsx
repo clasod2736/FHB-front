@@ -28,7 +28,9 @@ const getBrewMobile = (value) => {
 
 //mobile components
 const settingBrewingMobile = () => {
-  if (isMobile && !startBrewingMobile) {
+if (!isMobile) {
+    return
+} else if (isMobile && !startBrewingMobile) {
     return (
       <div className='brewingMobile'>
         <StuffList isMobile={isMobile} getBrewMobile={getBrewMobile}/>

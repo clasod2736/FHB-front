@@ -12,12 +12,14 @@ const [steps, setSteps] = useState(undefined)
 const navigate = useNavigate();
 const { menuName, methodName } = useParams();
 
+console.log(isMobile, steps)
+
 //get Json data from util folder
 useEffect(() => {
     setMethodStepInfo(methodSteps[methodName])
     setMenuStepInfo(menuSteps[menuName])
     isMobile ? setSteps(0) : setSteps(undefined)
-}, [methodName, menuName, steps, isMobile])
+}, [methodName, menuName, isMobile])
 
 //rendering Brewing Steps
 const brewingSteps = () => {
@@ -81,7 +83,7 @@ const brewingSteps = () => {
             </div>
             {brewingSteps()}
         </div>
-        <div className='stepsMobile'>
+        <div className='stepsMobile' style={{display: isMobile ? 'flex' : 'none'}}>
             {brewingSteps()}
         </div>
     </div>
