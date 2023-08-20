@@ -7,8 +7,9 @@
   height: 90%;
   background-color: wheat;
   border-radius: 10px;
+  animation: opacity 0.5s;
 }
-.stepsContainer .stepsBefore {
+.stepsContainer .steps {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,14 +17,22 @@
   width: 100%;
   height: 100%;
 }
-.stepsContainer .stepsBefore header {
+.stepsContainer .steps .stepsBefore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.stepsContainer .steps .stepsBefore header {
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   font-style: italic;
   margin-bottom: 2%;
 }
-.stepsContainer .stepsBefore button {
+.stepsContainer .steps .stepsBefore button {
   width: 40%;
   height: 8%;
   font-size: 30px;
@@ -37,17 +46,17 @@
   box-shadow: 2px 3px 0px 0px darkgoldenrod;
   animation: opacity 0.5s;
 }
-.stepsContainer .stepsBefore button:hover {
+.stepsContainer .steps .stepsBefore button:hover {
   color: saddlebrown;
   background-color: bisque;
   transition: 0.3s;
 }
-.stepsContainer .stepsBefore button:active {
+.stepsContainer .steps .stepsBefore button:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
 }
-.stepsContainer .methodSteps {
+.stepsContainer .steps .methodSteps {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +65,7 @@
   height: 90%;
   animation: opacity 0.5s;
 }
-.stepsContainer .methodSteps header {
+.stepsContainer .steps .methodSteps header {
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
@@ -64,7 +73,7 @@
   letter-spacing: 3px;
   margin-bottom: 2%;
 }
-.stepsContainer .methodSteps img {
+.stepsContainer .steps .methodSteps img {
   width: 70%;
   height: 60%;
   -o-object-fit: cover;
@@ -72,7 +81,7 @@
   overflow: hidden;
   margin-bottom: 3%;
 }
-.stepsContainer .methodSteps .brewingStepsText {
+.stepsContainer .steps .methodSteps .brewingStepsText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,13 +89,13 @@
   height: 20%;
   padding-inline: 3%;
 }
-.stepsContainer .methodSteps .brewingStepsText p {
+.stepsContainer .steps .methodSteps .brewingStepsText p {
   font-size: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: sienna;
   margin-bottom: 2%;
 }
-.stepsContainer .methodSteps .btnContainer {
+.stepsContainer .steps .methodSteps .btnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -94,7 +103,7 @@
   width: 70%;
   height: auto;
 }
-.stepsContainer .methodSteps .btnContainer button {
+.stepsContainer .steps .methodSteps .btnContainer button {
   width: 40%;
   height: 100%;
   font-size: 30px;
@@ -108,17 +117,17 @@
   box-shadow: 2px 3px 0px 0px darkgoldenrod;
   animation: opacity 0.5s;
 }
-.stepsContainer .methodSteps .btnContainer button:hover {
+.stepsContainer .steps .methodSteps .btnContainer button:hover {
   color: saddlebrown;
   background-color: bisque;
   transition: 0.3s;
 }
-.stepsContainer .methodSteps .btnContainer button:active {
+.stepsContainer .steps .methodSteps .btnContainer button:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
 }
-.stepsContainer .menuSteps {
+.stepsContainer .steps .menuSteps {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -127,7 +136,7 @@
   height: 80%;
   animation: opacity 0.5s;
 }
-.stepsContainer .menuSteps img {
+.stepsContainer .steps .menuSteps img {
   width: 40%;
   height: 100%;
   border-radius: 10px;
@@ -135,7 +144,7 @@
      object-fit: cover;
   overflow: hidden;
 }
-.stepsContainer .menuSteps .menuStepContents {
+.stepsContainer .steps .menuSteps .menuStepContents {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -143,14 +152,14 @@
   width: 50%;
   height: 100%;
 }
-.stepsContainer .menuSteps .menuStepContents header {
+.stepsContainer .steps .menuSteps .menuStepContents header {
   font-size: 50px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: sienna;
   text-transform: uppercase;
   margin-bottom: 3%;
 }
-.stepsContainer .menuSteps .menuStepContents .directions {
+.stepsContainer .steps .menuSteps .menuStepContents .directions {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,14 +167,14 @@
   width: 90%;
   height: 60%;
 }
-.stepsContainer .menuSteps .menuStepContents .directions li {
+.stepsContainer .steps .menuSteps .menuStepContents .directions li {
   font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
   color: chocolate;
   margin-bottom: 5%;
 }
-.stepsContainer .menuSteps .menuStepContents .btnContainer {
+.stepsContainer .steps .menuSteps .menuStepContents .btnContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -173,7 +182,7 @@
   width: 100%;
   height: 20%;
 }
-.stepsContainer .menuSteps .menuStepContents .btnContainer button {
+.stepsContainer .steps .menuSteps .menuStepContents .btnContainer button {
   width: 70%;
   height: 40%;
   font-size: 25px;
@@ -187,13 +196,20 @@
   box-shadow: 2px 3px 0px 0px darkgoldenrod;
   animation: opacity 0.5s;
 }
-.stepsContainer .menuSteps .menuStepContents .btnContainer button:hover {
+.stepsContainer .steps .menuSteps .menuStepContents .btnContainer button:hover {
   color: saddlebrown;
   background-color: bisque;
   transition: 0.3s;
 }
-.stepsContainer .menuSteps .menuStepContents .btnContainer button:active {
+.stepsContainer .steps .menuSteps .menuStepContents .btnContainer button:active {
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
+}
+
+@media all and (min-width: 320px) {
+  .stepsContainer {
+    width: 100%;
+    height: 100%;
+  }
 }/*# sourceMappingURL=Steps.css.map */

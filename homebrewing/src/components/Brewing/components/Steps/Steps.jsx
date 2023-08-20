@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import methodSteps from '../../../../util/StuffData/MethodSteps.json'
 import menuSteps from '../../../../util/StuffData/MenuSteps.json'
 
-export default function Steps() {
+export default function Steps({isMobile}) {
 const [methodStepInfo, setMethodStepInfo] = useState([]);
 const [menuStepInfo, setMenuStepInfo] = useState([]);
 const [steps, setSteps] = useState(undefined)
@@ -16,9 +16,10 @@ const { menuName, methodName } = useParams();
 useEffect(() => {
     setMethodStepInfo(methodSteps[methodName])
     setMenuStepInfo(menuSteps[menuName])
-}, [methodName, menuName, steps])
+    isMobile ? setSteps(0) : setSteps(undefined)
+}, [methodName, menuName, steps, isMobile])
 
-
+//rendering Brewing Steps
 const brewingSteps = () => {
     
     if (steps !== undefined && methodStepInfo.length > steps) {
@@ -73,11 +74,16 @@ const brewingSteps = () => {
 
   return (
     <div className='stepsContainer'>
-        <div className='stepsBefore' style={{ display: steps === undefined ? "flex" : "none"}}>
-            <header>Did you check everything? Then...</header>  
-            <button onClick={() => {setSteps(0)}}>Start Brewing!</button>
+        <div className='steps'  style={{display: isMobile ? 'none' : 'flex'}}>
+            <div className='stepsBefore' style={{ display: steps === undefined ? "flex" : "none"}}>
+                <header>Did you check everything? Then...</header>  
+                <button onClick={() => {setSteps(0)}}>Start Brewing!</button>
+            </div>
+            {brewingSteps()}
         </div>
-        {brewingSteps()}
+        <div className='stepsMobile'>
+            {brewingSteps()}
+        </div>
     </div>
   )
 }

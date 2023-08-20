@@ -19,3 +19,30 @@
         height: 80%;        
     }
 }
+
+@media all and (min-width:320px) {
+    .brewingContainer {
+        height: 100vh;
+
+        .brewingMobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70%;
+            width: 100%;
+        }
+    }
+}
+
+@media all and (min-width:767px) {
+
+}
+
+@media all and (min-width:1279px) {
+
+}
+
+@media all and (min-width:1680px) {
+
+}
