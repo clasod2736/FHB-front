@@ -73,7 +73,7 @@ export default function MyRecipe() {
                                     <div className='historyBtnContainer'>
                                         <button
                                         onClick={() => {
-                                        navigate(`/menu/${brew.menuName}/method/${brew.methodName}/recipe/brewing/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`)
+                                        navigate(`/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`)
                                         }}
                                         >Go Brew</button>
                                         <button

@@ -278,3 +278,473 @@
         }
     }
 }
+
+@media all and (min-width:320px) {
+    .finishContainer {
+        height: 100vh;
+        min-height: 600px;
+
+        .finish {
+            width: 100%;
+            max-width: 320px;
+            max-height: 700px;
+
+            background-image: url('../../../public/img/background/finalLogoMobile.jpg');
+
+            .finishContents {
+                height: 80%;
+
+                header {
+                    width: 95%;
+                    max-width: 350px;
+                    font-size: 20px;
+                }
+
+                .finishText {
+
+                    p {
+                        text-align: center;
+                        font-size: 15px;
+                    }
+                }
+
+                .btnContainer {
+                    height: 40%;
+                    max-width: 250px;
+                    flex-direction: column;
+
+                    .tryAnother {
+                        width: 80%;
+                        height: 23%;
+                        font-size: 18px;
+                    }
+
+                    .recipe {
+                        width: 80%;
+                        height: 23%;
+                        font-size: 18px;
+                    }
+
+                    button {
+                        width: 80%;
+                        height: 23%;
+                        font-size: 18px;
+                    }
+                }
+
+                .favSubmit {
+
+                    input {
+                        font-size: 18px;
+                    }
+
+                    .btnContainer {
+
+                        button {
+                            height: 50%;
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .afterSaveFav {
+                    height: 15%;
+
+                    p {
+                        font-size: 25px;
+                    }
+                    
+                    .goMyRecipeBtn {
+    
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:480px) {
+    .finishContainer {
+        height: 100vh;
+        min-height: 900px;
+
+        .finish {
+            width: 100%;
+            max-width: 480px;
+            max-height: 900px;
+
+            background-image: url('../../../public/img/background/finalLogoMobile.jpg');
+
+            .finishContents {
+                height: 80%;
+
+                header {
+                    width: 95%;
+                    max-width: 450px;
+                    font-size: 30px;
+                }
+
+                .finishText {
+
+                    p {
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
+
+                .btnContainer {
+                    height: 40%;
+                    max-width: 300px;
+                    flex-direction: column;
+
+                    .tryAnother {
+                        width: 80%;
+                        height: 23%;
+                        font-size: 22px;
+                    }
+
+                    .recipe {
+                        width: 80%;
+                        height: 23%;
+                        font-size: 22px;
+                    }
+
+                    button {
+                        width: 80%;
+                        height: 23%;
+                        font-size: 22px;
+                    }
+                }
+
+                .favSubmit {
+
+                    input {
+                        font-size: 20px;
+                    }
+
+                    .btnContainer {
+
+                        button {
+                            width: 25%;
+                            height: 40%;
+                            font-size: 22px;
+                        }
+                        .submitBtn {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .afterSaveFav {
+                    height: 15%;
+
+                    p {
+                        font-size: 30px;
+                    }
+                    
+                    .goMyRecipeBtn {
+    
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:767px) {
+    .finishContainer {
+        justify-content: flex-start;
+        height: 100vh;
+        min-height: 900px;
+
+        .finish {
+            width: 100%;
+            max-width: 1000px;
+            max-height: 1000px;
+
+            background-image: url('../../../public/img/background/finalLogo2.jpg');
+
+            .finishContents {
+                width: 100%;
+                height: 60%;
+
+                header {
+                    width: 60%;
+                    max-width: 450px;
+                    font-size: 25px;
+                }
+
+                .finishText {
+
+                    p {
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                }
+
+                .btnContainer {
+                    height: 15%;
+                    width: 80%;
+                    max-width: 600px;
+                    flex-direction: row;
+
+                    .tryAnother {
+                        width: 30%;
+                        height: 70%;
+                        font-size: 20px;
+                    }
+
+                    .recipe {
+                        width: 30%;
+                        height: 70%;
+                        font-size: 20px;
+                    }
+
+                    button {
+                        width: 30%;
+                        height: 70%;
+                        font-size: 20px;
+                    }
+                }
+
+                .favSubmit {
+                    justify-content: center;
+                    height: 25%;
+                    width: 40%;
+
+                    input {
+                        font-size: 20px;
+                    }
+
+                    .btnContainer {
+                        height: 50%;
+
+                        button {
+                            width: 15%;
+                            height: 50%;
+                            font-size: 22px;
+                        }
+                        .submitBtn {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .afterSaveFav {
+                    height: 15%;
+
+                    p {
+                        font-size: 25px;
+                    }
+                    
+                    .goMyRecipeBtn {
+    
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:1279px) {
+    .finishContainer {
+        justify-content: flex-start;
+        height: 100vh;
+        min-height: 1000px;
+
+        .finish {
+            width: 90%;
+            min-width: 1000px;
+            max-width: 1200px;
+            max-height: 1100px;
+
+            background-image: url('../../../public/img/background/finalLogo2.jpg');
+
+            .finishContents {
+                width: 100%;
+                height: 62%;
+
+                header {
+                    width: 60%;
+                    max-width: 450px;
+                    font-size: 30px;
+                }
+
+                .finishText {
+                    margin-top: 2%;
+
+                    p {
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
+
+                .btnContainer {
+                    height: 15%;
+                    width: 90%;
+                    max-width: 750px;
+                    flex-direction: row;
+
+                    .tryAnother {
+                        width: 28%;
+                        height: 60%;
+                        font-size: 20px;
+                    }
+
+                    .recipe {
+                        width: 28%;
+                        height: 60%;
+                        font-size: 20px;
+                    }
+
+                    button {
+                        width: 28%;
+                        height: 60%;
+                        font-size: 20px;
+                    }
+                }
+
+                .favSubmit {
+                    justify-content: center;
+                    height: 25%;
+                    width: 25%;
+
+                    input {
+                        font-size: 22px;
+                    }
+
+                    .btnContainer {
+                        height: 50%;
+
+                        button {
+                            width: 15%;
+                            height: 40%;
+                            font-size: 22px;
+                        }
+                        .submitBtn {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .afterSaveFav {
+                    height: 15%;
+
+                    p {
+                        font-size: 35px;
+                    }
+                    
+                    .goMyRecipeBtn {
+    
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:1680px) {
+    .finishContainer {
+        justify-content: flex-start;
+        height: 100vh;
+        min-height: 1100px;
+
+        .finish {
+            width: 100%;
+            min-width: 1000px;
+            max-width: 1500px;
+            max-height: 1200px;
+
+            background-image: url('../../../public/img/background/finalLogo2.jpg');
+
+            .finishContents {
+                width: 100%;
+                height: 60%;
+
+                header {
+                    width: 60%;
+                    max-width: 450px;
+                    font-size: 30px;
+                }
+
+                .finishText {
+                    justify-content: space-evenly;
+
+                    height: 25%;
+                    margin-top: 2%;
+
+                    p {
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
+
+                .btnContainer {
+                    height: 15%;
+                    width: 90%;
+                    max-width: 850px;
+                    flex-direction: row;
+
+                    .tryAnother {
+                        width: 28%;
+                        height: 60%;
+                        font-size: 25px;
+                    }
+
+                    .recipe {
+                        width: 28%;
+                        height: 60%;
+                        font-size: 25px;
+                    }
+
+                    button {
+                        width: 28%;
+                        height: 60%;
+                        font-size: 25px;
+                    }
+                }
+
+                .favSubmit {
+                    justify-content: center;
+                    height: 25%;
+                    width: 25%;
+
+                    input {
+                        font-size: 22px;
+                    }
+
+                    .btnContainer {
+                        width: 70%;
+                        height: 50%;
+
+                        button {
+                            width: 15%;
+                            height: 40%;
+                            font-size: 22px;
+                        }
+                        .submitBtn {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .afterSaveFav {
+                    height: 15%;
+
+                    p {
+                        font-size: 35px;
+                    }
+                    
+                    .goMyRecipeBtn {
+    
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}

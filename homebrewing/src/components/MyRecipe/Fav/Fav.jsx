@@ -71,7 +71,7 @@ if (favourites.length > 0) {
                         <div className='btnContainer'>
                             <button onClick={() => {
 
-                            navigate(`/menu/${favourite.menuName}/method/${favourite.methodName}/recipe/brewing/${favourite.water}/${favourite.coffee}/${favourite.roasting}/${favourite.grind}/brewing`)
+                            navigate(`/menu/${favourite.menuName}/method/${favourite.methodName}/recipe/${favourite.water}/${favourite.coffee}/${favourite.roasting}/${favourite.grind}/brewing`)
 
                             }}>Go Brew</button>
                             <button className='detail'

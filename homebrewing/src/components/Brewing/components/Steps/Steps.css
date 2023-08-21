@@ -256,7 +256,7 @@
     padding-inline: 3%;
   }
   .stepsContainer .stepsMobile .methodSteps .brewingStepsText p {
-    font-size: 15px;
+    font-size: 12px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     color: sienna;
     margin-bottom: 2%;
@@ -334,7 +334,7 @@
     height: 60%;
   }
   .stepsContainer .stepsMobile .menuSteps .menuStepContents .directions li {
-    font-size: 15px;
+    font-size: 12px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     font-weight: bold;
     color: chocolate;
