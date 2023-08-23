@@ -67,7 +67,7 @@ if (favourites.length > 0) {
         <ul className='favList'>
             {favourites.map((favourite, index) => (
                     <li key={index}>
-                        <p>- {favourite.favName}</p>
+                        <p>{favourite.favName}</p>
                         <div className='btnContainer'>
                             <button onClick={() => {
 

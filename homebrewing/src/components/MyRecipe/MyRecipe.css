@@ -226,4 +226,261 @@
   background-image: url("../../../public/img/background/myRecipe.jpg");
   background-position: 50% 100%;
   background-size: cover;
+}
+
+@media all and (min-width: 320px) {
+  .myRecipeContainer {
+    justify-content: flex-start;
+    max-width: 340px;
+    height: 100vh;
+    min-height: 1200px;
+    max-height: 1200px;
+  }
+  .myRecipeContainer .myRecipe {
+    width: 100%;
+    height: 100%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeImg {
+    display: none;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents {
+    width: 100%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle {
+    height: 5%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle header {
+    font-size: 17px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle p {
+    font-size: 10px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews {
+    width: 100%;
+    height: 30%;
+    min-height: 0;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .noHistory {
+    font-size: 25px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category {
+    display: none;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history {
+    height: 90%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li {
+    overflow-x: scroll;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li p {
+    width: auto !important;
+    font-size: 15px;
+    margin-inline: 3%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer {
+    width: 20%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer button {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 767px) {
+  .myRecipeContainer {
+    justify-content: flex-start;
+    height: 100vh;
+    max-width: 767px;
+    min-height: 1200px;
+  }
+  .myRecipeContainer .myRecipe {
+    width: 100%;
+    height: 100%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeImg {
+    display: none;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents {
+    width: 100%;
+    align-items: center;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle {
+    width: 100%;
+    height: 8%;
+    padding-left: 3%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle header {
+    font-size: 35px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle p {
+    font-size: 15px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews {
+    height: 35%;
+    min-height: 0;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .noHistory {
+    font-size: 40px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category {
+    padding-left: 5%;
+    display: flex;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category p {
+    font-size: 18px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history {
+    height: 80%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li {
+    overflow-x: none;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li p {
+    width: auto !important;
+    font-size: 15px;
+    margin-inline: 3%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer {
+    width: 20%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer button {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .myRecipeContainer {
+    justify-content: flex-start;
+    height: 100vh;
+    max-width: 1200px;
+    min-height: 1200px;
+    margin-top: 3%;
+  }
+  .myRecipeContainer .myRecipe {
+    width: 80%;
+    height: 100%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeImg {
+    display: none;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents {
+    width: 100%;
+    align-items: center;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle {
+    width: 100%;
+    height: 8%;
+    padding-left: 0;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle header {
+    font-size: 40px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle p {
+    font-size: 18px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews {
+    height: 50%;
+    min-height: 0;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .noHistory {
+    font-size: 40px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category {
+    padding-left: 3%;
+    display: flex;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category p {
+    font-size: 25px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history {
+    justify-content: space-evenly;
+    height: 80%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li {
+    overflow-x: none;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li p {
+    width: auto !important;
+    font-size: 18px;
+    margin-inline: 3%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer {
+    width: 20%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer button {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 1680px) {
+  .myRecipeContainer {
+    justify-content: flex-start;
+    height: 100vh;
+    max-width: 1600px;
+    min-height: 1100px;
+    margin-top: 1%;
+  }
+  .myRecipeContainer .myRecipe {
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeImg {
+    display: flex;
+    width: 40%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents {
+    width: 60%;
+    align-items: center;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle {
+    width: 100%;
+    height: 8%;
+    padding-left: 0;
+    margin-top: 3%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle header {
+    font-size: 40px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .myRecipTitle p {
+    font-size: 18px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews {
+    height: 50%;
+    min-height: 0;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .noHistory {
+    font-size: 40px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category {
+    padding-left: 3%;
+    display: flex;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .category p {
+    font-size: 25px;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history {
+    justify-content: space-evenly;
+    height: 80%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li {
+    height: 18%;
+    overflow-x: auto;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li p {
+    width: auto !important;
+    font-size: 20px;
+    margin-inline: 3%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer {
+    width: 20%;
+    height: 100%;
+  }
+  .myRecipeContainer .myRecipe .myRecipeContents .oldBrews .history li .historyBtnContainer button {
+    width: 50%;
+    height: 100%;
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=MyRecipe.css.map */

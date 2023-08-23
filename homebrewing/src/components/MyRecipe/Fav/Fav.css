@@ -354,7 +354,6 @@
   color: linen;
   background-color: sienna;
   box-shadow: 2px 3px 0px 1px darkgoldenrod;
-  animation: 0.5s;
 }
 .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail button:hover {
   color: brown;
@@ -678,5 +677,396 @@
   }
   to {
     opacity: 1;
+  }
+}
+@media all and (min-width: 320px) {
+  .FavContainer {
+    width: 100%;
+    height: 65%;
+  }
+  .FavContainer .favTitle {
+    height: 7%;
+  }
+  .FavContainer .favTitle header {
+    font-size: 20px;
+  }
+  .FavContainer .favTitle header .favIcon {
+    font-size: 15px;
+  }
+  .FavContainer .favTitle p {
+    font-size: 12px;
+  }
+  .FavContainer .favContents {
+    height: 93%;
+    flex-direction: column;
+  }
+  .FavContainer .favContents .favourites {
+    width: 100%;
+    height: 30%;
+  }
+  .FavContainer .favContents .favourites .favList li {
+    height: 20%;
+    margin-block: 0%;
+    padding-inline: 1%;
+  }
+  .FavContainer .favContents .favourites .favList li p {
+    width: 42%;
+    font-size: 16px;
+  }
+  .FavContainer .favContents .favourites .favList li .btnContainer {
+    width: 58%;
+  }
+  .FavContainer .favContents .favourites .favList li .btnContainer button {
+    width: auto;
+    height: 70%;
+    font-size: 12px;
+    box-shadow: 0px 0px 0px 1px sienna;
+  }
+  .FavContainer .favContents .favDetailContainer {
+    width: 100%;
+    height: 70%;
+    max-height: 500px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetailsNot {
+    height: 100%;
+    background-image: url("../../../../public/img/background/myRecipe.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetailsNot svg {
+    display: none;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails {
+    max-height: 500px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 500px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details {
+    width: 100%;
+    height: 60%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details .favName {
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting {
+    width: 100%;
+    height: 60%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting .favName {
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer {
+    width: 100%;
+    height: 40%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions {
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions p {
+    font-size: 25px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions button {
+    height: 20%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail {
+    max-height: 180px;
+    justify-content: center;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName {
+    height: 90%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMenuName {
+    height: 60%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMethodName {
+    height: 60%;
+    overflow: scroll;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customCoffee {
+    height: 70%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription {
+    justify-content: flex-start;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription p {
+    display: none;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionInput {
+    min-height: 70%;
+    font-size: 15px;
+    padding: 2%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer {
+    flex-direction: row;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer button {
+    width: 40%;
+  }
+}
+@media all and (min-width: 767px) {
+  .FavContainer {
+    width: 70%;
+    height: 55%;
+    align-items: center;
+  }
+  .FavContainer .favTitle {
+    width: 80%;
+    height: 15%;
+  }
+  .FavContainer .favTitle header {
+    font-size: 30px;
+  }
+  .FavContainer .favTitle header .favIcon {
+    font-size: 20px;
+  }
+  .FavContainer .favTitle p {
+    font-size: 16px;
+  }
+  .FavContainer .favContents {
+    height: 93%;
+    flex-direction: column;
+  }
+  .FavContainer .favContents .favourites {
+    width: 80%;
+    height: 45%;
+  }
+  .FavContainer .favContents .favourites .favList li {
+    height: 20%;
+    margin-block: 0%;
+    padding-inline: 1%;
+  }
+  .FavContainer .favContents .favourites .favList li p {
+    width: 48%;
+    font-size: 20px;
+  }
+  .FavContainer .favContents .favourites .favList li .btnContainer {
+    width: 52%;
+  }
+  .FavContainer .favContents .favourites .favList li .btnContainer button {
+    width: auto;
+    height: 70%;
+    font-size: 15px;
+    box-shadow: 0px 0px 0px 2px sienna;
+  }
+  .FavContainer .favContents .favDetailContainer {
+    width: 100%;
+    height: 55%;
+    max-height: 300px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetailsNot {
+    height: 100%;
+    background-image: url("");
+  }
+  .FavContainer .favContents .favDetailContainer .favDetailsNot svg {
+    display: flex;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails {
+    max-height: 300px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    max-height: 500px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details {
+    width: 100%;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details .favName {
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting {
+    width: 100%;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting .favName {
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions {
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions p {
+    font-size: 25px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions button {
+    height: 20%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail {
+    max-height: 250px;
+    justify-content: center;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName {
+    height: 90%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMenuName {
+    height: 60%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMethodName {
+    height: 60%;
+    overflow: scroll;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customCoffee {
+    height: 50%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription {
+    justify-content: center;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription p {
+    display: flex;
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionInput {
+    min-height: 50%;
+    font-size: 16px;
+    padding: 3%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer {
+    flex-direction: row;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer button {
+    width: 40%;
+  }
+}
+@media all and (min-width: 1279px) {
+  .FavContainer {
+    width: 100%;
+    height: 35%;
+    justify-content: center;
+    align-items: center;
+  }
+  .FavContainer .favTitle {
+    width: 100%;
+    height: 25%;
+  }
+  .FavContainer .favTitle header {
+    font-size: 40px;
+  }
+  .FavContainer .favTitle header .favIcon {
+    font-size: 30px;
+  }
+  .FavContainer .favTitle p {
+    font-size: 20px;
+  }
+  .FavContainer .favContents {
+    height: 75%;
+    flex-direction: row;
+  }
+  .FavContainer .favContents .favourites {
+    width: 50%;
+    height: 100%;
+  }
+  .FavContainer .favContents .favourites .favList li {
+    height: 20%;
+    margin-block: 0%;
+    padding-inline: 1%;
+  }
+  .FavContainer .favContents .favourites .favList li p {
+    width: 50%;
+    font-size: 25px;
+  }
+  .FavContainer .favContents .favourites .favList li .btnContainer {
+    width: 45%;
+  }
+  .FavContainer .favContents .favourites .favList li .btnContainer button {
+    width: auto;
+    height: 60%;
+    font-size: 15px;
+    box-shadow: 0px 0px 0px 2px sienna;
+  }
+  .FavContainer .favContents .favDetailContainer {
+    width: 50%;
+    height: 100%;
+    max-height: 300px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetailsNot {
+    height: 100%;
+    background-image: url("");
+  }
+  .FavContainer .favContents .favDetailContainer .favDetailsNot svg {
+    display: flex;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails {
+    max-height: 300px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    max-height: 500px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details {
+    width: 57%;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .details .favName {
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting {
+    width: 57%;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .detailCustomSetting .favName {
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer {
+    width: 43%;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions {
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions p {
+    font-size: 25px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customOptions button {
+    width: 100%;
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail {
+    max-height: 270px;
+    justify-content: center;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customDetailBasic .customDetailBasicText p {
+    font-size: 18px;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customfavName {
+    height: 90%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMenuName {
+    height: 60%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customMethodName {
+    height: 60%;
+    overflow: scroll;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDetail .customCoffee {
+    height: 50%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription {
+    justify-content: center;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription p {
+    display: flex;
+    height: 15%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionInput {
+    min-height: 50%;
+    font-size: 16px;
+    padding: 3%;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer {
+    flex-direction: row;
+  }
+  .FavContainer .favContents .favDetailContainer .favDetails .detailsContainer .customContainer .customDescription .descriptionBtnContainer button {
+    width: 40%;
   }
 }/*# sourceMappingURL=Fav.css.map */

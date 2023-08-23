@@ -435,8 +435,6 @@
                                 color: linen;
                                 background-color: sienna;
                                 box-shadow: 2px 3px 0px 1px darkgoldenrod;
-
-                                animation: 0.5s;
         
                                 &:hover {
                                     color: brown;
@@ -848,4 +846,526 @@
     to {
         opacity: 1;
     }
+}
+
+@media all and (min-width:320px) {
+    .FavContainer {
+        width: 100%;
+        height: 65%;
+
+        .favTitle {
+            height: 7%;
+
+            header {
+                font-size: 20px;
+
+                .favIcon {
+                    font-size: 15px;
+                }
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .favContents {
+            height: 93%;
+            flex-direction: column;
+
+            .favourites {
+                width: 100%;
+                height: 30%;
+
+                .favList {
+
+                    li {
+                        height: 20%;
+                        margin-block: 0%;
+
+                        padding-inline: 1%;
+
+                        p {
+                            width: 42%;
+                            font-size: 16px;
+                        }
+
+                        .btnContainer {
+                            width: 58%;
+
+                            button {
+                                width: auto;
+                                height: 70%;
+                                font-size: 12px;
+                                box-shadow: 0px 0px 0px 1px sienna;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .favDetailContainer {
+                width: 100%;
+                height: 70%;
+                max-height: 500px;
+
+                .favDetailsNot {
+                    height: 100%;
+
+                    background-image: url('../../../../public/img/background/myRecipe.jpg');
+                    background-position: center;
+                    background-size: cover;
+
+                    svg {
+                        display: none;
+                    }
+                }
+
+                .favDetails {
+                    max-height: 500px;                    
+
+                    .detailsContainer {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        max-height: 500px;                  
+
+                        .details {
+                            width: 100%;
+                            height: 60%;
+
+                            .favName {
+                                height: 15%;
+                            }
+                        }
+                        .detailCustomSetting {
+                            width: 100%;
+                            height: 60%;
+
+                            .favName {
+                                height: 15%;
+                            }
+                        }
+                        
+                        .customContainer {
+                            width: 100%;
+                            height: 40%;
+
+                            .customOptions {
+                                justify-content: space-evenly;
+                                height: 100%;
+
+                                p {
+                                    font-size: 25px;
+                                }
+
+                                button {
+                                    height: 20%;
+                                }
+                            }
+
+                            .customDetail {
+                                max-height: 180px;
+                                justify-content: center;
+
+                                .customfavName {
+                                    height: 90%;
+                                }
+                                .customMenuName {
+                                    height: 60%;
+                                }
+                                .customMethodName {
+                                    height: 60%;
+
+                                    overflow: scroll;
+                                }
+                                .customCoffee {
+                                    height: 70%;
+                                }
+                            }
+
+                            .customDescription {
+                                justify-content: flex-start;
+
+                                p {
+                                    display: none;
+                                }
+
+                                .descriptionInput {
+                                    min-height: 70%;
+                                    font-size: 15px;
+
+                                    padding: 2%;
+                                }
+
+                                .descriptionBtnContainer {
+                                    flex-direction: row;
+
+                                    button {
+                                        width: 40%;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:767px) {
+    .FavContainer {
+        width: 70%;
+        height: 55%;
+        align-items: center;
+
+        .favTitle {
+            width: 80%;
+            height: 15%;
+
+            header {
+                font-size: 30px;
+
+                .favIcon {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .favContents {
+            height: 93%;
+            flex-direction: column;
+
+            .favourites {
+                width: 80%;
+                height: 45%;
+
+                .favList {
+
+                    li {
+                        height: 20%;
+                        margin-block: 0%;
+
+                        padding-inline: 1%;
+
+                        p {
+                            width: 48%;
+                            font-size: 20px;
+                        }
+
+                        .btnContainer {
+                            width:52%;
+
+                            button {
+                                width: auto;
+                                height: 70%;
+                                font-size: 15px;
+                                box-shadow: 0px 0px 0px 2px sienna;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .favDetailContainer {
+                width: 100%;
+                height: 55%;
+                max-height: 300px;
+
+                .favDetailsNot {
+                    height: 100%;
+
+                    background-image: url('');
+
+                    svg {
+                        display: flex;
+                    }
+                }
+
+                .favDetails {
+                    max-height: 300px;                    
+
+                    .detailsContainer {
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        max-height: 500px;                  
+
+                        .details {
+                            width: 100%;
+                            height: 100%;
+
+                            .favName {
+                                height: 15%;
+                            }
+                        }
+                        .detailCustomSetting {
+                            width: 100%;
+                            height: 100%;
+
+                            .favName {
+                                height: 15%;
+                            }
+                        }
+                        
+                        .customContainer {
+                            width: 100%;
+                            height: 100%;
+
+                            .customOptions {
+                                justify-content: space-evenly;
+                                height: 100%;
+
+                                p {
+                                    font-size: 25px;
+                                }
+
+                                button {
+                                    height: 20%;
+                                }
+                            }
+
+                            .customDetail {
+                                max-height: 250px;
+                                justify-content: center;
+
+                                .customfavName {
+                                    height: 90%;
+                                }
+                                .customMenuName {
+                                    height: 60%;
+                                }
+                                .customMethodName {
+                                    height: 60%;
+
+                                    overflow: scroll;
+                                }
+                                .customCoffee {
+                                    height: 50%;
+                                }
+                            }
+
+                            .customDescription {
+                                justify-content: center;
+
+                                p {
+                                    display: flex;
+                                    height: 15%;
+                                }
+
+                                .descriptionInput {
+                                    min-height: 50%;
+                                    font-size: 16px;
+
+                                    padding: 3%;
+                                }
+
+                                .descriptionBtnContainer {
+                                    flex-direction: row;
+
+                                    button {
+                                        width: 40%;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:1279px) {
+    .FavContainer {
+        width: 100%;
+        height: 35%;
+        justify-content: center;
+        align-items: center;
+
+        .favTitle {
+            width: 100%;
+            height: 25%;
+
+            header {
+                font-size: 40px;
+
+                .favIcon {
+                    font-size: 30px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .favContents {
+            height: 75%;
+            flex-direction: row;
+
+            .favourites {
+                width: 50%;
+                height: 100%;
+
+                .favList {
+
+                    li {
+                        height: 20%;
+                        margin-block: 0%;
+
+                        padding-inline: 1%;
+
+                        p {
+                            width: 50%;
+                            font-size: 25px;
+                        }
+
+                        .btnContainer {
+                            width:45%;
+
+                            button {
+                                width: auto;
+                                height: 60%;
+                                font-size: 15px;
+                                box-shadow: 0px 0px 0px 2px sienna;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .favDetailContainer {
+                width: 50%;
+                height: 100%;
+                max-height: 300px;
+
+                .favDetailsNot {
+                    height: 100%;
+
+                    background-image: url('');
+
+                    svg {
+                        display: flex;
+                    }
+                }
+
+                .favDetails {
+                    max-height: 300px;                    
+
+                    .detailsContainer {
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        max-height: 500px;                  
+
+                        .details {
+                            width: 57%;
+                            height: 100%;
+
+                            .favName {
+                                height: 15%;
+                            }
+                        }
+                        .detailCustomSetting {
+                            width: 57%;
+                            height: 100%;
+
+                            .favName {
+                                height: 15%;
+                            }
+                        }
+                        
+                        .customContainer {
+                            width: 43%;
+                            height: 100%;
+
+                            .customOptions {
+                                justify-content: space-evenly;
+                                height: 100%;
+
+                                p {
+                                    font-size: 25px;
+                                }
+
+                                button {
+                                    width: 100%;
+                                    height: 15%;
+                                }
+                            }
+
+                            .customDetail {
+                                max-height: 270px;
+                                justify-content: center;
+
+                                .customDetailBasic {
+
+                                    .customDetailBasicText {
+
+                                        p {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+
+                                .customfavName {
+                                    height: 90%;
+                                }
+                                .customMenuName {
+                                    height: 60%;
+                                }
+                                .customMethodName {
+                                    height: 60%;
+
+                                    overflow: scroll;
+                                }
+                                .customCoffee {
+                                    height: 50%;
+                                }
+                            }
+
+                            .customDescription {
+                                justify-content: center;
+
+                                p {
+                                    display: flex;
+                                    height: 15%;
+                                }
+
+                                .descriptionInput {
+                                    min-height: 50%;
+                                    font-size: 16px;
+
+                                    padding: 3%;
+                                }
+
+                                .descriptionBtnContainer {
+                                    flex-direction: row;
+
+                                    button {
+                                        width: 40%;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:1680px) {
+
 }

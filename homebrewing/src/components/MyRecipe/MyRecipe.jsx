@@ -58,7 +58,7 @@ export default function MyRecipe() {
         if (oldBrews.length > 0 ) {
 
             const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
-            const displayBrews = changeHistory ? sortedBrews.slice(6, 10) : sortedBrews.slice(0, 5);
+            const displayBrews = changeHistory ? sortedBrews.slice(5, 10) : sortedBrews.slice(0, 5);
 
                 return (
                     <ul className='history'>
