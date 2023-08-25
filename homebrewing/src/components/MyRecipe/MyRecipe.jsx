@@ -58,7 +58,7 @@ export default function MyRecipe() {
         if (oldBrews.length > 0 ) {
 
             const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
-            const displayBrews = changeHistory ? sortedBrews.slice(6, 10) : sortedBrews.slice(0, 5);
+            const displayBrews = changeHistory ? sortedBrews.slice(5, 10) : sortedBrews.slice(0, 5);
 
                 return (
                     <ul className='history'>
@@ -73,7 +73,7 @@ export default function MyRecipe() {
                                     <div className='historyBtnContainer'>
                                         <button
                                         onClick={() => {
-                                        navigate(`/menu/${brew.menuName}/method/${brew.methodName}/recipe/brewing/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`)
+                                        navigate(`/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`)
                                         }}
                                         >Go Brew</button>
                                         <button

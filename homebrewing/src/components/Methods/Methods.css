@@ -168,6 +168,8 @@
 @media all and (min-width: 320px) {
   .mtContainer {
     min-height: 600px;
+    height: 100vh;
+    max-height: 600px;
   }
 }
 @media all and (min-width: 767px) {

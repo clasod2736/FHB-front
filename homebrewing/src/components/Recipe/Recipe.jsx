@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Recipe.css'
 import { useNavigate, useParams } from 'react-router-dom'
 
@@ -13,20 +13,77 @@ import {ReactComponent as UserMethod} from '../../assets/userMethod.svg'
 
 export default function Recipe() {
 
-    const navigate = useNavigate();
-    const { menuName, methodName } = useParams();
+const navigate = useNavigate();
+const { menuName, methodName } = useParams();
 
-    //States for saving Recipes
-    const [water, setWater] = useState(false);
-    const [roasting, setRoasting] = useState(false);
-    const [grind, setGrind] = useState(false);
-    const [coffee, setCoffee] = useState(false);
+const [width, setWidth] = useState(0);
 
-    //States for choosing options
-    const [roastingOpen, setRoastingOpen] = useState('');
-    const [grindOpen, setGrindOpen] = useState('');
-    const [waterOpen, setWaterOpen] = useState('');
-    const [coffeeOpen, setCoffeeOpen] = useState('');
+//States for saving Recipes
+const [water, setWater] = useState(false);
+const [roasting, setRoasting] = useState(false);
+const [grind, setGrind] = useState(false);
+const [coffee, setCoffee] = useState(false);
+
+//States for choosing options
+const [roastingOpen, setRoastingOpen] = useState('');
+const [grindOpen, setGrindOpen] = useState('');
+const [waterOpen, setWaterOpen] = useState('');
+const [coffeeOpen, setCoffeeOpen] = useState('');
+
+console.log(roastingOpen)
+
+//get current width for mobile layout
+const currentWidth = window.innerWidth
+
+useEffect(() => {
+    const resizeListener = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", resizeListener);
+    window.addEventListener('load', resizeListener);
+    setWidth(currentWidth);
+  }, [width]);
+
+const isMobile = width <= 766;
+
+//mobile slide setup
+const settingMobileSlide = () => {
+    if(isMobile) {
+        if (roastingOpen) {
+            return (
+                <div className='mobileSlides' style={{display: roastingOpen ? 'flex' : 'none'}}>
+                    <div className={roastingOpen ? 'roastingOpen' : 'roastingClose'}>
+                        <Roasting getRoasting={getRoasting} roastingClose={roastingClose}/>
+                    </div>
+                </div>
+            )
+        } else if (grindOpen) {
+            return (
+                <div className='mobileSlides' style={{display: grindOpen ? 'flex' : 'none'}}>
+                    <div className={grindOpen ? 'grindOpen' : 'grindClose'}>
+                        <Grind getGrind={getGrind} grindClose={grindClose}/>
+                    </div>        
+                </div>
+            )
+        } else if (coffeeOpen) {
+            return (
+                <div className='mobileSlides' style={{display: coffeeOpen ? 'flex' : 'none'}}>
+                    <div className={coffeeOpen ? 'coffeeOpen' : 'coffeeClose'}>
+                        <Coffee getCoffee={getCoffee} coffeeClose={coffeeClose}/>
+                    </div>        
+                </div>
+            )
+        } else if (waterOpen) {
+            return (
+                <div className='mobileSlides' style={{display: waterOpen ? 'flex' : 'none'}}>
+                    <div className={waterOpen ? 'waterOpen' : 'waterClose'}>
+                        <Water getWater={getWater} waterClose={waterClose} coffee={coffee}/>
+                    </div>
+                </div>
+            )
+        }
+    }
+}
 
 //get props from components
 const getWater = (water) => {
@@ -169,6 +226,7 @@ const coffeeClose = (coffeeClose) => {
                 {settingCoffee()}
             </div>
             <div className='center'>
+                {settingMobileSlide()}
                 <div className='header'>
                     <header>Brewing Recipe</header>
                 </div>

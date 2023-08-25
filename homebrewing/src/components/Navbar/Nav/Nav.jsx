@@ -3,10 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './Nav.css'
 
-import {Link, useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function SlideMenu() {
-  const { menuName, methodName } = useParams()
 
   const [show, setShow] = useState(false);
 

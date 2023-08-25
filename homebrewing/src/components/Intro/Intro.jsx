@@ -10,7 +10,7 @@ export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
   const userEmail = useSelector((state) => state.userEmail);
   const [ oldBrews, setOldBrews ] = useState([])
-  const [recentBrew, setRecentBrew] = useState();
+  const [ recentBrew, setRecentBrew ] = useState(null);
 
   const navigate = useNavigate();
 
@@ -30,7 +30,6 @@ export default function Intro() {
                       email: userEmail
                   }
               })
-              console.log(response.data)
               setOldBrews(response.data)
 
               //state and sort recent brew data.
@@ -42,7 +41,13 @@ export default function Intro() {
           }
       }
     } else if(isLogIn === false){ return }
-}, [])
+}, [isLogIn])
+
+//set recentBrew
+useEffect(()=> {
+  const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
+  setRecentBrew(sortedBrews[0]);
+}, [oldBrews])
 
 //Set right Buttons with loggedIn or not
 const settingButtons  = () => {
@@ -59,11 +64,13 @@ const settingButtons  = () => {
       <div className='expContainer'>
         <button className='exploreBtn'
         onClick={() => {
-          isLogIn ? 
-          navigate(`/menu/${recentBrew.menuName}/method/${recentBrew.methodName}/recipe/brewing/${recentBrew.water}/${recentBrew.coffee}/${recentBrew.roasting}/${recentBrew.grind}/step1`)
-          :
-          alert("You don't have Any History...make a New Brew!")
-          }}>
+          if (isLogIn) {
+            recentBrew !== null ? 
+            navigate(`/menu/${recentBrew.menuName}/method/${recentBrew.methodName}/recipe/${recentBrew.water}/${recentBrew.coffee}/${recentBrew.roasting}/${recentBrew.grind}/brewing`)
+            :
+            alert("You don't have Any History...make a New Brew!")
+          }
+        }}>
           Make Last Brew!
         </button>
         <Link to={isLogIn ? '/menu' : '/login'} className='exploreBtn'>

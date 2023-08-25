@@ -4,7 +4,7 @@ import './StuffList.css'
 import { useParams, useNavigate } from 'react-router-dom'
 import stuffList from '../../../../util/StuffData/StuffList.json'
 
-export default function StuffList() {
+export default function StuffList({isMobile, getBrewMobile}) {
 
   const navigate = useNavigate()
 
@@ -27,8 +27,12 @@ export default function StuffList() {
         <p>Method: {methodName}</p>
         <p>Ground Coffee: {coffee}g</p>
         <p>Water: {water}ml</p>
-        <p>Bean Roasting Level: {roasting}</p>
-        <p>Bean Grind Size: {grind}</p>
+        <p>Roasting Level: {roasting}</p>
+        <p>Grind Size: {grind}</p>
+        <div className='startBrewingMobile' style={{display: isMobile ? 'flex' : 'none'}}>
+          <p>Did you check everything? then...</p>
+          <button onClick={() => {getBrewMobile(true);}}>Start Brewing</button>
+        </div>
       </div>
       <div className='listContainer'>
         <header>Stuff List</header>
@@ -46,7 +50,7 @@ export default function StuffList() {
           ))}
         </ul>
       </div>
-      <button onClick={() => {navigate(-1)}}>Back to Before</button>
+      <button className='backBtn' onClick={() => {navigate(-1)}} style={{display: isMobile ? 'none' : 'flex'}}>Back to Before</button>
     </div>
   )
 }

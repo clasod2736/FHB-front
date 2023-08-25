@@ -39,6 +39,7 @@
   align-items: flex-start;
   width: 100%;
   height: 55%;
+  border-radius: 5px;
 }
 .stuffListContainer .listContainer header {
   font-size: 35px;
@@ -78,4 +79,198 @@
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
+}
+
+@media all and (min-width: 320px) {
+  .stuffListContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: transparent;
+    height: 50%;
+    width: 100%;
+    max-width: 370px;
+  }
+  .stuffListContainer .recipeInfo {
+    width: 52%;
+    height: 100%;
+    background-color: wheat;
+    border-radius: 5px;
+    padding-left: 1%;
+    justify-content: flex-start;
+  }
+  .stuffListContainer .recipeInfo header {
+    font-size: 20px;
+  }
+  .stuffListContainer .recipeInfo p {
+    font-size: 12px;
+    margin-bottom: 5%;
+  }
+  .stuffListContainer .recipeInfo .startBrewingMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+  }
+  .stuffListContainer .recipeInfo .startBrewingMobile p {
+    color: brown;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+  .stuffListContainer .recipeInfo .startBrewingMobile button {
+    width: 90%;
+    height: 40%;
+    font-size: 15px;
+  }
+  .stuffListContainer .listContainer {
+    width: 46%;
+    height: 100%;
+    background-color: bisque;
+  }
+  .stuffListContainer .listContainer header {
+    font-size: 20px;
+    padding-left: 5%;
+  }
+  .stuffListContainer .listContainer ul {
+    padding-left: 13%;
+  }
+  .stuffListContainer .listContainer ul li {
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+}
+@media all and (min-width: 767px) {
+  .stuffListContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: bisque;
+    height: 30%;
+    max-height: 220px;
+    width: 80%;
+    max-width: 570px;
+  }
+  .stuffListContainer .backBtn {
+    display: none !important;
+  }
+  .stuffListContainer .recipeInfo {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    padding-left: 1%;
+    justify-content: flex-start;
+  }
+  .stuffListContainer .recipeInfo header {
+    font-size: 20px;
+  }
+  .stuffListContainer .recipeInfo p {
+    font-size: 12px;
+    margin-bottom: 5%;
+  }
+  .stuffListContainer .listContainer {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  .stuffListContainer .listContainer header {
+    font-size: 20px;
+    padding-left: 5%;
+  }
+  .stuffListContainer .listContainer ul {
+    padding-left: 13%;
+  }
+  .stuffListContainer .listContainer ul li {
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+}
+@media all and (min-width: 1279px) {
+  .stuffListContainer {
+    flex-direction: column;
+    height: 100%;
+    max-height: 700px;
+    width: 20%;
+    max-width: 250px;
+  }
+  .stuffListContainer .backBtn {
+    display: flex;
+  }
+  .stuffListContainer .recipeInfo {
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40%;
+    background-color: transparent;
+    border-radius: 5px;
+    padding-left: 1%;
+  }
+  .stuffListContainer .recipeInfo header {
+    font-size: 30px;
+  }
+  .stuffListContainer .recipeInfo p {
+    font-size: 15px;
+    margin-bottom: 5%;
+  }
+  .stuffListContainer .listContainer {
+    width: 100%;
+    height: 60%;
+    background-color: transparent;
+  }
+  .stuffListContainer .listContainer header {
+    font-size: 30px;
+    padding-left: 0;
+  }
+  .stuffListContainer .listContainer ul {
+    padding-left: 5%;
+  }
+  .stuffListContainer .listContainer ul li {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
+}
+@media all and (min-width: 1680px) {
+  .stuffListContainer {
+    flex-direction: column;
+    height: 100%;
+    max-height: 850px;
+    width: 20%;
+    min-width: 280px;
+    max-width: 350px;
+  }
+  .stuffListContainer .backBtn {
+    display: flex;
+  }
+  .stuffListContainer .recipeInfo {
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40%;
+    background-color: transparent;
+    border-radius: 5px;
+    padding-left: 1%;
+  }
+  .stuffListContainer .recipeInfo header {
+    font-size: 35px;
+  }
+  .stuffListContainer .recipeInfo p {
+    font-size: 18px;
+    margin-bottom: 5%;
+  }
+  .stuffListContainer .listContainer {
+    width: 100%;
+    height: 60%;
+    background-color: transparent;
+  }
+  .stuffListContainer .listContainer header {
+    font-size: 35px;
+    padding-left: 0;
+  }
+  .stuffListContainer .listContainer ul {
+    padding-left: 5%;
+  }
+  .stuffListContainer .listContainer ul li {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
 }/*# sourceMappingURL=StuffList.css.map */

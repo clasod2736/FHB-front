@@ -38,9 +38,9 @@ useEffect(() => {
             </div>
         </div>
         <button onClick={() => {
-            if (text * coffeeAmount === 0) {
+            if (text * coffeeAmount === 0 || !text ) {
                 waterClose(true);
-                alert('Please fix Coffee Amount First')
+                alert('Please fix Coffee Amount First or Choose Ratio')
             } else {
                 waterClose(false);
                 getWater(text * coffeeAmount);

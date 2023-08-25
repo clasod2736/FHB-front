@@ -96,3 +96,180 @@
         }
     }
 }
+
+@media all and (min-width:320px) {
+    .roastingContainer {
+        background-color: wheat;
+
+        border: 2px solid sienna;
+        border-radius: 5px;
+
+        .roastingTitle {
+
+            header {
+                font-size: 25px;
+            }
+        }
+
+        .roastingChoices {
+            height: 20%;
+        }
+
+        .roastingText {
+            height: 35%;
+
+            padding-top: 0;
+
+            p {
+                font-size: 14px;
+
+                margin-block: 3%;
+            }
+        }
+        
+        button {
+            height: 15%;
+        }
+    }
+}
+
+@media all and (min-width:767px) {
+    .roastingContainer {
+        height: 95%;
+
+        background-color: wheat;
+
+        border: 0;
+        border-radius: 5px;
+
+        .roastingTitle {
+
+            header {
+                font-size: 20px;
+            }
+        }
+
+        .roastingChoices {
+            height: 20%;
+
+            div {
+
+                font-size: 15px;
+            }
+        }
+
+        .roastingText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50%;
+
+            padding-top: 0;
+
+            p {
+                font-size: 12px;
+
+                margin-block: 1%;
+            }
+        }
+        
+        button {
+            height: 15%;
+            font-size: 16px;
+        }
+    }
+}
+
+@media all and (min-width:1279px) {
+    .roastingContainer {
+        height: 95%;
+
+        background-color: wheat;
+
+        border: 0;
+        border-radius: 5px;
+
+        .roastingTitle {
+
+            header {
+                font-size: 30px;
+            }
+        }
+
+        .roastingChoices {
+            height:20%;
+
+            div {
+
+                font-size: 18px;
+            }
+        }
+
+        .roastingText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 40%;
+
+            padding-top: 0;
+
+            p {
+                font-size: 16px;
+
+                margin-block: 1%;
+            }
+        }
+        
+        button {
+            height: 15%;
+            font-size: 20px;
+        }
+    }
+}
+
+@media all and (min-width:1680px) {
+    .roastingContainer {
+        height: 95%;
+
+        background-color: wheat;
+
+        border: 0;
+        border-radius: 5px;
+
+        .roastingTitle {
+
+            header {
+                font-size: 35px;
+            }
+        }
+
+        .roastingChoices {
+            height:18%;
+
+            div {
+
+                font-size: 25px;
+            }
+        }
+
+        .roastingText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 40%;
+
+            padding-top: 0;
+
+            p {
+                font-size: 18px;
+
+                margin-block: 1%;
+            }
+        }
+        
+        button {
+            height: 15%;
+            font-size: 25px;
+        }
+    }
+}

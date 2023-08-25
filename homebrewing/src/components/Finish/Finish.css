@@ -234,4 +234,365 @@
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
+}
+
+@media all and (min-width: 320px) {
+  .finishContainer {
+    height: 100vh;
+    min-height: 600px;
+  }
+  .finishContainer .finish {
+    width: 100%;
+    max-width: 320px;
+    max-height: 700px;
+    background-image: url("../../../public/img/background/finalLogoMobile.jpg");
+  }
+  .finishContainer .finish .finishContents {
+    height: 80%;
+  }
+  .finishContainer .finish .finishContents header {
+    width: 95%;
+    max-width: 350px;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .finishText p {
+    text-align: center;
+    font-size: 15px;
+  }
+  .finishContainer .finish .finishContents .btnContainer {
+    height: 40%;
+    max-width: 250px;
+    flex-direction: column;
+  }
+  .finishContainer .finish .finishContents .btnContainer .tryAnother {
+    width: 80%;
+    height: 23%;
+    font-size: 18px;
+  }
+  .finishContainer .finish .finishContents .btnContainer .recipe {
+    width: 80%;
+    height: 23%;
+    font-size: 18px;
+  }
+  .finishContainer .finish .finishContents .btnContainer button {
+    width: 80%;
+    height: 23%;
+    font-size: 18px;
+  }
+  .finishContainer .finish .finishContents .favSubmit input {
+    font-size: 18px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer button {
+    height: 50%;
+    font-size: 18px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav {
+    height: 15%;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav p {
+    font-size: 25px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn {
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 480px) {
+  .finishContainer {
+    height: 100vh;
+    min-height: 900px;
+  }
+  .finishContainer .finish {
+    width: 100%;
+    max-width: 480px;
+    max-height: 900px;
+    background-image: url("../../../public/img/background/finalLogoMobile.jpg");
+  }
+  .finishContainer .finish .finishContents {
+    height: 80%;
+  }
+  .finishContainer .finish .finishContents header {
+    width: 95%;
+    max-width: 450px;
+    font-size: 30px;
+  }
+  .finishContainer .finish .finishContents .finishText p {
+    text-align: center;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .btnContainer {
+    height: 40%;
+    max-width: 300px;
+    flex-direction: column;
+  }
+  .finishContainer .finish .finishContents .btnContainer .tryAnother {
+    width: 80%;
+    height: 23%;
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .btnContainer .recipe {
+    width: 80%;
+    height: 23%;
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .btnContainer button {
+    width: 80%;
+    height: 23%;
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .favSubmit input {
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer button {
+    width: 25%;
+    height: 40%;
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer .submitBtn {
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav {
+    height: 15%;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav p {
+    font-size: 30px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn {
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 767px) {
+  .finishContainer {
+    justify-content: flex-start;
+    height: 100vh;
+    min-height: 900px;
+  }
+  .finishContainer .finish {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 1000px;
+    background-image: url("../../../public/img/background/finalLogo2.jpg");
+  }
+  .finishContainer .finish .finishContents {
+    width: 100%;
+    height: 60%;
+  }
+  .finishContainer .finish .finishContents header {
+    width: 60%;
+    max-width: 450px;
+    font-size: 25px;
+  }
+  .finishContainer .finish .finishContents .finishText p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .finishContainer .finish .finishContents .btnContainer {
+    height: 15%;
+    width: 80%;
+    max-width: 600px;
+    flex-direction: row;
+  }
+  .finishContainer .finish .finishContents .btnContainer .tryAnother {
+    width: 30%;
+    height: 70%;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .btnContainer .recipe {
+    width: 30%;
+    height: 70%;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .btnContainer button {
+    width: 30%;
+    height: 70%;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .favSubmit {
+    justify-content: center;
+    height: 25%;
+    width: 40%;
+  }
+  .finishContainer .finish .finishContents .favSubmit input {
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer {
+    height: 50%;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer button {
+    width: 15%;
+    height: 50%;
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer .submitBtn {
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav {
+    height: 15%;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav p {
+    font-size: 25px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .finishContainer {
+    justify-content: flex-start;
+    height: 100vh;
+    min-height: 1000px;
+  }
+  .finishContainer .finish {
+    width: 90%;
+    min-width: 1000px;
+    max-width: 1200px;
+    max-height: 1100px;
+    background-image: url("../../../public/img/background/finalLogo2.jpg");
+  }
+  .finishContainer .finish .finishContents {
+    width: 100%;
+    height: 62%;
+  }
+  .finishContainer .finish .finishContents header {
+    width: 60%;
+    max-width: 450px;
+    font-size: 30px;
+  }
+  .finishContainer .finish .finishContents .finishText {
+    margin-top: 2%;
+  }
+  .finishContainer .finish .finishContents .finishText p {
+    text-align: center;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .btnContainer {
+    height: 15%;
+    width: 90%;
+    max-width: 750px;
+    flex-direction: row;
+  }
+  .finishContainer .finish .finishContents .btnContainer .tryAnother {
+    width: 28%;
+    height: 60%;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .btnContainer .recipe {
+    width: 28%;
+    height: 60%;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .btnContainer button {
+    width: 28%;
+    height: 60%;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .favSubmit {
+    justify-content: center;
+    height: 25%;
+    width: 25%;
+  }
+  .finishContainer .finish .finishContents .favSubmit input {
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer {
+    height: 50%;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer button {
+    width: 15%;
+    height: 40%;
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer .submitBtn {
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav {
+    height: 15%;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav p {
+    font-size: 35px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn {
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 1680px) {
+  .finishContainer {
+    justify-content: flex-start;
+    height: 100vh;
+    min-height: 1100px;
+  }
+  .finishContainer .finish {
+    width: 100%;
+    min-width: 1000px;
+    max-width: 1500px;
+    max-height: 1200px;
+    background-image: url("../../../public/img/background/finalLogo2.jpg");
+  }
+  .finishContainer .finish .finishContents {
+    width: 100%;
+    height: 60%;
+  }
+  .finishContainer .finish .finishContents header {
+    width: 60%;
+    max-width: 450px;
+    font-size: 30px;
+  }
+  .finishContainer .finish .finishContents .finishText {
+    justify-content: space-evenly;
+    height: 25%;
+    margin-top: 2%;
+  }
+  .finishContainer .finish .finishContents .finishText p {
+    text-align: center;
+    font-size: 20px;
+  }
+  .finishContainer .finish .finishContents .btnContainer {
+    height: 15%;
+    width: 90%;
+    max-width: 850px;
+    flex-direction: row;
+  }
+  .finishContainer .finish .finishContents .btnContainer .tryAnother {
+    width: 28%;
+    height: 60%;
+    font-size: 25px;
+  }
+  .finishContainer .finish .finishContents .btnContainer .recipe {
+    width: 28%;
+    height: 60%;
+    font-size: 25px;
+  }
+  .finishContainer .finish .finishContents .btnContainer button {
+    width: 28%;
+    height: 60%;
+    font-size: 25px;
+  }
+  .finishContainer .finish .finishContents .favSubmit {
+    justify-content: center;
+    height: 25%;
+    width: 25%;
+  }
+  .finishContainer .finish .finishContents .favSubmit input {
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer {
+    width: 70%;
+    height: 50%;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer button {
+    width: 15%;
+    height: 40%;
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .favSubmit .btnContainer .submitBtn {
+    font-size: 22px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav {
+    height: 15%;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav p {
+    font-size: 35px;
+  }
+  .finishContainer .finish .finishContents .afterSaveFav .goMyRecipeBtn {
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=Finish.css.map */

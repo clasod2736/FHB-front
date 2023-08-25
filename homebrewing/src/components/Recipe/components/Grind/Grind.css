@@ -86,4 +86,132 @@
   box-shadow: 0px 0px 0px 0px;
   transform: translateY(3%);
   transition: 0s;
+}
+
+@media all and (min-width: 320px) {
+  .grindContainer {
+    background-color: wheat;
+    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+  }
+  .grindContainer .grindTitle header {
+    font-size: 30px;
+    color: darkgoldenrod;
+    letter-spacing: 2px;
+  }
+  .grindContainer .grindChoices {
+    height: 20%;
+  }
+  .grindContainer .grindText {
+    height: 40%;
+    padding-block: 2%;
+  }
+  .grindContainer .grindText p {
+    color: darkgoldenrod;
+  }
+  .grindContainer button {
+    height: 15%;
+  }
+}
+@media all and (min-width: 767px) {
+  .grindContainer {
+    height: 95%;
+    background-color: wheat;
+    border: 0;
+  }
+  .grindContainer .grindTitle header {
+    font-size: 25px;
+    color: darkgoldenrod;
+    letter-spacing: 2px;
+  }
+  .grindContainer .grindChoices {
+    width: 100%;
+    height: 20%;
+  }
+  .grindContainer .grindChoices div {
+    font-size: 16px;
+  }
+  .grindContainer .grindText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 45%;
+    padding-block: 2%;
+  }
+  .grindContainer .grindText p {
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .grindContainer button {
+    height: 15%;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 1279px) {
+  .grindContainer {
+    height: 95%;
+    background-color: wheat;
+    border: 0;
+  }
+  .grindContainer .grindTitle header {
+    font-size: 35px;
+    color: darkgoldenrod;
+    letter-spacing: 2px;
+  }
+  .grindContainer .grindChoices {
+    width: 100%;
+    height: 20%;
+  }
+  .grindContainer .grindChoices div {
+    font-size: 18px;
+  }
+  .grindContainer .grindText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 45%;
+    padding-block: 2%;
+  }
+  .grindContainer .grindText p {
+    font-size: 16px;
+    color: darkgoldenrod;
+  }
+  .grindContainer button {
+    height: 15%;
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1680px) {
+  .grindContainer {
+    height: 95%;
+    background-color: wheat;
+    border: 0;
+  }
+  .grindContainer .grindTitle header {
+    font-size: 40px;
+    color: darkgoldenrod;
+    letter-spacing: 2px;
+  }
+  .grindContainer .grindChoices {
+    width: 100%;
+    height: 18%;
+  }
+  .grindContainer .grindChoices div {
+    font-size: 25px;
+  }
+  .grindContainer .grindText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    padding-block: 2%;
+  }
+  .grindContainer .grindText p {
+    font-size: 18px;
+    color: darkgoldenrod;
+  }
+  .grindContainer button {
+    height: 15%;
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=Grind.css.map */
