@@ -16,6 +16,7 @@ import Register from './components/User/Regitser/Register';
 import Finish from './components/Finish/Finish';
 import MyRecipe from './components/MyRecipe/MyRecipe';
 import Brewing from './components/Brewing/Brewing';
+import axios from 'axios';
 
 const router = createBrowserRouter([
   { path:'/',
@@ -43,6 +44,7 @@ export default function App() {
 
   const dispatch = useDispatch();
 
+
   //check Local data exist and update redux store for when react-app refresh
   useEffect(() => {
     const localInfo =  localStorage.getItem('userInfo')
@@ -68,6 +70,19 @@ export default function App() {
     }
 
   })
+
+  //use JWT Token for authentication and keep user logIn
+  useEffect(() => {
+    const getCookies = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/isAuth', {withCredentials:true})
+        console.log(response)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getCookies();
+  }, [])
 
   return (
     <div className='appContainer'>
