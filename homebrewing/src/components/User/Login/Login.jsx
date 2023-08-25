@@ -27,11 +27,9 @@ export default function Login() {
                     email: email,
                     password: password
             }
-        })
+        }, )
 
-        console.log(response.data);
-
-        if (response) {
+        if (typeof response !== "string") {
 
             dispatch({ type: 'loginSuccess' })
             dispatch(updateEmail(email))
@@ -43,14 +41,11 @@ export default function Login() {
                     isLoggedIn : true
                 }
             ))
-
             navigate(`/`)
         }
-        else setAlertUser(true)
-
-        } 
-        catch (error) {
-            console.log(error)
+    } 
+    catch (error) {
+        setAlertUser(true);
         }
     }
     
@@ -84,7 +79,7 @@ export default function Login() {
                 </div>
                 <div className='password'>
                     <p>Password</p>
-                    <input type='password'onChange={(e) => {setPassword(e.target.value)}} endado/>
+                    <input type='password'onChange={(e) => {setPassword(e.target.value)}}/>
                 </div>
                 <div className='submit'>
                     <div className='loginContainer'>

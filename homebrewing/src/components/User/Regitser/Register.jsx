@@ -28,6 +28,7 @@ export default function User() {
       })
 
       console.log(response.data)
+      alert("User  " + email + "  Registered!!")
       navigate(`/login`)
     } catch (error) {
 
@@ -63,8 +64,6 @@ export default function User() {
 
             //request for making user data in database to back end
             postUser()
-
-            alert("User" + {email} + "Registered!!")
           }
         }
 
