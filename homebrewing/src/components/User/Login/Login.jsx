@@ -26,7 +26,8 @@ export default function Login() {
                 params: {
                     email: email,
                     password: password
-            }
+            },
+            withCredentials: true
         }, )
 
         if (typeof response !== "string") {
