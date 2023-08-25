@@ -25,7 +25,7 @@ export default function Login() {
             const response = await axios.get(serverUrl, { 
                 params: {
                     email: email,
-                    password: password
+                    password: password,
             },
             withCredentials: true
         }, )
