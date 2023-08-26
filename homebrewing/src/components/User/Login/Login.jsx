@@ -37,11 +37,11 @@ export default function Login() {
             setAlertUser(false);
 
             // save user LoggedIn history in local storage
-            localStorage.setItem('userInfo', JSON.stringify(
-                {   userEmail : response.data.email,
-                    isLoggedIn : true
-                }
-            ))
+            // localStorage.setItem('userInfo', JSON.stringify(
+            //     {   userEmail : response.data.email,
+            //         isLoggedIn : true
+            //     }
+            // ))
             navigate(`/`)
         }
     } 

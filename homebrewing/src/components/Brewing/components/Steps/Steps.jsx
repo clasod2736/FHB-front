@@ -12,8 +12,6 @@ const [steps, setSteps] = useState(undefined)
 const navigate = useNavigate();
 const { menuName, methodName } = useParams();
 
-console.log(isMobile, steps)
-
 //get Json data from util folder
 useEffect(() => {
     setMethodStepInfo(methodSteps[methodName])
