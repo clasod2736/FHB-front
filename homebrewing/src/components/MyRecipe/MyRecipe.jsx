@@ -42,7 +42,7 @@ export default function MyRecipe() {
             }
         }
         fetchData();
-    }, [userEmail])
+    }, [])
 
     //alert if fav storage is full
     useEffect(() => {

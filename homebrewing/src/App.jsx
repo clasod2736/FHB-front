@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './App.css'
 import Root from './pages/Root'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -16,6 +16,7 @@ import Register from './components/User/Regitser/Register';
 import Finish from './components/Finish/Finish';
 import MyRecipe from './components/MyRecipe/MyRecipe';
 import Brewing from './components/Brewing/Brewing';
+import axios from 'axios';
 
 const router = createBrowserRouter([
   { path:'/',
@@ -44,30 +45,48 @@ export default function App() {
   const dispatch = useDispatch();
 
   //check Local data exist and update redux store for when react-app refresh
-  useEffect(() => {
-    const localInfo =  localStorage.getItem('userInfo')
-    const userInfo = JSON.parse(localInfo);
+  // useEffect(() => {
+  //   const localInfo =  localStorage.getItem('userInfo')
+  //   const userInfo = JSON.parse(localInfo);
 
-    if (userInfo) {
+  //   if (userInfo) {
 
-      if (userInfo.isLoggedIn === true) {
+  //     if (userInfo.isLoggedIn === true) {
 
-        const userInfo = JSON.parse(localInfo);
-        const isLoggedIn = userInfo.isLoggedIn;
-        const userEmail = userInfo.userEmail;
-        console.log(userEmail, isLoggedIn)
+  //       const userInfo = JSON.parse(localInfo);
+  //       const isLoggedIn = userInfo.isLoggedIn;
+  //       const userEmail = userInfo.userEmail;
+  //       console.log(userEmail, isLoggedIn)
   
-        dispatch(updateEmail(userEmail))
-        dispatch({ type: 'loginSuccess' })
+  //       dispatch(updateEmail(userEmail))
+  //       dispatch({ type: 'loginSuccess' })
 
-      } else if (userInfo.isLoggedIn === false) {
-        return
+  //     } else if (userInfo.isLoggedIn === false) {
+  //       return
+  //     }
+  //   } else {
+  //     console.log('Cannot get Data from Local Storage')
+  //   }
+  // })
+
+  //use JWT Token for authentication and keep user logIn
+  useEffect(() => {
+    const getCookies = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/isAuth', {withCredentials:true})
+
+        if (response.data.userEmail !== undefined) {
+          dispatch(updateEmail(response.data.userEmail))
+          dispatch({ type: 'loginSuccess' })
+        } else {
+          dispatch({ type: 'loggedOut' })
+        }
+      } catch (error) {
+        console.log(error, "user neeed to logIn")
       }
-    } else {
-      console.log('Cannot get Data from Local Storage')
     }
-
-  })
+    getCookies();
+  }, [])
 
   return (
     <div className='appContainer'>

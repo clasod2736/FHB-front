@@ -55,7 +55,7 @@ useEffect(() => {
         }
     }
     fetchDatas();
-}, [ description, customFav, userEmail, fixedFav, favList, favUpdated])
+}, [ description, customFav, fixedFav, favList, favUpdated])
 
 
 //setting favourite lists with fetched data
@@ -155,16 +155,16 @@ const settingFavDetailCustom = () => {
 }
 
 //Delete Fav in web and database
-const deleteFav = (favName) => {
-    
+const deleteFav = async (favName) => {
+    console.log(favName)
     try {
         
-        const response = axios.delete('http://localhost:8080/deleteFav', {
+        const response = await axios.delete('http://localhost:8080/deleteFav', {
             params: {
                 favName : favName
             }
         })
-        console.log(response.data)
+        console.log(response)
         setFavourites(prevFavourites => prevFavourites.filter(item => item.favName !== favName));
     }
     catch (error) {

@@ -25,8 +25,9 @@ export default function Login() {
             const response = await axios.get(serverUrl, { 
                 params: {
                     email: email,
-                    password: password
-            }
+                    password: password,
+            },
+            withCredentials: true
         }, )
 
         if (typeof response !== "string") {
@@ -36,11 +37,11 @@ export default function Login() {
             setAlertUser(false);
 
             // save user LoggedIn history in local storage
-            localStorage.setItem('userInfo', JSON.stringify(
-                {   userEmail : response.data.email,
-                    isLoggedIn : true
-                }
-            ))
+            // localStorage.setItem('userInfo', JSON.stringify(
+            //     {   userEmail : response.data.email,
+            //         isLoggedIn : true
+            //     }
+            // ))
             navigate(`/`)
         }
     } 

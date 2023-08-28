@@ -30,8 +30,6 @@ const [grindOpen, setGrindOpen] = useState('');
 const [waterOpen, setWaterOpen] = useState('');
 const [coffeeOpen, setCoffeeOpen] = useState('');
 
-console.log(roastingOpen)
-
 //get current width for mobile layout
 const currentWidth = window.innerWidth
 

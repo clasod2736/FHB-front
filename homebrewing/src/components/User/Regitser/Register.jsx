@@ -55,12 +55,12 @@ export default function User() {
         } 
         else { 
             //make data in local storage
-            localStorage.setItem('userInfo', JSON.stringify(
-              {   
-                userEmail : email,
-                isLoggedIn : false
-              }
-            ))
+            // localStorage.setItem('userInfo', JSON.stringify(
+            //   {   
+            //     userEmail : email,
+            //     isLoggedIn : false
+            //   }
+            // ))
 
             //request for making user data in database to back end
             postUser()
