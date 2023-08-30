@@ -70,6 +70,7 @@ export default function App() {
   // })
 
   //use JWT Token for authentication and keep user logIn
+  
   useEffect(() => {
     const getCookies = async () => {
       try {
@@ -85,7 +86,7 @@ export default function App() {
         console.log(error, "user neeed to logIn")
       }
     }
-    getCookies();
+    getCookies()
   }, [])
 
   return (
