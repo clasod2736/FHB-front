@@ -44,7 +44,7 @@ export default function Login() {
             // ))
             navigate(`/`)
         }
-    } 
+    }
     catch (error) {
         setAlertUser(true);
         }
