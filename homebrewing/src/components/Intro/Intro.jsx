@@ -41,7 +41,7 @@ export default function Intro() {
           }
       }
     } else if(isLogIn === false){ return }
-}, [isLogIn])
+}, [isLogIn, oldBrews, userEmail])
 
 //set recentBrew
 useEffect(()=> {

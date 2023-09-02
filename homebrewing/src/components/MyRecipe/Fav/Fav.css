@@ -859,7 +859,7 @@
   }
   .FavContainer .favContents .favDetailContainer .favDetailsNot {
     height: 100%;
-    background-image: url("");
+    background-image: none;
   }
   .FavContainer .favContents .favDetailContainer .favDetailsNot svg {
     display: flex;
@@ -989,7 +989,7 @@
   }
   .FavContainer .favContents .favDetailContainer .favDetailsNot {
     height: 100%;
-    background-image: url("");
+    background-image: none;
   }
   .FavContainer .favContents .favDetailContainer .favDetailsNot svg {
     display: flex;

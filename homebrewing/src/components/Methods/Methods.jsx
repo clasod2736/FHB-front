@@ -33,7 +33,7 @@ useEffect(() => {
   window.addEventListener("resize", resizeListener);
   window.addEventListener('load', resizeListener);
   setWidth(currentWidth);
-}, [width]);
+}, [currentWidth, width]);
 
 const isMobile = width <= 766;
 

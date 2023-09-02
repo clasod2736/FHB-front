@@ -2,10 +2,17 @@
   "name": "homebrewing",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs",
+      "^matchmedia-mock$": "<rootDir>/node_modules/jest-matchmedia-mock"
+    }
+  },
   "dependencies": {
     "@react-oauth/google": "^0.11.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
@@ -53,5 +60,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.22.5",
+    "@testing-library/react": "^14.0.0",
+    "babel-jest": "^29.6.4",
+    "jest": "^27.5.1",
+    "jest-matchmedia-mock": "^1.1.0"
   }
 }
