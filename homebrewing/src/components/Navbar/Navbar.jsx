@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEmail } from '../../store/action';
 
+import { LinkContainer } from 'react-router-bootstrap'
+
 //Slide Menu component (react-bootstrap)
 import SlideMenu from './SlideMenu/SlideMenu'
 import Nav from './Nav/Nav'
@@ -52,8 +54,9 @@ export default function Navbar() {
       <div className='about'>
         <SlideMenu/>
       </div>
-      <div className='shop'
-      ><Nav/></div>
+      <div className='shop'>
+        <Nav/>
+      </div>
       <Link className='navTitle' to={'/'}>For Homey Barista</Link>
 
       {settingMyRecipe()}
