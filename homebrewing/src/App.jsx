@@ -91,7 +91,7 @@ export default function App() {
 
   return (
     <div className='appContainer'>
-      <button>0</button>
+      {/* <button>0</button> */}
       <RouterProvider router={router}/>
     </div>
   )

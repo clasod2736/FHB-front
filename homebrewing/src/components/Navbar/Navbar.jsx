@@ -52,10 +52,10 @@ export default function Navbar() {
   return (
     <div className='fixedNavbar'>
       <div className='about'>
-        <SlideMenu/>
+        {/* <SlideMenu/> */}
       </div>
       <div className='shop'>
-        <Nav/>
+        {/* <Nav/> */}
       </div>
       <Link className='navTitle' to={'/'}>For Homey Barista</Link>
 

@@ -1,6 +1,4 @@
-import { render, screen } from '@testing-library/react';
 import {renderWithProviders} from './test/util/reduxMock'
-import matchMediaMock from 'jest-matchmedia-mock';
 import App from './App';
 
 describe('renders learn react link', () => {
@@ -22,8 +20,9 @@ describe('renders learn react link', () => {
   
 
   it("getOldbBrews", () => {
-    const { getByRole, getByTestId } = renderWithProviders(<App />);
-    const button = Number(screen.getByRole("button", {name: 0}).textContent)
-    expect(button).toBe(0)
+    const view = renderWithProviders(<App />);
+    expect(view).toMatchSnapshot();
+    // const button = Number(screen.getByRole("button", {name: 0}).textContent)
+    // expect(button).toBe(0)
   })
 });

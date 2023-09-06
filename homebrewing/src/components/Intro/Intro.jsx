@@ -54,9 +54,9 @@ const settingButtons  = () => {
   if (isLogIn === false ) {
     return (
       <div className='loginContainer'>
-        <Link className='login' to={'/login'}>
+        <button className='login' onClick={() => { navigate('/login')}}>
           Login!
-        </Link>
+        </button>
       </div>
     )
   } else {
