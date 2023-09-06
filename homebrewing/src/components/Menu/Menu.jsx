@@ -18,31 +18,7 @@ export default function Menu() {
     const navigate = useNavigate();
 
     //handling Side-Menu
-    const handleSide = () => {
-        if (menuName === "off") {
-            setSideMenu('off')
-        }
-        else if (menuName === '') {
-            setSideMenu('close')
-        }
-        else if (
-            menuName === 'espresso' || 
-            menuName === 'americano' || 
-            menuName === 'longBlack' || 
-            menuName === 'coldBrew' || 
-            menuName === 'latte' || 
-            menuName === 'flatWhite' || 
-            menuName === 'cappuccino' || 
-            menuName === 'mocha' || 
-            menuName === 'macchiato' || 
-            menuName === 'chai' || 
-            menuName === 'turmeric' || 
-            menuName === 'icedCoffee' ||    
-            menuName === 'affogato'
-        ) {
-                setSideMenu("open")
-        }
-    }
+    
     const handleMenuContents = () => {
         if (sideMenu === 'off') {
             return 'menuContentsOff'
@@ -55,8 +31,33 @@ export default function Menu() {
 
     //re-render sideMenu when coffee choices are changed
     useEffect(() => {
+        const handleSide = () => {
+            if (menuName === "off") {
+                setSideMenu('off')
+            }
+            else if (menuName === '') {
+                setSideMenu('close')
+            }
+            else if (
+                menuName === 'espresso' || 
+                menuName === 'americano' || 
+                menuName === 'longBlack' || 
+                menuName === 'coldBrew' || 
+                menuName === 'latte' || 
+                menuName === 'flatWhite' || 
+                menuName === 'cappuccino' || 
+                menuName === 'mocha' || 
+                menuName === 'macchiato' || 
+                menuName === 'chai' || 
+                menuName === 'turmeric' || 
+                menuName === 'icedCoffee' ||    
+                menuName === 'affogato'
+            ) {
+                    setSideMenu("open")
+            }
+        }
         handleSide();
-    }, [menuName])
+    }, [ menuName ])
 
 
     // rendering Mock information of Coffee menu in Sidemenu

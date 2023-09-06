@@ -86,7 +86,7 @@ export default function App() {
       }
     }
     getCookies();
-  }, [])
+  }, [dispatch])
 
   return (
     <div className='appContainer'>
