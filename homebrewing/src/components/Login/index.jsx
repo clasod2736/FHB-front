@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch} from 'react-redux';
-import { updateEmail } from '../../../store/action';
+import { updateEmail } from '../../store/action';
 import axios from 'axios';
 
 //image
-import { Logo } from '../../../assets'
+import { Logo } from '../../assets'
 
 export default function Login() {
     

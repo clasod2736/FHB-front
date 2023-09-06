@@ -4,10 +4,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 // images and icons
-import { CoffeeWomen } from '../../../assets'
+import { CoffeeWomen } from '../../assets'
 import { BsGoogle } from 'react-icons/bs'
 
-export default function User() {
+export default function Register() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')

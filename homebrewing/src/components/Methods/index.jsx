@@ -5,7 +5,7 @@ import './Methods.css'
 import { MokapotSvg, Frendpress, Handdrip, AeroPress, SyphonSvg, ChemaxSvg } from '../../assets'
 
 //Components
-import { Basic, Mokapot, Hario, Frenchpress, Aeropress, Chemax, Syphon, } from './components/index';
+import { Basic, Mokapot, Hario, Frenchpress, Aeropress, Chemax, Syphon, } from './components';
 
 export default function Methods() {
 

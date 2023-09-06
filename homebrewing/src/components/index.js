@@ -1,0 +1,9 @@
+export { default as Intro} from './Intro';
+export { default as Methods} from './Methods';
+export { default as Menu} from './Menu';
+export { default as Recipe} from './Recipe';
+export { default as Login} from './Login';
+export { default as Register} from './Regitser'; 
+export { default as Finish} from './Finish';
+export { default as MyRecipe} from './MyRecipe';
+export { default as Brewing} from './Brewing';

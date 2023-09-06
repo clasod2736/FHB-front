@@ -5,18 +5,10 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch } from 'react-redux';
 import { updateEmail } from './store/action';
+import axios from 'axios';
 
 //Components
-import Intro from './components/Intro';
-import Methods from './components/Methods';
-import Menu from './components/Menu';
-import Recipe from './components/Recipe';
-import Login from './components/User/Login';
-import Register from './components/User/Regitser'; 
-import Finish from './components/Finish';
-import MyRecipe from './components/MyRecipe';
-import Brewing from './components/Brewing';
-import axios from 'axios';
+import { Intro, Methods, Menu, Recipe, Login, Register, Finish, MyRecipe, Brewing } from './components'
 
 const router = createBrowserRouter([
   { path:'/',
