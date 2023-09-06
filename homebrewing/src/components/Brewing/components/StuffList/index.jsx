@@ -17,7 +17,7 @@ export default function StuffList({isMobile, getBrewMobile}) {
   useEffect(() => {
     setMenuStuffs(stuffList.menu[menuName])
     setMethodStuffs(stuffList.method[methodName])
-  }, [])
+  }, [menuName, methodName])
 
   return (
     <div className='stuffListContainer'>

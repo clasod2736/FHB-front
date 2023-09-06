@@ -59,7 +59,7 @@ export default function Finish() {
     } else {
       return
     }
-  }, [])
+  }, [coffee, grind, menuName, methodName, roasting, userEmail, water])
 
   //get error response if Fav store is full.
   useEffect(() => {
@@ -70,7 +70,7 @@ export default function Finish() {
       navigate(`/myRecipe`)
       return
     }
-  }, [ favResponse ])
+  }, [favResponse, navigate])
 
   //Post NEW favourite brew in DB
   const saveFavBrews = async () => {
