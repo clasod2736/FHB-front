@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './App.css'
 import Root from './pages/Root'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
