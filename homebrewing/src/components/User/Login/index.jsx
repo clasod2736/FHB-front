@@ -6,7 +6,7 @@ import { updateEmail } from '../../../store/action';
 import axios from 'axios';
 
 //image
-import {ReactComponent as Logo} from '../../../assets/login.svg'
+import { Logo } from '../../../assets'
 
 export default function Login() {
     

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 // images and icons
-import {ReactComponent as CoffeeWomen} from '../../../assets/coffeeWomen.svg'
+import { CoffeeWomen } from '../../../assets'
 import { BsGoogle } from 'react-icons/bs'
 
 export default function User() {

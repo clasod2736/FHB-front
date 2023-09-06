@@ -2,16 +2,7 @@ import React, {useState} from 'react'
 import './Basic.css'
 
 //images
-import { ReactComponent as MokapotSvg } from '../../../../assets/mokapot.svg'
-import { ReactComponent as Frendpress } from '../../../../assets/frenchpress.svg'
-import { ReactComponent as Handdrip } from '../../../../assets/handdrip.svg'
-import { ReactComponent as AeroPress } from '../../../../assets/aeroPress.svg'
-import { ReactComponent as ChemaxSvg } from '../../../../assets/chemax.svg'
-import { ReactComponent as SyphonSvg } from '../../../../assets/syphon.svg'
-import { ReactComponent as GuideLogo } from '../../../../assets/guidePeople.svg'
-import { ReactComponent as EspressoMachine } from '../../../../assets/espressoMachine.svg'
-import { ReactComponent as DripMachine } from '../../../../assets/dripMachine.svg'
-import { ReactComponent as Percolator } from '../../../../assets/percolator.svg'
+import { MokapotSvg, Frendpress, Handdrip, AeroPress, ChemaxSvg, SyphonSvg, GuideLogo, EspressoMachine, DripMachine, Percolator } from '../../../../assets'
 
 export default function Basic({ isMobile, getMethod}) {
 const [chooseMethod, setChooseMethod] = useState(false)

@@ -2,21 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './Methods.css'
 
 //images
-import { ReactComponent as MokapotSvg } from '../../assets/mokapot.svg'
-import { ReactComponent as Frendpress } from '../../assets/frenchpress.svg'
-import { ReactComponent as Handdrip } from '../../assets/handdrip.svg'
-import { ReactComponent as AeroPress } from '../../assets/aeroPress.svg'
-import { ReactComponent as ChemaxSvg } from '../../assets/chemax.svg'
-import { ReactComponent as SyphonSvg } from '../../assets/syphon.svg'
+import { MokapotSvg, Frendpress, Handdrip, AeroPress, SyphonSvg, ChemaxSvg } from '../../assets'
 
 //Components
-import Basic from './components/Basic'
-import Mokapot from './components/Mokapot'
-import Hario from './components/Hario'
-import Frenchpress from './components/Frenchpress'
-import Aeropress from './components/Aeropress'
-import Chemax from './components/Chemax'
-import Syphon from './components/Syphon'
+import { Basic, Mokapot, Hario, Frenchpress, Aeropress, Chemax, Syphon, } from './components/index';
 
 export default function Methods() {
 

@@ -8,8 +8,7 @@ import Coffee from './components/Coffee'
 import Water from './components/Water'
 
 //Svg files
-import {ReactComponent as UserMenu} from '../../assets/userMenu.svg'
-import {ReactComponent as UserMethod} from '../../assets/userMethod.svg'
+import { UserMenu, UserMethod } from '../../assets'
 
 export default function Recipe() {
 
