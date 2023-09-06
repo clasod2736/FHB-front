@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 //Component
-import Fav from './Fav/Fav';
+import Fav from './Fav';
 
 export default function MyRecipe() {
     const userEmail = useSelector((state) => state.userEmail);

@@ -7,15 +7,15 @@ import { useDispatch } from 'react-redux';
 import { updateEmail } from './store/action';
 
 //Components
-import Intro from './components/Intro/Intro';
-import Methods from './components/Methods/Methods';
-import Menu from './components/Menu/Menu';
-import Recipe from './components/Recipe/Recipe';
-import Login from './components/User/Login/Login';
-import Register from './components/User/Regitser/Register'; 
-import Finish from './components/Finish/Finish';
-import MyRecipe from './components/MyRecipe/MyRecipe';
-import Brewing from './components/Brewing/Brewing';
+import Intro from './components/Intro';
+import Methods from './components/Methods';
+import Menu from './components/Menu';
+import Recipe from './components/Recipe';
+import Login from './components/User/Login';
+import Register from './components/User/Regitser'; 
+import Finish from './components/Finish';
+import MyRecipe from './components/MyRecipe';
+import Brewing from './components/Brewing';
 import axios from 'axios';
 
 const router = createBrowserRouter([

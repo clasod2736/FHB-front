@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Brewing.css'
-import StuffList from './components/StuffList/StuffList';
-import Steps from './components/Steps/Steps';
+import StuffList from './components/StuffList';
+import Steps from './components/Steps';
 
 export default function Brewing() {
   const [width, setWidth] = useState(0);

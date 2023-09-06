@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Intro.css'
-import Logo from './Logo/NewLogo'
+import Logo from './Logo'
 
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'

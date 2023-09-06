@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './Recipe.css'
 import { useNavigate, useParams } from 'react-router-dom'
 
-import Roasting from './components/Roasting/Roasting'
-import Grind from './components/Grind/Grind'
-import Coffee from './components/Coffee/Coffee'
-import Water from './components/Water/Water'
+import Roasting from './components/Roasting'
+import Grind from './components/Grind'
+import Coffee from './components/Coffee'
+import Water from './components/Water'
 
 //Svg files
 import {ReactComponent as UserMenu} from '../../assets/userMenu.svg'

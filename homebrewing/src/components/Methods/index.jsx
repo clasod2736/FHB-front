@@ -10,13 +10,13 @@ import { ReactComponent as ChemaxSvg } from '../../assets/chemax.svg'
 import { ReactComponent as SyphonSvg } from '../../assets/syphon.svg'
 
 //Components
-import Basic from './components/Basic/Basic'
-import Mokapot from './components/Mokapot/Mokapot'
-import Hario from './components/Hario/Hario'
-import Frenchpress from './components/Frenchpress/Frenchpress'
-import Aeropress from './components/Aeropress/Aeropress'
-import Chemax from './components/Chemax/Chemax'
-import Syphon from './components/Syphon/Syphon'
+import Basic from './components/Basic'
+import Mokapot from './components/Mokapot'
+import Hario from './components/Hario'
+import Frenchpress from './components/Frenchpress'
+import Aeropress from './components/Aeropress'
+import Chemax from './components/Chemax'
+import Syphon from './components/Syphon'
 
 export default function Methods() {
 

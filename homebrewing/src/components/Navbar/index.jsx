@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateEmail } from '../../store/action';
 
 //Slide Menu component (react-bootstrap)
-import SlideMenu from './SlideMenu/SlideMenu'
-import Nav from './Nav/Nav'
+import SlideMenu from './SlideMenu'
+import Nav from './Nav'
 import axios from 'axios'
 
 export default function Navbar() {
