@@ -29,17 +29,24 @@ const [grindOpen, setGrindOpen] = useState('');
 const [waterOpen, setWaterOpen] = useState('');
 const [coffeeOpen, setCoffeeOpen] = useState('');
 
-//get current width for mobile layout
+//Mobile setup
 const currentWidth = window.innerWidth
 
 useEffect(() => {
-    const resizeListener = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", resizeListener);
-    window.addEventListener('load', resizeListener);
-    setWidth(currentWidth);
-  }, [currentWidth, width]);
+
+  const resizeListener = () => {
+    setWidth(window.innerWidth);
+  };
+
+  window.addEventListener("resize", resizeListener);
+  window.addEventListener('load', resizeListener);
+  setWidth(currentWidth);
+
+  return () => {
+    window.removeEventListener("resize", resizeListener);
+    window.removeEventListener('load', resizeListener);
+  }
+}, [width, currentWidth]);
 
 const isMobile = width <= 766;
 
