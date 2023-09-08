@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateEmail } from '../../store/action';
+
+// import { useDispatch, useSelector } from 'react-redux'
+// import { updateEmail } from '../../redux/action';
+import { UserDataContext } from '../../context';
+
 
 //Slide Menu component (react-bootstrap)
 import SlideMenu from './SlideMenu/SlideMenu'
@@ -10,8 +13,9 @@ import Nav from './Nav/Nav'
 import axios from 'axios'
 
 export default function Navbar() {
-  const isLogIn = useSelector((state) => state.logIn);
-  const dispatch = useDispatch();
+  // const isLogIn = useSelector((state) => state.logIn);
+  // const dispatch = useDispatch();
+  const { isLogIn, toggleUserLogIn, getUserEmail } = useContext(UserDataContext);
 
 
   //render differrent Link element depends on LoggedIn
@@ -39,8 +43,12 @@ export default function Navbar() {
     try {
       const response = await axios.get('http://localhost:8080/logOut', {withCredentials:true})
       console.log(response)
-      dispatch(updateEmail(''))
-      dispatch({ type : 'loggedOut'})
+
+      // dispatch(updateEmail(''))
+      // dispatch({ type : 'loggedOut'})
+      toggleUserLogIn();
+      getUserEmail('');
+
     } catch (error) {
       console.log(error)
     }

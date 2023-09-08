@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './Finish.css'
 
 import { Link, useParams, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux';
+
+// import { useSelector } from 'react-redux';
+import { UserDataContext } from '../../context';
+
 import axios from 'axios';
 
 export default function Finish() {
-  const userEmail = useSelector((state) => state.userEmail);
+  // const userEmail = useSelector((state) => state.userEmail);
+  const { userEmail } = useContext(UserDataContext);
 
   const [favOpen, setFavOpen] = useState(false);
   const [favName, setFavName] = useState('');

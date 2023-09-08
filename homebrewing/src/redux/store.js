@@ -1,6 +1,6 @@
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 
-function reducer(state = {
+export function reducer(state = {
 
     userEmail: '',
     logIn: false
@@ -21,6 +21,6 @@ function reducer(state = {
     return newState;
 }
 
-const store = createStore(reducer);
+const store = configureStore(reducer);
 
 export default store 

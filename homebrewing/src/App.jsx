@@ -1,10 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect} from 'react'
 import './App.css'
 import Root from './pages/Root'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useDispatch } from 'react-redux';
-import { updateEmail } from './store/action';
+
+//Old Redux Codes
+// import { useDispatch } from 'react-redux';
+// import { updateEmail } from './redux/action';
+
+//Context API
+import { UserDataContext } from './context';
 
 //Components
 import Intro from './components/Intro/Intro';
@@ -41,8 +46,10 @@ const router = createBrowserRouter([
 
 
 export default function App() {
+  //Context API
+  const { isLogIn, toggleUserLogIn, userEmail, getUserEmail } = useContext(UserDataContext)
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   //check Local data exist and update redux store for when react-app refresh
   // useEffect(() => {
@@ -70,16 +77,20 @@ export default function App() {
   // })
 
   //use JWT Token for authentication and keep user logIn
+  
   useEffect(() => {
     const getCookies = async () => {
       try {
         const response = await axios.get('http://localhost:8080/isAuth', {withCredentials:true})
 
         if (response.data.userEmail !== undefined) {
-          dispatch(updateEmail(response.data.userEmail))
-          dispatch({ type: 'loginSuccess' })
+
+          // dispatch(updateEmail(response.data.userEmail))
+          // dispatch({ type: 'loginSuccess' })
+          console.log(isLogIn, toggleUserLogIn, userEmail, getUserEmail)
         } else {
-          dispatch({ type: 'loggedOut' })
+
+          // dispatch({ type: 'loggedOut' })
         }
       } catch (error) {
         console.log(error, "user neeed to logIn")

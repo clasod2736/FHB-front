@@ -1,14 +1,18 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import './Intro.css'
 import Logo from './Logo/NewLogo'
 
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { useSelector } from 'react-redux'
+
+// import { useSelector } from 'react-redux'
+import { UserDataContext } from '../../context'
 
 export default function Intro() {
-  const isLogIn = useSelector((state) => state.logIn);
-  const userEmail = useSelector((state) => state.userEmail);
+  // const isLogIn = useSelector((state) => state.logIn);
+  // const userEmail = useSelector((state) => state.userEmail);
+  const { isLogIn, userEmail } = useContext(UserDataContext)
+
   const [ oldBrews, setOldBrews ] = useState([])
   const [ recentBrew, setRecentBrew ] = useState(null);
 
