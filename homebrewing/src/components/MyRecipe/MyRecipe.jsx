@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './MyRecipe.css'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux';
+
+// import { useSelector } from 'react-redux';
+import { UserDataContext } from '../../context';
+
 import axios from 'axios';
 
 //Component
 import Fav from './Fav/Fav';
 
 export default function MyRecipe() {
-    const userEmail = useSelector((state) => state.userEmail);
+    // const userEmail = useSelector((state) => state.userEmail);
+    const { userEmail } = useContext(UserDataContext)
 
     const [oldBrews, setOldBrews] = useState([]);
     const [changeHistory, setChangeHistory] = useState(false);

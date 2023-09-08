@@ -1,20 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch} from 'react-redux';
-import { updateEmail } from '../../../store/action';
+
+// import { useDispatch} from 'react-redux';
+// import { updateEmail } from '../../../redux/action';
+import { UserDataContext } from '../../../context';
+
 import axios from 'axios';
 
 //image
 import {ReactComponent as Logo} from '../../../assets/login.svg'
 
 export default function Login() {
+    const { toggleUserLogIn, getUserEmail } = useContext(UserDataContext);
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [alertUser, setAlertUser] = useState (false)
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     const navigate = useNavigate()
 
@@ -32,8 +36,12 @@ export default function Login() {
 
         if (typeof response !== "string") {
 
-            dispatch({ type: 'loginSuccess' })
-            dispatch(updateEmail(email))
+            // dispatch({ type: 'loginSuccess' })
+            // dispatch(updateEmail(email))
+
+            toggleUserLogIn(true);
+            console.log(email)
+            getUserEmail(email);
             setAlertUser(false);
 
             // save user LoggedIn history in local storage

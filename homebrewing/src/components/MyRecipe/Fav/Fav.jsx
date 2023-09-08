@@ -1,16 +1,19 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import './Fav.css'
 
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
-import {useSelector} from 'react-redux'
+
+// import {useSelector} from 'react-redux'
+import { UserDataContext } from '../../../context'
 
 // image and icon
 import {ReactComponent as FHBLogo} from '../../../assets/favLogo.svg'
 import {FaStar} from 'react-icons/fa'
 
 export default function Fav({ favUpdated }) {
-    const userEmail = useSelector((state) => state.userEmail);
+    // const userEmail = useSelector((state) => state.userEmail);
+    const { userEmail } = useContext(UserDataContext)
 
     const [favourites, setFavourites] = useState([]);
     const [favList, setFavList] = useState(undefined);
