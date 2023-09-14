@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 
 // image and icon
-import {ReactComponent as FHBLogo} from '../../../assets/favLogo.svg'
+import { FHBLogo } from '../../../assets'
 import {FaStar} from 'react-icons/fa'
 
 export default function Fav({ favUpdated }) {

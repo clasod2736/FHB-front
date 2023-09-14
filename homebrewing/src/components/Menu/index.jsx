@@ -3,7 +3,8 @@ import './Menu.css'
 import { useNavigate} from 'react-router-dom'
 
 //Icons
-import { ReactComponent as MilkFoam } from '../../assets/milkFoam.svg'
+import { MilkFoam } from '../../assets'
+
 import { BiSolidCoffeeBean } from 'react-icons/bi'
 import { IoIosWater } from 'react-icons/io'
 import { GiMilkCarton,GiChocolateBar, GiThreeLeaves, GiPowder } from 'react-icons/gi'

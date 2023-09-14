@@ -1,22 +1,14 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './App.css'
 import Root from './pages/Root'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch } from 'react-redux';
 import { updateEmail } from './store/action';
+import axios from 'axios';
 
 //Components
-import Intro from './components/Intro/Intro';
-import Methods from './components/Methods/Methods';
-import Menu from './components/Menu/Menu';
-import Recipe from './components/Recipe/Recipe';
-import Login from './components/User/Login/Login';
-import Register from './components/User/Regitser/Register'; 
-import Finish from './components/Finish/Finish';
-import MyRecipe from './components/MyRecipe/MyRecipe';
-import Brewing from './components/Brewing/Brewing';
-import axios from 'axios';
+import { Intro, Methods, Menu, Recipe, Login, Register, Finish, MyRecipe, Brewing } from './components'
 
 const router = createBrowserRouter([
   { path:'/',
