@@ -55,7 +55,7 @@ useEffect(() => {
         }
     }
     fetchDatas();
-}, [ description, customFav, fixedFav, favList, favUpdated])
+}, [description, customFav, fixedFav, favList, favUpdated, userEmail])
 
 
 //setting favourite lists with fetched data
