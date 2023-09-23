@@ -6,7 +6,7 @@ import { updateEmail } from '../../store/action';
 
 //Slide Menu component (react-bootstrap)
 import SlideMenu from './SlideMenu'
-import Nav from './Nav'
+import Choices from './Choices'
 import axios from 'axios'
 
 export default function Navbar() {
@@ -53,7 +53,7 @@ export default function Navbar() {
         <SlideMenu/>
       </div>
       <div className='shop'
-      ><Nav/></div>
+      ><Choices/></div>
       <Link className='navTitle' to={'/'}>For Homey Barista</Link>
 
       {settingMyRecipe()}
