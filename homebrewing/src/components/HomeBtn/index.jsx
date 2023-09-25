@@ -10,7 +10,7 @@ export default function HomeBtn() {
 
   const [width, setWidth] = useState(0);
 
-  //Mobile setup
+  //Mobile & Tab width setup
   const currentWidth = window.innerWidth;
 
   useEffect(() => {

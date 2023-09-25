@@ -136,7 +136,9 @@ export default function Recipe() {
     }
   };
   const settingCoffee = () => {
-    if (coffeeOpen) {
+    if (coffeeOpen === "") {
+      return <div className="noneDisplay"></div>;
+    } else if (coffeeOpen) {
       return (
         <div className="coffeeOpen">
           <div className="coffeeChoice">
@@ -176,11 +178,13 @@ export default function Recipe() {
     }
   };
   const settingWater = () => {
-    if (waterOpen) {
+    if (waterOpen === "") {
+      return <div className="noneDisplay"></div>;
+    } else if (waterOpen) {
       return (
         <div className="waterOpen">
           <div className="waterChoice">
-            <Water getWater={getWater} waterClose={waterClose} coffee={coffee} />
+            <Water getWater={getWater} waterClose={waterClose} />
           </div>
         </div>
       );
@@ -188,7 +192,7 @@ export default function Recipe() {
       return (
         <div className="waterClose">
           <div className="waterChoice">
-            <Water getWater={getWater} waterClose={waterClose} coffee={coffee} />
+            <Water getWater={getWater} waterClose={waterClose} />
           </div>
         </div>
       );
