@@ -12,7 +12,7 @@ export default function Login() {
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [alertUser, setAlertUser] = useState (false)
+    const [alertUser, setAlertUser] = useState (null)
 
     const dispatch = useDispatch();
 
@@ -21,6 +21,14 @@ export default function Login() {
     // Get api from database for userinformation.
     const getLogIn = async () => {
         const serverUrl = 'http://localhost:8080/login'
+
+        if(!email.includes('@')) {
+            setAlertUser('email')
+        } else if(password.legth <= 1) {
+            setAlertUser('password')
+            return
+        }
+
         try {
             const response = await axios.get(serverUrl, { 
                 params: {
@@ -44,19 +52,28 @@ export default function Login() {
             // ))
             navigate(`/`)
         }
+        console.log(response.data)
     }
     catch (error) {
-        setAlertUser(true);
+        setAlertUser('unmatched');
         }
     }
     
     // get alert if failed to get Login
     const settingAlertUser = () => {
-        if (alertUser === true) {
+        if (alertUser === 'unmatched') {
             return (
                     <p>* Sorry, We don't have matched user.</p>
             )
-        } else return
+        } else if (alertUser === 'email') {
+            return (
+                <p>* Please include '@' to form of Email.</p>
+            )
+        } else if (alertUser === 'password') {
+            return (
+                <p>* Please put Password more than 1 letter.</p>
+            )
+        }
     }
 
   return (
@@ -87,7 +104,7 @@ export default function Login() {
                         <div>
                             {settingAlertUser()}
                         </div>
-                        <Link className='loginBtn' onClick={() => {getLogIn()}}>Log In</Link>
+                        <button className='loginBtn' onClick={() => {getLogIn()}}>Log In</button>
                     </div>
                     <div className='register'>
                         <p>Or...you didn't register yet?</p>

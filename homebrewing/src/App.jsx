@@ -31,7 +31,6 @@ const router = createBrowserRouter([
     ]}
 ]);
 
-
 export default function App() {
 
   const dispatch = useDispatch();
