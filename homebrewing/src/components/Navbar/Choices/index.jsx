@@ -22,6 +22,7 @@ export default function Choices({ click }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  //save Favourite with choices
   const saveFavs = async () => {
     const postFvUrl = 'http://localhost:8080/saveFavourites'
 
@@ -33,7 +34,7 @@ export default function Choices({ click }) {
         const response = await axios.post(postFvUrl, {
           email : userEmail,
             favourites : [{
-              favName: 'Your most Choices!',
+              favName: 'Your Choices!',
               order: currentTime[0], 
               date: currentTime[1],
               menuName: data.menu[0][0],
