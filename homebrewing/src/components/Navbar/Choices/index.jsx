@@ -23,15 +23,19 @@ export default function Choices({ click }) {
 
   //getOldbrews from DB
   useEffect(() => {
-    async function result () {
-      const response = await getOldbrews(isLogIn, userEmail);
-      console.log(response)
-      setTotalBrew(response.length)
-      const mostChoices = getChoices(response)
-      setData(mostChoices)
-    };
-    result();
+    if (isLogIn) {
+      async function result () {
+        const response = await getOldbrews(isLogIn, userEmail);
+        console.log(response)
+        setTotalBrew(response.length)
+        const mostChoices = getChoices(response)
+        setData(mostChoices)
+      };
+      result();
+    }
   }, [click])
+
+  console.log(data)
 
   return (
     <>
@@ -50,19 +54,35 @@ export default function Choices({ click }) {
               </div>
               <div className='choice--menu'>
                 <p>Your most choice of Coffee</p>
+                {data ? (
                 <p className='data'>{data.menu[0][0]}</p>
+                ) : (
+                <p>Loading...</p>
+                )}
               </div>
               <div className='choice--mehotd'>
                 <p>Your most choice of Method</p>
+                {data ? (
                 <p className='data'>{data.method[0][0]}</p>
+                ) : (
+                <p>Loading...</p>
+                )}
               </div>
               <div className='choice--roasting'>
                 <p>Your most choice of Roasting level</p>
+                {data ? (
                 <p className='data'>{data.roasting[0][0]}</p>
+                ) : (
+                <p>Loading...</p>
+                )}
               </div>
               <div className='choice--grind'>
                 <p>Your most choice of Grind size</p>
+                {data ? (
                 <p className='data'>{data.grind[0][0]}</p>
+                ) : (
+                <p>Loading...</p>
+                )}
               </div>
             </div>
             <div className='btn-container'>
