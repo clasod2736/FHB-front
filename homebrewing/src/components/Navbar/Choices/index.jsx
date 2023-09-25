@@ -3,10 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './Choices.css'
 
-import { useNavigate } from 'react-router-dom'
 import { useSelector } from "react-redux";
 import axios from 'axios';
 
+//utils and api
 import { getOldbrews } from '../../../api/oldBrews';
 import getChoices from '../../../util/getChoice';
 import getTime from '../../../util/getTime';
@@ -15,7 +15,6 @@ export default function Choices({ click }) {
   const isLogIn = useSelector((state) => state.logIn);
   const userEmail = useSelector((state) => state.userEmail);
 
-  const [totalBrew, setTotalBrew] = useState(0);
   const [data, setData] = useState();
 
   const [show, setShow] = useState(false);
@@ -46,7 +45,9 @@ export default function Choices({ click }) {
               description: ''
             }]
         })
-        console.log(response)
+        if(response.status === 200) {
+          alert("Your Most Choices Saved as Favs!")
+        }
       } 
       catch (error) {
         console.log(error)
@@ -58,16 +59,12 @@ export default function Choices({ click }) {
     if (isLogIn) {
       async function result () {
         const response = await getOldbrews(isLogIn, userEmail);
-        console.log(response)
-        setTotalBrew(response.length)
         const mostChoices = getChoices(response)
         setData(mostChoices)
       };
       result();
     }
   }, [click])
-
-  console.log(data)
 
   return (
     <>
@@ -82,7 +79,11 @@ export default function Choices({ click }) {
         <Offcanvas.Body className='canvasBody'>
             <div className='choices-container'>
               <div className='choice--total'>
-                <header>Your Total Brews: {totalBrew}</header>
+                {data ? (
+                <header>Your Total Brews: {data.totalBrew}</header>
+                ) : (
+                <p>Loading...</p>
+                )}
               </div>
               <div className='choice--menu'>
                 <p>Your most choice of Coffee</p>
@@ -119,7 +120,7 @@ export default function Choices({ click }) {
               <div className='choice--coffee'>
                 <p>Your most choice of Coffee amout</p>
                 {data ? (
-                <p className='data'>{data.coffee}</p>
+                <p className='data'>'{data.coffee / 20}' serve</p>
                 ) : (
                 <p>Loading...</p>
                 )}
@@ -127,7 +128,7 @@ export default function Choices({ click }) {
               <div className='choice--water'>
                 <p>Your most choice of Water ratio</p>
                 {data ? (
-                <p className='data'>{data.water}</p>
+                <p className='data'>{data.water} ratio</p>
                 ) : (
                 <p>Loading...</p>
                 )}

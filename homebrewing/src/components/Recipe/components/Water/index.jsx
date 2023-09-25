@@ -1,18 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Water.css'
 
 export default function Water({ getWater, waterClose, coffee }) {
 const [text, setText] = useState(false);
-const [coffeeAmount, setCoffeeAmount] = useState(0)
-
-//calculate amount of water with coffee amount
-useEffect(() => {
-    if (!coffee) {
-        return    
-    } else if ( typeof coffee === 'number') {
-        setCoffeeAmount(coffee)
-    }
-}, [coffee])
 
   return (
     <div className='waterContainer'>

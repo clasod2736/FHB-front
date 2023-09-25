@@ -4,8 +4,8 @@ export default function getChoices(oldBrews) {
     const methodArr= ['harioV6', 'mokapot', 'frenchpress', 'aeropress', 'chemax', 'shypon']
     const roastingArr = ['dark', 'medium', 'light']
     const grindArr = ['coarse', 'medium', 'fine']
-    const totalBrew = oldBrews.length
 
+    //get most frequent value with number of frequency
     function countFrequency(data, array, option) {
         const frequency = {};
 
@@ -53,7 +53,7 @@ export default function getChoices(oldBrews) {
       
         return result;
     }
-
+    //get most frequent value
     function getMostFrequentValue(data, key) {
         const valueCount = {};
         
@@ -71,9 +71,12 @@ export default function getChoices(oldBrews) {
         return sortedCounts[0][0];
     }
 
-    if (oldBrews.length <= 3) {
-        return "Too less Brew history for calculating.."
+    if (oldBrews.length <= 0) {
+        return "No history for calculating.."
     } else {
+        
+        //all of functions
+        const totalBrew = oldBrews.length
         const menuChoice =  countFrequency(oldBrews, menuArr, "menu");
         const methodChoice = countFrequency(oldBrews, methodArr, "method");
         const roastingChoice = countFrequency(oldBrews, roastingArr, "roasting");
@@ -82,7 +85,9 @@ export default function getChoices(oldBrews) {
         const waterChoice = getMostFrequentValue(oldBrews, 'water')
         console.log(totalBrew, menuChoice, methodChoice, roastingChoice, grindChoice, coffeeChoice, waterChoice)
         
+        //Final object.
         const choices = {
+            totalBrew: totalBrew,
             menu: menuChoice,
             method: methodChoice,
             roasting: roastingChoice,

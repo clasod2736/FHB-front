@@ -10,5 +10,6 @@ export default function getTime() {
     const fullDate = hour + ":" + minute + " / " + day + "." + month + "." + year;
 
     const time = [order, fullDate]
+    
     return  time
 }
