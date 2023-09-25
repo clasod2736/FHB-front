@@ -1,0 +1,49 @@
+@media all and (min-width: 320px) {
+  .homebtn--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 15%;
+    height: 8%;
+    left: 78%;
+    top: 85%;
+    z-index: 10;
+  }
+  .homebtn--container .homebtn--btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .homebtn--container .homebtn--btn button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid saddlebrown;
+    border-radius: 100%;
+    background-color: saddlebrown;
+    color: wheat;
+    font-size: 30px;
+    transition: all 0.5s linear;
+  }
+  .homebtn--container .homebtn--btn button:hover {
+    color: saddlebrown;
+    background-color: wheat;
+  }
+}
+@media all and (min-width: 767px) {
+  .homebtn--container {
+    left: 75%;
+    top: 90%;
+  }
+  .homebtn--container .homebtn--btn button {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+  }
+}/*# sourceMappingURL=HomeBtn.css.map */
