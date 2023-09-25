@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEmail } from '../../store/action';
 
 //Slide Menu component (react-bootstrap)
 import SlideMenu from './SlideMenu'
-import Nav from './Nav'
+import Choices from './Choices'
 import axios from 'axios'
 
 export default function Navbar() {
   const isLogIn = useSelector((state) => state.logIn);
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
+  const [click, setClick] = useState(false);
 
   //render differrent Link element depends on LoggedIn
   const settingMyRecipe = () => {
@@ -52,8 +55,9 @@ export default function Navbar() {
       <div className='about'>
         <SlideMenu/>
       </div>
-      <div className='shop'
-      ><Nav/></div>
+      <div className='shop' 
+      onClick={() => {isLogIn ? <Choices/> : navigate('/login'); setClick((prev) => !prev)}}
+      >{isLogIn ? <Choices click={click}/> : 'Choices' }</div>
       <Link className='navTitle' to={'/'}>For Homey Barista</Link>
 
       {settingMyRecipe()}

@@ -19,7 +19,7 @@
         {"img": "/img/coffee/latte.jpg"},
         {"direction": ["Steam the Milk", "Pour the Milk", "Top Off with Foam"]}
         ],
-    "flat White": [
+    "flatWhite": [
         {"img": "/img/coffee/flatWhite2.jpg"},
         {"direction": ["Pull a double espresso into a cup or glass.", "Steam the Milk", "Pour in to the cup"]}
         ],

@@ -201,7 +201,7 @@ const coffeeClose = (coffeeClose) => {
 
   //setting start brewing button
   const settingBrewBtn = () => {
-    if (typeof water === 'number' &&
+    if (typeof water === 'string' &&
         typeof coffee === 'number' &&
         typeof roasting === 'string' &&
         typeof grind === 'string' ) {
@@ -274,7 +274,7 @@ const coffeeClose = (coffeeClose) => {
                             <p>Coffee</p>
                         </div>
                         <div className='water' onClick={() => {setWaterOpen(true)}}>
-                            <p>{!water ? '' : water + 'ml of'}</p>
+                            <p>{!water ? '' : water}</p>
                             <p>Water</p>
                         </div>  
                     </div>

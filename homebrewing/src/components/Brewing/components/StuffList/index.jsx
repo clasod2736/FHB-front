@@ -19,6 +19,8 @@ export default function StuffList({isMobile, getBrewMobile}) {
     setMethodStuffs(stuffList.method[methodName])
   }, [menuName, methodName])
 
+  const extractedWater = water.split(':'[0])
+
   return (
     <div className='stuffListContainer'>
       <div className='recipeInfo'>
@@ -26,7 +28,7 @@ export default function StuffList({isMobile, getBrewMobile}) {
         <p>Coffeee : {menuName}</p>      
         <p>Method: {methodName}</p>
         <p>Ground Coffee: {coffee}g</p>
-        <p>Water: {water}ml</p>
+        <p>Water: {coffee * extractedWater[0]}ml</p>
         <p>Roasting Level: {roasting}</p>
         <p>Grind Size: {grind}</p>
         <div className='startBrewingMobile' style={{display: isMobile ? 'flex' : 'none'}}>
@@ -38,7 +40,7 @@ export default function StuffList({isMobile, getBrewMobile}) {
         <header>Stuff List</header>
         <ul className='stuffList'>
           <li>{coffee}g of Ground Coffee</li>
-          <li>{water}ml of Water</li>
+          <li>{coffee * extractedWater[0]}ml of Water</li>
           <li>Scale</li>
           <li>Cup or Mug</li>
           <li>Coffee Bean Grinder</li>
