@@ -1,653 +1,650 @@
 .registerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 91vh;
+
+  .register {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 91vh;
-    
-    .register {
+    width: 60%;
+    height: 80%;
+
+    animation: opacity 0.5s;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      font-size: 60px;
+      text-align: center;
+      color: rgb(137, 85, 48);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+
+      padding-bottom: 1%;
+      border-bottom: #9c7c65 2px solid;
+    }
+
+    .contents {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      height: 55%;
+
+      margin-top: 2%;
+
+      .form {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 60%;
-        height: 80%;
+        align-items: flex-start;
+        width: 55%;
+        height: 100%;
 
-        animation: opacity 0.5s;
+        padding-left: 1%;
+        padding-top: 0%;
 
-            header {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 60%;
-                font-size: 60px;
-                text-align: center;
-                color: rgb(137, 85, 48);
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                letter-spacing: 10px;
-                text-transform: uppercase;
-    
-                padding-bottom: 1%;
-                border-bottom: #9c7c65 2px solid;
-                
+        .getRegist {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 10%;
+
+          button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            border: darkgoldenrod 2px solid;
+            border-radius: 5px;
+            background: wheat;
+            color: brown;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+
+            &:hover {
+              background-color: burlywood;
             }
-            
-            .contents {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                width: 60%;
-                height: 55%;
 
-                margin-top: 2%;
-
-                .form {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: flex-start;
-                    width: 55%;
-                    height: 100%;
-
-                    padding-left: 1%;
-                    padding-top: 2%;
-
-                    .getRegist {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-                        width: 100%;
-                        height: 10%;
-
-                        button {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            height: 100%;
-                            width: 100%;
-                            border: darkgoldenrod 2px solid;
-                            border-radius: 5px;
-                            background: wheat;
-                            color: brown;
-                            font-size: 20px;
-                            font-weight: bold;
-                            text-align: center;
-
-                            &:hover {
-                                background-color: burlywood;
-                            }
-
-                            .googleLogo {
-                                font-size: 25px;
-                                margin-right: 2%;
-                                color: brown;
-                            }
-                        }
-                    }
-                    .divide {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-
-                        p {
-                            font-size: 18px;
-                            font-weight: bold;
-                            font-family: Arial, Helvetica, sans-serif;
-                            color: rgb(156, 89, 41);
-
-                            margin-top: 2%;
-                            margin-bottom: 2%;
-                        }
-                    }
-                    .email {
-                        display:flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                        width: 100%;
-                        height: 10%;
-                        
-                        text-align: left;
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        
-                        input {
-                            display: flex;
-                            font-size: 20px;
-                            width: 100%;
-                            height: 100%;
-                            border: 0;
-                            padding-left: 3%;
-                            text-align: left;
-                            background-color: transparent;
-                            outline: none;
-                            color: saddlebrown;
-                            border: rgb(190, 145, 29) 2px solid;
-                            border-radius: 5px;
-                            background-color: wheat;
-                            
-                            &:focus {
-                                border: rgb(137, 71, 24) 2px solid;
-                                border-radius: 5px;
-                            }
-                        }
-                    }
-                    .password {
-                        display:flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        width: 100%;
-                        height: 10%;
-                        text-align: left;
-    
-                        margin-top: 3%;
-    
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-                        p {
-                            margin-bottom: 0;
-                        }
-        
-                        input {
-                            display: flex;
-                            font-size: 20px;
-                            width: 100%;
-                            height: 100%;
-                            border: 0;
-                            padding-left: 3%;
-                            background-color: transparent;
-                            outline: none;
-                            color: saddlebrown;
-                            border: rgb(190, 145, 29) 2px solid;
-                            border-radius: 5px;
-                            background-color: wheat;
-        
-                            &:focus {
-                                border: rgb(137, 71, 24) 2px solid;
-                                border-radius: 5px;
-                            }
-                        }
-                    }
-                    .passwordConfirm {
-                        display:flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                        width: 100%;
-                        height: 10%;
-                        text-align: left;
-    
-                        margin-top: 3%;
-    
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        
-                        input {
-                            display: flex;
-                            font-size: 20px;
-                            width: 100%;
-                            height: 100%;
-                            border: 0;
-                            padding-left: 3%;
-                            background-color: transparent;
-                            outline: none;
-                            color: saddlebrown;
-                            border: rgb(190, 145, 29) 2px solid;
-                            border-radius: 5px;
-                            background-color: wheat;
-        
-                            &:focus {
-                                border: rgb(137, 71, 24) 2px solid;
-                                border-radius: 5px;
-                            }
-                        }
-                    }
-                    .submitRegist {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        height: 15%;
-                        text-decoration: none;
-
-                        margin-top: 2%;
-                        margin-bottom: 1%;
-                        
-                        button {
-                            width: 100%;
-                            height: 65%;
-                            font-size: 20px;
-                            font-weight: bold;
-                            letter-spacing: 2px;
-                            color: brown;
-                            background-color: wheat;
-
-                            border: darkgoldenrod 2px solid;
-                            border-radius: 5px;
-
-                            &:hover {
-                                background-color: burlywood;
-                            }
-                        }
-                    }
-
-                    .caution {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: flex-start;
-
-                        width: 100%;
-                        height: 5%;
-
-                        p {
-                            color: darkred;
-                            font-size: 15px;
-                            margin-bottom: 0;
-                            font-weight: bold;
-                        }
-                    }
-                    
-                    .login {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-end;
-                        align-items: flex-end;
-                        width: 100%;
-                        text-align: bottom;
-
-                        p {
-                            font-size: 18px;
-                            margin-bottom: 0;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color:#57240f;
-                        }
-    
-                        .loginBtn {
-                            font-size: 23px;
-                            margin-left: 2%;
-                            color:rgb(201, 121, 41);
-
-                            &:hover {
-                                color: brown;
-                            }
-                        }
-                    }
+            .googleLogo {
+              font-size: 25px;
+              margin-right: 2%;
+              color: brown;
             }
+          }
         }
+        .divide {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+
+          p {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(156, 89, 41);
+
+            margin-top: 2%;
+            margin-bottom: 2%;
+          }
+        }
+        .email {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          height: 10%;
+
+          text-align: left;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+          input {
+            display: flex;
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding-left: 3%;
+            text-align: left;
+            background-color: transparent;
+            outline: none;
+            color: saddlebrown;
+            border: rgb(190, 145, 29) 2px solid;
+            border-radius: 5px;
+            background-color: wheat;
+
+            &:focus {
+              border: rgb(137, 71, 24) 2px solid;
+              border-radius: 5px;
+            }
+          }
+        }
+        .password {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 100%;
+          height: 10%;
+          text-align: left;
+
+          margin-top: 3%;
+
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+          p {
+            margin-bottom: 0;
+          }
+
+          input {
+            display: flex;
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding-left: 3%;
+            background-color: transparent;
+            outline: none;
+            color: saddlebrown;
+            border: rgb(190, 145, 29) 2px solid;
+            border-radius: 5px;
+            background-color: wheat;
+
+            &:focus {
+              border: rgb(137, 71, 24) 2px solid;
+              border-radius: 5px;
+            }
+          }
+        }
+        .passwordConfirm {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          height: 10%;
+          text-align: left;
+
+          margin-top: 3%;
+
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+          input {
+            display: flex;
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding-left: 3%;
+            background-color: transparent;
+            outline: none;
+            color: saddlebrown;
+            border: rgb(190, 145, 29) 2px solid;
+            border-radius: 5px;
+            background-color: wheat;
+
+            &:focus {
+              border: rgb(137, 71, 24) 2px solid;
+              border-radius: 5px;
+            }
+          }
+        }
+        .submitRegist {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 15%;
+          text-decoration: none;
+
+          margin-top: 2%;
+          margin-bottom: 1%;
+
+          button {
+            width: 100%;
+            height: 65%;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: brown;
+            background-color: wheat;
+
+            border: darkgoldenrod 2px solid;
+            border-radius: 5px;
+
+            &:hover {
+              background-color: burlywood;
+            }
+          }
+        }
+
+        .caution {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          width: 100%;
+          height: 5%;
+
+          p {
+            color: darkred;
+            font-size: 15px;
+            margin-bottom: 0;
+            font-weight: bold;
+          }
+        }
+
+        .login {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: flex-end;
+          width: 100%;
+          text-align: bottom;
+
+          p {
+            font-size: 18px;
+            margin-bottom: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #57240f;
+          }
+
+          .loginBtn {
+            font-size: 23px;
+            margin-left: 2%;
+            color: rgb(201, 121, 41);
+
+            &:hover {
+              color: brown;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 @keyframes opacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@media all and (min-width:320px) {
-    .registerContainer {
-        height: 100vh;
-        min-height: 630px;
+@media all and (min-width: 320px) {
+  .registerContainer {
+    height: 100vh;
+    min-height: 630px;
 
-        .register {
-            width: 100%;
+    .register {
+      width: 100%;
 
-            header {
-                width: 90%;
-                max-width: 400px;
+      header {
+        width: 90%;
+        max-width: 400px;
+        font-size: 25px;
+      }
+
+      .contents {
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+        max-height: 400px;
+
+        margin-top: 0;
+
+        span {
+          display: none;
+        }
+
+        .form {
+          width: 90%;
+          max-width: 400px;
+          max-height: 400px;
+          justify-content: space-evenly;
+
+          padding-left: 0;
+
+          .getRegist {
+            button {
+              font-size: 15px;
+
+              .googleLogo {
+                font-size: 20px;
+              }
+            }
+          }
+          .divide {
+            p {
+              font-size: 22px;
+            }
+          }
+          .email {
+            input {
+              font-size: 18px;
+            }
+          }
+          .password {
+            input {
+              font-size: 18px;
+            }
+          }
+          .passwordConfirm {
+            input {
+              font-size: 18px;
+            }
+          }
+
+          .caution {
+            p {
+              font-size: 12px;
+            }
+          }
+
+          .login {
+            p {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 767px) {
+  .registerContainer {
+    height: 100vh;
+    min-height: 600px;
+
+    .register {
+      width: 100%;
+
+      header {
+        width: 90%;
+        max-width: 700px;
+        font-size: 40px;
+      }
+
+      .contents {
+        flex-direction: row;
+        width: 100%;
+        height: 80%;
+        max-height: 400px;
+
+        margin-top: 0;
+
+        span {
+          display: flex;
+
+          .registerImg {
+            width: 300px;
+            height: 350px;
+          }
+        }
+
+        .form {
+          width: 60%;
+          max-width: 400px;
+          max-height: 400px;
+          justify-content: space-evenly;
+
+          padding-left: 2%;
+
+          .getRegist {
+            button {
+              font-size: 15px;
+
+              .googleLogo {
+                font-size: 20px;
+              }
+            }
+          }
+          .divide {
+            p {
+              font-size: 23px;
+            }
+          }
+          .email {
+            input {
+              font-size: 18px;
+            }
+          }
+          .password {
+            input {
+              font-size: 18px;
+            }
+          }
+          .passwordConfirm {
+            input {
+              font-size: 18px;
+            }
+          }
+
+          .caution {
+            p {
+              font-size: 12px;
+            }
+          }
+
+          .login {
+            p {
+              font-size: 16px;
+            }
+
+            .loginBtn {
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1279px) {
+  .registerContainer {
+    height: 100vh;
+    min-height: 700px;
+
+    .register {
+      width: 100%;
+
+      header {
+        width: 90%;
+        max-width: 900px;
+        font-size: 50px;
+
+        padding-bottom: 0;
+      }
+
+      .contents {
+        flex-direction: row;
+        width: 100%;
+        height: 80%;
+        max-height: 500px;
+
+        margin-top: 0;
+
+        span {
+          display: flex;
+
+          .registerImg {
+            width: 350px;
+            height: 450px;
+          }
+        }
+
+        .form {
+          width: 60%;
+          max-width: 500px;
+          max-height: 500px;
+          justify-content: space-evenly;
+
+          padding-left: 2%;
+
+          .getRegist {
+            button {
+              font-size: 20px;
+
+              .googleLogo {
                 font-size: 25px;
+              }
+            }
+          }
+          .divide {
+            p {
+              font-size: 28px;
+            }
+          }
+          .email {
+            input {
+              font-size: 20px;
+            }
+          }
+          .password {
+            input {
+              font-size: 20px;
+            }
+          }
+          .passwordConfirm {
+            input {
+              font-size: 20px;
+            }
+          }
+
+          .caution {
+            p {
+              font-size: 15px;
+            }
+          }
+
+          .login {
+            p {
+              font-size: 18px;
             }
 
-            .contents {
-                flex-direction: column;
-                width: 100%;
-                height: 80%;
-                max-height: 400px;
-
-                span {
-                    display: none;
-                }
-
-                .form {
-                    width: 90%;
-                    max-width: 400px;
-                    max-height: 400px;
-                    justify-content: space-evenly;
-
-                    padding-left: 0;
-
-                    .getRegist {
-                        button {
-                            font-size: 15px;
-
-                            .googleLogo {
-                                font-size: 20px;
-                            }
-                        }
-                    }
-                    .divide {
-                        p {
-                            font-size: 13px;
-                        }
-                    }
-                    .email {
-                        input {
-                            font-size: 18px;
-                        }
-                    }
-                    .password {
-                        input {
-                            font-size: 18px;
-                        }
-                    }
-                    .passwordConfirm {
-                        input {
-                            font-size: 18px;
-                        }
-                    }
-
-                    .caution {
-                        p {
-                            font-size: 12px;
-                        }
-                    }
-
-                    .login {
-                        p {
-                            font-size: 15px;
-                        }
-                    }
-                }
+            .loginBtn {
+              font-size: 25px;
             }
+          }
         }
-
+      }
     }
+  }
 }
 
-@media all and (min-width:767px) {
-    .registerContainer {
-        height: 100vh;
-        min-height: 600px;
+@media all and (min-width: 1680px) {
+  .registerContainer {
+    height: 91vh;
+    min-height: 900px;
 
-        .register {
-            width: 100%;
+    .register {
+      width: 100%;
+      min-height: 880px;
 
-            header {
-                width: 90%;
-                max-width: 700px;
-                font-size: 40px;
-            }
+      header {
+        width: 90%;
+        max-width: 900px;
+        font-size: 50px;
 
-            .contents {
-                flex-direction: row;
-                width: 100%;
-                height: 80%;
-                max-height: 400px;
+        padding-bottom: 0;
+      }
 
-                margin-top: 0;
+      .contents {
+        flex-direction: row;
+        width: 100%;
+        height: 80%;
+        max-height: 500px;
 
-                span {
-                    display: flex;
+        margin-top: 0;
 
-                    .registerImg {
-                        width: 300px;
-                        height: 350px;
-                    }
-                }
+        span {
+          display: flex;
 
-                .form {
-                    width: 60%;
-                    max-width: 400px;
-                    max-height: 400px;
-                    justify-content: space-evenly;
-
-                    padding-left: 2%;
-
-                    .getRegist {
-                        button {
-                            font-size: 15px;
-
-                            .googleLogo {
-                                font-size: 20px;
-                            }
-                        }
-                    }
-                    .divide {
-                        p {
-                            font-size: 15px;
-                        }
-                    }
-                    .email {
-                        input {
-                            font-size: 18px;
-                        }
-                    }
-                    .password {
-                        input {
-                            font-size: 18px;
-                        }
-                    }
-                    .passwordConfirm {
-                        input {
-                            font-size: 18px;
-                        }
-                    }
-
-                    .caution {
-                        p {
-                            font-size: 12px;
-                        }
-                    }
-
-                    .login {
-                        p {
-                            font-size: 16px;
-                        }
-
-                        .loginBtn {
-                            font-size: 23px;
-                        }
-                    }
-                }
-            }
+          .registerImg {
+            width: 400px;
+            height: 500px;
+          }
         }
 
-    }
-}
+        .form {
+          width: 60%;
+          max-width: 500px;
+          max-height: 500px;
+          justify-content: space-evenly;
 
-@media all and (min-width:1279px) {
-    .registerContainer {
-        height: 100vh;
-        min-height: 700px;
+          padding-left: 2%;
 
-        .register {
-            width: 100%;
+          .getRegist {
+            button {
+              font-size: 20px;
 
-            header {
-                width: 90%;
-                max-width: 900px;
-                font-size: 50px;
+              .googleLogo {
+                font-size: 25px;
+              }
+            }
+          }
+          .divide {
+            p {
+              font-size: 28px;
+            }
+          }
+          .email {
+            input {
+              font-size: 20px;
+            }
+          }
+          .password {
+            input {
+              font-size: 20px;
+            }
+          }
+          .passwordConfirm {
+            input {
+              font-size: 20px;
+            }
+          }
 
-                padding-bottom: 0;
+          .caution {
+            p {
+              font-size: 15px;
+            }
+          }
+
+          .login {
+            p {
+              font-size: 18px;
             }
 
-            .contents {
-                flex-direction: row;
-                width: 100%;
-                height: 80%;
-                max-height: 500px;
-
-                margin-top: 0;
-
-                span {
-                    display: flex;
-
-                    .registerImg {
-                        width: 350px;
-                        height: 450px;
-                    }
-                }
-
-                .form {
-                    width: 60%;
-                    max-width: 500px;
-                    max-height: 500px;
-                    justify-content: space-evenly;
-
-                    padding-left: 2%;
-
-                    .getRegist {
-                        button {
-                            font-size: 20px;
-
-                            .googleLogo {
-                                font-size: 25px;
-                            }
-                        }
-                    }
-                    .divide {
-                        p {
-                            font-size: 18px;
-                        }
-                    }
-                    .email {
-                        input {
-                            font-size: 20px;
-                        }
-                    }
-                    .password {
-                        input {
-                            font-size: 20px;
-                        }
-                    }
-                    .passwordConfirm {
-                        input {
-                            font-size: 20px;
-                        }
-                    }
-
-                    .caution {
-                        p {
-                            font-size: 15px;
-                        }
-                    }
-
-                    .login {
-                        p {
-                            font-size: 18px;
-                        }
-
-                        .loginBtn {
-                            font-size: 25px;
-                        }
-                    }
-                }
+            .loginBtn {
+              font-size: 25px;
             }
+          }
         }
-
+      }
     }
-}
-
-@media all and (min-width:1680px) {
-    .registerContainer {
-        height:91vh;
-        min-height: 900px;
-
-        .register {
-            width: 100%;
-            min-height: 880px;
-
-            header {
-                width: 90%;
-                max-width: 900px;
-                font-size: 50px;
-
-                padding-bottom: 0;
-            }
-
-            .contents {
-                flex-direction: row;
-                width: 100%;
-                height: 80%;
-                max-height: 500px;
-
-                margin-top: 0;
-
-                span {
-                    display: flex;
-
-                    .registerImg {
-                        width: 400px;
-                        height: 500px;
-                    }
-                }
-
-                .form {
-                    width: 60%;
-                    max-width: 500px;
-                    max-height: 500px;
-                    justify-content: space-evenly;
-
-                    padding-left: 2%;
-
-                    .getRegist {
-                        button {
-                            font-size: 20px;
-
-                            .googleLogo {
-                                font-size: 25px;
-                            }
-                        }
-                    }
-                    .divide {
-                        p {
-                            font-size: 18px;
-                        }
-                    }
-                    .email {
-                        input {
-                            font-size: 20px;
-                        }
-                    }
-                    .password {
-                        input {
-                            font-size: 20px;
-                        }
-                    }
-                    .passwordConfirm {
-                        input {
-                            font-size: 20px;
-                        }
-                    }
-
-                    .caution {
-                        p {
-                            font-size: 15px;
-                        }
-                    }
-
-                    .login {
-                        p {
-                            font-size: 18px;
-                        }
-
-                        .loginBtn {
-                            font-size: 25px;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
+  }
 }
