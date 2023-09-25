@@ -5,9 +5,11 @@ import './Choices.css'
 
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from "react-redux";
+import axios from 'axios';
 
 import { getOldbrews } from '../../../api/oldBrews';
 import getChoices from '../../../util/getChoice';
+import getTime from '../../../util/getTime';
 
 export default function Choices({ click }) {
   const isLogIn = useSelector((state) => state.logIn);
@@ -20,6 +22,36 @@ export default function Choices({ click }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const saveFavs = async () => {
+    const postFvUrl = 'http://localhost:8080/saveFavourites'
+
+      //use current time for organising brews
+      const currentTime = getTime();
+
+      //post favourites with currentBrews data
+      try {
+        const response = await axios.post(postFvUrl, {
+          email : userEmail,
+            favourites : [{
+              favName: 'Your most Choices!',
+              order: currentTime[0], 
+              date: currentTime[1],
+              menuName: data.menu[0][0],
+              methodName : data.method[0][0],
+              water: data.water,
+              coffee: data.coffee,
+              roasting: data.roasting[0][0],
+              grind: data.grind[0][0], 
+              description: ''
+            }]
+        })
+        console.log(response)
+      } 
+      catch (error) {
+        console.log(error)
+      }
+  }
 
   //getOldbrews from DB
   useEffect(() => {
@@ -102,7 +134,7 @@ export default function Choices({ click }) {
               </div>
             </div>
             <div className='btn-container'>
-              <button onClick={() => {}}>Save Favourite with this.</button>
+              <button onClick={() => {saveFavs()}}>Save Favourite with this.</button>
             </div>
         </Offcanvas.Body>
       </Offcanvas>

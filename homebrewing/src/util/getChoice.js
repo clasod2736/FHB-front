@@ -1,8 +1,3 @@
-
-
-
-
-
 export default function getChoices(oldBrews) {
 
     const menuArr = ['espresso', 'americano', 'longBlack', 'coldBrew', 'latte', 'flatWhite', 'capuiccino', 'mocha', 'macchiato', 'chai', 'turmeric', 'icedCoffee', 'affogato']

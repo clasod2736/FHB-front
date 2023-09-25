@@ -5,6 +5,8 @@ import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 
+import getTime from '../../util/getTime';
+
 export default function Finish() {
   const userEmail = useSelector((state) => state.userEmail);
 
@@ -24,23 +26,15 @@ export default function Finish() {
         const postOldUrl = 'http://localhost:8080/saveHistory'
   
         //use current time for organising recent brew and time that when make oldBrews.
-        const order = Date.now();
-        const date = new Date();
-        const year = date.getFullYear().toString();
-        const month = (date.getMonth() + 1).toString();
-        const day = date.getDate().toString();
-        const hour = date.getHours().toString();
-        const minute = date.getMinutes().toString();
-        const fullDate = hour + ":" + minute + " / " + day + "." + month + "." + year;
-        console.log(fullDate)
+        const currentTime = getTime();
   
         //post oldBrews with currentBrews data first.
         try {
           const response = await axios.post(postOldUrl, {
             email : userEmail,
               oldBrews : [{
-                order: order, 
-                date: fullDate,
+                order: currentTime[0], 
+                date: currentTime[1],
                 menuName: menuName,
                 methodName : methodName,
                 water: water,
@@ -91,14 +85,7 @@ export default function Finish() {
       const postFvUrl = 'http://localhost:8080/saveFavourites'
 
       //use current time for organising brews
-      const order = Date.now();
-      const date = new Date();
-      const year = date.getFullYear().toString();
-      const month = (date.getMonth() + 1).toString();
-      const day = date.getDate().toString();
-      const hour = date.getHours().toString();
-      const minute = date.getMinutes().toString();
-      const fullDate = hour + ":" + minute + " / " + day + "." + month + "." + year;
+      const currentTime = getTime();
 
       //post favourites with currentBrews data
       try {
@@ -106,8 +93,8 @@ export default function Finish() {
           email : userEmail,
             favourites : [{
               favName: favName,
-              order: order, 
-              date: fullDate,
+              order: currentTime[0], 
+              date: currentTime[1],
               menuName: menuName,
               methodName : methodName,
               water: water,
