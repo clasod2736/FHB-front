@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
-import './Intro.css'
-import Logo from './Logo'
+import React, { useState, useEffect } from "react";
+import "./Intro.css";
+import Logo from "./Logo";
 
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -15,7 +15,7 @@ export default function Intro() {
 
   //fetch data for get recent brew data.
   useEffect(() => {
-    if (isLogIn === true) {
+    if (isLogIn) {
       async function fetchDatas() {
         const serverUrl = "http://localhost:8080/getOldbrews";
 
@@ -35,14 +35,14 @@ export default function Intro() {
         }
       }
       fetchDatas();
-    } else if (isLogIn === false) {
+    } else if (!isLogIn) {
       setRecentBrew(null); // Set recentBrew to null
     }
   }, [isLogIn, userEmail]);
 
   //Set right Buttons with loggedIn or not
   const settingButtons = () => {
-    if (isLogIn === false) {
+    if (!isLogIn) {
       return (
         <div className="loginContainer">
           <Link className="login" to={"/login"}>
