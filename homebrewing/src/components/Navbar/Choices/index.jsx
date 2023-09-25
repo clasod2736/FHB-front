@@ -84,6 +84,22 @@ export default function Choices({ click }) {
                 <p>Loading...</p>
                 )}
               </div>
+              <div className='choice--coffee'>
+                <p>Your most choice of Coffee amout</p>
+                {data ? (
+                <p className='data'>{data.coffee}</p>
+                ) : (
+                <p>Loading...</p>
+                )}
+              </div>
+              <div className='choice--water'>
+                <p>Your most choice of Water ratio</p>
+                {data ? (
+                <p className='data'>{data.water}</p>
+                ) : (
+                <p>Loading...</p>
+                )}
+              </div>
             </div>
             <div className='btn-container'>
               <button onClick={() => {}}>Save Favourite with this.</button>

@@ -32,7 +32,7 @@ export default function getChoices(oldBrews) {
                     frequency[methodName] = 1;
                     }
                 }
-            }  else if (option === 'roasting') {
+            } else if (option === 'roasting') {
             if (array.includes(roasting)) {
                 if (frequency[roasting]) {
                 frequency[roasting]++;
@@ -40,7 +40,7 @@ export default function getChoices(oldBrews) {
                 frequency[roasting] = 1;
                 }
             }
-            }  else if (option === 'grind') {
+            } else if (option === 'grind') {
             if (array.includes(grind)) {
                 if (frequency[grind]) {
                 frequency[grind]++;
@@ -59,11 +59,21 @@ export default function getChoices(oldBrews) {
         return result;
     }
 
-    function averageCoffee(data) {
+    function getMostFrequentValue(data, key) {
+        const valueCount = {};
         
-        for(const item of data) {
-            const { coffee } = item;
-        }
+        data.forEach(item => {
+            const value = item[key];
+            if (valueCount[value]) {
+              valueCount[value]++;
+            } else {
+              valueCount[value] = 1;
+            }
+          });
+
+        const sortedCounts = Object.entries(valueCount).sort((a, b) => b[1] - a[1]);
+
+        return sortedCounts[0][0];
     }
 
     if (oldBrews.length <= 3) {
@@ -73,13 +83,17 @@ export default function getChoices(oldBrews) {
         const methodChoice = countFrequency(oldBrews, methodArr, "method");
         const roastingChoice = countFrequency(oldBrews, roastingArr, "roasting");
         const grindChoice = countFrequency(oldBrews, grindArr, "grind");
-        console.log(totalBrew, menuChoice, methodChoice, roastingChoice, grindChoice)
+        const coffeeChoice = getMostFrequentValue(oldBrews, 'coffee')
+        const waterChoice = getMostFrequentValue(oldBrews, 'water')
+        console.log(totalBrew, menuChoice, methodChoice, roastingChoice, grindChoice, coffeeChoice, waterChoice)
         
         const choices = {
             menu: menuChoice,
             method: methodChoice,
             roasting: roastingChoice,
             grind: grindChoice,
+            coffee: coffeeChoice,
+            water: waterChoice
           };
 
         return choices
