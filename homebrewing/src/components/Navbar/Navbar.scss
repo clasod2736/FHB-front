@@ -1,47 +1,47 @@
 .fixedNavbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 1600px;
+  height: 60px;
+  margin: 20px;
+  margin-top: 0.5%;
+  border: 1px rgb(184, 184, 184) solid;
+  border-radius: 10px;
+  background-color: transparent;
+
+  padding-inline: 2%;
+
+  .navTitle {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    width: auto;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
-    width: 1600px;
-    height: 60px;
-    margin: 20px;
-    margin-top: 0.5%;
-    border: 1px  rgb(184, 184, 184) solid;
-    border-radius: 10px;
+    color: #672f0a;
+    text-shadow: 2px 2px darkgoldenrod;
+    letter-spacing: 1px;
+    border: 0;
     background-color: transparent;
+    border-radius: 5px;
+    margin-block: 5px;
+    padding-inline: 1%;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-user-select: none;
+    transition: all 0.2s linear;
 
-    padding-inline: 2%;
-
-    .navTitle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        font-size: 28px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        font-style: italic;
-        text-align: center;
-        color: #672f0a;
-        text-shadow: 2px 2px darkgoldenrod;
-        letter-spacing: 1px;
-        border: 0;
-        background-color: transparent;
-        border-radius: 5px;
-        margin-block: 5px;
-        padding-inline: 1%;
-        cursor: pointer;
-        text-decoration: none;
-        -webkit-user-select: none;
-        transition: all 0.2s linear;
-        
-        &:hover {
-            text-shadow: 3px 3px darkgoldenrod;
-        }
+    &:hover {
+      text-shadow: 3px 3px darkgoldenrod;
     }
-    .about {
+  }
+  .about {
     width: auto;
     position: relative;
     display: flex;
@@ -50,308 +50,327 @@
     text-decoration: none;
     outline: none;
     font-size: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #A86B43;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #a86b43;
     border: none;
     background-color: transparent;
 
     padding: 0;
 
     &:hover {
-        color: #86481f;
-        transition: 0.2s;
-        }
+      color: #86481f;
+      transition: 0.2s;
+    }
     &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 1px;
-        bottom: 3px;
-        left: 0;
-        background-color: #86481f;
-        transform-origin: bottom;
-        transition: transform 0.25s ease-out;
-        }
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 3px;
+      left: 0;
+      background-color: #86481f;
+      transform-origin: bottom;
+      transition: transform 0.25s ease-out;
+    }
     &:hover::after {
-        color: #A86B43;
-        transform: scaleX(1);
-        transform-origin: bottom;
-        }
+      color: #a86b43;
+      transform: scaleX(1);
+      transform-origin: bottom;
     }
-    .shop {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        outline: none;
-        font-size: 25px;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #A86B43;
-        letter-spacing: 2px;
-        background-color: transparent;
-        border: 0;
-    
-        &:hover {
-            color: #86481f;
-            transition: 0.2s;
-            }
+  }
+  .shop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 25px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #a86b43;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: 0;
 
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: 2px;
-            left: 0;
-            background-color: #86481f;
-            transform-origin: bottom;
-            transition: transform 0.25s ease-out;
-            }
-        &:hover::after {
-            color: #A86B43;
-            transform: scaleX(1);
-            transform-origin: bottom;
-            }
+    &:hover {
+      color: #86481f;
+      transition: 0.2s;
     }
-    .myRecipe {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        outline: none;
-        font-size: 22px;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #A86B43;
-        letter-spacing: 1px;
-    
-        &:hover {
-            color: #86481f;
-            transition: 0.2s;
-            }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: 0px;
-            left: 0;
-            background-color: #86481f;
-            transform-origin: bottom;
-            transition: transform 0.25s ease-out;
-            }
-        &:hover::after {
-            color: #A86B43;
-            transform: scaleX(1);
-            transform-origin: bottom;
-            }
-    }
-    .logIn {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        outline: none;
-        font-size: 22px;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #A86B43;
-        letter-spacing: 2px;
 
-        animation: opacity 0.5s;
-        transition: 0.3s;
-    
-        &:hover {
-            color: #86481f;
-            transition: 0.2s;
-            }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: 0px;
-            left: 0;
-            background-color: #86481f;
-            transform-origin: bottom;
-            transition: transform 0.25s ease-out;
-            }
-        &:hover::after {
-            color: #A86B43;
-            transform: scaleX(1);
-            transform-origin: bottom;
-            }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 2px;
+      left: 0;
+      background-color: #86481f;
+      transform-origin: bottom;
+      transition: transform 0.25s ease-out;
     }
-    .logOut {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        outline: none;
-        font-size: 22px;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: #A86B43;
-        letter-spacing: 2px;
+    &:hover::after {
+      color: #a86b43;
+      transform: scaleX(1);
+      transform-origin: bottom;
+    }
+  }
+  .myRecipe {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 22px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #a86b43;
+    letter-spacing: 1px;
 
-        animation: opacity 0.5s;
-        transition: 0.3s ease-in-out;
-    
-        &:hover {
-            color: #86481f;
-            transition: 0.2s;
-            }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: 0px;
-            left: 0;
-            background-color: #86481f;
-            transform-origin: bottom;
-            transition: transform 0.25s ease-out;
-            }
-        &:hover::after {
-            color: #A86B43;
-            transform: scaleX(1);
-            transform-origin: bottom;
-            }
+    &:hover {
+      color: #86481f;
+      transition: 0.2s;
     }
-    .none {
-        display: none;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0px;
+      left: 0;
+      background-color: #86481f;
+      transform-origin: bottom;
+      transition: transform 0.25s ease-out;
     }
+    &:hover::after {
+      color: #a86b43;
+      transform: scaleX(1);
+      transform-origin: bottom;
+    }
+  }
+  .logIn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 22px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #a86b43;
+    letter-spacing: 2px;
+
+    animation: opacity 0.5s;
+    transition: 0.3s;
+
+    &:hover {
+      color: #86481f;
+      transition: 0.2s;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0px;
+      left: 0;
+      background-color: #86481f;
+      transform-origin: bottom;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      color: #a86b43;
+      transform: scaleX(1);
+      transform-origin: bottom;
+    }
+  }
+  .logOut {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 22px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #a86b43;
+    letter-spacing: 2px;
+
+    animation: opacity 0.5s;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: #86481f;
+      transition: 0.2s;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0px;
+      left: 0;
+      background-color: #86481f;
+      transform-origin: bottom;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      color: #a86b43;
+      transform: scaleX(1);
+      transform-origin: bottom;
+    }
+  }
+  .none {
+    display: none;
+  }
 }
 
 @keyframes opacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 //Responsive Web codes
-@media all and (min-width:320px) {
-    .fixedNavbar {
-        min-width: 300px;
-        width: 80%;
-        height: 30px;
+@media all and (min-width: 320px) {
+  .fixedNavbar {
+    min-width: 300px;
+    width: 80%;
+    height: 30px;
 
-        border-radius: 10px;
+    border-radius: 10px;
 
-        margin-top: 1%;
-        
-        .navTitle {
-            display: none;
-        }
-        .myRecipe {
-            font-weight: bold;
-            font-size: 10px;
-        }
-        .logIn {
-            font-weight: bold;
-            font-size: 10px;
-        }
-        .logOut {
-            font-weight: bold;
-            font-size: 10px;
-        }
+    margin-top: 1%;
+
+    .navTitle {
+      display: none;
     }
+    .myRecipe {
+      font-weight: bold;
+      font-size: 10px;
+    }
+    .logIn {
+      font-weight: bold;
+      font-size: 10px;
+    }
+    .logOut {
+      font-weight: bold;
+      font-size: 10px;
+    }
+    .shop {
+      font-size: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
 }
 
-@media all and (min-width:767px) {
-    .fixedNavbar {
-        min-width: 500px;
-        max-width: 900px;
-        width: 80%;
-        height: 40px;
+@media all and (min-width: 767px) {
+  .fixedNavbar {
+    min-width: 500px;
+    max-width: 900px;
+    width: 80%;
+    height: 40px;
 
-        border-radius: 10px;
+    border-radius: 10px;
 
-        margin-top:0.5%;
-        
-        .navTitle {
-            display: none;
-        }
-        .myRecipe {
-            font-weight: bold;
-            font-size: 15px;
-        }
-        .logIn {
-            font-weight: bold;
-            font-size: 15px;
-        }
-        .logOut {
-            font-weight: bold;
-            font-size: 15px;
-        }
+    margin-top: 0.5%;
+
+    .navTitle {
+      display: none;
     }
+    .myRecipe {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .logIn {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .logOut {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .shop {
+      font-size: 15px;
+    }
+  }
 }
 
-@media all and (min-width:1279px) {
-    .fixedNavbar {
-        min-width: 900px;
-        max-width: 1200px;
-        width: 80%;
-        height: 50px;
+@media all and (min-width: 1279px) {
+  .fixedNavbar {
+    min-width: 900px;
+    max-width: 1200px;
+    width: 80%;
+    height: 50px;
 
-        border-radius: 10px;
+    border-radius: 10px;
 
-        margin-top: 1%;
-        
-        .navTitle {
-            display: flex;
-            font-size: 22px;
-        }
-        .myRecipe {
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .logIn {
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .logOut {
-            font-weight: bold;
-            font-size: 18px;
-        }
+    margin-top: 1%;
+
+    .navTitle {
+      display: flex;
+      font-size: 22px;
     }
+    .myRecipe {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .logIn {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .logOut {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .shop {
+      font-size: 18px;
+    }
+  }
 }
 
-@media all and (min-width:1680px) {
-    .fixedNavbar {
-        min-width: 1000px;
-        max-width: 1500px;
-        width: 80%;
-        height: 55px;
+@media all and (min-width: 1680px) {
+  .fixedNavbar {
+    min-width: 1000px;
+    max-width: 1500px;
+    width: 80%;
+    height: 55px;
 
-        border-radius: 10px;
+    border-radius: 10px;
 
-        margin-top: 1%;
-        
-        .navTitle {
-            display: flex;
-            font-size: 25px;
-        }
-        .myRecipe {
-            font-weight: bold;
-            font-size: 22px;
-        }
-        .logIn {
-            font-weight: bold;
-            font-size: 22px;
-        }
-        .logOut {
-            font-weight: bold;
-            font-size: 22px;
-        }
+    margin-top: 1%;
+
+    .navTitle {
+      display: flex;
+      font-size: 25px;
     }
+    .myRecipe {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .logIn {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .logOut {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .shop {
+      font-size: 22px;
+    }
+  }
 }
