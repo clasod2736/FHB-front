@@ -3,7 +3,7 @@
   justify-content: center !important;
   align-items: center !important;
   font-size: 22px !important;
-  color: #A86B43 !important;
+  color: #a86b43 !important;
   background-color: transparent !important;
   border: none !important;
   transition: all 0.3s linear !important;
@@ -113,7 +113,7 @@
   .canvas {
     min-width: 220px;
     width: 50% !important;
-    background-color: #F9F6EA !important;
+    background-color: #f9f6ea !important;
   }
   .slideHeader .slideTitle {
     font-size: 22px !important;
@@ -145,13 +145,14 @@
   .canvas {
     min-width: 300px;
     width: 30% !important;
-    background-color: #F9F6EA !important;
+    background-color: #f9f6ea !important;
   }
   .slideHeader .slideTitle {
     font-size: 22px !important;
   }
   .canvasBody .choices-container {
     height: 80%;
+    min-height: 540px;
   }
   .canvasBody .choices-container header {
     font-size: 20px;
@@ -161,6 +162,9 @@
   }
   .canvasBody .choices-container .data {
     font-size: 15px;
+  }
+  .canvasBody .btn-container {
+    min-height: 100px;
   }
   .canvasBody .btn-container button {
     width: 100%;
@@ -178,7 +182,7 @@
     min-width: 380px;
     width: 25% !important;
     max-width: 400px !important;
-    background-color: #F9F6EA !important;
+    background-color: #f9f6ea !important;
   }
   .slideHeader .slideTitle {
     font-size: 30px !important;
@@ -211,7 +215,7 @@
     min-width: 400px;
     width: 25% !important;
     max-width: 850px !important;
-    background-color: #F9F6EA !important;
+    background-color: #f9f6ea !important;
   }
   .slideHeader .slideTitle {
     font-size: 45px !important;

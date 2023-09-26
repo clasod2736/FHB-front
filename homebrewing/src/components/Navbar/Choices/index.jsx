@@ -79,7 +79,7 @@ export default function Choices({ click }) {
         onHide={handleClose}
         className="canvas"
         placement="end"
-        scroll={false}
+        scroll={true}
         backdrop={true}
         restoreFocus={true}
         aria-modal={false}

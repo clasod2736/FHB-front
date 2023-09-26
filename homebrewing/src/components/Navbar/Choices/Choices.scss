@@ -1,313 +1,304 @@
 .navBtn {
-    display: flex!important;
-    justify-content: center!important;
-    align-items: center!important;
-    font-size: 22px!important;
-    color: #A86B43!important;
-    background-color: transparent!important;
-    border: none!important;
-    transition: all 0.3s linear!important;
-    cursor: pointer!important;
-    padding: 0!important;
-    letter-spacing: 1px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 22px !important;
+  color: #a86b43 !important;
+  background-color: transparent !important;
+  border: none !important;
+  transition: all 0.3s linear !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  letter-spacing: 1px;
 
-    &:hover{
-        color: #86481f!important;
-        transition: 0.2s!important;
-    }
+  &:hover {
+    color: #86481f !important;
+    transition: 0.2s !important;
+  }
 }
 
 .canvas {
-    width: 25%!important;
+  width: 25% !important;
 }
 
 .offcanvas {
-    transition: transform 0.5s ease-in-out!important;
+  transition: transform 0.5s ease-in-out !important;
 }
 
 .slideHeader {
-    display: flex!important;
-    flex-direction: row!important;
-    justify-items: center!important;
-    align-items: center!important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-items: center !important;
+  align-items: center !important;
 
-    margin-top: 15%!important;
+  margin-top: 15% !important;
 
-    .slideTitle{
-        width: 100%;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: sienna;
-        text-align: center!important;
-        font-size: 30px!important;
-    }
+  .slideTitle {
+    width: 100%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: sienna;
+    text-align: center !important;
+    font-size: 30px !important;
+  }
 }
 .canvasBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  .choices-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 70%;
+
+    header {
+      font-size: 30px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+        sans-serif;
+      color: lightslategray;
+    }
+
+    p {
+      font-size: 25px;
+      color: darkgoldenrod;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .data {
+      text-align: center;
+      text-transform: uppercase;
+      color: saddlebrown;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     width: 100%;
-    height: 100%;
+    height: 15%;
 
-    .choices-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+    button {
+      width: 70%;
+      height: 40%;
 
-        height: 70%;
+      font-size: 30px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      outline: none;
+      transition: all 0.3s linear;
+      text-decoration: none;
+      cursor: pointer;
 
-        header {
-            font-size: 30px;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            color: lightslategray;
-        }
+      animation: appear 1s;
 
-        p {
-            font-size: 25px;
-            color: darkgoldenrod;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border-radius: 10px;
+      border: 0;
+      color: linen;
+      background-color: sienna;
+      box-shadow: 2px 3px 0px 1px darkgoldenrod;
 
-        }
-
-        .data {
-            text-align: center;
-            text-transform: uppercase;
-            color: saddlebrown;
-        }
+      &:hover {
+        color: brown;
+        background-color: bisque;
+        transition: 0.3s;
+      }
+      &:active {
+        box-shadow: 0px 0px 0px 0px;
+        transform: translateY(3%);
+        transition: 0s;
+      }
     }
-
-    .btn-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        width: 100%;
-        height: 15%;
-
-        button {
-            width: 70%;
-            height: 40%;
-
-            font-size: 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            outline: none;
-            transition: all 0.3s linear;
-            text-decoration: none;
-            cursor: pointer;
-
-            animation: appear 1s;
-
-            border-radius: 10px;
-            border: 0;    
-            color: linen;
-            background-color: sienna;
-            box-shadow: 2px 3px 0px 1px darkgoldenrod;
-
-            &:hover {
-                color: brown;
-                background-color: bisque;
-                transition: 0.3s;
-            }
-            &:active {
-                box-shadow: 0px 0px 0px 0px;
-                transform: translateY(3%);
-                transition: 0s;
-            }
-        }
-    }
+  }
 }
 
 //Responsiv eWeb codes
-@media all and (min-width:320px) {
-    .navBtn {
-        font-weight: bold!important;
-        font-size: 10px!important;
-        margin-left: 0!important;
+@media all and (min-width: 320px) {
+  .navBtn {
+    font-weight: bold !important;
+    font-size: 10px !important;
+    margin-left: 0 !important;
+  }
+
+  .canvas {
+    min-width: 220px;
+    width: 50% !important;
+    background-color: #f9f6ea !important;
+  }
+
+  .slideHeader {
+    .slideTitle {
+      font-size: 22px !important;
+    }
+  }
+
+  .canvasBody {
+    .choices-container {
+      height: 80%;
+
+      header {
+        font-size: 15px;
+      }
+      p {
+        font-size: 10px;
+      }
+      .data {
+        font-size: 13px;
+      }
     }
 
-    .canvas {
-        min-width: 220px;
-        width: 50%!important;
-        background-color: #F9F6EA!important;
+    .btn-container {
+      button {
+        width: 100%;
+        max-width: 200px;
+        font-size: 13px;
+      }
     }
-
-    .slideHeader {
-
-        .slideTitle {
-            font-size: 22px!important;
-        }
-    }
-
-    .canvasBody {
-        .choices-container {
-
-            height: 80%;
-            
-            header {
-                font-size: 15px;
-            }
-            p {
-                font-size: 10px;
-            }
-            .data {
-                font-size: 13px;
-            }
-        }
-
-        .btn-container {
-
-            button {
-                width: 100%;
-                max-width: 200px;
-                font-size: 13px;
-            }
-        }
-    }
+  }
 }
 
-@media all and (min-width:767px) {
-    .navBtn {
-        font-weight: bold!important;
-        font-size: 15px!important;
-        margin-left: 0!important;
+@media all and (min-width: 767px) {
+  .navBtn {
+    font-weight: bold !important;
+    font-size: 15px !important;
+    margin-left: 0 !important;
+  }
+
+  .canvas {
+    min-width: 300px;
+    width: 30% !important;
+    background-color: #f9f6ea !important;
+  }
+
+  .slideHeader {
+    .slideTitle {
+      font-size: 22px !important;
+    }
+  }
+
+  .canvasBody {
+    .choices-container {
+      height: 80%;
+      min-height: 540px;
+
+      header {
+        font-size: 20px;
+      }
+      p {
+        font-size: 13px;
+      }
+      .data {
+        font-size: 15px;
+      }
     }
 
-    .canvas {
-        min-width: 300px;
-        width: 30%!important;
-        background-color: #F9F6EA!important;
+    .btn-container {
+      min-height: 100px;
+      button {
+        width: 100%;
+        max-width: 250px;
+        font-size: 15px;
+      }
     }
-
-    .slideHeader {
-
-        .slideTitle {
-            font-size: 22px!important;
-        }
-    }
-
-    .canvasBody {
-        .choices-container {
-
-            height: 80%;
-            
-            header {
-                font-size: 20px;
-            }
-            p {
-                font-size: 13px;
-            }
-            .data {
-                font-size: 15px;
-            }
-        }
-
-        .btn-container {
-
-            button {
-                width: 100%;
-                max-width: 250px;
-                font-size: 15px;
-            }
-        }
-    }
+  }
 }
 
-@media all and (min-width:1279px) {
-    .navBtn {
-        font-weight: bold!important;
-        font-size: 18px!important;
-        margin-left: 0!important;
+@media all and (min-width: 1279px) {
+  .navBtn {
+    font-weight: bold !important;
+    font-size: 18px !important;
+    margin-left: 0 !important;
+  }
+
+  .canvas {
+    min-width: 380px;
+    width: 25% !important;
+    max-width: 400px !important;
+    background-color: #f9f6ea !important;
+  }
+
+  .slideHeader {
+    .slideTitle {
+      font-size: 30px !important;
+    }
+  }
+
+  .canvasBody {
+    .choices-container {
+      height: 80%;
+
+      header {
+        font-size: 25px;
+      }
+      p {
+        font-size: 15px;
+      }
+      .data {
+        font-size: 20px;
+      }
     }
 
-    .canvas {
-        min-width: 380px;
-        width: 25%!important;
-        max-width: 400px!important;
-        background-color: #F9F6EA!important;
+    .btn-container {
+      button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 22px;
+      }
     }
-
-    .slideHeader {
-
-        .slideTitle {
-            font-size: 30px!important;
-        }
-    }
-
-    .canvasBody {
-        .choices-container {
-
-            height: 80%;
-            
-            header {
-                font-size: 25px;
-            }
-            p {
-                font-size: 15px;
-            }
-            .data {
-                font-size: 20px;
-            }
-        }
-
-        .btn-container {
-
-            button {
-                width: 100%;
-                max-width: 300px;
-                font-size: 22px;
-            }
-        }
-    }
+  }
 }
 
-@media all and (min-width:1680px) {
-    .navBtn {
-        font-weight: bold!important;
-        font-size: 22px!important;
-        margin-left: 0!important;
+@media all and (min-width: 1680px) {
+  .navBtn {
+    font-weight: bold !important;
+    font-size: 22px !important;
+    margin-left: 0 !important;
+  }
+
+  .canvas {
+    min-width: 400px;
+    width: 25% !important;
+    max-width: 850px !important;
+    background-color: #f9f6ea !important;
+  }
+
+  .slideHeader {
+    .slideTitle {
+      font-size: 45px !important;
+    }
+  }
+
+  .canvasBody {
+    .choices-container {
+      height: 80%;
+
+      header {
+        font-size: 28px;
+      }
+      p {
+        font-size: 20px;
+      }
+      .data {
+        font-size: 25px;
+      }
     }
 
-    .canvas {
-        min-width: 400px;
-        width: 25%!important;
-        max-width: 850px!important;
-        background-color: #F9F6EA!important;
+    .btn-container {
+      button {
+        height: 50%;
+        width: 100%;
+        max-width: 400px;
+        font-size: 28px;
+      }
     }
-
-    .slideHeader {
-
-        .slideTitle {
-            font-size: 45px!important;
-        }
-    }
-
-    .canvasBody {
-        .choices-container {
-
-            height: 80%;
-            
-            header {
-                font-size: 28px;
-            }
-            p {
-                font-size: 20px;
-            }
-            .data {
-                font-size: 25px;
-            }
-        }
-
-        .btn-container {
-
-            button {
-                height: 50%;
-                width: 100%;
-                max-width: 400px;
-                font-size: 28px;
-            }
-        }
-    }
+  }
 }
