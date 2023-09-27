@@ -113,6 +113,10 @@
   transform: translateY(3%);
   transition: 0s;
 }
+.finishContainer .finish .finishContents .btnContainer a {
+  color: linen;
+  text-decoration: none;
+}
 .finishContainer .finish .finishContents .btnContainer button {
   width: 25%;
   height: 40%;
@@ -128,6 +132,9 @@
   color: brown;
   background-color: bisque;
   transition: 0.3s;
+}
+.finishContainer .finish .finishContents .btnContainer button:hover a {
+  color: brown;
 }
 .finishContainer .finish .finishContents .btnContainer button:active {
   box-shadow: 0px 0px 0px 0px;
