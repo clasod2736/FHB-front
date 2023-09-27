@@ -83,7 +83,7 @@ export default function App() {
       try {
         const response = await axios.get("http://localhost:8080/isAuth", { withCredentials: true });
 
-        if (response.data.userEmail !== undefined) {
+        if (response.data.email !== undefined) {
           console.log(response.data.email);
           dispatch(updateEmail(response.data.email));
           dispatch({ type: "loginSuccess" });

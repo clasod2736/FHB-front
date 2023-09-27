@@ -66,7 +66,7 @@ export default function Choices({ click }) {
       }
       result();
     }
-  }, [click]);
+  }, [click, isLogIn, userEmail]);
 
   return (
     <>
