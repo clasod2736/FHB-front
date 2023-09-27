@@ -84,13 +84,19 @@ export default function App() {
         const response = await axios.get("http://localhost:8080/isAuth", { withCredentials: true });
 
         if (response.data.userEmail !== undefined) {
-          dispatch(updateEmail(response.data.userEmail));
+          console.log(response.data.email);
+          dispatch(updateEmail(response.data.email));
           dispatch({ type: "loginSuccess" });
+          console.log("token approved");
+          console.log(response);
         } else {
           dispatch({ type: "loggedOut" });
+          console.log("token rejected...");
+          console.log(response.data);
         }
       } catch (error) {
-        console.log(error, "user neeed to logIn");
+        console.log(error);
+        console.log("User need to logIn");
       }
     };
     getCookies();
