@@ -253,8 +253,18 @@
         width: 50%;
         font-size: 18px;
 
+        border-radius: 10px;
+        background-color: linen;
+
+        padding-bottom: 1%;
+
         a {
-          color: saddlebrown;
+          color: goldenrod;
+
+          &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+          }
         }
       }
     }

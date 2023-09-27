@@ -208,9 +208,16 @@
     align-items: center;
     width: 50%;
     font-size: 18px;
+    border-radius: 10px;
+    background-color: linen;
+    padding-bottom: 1%;
   }
   .aboutBody .aboutMe .personalLinks a {
-    color: saddlebrown;
+    color: goldenrod;
+  }
+  .aboutBody .aboutMe .personalLinks a:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
   }
 }
 @media all and (min-width: 767px) {
