@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "./Regitser.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 // images and icons
 import { CoffeeWomen } from "../../assets";
 
 export default function Register() {
+  const isLogIn = useSelector((state) => state.logIn);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -18,22 +21,26 @@ export default function Register() {
   const postUser = async () => {
     const serverUrl = "http://localhost:8080/register";
 
-    try {
-      const response = await axios.post(serverUrl, {
-        email: email,
-        password: password,
-        oldBrews: [],
-        favourites: [],
-      });
+    if (isLogIn) {
+      alert("You Already Logged In.");
+      navigate("/");
+    } else
+      try {
+        const response = await axios.post(serverUrl, {
+          email: email,
+          password: password,
+          oldBrews: [],
+          favourites: [],
+        });
 
-      console.log(response.data);
-      alert("User  " + email + "  Registered!!");
-      navigate(`/login`);
-    } catch (error) {
-      console.log(error);
-      setCaution("emailExist");
-      return;
-    }
+        console.log(response.data);
+        alert("User  " + email + "  Registered!!");
+        navigate(`/login`);
+      } catch (error) {
+        console.log(error);
+        setCaution("emailExist");
+        return;
+      }
   };
 
   //check user input and post user data to redux and local

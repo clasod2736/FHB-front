@@ -4,11 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateEmail } from "../../store/action";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 //image
 import { Logo } from "../../assets";
 
 export default function Login() {
+  const isLogIn = useSelector((state) => state.logIn);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alertUser, setAlertUser] = useState(null);
@@ -23,6 +26,10 @@ export default function Login() {
 
     if (password.legth <= 1) {
       setAlertUser("password");
+      return;
+    } else if (isLogIn) {
+      alert("You Logged In Already.");
+      navigate("/");
       return;
     }
 
