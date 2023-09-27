@@ -346,8 +346,8 @@
   }
   .aboutCanvas {
     min-width: 400px !important;
-    width: 35% !important;
-    max-width: 700px !important;
+    width: 30% !important;
+    max-width: 650px !important;
     overflow: hidden !important;
   }
   .aboutHeader {
@@ -385,7 +385,7 @@
     font-size: 25px;
   }
   .aboutBody .aboutMe {
-    width: 90%;
+    width: 80%;
     min-height: 300px;
   }
   .aboutBody .aboutMe header {
