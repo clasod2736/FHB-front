@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/proxy/*"
-  to = "https://cli-auth.heroku.com/auth/cli/browser/f7fdc505-68ea-4528-805f-9b3ed36bdb14?requestor=SFMyNTY.g2gDbQAAAAw0OS4xODUuODQuNDRuBgBwr8XZigFiAAFRgA.aws3nLW7wawn7po1MJZ_ABhEdHXVSHHJ-NOAvV6Lq6k:splat"
+  to = "https://main--voluble-kashata-776f36.netlify.app/:splat"
   status = 200
   force = true
