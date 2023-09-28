@@ -22,7 +22,7 @@ import {
 
 const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
 
-const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+const heroku = `${PROXY}/${process.env.REACT_APP_HEROKU_URL}`;
 
 const router = createBrowserRouter([
   {
