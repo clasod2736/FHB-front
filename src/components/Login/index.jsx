@@ -9,6 +9,8 @@ import { useSelector } from "react-redux";
 //image
 import { Logo } from "../../assets";
 
+const heroku = process.env.HEROKU_URL;
+
 export default function Login() {
   const isLogIn = useSelector((state) => state.logIn);
 
@@ -22,7 +24,7 @@ export default function Login() {
 
   // Get api from database for userinformation.
   const getLogIn = async () => {
-    const serverUrl = "http://localhost:8080/login";
+    const serverUrl = `${heroku}/login`;
 
     if (password.legth <= 1) {
       setAlertUser("password");
