@@ -57,7 +57,7 @@ export default function Finish() {
     } else {
       return;
     }
-  }, [coffee, grind, menuName, methodName, roasting, userEmail, water]);
+  }, [coffee, grind, menuName, methodName, roasting, userEmail, water, heroku]);
 
   //get error response if Fav store is full.
   useEffect(() => {

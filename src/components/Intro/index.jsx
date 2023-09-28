@@ -42,7 +42,7 @@ export default function Intro() {
     } else if (!isLogIn) {
       setRecentBrew(null); // Set recentBrew to null
     }
-  }, [isLogIn, userEmail]);
+  }, [isLogIn, userEmail, heroku]);
 
   //Set right Buttons with loggedIn or not
   const settingButtons = () => {

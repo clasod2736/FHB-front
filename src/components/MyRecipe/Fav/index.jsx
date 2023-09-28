@@ -57,7 +57,7 @@ export default function Fav({ favUpdated }) {
       }
     }
     fetchDatas();
-  }, [description, customFav, fixedFav, favList, favUpdated, userEmail]);
+  }, [description, customFav, fixedFav, favList, favUpdated, userEmail, heroku]);
 
   //setting favourite lists with fetched data
   const settingFavourites = () => {

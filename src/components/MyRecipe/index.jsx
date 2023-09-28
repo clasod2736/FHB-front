@@ -43,7 +43,7 @@ export default function MyRecipe() {
       }
     }
     fetchData();
-  }, [userEmail]);
+  }, [userEmail, heroku]);
 
   //alert if fav storage is full
   useEffect(() => {
