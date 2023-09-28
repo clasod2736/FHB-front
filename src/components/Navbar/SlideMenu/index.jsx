@@ -51,7 +51,7 @@ export default function SlideMenu() {
               <a href="https://github.com/clasod2736">
                 <BsGithub />
               </a>
-              <a href="">
+              <a href="www.linkedin.com/in/joon-park-772a8820b">
                 <TbWorld />
               </a>
             </div>
