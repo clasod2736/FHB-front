@@ -9,9 +9,7 @@ import { useSelector } from "react-redux";
 //image
 import { Logo } from "../../assets";
 
-const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-
-const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+const heroku = process.env.REACT_APP_HEROKU_URL;
 
 export default function Login() {
   const isLogIn = useSelector((state) => state.logIn);
