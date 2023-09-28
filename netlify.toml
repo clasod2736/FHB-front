@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/proxy/*"
+  to = "https://main--voluble-kashata-776f36.netlify.app//:splat"
+  status = 200
+  force = true
