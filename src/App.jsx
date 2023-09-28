@@ -20,6 +20,8 @@ import {
   Brewing,
 } from "./components";
 
+const heroku = process.env.HEROKU_URL;
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -81,7 +83,7 @@ export default function App() {
   useEffect(() => {
     const getCookies = async () => {
       try {
-        const response = await axios.get("HEROKU_URL/isAuth", { withCredentials: true });
+        const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
 
         if (response.data.email !== undefined) {
           console.log(response.data.email);
