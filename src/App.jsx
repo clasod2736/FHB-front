@@ -20,7 +20,7 @@ import {
   Brewing,
 } from "./components";
 
-const heroku = `${process.env.HEROKU_URL}/data`;
+const heroku = process.env.HEROKU_URL;
 
 const router = createBrowserRouter([
   {
