@@ -32,10 +32,14 @@ export default function Fav({ favUpdated }) {
 
   const navigate = useNavigate();
 
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+
+  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+
   //get favourites from DB
   useEffect(() => {
     async function fetchDatas() {
-      const serverUrl = "http://localhost:8080/getFavourites";
+      const serverUrl = `${heroku}/getFavourites`;
 
       if (typeof userEmail === "undefined") {
         console.log("Failed to get userEmail from Redux");
@@ -205,7 +209,7 @@ export default function Fav({ favUpdated }) {
   const deleteFav = async (favName) => {
     console.log(favName);
     try {
-      const response = await axios.delete("http://localhost:8080/deleteFav", {
+      const response = await axios.delete(`${heroku}/deleteFav`, {
         params: {
           favName: favName,
         },
@@ -782,7 +786,7 @@ export default function Fav({ favUpdated }) {
 
       const newFav = updatedFavourites;
 
-      const response = await axios.put("http://localhost:8080/updateFavDetails", {
+      const response = await axios.put(`${heroku}/updateFavDetails`, {
         email: userEmail,
         favourites: newFav,
       });
@@ -808,7 +812,7 @@ export default function Fav({ favUpdated }) {
 
       const newFav = updatedFavourites;
 
-      const response = await axios.put("http://localhost:8080/updateFavDetails", {
+      const response = await axios.put(`${heroku}/updateFavDetails`, {
         email: userEmail,
         favourites: newFav,
       });
@@ -835,7 +839,7 @@ export default function Fav({ favUpdated }) {
 
       const newFav = updatedFavourites;
 
-      const response = await axios.put("http://localhost:8080/updateFavDetails", {
+      const response = await axios.put(`${heroku}/updateFavDetails`, {
         email: userEmail,
         favourites: newFav,
       });
@@ -863,7 +867,7 @@ export default function Fav({ favUpdated }) {
 
       const newFav = updatedFavourites;
 
-      const response = await axios.put("http://localhost:8080/updateFavDetails", {
+      const response = await axios.put(`${heroku}/updateFavDetails`, {
         email: userEmail,
         favourites: newFav,
       });
@@ -891,7 +895,7 @@ export default function Fav({ favUpdated }) {
 
       const newFav = updatedFavourites;
 
-      const response = await axios.put("http://localhost:8080/updateFavDetails", {
+      const response = await axios.put(`${heroku}/updateFavDetails`, {
         email: userEmail,
         favourites: newFav,
       });
@@ -919,7 +923,7 @@ export default function Fav({ favUpdated }) {
 
       const newFav = updatedFavourites;
 
-      const response = await axios.put("http://localhost:8080/updateFavDetails", {
+      const response = await axios.put(`${heroku}/updateFavDetails`, {
         email: userEmail,
         favourites: newFav,
       });
@@ -947,7 +951,7 @@ export default function Fav({ favUpdated }) {
 
       const newFav = updatedFavourites;
 
-      const response = await axios.put("http://localhost:8080/updateFavDetails", {
+      const response = await axios.put(`${heroku}/updateFavDetails`, {
         email: userEmail,
         favourites: newFav,
       });
@@ -961,7 +965,7 @@ export default function Fav({ favUpdated }) {
   //custom description
   const updateFavDescription = async () => {
     try {
-      const response = await axios.put("http://localhost:8080/updateDescription", {
+      const response = await axios.put(`${heroku}/updateDescription`, {
         favourites: {
           favName: favList.favName,
           description: description,

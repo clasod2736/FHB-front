@@ -17,6 +17,10 @@ export default function Navbar() {
 
   const [click, setClick] = useState(false);
 
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+
+  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+
   //render differrent Link element depends on LoggedIn
   const settingMyRecipe = () => {
     if (!isLogIn) {
@@ -44,7 +48,7 @@ export default function Navbar() {
 
     //   }
     try {
-      const response = await axios.get("http://localhost:8080/logOut", { withCredentials: true });
+      const response = await axios.get(`${heroku}/logOut`, { withCredentials: true });
       console.log(response);
       dispatch(updateEmail(""));
       dispatch({ type: "loggedOut" });

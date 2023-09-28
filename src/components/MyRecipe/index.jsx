@@ -17,10 +17,14 @@ export default function MyRecipe() {
 
   const navigate = useNavigate();
 
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+
+  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+
   //fetch history of oldBrews from database
   useEffect(() => {
     async function fetchData() {
-      const serverUrl = "http://localhost:8080/getOldbrews";
+      const serverUrl = `${heroku}/getOldbrews`;
 
       if (userEmail === "undefiend") {
         console.log("failed get userEmail from redux");
@@ -78,7 +82,7 @@ export default function MyRecipe() {
                 </button>
                 <button
                   onClick={async () => {
-                    const postFvUrl = "http://localhost:8080/saveFavourites";
+                    const postFvUrl = `${heroku}/saveFavourites`;
 
                     //use current time for organising brews
                     const order = Date.now();

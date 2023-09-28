@@ -13,11 +13,15 @@ export default function Intro() {
 
   const navigate = useNavigate();
 
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+
+  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+
   //fetch data for get recent brew data.
   useEffect(() => {
     if (isLogIn) {
       async function fetchDatas() {
-        const serverUrl = "http://localhost:8080/getOldbrews";
+        const serverUrl = `${heroku}/getOldbrews`;
 
         try {
           const response = await axios.get(serverUrl, {

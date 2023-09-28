@@ -18,11 +18,15 @@ export default function Finish() {
   const { menuName, methodName, water, coffee, roasting, grind } = useParams();
   const navigate = useNavigate();
 
+  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+
+  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+
   //Automatically Post brew history in DB after finish brewing
   useEffect(() => {
     if (menuName !== undefined) {
       async function getCurrentBrew() {
-        const postOldUrl = "http://localhost:8080/saveHistory";
+        const postOldUrl = `${heroku}/saveHistory`;
 
         //use current time for organising recent brew and time that when make oldBrews.
         const currentTime = getTime();
@@ -78,7 +82,7 @@ export default function Finish() {
       alert("This is just Browsing Page!");
       return;
     } else {
-      const postFvUrl = "http://localhost:8080/saveFavourites";
+      const postFvUrl = `${heroku}/saveFavourites`;
 
       //use current time for organising brews
       const currentTime = getTime();
