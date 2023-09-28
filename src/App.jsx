@@ -81,7 +81,7 @@ export default function App() {
   useEffect(() => {
     const getCookies = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/isAuth", { withCredentials: true });
+        const response = await axios.get("HEROKU_URL/isAuth", { withCredentials: true });
 
         if (response.data.email !== undefined) {
           console.log(response.data.email);
