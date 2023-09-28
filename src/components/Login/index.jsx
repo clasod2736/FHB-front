@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 //image
 import { Logo } from "../../assets";
 
-const heroku = process.env.HEROKU_URL;
+const heroku = `${process.env.HEROKU_URL}/data`;
 
 export default function Login() {
   const isLogIn = useSelector((state) => state.logIn);
