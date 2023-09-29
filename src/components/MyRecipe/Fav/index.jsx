@@ -32,9 +32,7 @@ export default function Fav({ favUpdated }) {
 
   const navigate = useNavigate();
 
-  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-
-  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+  const heroku = process.env.REACT_APP_HEROKU_URL;
 
   //get favourites from DB
   useEffect(() => {

@@ -22,9 +22,7 @@ export default function Choices({ click }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-
-  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+  const heroku = process.env.REACT_APP_HEROKU_URL;
 
   //save Favourite with choices
   const saveFavs = async () => {

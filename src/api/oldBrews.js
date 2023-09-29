@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-
-const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+const heroku = process.env.REACT_APP_HEROKU_URL;
 
 export async function getOldbrews(isLogIn, userEmail) {
   const serverUrl = `${heroku}/getOldbrews`;

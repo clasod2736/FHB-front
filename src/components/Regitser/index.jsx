@@ -17,9 +17,7 @@ export default function Register() {
 
   const navigate = useNavigate();
 
-  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-
-  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+  const heroku = process.env.REACT_APP_HEROKU_URL;
 
   //post user data in mongoDB
   const postUser = async () => {

@@ -18,9 +18,7 @@ export default function Finish() {
   const { menuName, methodName, water, coffee, roasting, grind } = useParams();
   const navigate = useNavigate();
 
-  const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
-
-  const heroku = `${PROXY}${process.env.REACT_APP_HEROKU_URL}`;
+  const heroku = process.env.REACT_APP_HEROKU_URL;
 
   //Automatically Post brew history in DB after finish brewing
   useEffect(() => {
