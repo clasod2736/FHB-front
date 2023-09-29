@@ -36,7 +36,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.get(serverUrl, {
+      const response = await axios.post(serverUrl, {
         params: {
           email: email,
           password: password,
@@ -46,7 +46,7 @@ export default function Login() {
 
       console.log(response.data);
 
-      if (response) {
+      if (response.status === 200) {
         dispatch({ type: "loginSuccess" });
         dispatch(updateEmail(email));
         setAlertUser(false);
