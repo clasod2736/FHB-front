@@ -36,13 +36,14 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post(serverUrl, {
-        params: {
+      const response = await axios.post(
+        serverUrl,
+        {
           email: email,
           password: password,
         },
-        withCredentials: true,
-      });
+        { withCredentials: true }
+      );
 
       console.log(response.data);
 
