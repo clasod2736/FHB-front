@@ -64,7 +64,10 @@ export default function Choices({ click }) {
       async function result() {
         const response = await getOldbrews(isLogIn, userEmail);
         const mostChoices = getChoices(response);
-        setData(mostChoices);
+        console.log(mostChoices);
+        if (mostChoices <= 1) {
+          return;
+        } else setData(mostChoices);
       }
       result();
     }
@@ -92,31 +95,59 @@ export default function Choices({ click }) {
         <Offcanvas.Body className="canvasBody">
           <div className="choices-container">
             <div className="choice--total">
-              {data ? <header>Your Total Brews: {data.totalBrew}</header> : <p>Loading...</p>}
+              {data ? (
+                <header>Your Total Brews: {data.totalBrew}</header>
+              ) : (
+                <p>Loading or Too less history.</p>
+              )}
             </div>
             <div className="choice--menu">
               <p>Your most choice of Coffee</p>
-              {data ? <p className="data">{data.menu[0][0]}</p> : <p>Loading...</p>}
+              {data.length <= 1 ? (
+                <p className="data">{data.menu[0][0]}</p>
+              ) : (
+                <p>Loading or Too less history.</p>
+              )}
             </div>
             <div className="choice--mehotd">
               <p>Your most choice of Method</p>
-              {data ? <p className="data">{data.method[0][0]}</p> : <p>Loading...</p>}
+              {data.length <= 1 ? (
+                <p className="data">{data.method[0][0]}</p>
+              ) : (
+                <p>Loading or Too less history.</p>
+              )}
             </div>
             <div className="choice--roasting">
               <p>Your most choice of Roasting level</p>
-              {data ? <p className="data">{data.roasting[0][0]}</p> : <p>Loading...</p>}
+              {data.length <= 1 ? (
+                <p className="data">{data.roasting[0][0]}</p>
+              ) : (
+                <p>Loading or Too less history.</p>
+              )}
             </div>
             <div className="choice--grind">
               <p>Your most choice of Grind size</p>
-              {data ? <p className="data">{data.grind[0][0]}</p> : <p>Loading...</p>}
+              {data.length <= 1 ? (
+                <p className="data">{data.grind[0][0]}</p>
+              ) : (
+                <p>Loading or Too less history.</p>
+              )}
             </div>
             <div className="choice--coffee">
               <p>Your most choice of Coffee amout</p>
-              {data ? <p className="data">'{data.coffee / 20}' serve</p> : <p>Loading...</p>}
+              {data.length <= 1 ? (
+                <p className="data">'{data.coffee / 20}' serve</p>
+              ) : (
+                <p>Loading or Too less history.</p>
+              )}
             </div>
             <div className="choice--water">
               <p>Your most choice of Water ratio</p>
-              {data ? <p className="data">{data.water} ratio</p> : <p>Loading...</p>}
+              {data.length <= 1 ? (
+                <p className="data">{data.water} ratio</p>
+              ) : (
+                <p>Loading or Too less history.</p>
+              )}
             </div>
           </div>
           <div className="btn-container">
