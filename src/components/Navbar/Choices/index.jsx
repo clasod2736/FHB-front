@@ -95,21 +95,20 @@ export default function Choices({ click }) {
         </Offcanvas.Header>
         <Offcanvas.Body className="canvasBody">
           <div className="choices-container">
-            <div className="choice--total">
-              {data ? (
-                <li>
-                  <p key={uuidv4()}>data.menu[0][0]</p>
-                  <p key={uuidv4()}>data.method[0][0]</p>
-                  <p key={uuidv4()}>data.method[0][0]</p>
-                  <p key={uuidv4()}>data.roasting[0][0]</p>
-                  <p key={uuidv4()}>data.grind[0][0]</p>
-                  <p key={uuidv4()}>data.coffee / 20</p>
-                  <p key={uuidv4()}>data.water</p>
-                </li>
-              ) : (
-                <p>Loading or No history.</p>
-              )}
-              {/* {data ? (
+            {data ? (
+              <div className="choice--total">
+                <p key={uuidv4()}>{data.menu[0][0]}</p>
+                <p key={uuidv4()}>{data.method[0][0]}</p>
+                <p key={uuidv4()}>{data.method[0][0]}</p>
+                <p key={uuidv4()}>{data.roasting[0][0]}</p>
+                <p key={uuidv4()}>{data.grind[0][0]}</p>
+                <p key={uuidv4()}>{data.coffee / 20}</p>
+                <p key={uuidv4()}>{data.water}</p>
+              </div>
+            ) : (
+              <p>Loading or No history.</p>
+            )}
+            {/* {data ? (
                 <header>Your Total Brews: {data.totalBrew}</header>
               ) : (
                 <p>Loading or Too less history.</p>
@@ -163,7 +162,6 @@ export default function Choices({ click }) {
                 <p>Loading or Too less history.</p>
               )}
             </div> */}
-            </div>
           </div>
           <div className="btn-container">
             <button
