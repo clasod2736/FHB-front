@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 export default function getChoices(oldBrews) {
   const menuArr = [
     "espresso",
@@ -106,6 +108,7 @@ export default function getChoices(oldBrews) {
 
     //Final object.
     const choices = {
+      key: uuidv4(),
       totalBrew: totalBrew,
       menu: menuChoice,
       method: methodChoice,

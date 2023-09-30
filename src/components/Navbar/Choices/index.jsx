@@ -65,7 +65,7 @@ export default function Choices({ click }) {
         const response = await getOldbrews(isLogIn, userEmail);
         const mostChoices = getChoices(response);
         console.log(mostChoices);
-        if (mostChoices <= 1) {
+        if (mostChoices <= 0) {
           return;
         } else setData(mostChoices);
       }
@@ -96,6 +96,21 @@ export default function Choices({ click }) {
           <div className="choices-container">
             <div className="choice--total">
               {data ? (
+                data.map((brew) => (
+                  <li key={brew.key}>
+                    <p>data.menu[0][0]</p>
+                    <p>data.method[0][0]</p>
+                    <p>data.method[0][0]</p>
+                    <p>data.roasting[0][0]</p>
+                    <p>data.grind[0][0]</p>
+                    <p>data.coffee / 20</p>
+                    <p>data.water</p>
+                  </li>
+                ))
+              ) : (
+                <p>Loading or No history.</p>
+              )}
+              {/* {data ? (
                 <header>Your Total Brews: {data.totalBrew}</header>
               ) : (
                 <p>Loading or Too less history.</p>
@@ -148,6 +163,7 @@ export default function Choices({ click }) {
               ) : (
                 <p>Loading or Too less history.</p>
               )}
+            </div> */}
             </div>
           </div>
           <div className="btn-container">
