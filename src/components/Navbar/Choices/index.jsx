@@ -5,7 +5,6 @@ import "./Choices.css";
 
 import { useSelector } from "react-redux";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
 
 //utils and api
 import { getOldbrews } from "../../../api/oldBrews";
