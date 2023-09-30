@@ -15,7 +15,7 @@ export default function Choices({ click }) {
   const isLogIn = useSelector((state) => state.logIn);
   const userEmail = useSelector((state) => state.userEmail);
 
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
 
   const [show, setShow] = useState(false);
 
@@ -93,7 +93,7 @@ export default function Choices({ click }) {
           <Offcanvas.Title className="slideTitle">Your Most Choices</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="canvasBody">
-          {data ? (
+          {data !== null ? (
             <div className="choices-container">
               <div className="choice--total">
                 <header>Your Total Brews: {data.totalBrew}</header>
