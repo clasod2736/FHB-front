@@ -5,6 +5,7 @@ import "./Choices.css";
 
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 //utils and api
 import { getOldbrews } from "../../../api/oldBrews";
@@ -96,17 +97,15 @@ export default function Choices({ click }) {
           <div className="choices-container">
             <div className="choice--total">
               {data ? (
-                data.map((brew) => (
-                  <li key={brew.key}>
-                    <p>data.menu[0][0]</p>
-                    <p>data.method[0][0]</p>
-                    <p>data.method[0][0]</p>
-                    <p>data.roasting[0][0]</p>
-                    <p>data.grind[0][0]</p>
-                    <p>data.coffee / 20</p>
-                    <p>data.water</p>
-                  </li>
-                ))
+                <li>
+                  <p key={uuidv4()}>data.menu[0][0]</p>
+                  <p key={uuidv4()}>data.method[0][0]</p>
+                  <p key={uuidv4()}>data.method[0][0]</p>
+                  <p key={uuidv4()}>data.roasting[0][0]</p>
+                  <p key={uuidv4()}>data.grind[0][0]</p>
+                  <p key={uuidv4()}>data.coffee / 20</p>
+                  <p key={uuidv4()}>data.water</p>
+                </li>
               ) : (
                 <p>Loading or No history.</p>
               )}
