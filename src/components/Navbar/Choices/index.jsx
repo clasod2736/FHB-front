@@ -105,27 +105,22 @@ export default function Choices({ click }) {
               <div className="choice--mehotd">
                 <p>Your most choice of Method</p>
                 <p className="data">{data.method[0][0]}</p>
-                <p>Loading or Too less history.</p>
               </div>
               <div className="choice--roasting">
                 <p>Your most choice of Roasting level</p>
                 <p className="data">{data.roasting[0][0]}</p>
-                <p>Loading or Too less history.</p>
               </div>
               <div className="choice--grind">
                 <p>Your most choice of Grind size</p>
                 <p className="data">{data.grind[0][0]}</p>
-                <p>Loading or Too less history.</p>
               </div>
               <div className="choice--coffee">
                 <p>Your most choice of Coffee amout</p>
                 <p className="data">'{data.coffee / 20}' serve</p>
-                <p>Loading or Too less history.</p>
               </div>
               <div className="choice--water">
                 <p>Your most choice of Water ratio</p>
                 <p className="data">{data.water} ratio</p>
-                <p>Loading or Too less history.</p>
               </div>
             </div>
           ) : (
