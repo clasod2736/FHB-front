@@ -16,7 +16,7 @@ export default function getChoices(oldBrews) {
     "icedCoffee",
     "affogato",
   ];
-  const methodArr = ["harioV6", "mokapot", "frenchpress", "aeropress", "chemax", "shypon"];
+  const methodArr = ["harioV6", "mokapot", "frenchpress", "aeropress", "chemax", "syphon"];
   const roastingArr = ["dark", "medium", "light"];
   const grindArr = ["coarse", "medium", "fine"];
 
