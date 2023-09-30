@@ -93,7 +93,7 @@ export default function Choices({ click }) {
           <Offcanvas.Title className="slideTitle">Your Most Choices</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="canvasBody">
-          {data !== null ? (
+          {/* {data !== null ? (
             <div className="choices-container">
               <div className="choice--total">
                 <header>Your Total Brews: {data.totalBrew}</header>
@@ -125,7 +125,7 @@ export default function Choices({ click }) {
             </div>
           ) : (
             <header>Loading or No history.</header>
-          )}
+          )} */}
           <div className="btn-container">
             <button
               onClick={() => {
