@@ -52,7 +52,7 @@ export default function Choices({ click }) {
       });
       if (response.status === 200) {
         alert("Your Most Choices Saved as Favs!");
-      }
+      } else alert("Your favs over the 5, You can managing them in My Recipe page.");
     } catch (error) {
       console.log(error);
     }
