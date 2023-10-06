@@ -18,7 +18,7 @@ export default function Water({ getWater, waterClose }) {
           onClick={() => {
             setText("7:1");
           }}
-          style={{ backgroundColor: text === "7" ? "lightslategrey" : "" }}
+          style={{ backgroundColor: text === "7:1" ? "lightslategrey" : "" }}
         >
           <p>Strong</p>
           <p>7:1</p>
@@ -27,7 +27,7 @@ export default function Water({ getWater, waterClose }) {
           onClick={() => {
             setText("10:1");
           }}
-          style={{ backgroundColor: text === "10" ? "lightslategrey" : "" }}
+          style={{ backgroundColor: text === "10:1" ? "lightslategrey" : "" }}
         >
           <p>Normal</p>
           <p>10:1</p>
@@ -36,7 +36,7 @@ export default function Water({ getWater, waterClose }) {
           onClick={() => {
             setText("12:1");
           }}
-          style={{ backgroundColor: text === "12" ? "lightslategrey" : "" }}
+          style={{ backgroundColor: text === "12:1" ? "lightslategrey" : "" }}
         >
           <p>Mild</p>
           <p>12:1</p>
