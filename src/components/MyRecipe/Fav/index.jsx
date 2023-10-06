@@ -194,7 +194,7 @@ export default function Fav({ favUpdated }) {
           <p className="favName">Name: {favList.favName}</p>
           <p>Coffee: {favList.menuName}</p>
           <p>Method: {favList.methodName}</p>
-          <p>Water: {favList.water}ml</p>
+          <p>Water: {favList.water}</p>
           <p>Ground Coffee: {favList.coffee}g</p>
           <p>Roasting Level: {favList.roasting}</p>
           <p>Grind Size: {favList.grind}</p>
@@ -579,7 +579,7 @@ export default function Fav({ favUpdated }) {
           <div className="customWater">
             <button
               onMouseEnter={() => {
-                setWaterUpdate(7 * favList.coffee);
+                setWaterUpdate("7:1");
               }}
               onClick={() => {
                 updateFavWater(favList, waterUpdate);
@@ -590,7 +590,7 @@ export default function Fav({ favUpdated }) {
             </button>
             <button
               onMouseEnter={() => {
-                setWaterUpdate(10 * favList.coffee);
+                setWaterUpdate("10:1");
               }}
               onClick={() => {
                 updateFavWater(favList, waterUpdate);
@@ -601,14 +601,14 @@ export default function Fav({ favUpdated }) {
             </button>
             <button
               onMouseEnter={() => {
-                setWaterUpdate(12.5 * favList.coffee);
+                setWaterUpdate("12:1");
               }}
               onClick={() => {
                 updateFavWater(favList, waterUpdate);
                 setCustomDetail("");
               }}
             >
-              Mild 12.5:1
+              Mild 12:1
             </button>
           </div>
           <button
