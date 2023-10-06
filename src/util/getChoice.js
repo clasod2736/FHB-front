@@ -86,7 +86,7 @@ export default function getChoices(oldBrews) {
   }
 
   if (oldBrews.length <= 0) {
-    return "No history for calculating..";
+    return null;
   } else {
     //all of functions
     const totalBrew = oldBrews.length;

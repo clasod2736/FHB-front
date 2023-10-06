@@ -65,9 +65,7 @@ export default function Choices({ click }) {
         const response = await getOldbrews(isLogIn, userEmail);
         const mostChoices = getChoices(response);
         console.log(mostChoices);
-        if (mostChoices <= 0) {
-          setData(null);
-        } else setData(mostChoices);
+        mostChoices === null ? setData(null) : setData(mostChoices);
       }
       result();
     }
