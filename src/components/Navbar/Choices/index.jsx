@@ -66,7 +66,7 @@ export default function Choices({ click }) {
         const mostChoices = getChoices(response);
         console.log(mostChoices);
         if (mostChoices <= 0) {
-          return;
+          setData(null);
         } else setData(mostChoices);
       }
       result();
