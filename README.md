@@ -5,4 +5,4 @@
 > Through this project I understand **"How"** is data flowing from _Client-side_ to _Server-side_ and Database(also vice-versa).
 > Understanding fundermental of Component based library like the React. How to make smooth and clean animation and layout in CSS with Post-processer.
 
-<img src="https://github.com/clasod2736/FHB-front/assets/109887795/5dfb91be-7f90-447b-a4c9-b2972e95f3ac" width="200" height="200"/>
+<img src="https://github.com/clasod2736/FHB-front/assets/109887795/5dfb91be-7f90-447b-a4c9-b2972e95f3ac" width="500" height="300"/>
