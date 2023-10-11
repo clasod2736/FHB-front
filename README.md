@@ -15,4 +15,4 @@ _HTML_ / _CSS & SCSS_ / _Javascript_ / _React_ / _Redux_ / _Bootstrap_ / _Node.j
 ### Overview
 
 <img src="https://github.com/clasod2736/FHB-front/assets/109887795/5dfb91be-7f90-447b-a4c9-b2972e95f3ac" width="500" height="300"/>
-<img src="https://github.com/clasod2736/FHB-front/assets/109887795/a1d98019-5dc3-4f54-8b36-bffacd084db4" width="500" height="300"/>
+<img src="https://github.com/clasod2736/FHB-front/assets/109887795/f2b86483-6967-4a6d-b341-28345b1b1231" width="500" height="300"/>
