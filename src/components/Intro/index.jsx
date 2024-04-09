@@ -25,8 +25,6 @@ export default function Intro() {
     fetchData();
   }, [isLogIn, userEmail]);
 
-  console.log(recentBrew);
-
   //Set right Buttons with loggedIn or not
   const settingButtons = () => {
     if (!isLogIn) {

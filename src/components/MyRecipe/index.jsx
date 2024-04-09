@@ -36,7 +36,7 @@ export default function MyRecipe() {
             <div className="moreBtn">
               <button
                 onClick={() => {
-                  setChangeHistory((prevChangeHistory) => !prevChangeHistory);
+                  setChangeHistory((prev) => !prev);
                 }}
               >
                 {changeHistory ? "Check first 5 Brews" : "Check rest of the Brews"}
