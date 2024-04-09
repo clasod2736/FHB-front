@@ -1,17 +1,35 @@
+import { useState, useEffect } from "react";
 import axios from "axios";
+import { useSelector } from "react-redux";
+
+import { getOldbrews } from "../../api/getOldbrews";
 
 const heroku = process.env.REACT_APP_HEROKU_URL;
 
-export default function handleHistory(
-  userEmail,
-  oldBrews,
-  changeHistory,
-  setFavResponse,
-  setFavUpdated,
-  favUpdated,
-  favResponse
-) {
-  console.log("working?");
+export default function History(changeHistory, setFavUpdated, favUpdated) {
+  const userEmail = useSelector((state) => state.userEmail);
+
+  const [oldBrews, setOldBrews] = useState([]);
+  const [favResponse, setFavResponse] = useState(false);
+
+  //fetch history of oldBrews from database
+  useEffect(() => {
+    async function fetchData() {
+      const fetchedOldbrews = getOldbrews(userEmail);
+      setOldBrews(fetchedOldbrews);
+    }
+    fetchData();
+  }, [userEmail]);
+
+  //alert if fav storage is full
+  useEffect(() => {
+    if (favResponse === "422") {
+      alert("You have 5 favourite brew already!");
+      setFavResponse("");
+      return;
+    }
+  }, [favResponse]);
+
   if (oldBrews.length > 0) {
     const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
     const displayBrews = changeHistory ? sortedBrews.slice(5, 10) : sortedBrews.slice(0, 5);

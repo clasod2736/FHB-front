@@ -1,48 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./MyRecipe.css";
-import { useSelector } from "react-redux";
-
-import { getOldbrews } from "../../api/getOldbrews";
 
 //Component
 import Fav from "./Fav";
-import handleHistory from "../../util/handleHistory";
+import History from "./History";
 
 export default function MyRecipe() {
-  const userEmail = useSelector((state) => state.userEmail);
-
-  const [oldBrews, setOldBrews] = useState([]);
   const [changeHistory, setChangeHistory] = useState(false);
-  const [favResponse, setFavResponse] = useState(false);
+
   const [favUpdated, setFavUpdated] = useState(false);
-
-  //fetch history of oldBrews from database
-  useEffect(() => {
-    async function fetchData() {
-      const fetchedOldbrews = getOldbrews(userEmail);
-      setOldBrews(fetchedOldbrews);
-    }
-    fetchData();
-  }, [userEmail]);
-
-  //alert if fav storage is full
-  useEffect(() => {
-    if (favResponse === "422") {
-      alert("You have 5 favourite brew already!");
-      setFavResponse("");
-      return;
-    }
-  }, [favResponse]);
-
-  const settingHistory = handleHistory(
-    userEmail,
-    oldBrews,
-    changeHistory,
-    setFavResponse,
-    setFavUpdated,
-    favUpdated,
-    favResponse
-  );
 
   return (
     <div className="myRecipeContainer">
@@ -66,7 +32,7 @@ export default function MyRecipe() {
               <p className="grind">Grind</p>
               <p className="functions">Functions</p>
             </div>
-            {settingHistory}
+            <History changeHistory={changeHistory} setFavUpdated={setFavUpdated} />
             <div className="moreBtn">
               <button
                 onClick={() => {
