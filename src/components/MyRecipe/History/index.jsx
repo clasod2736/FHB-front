@@ -12,6 +12,8 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
   const [oldBrews, setOldBrews] = useState([]);
   const [favResponse, setFavResponse] = useState(false);
 
+  console.log(oldBrews);
+
   //fetch history of oldBrews from database
   useEffect(() => {
     async function fetchData() {
