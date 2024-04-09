@@ -34,6 +34,6 @@ export default async function saveFavourites(userEmail, brew) {
     return JSON.stringify(response.status);
   } catch (error) {
     console.log(error);
-    return;
+    return null;
   }
 }

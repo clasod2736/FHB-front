@@ -53,9 +53,11 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
               </a>
               <button
                 onClick={() => {
-                  saveFavourites(userEmail, brew);
-                  favResponse(true);
-                  setFavUpdated(!favUpdated);
+                  const result = saveFavourites(userEmail, brew);
+                  if (result) {
+                    setFavResponse(true);
+                    setFavUpdated(!favUpdated);
+                  }
                 }}
               >
                 Save Fav
