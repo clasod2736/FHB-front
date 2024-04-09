@@ -14,8 +14,6 @@ export default function Intro() {
 
   const navigate = useNavigate();
 
-  const heroku = process.env.REACT_APP_HEROKU_URL;
-
   //fetch data for get recent brew data.
   useEffect(() => {
     if (isLogIn) {
