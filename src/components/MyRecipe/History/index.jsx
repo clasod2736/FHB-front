@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../MyRecipe.css";
 
 import { useSelector } from "react-redux";
@@ -12,7 +13,7 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
   const [oldBrews, setOldBrews] = useState([]);
   const [favResponse, setFavResponse] = useState(false);
 
-  console.log(oldBrews);
+  const navigate = useNavigate();
 
   //fetch history of oldBrews from database
   useEffect(() => {
@@ -49,11 +50,15 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
               <p className="roasting">{brew.roasting}</p>
               <p className="grind">{brew.grind}</p>
               <div className="historyBtnContainer">
-                <a
-                  href={`/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`}
+                <button
+                  onClick={() =>
+                    navigate(
+                      `/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`
+                    )
+                  }
                 >
                   Go Brew
-                </a>
+                </button>
                 <button
                   onClick={() => {
                     const result = saveFavourites(userEmail, brew);
