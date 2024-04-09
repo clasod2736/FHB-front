@@ -33,55 +33,52 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
     }
   }, [favResponse]);
 
-  const generateHistory = () => {
-    if (oldBrews.length > 0) {
-      const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
-      const displayBrews = changeHistory ? sortedBrews.slice(5, 10) : sortedBrews.slice(0, 5);
-      console.log("History generated.");
+  if (oldBrews.length > 0) {
+    const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
+    const displayBrews = changeHistory ? sortedBrews.slice(5, 10) : sortedBrews.slice(0, 5);
+    console.log("History generated.");
 
-      return (
-        <ul className="history">
-          {displayBrews.map((brew, index) => (
-            <li key={index}>
-              <p className="menu">{brew.menuName}</p>
-              <p className="method">{brew.methodName}</p>
-              <p className="coffee">{brew.coffee}g</p>
-              <p className="water">{brew.water}</p>
-              <p className="roasting">{brew.roasting}</p>
-              <p className="grind">{brew.grind}</p>
-              <div className="historyBtnContainer">
-                <button
-                  onClick={() =>
-                    navigate(
-                      `/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`
-                    )
+    return (
+      <ul className="history">
+        {displayBrews.map((brew, index) => (
+          <li key={index}>
+            <p className="menu">{brew.menuName}</p>
+            <p className="method">{brew.methodName}</p>
+            <p className="coffee">{brew.coffee}g</p>
+            <p className="water">{brew.water}</p>
+            <p className="roasting">{brew.roasting}</p>
+            <p className="grind">{brew.grind}</p>
+            <div className="historyBtnContainer">
+              <button
+                onClick={() =>
+                  navigate(
+                    `/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`
+                  )
+                }
+              >
+                Go Brew
+              </button>
+              <button
+                onClick={() => {
+                  const result = saveFavourites(userEmail, brew);
+                  if (result) {
+                    setFavResponse(true);
+                    setFavUpdated(!favUpdated);
                   }
-                >
-                  Go Brew
-                </button>
-                <button
-                  onClick={() => {
-                    const result = saveFavourites(userEmail, brew);
-                    if (result) {
-                      setFavResponse(true);
-                      setFavUpdated(!favUpdated);
-                    }
-                  }}
-                >
-                  Save Fav
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      );
-    } else if (oldBrews.length === 0) {
-      return (
-        <div className="noHistory">
-          <p>Wait! You don't have any history yet.</p>
-        </div>
-      );
-    }
-  };
-  return generateHistory();
+                }}
+              >
+                Save Fav
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    );
+  } else if (oldBrews.length === 0) {
+    return (
+      <div className="noHistory">
+        <p>Wait! You don't have any history yet.</p>
+      </div>
+    );
+  }
 }
