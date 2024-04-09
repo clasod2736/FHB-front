@@ -3,7 +3,7 @@ import "../MyRecipe.css";
 
 import { useSelector } from "react-redux";
 
-import { getOldbrews } from "../../api/getOldbrews";
+import { getOldbrews } from "../../../api/getOldbrews";
 import saveFavourites from "../../../api/saveFavourites";
 
 export default function History(changeHistory, setFavUpdated, favUpdated) {
