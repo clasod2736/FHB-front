@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./MyRecipe.css";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -16,7 +16,6 @@ export default function MyRecipe() {
   const [favUpdated, setFavUpdated] = useState(false);
 
   const navigate = useNavigate();
-  const location = useLocation();
 
   const heroku = process.env.REACT_APP_HEROKU_URL;
 
@@ -25,19 +24,16 @@ export default function MyRecipe() {
     async function fetchData() {
       const serverUrl = `${heroku}/getOldbrews`;
 
-      if (userEmail === "") {
-      } else if (location === "/myRecipe") {
-        try {
-          const response = await axios.get(serverUrl, {
-            params: {
-              email: userEmail,
-            },
-          });
-          console.log(response.data);
-          setOldBrews(response.data);
-        } catch (error) {
-          console.log(error);
-        }
+      try {
+        const response = await axios.get(serverUrl, {
+          params: {
+            email: userEmail,
+          },
+        });
+        console.log(response.data);
+        setOldBrews(response.data);
+      } catch (error) {
+        console.log(error);
       }
     }
     fetchData();
