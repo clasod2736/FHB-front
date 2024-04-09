@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./MyRecipe.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -16,6 +16,7 @@ export default function MyRecipe() {
   const [favUpdated, setFavUpdated] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const heroku = process.env.REACT_APP_HEROKU_URL;
 
@@ -25,8 +26,7 @@ export default function MyRecipe() {
       const serverUrl = `${heroku}/getOldbrews`;
 
       if (userEmail === "") {
-        console.log("user not logged in.");
-      } else {
+      } else if (location === "/myRecipe") {
         try {
           const response = await axios.get(serverUrl, {
             params: {

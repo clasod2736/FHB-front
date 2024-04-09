@@ -45,7 +45,7 @@ export default function Login() {
         { withCredentials: true }
       );
 
-      console.log(response.data);
+      console.log(`${response.data.email} Logged in.`);
 
       if (response.status === 200) {
         dispatch({ type: "loginSuccess" });

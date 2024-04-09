@@ -19,7 +19,7 @@ export default function Intro() {
   useEffect(() => {
     if (isLogIn) {
       async function fetchDatas() {
-        const serverUrl = `${heroku}/getOldbrews`;
+        const serverUrl = `${heroku}/getRecentbrew`;
 
         try {
           const response = await axios.get(serverUrl, {
@@ -27,18 +27,14 @@ export default function Intro() {
               email: userEmail,
             },
           });
-          const fetchedBrews = response.data;
 
-          //state and sort recent brew data.
-          const sortedBrews = fetchedBrews.sort((a, b) => b.order - a.order);
-          setRecentBrew(sortedBrews[0]);
+          setRecentBrew(response.data);
         } catch (error) {
           console.log(error);
         }
       }
       fetchDatas();
     } else if (!isLogIn) {
-      setRecentBrew(null); // Set recentBrew to null
     }
   }, [isLogIn, userEmail, heroku]);
 
