@@ -16,8 +16,6 @@ export default function MyRecipe() {
   const [favResponse, setFavResponse] = useState(false);
   const [favUpdated, setFavUpdated] = useState(false);
 
-  const heroku = process.env.REACT_APP_HEROKU_URL;
-
   //fetch history of oldBrews from database
   useEffect(() => {
     async function fetchData() {
@@ -25,7 +23,7 @@ export default function MyRecipe() {
       setOldBrews(fetchedOldbrews);
     }
     fetchData();
-  }, [userEmail, heroku]);
+  }, [userEmail]);
 
   //alert if fav storage is full
   useEffect(() => {
@@ -35,6 +33,18 @@ export default function MyRecipe() {
       return;
     }
   }, [favResponse]);
+
+  console.log(
+    handleHistory(
+      userEmail,
+      oldBrews,
+      changeHistory,
+      setFavResponse,
+      setFavUpdated,
+      favUpdated,
+      favResponse
+    )
+  );
 
   return (
     <div className="myRecipeContainer">
