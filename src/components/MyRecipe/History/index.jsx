@@ -17,7 +17,7 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
   //fetch history of oldBrews from database
   useEffect(() => {
     async function fetchData() {
-      const fetchedOldbrews = getOldbrews(userEmail);
+      const fetchedOldbrews = await getOldbrews(userEmail);
       setOldBrews(fetchedOldbrews);
     }
     fetchData();
