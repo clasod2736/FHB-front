@@ -16,11 +16,13 @@ export default function Intro() {
 
   //fetch data for get recent brew data.
   useEffect(() => {
-    if (isLogIn) {
-      const fetchedRecentBrew = getRecentbrews(userEmail);
-      setRecentBrew(fetchedRecentBrew);
-    } else if (!isLogIn) {
-    }
+    const fetchData = async () => {
+      if (isLogIn) {
+        const fetchedRecentBrew = await getRecentbrews(userEmail);
+        setRecentBrew(fetchedRecentBrew);
+      }
+    };
+    fetchData();
   }, [isLogIn, userEmail]);
 
   console.log(recentBrew);
