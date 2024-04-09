@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
-import "./MyRecipe.css";
+import "../MyRecipe.css";
 
-import axios from "axios";
 import { useSelector } from "react-redux";
 
 import { getOldbrews } from "../../api/getOldbrews";
-
-const heroku = process.env.REACT_APP_HEROKU_URL;
+import saveFavourites from "../../../api/saveFavourites";
 
 export default function History(changeHistory, setFavUpdated, favUpdated) {
   const userEmail = useSelector((state) => state.userEmail);
@@ -25,9 +23,9 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
 
   //alert if fav storage is full
   useEffect(() => {
-    if (favResponse === "422") {
+    if (favResponse) {
       alert("You have 5 favourite brew already!");
-      setFavResponse("");
+      setFavResponse(false);
       return;
     }
   }, [favResponse]);
@@ -54,49 +52,10 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
                 Go Brew
               </a>
               <button
-                onClick={async () => {
-                  const postFvUrl = `${heroku}/saveFavourites`;
-
-                  //use current time for organising brews
-                  const order = Date.now();
-                  const date = new Date();
-                  const year = date.getFullYear().toString();
-                  const month = (date.getMonth() + 1).toString();
-                  const day = date.getDate().toString();
-                  const hour = date.getHours().toString();
-                  const minute = date.getMinutes().toString();
-                  const fullDate = hour + ":" + minute + " / " + day + "." + month + "." + year;
-
-                  //post favourites with currentBrews data
-                  try {
-                    const response = await axios.post(postFvUrl, {
-                      email: userEmail,
-                      favourites: [
-                        {
-                          favName: brew.order,
-                          order: order,
-                          date: fullDate,
-                          menuName: brew.menuName,
-                          methodName: brew.methodName,
-                          water: brew.water,
-                          coffee: brew.coffee,
-                          roasting: brew.roasting,
-                          grind: brew.grind,
-                          description: "",
-                        },
-                      ],
-                    });
-
-                    console.log(response);
-                    setFavResponse(JSON.stringify(response.status));
-                    setFavUpdated(!favUpdated);
-                  } catch (error) {
-                    console.log(error);
-                    const errMessage = error.response.status;
-                    setFavResponse(JSON.stringify(errMessage));
-                    console.log(favResponse);
-                    return;
-                  }
+                onClick={() => {
+                  saveFavourites(userEmail, brew);
+                  favResponse(true);
+                  setFavUpdated(!favUpdated);
                 }}
               >
                 Save Fav
