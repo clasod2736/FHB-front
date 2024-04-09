@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import checkLogIn from "../../util/checkLogIn";
 import "./MyRecipe.css";
 
 //Component
 import Fav from "./Fav";
 import History from "./History";
+import { useSelector } from "react-redux";
 
 export default function MyRecipe() {
+  const isLogIn = useSelector((state) => state.logIn);
+
   const [favUpdated, setFavUpdated] = useState(false);
 
   const getFavUpdated = (data) => {
     setFavUpdated(data);
   };
+
+  useEffect(() => {
+    checkLogIn(isLogIn);
+  }, [isLogIn]);
 
   return (
     <div className="myRecipeContainer">

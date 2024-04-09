@@ -37,7 +37,6 @@ export default function History(getFavUpdated, favUpdated) {
   if (oldBrews.length > 0) {
     const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
     const displayBrews = changeHistory ? sortedBrews.slice(5, 10) : sortedBrews.slice(0, 5);
-    console.log(changeHistory, displayBrews);
 
     return (
       <>
