@@ -54,7 +54,7 @@ const router = createBrowserRouter([
 export default function App() {
   const dispatch = useDispatch();
 
-  //check Local data exist and update redux store for when react-app refresh
+  /* check Local data exist and update redux store for when react-app refresh */
   // useEffect(() => {
   //   const localInfo =  localStorage.getItem('userInfo')
   //   const userInfo = JSON.parse(localInfo);

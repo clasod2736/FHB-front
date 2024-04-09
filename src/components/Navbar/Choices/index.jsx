@@ -62,13 +62,13 @@ export default function Choices({ click }) {
   //getOldbrews from DB
   useEffect(() => {
     if (isLogIn) {
-      async function result() {
+      async function fetchingChoices() {
         const response = await getOldbrews(isLogIn, userEmail);
         const mostChoices = getChoices(response);
-        console.log(mostChoices);
         mostChoices === null ? setData(null) : setData(mostChoices);
+        console.log("Most Choice loaded");
       }
-      result();
+      fetchingChoices();
     }
   }, [click, isLogIn, userEmail]);
 

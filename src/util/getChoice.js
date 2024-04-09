@@ -96,15 +96,6 @@ export default function getChoices(oldBrews) {
     const grindChoice = countFrequency(oldBrews, grindArr, "grind");
     const coffeeChoice = getMostFrequentValue(oldBrews, "coffee");
     const waterChoice = getMostFrequentValue(oldBrews, "water");
-    console.log(
-      totalBrew,
-      menuChoice,
-      methodChoice,
-      roastingChoice,
-      grindChoice,
-      coffeeChoice,
-      waterChoice
-    );
 
     //Final object.
     const choices = {

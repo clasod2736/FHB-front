@@ -24,8 +24,8 @@ export default function MyRecipe() {
     async function fetchData() {
       const serverUrl = `${heroku}/getOldbrews`;
 
-      if (userEmail === "undefiend") {
-        console.log("failed get userEmail from redux");
+      if (userEmail === "") {
+        console.log("user not logged in.");
       } else {
         try {
           const response = await axios.get(serverUrl, {
