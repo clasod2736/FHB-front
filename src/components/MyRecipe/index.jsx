@@ -6,9 +6,11 @@ import Fav from "./Fav";
 import History from "./History";
 
 export default function MyRecipe() {
-  const [changeHistory, setChangeHistory] = useState(false);
-
   const [favUpdated, setFavUpdated] = useState(false);
+
+  const getFavUpdated = (data) => {
+    setFavUpdated(data);
+  };
 
   return (
     <div className="myRecipeContainer">
@@ -32,16 +34,7 @@ export default function MyRecipe() {
               <p className="grind">Grind</p>
               <p className="functions">Functions</p>
             </div>
-            <History changeHistory={changeHistory} setFavUpdated={setFavUpdated} />
-            <div className="moreBtn">
-              <button
-                onClick={() => {
-                  setChangeHistory((prev) => !prev);
-                }}
-              >
-                {changeHistory ? "Check first 5 Brews" : "Check rest of the Brews"}
-              </button>
-            </div>
+            <History getFavUpdated={getFavUpdated} favUpdated={favUpdated} />
           </div>
         </div>
         <div className="myRecipeImg"></div>

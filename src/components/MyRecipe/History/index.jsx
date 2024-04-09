@@ -7,11 +7,12 @@ import { useSelector } from "react-redux";
 import { getOldbrews } from "../../../api/getOldbrews";
 import saveFavourites from "../../../api/saveFavourites";
 
-export default function History(changeHistory, setFavUpdated, favUpdated) {
+export default function History(getFavUpdated, favUpdated) {
   const userEmail = useSelector((state) => state.userEmail);
 
   const [oldBrews, setOldBrews] = useState([]);
   const [favResponse, setFavResponse] = useState(false);
+  const [changeHistory, setChangeHistory] = useState(false);
 
   const navigate = useNavigate();
 
@@ -39,40 +40,51 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
     console.log(changeHistory, displayBrews);
 
     return (
-      <ul className="history">
-        {displayBrews.map((brew, index) => (
-          <li key={index}>
-            <p className="menu">{brew.menuName}</p>
-            <p className="method">{brew.methodName}</p>
-            <p className="coffee">{brew.coffee}g</p>
-            <p className="water">{brew.water}</p>
-            <p className="roasting">{brew.roasting}</p>
-            <p className="grind">{brew.grind}</p>
-            <div className="historyBtnContainer">
-              <button
-                onClick={() =>
-                  navigate(
-                    `/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`
-                  )
-                }
-              >
-                Go Brew
-              </button>
-              <button
-                onClick={() => {
-                  const result = saveFavourites(userEmail, brew);
-                  if (result) {
-                    setFavResponse(true);
-                    setFavUpdated(!favUpdated);
+      <>
+        <ul className="history">
+          {displayBrews.map((brew, index) => (
+            <li key={index}>
+              <p className="menu">{brew.menuName}</p>
+              <p className="method">{brew.methodName}</p>
+              <p className="coffee">{brew.coffee}g</p>
+              <p className="water">{brew.water}</p>
+              <p className="roasting">{brew.roasting}</p>
+              <p className="grind">{brew.grind}</p>
+              <div className="historyBtnContainer">
+                <button
+                  onClick={() =>
+                    navigate(
+                      `/menu/${brew.menuName}/method/${brew.methodName}/recipe/${brew.water}/${brew.coffee}/${brew.roasting}/${brew.grind}/brewing`
+                    )
                   }
-                }}
-              >
-                Save Fav
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
+                >
+                  Go Brew
+                </button>
+                <button
+                  onClick={() => {
+                    const result = saveFavourites(userEmail, brew);
+                    if (result) {
+                      setFavResponse(true);
+                      getFavUpdated(!favUpdated);
+                    }
+                  }}
+                >
+                  Save Fav
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <div className="moreBtn">
+          <button
+            onClick={() => {
+              setChangeHistory((prev) => !prev);
+            }}
+          >
+            {changeHistory ? "Check first 5 Brews" : "Check rest of the Brews"}
+          </button>
+        </div>
+      </>
     );
   } else if (oldBrews.length === 0) {
     return (
