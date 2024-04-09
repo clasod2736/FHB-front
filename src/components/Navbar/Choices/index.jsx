@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 //utils and api
-import { getOldbrews } from "../../../api/oldBrews";
+import { getOldbrews } from "../../../api/getOldbrews";
 import getChoices from "../../../util/getChoice";
 import getTime from "../../../util/getTime";
 

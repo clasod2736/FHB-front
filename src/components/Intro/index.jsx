@@ -3,8 +3,9 @@ import "./Intro.css";
 import Logo from "./Logo";
 
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useSelector } from "react-redux";
+
+import { getRecentbrews } from "../../api/getRecentbrew";
 
 export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
@@ -18,22 +19,9 @@ export default function Intro() {
   //fetch data for get recent brew data.
   useEffect(() => {
     if (isLogIn) {
-      async function fetchDatas() {
-        const serverUrl = `${heroku}/getRecentbrew`;
-
-        try {
-          const response = await axios.get(serverUrl, {
-            params: {
-              email: userEmail,
-            },
-          });
-
-          setRecentBrew(response.data);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-      fetchDatas();
+      const fetchedRecentBrew = getRecentbrews(isLogIn, userEmail);
+      setRecentBrew(fetchedRecentBrew);
+      console.log("Recent brew loaded.");
     } else if (!isLogIn) {
     }
   }, [isLogIn, userEmail, heroku]);
