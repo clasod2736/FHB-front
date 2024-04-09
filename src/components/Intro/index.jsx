@@ -23,7 +23,9 @@ export default function Intro() {
       setRecentBrew(fetchedRecentBrew);
     } else if (!isLogIn) {
     }
-  }, [isLogIn, userEmail, heroku]);
+  }, [isLogIn, userEmail]);
+
+  console.log(recentBrew);
 
   //Set right Buttons with loggedIn or not
   const settingButtons = () => {

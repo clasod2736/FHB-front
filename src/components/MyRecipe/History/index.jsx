@@ -22,7 +22,7 @@ export default function History(changeHistory, setFavUpdated, favUpdated) {
       setOldBrews(fetchedOldbrews);
     }
     fetchData();
-  }, [userEmail]);
+  }, [userEmail, changeHistory]);
 
   //alert if fav storage is full
   useEffect(() => {
