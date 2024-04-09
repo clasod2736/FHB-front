@@ -34,16 +34,14 @@ export default function MyRecipe() {
     }
   }, [favResponse]);
 
-  console.log(
-    handleHistory(
-      userEmail,
-      oldBrews,
-      changeHistory,
-      setFavResponse,
-      setFavUpdated,
-      favUpdated,
-      favResponse
-    )
+  const settingHistory = handleHistory(
+    userEmail,
+    oldBrews,
+    changeHistory,
+    setFavResponse,
+    setFavUpdated,
+    favUpdated,
+    favResponse
   );
 
   return (
@@ -68,15 +66,7 @@ export default function MyRecipe() {
               <p className="grind">Grind</p>
               <p className="functions">Functions</p>
             </div>
-            {handleHistory(
-              userEmail,
-              oldBrews,
-              changeHistory,
-              setFavResponse,
-              setFavUpdated,
-              favUpdated,
-              favResponse
-            )}
+            {settingHistory}
             <div className="moreBtn">
               <button
                 onClick={() => {

@@ -11,9 +11,11 @@ export default function handleHistory(
   favUpdated,
   favResponse
 ) {
+  console.log("working?");
   if (oldBrews.length > 0) {
     const sortedBrews = oldBrews.sort((a, b) => b.order - a.order);
     const displayBrews = changeHistory ? sortedBrews.slice(5, 10) : sortedBrews.slice(0, 5);
+    console.log("History generated.");
 
     return (
       <ul className="history">
