@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
 import { updateEmail } from "./store/action";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 //Components
 import {
@@ -22,37 +23,37 @@ import {
 
 const heroku = process.env.REACT_APP_HEROKU_URL;
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <p>Not Found 404!!</p>,
-    children: [
-      { index: true, element: <Intro /> },
-      { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> },
-      { path: "/myRecipe", element: <MyRecipe /> },
-      { path: "/menu", element: <Menu /> },
-      { path: "/menu/:menuName/method", element: <Methods /> },
-      { path: "/menu/:menuName/method/:methodName/recipe", element: <Recipe /> },
-      {
-        path: "/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing",
-        element: <Brewing />,
-      },
-      {
-        path: "/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing/finish",
-        element: <Finish />,
-      },
-      //Just for browsing
-      { path: "/method", element: <Methods /> },
-      { path: "/finish", element: <Finish /> },
-      { path: "/recipe", element: <Recipe /> },
-    ],
-  },
-]);
-
 export default function App() {
   const dispatch = useDispatch();
+  const isLogIn = useSelector((state) => state.logIn);
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      errorElement: <p>Not Found 404!!</p>,
+      children: [
+        { index: true, element: <Intro /> },
+        { path: "/login", element: <Login /> },
+        { path: "/register", element: <Register /> },
+        { path: "/myRecipe", element: isLogIn ? <MyRecipe /> : <Intro /> },
+        { path: "/menu", element: isLogIn ? <Menu /> : <Intro /> },
+        { path: "/menu/:menuName/method", element: isLogIn ? <Methods /> : <Intro /> },
+        {
+          path: "/menu/:menuName/method/:methodName/recipe",
+          element: isLogIn ? <Recipe /> : <Intro />,
+        },
+        {
+          path: "/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing",
+          element: isLogIn ? <Brewing /> : <Intro />,
+        },
+        {
+          path: "/menu/:menuName/method/:methodName/recipe/:water/:coffee/:roasting/:grind/brewing/finish",
+          element: isLogIn ? <Finish /> : <Intro />,
+        },
+      ],
+    },
+  ]);
 
   /* check Local data exist and update redux store for when react-app refresh */
   // useEffect(() => {
