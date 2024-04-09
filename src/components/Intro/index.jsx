@@ -19,9 +19,8 @@ export default function Intro() {
   //fetch data for get recent brew data.
   useEffect(() => {
     if (isLogIn) {
-      const fetchedRecentBrew = getRecentbrews(isLogIn, userEmail);
+      const fetchedRecentBrew = getRecentbrews(userEmail);
       setRecentBrew(fetchedRecentBrew);
-      console.log("Recent brew loaded.");
     } else if (!isLogIn) {
     }
   }, [isLogIn, userEmail, heroku]);

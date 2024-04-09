@@ -63,7 +63,7 @@ export default function Choices({ click }) {
   useEffect(() => {
     if (isLogIn) {
       async function fetchingChoices() {
-        const response = await getOldbrews(isLogIn, userEmail);
+        const response = await getOldbrews(userEmail);
         const mostChoices = getChoices(response);
         mostChoices === null ? setData(null) : setData(mostChoices);
         console.log("Most Choice loaded");
