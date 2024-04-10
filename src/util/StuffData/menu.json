@@ -22,7 +22,8 @@
       "ingredients": [
         {
           "title": "Espresso",
-          "icon": "BiSolidCoffeeBean"
+          "icon": "BiSolidCoffeeBean",
+          "id": "espresso"
         }
       ]
     }
@@ -48,11 +49,12 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         {
           "title": "Water",
           "icon": "IoIosWater",
-          "class": "waterIcon"
+          "class": "waterIcon",
+          "id": "water"
         }
       ]
     }
@@ -79,11 +81,12 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         {
           "title": "Water",
           "icon": "IoIosWater",
-          "class": "waterIcon"
+          "class": "waterIcon",
+          "id": "water"
         }
       ]
     }
@@ -103,11 +106,12 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         {
           "title": "Water",
           "icon": "IoIosWater",
-          "class": "waterIcon"
+          "class": "waterIcon",
+          "id": "water"
         }
       ]
     }
@@ -134,11 +138,12 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         {
           "title": "Milk",
           "icon": "GiMilkCarton",
-          "class": "milkIcon"
+          "class": "milkIcon",
+          "id": "milk"
         }
       ]
     }
@@ -164,7 +169,7 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         { "title": "Milkfoam", "icon": "MilkFoam", "class": "milkFoamIcon" }
       ]
     }
@@ -206,13 +211,14 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         {
           "title": "Milk",
           "icon": "GiMilkCarton",
-          "class": "milkIcon"
+          "class": "milkIcon",
+          "id": "milk"
         },
-        { "title": "Chocolate", "icon": "GiChocolateBar", "class": "chocoIcon" }
+        { "title": "Chocolate", "icon": "GiChocolateBar", "class": "chocoIcon", "id": "choco" }
       ]
     }
   ],
@@ -234,7 +240,7 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         { "title": "Milkfoam", "icon": "MilkFoam", "class": "milkFoamIcon" }
       ]
     }
@@ -257,9 +263,10 @@
         {
           "title": "Milk",
           "icon": "GiMilkCarton",
-          "class": "milkIcon"
+          "class": "milkIcon",
+          "id": "milk"
         },
-        { "title": "Chai", "icon": "GiThreeLeaves", "class": "chaiIcon" }
+        { "title": "Chai", "icon": "GiThreeLeaves", "class": "chaiIcon", "id": "chai" }
       ]
     }
   ],
@@ -281,12 +288,14 @@
         {
           "title": "Milk",
           "icon": "GiMilkCarton",
-          "class": "milkIcon"
+          "class": "milkIcon",
+          "id": "milk"
         },
         {
           "title": "Turmeric",
           "icon": "GiPowder",
-          "class": "turmericIcon"
+          "class": "turmericIcon",
+          "id": "turmeric"
         }
       ]
     }
@@ -306,13 +315,19 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
         {
           "title": "Milk",
           "icon": "GiMilkCarton",
-          "class": "milkIcon"
+          "class": "milkIcon",
+          "id": "milk"
         },
-        { "title": "Icecream", "icon": "LiaIceCreamSolid", "class": "iceCreamIcon" }
+        {
+          "title": "Icecream",
+          "icon": "LiaIceCreamSolid",
+          "class": "iceCreamIcon",
+          "id": "iceCream"
+        }
       ]
     }
   ],
@@ -331,8 +346,13 @@
     },
     {
       "ingredients": [
-        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon" },
-        { "title": "Icecream", "icon": "LiaIceCreamSolid", "class": "iceCreamIcon" }
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean", "class": "beanIcon", "id": "espresso" },
+        {
+          "title": "Icecream",
+          "icon": "LiaIceCreamSolid",
+          "class": "iceCreamIcon",
+          "id": "iceCream"
+        }
       ]
     }
   ]
