@@ -8,7 +8,7 @@ import axios from "axios";
 import { preloadImg } from "../../util/getPreload";
 import getTime from "../../util/getTime";
 
-import FinalLogo from "../../../public/img/background/finalLogo2.jpg";
+import FinalLogo from "../../assets/img/finalLogo2.jpg";
 
 export default function Finish() {
   const userEmail = useSelector((state) => state.userEmail);
