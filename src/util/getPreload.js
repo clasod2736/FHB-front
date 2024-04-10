@@ -5,13 +5,12 @@ const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
   img: data.find((item) => item.img)?.img,
 }));
 
-console.log(menuImgArr);
-
 export function preloadingMenuImg() {
   menuImgArr.forEach((img) => {
     const image = new Image();
     image.src = img;
   });
+  console.log("Menu img preloaded.");
 }
 
 export const preloadImg = (imgAdd) => {
