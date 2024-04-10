@@ -274,6 +274,18 @@ export default function Menu() {
           };
 
           if (ing.icon === "MilkFoam") {
+            IconComponent = (icon) => {
+              return (
+                <div className="milkFoam">
+                  <div className="milkFoamIcon">
+                    <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
+                      <MilkFoam />
+                    </svg>
+                  </div>
+                  <p>Milkfoam</p>
+                </div>
+              );
+            };
           } else if (ing.icon === "BiSolidCoffeeBean") {
             IconComponent(BiSolidCoffeeBean);
           } else if (ing.icon === "IoIosWater") {
