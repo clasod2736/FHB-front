@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 //image
 import { Logo } from "../../assets";
-import { handleLogIn } from "../../api/logIn";
+import { handleLogIn, getAlertLogIn } from "../../api/handleLogIn";
 
 export default function Login() {
   const isLogIn = useSelector((state) => state.logIn);
@@ -48,17 +48,6 @@ export default function Login() {
     }
   };
 
-  // get alert if failed to get Login
-  const settingAlertUser = () => {
-    if (alertUser === "unmatched") {
-      return <p>* Sorry, We don't have matched user.</p>;
-    } else if (alertUser === "email") {
-      return <p>* Please include '@' to form of Email.</p>;
-    } else if (alertUser === "password") {
-      return <p>* Please put Password more than 1 letter.</p>;
-    }
-  };
-
   return (
     <div className="LoginContainer">
       <header>Log In</header>
@@ -72,10 +61,10 @@ export default function Login() {
           <div className="formGuide">
             <h1>Welcome!</h1>
             <p>
-              Hello explorer, login with <u>"test@"</u> for both ID and password.
+              Hello explorer, login with "<u>test@</u>" for both ID and password.
             </p>
             <p>
-              Or make your own ID with <u>"Join FHB"</u> at the bottom of the form.
+              Or make your own ID with "<u>Join FHB</u>" at the bottom of the form.
             </p>
           </div>
           <div className="email">
@@ -98,7 +87,7 @@ export default function Login() {
           </div>
           <div className="submit">
             <div className="loginContainer">
-              <div>{settingAlertUser()}</div>
+              <div>{getAlertLogIn(alertUser)}</div>
               <button
                 className="loginBtn"
                 onClick={() => {

@@ -1,0 +1,330 @@
+{
+  "espresso": [
+    { "id": "espresso" },
+    { "category": "blackCoffee" },
+    { "title": "Espresso" },
+    { "img": "/img/coffee/espresso.jpg" },
+    {
+      "description": [
+        "Bold Italian coffee, rich & concentrated.",
+        "Made by forcing hot wate",
+        "Through finely-ground beans."
+      ]
+    },
+    {
+      "specialty": [
+        "Crafting a perfect espresso",
+        "involves precise water-to-coffee ratio",
+        "essential for balanced flavor extraction."
+      ]
+    },
+    {
+      "ingredients": [
+        {
+          "title": "Espresso",
+          "icon": "BiSolidCoffeeBean"
+        }
+      ]
+    }
+  ],
+  "americano": [
+    { "id": "americano" },
+    { "category": "blackCoffee" },
+    { "title": "Americano" },
+    { "img": "/img/coffee/americano.jpg" },
+    {
+      "description": [
+        "Americano. A milder coffee drink",
+        "Made by espresso with hot water,",
+        "Resulting in a lighter flavor."
+      ]
+    },
+    {
+      "specialty": [
+        "Americano.",
+        "Creating a lighter flavor compared to a long black.",
+        "Water is added first, an Americano maintains the espresso's aroma and crema."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        {
+          "title": "Water",
+          "icon": "IoIosWater"
+        }
+      ]
+    }
+  ],
+  "longBlack": [
+    { "id": "longBlack" },
+    { "category": "blackCoffee" },
+    { "title": "Long Black" },
+    { "img": "/img/coffee/longBlack.jpg" },
+    {
+      "description": [
+        "Long black. coffee where hot water",
+        "is poured over double shots,",
+        "Offering a bold flavor with crema preservation."
+      ]
+    },
+    {
+      "specialty": [
+        "Pouring hot water over espresso shots,",
+        "Unlike an Americano,",
+        "Water is added after the espresso,",
+        "Preserving aroma and strength."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        {
+          "title": "Water",
+          "icon": "IoIosWater"
+        }
+      ]
+    }
+  ],
+  "coldBrew": [
+    { "id": "coldBrew" },
+    { "category": "blackCoffee" },
+    { "title": "Cold Brew" },
+    { "img": "/img/coffee/coldBrew.jpg" },
+    { "description": ["Cold brew.", "Coffee brewed with cold water", "Over an extended period."] },
+    {
+      "specialty": [
+        "Brewed in cold water over hours",
+        "Less acidic taste with subtle sweetness.",
+        "It's known for its bold yet mellow flavor profile."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        {
+          "title": "Water",
+          "icon": "IoIosWater"
+        }
+      ]
+    }
+  ],
+  "latte": [
+    { "id": "latte" },
+    { "category": "whiteCoffee" },
+    { "title": "Latte" },
+    { "img": "/img/coffee/latte.jpg" },
+    {
+      "description": [
+        "Espresso combined with milk",
+        "Resulting in a creamy",
+        "Balanced coffee drink."
+      ]
+    },
+    {
+      "specialty": [
+        "A classic coffee choice",
+        "Crafted by blending espresso with",
+        "Steamed milk for a creamy texture.",
+        "Its balanced flavor profile."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        {
+          "title": "Milk",
+          "icon": "GiMilkCarton"
+        }
+      ]
+    }
+  ],
+  "flatWhite": [
+    { "id": "flatWhite" },
+    { "category": "whiteCoffee" },
+    { "title": "Flat White" },
+    { "img": "/img/coffee/flatWhite.jpg" },
+    {
+      "description": [
+        "Creamy blend of espresso",
+        "It start from Australia.",
+        "Rich and Strong flavour profile."
+      ]
+    },
+    {
+      "specialty": [
+        "The Flat White melds rich espresso and velvety microfoam",
+        "Resulting in a balanced",
+        "Smooth coffee with a bold kick."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        { "title": "Milkfoam", "icon": "MilkFoam" }
+      ]
+    }
+  ],
+  "cappuccino": [
+    { "id": "cappuccino" },
+    { "category": "whiteCoffee" },
+    { "title": "Cappuccino" },
+    { "img": "/img/coffee/cappuccino.jpg" },
+    {
+      "description": ["A classic combo", "Espresso, steamed milk, foam", "In Cappuccino delight."]
+    },
+    {
+      "specialty": [
+        "Layers of espresso, steamed milk, and foam",
+        "Harmonize in a Cappuccino",
+        "Delivering a flavor with a creamy texture."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        { "title": "Milkfoam", "icon": "MilkFoam" }
+      ]
+    }
+  ],
+  "mocha": [
+    { "id": "mocha" },
+    { "category": "whiteCoffee" },
+    { "title": "Mocha" },
+    { "img": "/img/coffee/mocha.jpg" },
+    { "description": ["Mocha.", "Espresso meets rich chocolate", "For a divine treat."] },
+    {
+      "specialty": [
+        "Indulge in the Mocha's blend of espresso and cocoa",
+        "Creating a luxurious taste profile",
+        "Combines the best of coffee and chocolate."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        {
+          "title": "Milk",
+          "icon": "GiMilkCarton"
+        },
+        { "title": "Chocolate", "icon": "GiChocolateBar" }
+      ]
+    }
+  ],
+  "macchiato": [
+    { "id": "macchiato" },
+    { "category": "whiteCoffee" },
+    { "title": "Macchiato" },
+    { "img": "/img/coffee/macchiato.jpg" },
+    {
+      "description": ["Bold espresso with a milk stain", "The distinct Macchiato."]
+    },
+    {
+      "specialty": [
+        "With a touch of milk",
+        "Macchiato offers a strong",
+        "Espresso taste balanced",
+        "Making it a true espresso lover's choice."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        { "title": "Milkfoam", "icon": "MilkFoam" }
+      ]
+    }
+  ],
+  "chai": [
+    { "id": "chai" },
+    { "category": "otherCoffee" },
+    { "title": "Chai" },
+    { "img": "/img/coffee/chai.jpg" },
+    { "description": ["Warm spices and tea unite", "In the aromatic Chai Latte."] },
+    {
+      "specialty": [
+        "Experience the Turmeric Latte's vibrant",
+        "Turmeric, milk, and spices",
+        "Come together to offer a cozy, earthy taste."
+      ]
+    },
+    {
+      "ingredients": [
+        {
+          "title": "Milk",
+          "icon": "GiMilkCarton"
+        },
+        { "title": "Chai", "icon": "GiThreeLeaves" }
+      ]
+    }
+  ],
+  "turmeric": [
+    { "id": "turmeric" },
+    { "category": "otherCoffee" },
+    { "title": "turmeric" },
+    { "img": "/img/coffee/turmeric.jpg" },
+    { "description": ["Turmeric Latte.", "A blend of turmeric, milk, and spice."] },
+    {
+      "specialty": [
+        "Experience the Turmeric Latte's vibrant",
+        "Turmeric, milk, and spices",
+        "Come together to offer a cozy, earthy taste."
+      ]
+    },
+    {
+      "ingredients": [
+        {
+          "title": "Milk",
+          "icon": "GiMilkCarton"
+        },
+        {
+          "title": "Turmeric",
+          "icon": "GiPowder"
+        }
+      ]
+    }
+  ],
+  "icedCoffee": [
+    { "id": "icedCoffee" },
+    { "category": "otherCoffee" },
+    { "title": "Iced Coffee" },
+    { "img": "/img/coffee/icedCoffee.jpg" },
+    { "description": ["Iced Coffee.", "A sweety blend of", "Espresso, milk, and ice cream."] },
+    {
+      "specialty": [
+        "Iced Coffee, popular in Australia",
+        "Espresso, milk, and a scoop of vanilla ice cream over ice",
+        "Offering a creamy and invigorating coffee experience."
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        {
+          "title": "Milk",
+          "icon": "GiMilkCarton"
+        },
+        { "title": "Icecream", "icon": "LiaIceCreamSolid" }
+      ]
+    }
+  ],
+  "affogato": [
+    { "id": "affogato" },
+    { "category": "otherCoffee" },
+    { "title": "Affogato" },
+    { "img": "/img/coffee/affogato.jpg" },
+    { "description": ["Affogato.", "Espresso meets ice cream", "For a divine pairing."] },
+    {
+      "specialty": [
+        "Affogato's simple elegance shines",
+        "As espresso meets creamy ice cream",
+        "Creating a harmonious blend of hot and cold"
+      ]
+    },
+    {
+      "ingredients": [
+        { "title": "Espresso", "icon": "BiSolidCoffeeBean" },
+        { "title": "Icecream", "icon": "LiaIceCreamSolid" }
+      ]
+    }
+  ]
+}

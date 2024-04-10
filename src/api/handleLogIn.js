@@ -22,3 +22,14 @@ export const handleLogIn = async (email, password) => {
     console.log(error);
   }
 };
+
+// get alert if failed to get Login
+export const getAlertLogIn = (alertUser) => {
+  if (alertUser === "unmatched") {
+    return <p>* Sorry, We don't have matched user.</p>;
+  } else if (alertUser === "email") {
+    return <p>* Please include '@' to form of Email.</p>;
+  } else if (alertUser === "password") {
+    return <p>* Please put Password more than 1 letter.</p>;
+  }
+};
