@@ -1,3 +1,12 @@
+import menuArr from "../util/StuffData/menu.json";
+
+const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
+  name,
+  img: data.find((item) => item.img)?.img,
+}));
+
+console.log(menuImgArr);
+
 export function preloadingMenuImg(imageArr) {
   const result = imageArr.forEach((img) => {
     const image = new Image();
