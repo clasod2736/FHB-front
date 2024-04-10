@@ -22,7 +22,7 @@ export default function Login() {
 
   // Get api from database for userinformation.
   const getLogIn = async () => {
-    const response = handleLogIn;
+    const response = handleLogIn(email, password);
 
     if (password.length <= 1) {
       setAlertUser("password");
@@ -32,8 +32,6 @@ export default function Login() {
       navigate("/");
       return;
     }
-
-    console.log(`${response.data.email} Logged in.`);
 
     if (response) {
       dispatch({ type: "loginSuccess" });
@@ -73,9 +71,11 @@ export default function Login() {
         <div className="form">
           <div className="formGuide">
             <h1>Welcome!</h1>
-            <p>Hello explorer, easy to login with "test@" for both ID and password.</p>
             <p>
-              Or make your own ID with <u>Join FHB</u> at the bottom of the form.
+              Hello explorer, login with <u>"test@"</u> for both ID and password.
+            </p>
+            <p>
+              Or make your own ID with <u>"Join FHB"</u> at the bottom of the form.
             </p>
           </div>
           <div className="email">
