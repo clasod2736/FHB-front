@@ -363,11 +363,14 @@ export default function Menu() {
 
     if (!targetMenu) return null;
 
-    targetMenu[5].specialty.map((spec) => (
+    return (
       <div className="coffeeText" key={targetMenu[0].id}>
-        <p>{spec}</p>
+        {targetMenu[5].specialty.map((spec) => (
+          <p>{spec}</p>
+        ))}
+        ;
       </div>
-    ));
+    );
   };
 
   return (
