@@ -7,13 +7,11 @@ const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
 
 console.log(menuImgArr);
 
-export function preloadingMenuImg(imageArr) {
-  const result = imageArr.forEach((img) => {
+export function preloadingMenuImg() {
+  menuImgArr.forEach((img) => {
     const image = new Image();
     image.src = img;
   });
-
-  return result;
 }
 
 export const preloadImg = (imgAdd) => {

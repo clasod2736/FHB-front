@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import "./Intro.css";
 import Logo from "./Logo";
 
@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { getRecentbrews } from "../../api/getRecentbrew";
+import { preloadingMenuImg } from "../../util/getPreload";
 
 export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
@@ -13,6 +14,10 @@ export default function Intro() {
   const [recentBrew, setRecentBrew] = useState(null);
 
   const navigate = useNavigate();
+
+  useLayoutEffect(() => {
+    preloadingMenuImg();
+  });
 
   //fetch data for get recent brew data.
   useEffect(() => {
