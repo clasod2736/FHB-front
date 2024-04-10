@@ -32,7 +32,21 @@ export default function Menu() {
         setSideMenu("off");
       } else if (menuName === "") {
         setSideMenu("close");
-      } else if (menuName !== "off") {
+      } else if (
+        menuName === "espresso" ||
+        menuName === "americano" ||
+        menuName === "longBlack" ||
+        menuName === "coldBrew" ||
+        menuName === "latte" ||
+        menuName === "flatWhite" ||
+        menuName === "cappuccino" ||
+        menuName === "mocha" ||
+        menuName === "macchiato" ||
+        menuName === "chai" ||
+        menuName === "turmeric" ||
+        menuName === "icedCoffee" ||
+        menuName === "affogato"
+      ) {
         setSideMenu("open");
       }
     };
