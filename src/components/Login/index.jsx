@@ -8,9 +8,9 @@ import { useSelector } from "react-redux";
 
 //image
 import { Logo } from "../../assets";
+import { handleLogIn } from "../../api/logIn";
 
 const heroku = process.env.REACT_APP_HEROKU_URL;
-
 export default function Login() {
   const isLogIn = useSelector((state) => state.logIn);
 
@@ -22,48 +22,33 @@ export default function Login() {
 
   const navigate = useNavigate();
 
+  if (password.length <= 1) {
+    setAlertUser("password");
+    return;
+  } else if (isLogIn) {
+    alert("You Logged In Already.");
+    navigate("/");
+    return;
+  }
+
   // Get api from database for userinformation.
   const getLogIn = async () => {
-    const serverUrl = `${heroku}/login`;
+    const response = handleLogIn;
 
-    if (password.legth <= 1) {
-      setAlertUser("password");
-      return;
-    } else if (isLogIn) {
-      alert("You Logged In Already.");
-      navigate("/");
-      return;
-    }
+    console.log(`${response.data.email} Logged in.`);
 
-    try {
-      const response = await axios.post(
-        serverUrl,
-        {
-          email: email,
-          password: password,
-        },
-        { withCredentials: true }
-      );
+    if (response) {
+      dispatch({ type: "loginSuccess" });
+      dispatch(updateEmail(email));
+      setAlertUser(false);
 
-      console.log(`${response.data.email} Logged in.`);
-
-      if (response.status === 200) {
-        dispatch({ type: "loginSuccess" });
-        dispatch(updateEmail(email));
-        setAlertUser(false);
-
-        // save user LoggedIn history in local storage
-        // localStorage.setItem('userInfo', JSON.stringify(
-        //     {   userEmail : response.data.email,
-        //         isLoggedIn : true
-        //     }
-        // ))
-        navigate(`/`);
-      } else if (!response) {
-      }
-    } catch (error) {
-      setAlertUser("unmatched");
-      console.log(error);
+      // save user LoggedIn history in local storage
+      // localStorage.setItem('userInfo', JSON.stringify(
+      //     {   userEmail : response.data.email,
+      //         isLoggedIn : true
+      //     }
+      // ))
+      navigate(`/`);
     }
   };
 
@@ -90,8 +75,10 @@ export default function Login() {
         <div className="form">
           <div className="formGuide">
             <h1>Welcome!</h1>
-            <p>Please login your email first for the better experience.</p>
-            <p>and let's make Great Coffee today!</p>
+            <p>Hello explorer, easy to login with "test@" for both ID and password.</p>
+            <p>
+              Or make your own ID with <u>Join FHB</u> at the bottom of the form.
+            </p>
           </div>
           <div className="email">
             <p>Email</p>

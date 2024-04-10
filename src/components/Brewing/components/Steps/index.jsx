@@ -59,7 +59,6 @@ export default function Steps({ isMobile }) {
       //menu Steps
       const img = menuStepInfo[0].img;
       const direction = menuStepInfo[1].direction;
-      console.log(img, direction);
 
       return (
         <div className="menuSteps">
