@@ -166,6 +166,9 @@ export default function Menu() {
   const settingDescriptions = (menuName) => {
     const targetMenu = Object.values(menuInfo).find((menu) => menu[0]?.id === menuName);
     console.log(targetMenu);
+
+    if (!targetMenu) return null;
+
     return (
       <div className="titleText" key={targetMenu.id}>
         {targetMenu.description.map((desc, index) => (
