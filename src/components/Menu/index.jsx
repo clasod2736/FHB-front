@@ -260,6 +260,7 @@ export default function Menu() {
   //       );
   //     }
   //   };
+
   const settingIngs = (menuName) => {
     const targetMenu = Object.values(menuInfo).find((menu) => menu[0].id === menuName);
 
@@ -267,14 +268,42 @@ export default function Menu() {
 
     return (
       <div className="titleText" key={targetMenu.id}>
-        {targetMenu[6].ingredients.map((ing) => (
-          <span key={targetMenu[0].id}>
-            <div className={targetMenu[0].id}>
-              <ing.icon className="beanIcon" />
-              <p>{ing.title}</p>
-            </div>
-          </span>
-        ))}
+        {targetMenu[6].ingredients.map((ing) => {
+          let IconComponent;
+
+          if (ing.icon === "MilkFoam") {
+            IconComponent = MilkFoam;
+          } else if (ing.icon === "BiSolidCoffeeBean") {
+            IconComponent = BiSolidCoffeeBean;
+          } else if (ing.icon === "IoIosWater") {
+            IconComponent = IoIosWater;
+          } else if (ing.icon === "GiMilkCarton") {
+            IconComponent = GiMilkCarton;
+          } else if (ing.icon === "GiChocolateBar") {
+            IconComponent = GiChocolateBar;
+          } else if (ing.icon === "GiThreeLeaves") {
+            IconComponent = GiThreeLeaves;
+          } else if (ing.icon === "GiPowder") {
+            IconComponent = GiPowder;
+          } else if (ing.icon === "LiaIceCreamSolid") {
+            IconComponent = LiaIceCreamSolid;
+          } else {
+            IconComponent = null;
+          }
+
+          if (!IconComponent) {
+            return null;
+          }
+
+          return (
+            <span key={targetMenu[0].id}>
+              <div className={targetMenu[0].id}>
+                <IconComponent className={ing.class} />
+                <p>{ing.title}</p>
+              </div>
+            </span>
+          );
+        })}
       </div>
     );
   };
