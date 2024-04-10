@@ -247,177 +247,127 @@ export default function Menu() {
     }
   };
 
-  //   const settingIngs = (menuName) => {
-  //     const targetMenu = Object.values(menuInfo).find((menu) => menu[0].id === menuName);
-
-  //     if (!targetMenu) return null;
-
-  //     return (
-  //       <div className="titleText" key={targetMenu.id}>
-  //         {targetMenu[6].ingredients.map((ing) => {
-  //           let IconComponent = null;
-
-  //           switch (ing.icon) {
-  //             case "BiSolidCoffeeBean":
-  //               IconComponent = espresso;
-  //               break;
-  //             case "IoIosWater":
-  //               IconComponent = water;
-  //               break;
-  //             case "GiMilkCarton":
-  //               IconComponent = milk;
-  //               break;
-  //             case "GiChocolateBar":
-  //               IconComponent = choco;
-  //               break;
-  //             case "GiThreeLeaves":
-  //               IconComponent = chai;
-  //               break;
-  //             case "GiPowder":
-  //               IconComponent = turmeric;
-  //               break;
-  //             case "LiaIceCreamSolid":
-  //               IconComponent = iceCream;
-  //               break;
-  //             case "MilkFoam":
-  //               IconComponent = () => {
-  //                 return (
-  //                   <div className="milkFoamIcon">
-  //                     <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
-  //                       <MilkFoam />
-  //                     </svg>
-  //                   </div>
-  //                 );
-  //               };
-  //               break;
-  //             default:
-  //               // Handle the case where the icon name is not recognized
-  //               IconComponent = null;
-  //               break;
-  //           }
-
-  //           return (
-  //             <span key={targetMenu[0].id}>
-  //               <div className={ing.id}>
-  //                 <IconComponent className={ing.class} />
-  //                 <p>{ing.title}</p>
-  //               </div>
-  //             </span>
-  //           );
-  //         })}
-  //       </div>
-  //     );
+  //   const settingSpecialty = () => {
+  //     if (menuName === "espresso") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Crafting a perfect espresso</p>
+  //           <p>involves precise water-to-coffee ratio,</p>
+  //           <p>essential for balanced flavor extraction.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "americano") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Americano.</p>
+  //           <p>creating a lighter flavor compared to a long black.</p>
+  //           <p>Water is added first, an Americano maintains the espresso's aroma and crema.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "longBlack") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Pouring hot water over espresso shots,</p>
+  //           <p>Unlike an Americano,</p>
+  //           <p>Water is added after the espresso,</p>
+  //           <p>preserving aroma and strength.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "coldBrew") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Brewed in cold water over hours</p>
+  //           <p>less acidic taste with subtle sweetness.</p>
+  //           <p>it's known for its bold yet mellow flavor profile.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "latte") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>A classic coffee choice</p>
+  //           <p>crafted by blending espresso with</p>
+  //           <p>steamed milk for a creamy texture.</p>
+  //           <p>Its balanced flavor profile</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "flatWhite") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>The Flat White melds rich espresso and velvety microfoam</p>
+  //           <p>resulting in a balanced</p>
+  //           <p>smooth coffee with a bold kick.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "cappuccino") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Layers of espresso, steamed milk, and foam</p>
+  //           <p>harmonize in a Cappuccino</p>
+  //           <p>delivering a flavor with a creamy texture.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "mocha") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Indulge in the Mocha's blend of espresso and cocoa</p>
+  //           <p>Creating a luxurious taste profile</p>
+  //           <p>Combines the best of coffee and chocolate.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "macchiato") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>With a touch of milk</p>
+  //           <p>Macchiato offers a strong</p>
+  //           <p>espresso taste balanced</p>
+  //           <p>making it a true espresso lover's choice.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "chai") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Experience the Turmeric Latte's vibrant</p>
+  //           <p>turmeric, milk, and spices</p>
+  //           <p>come together to offer a cozy, earthy taste.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "turmeric") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Experience the Turmeric Latte's vibrant</p>
+  //           <p>turmeric, milk, and spices</p>
+  //           <p>come together to offer a cozy, earthy taste.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "icedCoffee") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Iced Coffee, popular in Australia</p>
+  //           <p>Espresso, milk, and a scoop of vanilla ice cream over ice</p>
+  //           <p>offering a creamy and invigorating coffee experience.</p>
+  //         </div>
+  //       );
+  //     } else if (menuName === "affogato") {
+  //       return (
+  //         <div className="coffeeText">
+  //           <p>Affogato's simple elegance shines</p>
+  //           <p>as espresso meets creamy ice cream</p>
+  //           <p>creating a harmonious blend of hot and cold</p>
+  //         </div>
+  //       );
+  //     }
   //   };
 
-  const settingSpecialty = () => {
-    if (menuName === "espresso") {
-      return (
-        <div className="coffeeText">
-          <p>Crafting a perfect espresso</p>
-          <p>involves precise water-to-coffee ratio,</p>
-          <p>essential for balanced flavor extraction.</p>
-        </div>
-      );
-    } else if (menuName === "americano") {
-      return (
-        <div className="coffeeText">
-          <p>Americano.</p>
-          <p>creating a lighter flavor compared to a long black.</p>
-          <p>Water is added first, an Americano maintains the espresso's aroma and crema.</p>
-        </div>
-      );
-    } else if (menuName === "longBlack") {
-      return (
-        <div className="coffeeText">
-          <p>Pouring hot water over espresso shots,</p>
-          <p>Unlike an Americano,</p>
-          <p>Water is added after the espresso,</p>
-          <p>preserving aroma and strength.</p>
-        </div>
-      );
-    } else if (menuName === "coldBrew") {
-      return (
-        <div className="coffeeText">
-          <p>Brewed in cold water over hours</p>
-          <p>less acidic taste with subtle sweetness.</p>
-          <p>it's known for its bold yet mellow flavor profile.</p>
-        </div>
-      );
-    } else if (menuName === "latte") {
-      return (
-        <div className="coffeeText">
-          <p>A classic coffee choice</p>
-          <p>crafted by blending espresso with</p>
-          <p>steamed milk for a creamy texture.</p>
-          <p>Its balanced flavor profile</p>
-        </div>
-      );
-    } else if (menuName === "flatWhite") {
-      return (
-        <div className="coffeeText">
-          <p>The Flat White melds rich espresso and velvety microfoam</p>
-          <p>resulting in a balanced</p>
-          <p>smooth coffee with a bold kick.</p>
-        </div>
-      );
-    } else if (menuName === "cappuccino") {
-      return (
-        <div className="coffeeText">
-          <p>Layers of espresso, steamed milk, and foam</p>
-          <p>harmonize in a Cappuccino</p>
-          <p>delivering a flavor with a creamy texture.</p>
-        </div>
-      );
-    } else if (menuName === "mocha") {
-      return (
-        <div className="coffeeText">
-          <p>Indulge in the Mocha's blend of espresso and cocoa</p>
-          <p>Creating a luxurious taste profile</p>
-          <p>Combines the best of coffee and chocolate.</p>
-        </div>
-      );
-    } else if (menuName === "macchiato") {
-      return (
-        <div className="coffeeText">
-          <p>With a touch of milk</p>
-          <p>Macchiato offers a strong</p>
-          <p>espresso taste balanced</p>
-          <p>making it a true espresso lover's choice.</p>
-        </div>
-      );
-    } else if (menuName === "chai") {
-      return (
-        <div className="coffeeText">
-          <p>Experience the Turmeric Latte's vibrant</p>
-          <p>turmeric, milk, and spices</p>
-          <p>come together to offer a cozy, earthy taste.</p>
-        </div>
-      );
-    } else if (menuName === "turmeric") {
-      return (
-        <div className="coffeeText">
-          <p>Experience the Turmeric Latte's vibrant</p>
-          <p>turmeric, milk, and spices</p>
-          <p>come together to offer a cozy, earthy taste.</p>
-        </div>
-      );
-    } else if (menuName === "icedCoffee") {
-      return (
-        <div className="coffeeText">
-          <p>Iced Coffee, popular in Australia</p>
-          <p>Espresso, milk, and a scoop of vanilla ice cream over ice</p>
-          <p>offering a creamy and invigorating coffee experience.</p>
-        </div>
-      );
-    } else if (menuName === "affogato") {
-      return (
-        <div className="coffeeText">
-          <p>Affogato's simple elegance shines</p>
-          <p>as espresso meets creamy ice cream</p>
-          <p>creating a harmonious blend of hot and cold</p>
-        </div>
-      );
-    }
+  const settingSpecialties = (menuName) => {
+    const targetMenu = Object.values(menuInfo).find((menu) => menu[0].id === menuName);
+
+    if (!targetMenu) return null;
+
+    targetMenu[5].specialty.map((spec) => (
+      <div className="coffeeText" key={targetMenu[0].id}>
+        <p>{spec}</p>
+      </div>
+    ));
   };
 
   return (
@@ -572,7 +522,7 @@ export default function Menu() {
               </div>
               {settingIngredients()}
             </div>
-            {settingSpecialty()}
+            {settingSpecialties(menuName)}
             <span className="getMenuBtn">
               <button
                 onClick={() => {
