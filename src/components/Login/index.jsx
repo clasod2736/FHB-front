@@ -20,18 +20,18 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  if (password.length <= 1) {
-    setAlertUser("password");
-    return;
-  } else if (isLogIn) {
-    alert("You Logged In Already.");
-    navigate("/");
-    return;
-  }
-
   // Get api from database for userinformation.
   const getLogIn = async () => {
     const response = handleLogIn;
+
+    if (password.length <= 1) {
+      setAlertUser("password");
+      return;
+    } else if (isLogIn) {
+      alert("You Logged In Already.");
+      navigate("/");
+      return;
+    }
 
     console.log(`${response.data.email} Logged in.`);
 
