@@ -3,14 +3,12 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateEmail } from "../../store/action";
-import axios from "axios";
 import { useSelector } from "react-redux";
 
 //image
 import { Logo } from "../../assets";
 import { handleLogIn } from "../../api/logIn";
 
-const heroku = process.env.REACT_APP_HEROKU_URL;
 export default function Login() {
   const isLogIn = useSelector((state) => state.logIn);
 
