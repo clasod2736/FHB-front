@@ -8,13 +8,13 @@ const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
 export function preloadingMenuImg() {
   menuImgArr.forEach((img) => {
     const image = new Image();
-    image.src = img;
+    image.src = img.img;
   });
   console.log("Menu img preloaded.");
 }
 
 export const preloadImg = (imgAdd) => {
   let img = new Image();
-  img.src = img;
+  img.src = imgAdd;
   console.log("Final logo preloaded.");
 };
