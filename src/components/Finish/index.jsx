@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import "./Finish.css";
 
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
+import { preloadImg } from "../../util/getPreload";
 import getTime from "../../util/getTime";
 
 export default function Finish() {
@@ -19,6 +20,10 @@ export default function Finish() {
   const navigate = useNavigate();
 
   const heroku = process.env.REACT_APP_HEROKU_URL;
+
+  useLayoutEffect(() => {
+    preloadImg();
+  }, []);
 
   //Automatically Post brew history in DB after finish brewing
   useEffect(() => {

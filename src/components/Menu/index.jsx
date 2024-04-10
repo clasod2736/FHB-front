@@ -295,7 +295,7 @@ export default function Menu() {
           return (
             <span key={targetMenu[0].id}>
               <div className={targetMenu[0].id}>
-                <IconComponent />
+                <IconComponent className={ing.class} />
                 <p>{ing.title}</p>
               </div>
             </span>
