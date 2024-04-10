@@ -4,10 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 //Icons
 import { MilkFoam } from "../../assets";
-import { BiSolidCoffeeBean } from "react-icons/bi";
-import { IoIosWater } from "react-icons/io";
-import { GiMilkCarton, GiChocolateBar, GiThreeLeaves, GiPowder } from "react-icons/gi";
-import { LiaIceCreamSolid } from "react-icons/lia";
+import { espresso, water, milk, choco, chai, turmeric, iceCream } from "../../util/StuffData/Icons";
 
 import menuInfo from "../../util/StuffData/menu.json";
 
@@ -18,7 +15,6 @@ export default function Menu() {
   const navigate = useNavigate();
 
   //handling Side-Menu
-
   const handleMenuContents = () => {
     if (sideMenu === "off") {
       return "menuContentsOff";
@@ -36,21 +32,7 @@ export default function Menu() {
         setSideMenu("off");
       } else if (menuName === "") {
         setSideMenu("close");
-      } else if (
-        menuName === "espresso" ||
-        menuName === "americano" ||
-        menuName === "longBlack" ||
-        menuName === "coldBrew" ||
-        menuName === "latte" ||
-        menuName === "flatWhite" ||
-        menuName === "cappuccino" ||
-        menuName === "mocha" ||
-        menuName === "macchiato" ||
-        menuName === "chai" ||
-        menuName === "turmeric" ||
-        menuName === "icedCoffee" ||
-        menuName === "affogato"
-      ) {
+      } else if (menuName !== "off") {
         setSideMenu("open");
       }
     };
@@ -269,42 +251,47 @@ export default function Menu() {
     return (
       <div className="titleText" key={targetMenu.id}>
         {targetMenu[6].ingredients.map((ing) => {
-          let IconComponent = (icon) => {
-            return <icon className={ing.class} />;
-          };
+          let IconComponent = null;
 
-          if (ing.icon === "MilkFoam") {
-            IconComponent = (icon) => {
-              return (
-                <div className="milkFoam">
+          switch (ing.icon) {
+            case "BiSolidCoffeeBean":
+              IconComponent = espresso;
+              break;
+            case "IoIosWater":
+              IconComponent = water;
+              break;
+            case "GiMilkCarton":
+              IconComponent = milk;
+              break;
+            case "GiChocolateBar":
+              IconComponent = choco;
+              break;
+            case "GiThreeLeaves":
+              IconComponent = chai;
+              break;
+            case "GiPowder":
+              IconComponent = turmeric;
+              break;
+            case "LiaIceCreamSolid":
+              IconComponent = iceCream;
+              break;
+            case "MilkFoam":
+              IconComponent = () => {
+                return (
                   <div className="milkFoamIcon">
                     <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
                       <MilkFoam />
                     </svg>
                   </div>
-                  <p>Milkfoam</p>
-                </div>
-              );
-            };
-          } else if (ing.icon === "BiSolidCoffeeBean") {
-            IconComponent(BiSolidCoffeeBean);
-          } else if (ing.icon === "IoIosWater") {
-            IconComponent(IoIosWater);
-          } else if (ing.icon === "GiMilkCarton") {
-            IconComponent(GiMilkCarton);
-          } else if (ing.icon === "GiChocolateBar") {
-            IconComponent(GiChocolateBar);
-          } else if (ing.icon === "GiThreeLeaves") {
-            IconComponent(GiThreeLeaves);
-          } else if (ing.icon === "GiPowder") {
-            IconComponent(GiPowder);
-          } else if (ing.icon === "LiaIceCreamSolid") {
-            IconComponent(LiaIceCreamSolid);
+                );
+              };
+              break;
+            default:
+              // Handle the case where the icon name is not recognized
+              IconComponent = null;
+              break;
           }
 
-          if (!IconComponent) {
-            return null;
-          }
           return (
             <span key={targetMenu[0].id}>
               <div className={targetMenu[0].id}>
