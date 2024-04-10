@@ -8,6 +8,8 @@ import axios from "axios";
 import { preloadImg } from "../../util/getPreload";
 import getTime from "../../util/getTime";
 
+import FinishImg from "../../public/img/background/finalLogo2.jpg";
+
 export default function Finish() {
   const userEmail = useSelector((state) => state.userEmail);
 
@@ -22,7 +24,7 @@ export default function Finish() {
   const heroku = process.env.REACT_APP_HEROKU_URL;
 
   useLayoutEffect(() => {
-    preloadImg();
+    preloadImg(FinishImg);
   }, []);
 
   //Automatically Post brew history in DB after finish brewing

@@ -1,5 +1,3 @@
-import FinishImg from "../../public/img/background/finalLogo2.jpg";
-
 export function preloadingMenuImg(imageArr) {
   const result = imageArr.forEach((img) => {
     const image = new Image();
@@ -9,7 +7,8 @@ export function preloadingMenuImg(imageArr) {
   return result;
 }
 
-export const preloadImg = () => {
+export const preloadImg = (imgAdd) => {
   let img = new Image();
-  img.src = FinishImg;
+  img.src = img;
+  console.log("Final logo preloaded.");
 };
