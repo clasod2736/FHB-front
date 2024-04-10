@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 //Icons
 import { MilkFoam } from "../../assets";
-import { espresso, water, milk, choco, chai, turmeric, iceCream } from "../../util/StuffData/Icons";
+import { BiSolidCoffeeBean } from "react-icons/bi";
+import { IoIosWater } from "react-icons/io";
+import { GiMilkCarton, GiChocolateBar, GiThreeLeaves, GiPowder } from "react-icons/gi";
+import { LiaIceCreamSolid } from "react-icons/lia";
+// import { espresso, water, milk, choco, chai, turmeric, iceCream } from "../../util/StuffData/Icons";
 
 import menuInfo from "../../util/StuffData/menu.json";
 
@@ -32,21 +36,7 @@ export default function Menu() {
         setSideMenu("off");
       } else if (menuName === "") {
         setSideMenu("close");
-      } else if (
-        menuName === "espresso" ||
-        menuName === "americano" ||
-        menuName === "longBlack" ||
-        menuName === "coldBrew" ||
-        menuName === "latte" ||
-        menuName === "flatWhite" ||
-        menuName === "cappuccino" ||
-        menuName === "mocha" ||
-        menuName === "macchiato" ||
-        menuName === "chai" ||
-        menuName === "turmeric" ||
-        menuName === "icedCoffee" ||
-        menuName === "affogato"
-      ) {
+      } else if (menuName !== "off") {
         setSideMenu("open");
       }
     };
@@ -68,256 +58,257 @@ export default function Menu() {
     );
   };
 
-  //   const settingIngredients = () => {
-  //     if (menuName === "espresso") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "americano") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="water">
-  //             <IoIosWater className="waterIcon" />
-  //             <p>Water</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "longBlack") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="water">
-  //             <IoIosWater className="waterIcon" />
-  //             <p>Water</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "coldBrew") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="water">
-  //             <IoIosWater className="waterIcon" />
-  //             <p>Water</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "latte") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="milk">
-  //             <GiMilkCarton className="milkIcon" />
-  //             <p>Milk</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "flatWhite") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="milkFoam">
-  //             <div className="milkFoamIcon">
-  //               <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
-  //                 <MilkFoam />
-  //               </svg>
-  //             </div>
-  //             <p>Milkfoam</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "cappuccino") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="milkFoam">
-  //             <div className="milkFoamIcon">
-  //               <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
-  //                 <MilkFoam />
-  //               </svg>
-  //             </div>
-  //             <p>Milkfoam</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "mocha") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="milk">
-  //             <GiMilkCarton className="milkIcon" />
-  //             <p>Milk</p>
-  //           </div>
-  //           <div className="choco">
-  //             <GiChocolateBar className="chocoIcon" />
-  //             <p>Chocolate</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "macchiato") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="milkFoam">
-  //             <div className="milkFoamIcon">
-  //               <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
-  //                 <MilkFoam />
-  //               </svg>
-  //             </div>
-  //             <p>Milkfoam</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "chai") {
-  //       return (
-  //         <span>
-  //           <div className="milk">
-  //             <GiMilkCarton className="milkIcon" />
-  //             <p>Milk</p>
-  //           </div>
-  //           <div className="chai">
-  //             <GiThreeLeaves className="chaiIcon" />
-  //             <p>Chai</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "turmeric") {
-  //       return (
-  //         <span>
-  //           <div className="milk">
-  //             <GiMilkCarton className="milkIcon" />
-  //             <p>Milk</p>
-  //           </div>
-  //           <div className="turmericIng">
-  //             <GiPowder className="turmericIcon" />
-  //             <p>Turmeric</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "icedCoffee") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="milk">
-  //             <GiMilkCarton className="milkIcon" />
-  //             <p>Milk</p>
-  //           </div>
-  //           <div className="iceCream">
-  //             <LiaIceCreamSolid className="iceCreamIcon" />
-  //             <p>Icecream</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     } else if (menuName === "affogato") {
-  //       return (
-  //         <span>
-  //           <div className="espresso">
-  //             <BiSolidCoffeeBean className="beanIcon" />
-  //             <p>Espresso</p>
-  //           </div>
-  //           <div className="iceCream">
-  //             <LiaIceCreamSolid className="iceCreamIcon" />
-  //             <p>Icecream</p>
-  //           </div>
-  //         </span>
-  //       );
-  //     }
+  const settingIngredients = () => {
+    if (menuName === "espresso") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "americano") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="water">
+            <IoIosWater className="waterIcon" />
+            <p>Water</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "longBlack") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="water">
+            <IoIosWater className="waterIcon" />
+            <p>Water</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "coldBrew") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="water">
+            <IoIosWater className="waterIcon" />
+            <p>Water</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "latte") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="milk">
+            <GiMilkCarton className="milkIcon" />
+            <p>Milk</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "flatWhite") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="milkFoam">
+            <div className="milkFoamIcon">
+              <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
+                <MilkFoam />
+              </svg>
+            </div>
+            <p>Milkfoam</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "cappuccino") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="milkFoam">
+            <div className="milkFoamIcon">
+              <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
+                <MilkFoam />
+              </svg>
+            </div>
+            <p>Milkfoam</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "mocha") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="milk">
+            <GiMilkCarton className="milkIcon" />
+            <p>Milk</p>
+          </div>
+          <div className="choco">
+            <GiChocolateBar className="chocoIcon" />
+            <p>Chocolate</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "macchiato") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="milkFoam">
+            <div className="milkFoamIcon">
+              <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
+                <MilkFoam />
+              </svg>
+            </div>
+            <p>Milkfoam</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "chai") {
+      return (
+        <span>
+          <div className="milk">
+            <GiMilkCarton className="milkIcon" />
+            <p>Milk</p>
+          </div>
+          <div className="chai">
+            <GiThreeLeaves className="chaiIcon" />
+            <p>Chai</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "turmeric") {
+      return (
+        <span>
+          <div className="milk">
+            <GiMilkCarton className="milkIcon" />
+            <p>Milk</p>
+          </div>
+          <div className="turmericIng">
+            <GiPowder className="turmericIcon" />
+            <p>Turmeric</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "icedCoffee") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="milk">
+            <GiMilkCarton className="milkIcon" />
+            <p>Milk</p>
+          </div>
+          <div className="iceCream">
+            <LiaIceCreamSolid className="iceCreamIcon" />
+            <p>Icecream</p>
+          </div>
+        </span>
+      );
+    } else if (menuName === "affogato") {
+      return (
+        <span>
+          <div className="espresso">
+            <BiSolidCoffeeBean className="beanIcon" />
+            <p>Espresso</p>
+          </div>
+          <div className="iceCream">
+            <LiaIceCreamSolid className="iceCreamIcon" />
+            <p>Icecream</p>
+          </div>
+        </span>
+      );
+    }
+  };
+
+  //   const settingIngs = (menuName) => {
+  //     const targetMenu = Object.values(menuInfo).find((menu) => menu[0].id === menuName);
+
+  //     if (!targetMenu) return null;
+
+  //     return (
+  //       <div className="titleText" key={targetMenu.id}>
+  //         {targetMenu[6].ingredients.map((ing) => {
+  //           let IconComponent = null;
+
+  //           switch (ing.icon) {
+  //             case "BiSolidCoffeeBean":
+  //               IconComponent = espresso;
+  //               break;
+  //             case "IoIosWater":
+  //               IconComponent = water;
+  //               break;
+  //             case "GiMilkCarton":
+  //               IconComponent = milk;
+  //               break;
+  //             case "GiChocolateBar":
+  //               IconComponent = choco;
+  //               break;
+  //             case "GiThreeLeaves":
+  //               IconComponent = chai;
+  //               break;
+  //             case "GiPowder":
+  //               IconComponent = turmeric;
+  //               break;
+  //             case "LiaIceCreamSolid":
+  //               IconComponent = iceCream;
+  //               break;
+  //             case "MilkFoam":
+  //               IconComponent = () => {
+  //                 return (
+  //                   <div className="milkFoamIcon">
+  //                     <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
+  //                       <MilkFoam />
+  //                     </svg>
+  //                   </div>
+  //                 );
+  //               };
+  //               break;
+  //             default:
+  //               // Handle the case where the icon name is not recognized
+  //               IconComponent = null;
+  //               break;
+  //           }
+
+  //           return (
+  //             <span key={targetMenu[0].id}>
+  //               <div className={ing.id}>
+  //                 <IconComponent className={ing.class} />
+  //                 <p>{ing.title}</p>
+  //               </div>
+  //             </span>
+  //           );
+  //         })}
+  //       </div>
+  //     );
   //   };
 
-  const settingIngs = (menuName) => {
-    const targetMenu = Object.values(menuInfo).find((menu) => menu[0].id === menuName);
-
-    if (!targetMenu) return null;
-
-    return (
-      <div className="titleText" key={targetMenu.id}>
-        {targetMenu[6].ingredients.map((ing) => {
-          let IconComponent = null;
-
-          switch (ing.icon) {
-            case "BiSolidCoffeeBean":
-              IconComponent = espresso;
-              break;
-            case "IoIosWater":
-              IconComponent = water;
-              break;
-            case "GiMilkCarton":
-              IconComponent = milk;
-              break;
-            case "GiChocolateBar":
-              IconComponent = choco;
-              break;
-            case "GiThreeLeaves":
-              IconComponent = chai;
-              break;
-            case "GiPowder":
-              IconComponent = turmeric;
-              break;
-            case "LiaIceCreamSolid":
-              IconComponent = iceCream;
-              break;
-            case "MilkFoam":
-              IconComponent = () => {
-                return (
-                  <div className="milkFoamIcon">
-                    <svg width={"100%"} height={"100%"} viewBox="50 180 400 120">
-                      <MilkFoam />
-                    </svg>
-                  </div>
-                );
-              };
-              break;
-            default:
-              // Handle the case where the icon name is not recognized
-              IconComponent = null;
-              break;
-          }
-
-          return (
-            <span key={targetMenu[0].id}>
-              <div className={ing.id}>
-                <IconComponent className={ing.class} />
-                <p>{ing.title}</p>
-              </div>
-            </span>
-          );
-        })}
-      </div>
-    );
-  };
   const settingSpecialty = () => {
     if (menuName === "espresso") {
       return (
@@ -579,7 +570,7 @@ export default function Menu() {
                 <h3>Ingredients</h3>
                 <p>and breif specialty</p>
               </div>
-              {settingIngs(menuName)}
+              {settingIngredients()}
             </div>
             {settingSpecialty()}
             <span className="getMenuBtn">

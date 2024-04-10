@@ -1,3200 +1,3174 @@
 .menuContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+  height: 92vh;
+
+  animation: opacity 0.5s;
+
+  .menu {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    width: 1600px;
+    height: 95%;
 
-    width: 100%;
-    height: 92vh;
+    .menuTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 1000px;
+      height: 100px;
 
-    animation: opacity 0.5s;
+      font-size: 60px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border-bottom: 2px solid rgb(137, 85, 48);
+      letter-spacing: 3px;
+      color: rgb(137, 85, 48);
+    }
 
-    .menu {
+    .chociesContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: 1000px;
+
+      transition: all 0.5s linear;
+
+      .choices {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         align-items: center;
-        width: 1600px;
-        height: 95%;
 
-        .menuTitle {
+        width: 1300px;
+        height: 100%;
+
+        border-radius: 10px;
+
+        transition: 0.3s;
+
+        .blackCategory {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 80%;
+          height: 30%;
+
+          p {
+            text-align: center;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+            margin-bottom: 0;
+          }
+
+          img {
+            width: 80%;
+            height: 80%;
+
+            border-radius: 100%;
+            overflow: hidden;
+            object-fit: cover;
+          }
+          div {
+            transition: all 0.3s linear;
+          }
+
+          .blackCoffee {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 1000px;
-            height: 100px;
+            width: 25%;
+            height: 90%;
+            border-radius: 100%;
+            cursor: pointer;
+            transition: all 0.3s linear;
 
-            font-size: 60px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            border-bottom: 2px solid rgb(137, 85, 48);
-            letter-spacing: 3px;
-            color: rgb(137, 85, 48);
+            padding: 1%;
+
+            .longBlackImg {
+              object-position: 50% 70%;
+            }
+
+            &:hover {
+              transform: scale(1.05);
+              transition: 0.2s;
+
+              p {
+                text-shadow: 3px 3px lightgrey;
+                transition: 0.2s;
+              }
+
+              Img {
+                box-shadow: 2px 2px 3px 3px lightgrey;
+                transition: 0.2s;
+              }
+            }
+
+            &:hover:active {
+              p {
+                text-shadow: 0px 0px lightgrey;
+                transition: 0s;
+              }
+
+              Img {
+                box-shadow: 0px 0px lightgrey;
+                transition: 0s;
+              }
+            }
+          }
         }
-        
-        .chociesContainer {
+        .whiteCategory {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 100%;
+          height: 33%;
+
+          .flatWhiteImg {
+            object-position: 50% 100%;
+          }
+          .mochaImg {
+            object-position: 50% 80%;
+          }
+          .cappuccinoImg {
+            object-position: 50% 70%;
+          }
+          .macchiatoImg {
+            object-position: 50% 70%;
+          }
+
+          p {
+            text-align: center;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+            margin-bottom: 0;
+          }
+
+          img {
+            width: 90%;
+            height: 80%;
+
+            border-radius: 100%;
+            overflow: hidden;
+            object-fit: cover;
+          }
+
+          .whiteCoffee {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            height: 90%;
+            border-radius: 100%;
+            cursor: pointer;
+
+            transition: all 0.3s linear;
+
+            &:hover {
+              transform: scale(1.05);
+              transition: 0.2s;
+
+              p {
+                text-shadow: 3px 3px lightgrey;
+                transition: 0.2s;
+              }
+
+              img {
+                box-shadow: 2px 2px 3px 3px lightgrey;
+                transition: 0.2s;
+              }
+            }
+
+            &:hover:active {
+              p {
+                text-shadow: 0px 0px;
+                transition: 0s;
+              }
+
+              img {
+                box-shadow: 0px 0px lightgrey;
+                transition: 0s;
+              }
+            }
+          }
+        }
+        .othersCategory {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 80%;
+          height: 30%;
+
+          .icedCoffeeImg {
+            object-position: 50% 20%;
+          }
+
+          p {
+            text-align: center;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+
+            margin-bottom: 0;
+          }
+
+          img {
+            width: 80%;
+            height: 80%;
+
+            border-radius: 100%;
+            overflow: hidden;
+            object-fit: cover;
+          }
+
+          .otherCoffee {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 90%;
+            border-radius: 100%;
+            cursor: pointer;
+            transition: all 0.3s linear;
+
+            padding: 1%;
+
+            &:hover {
+              transform: scale(1.05);
+              transition: 0.2s;
+
+              p {
+                text-shadow: 3px 3px lightgrey;
+                transition: 0.2s;
+              }
+
+              img {
+                box-shadow: 2px 2px 3px 3px lightgrey;
+                transition: 0.2s;
+              }
+            }
+
+            &:active {
+              p {
+                text-shadow: 0px 0px;
+                transition: 0s;
+              }
+
+              img {
+                box-shadow: 0px 0px lightgrey;
+                transition: 0s;
+              }
+            }
+          }
+        }
+      }
+
+      //CSS for side pop-up
+      .menuContents {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+
+        border-radius: 20px;
+        border: rgb(160, 130, 116) 3px solid;
+        background-color: transparent;
+
+        animation: menuContents 0.8s;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+
+        transition: all 0.8s linear;
+
+        padding: 1%;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          height: 25%;
+
+          .titleandBtn {
             display: flex;
             flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 100%;
+            height: 30%;
+            min-width: 270px;
+
+            button {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              text-align: center;
+              color: saddlebrown;
+              font-size: 25px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: bold;
+              background-color: transparent;
+              border: none;
+              border-radius: 100%;
+              padding-inline: 0;
+
+              &:hover {
+                transform: scale(1.3);
+                transition: 0.3s;
+              }
+            }
+
+            header {
+              width: 70%;
+              font-size: 25px;
+              font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+                Arial, sans-serif;
+              color: linen;
+              background-color: saddlebrown;
+              font-weight: bold;
+              text-align: center;
+              text-transform: uppercase;
+
+              margin-left: 8%;
+              border-radius: 5px;
+            }
+          }
+
+          .titleText {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
 
             width: 100%;
-            height: 1000px;
+            height: 60%;
+            min-width: 300px;
 
-            transition: all 0.5s linear;
+            padding-inline: 2%;
 
-            .choices {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-    
-                width: 1300px;
-                height: 100%;
-    
-                border-radius: 10px;
+            p {
+              text-align: center;
+              font-size: 15px;
+              color: saddlebrown;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              text-align: center;
+              white-space: pre-line;
 
-                transition: 0.3s;
-    
-                .blackCategory {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    align-items: center;
-        
-                    width: 80%;
-                    height: 30%;
-        
-        
-                    p {
-                        text-align: center;
-                        font-size: 22px;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        
-                        margin-bottom: 0;
-                    }
-
-                    img {
-                        width: 80%;
-                        height: 80%;
-    
-                        border-radius: 100%;
-                        overflow: hidden;
-                        object-fit: cover;
-                    }
-                    div {
-                        transition: all 0.3s linear;
-                    }
-        
-                    .blackCoffee {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 25%;
-                        height: 90%;
-                        border-radius: 100%;
-                        cursor: pointer;
-                        transition: all 0.3s linear;
-        
-                        padding: 1%;
-
-                        .longBlackImg {
-                            object-position: 50% 70%;
-                        }
-        
-                        &:hover {
-        
-                            transform: scale(1.05);
-                            transition: 0.2s;
-    
-                             p{
-                                text-shadow: 3px 3px lightgrey;
-                                transition: 0.2s;
-                             }
-        
-                             Img {
-                                box-shadow: 2px 2px 3px 3px lightgrey;
-                                transition: 0.2s;
-                             }
-                        }
-        
-                        &:hover:active {
-        
-                            p {
-                                text-shadow: 0px 0px lightgrey;
-                                transition: 0s;
-                             }
-        
-                             Img {
-                                box-shadow: 0px 0px lightgrey;
-                                transition: 0s;
-                             }
-        
-                        }
-                    }
-                }
-                .whiteCategory {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    align-items: center;
-        
-                    width: 100%;
-                    height: 33%;
-
-                    .flatWhiteImg { object-position: 50% 100%; }
-                    .mochaImg { object-position: 50% 80%; }
-                    .cappuccinoImg { object-position: 50% 70%; }
-                    .macchiatoImg { object-position: 50% 70%; }
-
-        
-                    p {
-                        text-align: center;
-                        font-size: 22px;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        
-                        margin-bottom: 0;
-                    }
-
-                    img {
-                        width: 90%;
-                        height: 80%;
-    
-                        border-radius: 100%;
-                        overflow: hidden;
-                        object-fit: cover;
-                    }
-        
-                    .whiteCoffee {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 20%;
-                        height: 90%;
-                        border-radius: 100%;
-                        cursor: pointer;
-
-                        transition: all 0.3s linear;
-        
-                        &:hover {
-                            
-                            transform: scale(1.05);
-                            transition: 0.2s;
-    
-                             p{
-                                text-shadow: 3px 3px lightgrey;
-                                transition: 0.2s;
-                             }
-        
-                             img {
-                                box-shadow: 2px 2px 3px 3px lightgrey;
-                                transition: 0.2s;
-                             }
-                        }
-        
-                        &:hover:active {
-        
-                            p{
-                                text-shadow: 0px 0px;
-                                transition: 0s;
-                             }
-        
-                             img {
-                                box-shadow: 0px 0px lightgrey;
-                                transition: 0s;
-                             }
-                        }
-                    }
-                }
-                .othersCategory {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    align-items: center;
-        
-                    width: 80%;
-                    height: 30%;
-
-                    .icedCoffeeImg { object-position: 50% 20%; }
-        
-                    p {
-                        text-align: center;
-                        font-size: 22px;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        
-                        margin-bottom: 0;
-                    }
-
-                    img {
-                        width: 80%;
-                        height: 80%;
-    
-                        border-radius: 100%;
-                        overflow: hidden;
-                        object-fit: cover;
-                    }
-        
-                    .otherCoffee {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 25%;
-                        height: 90%;
-                        border-radius: 100%;
-                        cursor: pointer;
-                        transition: all 0.3s linear;
-        
-                        padding: 1%;
-        
-                        &:hover {
-    
-                            transform: scale(1.05);
-                            transition: 0.2s;
-        
-                             p{
-                                text-shadow: 3px 3px lightgrey;
-                                transition: 0.2s;
-                             }
-        
-                             img {
-                                box-shadow: 2px 2px 3px 3px lightgrey;
-                                transition: 0.2s;
-                             }
-                        }
-        
-                        &:active {
-        
-                            p{
-                                text-shadow: 0px 0px;
-                                transition: 0s;
-                             }
-        
-                             img {
-                                box-shadow: 0px 0px lightgrey;
-                                transition: 0s;
-                             }
-                        }
-                    }
-                }
+              margin-bottom: 3%;
             }
-            
-            //CSS for side pop-up
-            .menuContents {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                width: 300px;
-                height: 100%;
-                object-fit: cover;
-                overflow: hidden;
-    
-                border-radius: 20px;
-                border: rgb(160, 130, 116) 3px solid;
-                background-color: transparent;
-
-                animation: menuContents 0.8s;
-                animation-fill-mode: forwards;
-                animation-direction: alternate;
-
-                transition: all 0.8s linear;
-
-                padding: 1%;
-
-                .title {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 100%;
-                    height: 25%;
-
-                    .titleandBtn {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        width: 100%;
-                        height: 30%;
-                        min-width: 270px;
-                        
-                        button {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            text-align: center;
-                            color: saddlebrown;
-                            font-size: 25px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: bold;
-                            background-color: transparent;
-                            border: none;
-                            border-radius: 100%;
-                            padding-inline: 0;
-
-                            &:hover {
-                                transform: scale(1.3);
-                                transition: 0.3s;
-                            }
-                        }
-
-                        header {
-                            width: 70%;
-                            font-size: 25px;
-                            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                            color: linen;
-                            background-color: saddlebrown;
-                            font-weight: bold;
-                            text-align: center;
-                            text-transform: uppercase;
-
-                            margin-left: 8%;
-                            border-radius: 5px;
-                        }
-                    }
-
-                    .titleText {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        width: 100%;
-                        height: 60%;
-                        min-width: 300px;
-
-                        padding-inline: 2%;
-
-                        p {
-                            text-align: center;
-                            font-size: 15px;
-                            color: saddlebrown;
-                            font-family:Verdana, Geneva, Tahoma, sans-serif;
-                            text-align: center;
-                            white-space: pre-line;
-
-                            margin-bottom: 3%;
-                        }
-                    }
-
-                }
-                .ingredients {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 55%;
-
-                    border-block: 2px rgb(160, 130, 116) solid;
-
-                    min-width: 240px;
-
-                    padding-block: 3%;
-
-                    .ingredientsTitle {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        width: 100%;
-                        height: 20%;
-
-                        font-weight: bold;
-                        font-size: 18px;
-
-                        h3 {
-                            font-size: 25px;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color: sienna;
-                            font-weight: bold;
-
-                            margin-bottom: 0;
-                        }
-                        
-                        p {
-                            font-size: 13px;
-                            color: sandybrown;
-
-                            margin-bottom: 0;
-                        }
-                    }
-                    span {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-evenly;
-                        align-items: center;
-
-                        width: 110%;
-                        height: 30%;
-
-                        .espresso {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                            
-                            border-radius: 5px;
-                            background-color:#ffe0b5;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: saddlebrown;
-                                margin-bottom: 1%;
-                            }
-                            .beanIcon {
-                                height: 60%;
-                                font-size: 35px;
-                                color: #732400;
-                            }
-                        }
-                        .water {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                            border-radius: 5px;
-                            background-color:#ffe0b5;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: lightslategray;
-                                margin-bottom: 1%;
-                            }
-                            .waterIcon {
-                                height: 60%;
-                                font-size: 40px;
-                                color: slategrey;
-                            }
-                        }
-                        .milk {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                            border-radius: 5px;
-                            background-color: darkgoldenrod;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: linen;
-                                margin-bottom: 1%;
-                            }
-                            .milkIcon {
-                                height: 60%;
-                                font-size: 50px;
-                                color: linen;
-                            }
-                        }
-                        .milkFoam {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-
-                            border-radius: 5px;
-                            background-color: darkgoldenrod;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color:white;
-                                margin-bottom: 1%;
-                            }
-
-                        }
-                        .choco {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                            border-radius: 5px;
-                            background-color: burlywood;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: sienna;
-                                margin-bottom: 1%;
-                            }
-                            .chocoIcon {
-                                height: 60%;
-                                font-size: 50px;
-                                color: sienna;
-                            }
-                        }
-                        .chai {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                            border-radius: 5px;
-                            background-color: burlywood;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: brown;
-                                margin-bottom: 1%;
-                            }
-                            .chaiIcon {
-                                height: 60%;
-                                font-size: 35px;
-                                color: brown;
-                            }
-                        }
-                        .turmericIng {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                            border-radius: 5px;
-                            background-color: antiquewhite;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: goldenrod;
-                                margin-bottom: 1%;
-                            }
-                            .turmericIcon {
-                                height: 60%;
-                                font-size: 45px;
-                                color: goldenrod;
-                            }
-                        }
-                        .iceCream {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                            border-radius: 5px;
-                            background-color: rgb(247, 181, 159);
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: white;
-                                margin-bottom: 1%;
-                            }
-                            .iceCreamIcon {
-                                height: 60%;
-                                font-size: 50px;
-                                color: white;
-                            }
-                        }
-                    }
-                    
-                }
-                .coffeeText {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 50%;
-
-                    p {
-                        text-align: center;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        color: darkgoldenrod;
-
-                        margin-bottom: 5%;
-                    }
-                }
-                .getMenuBtn {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 15%;
-
-                    min-width: 300px;
-
-                    button {
-                        height: 50%;
-                        font-size: 25px;
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-                        background-color: wheat;
-                        color: sienna;
-
-                        border: #ad9984;
-                        border-radius: 10px;
-
-                        &:hover {
-                            background-color: saddlebrown;
-                            color: wheat;
-                            transition: 0.3s;
-                        }
-                    }
-                }
-            }
-            .menuContentsClose {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                width: 300px;
-                height: 100%;
-                object-fit: cover;
-                overflow: hidden;
-    
-                border-radius: 20px;
-                border: rgb(160, 130, 116) 3px solid;
-                background-color: transparent;
-
-                animation: menuContentsClose 0.8s;
-                animation-fill-mode: forwards;
-                animation-direction: alternate;
-
-                transition: all 0.8s linear;
-
-                padding: 1%;
-
-                .title {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 100%;
-                    height: 25%;
-
-                    .titleandBtn {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        width: 100%;
-                        height: 30%;
-                        min-width: 270px;
-                        
-                        button {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            text-align: center;
-                            color: saddlebrown;
-                            font-size: 25px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: bold;
-                            background-color: transparent;
-                            border: none;
-                            border-radius: 100%;
-                            padding-inline: 0;
-
-                            &:hover {
-                                transform: scale(1.3);
-                                transition: 0.3s;
-                            }
-                        }
-
-                        header {
-                            width: 70%;
-                            font-size: 25px;
-                            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                            color: linen;
-                            background-color: saddlebrown;
-                            font-weight: bold;
-                            text-align: center;
-                            text-transform: uppercase;
-
-                            margin-left: 8%;
-                            border-radius: 5px;
-                        }
-                    }
-
-                    .titleText {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        width: 100%;
-                        height: 60%;
-                        min-width: 300px;
-
-                        padding-inline: 2%;
-
-                        p {
-                            text-align: center;
-                            font-size: 15px;
-                            color: saddlebrown;
-                            font-family:Verdana, Geneva, Tahoma, sans-serif;
-                            text-align: center;
-                            white-space: pre-line;
-
-                            margin-bottom: 3%;
-                        }
-                    }
-
-                }
-                .ingredients {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 55%;
-
-                    border-block: 2px rgb(160, 130, 116) solid;
-
-                    min-width: 240px;
-
-                    padding-block: 3%;
-
-                    .ingredientsTitle {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        width: 100%;
-                        height: 20%;
-
-                        font-weight: bold;
-                        font-size: 18px;
-
-                        h3 {
-                            font-size: 25px;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            color: sienna;
-                            font-weight: bold;
-
-                            margin-bottom: 0;
-                        }
-                        
-                        p {
-                            font-size: 13px;
-                            color: sandybrown;
-
-                            margin-bottom: 0;
-                        }
-                    }
-                    span {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-evenly;
-                        align-items: center;
-
-                        width: 110%;
-                        height: 30%;
-                        
-                        div {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 30%;
-                            height: 70%;
-                        }
-
-                        .espresso {
-                            
-                            border-radius: 5px;
-                            background-color:#ffe0b5;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: saddlebrown;
-                                margin-bottom: 1%;
-                            }
-                            .beanIcon {
-                                height: 60%;
-                                font-size: 35px;
-                                color: #732400;
-                            }
-                        }
-                        .water {
-                            border-radius: 5px;
-                            background-color:#ffe0b5;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: lightslategray;
-                                margin-bottom: 1%;
-                            }
-                            .waterIcon {
-                                height: 60%;
-                                font-size: 40px;
-                                color: slategrey;
-                            }
-                        }
-                        .milk {
-                            border-radius: 5px;
-                            background-color: darkgoldenrod;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: linen;
-                                margin-bottom: 1%;
-                            }
-                            .milkIcon {
-                                height: 60%;
-                                font-size: 50px;
-                                color: linen;
-                            }
-                        }
-                        .milkFoam {
-
-                            border-radius: 5px;
-                            background-color: darkgoldenrod;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color:white;
-                                margin-bottom: 1%;
-                            }
-
-                        }
-                        .choco {
-                            border-radius: 5px;
-                            background-color: burlywood;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: sienna;
-                                margin-bottom: 1%;
-                            }
-                            .chocoIcon {
-                                height: 60%;
-                                font-size: 50px;
-                                color: sienna;
-                            }
-                        }
-                        .chai {
-                            border-radius: 5px;
-                            background-color: burlywood;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: brown;
-                                margin-bottom: 1%;
-                            }
-                            .chaiIcon {
-                                height: 60%;
-                                font-size: 35px;
-                                color: brown;
-                            }
-                        }
-                        .turmericIng {
-                            border-radius: 5px;
-                            background-color: antiquewhite;
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: goldenrod;
-                                margin-bottom: 1%;
-                            }
-                            .turmericIcon {
-                                height: 60%;
-                                font-size: 45px;
-                                color: goldenrod;
-                            }
-                        }
-                        .iceCream {
-                            border-radius: 5px;
-                            background-color: rgb(247, 181, 159);
-
-                            p {
-                                width: 100%;
-                                font-size: 16px;
-                                font-weight: bold;
-                                text-align: center;
-                                color: white;
-                                margin-bottom: 1%;
-                            }
-                            .iceCreamIcon {
-                                height: 60%;
-                                font-size: 50px;
-                                color: white;
-                            }
-                        }
-                    }
-                    
-                }
-                .coffeeText {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 50%;
-
-                    p {
-                        text-align: center;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        color: darkgoldenrod;
-
-                        margin-bottom: 5%;
-                    }
-                }
-                .getMenuBtn {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    width: 100%;
-                    height: 15%;
-
-                    min-width: 300px;
-
-                    button {
-                        height: 50%;
-                        font-size: 25px;
-                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-                        background-color: wheat;
-                        color: sienna;
-
-                        border: #ad9984;
-                        border-radius: 10px;
-
-                        &:hover {
-                            background-color: saddlebrown;
-                            color: wheat;
-                            transition: 0.3s;
-                        }
-                    }
-                }
-            }
-            .menuContentsOff {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                width: 0%;
-                height: 10%;
-                object-fit: cover;
-                overflow: hidden;
-            }
+          }
         }
+        .ingredients {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 100%;
+          height: 55%;
+
+          border-block: 2px rgb(160, 130, 116) solid;
+
+          min-width: 240px;
+
+          padding-block: 3%;
+
+          .ingredientsTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 20%;
+
+            font-weight: bold;
+            font-size: 18px;
+
+            h3 {
+              font-size: 25px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              color: sienna;
+              font-weight: bold;
+
+              margin-bottom: 0;
+            }
+
+            p {
+              font-size: 13px;
+              color: sandybrown;
+
+              margin-bottom: 0;
+            }
+          }
+          span {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 110%;
+            height: 30%;
+
+            .espresso {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+
+              border-radius: 5px;
+              background-color: #ffe0b5;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: saddlebrown;
+                margin-bottom: 1%;
+              }
+              .beanIcon {
+                height: 60%;
+                font-size: 35px;
+                color: #732400;
+              }
+            }
+            .water {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+              border-radius: 5px;
+              background-color: #ffe0b5;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: lightslategray;
+                margin-bottom: 1%;
+              }
+              .waterIcon {
+                height: 60%;
+                font-size: 40px;
+                color: slategrey;
+              }
+            }
+            .milk {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+              border-radius: 5px;
+              background-color: darkgoldenrod;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: linen;
+                margin-bottom: 1%;
+              }
+              .milkIcon {
+                height: 60%;
+                font-size: 50px;
+                color: linen;
+              }
+            }
+            .milkFoam {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+
+              border-radius: 5px;
+              background-color: darkgoldenrod;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                margin-bottom: 1%;
+              }
+            }
+            .choco {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+              border-radius: 5px;
+              background-color: burlywood;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: sienna;
+                margin-bottom: 1%;
+              }
+              .chocoIcon {
+                height: 60%;
+                font-size: 50px;
+                color: sienna;
+              }
+            }
+            .chai {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+              border-radius: 5px;
+              background-color: burlywood;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: brown;
+                margin-bottom: 1%;
+              }
+              .chaiIcon {
+                height: 60%;
+                font-size: 35px;
+                color: brown;
+              }
+            }
+            .turmericIng {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+              border-radius: 5px;
+              background-color: antiquewhite;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: goldenrod;
+                margin-bottom: 1%;
+              }
+              .turmericIcon {
+                height: 60%;
+                font-size: 45px;
+                color: goldenrod;
+              }
+            }
+            .iceCream {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+              border-radius: 5px;
+              background-color: rgb(247, 181, 159);
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                margin-bottom: 1%;
+              }
+              .iceCreamIcon {
+                height: 60%;
+                font-size: 50px;
+                color: white;
+              }
+            }
+          }
+        }
+        .coffeeText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          width: 100%;
+          height: 50%;
+
+          p {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: darkgoldenrod;
+
+            margin-bottom: 5%;
+          }
+        }
+        .getMenuBtn {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          width: 100%;
+          height: 15%;
+
+          min-width: 300px;
+
+          button {
+            height: 50%;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: wheat;
+            color: sienna;
+
+            border: #ad9984;
+            border-radius: 10px;
+
+            &:hover {
+              background-color: saddlebrown;
+              color: wheat;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+      .menuContentsClose {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+
+        border-radius: 20px;
+        border: rgb(160, 130, 116) 3px solid;
+        background-color: transparent;
+
+        animation: menuContentsClose 0.8s;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+
+        transition: all 0.8s linear;
+
+        padding: 1%;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          height: 25%;
+
+          .titleandBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            width: 100%;
+            height: 30%;
+            min-width: 270px;
+
+            button {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              text-align: center;
+              color: saddlebrown;
+              font-size: 25px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: bold;
+              background-color: transparent;
+              border: none;
+              border-radius: 100%;
+              padding-inline: 0;
+
+              &:hover {
+                transform: scale(1.3);
+                transition: 0.3s;
+              }
+            }
+
+            header {
+              width: 70%;
+              font-size: 25px;
+              font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+                Arial, sans-serif;
+              color: linen;
+              background-color: saddlebrown;
+              font-weight: bold;
+              text-align: center;
+              text-transform: uppercase;
+
+              margin-left: 8%;
+              border-radius: 5px;
+            }
+          }
+
+          .titleText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 60%;
+            min-width: 300px;
+
+            padding-inline: 2%;
+
+            p {
+              text-align: center;
+              font-size: 15px;
+              color: saddlebrown;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              text-align: center;
+              white-space: pre-line;
+
+              margin-bottom: 3%;
+            }
+          }
+        }
+        .ingredients {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 100%;
+          height: 55%;
+
+          border-block: 2px rgb(160, 130, 116) solid;
+
+          min-width: 240px;
+
+          padding-block: 3%;
+
+          .ingredientsTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 20%;
+
+            font-weight: bold;
+            font-size: 18px;
+
+            h3 {
+              font-size: 25px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              color: sienna;
+              font-weight: bold;
+
+              margin-bottom: 0;
+            }
+
+            p {
+              font-size: 13px;
+              color: sandybrown;
+
+              margin-bottom: 0;
+            }
+          }
+          span {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 110%;
+            height: 30%;
+
+            div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 30%;
+              height: 70%;
+            }
+
+            .espresso {
+              border-radius: 5px;
+              background-color: #ffe0b5;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: saddlebrown;
+                margin-bottom: 1%;
+              }
+              .beanIcon {
+                height: 60%;
+                font-size: 35px;
+                color: #732400;
+              }
+            }
+            .water {
+              border-radius: 5px;
+              background-color: #ffe0b5;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: lightslategray;
+                margin-bottom: 1%;
+              }
+              .waterIcon {
+                height: 60%;
+                font-size: 40px;
+                color: slategrey;
+              }
+            }
+            .milk {
+              border-radius: 5px;
+              background-color: darkgoldenrod;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: linen;
+                margin-bottom: 1%;
+              }
+              .milkIcon {
+                height: 60%;
+                font-size: 50px;
+                color: linen;
+              }
+            }
+            .milkFoam {
+              border-radius: 5px;
+              background-color: darkgoldenrod;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                margin-bottom: 1%;
+              }
+            }
+            .choco {
+              border-radius: 5px;
+              background-color: burlywood;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: sienna;
+                margin-bottom: 1%;
+              }
+              .chocoIcon {
+                height: 60%;
+                font-size: 50px;
+                color: sienna;
+              }
+            }
+            .chai {
+              border-radius: 5px;
+              background-color: burlywood;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: brown;
+                margin-bottom: 1%;
+              }
+              .chaiIcon {
+                height: 60%;
+                font-size: 35px;
+                color: brown;
+              }
+            }
+            .turmericIng {
+              border-radius: 5px;
+              background-color: antiquewhite;
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: goldenrod;
+                margin-bottom: 1%;
+              }
+              .turmericIcon {
+                height: 60%;
+                font-size: 45px;
+                color: goldenrod;
+              }
+            }
+            .iceCream {
+              border-radius: 5px;
+              background-color: rgb(247, 181, 159);
+
+              p {
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                margin-bottom: 1%;
+              }
+              .iceCreamIcon {
+                height: 60%;
+                font-size: 50px;
+                color: white;
+              }
+            }
+          }
+        }
+        .coffeeText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          width: 100%;
+          height: 50%;
+
+          p {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: darkgoldenrod;
+
+            margin-bottom: 5%;
+          }
+        }
+        .getMenuBtn {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          width: 100%;
+          height: 15%;
+
+          min-width: 300px;
+
+          button {
+            height: 50%;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: wheat;
+            color: sienna;
+
+            border: #ad9984;
+            border-radius: 10px;
+
+            &:hover {
+              background-color: saddlebrown;
+              color: wheat;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+      .menuContentsOff {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 0%;
+        height: 10%;
+        object-fit: cover;
+        overflow: hidden;
+      }
     }
+  }
 }
 
 //open and clode side pop-up
 @keyframes menuContents {
-    from {
-        width: 0;
-        height: 80%;
-        opacity: 0;
-    }
-    to {
-        width: 30%;
-        height: 80%;
-        opacity: 1;
-    }
+  from {
+    width: 0;
+    height: 80%;
+    opacity: 0;
+  }
+  to {
+    width: 30%;
+    height: 80%;
+    opacity: 1;
+  }
 }
 @keyframes menuContentsClose {
-    0% {
-        width: 30%;
-        height: 80%;
-        opacity: 1;
-    }
-    70% {
-        opacity: 0;
-    }
-    100% {
-        width: 0;
-        height: 80%;
-        opacity: 0;
-    }
+  0% {
+    width: 30%;
+    height: 80%;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    width: 0;
+    height: 80%;
+    opacity: 0;
+  }
 }
 
 @keyframes menuContentsMobile320 {
-    from {
-        width: 300px;
-        height: 0;
-        opacity: 0;
-    }
-    to {
-        width: 300px;
-        height: 190px;
-        opacity: 1;
-    }
+  from {
+    width: 300px;
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    width: 300px;
+    height: 190px;
+    opacity: 1;
+  }
 }
 @keyframes menuContentsCloseMobile320 {
-    0% {
-        width: 300px;
-        height: 190px;
-        opacity: 1;
-    }
-    70% {
-        opacity: 0;
-    }
-    100% {
-        width: 300px;
-        height: 0;
-        opacity: 0;
-    }
+  0% {
+    width: 300px;
+    height: 190px;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    width: 300px;
+    height: 0;
+    opacity: 0;
+  }
 }
 
 //Responsive web
-@media all and (min-width:320px) {
-    .menuContainer {
+@media all and (min-width: 320px) {
+  .menuContainer {
+    width: 100%;
+
+    .menu {
+      justify-content: flex-start;
+      width: 100%;
+      min-width: 320px;
+      height: 100%;
+
+      .menuTitle {
+        width: 70%;
+        height: 5%;
+        min-width: 280px;
+        max-width: 350px;
+        min-height: 40px;
+
+        font-size: 15px;
+
+        border-bottom: 1px solid rgb(137, 85, 48);
+      }
+
+      .chociesContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        min-width: 300px;
         width: 100%;
-        
-        .menu {
-            justify-content: flex-start;
+        height: 100%;
+
+        .choices {
+          justify-content: space-around;
+          width: 80%;
+          min-width: 300px;
+          max-width: 400px;
+          height: 65%;
+          max-height: 350px;
+
+          .blackCategory {
+            width: 85%;
+            height: 30%;
+
+            .blackCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                width: 100%;
+                min-height: 60%;
+                height: 70%;
+                max-height: 80%;
+              }
+
+              p {
+                font-size: 10px;
+              }
+
+              &:hover {
+                p {
+                  text-shadow: 2px 2px lightgrey;
+                }
+              }
+            }
+          }
+          .whiteCategory {
             width: 100%;
-            min-width: 320px;
-            height: 100%;
+            height: 33%;
 
-            .menuTitle {
-                width: 70%;
-                height: 5%;
-                min-width: 280px;
-                max-width: 350px;
-                min-height: 40px;
+            .whiteCoffee {
+              width: 18%;
 
+              img {
+                width: 100%;
+                min-height: 60%;
+                height: 60%;
+                max-height: 70%;
+              }
+
+              p {
+                font-size: 10px;
+              }
+            }
+          }
+          .othersCategory {
+            width: 85%;
+            height: 30%;
+
+            p {
+              font-size: 10px;
+            }
+
+            .otherCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                width: 100%;
+                min-height: 60%;
+                height: 70%;
+                max-height: 80%;
+              }
+            }
+          }
+        }
+
+        .menuContents {
+          flex-direction: column;
+          width: 300px;
+          height: 200px;
+          border: rgb(160, 130, 116) 2px solid;
+          border-radius: 5px;
+
+          animation: menuContentsMobile320 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding-block: 1%;
+
+          .title {
+            width: 100%;
+            height: 25px;
+            min-width: 50px;
+
+            .titleandBtn {
+              height: 100%;
+              justify-content: flex-start;
+              min-width: 50px;
+
+              button {
+                font-size: 15px;
+              }
+
+              header {
+                width: 90%;
                 font-size: 15px;
 
-                border-bottom: 1px solid rgb(137, 85, 48);
+                margin-left: 1%;
+              }
             }
+            .titleText {
+              display: none;
+            }
+          }
+          .ingredients {
+            height: 80px;
+            min-height: 50px;
+            justify-content: space-around;
 
-            .chociesContainer {
+            border-bottom: 1px rgb(160, 130, 116) solid;
+            border-top: 0;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 12px;
+              }
+
+              p {
+                display: none;
+              }
+            }
+            span {
+              flex-direction: row;
+              height: 60%;
+              width: 100%;
+
+              .espresso {
+                display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
-                min-width: 300px;
-                width: 100%;
-                height: 100%;
-
-                .choices {
-                    justify-content: space-around;
-                    width: 80%;
-                    min-width: 300px;
-                    max-width: 400px;
-                    height: 65%;
-                    max-height: 350px;
-
-                    .blackCategory{
-                        width: 85%;
-                        height: 30%;
-
-                        .blackCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                width: 100%;
-                                min-height: 60%;
-                                height: 70%;
-                                max-height: 80%;
-                            }
-                            
-                            p {
-                                font-size: 10px;
-                            }
-
-                            &:hover {
-                                p {
-                                    text-shadow: 2px 2px lightgrey;
-                                }
-                            }
-                        }
-                    }
-                    .whiteCategory{
-                        width: 100%;
-                        height: 33%;
-
-                        .whiteCoffee {
-                            width: 18%;
-
-                            img {
-                                width: 100%;
-                                min-height: 60%;
-                                height: 60%;
-                                max-height: 70%;
-                            }
-
-                            p {
-                                font-size: 10px;
-                            }
-                        }
-                    }
-                    .othersCategory {
-                        width: 85%;
-                        height: 30%;
-
-                        p {
-                            font-size: 10px;
-                        }
-
-                        .otherCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                width: 100%;
-                                min-height: 60%;
-                                height: 70%;
-                                max-height: 80%;
-                            }
-
-                        }
-                    }
-                }
-
-                .menuContents {
-                    flex-direction: column;
-                    width: 300px;
-                    height: 200px;
-                    border: rgb(160, 130, 116) 2px solid;
-                    border-radius: 5px;
-
-                    animation: menuContentsMobile320 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding-block: 1%;
-
-                    .title {
-                        width: 100%;
-                        height: 25px;
-                        min-width: 50px;
-                        
-                        .titleandBtn {
-                            height: 100%;
-                            justify-content: flex-start;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 15px;
-                            }
-
-                            header {
-                                width: 90%;
-                                font-size: 15px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: none;
-                        }
-                    }
-                    .ingredients {
-                        height: 80px;
-                        min-height: 50px;
-                        justify-content: space-around;
-
-                        border-bottom: 1px rgb(160, 130, 116) solid;
-                        border-top: 0;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 12px;
-                            }
-
-                            p {
-                                display: none;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            height: 60%;
-                            width: 100%;
-                            
-                            .espresso {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-
-                                p {
-                                    width: 100%;
-                                    font-size: 8px;
-                                }
-                                .beanIcon {
-                                    font-size: 20px;
-                                }
-                            }
-                            .water {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .milk {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .milkFoam {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .choco {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .chai {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .turmericIng {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .iceCream {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        height: 30%;
-
-                        margin-top: 2%;
-
-                        p {
-                            font-size: 8px;
-
-                            margin-bottom: 1%;
-                        }
-                    }
-                    .getMenuBtn {
-                        height: 15%;
-
-                        button {
-                            width: 80%;
-                            height: 100%;
-                            font-size: 12px;
-                        }
-                    }
-                }
-                .menuContentsClose {
-                    flex-direction: column;
-                    width: 300px;
-                    height: 200px;
-                    border: rgb(160, 130, 116) 2px solid;
-                    border-radius: 5px;
-
-                    animation: menuContentsCloseMobile320 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding-block: 1%;
-
-                    .title {
-                        width: 100%;
-                        height: 25px;
-                        min-width: 50px;
-                        
-                        .titleandBtn {
-                            height: 100%;
-                            justify-content: flex-start;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 15px;
-                            }
-
-                            header {
-                                width: 90%;
-                                font-size: 15px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: none;
-                        }
-                    }
-                    .ingredients {
-                        height: 80px;
-                        min-height: 50px;
-                        justify-content: space-around;
-
-                        border-bottom: 1px rgb(160, 130, 116) solid;
-                        border-top: 0;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 12px;
-                            }
-
-                            p {
-                                display: none;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            height: 60%;
-                            width: 100%;
-                            
-                            .espresso {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-
-                                p {
-                                    width: 100%;
-                                    font-size: 8px;
-                                }
-                                .beanIcon {
-                                    font-size: 20px;
-                                }
-                            }
-                            .water {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .milk {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .milkFoam {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .choco {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .chai {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .turmericIng {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                            .iceCream {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 15%;
-                                height: 100%;
-                                p {
-                                    font-size: 8px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        height: 30%;
-
-                        margin-top: 2%;
-
-                        p {
-                            font-size: 8px;
-
-                            margin-bottom: 1%;
-                        }
-                    }
-                    .getMenuBtn {
-                        height: 15%;
-
-                        button {
-                            width: 80%;
-                            height: 100%;
-                            font-size: 12px;
-                        }
-                    }
-                }
-                .menuContentsOff {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    width: 0%;
-                    height: 10%;
-                    object-fit: cover;
-                    overflow: hidden;
-                }
-            }
-        }
-    }
-}   
-@media all and (min-width:767px) {
-    .menuContainer {
-        width: 100%;
-        min-height: 600px;
-        
-        .menu {
-            justify-content: flex-start;
-            width: 97%;
-            min-width: 700px;
-            height: 100%;
-
-            .menuTitle {
-                width: 50%;
-                height: 5%;
-                min-width: 500px;
-                max-width: 80%;
-                min-height: 60px;
-
-                font-size: 30px;
-
-                border-bottom: 1px solid rgb(137, 85, 48);
-            }
-
-            .chociesContainer {
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                min-width: 700px;
-                min-height: 550px;
-                max-height: 600px;
-                width: 70%;
+
+                width: 15%;
+                height: 100%;
+
+                p {
+                  width: 100%;
+                  font-size: 8px;
+                }
+                .beanIcon {
+                  font-size: 20px;
+                }
+              }
+              .water {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .milk {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .milkFoam {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .choco {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .chai {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .turmericIng {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .iceCream {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+            }
+          }
+          .coffeeText {
+            height: 30%;
+
+            margin-top: 2%;
+
+            p {
+              font-size: 8px;
+
+              margin-bottom: 1%;
+            }
+          }
+          .getMenuBtn {
+            height: 15%;
+
+            button {
+              width: 80%;
+              height: 100%;
+              font-size: 12px;
+            }
+          }
+        }
+        .menuContentsClose {
+          flex-direction: column;
+          width: 300px;
+          height: 200px;
+          border: rgb(160, 130, 116) 2px solid;
+          border-radius: 5px;
+
+          animation: menuContentsCloseMobile320 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding-block: 1%;
+
+          .title {
+            width: 100%;
+            height: 25px;
+            min-width: 50px;
+
+            .titleandBtn {
+              height: 100%;
+              justify-content: flex-start;
+              min-width: 50px;
+
+              button {
+                font-size: 15px;
+              }
+
+              header {
+                width: 90%;
+                font-size: 15px;
+
+                margin-left: 1%;
+              }
+            }
+            .titleText {
+              display: none;
+            }
+          }
+          .ingredients {
+            height: 80px;
+            min-height: 50px;
+            justify-content: space-around;
+
+            border-bottom: 1px rgb(160, 130, 116) solid;
+            border-top: 0;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 12px;
+              }
+
+              p {
+                display: none;
+              }
+            }
+            span {
+              flex-direction: row;
+              height: 60%;
+              width: 100%;
+
+              .espresso {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+
+                p {
+                  width: 100%;
+                  font-size: 8px;
+                }
+                .beanIcon {
+                  font-size: 20px;
+                }
+              }
+              .water {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .milk {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .milkFoam {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .choco {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .chai {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .turmericIng {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+              .iceCream {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 15%;
+                height: 100%;
+                p {
+                  font-size: 8px;
+                }
+              }
+            }
+          }
+          .coffeeText {
+            height: 30%;
+
+            margin-top: 2%;
+
+            p {
+              font-size: 8px;
+
+              margin-bottom: 1%;
+            }
+          }
+          .getMenuBtn {
+            height: 15%;
+
+            button {
+              width: 80%;
+              height: 100%;
+              font-size: 12px;
+            }
+          }
+        }
+        .menuContentsOff {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          width: 0%;
+          height: 10%;
+          object-fit: cover;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 767px) {
+  .menuContainer {
+    width: 100%;
+    min-height: 600px;
+
+    .menu {
+      justify-content: flex-start;
+      width: 97%;
+      min-width: 700px;
+      height: 100%;
+
+      .menuTitle {
+        width: 50%;
+        height: 5%;
+        min-width: 500px;
+        max-width: 80%;
+        min-height: 60px;
+
+        font-size: 30px;
+
+        border-bottom: 1px solid rgb(137, 85, 48);
+      }
+
+      .chociesContainer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-width: 700px;
+        min-height: 550px;
+        max-height: 600px;
+        width: 70%;
+        height: 80%;
+
+        .choices {
+          justify-content: space-around;
+          width: 70%;
+          min-width: 400px;
+          max-width: 600px;
+          min-height: 550px;
+          max-height: 600px;
+          height: 90%;
+
+          .blackCategory {
+            width: 85%;
+            height: 30%;
+
+            .blackCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                min-height: 70%;
+                max-height: 70%;
+                width: 100%;
+                height: 70%;
+              }
+
+              p {
+                font-size: 13px;
+              }
+
+              &:hover {
+                p {
+                  text-shadow: 2px 2px lightgrey;
+                }
+              }
+            }
+          }
+          .whiteCategory {
+            width: 100%;
+            height: 33%;
+
+            .whiteCoffee {
+              width: 18%;
+
+              img {
+                min-height: 70%;
+                max-height: 70%;
+                width: 100%;
+                height: 70%;
+              }
+
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+          .othersCategory {
+            width: 85%;
+            height: 30%;
+
+            p {
+              font-size: 13px;
+            }
+
+            .otherCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                min-height: 70%;
+                max-height: 70%;
+                width: 100%;
+                height: 70%;
+              }
+            }
+          }
+        }
+
+        .menuContents {
+          flex-direction: column;
+          border: rgb(160, 130, 116) 2px solid;
+          min-height: 400px;
+          border-radius: 10px;
+
+          animation: menuContents 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding: 1%;
+          padding-block: 1%;
+
+          .title {
+            justify-content: flex-start;
+            width: 100%;
+            height: 130px;
+            min-width: 100px;
+
+            .titleandBtn {
+              height: 30%;
+              justify-content: flex-start;
+              min-width: 50px;
+
+              button {
+                font-size: 20px;
+              }
+
+              header {
+                width: 90%;
+                font-size: 15px;
+
+                margin-left: 1%;
+              }
+            }
+            .titleText {
+              display: flex;
+              height: 70%;
+              min-width: 200px;
+
+              p {
+                font-size: 12px;
+
+                margin-bottom: 1%;
+              }
+            }
+          }
+          .ingredients {
+            width: 95%;
+            min-width: 180px;
+            height: 130px;
+            min-height: 80px;
+            justify-content: space-around;
+
+            border-block: 1px rgb(160, 130, 116) solid;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 15px;
+              }
+
+              p {
+                display: flex;
+                font-size: 10px;
+              }
+            }
+            span {
+              flex-direction: row;
+              width: 110%;
+              height: 70%;
+
+              .espresso {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  width: 100%;
+                  font-size: 10px;
+                }
+                .beanIcon {
+                  font-size: 30px;
+                }
+              }
+              .water {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .milk {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .milkFoam {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
                 height: 80%;
 
-                .choices {
-                    justify-content: space-around;
-                    width: 70%;
-                    min-width: 400px;
-                    max-width: 600px;
-                    min-height: 550px;
-                    max-height: 600px;
-                    height: 90%;
-
-                    .blackCategory{
-                        width: 85%;
-                        height: 30%;
-
-                        .blackCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                min-height: 70%;
-                                max-height: 70%;
-                                width: 100%;
-                                height: 70%;
-                            }
-                            
-                            p {
-                                font-size: 13px;
-                            }
-
-                            &:hover {
-                                p {
-                                    text-shadow: 2px 2px lightgrey;
-                                }
-                            }
-                        }
-                    }
-                    .whiteCategory{
-                        width: 100%;
-                        height: 33%;
-
-                        .whiteCoffee {
-                            width: 18%;
-
-                            img {
-                                min-height: 70%;
-                                max-height: 70%;
-                                width: 100%;
-                                height: 70%;
-                            }
-
-                            p {
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                    .othersCategory {
-                        width: 85%;
-                        height: 30%;
-
-                        p {
-                            font-size: 13px;
-                        }
-
-                        .otherCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                min-height: 70%;
-                                max-height: 70%;
-                                width: 100%;
-                                height: 70%;
-                            }
-
-                        }
-                    }
+                p {
+                  font-size: 10px;
                 }
 
-                .menuContents {
-                    flex-direction: column;
-                    border: rgb(160, 130, 116) 2px solid;
-                    min-height: 400px;
-                    border-radius: 10px;
-
-                    animation: menuContents 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding: 1%;
-                    padding-block: 1%;
-
-                    .title {
-                        justify-content: flex-start;
-                        width: 100%;
-                        height: 130px;
-                        min-width: 100px;
-                        
-                        .titleandBtn {
-                            height: 30%;
-                            justify-content: flex-start;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 20px;
-                            }
-
-                            header {
-                                width: 90%;
-                                font-size: 15px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: flex;
-                            height: 70%;
-                            min-width: 200px;
-
-                            p {
-                                font-size: 12px;
-
-                                margin-bottom: 1%;
-                            }
-                        }
-                    }
-                    .ingredients {
-                        width: 95%;
-                        min-width: 180px;
-                        height: 130px;
-                        min-height: 80px;
-                        justify-content: space-around;
-
-                        border-block: 1px rgb(160, 130, 116) solid;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 15px;
-                            }
-
-                            p {
-                                display: flex;
-                                font-size: 10px;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            width: 110%;
-                            height: 70%;
-                            
-                            .espresso {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    width: 100%;
-                                    font-size: 10px;
-                                }
-                                .beanIcon {
-                                    font-size: 30px;
-                                }
-                            }
-                            .water {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .milk {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .milkFoam {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                
-                                p {
-                                    font-size: 10px;
-                                }
-
-                                .milkFoamIcon {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                            .choco {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .chai {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .turmericIng {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .iceCream {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        min-width: 200px;
-                        height: 25%;
-
-                        margin-top: 1%;
-
-                        p {
-                            font-size: 12px;
-
-                            margin-bottom: 2%;
-                        }
-                    }
-                    .getMenuBtn {
-                        width: 100%;
-                        height: 10%;
-                        
-                        button {
-                            min-width: 200px;
-                            width: 60%;
-                            height: 100%;
-                            font-size: 15px;
-                        }
-                    }
+                .milkFoamIcon {
+                  width: 100%;
+                  height: 100%;
                 }
-                .menuContentsClose{
-                    flex-direction: column;
-                    border: rgb(160, 130, 116) 2px solid;
-                    min-height: 400px;
-                    border-radius: 10px;
-
-                    animation: menuContentsClose 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding: 1%;
-                    padding-block: 1%;
-
-                    .title {
-                        justify-content: flex-start;
-                        width: 100%;
-                        height: 130px;
-                        min-width: 100px;
-                        
-                        .titleandBtn {
-                            height: 30%;
-                            justify-content: flex-start;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 20px;
-                            }
-
-                            header {
-                                width: 90%;
-                                font-size: 15px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: flex;
-                            height: 70%;
-                            min-width: 200px;
-
-                            p {
-                                font-size: 12px;
-
-                                margin-bottom: 1%;
-                            }
-                        }
-                    }
-                    .ingredients {
-                        width: 95%;
-                        min-width: 180px;
-                        height: 130px;
-                        min-height: 80px;
-                        justify-content: space-around;
-
-                        border-block: 1px rgb(160, 130, 116) solid;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 15px;
-                            }
-
-                            p {
-                                display: flex;
-                                font-size: 10px;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            width: 110%;
-                            height: 70%;
-                            
-                            .espresso {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    width: 100%;
-                                    font-size: 10px;
-                                }
-                                .beanIcon {
-                                    font-size: 30px;
-                                }
-                            }
-                            .water {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .milk {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .milkFoam {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                
-                                p {
-                                    font-size: 10px;
-                                }
-
-                                .milkFoamIcon {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                            .choco {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .chai {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .turmericIng {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                            .iceCream {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size: 10px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        min-width: 200px;
-                        height: 25%;
-
-                        margin-top: 1%;
-
-                        p {
-                            font-size: 12px;
-
-                            margin-bottom: 2%;
-                        }
-                    }
-                    .getMenuBtn {
-                        width: 100%;
-                        height: 10%;
-                        
-                        button {
-                            min-width: 200px;
-                            width: 60%;
-                            height: 100%;
-                            font-size: 15px;
-                        }
-                    }
-                }
-                .menuContentsOff {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    width: 0%;
-                    height: 0%;
-                    object-fit: cover;
-                    overflow: hidden;
-                }
-            }
-        }
-    }
-}
-@media all and (min-width:1279px) {
-    .menuContainer {
-        width: 100%;
-        min-height: 600px;
-        
-        .menu {
-            justify-content: flex-start;
-            width: 97%;
-            min-width: 700px;
-            height: 100%;
-
-            .menuTitle {
-                width: 50%;
-                height: 8%;
-                min-width: 800px;
-                max-width:80%;
-                min-height: 70px;
-
-                font-size: 40px;
-
-                border-bottom: 1px solid rgb(137, 85, 48);
-            }
-
-            .chociesContainer {
-                flex-direction: row;
+              }
+              .choco {
+                display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                min-width: 900px;
-                min-height: 550px;
-                max-height: 720px;
-                width: 70%;
-                height: 100%;
 
-                .choices {
-                    justify-content: space-around;
-                    min-width: 600px;
-                    max-width: 650px;
-                    min-height: 600px;
-                    max-height: 650px;
-                    height: 90%;
-
-                    .blackCategory{
-                        width: 85%;
-                        height: 30%;
-
-                        .blackCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                min-height: 70%;
-                                max-height: 70%;
-                                width: 100%;
-                                height: 70%;
-                            }
-                            
-                            p {
-                                font-size: 15px;
-                            }
-
-                            &:hover {
-                                p {
-                                    text-shadow: 2px 2px lightgrey;
-                                }
-                            }
-                        }
-                    }
-                    .whiteCategory{
-                        width: 100%;
-                        height: 33%;
-
-                        .whiteCoffee {
-                            width: 18%;
-
-                            img {
-                                min-height: 70%;
-                                max-height: 70%;
-                                width: 100%;
-                                height: 70%;
-                            }
-
-                            p {
-                                font-size: 15px;
-                            }
-                        }
-                    }
-                    .othersCategory {
-                        width: 85%;
-                        height: 30%;
-
-                        p {
-                            font-size: 15px;
-                        }
-
-                        .otherCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                min-height: 70%;
-                                max-height: 70%;
-                                width: 100%;
-                                height: 70%;
-                            }
-
-                        }
-                    }
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
                 }
-
-                .menuContents {
-                    flex-direction: column;
-                    border: rgb(160, 130, 116) 2px solid;
-                    min-height: 400px;
-                    border-radius: 10px;
-
-                    animation: menuContents 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding: 1%;
-                    padding-block: 1%;
-
-                    .title {
-                        justify-content: flex-start;
-                        width: 100%;
-                        height: 150px;
-                        min-width: 100px;
-                        
-                        .titleandBtn {
-                            height: 30%;
-                            justify-content: flex-start;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 25px;
-                            }
-
-                            header {
-                                width: 90%;
-                                font-size: 20px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: flex;
-                            height: 70%;
-                            min-width: 200px;
-
-                            p {
-                                font-size: 15px;
-
-                                margin-bottom: 1%;
-                            }
-                        }
-                    }
-                    .ingredients {
-                        width: 95%;
-                        min-width: 200px;
-                        height: 180px;
-                        min-height: 50px;
-                        justify-content: space-around;
-
-                        border-block: 1px rgb(160, 130, 116) solid;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 25px;
-                            }
-
-                            p {
-                                display: flex;
-                                font-size: 15px;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            width: 100%;
-                            height: 70%;
-                            
-                            .espresso {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                p {
-                                    width: 100%;
-                                    font-size: 15px;
-                                }
-                                .beanIcon {
-                                    font-size: 40px;
-                                }
-                            }
-                            .water {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                p {
-                                    font-size: 15px;
-                                }
-                            }
-                            .milk {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                p {
-                                    font-size: 15px;
-                                }
-                            }
-                            .milkFoam {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                
-                                p {
-                                    font-size: 15px;
-                                }
-
-                                .milkFoamIcon {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                            .choco {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                p {
-                                    font-size: 15px;
-                                }
-                            }
-                            .chai {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                p {
-                                    font-size: 15px;
-                                }
-                            }
-                            .turmericIng {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                p {
-                                    font-size: 15px;
-                                }
-                            }
-                            .iceCream {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 75%;
-                                p {
-                                    font-size: 15px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        min-width: 200px;
-                        height: 25%;
-
-                        margin-top: 1%;
-
-                        p {
-                            font-size: 12px;
-
-                            margin-bottom: 2%;
-                        }
-                    }
-                    .getMenuBtn {
-                        width: 100%;
-                        height: 12%;
-                        
-                        button {
-                            min-width: 200px;
-                            width: 80%;
-                            height: 100%;
-                            font-size: 20px;
-                        }
-                    }
-                }
-                .menuContentsClose {
-                    flex-direction: column;
-                    border: rgb(160, 130, 116) 2px solid;
-                    min-height: 400px;
-                    border-radius: 10px;
-
-                    animation: menuContentsClose 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding: 1%;
-                    padding-block: 2%;
-
-                    .title {
-                        justify-content: flex-start;
-                        width: 100%;
-                        height: 100px;
-                        min-width: 100px;
-                        
-                        .titleandBtn {
-                            height: 30%;
-                            justify-content: flex-start;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 25px;
-                            }
-
-                            header {
-                                width: 90%;
-                                font-size: 15px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: flex;
-                            height: 70%;
-                            min-width: 200px;
-
-                            p {
-                                font-size: 12px;
-
-                                margin-bottom: 1%;
-                            }
-                        }
-                    }
-                    .ingredients {
-                        width: 95%;
-                        height: 120px;
-                        min-height: 50px;
-                        justify-content: space-around;
-
-                        border-block:0;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 15px;
-                            }
-
-                            p {
-                                display: flex;
-                                font-size: 10px;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            width: 90%;
-                            height: 70%;
-
-                            div {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 90%;
-                            }
-                            
-                            .espresso {
-
-                                p {
-                                    width: 100%;
-                                    font-size: 13px;
-                                }
-                                .beanIcon {
-                                    font-size: 30px;
-                                }
-                            }
-                            .water {
-                                p {
-                                    font-size: 13px;
-                                }
-                            }
-                            .milk {
-                                p {
-                                    font-size: 13px;
-                                }
-                            }
-                            .milkFoam {
-                                p {
-                                    font-size: 13px;
-                                }
-                            }
-                            .choco {
-                                p {
-                                    font-size: 13px;
-                                }
-                            }
-                            .chai {
-                                p {
-                                    font-size: 13px;
-                                }
-                            }
-                            .turmericIng {
-                                p {
-                                    font-size: 13px;
-                                }
-                            }
-                            .iceCream {
-                                p {
-                                    font-size: 13px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        min-width: 200px;
-                        height: 25%;
-
-                        margin-top: 1%;
-
-                        p {
-                            font-size: 12px;
-
-                            margin-bottom: 0.5%;
-                        }
-                    }
-                    .getMenuBtn {
-                        width: 100%;
-                        height: 10%;
-                        
-                        button {
-                            min-width: 200px;
-                            width: 60%;
-                            height: 100%;
-                            font-size: 15px;
-                        }
-                    }
-                }
-                .menuContentsOff {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    width: 0%;
-                    height: 0%;
-                    object-fit: cover;
-                    overflow: hidden;
-                }
-            }
-        }
-    }
-}
-@media all and (min-width:1680px) {
-    .menuContainer {
-        width: 100%;
-        min-height: 1080px;
-        
-        .menu {
-            justify-content: flex-start;
-            width: 97%;
-            min-width: 1680px;
-            height: 90%;
-
-            .menuTitle {
-                width: 50%;
-                height: 8%;
-                min-width: 800px;
-                min-height: 80px;
-
-                font-size: 50px;
-
-                border-bottom: 1px solid rgb(137, 85, 48);
-            }
-
-            .chociesContainer {
-                flex-direction: row;
+              }
+              .chai {
+                display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                min-width: 900px;
-                max-width: 1250px;
-                min-height: 550px;
-                max-height: 900px;
-                width: 72%;
-                height: 100%;
 
-                .choices {
-                    justify-content: space-around;
-                    min-width: 900px;
-                    max-width: 900px;
-                    min-height: 750px;
-                    max-height: 85%;
-
-                    .blackCategory{
-                        width: 85%;
-                        height: 30%;
-
-                        .blackCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                min-height: 80%;
-                                max-height: 100%;
-                                width: 100%;
-                            }
-                            
-                            p {
-                                font-size: 18px;
-                            }
-
-                            &:hover {
-                                p {
-                                    text-shadow: 2px 2px lightgrey;
-                                }
-                            }
-                        }
-                    }
-                    .whiteCategory{
-                        width: 100%;
-                        height: 33%;
-
-                        .whiteCoffee {
-                            width: 18%;
-
-                            img {
-                                min-height: 80%;
-                                max-height: 100%;
-                                width: 100%;
-                            }
-
-                            p {
-                                font-size: 18px;
-                            }
-                        }
-                    }
-                    .othersCategory {
-                        width: 85%;
-                        height: 30%;
-
-                        p {
-                            font-size: 18px;
-                        }
-
-                        .otherCoffee {
-                            width: 25%;
-                            height: 100%;
-
-                            img {
-                                min-height: 80%;
-                                max-height: 100%;
-                                width: 100%;
-                            }
-
-                        }
-                    }
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
                 }
+              }
+              .turmericIng {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-                .menuContents {
-                    flex-direction: column;
-                    border: rgb(160, 130, 116) 2px solid;
-                    min-height: 400px;
-                    border-radius: 10px;
-
-                    animation: menuContents 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding: 1%;
-                    padding-block: 1%;
-
-                    .title {
-                        justify-content: flex-start;
-                        width: 100%;
-                        height: 200px;
-                        min-width: 300px;
-                        
-                        .titleandBtn {
-                            height: 30%;
-                            justify-content: center;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 30px;
-                            }
-
-                            header {
-                                width: 80%;
-                                font-size: 25px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: flex;
-                            height: 70%;
-                            min-width: 200px;
-
-                            p {
-                                font-size: 18px;
-
-                                margin-bottom: 1%;
-                            }
-                        }
-                    }
-                    .ingredients {
-                        width: 95%;
-                        min-width: 300px;
-                        height: 200px;
-                        min-height: 50px;
-                        justify-content: space-around;
-
-                        border-block: 1px rgb(160, 130, 116) solid;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 25px;
-                            }
-
-                            p {
-                                display: flex;
-                                font-size: 15px;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            width: 110%;
-                            height: 70%;
-                            
-                            .espresso {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    width: 100%;
-                                    font-size:16px;
-                                }
-                                .beanIcon {
-                                    font-size: 45px;
-                                }
-                            }
-                            .water {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                                .waterIcon {
-                                    font-size: 50px;
-                                }
-                            }
-                            .milk {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .milkFoam {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                
-                                p {
-                                    font-size:16px;
-                                }
-
-                                .milkFoamIcon {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                            .choco {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .chai {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .turmericIng {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .iceCream {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        min-width: 300px;
-                        height: 25%;
-
-                        margin-top: 1%;
-
-                        p {
-                            font-size: 16px;
-
-                            margin-bottom: 2%;
-                        }
-                    }
-                    .getMenuBtn {
-                        width: 100%;
-                        min-width: 300px;
-                        height: 10%;
-                        
-                        button {
-                            min-width: 250px;
-                            width: 90%;
-                            height: 100%;
-                            font-size: 25px;
-                        }
-                    }
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
                 }
-                .menuContentsClose {
-                    flex-direction: column;
-                    border: rgb(160, 130, 116) 2px solid;
-                    min-height: 400px;
-                    border-radius: 10px;
+              }
+              .iceCream {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-                    animation: menuContentsClose 0.8s;
-                    animation-fill-mode: forwards;
-                    animation-direction: alternate;
-
-                    padding: 1%;
-                    padding-block: 1%;
-
-                    .title {
-                        justify-content: flex-start;
-                        width: 100%;
-                        height: 200px;
-                        min-width: 300px;
-                        
-                        .titleandBtn {
-                            height: 30%;
-                            justify-content: center;
-                            min-width:  50px;
-
-                            button {
-                                font-size: 30px;
-                            }
-
-                            header {
-                                width: 80%;
-                                font-size: 25px;
-
-                                margin-left: 1%;
-                            }
-                        }
-                        .titleText {
-                            display: flex;
-                            height: 70%;
-                            min-width: 200px;
-
-                            p {
-                                font-size: 18px;
-
-                                margin-bottom: 1%;
-                            }
-                        }
-                    }
-                    .ingredients {
-                        width: 95%;
-                        min-width: 300px;
-                        height: 200px;
-                        min-height: 50px;
-                        justify-content: space-around;
-
-                        border-block: 1px rgb(160, 130, 116) solid;
-
-                        padding-block: 1%;
-
-                        .ingredientsTitle {
-                            height: auto;
-                            flex-direction: column;
-                            
-
-                            h3 {
-                                font-size: 25px;
-                            }
-
-                            p {
-                                display: flex;
-                                font-size: 15px;
-                            }
-                        }
-                        span {
-                            flex-direction: row;
-                            width: 110%;
-                            height: 70%;
-                            
-                            .espresso {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    width: 100%;
-                                    font-size:16px;
-                                }
-                                .beanIcon {
-                                    font-size: 45px;
-                                }
-                            }
-                            .water {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                                .waterIcon {
-                                    font-size: 50px;
-                                }
-                            }
-                            .milk {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .milkFoam {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                
-                                p {
-                                    font-size:16px;
-                                }
-
-                                .milkFoamIcon {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                            .choco {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .chai {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .turmericIng {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                            .iceCream {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-    
-                                width: 30%;
-                                height: 80%;
-                                p {
-                                    font-size:16px;
-                                }
-                            }
-                        }
-                    }
-                    .coffeeText {
-                        min-width: 300px;
-                        height: 25%;
-
-                        margin-top: 1%;
-
-                        p {
-                            font-size: 16px;
-
-                            margin-bottom: 2%;
-                        }
-                    }
-                    .getMenuBtn {
-                        width: 100%;
-                        min-width: 300px;
-                        height: 10%;
-                        
-                        button {
-                            min-width: 250px;
-                            width: 90%;
-                            height: 100%;
-                            font-size: 25px;
-                        }
-                    }
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
                 }
-                .menuContentsOff {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    width: 0%;
-                    height: 0%;
-                    object-fit: cover;
-                    overflow: hidden;
-                }
+              }
             }
+          }
+          .coffeeText {
+            min-width: 200px;
+            height: 25%;
+
+            margin-top: 1%;
+
+            p {
+              font-size: 12px;
+
+              margin-bottom: 2%;
+            }
+          }
+          .getMenuBtn {
+            width: 100%;
+            height: 10%;
+
+            button {
+              min-width: 200px;
+              width: 60%;
+              height: 100%;
+              font-size: 15px;
+            }
+          }
         }
+        .menuContentsClose {
+          flex-direction: column;
+          border: rgb(160, 130, 116) 2px solid;
+          min-height: 400px;
+          border-radius: 10px;
+
+          animation: menuContentsClose 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding: 1%;
+          padding-block: 1%;
+
+          .title {
+            justify-content: flex-start;
+            width: 100%;
+            height: 130px;
+            min-width: 100px;
+
+            .titleandBtn {
+              height: 30%;
+              justify-content: flex-start;
+              min-width: 50px;
+
+              button {
+                font-size: 20px;
+              }
+
+              header {
+                width: 90%;
+                font-size: 15px;
+
+                margin-left: 1%;
+              }
+            }
+            .titleText {
+              display: flex;
+              height: 70%;
+              min-width: 200px;
+
+              p {
+                font-size: 12px;
+
+                margin-bottom: 1%;
+              }
+            }
+          }
+          .ingredients {
+            width: 95%;
+            min-width: 180px;
+            height: 130px;
+            min-height: 80px;
+            justify-content: space-around;
+
+            border-block: 1px rgb(160, 130, 116) solid;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 15px;
+              }
+
+              p {
+                display: flex;
+                font-size: 10px;
+              }
+            }
+            span {
+              flex-direction: row;
+              width: 110%;
+              height: 70%;
+
+              .espresso {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  width: 100%;
+                  font-size: 10px;
+                }
+                .beanIcon {
+                  font-size: 30px;
+                }
+              }
+              .water {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .milk {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .milkFoam {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+
+                p {
+                  font-size: 10px;
+                }
+
+                .milkFoamIcon {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .choco {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .chai {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .turmericIng {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .iceCream {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+          .coffeeText {
+            min-width: 200px;
+            height: 25%;
+
+            margin-top: 1%;
+
+            p {
+              font-size: 12px;
+
+              margin-bottom: 2%;
+            }
+          }
+          .getMenuBtn {
+            width: 100%;
+            height: 10%;
+
+            button {
+              min-width: 200px;
+              width: 60%;
+              height: 100%;
+              font-size: 15px;
+            }
+          }
+        }
+        .menuContentsOff {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          width: 0%;
+          height: 0%;
+          object-fit: cover;
+          overflow: hidden;
+        }
+      }
     }
+  }
 }
+@media all and (min-width: 1279px) {
+  .menuContainer {
+    width: 100%;
+    min-height: 600px;
 
+    .menu {
+      justify-content: flex-start;
+      width: 97%;
+      min-width: 700px;
+      height: 100%;
 
+      .menuTitle {
+        width: 50%;
+        height: 8%;
+        min-width: 800px;
+        max-width: 80%;
+        min-height: 70px;
 
+        font-size: 40px;
 
+        border-bottom: 1px solid rgb(137, 85, 48);
+      }
 
+      .chociesContainer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-width: 900px;
+        min-height: 550px;
+        max-height: 720px;
+        width: 70%;
+        height: 100%;
 
+        .choices {
+          justify-content: space-around;
+          min-width: 600px;
+          max-width: 650px;
+          min-height: 600px;
+          max-height: 650px;
+          height: 90%;
 
+          .blackCategory {
+            width: 85%;
+            height: 30%;
 
+            .blackCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                min-height: 70%;
+                max-height: 70%;
+                width: 100%;
+                height: 70%;
+              }
+
+              p {
+                font-size: 15px;
+              }
+
+              &:hover {
+                p {
+                  text-shadow: 2px 2px lightgrey;
+                }
+              }
+            }
+          }
+          .whiteCategory {
+            width: 100%;
+            height: 33%;
+
+            .whiteCoffee {
+              width: 18%;
+
+              img {
+                min-height: 70%;
+                max-height: 70%;
+                width: 100%;
+                height: 70%;
+              }
+
+              p {
+                font-size: 15px;
+              }
+            }
+          }
+          .othersCategory {
+            width: 85%;
+            height: 30%;
+
+            p {
+              font-size: 15px;
+            }
+
+            .otherCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                min-height: 70%;
+                max-height: 70%;
+                width: 100%;
+                height: 70%;
+              }
+            }
+          }
+        }
+
+        .menuContents {
+          flex-direction: column;
+          border: rgb(160, 130, 116) 2px solid;
+          min-height: 400px;
+          border-radius: 10px;
+
+          animation: menuContents 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding: 1%;
+          padding-block: 1%;
+
+          .title {
+            justify-content: flex-start;
+            width: 100%;
+            height: 150px;
+            min-width: 100px;
+
+            .titleandBtn {
+              height: 30%;
+              justify-content: flex-start;
+              min-width: 50px;
+
+              button {
+                font-size: 25px;
+              }
+
+              header {
+                width: 90%;
+                font-size: 20px;
+
+                margin-left: 1%;
+              }
+            }
+            .titleText {
+              display: flex;
+              height: 70%;
+              min-width: 200px;
+
+              p {
+                font-size: 15px;
+
+                margin-bottom: 1%;
+              }
+            }
+          }
+          .ingredients {
+            width: 95%;
+            min-width: 200px;
+            height: 180px;
+            min-height: 50px;
+            justify-content: space-around;
+
+            border-block: 1px rgb(160, 130, 116) solid;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 25px;
+              }
+
+              p {
+                display: flex;
+                font-size: 15px;
+              }
+            }
+            span {
+              flex-direction: row;
+              width: 100%;
+              height: 70%;
+
+              .espresso {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+                p {
+                  width: 100%;
+                  font-size: 15px;
+                }
+                .beanIcon {
+                  font-size: 40px;
+                }
+              }
+              .water {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+                p {
+                  font-size: 15px;
+                }
+              }
+              .milk {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+                p {
+                  font-size: 15px;
+                }
+              }
+              .milkFoam {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+
+                p {
+                  font-size: 15px;
+                }
+
+                .milkFoamIcon {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .choco {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+                p {
+                  font-size: 15px;
+                }
+              }
+              .chai {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+                p {
+                  font-size: 15px;
+                }
+              }
+              .turmericIng {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+                p {
+                  font-size: 15px;
+                }
+              }
+              .iceCream {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 75%;
+                p {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          .coffeeText {
+            min-width: 200px;
+            height: 25%;
+
+            margin-top: 1%;
+
+            p {
+              font-size: 12px;
+
+              margin-bottom: 2%;
+            }
+          }
+          .getMenuBtn {
+            width: 100%;
+            height: 12%;
+
+            button {
+              min-width: 200px;
+              width: 80%;
+              height: 100%;
+              font-size: 20px;
+            }
+          }
+        }
+        .menuContentsClose {
+          flex-direction: column;
+          border: rgb(160, 130, 116) 2px solid;
+          min-height: 400px;
+          border-radius: 10px;
+
+          animation: menuContentsClose 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding: 1%;
+          padding-block: 2%;
+
+          .title {
+            justify-content: flex-start;
+            width: 100%;
+            height: 100px;
+            min-width: 100px;
+
+            .titleandBtn {
+              height: 30%;
+              justify-content: flex-start;
+              min-width: 50px;
+
+              button {
+                font-size: 25px;
+              }
+
+              header {
+                width: 90%;
+                font-size: 15px;
+
+                margin-left: 1%;
+              }
+            }
+            .titleText {
+              display: flex;
+              height: 70%;
+              min-width: 200px;
+
+              p {
+                font-size: 12px;
+
+                margin-bottom: 1%;
+              }
+            }
+          }
+          .ingredients {
+            width: 95%;
+            height: 120px;
+            min-height: 50px;
+            justify-content: space-around;
+
+            border-block: 0;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 15px;
+              }
+
+              p {
+                display: flex;
+                font-size: 10px;
+              }
+            }
+            span {
+              flex-direction: row;
+              width: 90%;
+              height: 70%;
+
+              div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 90%;
+              }
+
+              .espresso {
+                p {
+                  width: 100%;
+                  font-size: 13px;
+                }
+                .beanIcon {
+                  font-size: 30px;
+                }
+              }
+              .water {
+                p {
+                  font-size: 13px;
+                }
+              }
+              .milk {
+                p {
+                  font-size: 13px;
+                }
+              }
+              .milkFoam {
+                p {
+                  font-size: 13px;
+                }
+              }
+              .choco {
+                p {
+                  font-size: 13px;
+                }
+              }
+              .chai {
+                p {
+                  font-size: 13px;
+                }
+              }
+              .turmericIng {
+                p {
+                  font-size: 13px;
+                }
+              }
+              .iceCream {
+                p {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+          .coffeeText {
+            min-width: 200px;
+            height: 25%;
+
+            margin-top: 1%;
+
+            p {
+              font-size: 12px;
+
+              margin-bottom: 0.5%;
+            }
+          }
+          .getMenuBtn {
+            width: 100%;
+            height: 10%;
+
+            button {
+              min-width: 200px;
+              width: 60%;
+              height: 100%;
+              font-size: 15px;
+            }
+          }
+        }
+        .menuContentsOff {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          width: 0%;
+          height: 0%;
+          object-fit: cover;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 1680px) {
+  .menuContainer {
+    width: 100%;
+    min-height: 1080px;
+
+    .menu {
+      justify-content: flex-start;
+      width: 97%;
+      min-width: 1680px;
+      height: 90%;
+
+      .menuTitle {
+        width: 50%;
+        height: 8%;
+        min-width: 800px;
+        min-height: 80px;
+
+        font-size: 50px;
+
+        border-bottom: 1px solid rgb(137, 85, 48);
+      }
+
+      .chociesContainer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-width: 900px;
+        max-width: 1250px;
+        min-height: 550px;
+        max-height: 900px;
+        width: 72%;
+        height: 100%;
+
+        .choices {
+          justify-content: space-around;
+          min-width: 900px;
+          max-width: 900px;
+          min-height: 750px;
+          max-height: 85%;
+
+          .blackCategory {
+            width: 85%;
+            height: 30%;
+
+            .blackCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                min-height: 80%;
+                max-height: 100%;
+                width: 100%;
+              }
+
+              p {
+                font-size: 18px;
+              }
+
+              &:hover {
+                p {
+                  text-shadow: 2px 2px lightgrey;
+                }
+              }
+            }
+          }
+          .whiteCategory {
+            width: 100%;
+            height: 33%;
+
+            .whiteCoffee {
+              width: 18%;
+
+              img {
+                min-height: 80%;
+                max-height: 100%;
+                width: 100%;
+              }
+
+              p {
+                font-size: 18px;
+              }
+            }
+          }
+          .othersCategory {
+            width: 85%;
+            height: 30%;
+
+            p {
+              font-size: 18px;
+            }
+
+            .otherCoffee {
+              width: 25%;
+              height: 100%;
+
+              img {
+                min-height: 80%;
+                max-height: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .menuContents {
+          flex-direction: column;
+          border: rgb(160, 130, 116) 2px solid;
+          min-height: 400px;
+          border-radius: 10px;
+
+          animation: menuContents 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding: 1%;
+          padding-block: 1%;
+
+          .title {
+            justify-content: flex-start;
+            width: 100%;
+            height: 200px;
+            min-width: 300px;
+
+            .titleandBtn {
+              height: 30%;
+              justify-content: center;
+              min-width: 50px;
+
+              button {
+                font-size: 30px;
+              }
+
+              header {
+                width: 80%;
+                font-size: 25px;
+
+                margin-left: 1%;
+              }
+            }
+            .titleText {
+              display: flex;
+              height: 70%;
+              min-width: 200px;
+
+              p {
+                font-size: 18px;
+
+                margin-bottom: 1%;
+              }
+            }
+          }
+          .ingredients {
+            width: 95%;
+            min-width: 300px;
+            height: 200px;
+            min-height: 50px;
+            justify-content: space-around;
+
+            border-block: 1px rgb(160, 130, 116) solid;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 25px;
+              }
+
+              p {
+                display: flex;
+                font-size: 15px;
+              }
+            }
+            span {
+              flex-direction: row;
+              width: 110%;
+              height: 70%;
+
+              .espresso {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  width: 100%;
+                  font-size: 16px;
+                }
+                .beanIcon {
+                  font-size: 45px;
+                }
+              }
+              .water {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+                .waterIcon {
+                  font-size: 50px;
+                }
+              }
+              .milk {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .milkFoam {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+
+                p {
+                  font-size: 16px;
+                }
+
+                .milkFoamIcon {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .choco {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .chai {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .turmericIng {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .iceCream {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          .coffeeText {
+            min-width: 300px;
+            height: 25%;
+
+            margin-top: 1%;
+
+            p {
+              font-size: 16px;
+
+              margin-bottom: 2%;
+            }
+          }
+          .getMenuBtn {
+            width: 100%;
+            min-width: 300px;
+            height: 10%;
+
+            button {
+              min-width: 250px;
+              width: 90%;
+              height: 100%;
+              font-size: 25px;
+            }
+          }
+        }
+        .menuContentsClose {
+          flex-direction: column;
+          border: rgb(160, 130, 116) 2px solid;
+          min-height: 400px;
+          border-radius: 10px;
+
+          animation: menuContentsClose 0.8s;
+          animation-fill-mode: forwards;
+          animation-direction: alternate;
+
+          padding: 1%;
+          padding-block: 1%;
+
+          .title {
+            justify-content: flex-start;
+            width: 100%;
+            height: 200px;
+            min-width: 300px;
+
+            .titleandBtn {
+              height: 30%;
+              justify-content: center;
+              min-width: 50px;
+
+              button {
+                font-size: 30px;
+              }
+
+              header {
+                width: 80%;
+                font-size: 25px;
+
+                margin-left: 1%;
+              }
+            }
+            .titleText {
+              display: flex;
+              height: 70%;
+              min-width: 200px;
+
+              p {
+                font-size: 18px;
+
+                margin-bottom: 1%;
+              }
+            }
+          }
+          .ingredients {
+            width: 95%;
+            min-width: 300px;
+            height: 200px;
+            min-height: 50px;
+            justify-content: space-around;
+
+            border-block: 1px rgb(160, 130, 116) solid;
+
+            padding-block: 1%;
+
+            .ingredientsTitle {
+              height: auto;
+              flex-direction: column;
+
+              h3 {
+                font-size: 25px;
+              }
+
+              p {
+                display: flex;
+                font-size: 15px;
+              }
+            }
+            span {
+              flex-direction: row;
+              width: 110%;
+              height: 70%;
+
+              .espresso {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  width: 100%;
+                  font-size: 16px;
+                }
+                .beanIcon {
+                  font-size: 45px;
+                }
+              }
+              .water {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+                .waterIcon {
+                  font-size: 50px;
+                }
+              }
+              .milk {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .milkFoam {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+
+                p {
+                  font-size: 16px;
+                }
+
+                .milkFoamIcon {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .choco {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .chai {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .turmericIng {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+              .iceCream {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 30%;
+                height: 80%;
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          .coffeeText {
+            min-width: 300px;
+            height: 25%;
+
+            margin-top: 1%;
+
+            p {
+              font-size: 16px;
+
+              margin-bottom: 2%;
+            }
+          }
+          .getMenuBtn {
+            width: 100%;
+            min-width: 300px;
+            height: 10%;
+
+            button {
+              min-width: 250px;
+              width: 90%;
+              height: 100%;
+              font-size: 25px;
+            }
+          }
+        }
+        .menuContentsOff {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          width: 0%;
+          height: 0%;
+          object-fit: cover;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
