@@ -64,7 +64,7 @@ export default function History(getFavUpdated, favUpdated) {
                     const result = saveFavourites(userEmail, brew);
                     if (result) {
                       setFavResponse(true);
-                      getFavUpdated(!favUpdated);
+                      getFavUpdated(favUpdated);
                     }
                   }}
                 >

@@ -48,6 +48,7 @@ export default function Fav({ favUpdated }) {
               email: userEmail,
             },
           });
+          console.log("Fav lists loaded.");
           setFavourites(response.data);
         } catch (error) {
           console.log(error);
@@ -205,14 +206,13 @@ export default function Fav({ favUpdated }) {
 
   //Delete Fav in web and database
   const deleteFav = async (favName) => {
-    console.log(favName);
     try {
-      const response = await axios.delete(`${heroku}/deleteFav`, {
+      await axios.delete(`${heroku}/deleteFav`, {
         params: {
           favName: favName,
         },
       });
-      console.log(response);
+      console.log(`${favName} deleted`);
       setFavourites((prevFavourites) => prevFavourites.filter((item) => item.favName !== favName));
     } catch (error) {
       console.log(error);
@@ -328,7 +328,6 @@ export default function Fav({ favUpdated }) {
               onClick={() => {
                 updateFavName(favList, favNameUpdate);
                 setCustomDetail("");
-                console.log(favList, favNameUpdate);
               }}
             >
               Save
@@ -769,8 +768,6 @@ export default function Fav({ favUpdated }) {
   //Update each recipes
   //1. custom name
   const updateFavName = async (oldFav, newFavName) => {
-    console.log(oldFav, newFavName);
-
     try {
       const updatedFavourites = favourites.map((favourite) => {
         if (favourite.favName === oldFav.favName) {
@@ -779,6 +776,7 @@ export default function Fav({ favUpdated }) {
             favName: newFavName,
           };
         }
+        console.log(`${newFavName} saved`);
         return favourite;
       });
 
@@ -788,7 +786,6 @@ export default function Fav({ favUpdated }) {
         email: userEmail,
         favourites: newFav,
       });
-      console.log(response.data.favourites);
       setFixedFav(response.data.favourites);
       setFavList(updatedFavourites.find((favourite) => favourite.order === oldFav.order));
     } catch (error) {
@@ -822,8 +819,6 @@ export default function Fav({ favUpdated }) {
   };
   //3. custom Method
   const updateFavMethod = async (oldFav, newFavMethod) => {
-    console.log(oldFav, newFavMethod);
-
     try {
       const updatedFavourites = favourites.map((favourite) => {
         if (favourite.methodName === oldFav.methodName) {
@@ -832,6 +827,7 @@ export default function Fav({ favUpdated }) {
             methodName: newFavMethod,
           };
         }
+        console.log(`${newFavMethod} saved`);
         return favourite;
       });
 
@@ -841,7 +837,6 @@ export default function Fav({ favUpdated }) {
         email: userEmail,
         favourites: newFav,
       });
-      console.log(response.data.favourites);
       setFixedFav(response.data.favourites);
       setFavList(updatedFavourites.find((favourite) => favourite.order === oldFav.order));
     } catch (error) {
@@ -850,8 +845,6 @@ export default function Fav({ favUpdated }) {
   };
   //4. custom Water
   const updateFavWater = async (oldFav, newFavWater) => {
-    console.log(oldFav, newFavWater);
-
     try {
       const updatedFavourites = favourites.map((favourite) => {
         if (favourite.water === oldFav.water) {
@@ -860,6 +853,7 @@ export default function Fav({ favUpdated }) {
             water: newFavWater,
           };
         }
+        console.log(`${newFavWater} saved`);
         return favourite;
       });
 
@@ -869,7 +863,6 @@ export default function Fav({ favUpdated }) {
         email: userEmail,
         favourites: newFav,
       });
-      console.log(response.data.favourites);
       setFixedFav(response.data.favourites);
       setFavList(updatedFavourites.find((favourite) => favourite.order === oldFav.order));
     } catch (error) {
@@ -878,8 +871,6 @@ export default function Fav({ favUpdated }) {
   };
   //5. custom Ground Coffee
   const updateFavCoffee = async (oldFav, newFavCoffee) => {
-    console.log(oldFav, newFavCoffee);
-
     try {
       const updatedFavourites = favourites.map((favourite) => {
         if (favourite.coffee === oldFav.coffee) {
@@ -888,6 +879,7 @@ export default function Fav({ favUpdated }) {
             coffee: newFavCoffee,
           };
         }
+        console.log(`${newFavCoffee} saved`);
         return favourite;
       });
 
@@ -897,7 +889,6 @@ export default function Fav({ favUpdated }) {
         email: userEmail,
         favourites: newFav,
       });
-      console.log(response.data.favourites);
       setFixedFav(response.data.favourites);
       setFavList(updatedFavourites.find((favourite) => favourite.order === oldFav.order));
     } catch (error) {
@@ -906,8 +897,6 @@ export default function Fav({ favUpdated }) {
   };
   //6. custom Roasting Level
   const updateFavRoasting = async (oldFav, newFavRoasting) => {
-    console.log(oldFav, newFavRoasting);
-
     try {
       const updatedFavourites = favourites.map((favourite) => {
         if (favourite.roasting === oldFav.roasting) {
@@ -916,6 +905,7 @@ export default function Fav({ favUpdated }) {
             roasting: newFavRoasting,
           };
         }
+        console.log(`${newFavRoasting} saved`);
         return favourite;
       });
 
@@ -925,7 +915,6 @@ export default function Fav({ favUpdated }) {
         email: userEmail,
         favourites: newFav,
       });
-      console.log(response.data.favourites);
       setFixedFav(response.data.favourites);
       setFavList(updatedFavourites.find((favourite) => favourite.order === oldFav.order));
     } catch (error) {
@@ -934,8 +923,6 @@ export default function Fav({ favUpdated }) {
   };
   //7. custom Grind Size
   const updateFavGrind = async (oldFav, newFavGrind) => {
-    console.log(oldFav, newFavGrind);
-
     try {
       const updatedFavourites = favourites.map((favourite) => {
         if (favourite.grind === oldFav.grind) {
@@ -944,6 +931,7 @@ export default function Fav({ favUpdated }) {
             grind: newFavGrind,
           };
         }
+        console.log(`${newFavGrind} saved`);
         return favourite;
       });
 
@@ -953,7 +941,6 @@ export default function Fav({ favUpdated }) {
         email: userEmail,
         favourites: newFav,
       });
-      console.log(response.data.favourites);
       setFixedFav(response.data.favourites);
       setFavList(updatedFavourites.find((favourite) => favourite.order === oldFav.order));
     } catch (error) {
@@ -963,13 +950,12 @@ export default function Fav({ favUpdated }) {
   //custom description
   const updateFavDescription = async () => {
     try {
-      const response = await axios.put(`${heroku}/updateDescription`, {
+      await axios.put(`${heroku}/updateDescription`, {
         favourites: {
           favName: favList.favName,
           description: description,
         },
       });
-      console.log(response.data.favourites);
     } catch (error) {
       console.log(error);
     }

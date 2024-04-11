@@ -31,7 +31,7 @@ export default function Finish() {
 
         //post oldBrews with currentBrews data first.
         try {
-          const response = await axios.post(postOldUrl, {
+          await axios.post(postOldUrl, {
             email: userEmail,
             oldBrews: [
               {
@@ -46,7 +46,7 @@ export default function Finish() {
               },
             ],
           });
-          console.log(response.data);
+          console.log("Last brew data saved.");
         } catch (error) {
           console.log(error);
         }
@@ -105,14 +105,12 @@ export default function Finish() {
           ],
         });
 
-        console.log(response);
         setFavResponse(JSON.stringify(response.status));
         setFavName("");
       } catch (error) {
         console.log(error);
         const errMessage = error.response.status;
         setFavResponse(JSON.stringify(errMessage));
-        console.log(favResponse);
         return;
       }
     }

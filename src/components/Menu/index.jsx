@@ -368,7 +368,6 @@ export default function Menu() {
         {targetMenu[5].specialty.map((spec) => (
           <p>{spec}</p>
         ))}
-        ;
       </div>
     );
   };
