@@ -61,11 +61,11 @@ export default function History(getFavUpdated, favUpdated) {
                 </button>
                 <button
                   onClick={() => {
-                    const result = saveFavourites(userEmail, brew);
+                    const result = async () => await saveFavourites(userEmail, brew);
                     if (result) {
-                      setFavResponse(true);
-                      getFavUpdated(favUpdated);
-                    }
+                      setFavResponse(false);
+                      getFavUpdated(!favUpdated);
+                    } else favResponse(true);
                   }}
                 >
                   Save Fav
