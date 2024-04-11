@@ -212,7 +212,7 @@
   flex-direction: column;
   justify-content: center;
   height: 12%;
-  width: auto;
+  width: 100%;
   font-size: 20px;
   color: wheat;
   font-family: Verdana, Geneva, Tahoma, sans-serif;

@@ -1,1371 +1,1349 @@
 .FavContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 95%;
+  height: 40%;
+
+  .favTitle {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
-    width: 95%;
-    height: 40%;
+    width: 100%;
+    height: 25%;
 
-    .favTitle {
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      font-style: italic;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: sienna;
+
+      .favIcon {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      font-style: italic;
+      padding-left: 3%;
+      color: darkgoldenrod;
+
+      margin-bottom: 0;
+    }
+  }
+
+  .favContents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 80%;
+
+    .favourites {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 50%;
+      height: 100%;
+
+      background-color: wheat;
+      border-radius: 10px;
+
+      padding: 1%;
+
+      overflow: hidden;
+
+      .favList {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
 
         width: 100%;
-        height: 25%;
+        height: 100%;
 
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            font-style: italic;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: sienna;
+        margin-bottom: 0;
+        padding-left: 0%;
 
-            .favIcon {
-                font-size: 25px;
-                text-align: center;
-            }
-        }
+        animation: opacity 0.5s;
 
-        p {
-            font-size: 16px;
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          width: 100%;
+          height: 15%;
+          cursor: pointer;
+
+          border-radius: 5px;
+
+          margin-block: 1.5%;
+          padding-inline: 3%;
+          color: saddlebrown;
+
+          p {
+            width: 50%;
+            font-size: 20px;
             font-weight: bold;
-            font-style: italic;
-            padding-left: 3%;
-            color: darkgoldenrod;
+            overflow: hidden;
 
             margin-bottom: 0;
-        }
-    }
 
-    .favContents {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+            animation: opacity 0.3s;
+          }
 
-        width: 100%;
-        height: 80%;
-        
-        .favourites {
+          .btnContainer {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
 
             width: 50%;
             height: 100%;
 
-            background-color: wheat;
-            border-radius: 10px;
+            button {
+              height: 70%;
+              text-align: center;
+              font-size: 16px;
+              font-weight: bold;
+              font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+                Arial, sans-serif;
 
+              color: sienna;
+              background-color: transparent;
+              border: 0;
+              border-radius: 20px;
+              background-color: wheat;
+
+              padding-block: 0;
+
+              &:hover {
+                box-shadow: 0px 0px 0px 3px bisque;
+              }
+            }
+          }
+
+          &:hover {
+            color: wheat;
+            background-color: saddlebrown;
+            transition: 0.3s;
+
+            button {
+              color: bisque;
+              background-color: saddlebrown;
+              transition: 0.3s;
+            }
+
+            input {
+              border: 2px solid wheat;
+              color: wheat;
+              transition: 0s;
+            }
+          }
+        }
+      }
+      .noneFav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+
+        .makeFavBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 80%;
+          height: 30%;
+          font-size: 22px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          text-decoration: none;
+          border-radius: 10px;
+          border: 0;
+
+          color: linen;
+          background-color: sienna;
+          box-shadow: 2px 3px 0px 1px burlywood;
+
+          &:hover {
+            color: saddlebrown;
+            background-color: bisque;
+            transition: 0.3s;
+          }
+          &:active {
+            box-shadow: 0px 0px 0px 0px;
+            transform: translateY(3%);
+            transition: 0s;
+          }
+        }
+      }
+    }
+    .favDetailContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      width: 50%;
+      height: 100%;
+      max-height: 350px;
+
+      .favDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 95%;
+        height: 100%;
+        max-height: 350px;
+
+        animation: opacity 0.3s;
+
+        header {
+          width: 100%;
+          font-size: 16px;
+          font-weight: bold;
+          color: sienna;
+          font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+            sans-serif;
+
+          margin-bottom: 1%;
+          border-bottom: 1px sienna solid;
+        }
+
+        .detailsContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+
+          width: 100%;
+          height: 100%;
+
+          //preventing stretch for overflow contents
+          max-height: 350px;
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            width: 55%;
+            height: 100%;
+
+            padding-left: 3%;
             padding: 1%;
 
-            overflow: hidden;
+            animation: opacity 0.5s;
 
-            .favList {
+            .favName {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              height: 12%;
+              width: 100%;
+              font-size: 20px;
+              color: wheat;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-weight: bold;
+              text-transform: none;
+              background-color: sienna;
+              border-radius: 5px;
+
+              padding: 2%;
+              margin-bottom: 0;
+              transition: all 0.3s linear;
+            }
+
+            p {
+              display: flex;
+              font-size: 18px;
+              font-weight: bold;
+              font-family: "Courier New", Courier, monospace;
+              color: saddlebrown;
+              text-transform: uppercase;
+              transition: all 0.3s linear;
+
+              margin-bottom: 0;
+              padding: 1%;
+              padding-inline: 2%;
+            }
+          }
+          .detailCustomSetting {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            width: 55%;
+            height: 100%;
+
+            padding-left: 3%;
+            padding: 1%;
+
+            animation: opacity 0.5s;
+
+            .favName {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              height: 12%;
+              width: auto;
+              font-size: 20px;
+              color: sienna;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-weight: bold;
+              text-transform: none;
+              background-color: wheat;
+              border-radius: 5px;
+
+              box-shadow: 2px 2px 0px 2px burlywood;
+              transition: 0.5s;
+
+              padding: 2%;
+              margin-bottom: 0;
+
+              &:hover {
+                background-color: sienna;
+                box-shadow: 2px 2px 0px 2px burlywood;
+                color: wheat;
+                transition: 0.3s;
+              }
+            }
+
+            p {
+              display: flex;
+              font-size: 18px;
+              font-weight: bold;
+              font-family: "Courier New", Courier, monospace;
+              color: saddlebrown;
+              text-transform: uppercase;
+
+              border-radius: 5px;
+              cursor: pointer;
+              box-shadow: 2px 2px 0px 2px lightgrey;
+              transition: 0.5s;
+
+              margin-bottom: 0;
+              padding: 1%;
+              padding-inline: 2%;
+
+              &:hover {
+                background-color: wheat;
+                transition: 0.3s;
+              }
+            }
+          }
+
+          .customContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 45%;
+            height: 100%;
+
+            //preventing stretch for overflow contents
+            max-height: 350px;
+
+            .customOptions {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+
+              width: 100%;
+              height: 60%;
+
+              animation: opacity 0.5s;
+
+              p {
+                font-size: 30px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: sienna;
+
+                margin-bottom: 0%;
+              }
+
+              button {
+                width: 80%;
+                height: 20%;
+                font-size: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border-radius: 10px;
+                border: 0;
+
+                color: linen;
+                background-color: sienna;
+                box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                &:hover {
+                  color: brown;
+                  background-color: bisque;
+                  transition: 0.3s;
+                }
+                &:active {
+                  box-shadow: 0px 0px 0px 0px;
+                  transform: translateY(3%);
+                  transition: 0s;
+                }
+              }
+            }
+
+            //all the recipes of FAV
+            .customDetail {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              width: 100%;
+              height: 100%;
+              max-height: 265px;
+
+              button {
+                width: 80%;
+                font-size: 15px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border-radius: 10px;
+                border: 0;
+
+                color: linen;
+                background-color: sienna;
+                box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                &:hover {
+                  color: brown;
+                  background-color: bisque;
+                  transition: 0.3s;
+                }
+                &:active {
+                  box-shadow: 0px 0px 0px 0px;
+                  transform: translateY(3%);
+                  transition: 0s;
+                }
+              }
+
+              .customDetailBasic {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                .customDetailBasicText {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  height: 50%;
+
+                  p {
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    color: sienna;
+
+                    margin-bottom: 0%;
+                  }
+                }
+
+                button {
+                  width: 80%;
+                  font-size: 15px;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  border-radius: 10px;
+                  border: 0;
+
+                  color: linen;
+                  background-color: sienna;
+                  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                  &:hover {
+                    color: brown;
+                    background-color: bisque;
+                    transition: 0.3s;
+                  }
+                  &:active {
+                    box-shadow: 0px 0px 0px 0px;
+                    transform: translateY(3%);
+                    transition: 0s;
+                  }
+                }
+              }
+
+              .customfavName {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 60%;
+
+                animation: 0.5s;
+
+                p {
+                  font-size: 16px;
+                  font-weight: bold;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  color: sienna;
+
+                  margin-bottom: 0%;
+                }
+
+                input {
+                  width: 100%;
+                  height: 25%;
+                  font-size: 18px;
+                  font-weight: bold;
+                  color: sienna;
+                  outline: none;
+
+                  border: 2px solid sienna;
+                  background-color: wheat;
+                  border-radius: 10px;
+
+                  padding-left: 5%;
+
+                  animation: opacity 0.3s;
+                }
+
+                button {
+                  width: 100%;
+                  font-size: 15px;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  border-radius: 10px;
+                  border: 0;
+
+                  color: linen;
+                  background-color: sienna;
+                  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                  &:hover {
+                    color: brown;
+                    background-color: bisque;
+                    transition: 0.3s;
+                  }
+                  &:active {
+                    box-shadow: 0px 0px 0px 0px;
+                    transform: translateY(3%);
+                    transition: 0s;
+                  }
+                }
+              }
+              .customMenuName {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
 
                 width: 100%;
-                height: 100%;
+                height: 85%;
+                max-height: 85%;
+                list-style: none;
 
-                margin-bottom: 0;
-                padding-left: 0%;
+                margin-bottom: 3%;
+                padding-left: 0;
+                padding-block: 2%;
+
+                overflow-y: scroll;
+                overflow-x: hidden;
 
                 animation: opacity 0.5s;
 
                 li {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
+                  width: 100%;
+                  font-size: 16px;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  color: sienna;
+                  cursor: pointer;
+                  border-radius: 5px;
 
-                    width: 100%;
-                    height: 15%;
-                    cursor: pointer;
+                  padding-left: 3%;
 
-                    border-radius: 5px;
-                    
-                    margin-block: 1.5%;
-                    padding-inline: 3%;
-                    color: saddlebrown;
-
-                    
-                    p {
-                        width: 50%;
-                        font-size: 20px;
-                        font-weight: bold;
-                        overflow: hidden;
-
-                        margin-bottom: 0;
-
-                        animation: opacity 0.3s;
-                    }
-                    
-                    .btnContainer {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        width: 50%;
-                        height: 100%;
-
-                        button {
-                            height: 70%;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        
-                            color: sienna;
-                            background-color: transparent;
-                            border: 0;
-                            border-radius: 20px;
-                            background-color: wheat;
-
-                            padding-block: 0;
-        
-                            &:hover {
-                                box-shadow: 0px 0px 0px 3px bisque;
-                            }
-                        }
-                    }
-                    
-                    &:hover {
-                        color: wheat;
-                        background-color: saddlebrown;
-                        transition: 0.3s;
-
-                        button {
-                            color: bisque;
-                            background-color: saddlebrown;
-                            transition: 0.3s;
-                        }
-
-                        input {
-                            border: 2px solid wheat;
-                            color: wheat;
-                            transition: 0s;
-                        }
-                    }
-                }
-            }
-            .noneFav {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                width: 100%;
-                height: 100%;
-
-                .makeFavBtn {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 80%;
-                    height: 30%;
-                    font-size: 22px;
-                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                    text-decoration: none;
-                    border-radius: 10px;
-                    border: 0;    
-
-                    color: linen;
+                  &:hover {
+                    color: wheat;
                     background-color: sienna;
-                    box-shadow: 2px 3px 0px 1px burlywood;
-
-                    &:hover {
-                        color: saddlebrown;
-                        background-color: bisque;
-                        transition: 0.3s;
-                    }
-                    &:active {
-                        box-shadow: 0px 0px 0px 0px;
-                        transform: translateY(3%);
-                        transition: 0s;
-                    }
+                    transition: 0.3s;
+                  }
                 }
-            }
-        }
-        .favDetailContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-
-            width: 50%;
-            height: 100%;
-            max-height: 350px;
-
-            .favDetails {
+              }
+              .customMethodName {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-
-                width: 95%;
-                height: 100%;
-                max-height: 350px;
-
-                animation: opacity 0.3s;
-                
-                header {
-                    width: 100%;
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: sienna;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-                    margin-bottom: 1%;
-                    border-bottom: 1px sienna solid;
-                }
-
-                .detailsContainer {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: flex-start;
-
-                    width: 100%;
-                    height: 100%;
-
-                    //preventing stretch for overflow contents
-                    max-height: 350px;
-
-                    .details {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        align-items: flex-start;
-                        
-                        width: 55%;
-                        height: 100%;
-    
-                        padding-left: 3%;
-                        padding: 1%;
-    
-                        animation: opacity 0.5s;
-    
-                        .favName {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-
-                            height: 12%;
-                            width: auto;
-                            font-size: 20px;
-                            color: wheat;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            font-weight: bold;
-                            text-transform: none;
-                            background-color: sienna;
-                            border-radius: 5px;
-    
-                            padding: 2%;
-                            margin-bottom: 0;
-                            transition: all 0.3s linear;
-                        }
-    
-                        p {
-                            display: flex;
-                            font-size: 18px;
-                            font-weight: bold;
-                            font-family:'Courier New', Courier, monospace;
-                            color: saddlebrown;
-                            text-transform: uppercase;
-                            transition: all 0.3s linear;
-        
-                            margin-bottom: 0;
-                            padding: 1%;
-                            padding-inline: 2%;
-                        }
-                    }
-                    .detailCustomSetting {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        align-items: flex-start;
-                        
-                        width: 55%;
-                        height: 100%;
-    
-                        padding-left: 3%;
-                        padding: 1%;
-
-                        animation: opacity 0.5s;
-    
-    
-                        .favName {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-
-                            height: 12%;
-                            width: auto;
-                            font-size: 20px;
-                            color: sienna;
-                            font-family: Verdana, Geneva, Tahoma, sans-serif;
-                            font-weight: bold;
-                            text-transform: none;
-                            background-color: wheat;
-                            border-radius: 5px;
-
-                            box-shadow: 2px 2px 0px 2px burlywood;
-                            transition: 0.5s;
-    
-                            padding: 2%;
-                            margin-bottom: 0;
-
-                            &:hover {
-                                background-color: sienna;
-                                box-shadow: 2px 2px 0px 2px burlywood;
-                                color: wheat;
-                                transition: 0.3s;
-                            }
-                        }
-    
-                        p {
-                            display: flex;
-                            font-size: 18px;
-                            font-weight: bold;
-                            font-family:'Courier New', Courier, monospace;
-                            color: saddlebrown;
-                            text-transform: uppercase;
-
-                            border-radius: 5px;
-                            cursor: pointer;
-                            box-shadow: 2px 2px 0px 2px lightgrey;
-                            transition: 0.5s;
-        
-                            margin-bottom: 0;
-                            padding: 1%;
-                            padding-inline: 2%;
-
-                            &:hover {
-                                background-color: wheat;
-                                transition: 0.3s;
-                            }
-                        }
-                    }
-
-                    .customContainer {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        width: 45%;
-                        height: 100%;
-
-                        //preventing stretch for overflow contents
-                        max-height: 350px;
-
-                        .customOptions {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-evenly;
-                            align-items: center;
-
-                            width: 100%;
-                            height: 60%;
-
-                            animation: opacity 0.5s;
-                            
-                            p {
-                                font-size: 30px;
-                                font-weight: bold;
-                                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                color: sienna;
-    
-                                margin-bottom: 0%;
-                            }
-    
-                            button {
-                                width: 80%;
-                                height: 20%;
-                                font-size: 20px;
-                                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                border-radius: 10px;
-                                border: 0;    
-        
-                                color: linen;
-                                background-color: sienna;
-                                box-shadow: 2px 3px 0px 1px darkgoldenrod;
-        
-                                &:hover {
-                                    color: brown;
-                                    background-color: bisque;
-                                    transition: 0.3s;
-                                }
-                                &:active {
-                                    box-shadow: 0px 0px 0px 0px;
-                                    transform: translateY(3%);
-                                    transition: 0s;
-                                }
-                            }
-                        }
-
-                        //all the recipes of FAV
-                        .customDetail {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 100%;
-                            height: 100%;
-                            max-height: 265px;
-
-                            button {
-                                width: 80%;
-                                font-size: 15px;
-                                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                border-radius: 10px;
-                                border: 0;    
-        
-                                color: linen;
-                                background-color: sienna;
-                                box-shadow: 2px 3px 0px 1px darkgoldenrod;
-        
-                                &:hover {
-                                    color: brown;
-                                    background-color: bisque;
-                                    transition: 0.3s;
-                                }
-                                &:active {
-                                    box-shadow: 0px 0px 0px 0px;
-                                    transform: translateY(3%);
-                                    transition: 0s;
-                                }
-                            }
-
-                            .customDetailBasic {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-                                width: 100%;
-                                height: 100%;
-
-                                .customDetailBasicText {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    align-items: center;
-                                    width: 100%;
-                                    height: 50%;
-                                    
-                                    p {
-                                        font-size: 20px;
-                                        font-weight: bold;
-                                        font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                        color: sienna;
-            
-                                        margin-bottom: 0%;
-                                    }
-
-                                }
-                                
-                                button {
-                                    width: 80%;
-                                    font-size: 15px;
-                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                    border-radius: 10px;
-                                    border: 0;    
-            
-                                    color: linen;
-                                    background-color: sienna;
-                                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
-            
-                                    &:hover {
-                                        color: brown;
-                                        background-color: bisque;
-                                        transition: 0.3s;
-                                    }
-                                    &:active {
-                                        box-shadow: 0px 0px 0px 0px;
-                                        transform: translateY(3%);
-                                        transition: 0s;
-                                    }
-                                }
-                            }
-
-                            .customfavName {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-between;
-                                align-items: center;
-
-                                width: 100%;
-                                height: 60%;
-
-                                animation: 0.5s;
-
-                                p {
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                    color: sienna;
-        
-                                    margin-bottom: 0%;
-                                }
-
-                                input {
-                                    width: 100%;
-                                    height: 25%;
-                                    font-size: 18px;
-                                    font-weight: bold;
-                                    color: sienna;
-                                    outline: none;
-
-                                    border: 2px solid sienna;
-                                    background-color: wheat;
-                                    border-radius: 10px;
-
-                                    padding-left: 5%;
-
-                                    animation: opacity 0.3s;
-                                }
-
-                                button {
-                                    width: 100%;
-                                    font-size: 15px;
-                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                    border-radius: 10px;
-                                    border: 0;    
-            
-                                    color: linen;
-                                    background-color: sienna;
-                                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
-            
-                                    &:hover {
-                                        color: brown;
-                                        background-color: bisque;
-                                        transition: 0.3s;
-                                    }
-                                    &:active {
-                                        box-shadow: 0px 0px 0px 0px;
-                                        transform: translateY(3%);
-                                        transition: 0s;
-                                    }
-                                }
-                            }
-                            .customMenuName {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: flex-start;
-                                align-items: flex-start;
-
-                                width: 100%;
-                                height: 85%;
-                                max-height: 85%;
-                                list-style: none;
-
-                                margin-bottom: 3%;
-                                padding-left: 0;
-                                padding-block: 2%;
-
-                                overflow-y: scroll;
-                                overflow-x: hidden;
-
-                                animation: opacity 0.5s;
-
-                                li {
-                                    width: 100%;
-                                    font-size: 16px;
-                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                    color: sienna;
-                                    cursor: pointer;
-                                    border-radius: 5px;
-                                    
-                                    padding-left: 3%;
-
-                                    &:hover {
-                                        color: wheat;
-                                        background-color: sienna;
-                                        transition: 0.3s;
-                                    }
-                                }
-                            }
-                            .customMethodName {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: flex-start;
-                                align-items: flex-start;
-
-                                width: 100%;
-                                height: 85%;
-                                max-height: 85%;
-                                list-style: none;
-
-                                margin-bottom: 2%;
-                                padding-left: 0;
-
-                                animation: opacity 0.5s;
-
-                                li {
-                                    width: 100%;
-                                    font-size: 18px;
-                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                    color: sienna;
-                                    cursor: pointer;
-                                    border-radius: 5px;
-                                    
-                                    padding-left: 3%;
-                                    margin-block: 1%;
-
-                                    &:hover {
-                                        color: wheat;
-                                        background-color: sienna;
-                                        transition: 0.3s;
-                                    }
-                                }
-                            }
-                            .customWater {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-around;
-                                align-items: center;
-
-                                width: 100%;
-                                height: 60%;
-
-                                animation: opacity 0.5s;
-
-                                margin-bottom: 5%;
-
-                                button {
-                                    height: 25%;
-                                }
-                            }
-                            .customCoffee {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-around;
-                                align-items: center;
-
-                                width: 100%;
-                                height: 50%;
-
-                                animation: opacity 0.5s;
-
-                                input {
-                                    border-radius: 5px;
-                                    color: saddlebrown;
-                                    background-color: wheat;
-                                    border: 0;
-                                    outline: none;
-
-                                    padding-left: 5%;
-                                }
-
-                                p {
-                                    font-size: 16px;
-                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                    color: sienna;
-                                    margin-bottom: 1%;
-                                }
-
-                                button {
-                                    height: 22%;
-                                }
-                            }
-                            .customRoasting {
-                                display: flex;
-                                flex-direction: column-reverse;
-                                justify-content: space-evenly;
-                                align-items: center;
-
-                                width: 100%;
-                                height: 70%;
-
-                                animation: opacity 0.5s;
-
-                                button {
-                                    width: 80%;
-                                    height: 20%;
-                                }
-
-                                .light {
-                                    &:hover {
-                                        color: grey;
-                                        background: linen;
-                                    }
-                                }
-                                .dark {
-                                    &:hover {
-                                        color: #472c1b;
-                                        background-color: burlywood;
-                                    }
-                                }
-                            }
-                            .customGrind {
-                                display: flex;
-                                flex-direction: column-reverse;
-                                justify-content: space-evenly;
-                                align-items: center;
-
-                                width: 100%;
-                                height: 70%;
-
-                                animation: opacity 0.5s;
-
-                                button {
-                                    width: 80%;
-                                    height: 20%;
-
-                                    background-color: wheat;
-                                    color: sienna;
-                                }
-
-                                .fine {
-                                    &:hover {
-                                        color: grey;
-                                        background: bisque;
-                                    }
-                                }
-                                .medium {
-                                    &:hover {
-                                        color: wheat;
-                                        background-color: chocolate;
-                                    }
-                                }
-                                .coarse {
-                                    &:hover {
-                                        color: linen;
-                                        background-color:rgb(131, 147, 162);
-                                        box-shadow: 2px 2px 0px 2px grey;
-                                    }
-                                }
-                            }
-                        }
-
-
-                        .customDescription {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-evenly;
-                            align-items: center;
-    
-                            width: 100%;
-                            height: 100%;
-    
-                            p {
-                                height: 10%;
-                                font-size: 25px;
-                                font-weight: bold;
-                                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                color: sienna;
-    
-                                margin-bottom: 0%;
-                            }
-    
-                            .descriptionInput {
-                                width: 100%;
-                                min-height: 50%;
-                                max-height: 50%;
-                                outline: none;
-                                border: 0;
-                                resize: none;   
-                                font-size: 18px;
-                                color: sienna;
-                                overflow:  hidden;
-    
-                                background-color: wheat;
-                                border-radius: 5px;
-    
-                                padding: 5%;
-                            }
-                            .descriptionBtnContainer {
-                                display: flex ;
-                                flex-direction: column;
-                                justify-content: space-around;
-                                align-items: center;
-    
-                                width: 100%;
-                                height: 25%;
-                                
-                                button {
-                                    width: 100%;
-                                    font-size: 18px;
-                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                    border-radius: 10px;
-                                    border: 0;    
-            
-                                    color: linen;
-                                    background-color: sienna;
-                                    box-shadow: 2px 3px 0px 1px darkgoldenrod;
-            
-                                    &:hover {
-                                        color: brown;
-                                        background-color: bisque;
-                                        transition: 0.3s;
-                                    }
-                                    &:active {
-                                        box-shadow: 0px 0px 0px 0px;
-                                        transform: translateY(3%);
-                                        transition: 0s;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                }
-            }
-
-            .favDetailsNot {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                justify-content: flex-start;
+                align-items: flex-start;
 
                 width: 100%;
-                height: 100%;
+                height: 85%;
+                max-height: 85%;
+                list-style: none;
+
+                margin-bottom: 2%;
+                padding-left: 0;
 
                 animation: opacity 0.5s;
-            }
-        }
-    }
-}
 
+                li {
+                  width: 100%;
+                  font-size: 18px;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  color: sienna;
+                  cursor: pointer;
+                  border-radius: 5px;
 
-@keyframes opacity {
-    from {
-        opacity: 0;
-    }   
-    to {
-        opacity: 1;
-    }
-}
+                  padding-left: 3%;
+                  margin-block: 1%;
 
-@media all and (min-width:320px) {
-    .FavContainer {
-        width: 100%;
-        height: 65%;
-
-        .favTitle {
-            height: 7%;
-
-            header {
-                font-size: 20px;
-
-                .favIcon {
-                    font-size: 15px;
+                  &:hover {
+                    color: wheat;
+                    background-color: sienna;
+                    transition: 0.3s;
+                  }
                 }
-            }
+              }
+              .customWater {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
 
-            p {
-                font-size: 12px;
-            }
-        }
-
-        .favContents {
-            height: 93%;
-            flex-direction: column;
-
-            .favourites {
                 width: 100%;
-                height: 30%;
+                height: 60%;
 
-                .favList {
+                animation: opacity 0.5s;
 
-                    li {
-                        height: 20%;
-                        margin-block: 0%;
+                margin-bottom: 5%;
 
-                        padding-inline: 1%;
-
-                        p {
-                            width: 42%;
-                            font-size: 16px;
-                        }
-
-                        .btnContainer {
-                            width: 58%;
-
-                            button {
-                                width: auto;
-                                height: 70%;
-                                font-size: 12px;
-                                box-shadow: 0px 0px 0px 1px sienna;
-                            }
-                        }
-                    }
+                button {
+                  height: 25%;
                 }
-            }
+              }
+              .customCoffee {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
 
-            .favDetailContainer {
+                width: 100%;
+                height: 50%;
+
+                animation: opacity 0.5s;
+
+                input {
+                  border-radius: 5px;
+                  color: saddlebrown;
+                  background-color: wheat;
+                  border: 0;
+                  outline: none;
+
+                  padding-left: 5%;
+                }
+
+                p {
+                  font-size: 16px;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  color: sienna;
+                  margin-bottom: 1%;
+                }
+
+                button {
+                  height: 22%;
+                }
+              }
+              .customRoasting {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-evenly;
+                align-items: center;
+
                 width: 100%;
                 height: 70%;
-                max-height: 500px;
 
-                .favDetailsNot {
-                    height: 100%;
+                animation: opacity 0.5s;
 
-                    background-image: url('../../../../public/img/background/myRecipe.jpg');
-                    background-position: center;
-                    background-size: cover;
-
-                    svg {
-                        display: none;
-                    }
+                button {
+                  width: 80%;
+                  height: 20%;
                 }
 
-                .favDetails {
-                    max-height: 500px;                    
-
-                    .detailsContainer {
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        max-height: 500px;                  
-
-                        .details {
-                            width: 100%;
-                            height: 60%;
-
-                            .favName {
-                                height: 15%;
-                            }
-                        }
-                        .detailCustomSetting {
-                            width: 100%;
-                            height: 60%;
-
-                            .favName {
-                                height: 15%;
-                            }
-                        }
-                        
-                        .customContainer {
-                            width: 100%;
-                            height: 40%;
-
-                            .customOptions {
-                                justify-content: space-evenly;
-                                height: 100%;
-
-                                p {
-                                    font-size: 25px;
-                                }
-
-                                button {
-                                    height: 20%;
-                                }
-                            }
-
-                            .customDetail {
-                                max-height: 180px;
-                                justify-content: center;
-
-                                .customfavName {
-                                    height: 90%;
-                                }
-                                .customMenuName {
-                                    height: 60%;
-                                }
-                                .customMethodName {
-                                    height: 60%;
-
-                                    overflow: scroll;
-                                }
-                                .customCoffee {
-                                    height: 70%;
-                                }
-                            }
-
-                            .customDescription {
-                                justify-content: flex-start;
-
-                                p {
-                                    display: none;
-                                }
-
-                                .descriptionInput {
-                                    min-height: 70%;
-                                    font-size: 15px;
-
-                                    padding: 2%;
-                                }
-
-                                .descriptionBtnContainer {
-                                    flex-direction: row;
-
-                                    button {
-                                        width: 40%;
-                                    }
-                                }
-                            }
-
-
-                        }
-                    }
-
+                .light {
+                  &:hover {
+                    color: grey;
+                    background: linen;
+                  }
                 }
-            }
-        }
-    }
-}
-
-@media all and (min-width:767px) {
-    .FavContainer {
-        width: 70%;
-        height: 55%;
-        align-items: center;
-
-        .favTitle {
-            width: 80%;
-            height: 15%;
-
-            header {
-                font-size: 30px;
-
-                .favIcon {
-                    font-size: 20px;
+                .dark {
+                  &:hover {
+                    color: #472c1b;
+                    background-color: burlywood;
+                  }
                 }
-            }
+              }
+              .customGrind {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-evenly;
+                align-items: center;
 
-            p {
-                font-size: 16px;
-            }
-        }
-
-        .favContents {
-            height: 93%;
-            flex-direction: column;
-
-            .favourites {
-                width: 80%;
-                height: 45%;
-
-                .favList {
-
-                    li {
-                        height: 20%;
-                        margin-block: 0%;
-
-                        padding-inline: 1%;
-
-                        p {
-                            width: 48%;
-                            font-size: 20px;
-                        }
-
-                        .btnContainer {
-                            width:52%;
-
-                            button {
-                                width: auto;
-                                height: 70%;
-                                font-size: 15px;
-                                box-shadow: 0px 0px 0px 2px sienna;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .favDetailContainer {
                 width: 100%;
-                height: 55%;
-                max-height: 300px;
+                height: 70%;
 
-                .favDetailsNot {
-                    height: 100%;
+                animation: opacity 0.5s;
 
-                    background-image: none;
+                button {
+                  width: 80%;
+                  height: 20%;
 
-                    svg {
-                        display: flex;
-                    }
+                  background-color: wheat;
+                  color: sienna;
                 }
 
-                .favDetails {
-                    max-height: 300px;                    
-
-                    .detailsContainer {
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        max-height: 500px;                  
-
-                        .details {
-                            width: 100%;
-                            height: 100%;
-
-                            .favName {
-                                height: 15%;
-                            }
-                        }
-                        .detailCustomSetting {
-                            width: 100%;
-                            height: 100%;
-
-                            .favName {
-                                height: 15%;
-                            }
-                        }
-                        
-                        .customContainer {
-                            width: 100%;
-                            height: 100%;
-
-                            .customOptions {
-                                justify-content: space-evenly;
-                                height: 100%;
-
-                                p {
-                                    font-size: 25px;
-                                }
-
-                                button {
-                                    height: 20%;
-                                }
-                            }
-
-                            .customDetail {
-                                max-height: 250px;
-                                justify-content: center;
-
-                                .customfavName {
-                                    height: 90%;
-                                }
-                                .customMenuName {
-                                    height: 60%;
-                                }
-                                .customMethodName {
-                                    height: 60%;
-
-                                    overflow: scroll;
-                                }
-                                .customCoffee {
-                                    height: 50%;
-                                }
-                            }
-
-                            .customDescription {
-                                justify-content: center;
-
-                                p {
-                                    display: flex;
-                                    height: 15%;
-                                }
-
-                                .descriptionInput {
-                                    min-height: 50%;
-                                    font-size: 16px;
-
-                                    padding: 3%;
-                                }
-
-                                .descriptionBtnContainer {
-                                    flex-direction: row;
-
-                                    button {
-                                        width: 40%;
-                                    }
-                                }
-                            }
-
-
-                        }
-                    }
-
+                .fine {
+                  &:hover {
+                    color: grey;
+                    background: bisque;
+                  }
                 }
+                .medium {
+                  &:hover {
+                    color: wheat;
+                    background-color: chocolate;
+                  }
+                }
+                .coarse {
+                  &:hover {
+                    color: linen;
+                    background-color: rgb(131, 147, 162);
+                    box-shadow: 2px 2px 0px 2px grey;
+                  }
+                }
+              }
             }
-        }
-    }
-}
 
-@media all and (min-width:1279px) {
-    .FavContainer {
-        width: 100%;
-        height: 35%;
+            .customDescription {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+
+              width: 100%;
+              height: 100%;
+
+              p {
+                height: 10%;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: sienna;
+
+                margin-bottom: 0%;
+              }
+
+              .descriptionInput {
+                width: 100%;
+                min-height: 50%;
+                max-height: 50%;
+                outline: none;
+                border: 0;
+                resize: none;
+                font-size: 18px;
+                color: sienna;
+                overflow: hidden;
+
+                background-color: wheat;
+                border-radius: 5px;
+
+                padding: 5%;
+              }
+              .descriptionBtnContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                width: 100%;
+                height: 25%;
+
+                button {
+                  width: 100%;
+                  font-size: 18px;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  border-radius: 10px;
+                  border: 0;
+
+                  color: linen;
+                  background-color: sienna;
+                  box-shadow: 2px 3px 0px 1px darkgoldenrod;
+
+                  &:hover {
+                    color: brown;
+                    background-color: bisque;
+                    transition: 0.3s;
+                  }
+                  &:active {
+                    box-shadow: 0px 0px 0px 0px;
+                    transform: translateY(3%);
+                    transition: 0s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .favDetailsNot {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .favTitle {
-            width: 100%;
-            height: 25%;
+        width: 100%;
+        height: 100%;
 
-            header {
-                font-size: 40px;
-
-                .favIcon {
-                    font-size: 30px;
-                }
-            }
-
-            p {
-                font-size: 20px;
-            }
-        }
-
-        .favContents {
-            height: 75%;
-            flex-direction: row;
-
-            .favourites {
-                width: 50%;
-                height: 100%;
-
-                .favList {
-
-                    li {
-                        height: 20%;
-                        margin-block: 0%;
-
-                        padding-inline: 1%;
-
-                        p {
-                            width: 50%;
-                            font-size: 25px;
-                        }
-
-                        .btnContainer {
-                            width:45%;
-
-                            button {
-                                width: auto;
-                                height: 60%;
-                                font-size: 15px;
-                                box-shadow: 0px 0px 0px 2px sienna;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .favDetailContainer {
-                width: 50%;
-                height: 100%;
-                max-height: 300px;
-
-                .favDetailsNot {
-                    height: 100%;
-
-                    background-image: none;
-
-                    svg {
-                        display: flex;
-                    }
-                }
-
-                .favDetails {
-                    max-height: 300px;                    
-
-                    .detailsContainer {
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        max-height: 500px;                  
-
-                        .details {
-                            width: 57%;
-                            height: 100%;
-
-                            .favName {
-                                height: 15%;
-                            }
-                        }
-                        .detailCustomSetting {
-                            width: 57%;
-                            height: 100%;
-
-                            .favName {
-                                height: 15%;
-                            }
-                        }
-                        
-                        .customContainer {
-                            width: 43%;
-                            height: 100%;
-
-                            .customOptions {
-                                justify-content: space-evenly;
-                                height: 100%;
-
-                                p {
-                                    font-size: 25px;
-                                }
-
-                                button {
-                                    width: 100%;
-                                    height: 15%;
-                                }
-                            }
-
-                            .customDetail {
-                                max-height: 270px;
-                                justify-content: center;
-
-                                .customDetailBasic {
-
-                                    .customDetailBasicText {
-
-                                        p {
-                                            font-size: 18px;
-                                        }
-                                    }
-                                }
-
-                                .customfavName {
-                                    height: 90%;
-                                }
-                                .customMenuName {
-                                    height: 60%;
-                                }
-                                .customMethodName {
-                                    height: 60%;
-
-                                    overflow: scroll;
-                                }
-                                .customCoffee {
-                                    height: 50%;
-                                }
-                            }
-
-                            .customDescription {
-                                justify-content: center;
-
-                                p {
-                                    display: flex;
-                                    height: 15%;
-                                }
-
-                                .descriptionInput {
-                                    min-height: 50%;
-                                    font-size: 16px;
-
-                                    padding: 3%;
-                                }
-
-                                .descriptionBtnContainer {
-                                    flex-direction: row;
-
-                                    button {
-                                        width: 40%;
-                                    }
-                                }
-                            }
-
-
-                        }
-                    }
-
-                }
-            }
-        }
+        animation: opacity 0.5s;
+      }
     }
+  }
 }
 
-@media all and (min-width:1680px) {
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+@media all and (min-width: 320px) {
+  .FavContainer {
+    width: 100%;
+    height: 65%;
+
+    .favTitle {
+      height: 7%;
+
+      header {
+        font-size: 20px;
+
+        .favIcon {
+          font-size: 15px;
+        }
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .favContents {
+      height: 93%;
+      flex-direction: column;
+
+      .favourites {
+        width: 100%;
+        height: 30%;
+
+        .favList {
+          li {
+            height: 20%;
+            margin-block: 0%;
+
+            padding-inline: 1%;
+
+            p {
+              width: 42%;
+              font-size: 16px;
+            }
+
+            .btnContainer {
+              width: 58%;
+
+              button {
+                width: auto;
+                height: 70%;
+                font-size: 12px;
+                box-shadow: 0px 0px 0px 1px sienna;
+              }
+            }
+          }
+        }
+      }
+
+      .favDetailContainer {
+        width: 100%;
+        height: 70%;
+        max-height: 500px;
+
+        .favDetailsNot {
+          height: 100%;
+
+          background-image: url("../../../../public/img/background/myRecipe.jpg");
+          background-position: center;
+          background-size: cover;
+
+          svg {
+            display: none;
+          }
+        }
+
+        .favDetails {
+          max-height: 500px;
+
+          .detailsContainer {
+            flex-direction: column;
+            justify-content: flex-start;
+            max-height: 500px;
+
+            .details {
+              width: 100%;
+              height: 60%;
+
+              .favName {
+                height: 15%;
+              }
+            }
+            .detailCustomSetting {
+              width: 100%;
+              height: 60%;
+
+              .favName {
+                height: 15%;
+              }
+            }
+
+            .customContainer {
+              width: 100%;
+              height: 40%;
+
+              .customOptions {
+                justify-content: space-evenly;
+                height: 100%;
+
+                p {
+                  font-size: 25px;
+                }
+
+                button {
+                  height: 20%;
+                }
+              }
+
+              .customDetail {
+                max-height: 180px;
+                justify-content: center;
+
+                .customfavName {
+                  height: 90%;
+                }
+                .customMenuName {
+                  height: 60%;
+                }
+                .customMethodName {
+                  height: 60%;
+
+                  overflow: scroll;
+                }
+                .customCoffee {
+                  height: 70%;
+                }
+              }
+
+              .customDescription {
+                justify-content: flex-start;
+
+                p {
+                  display: none;
+                }
+
+                .descriptionInput {
+                  min-height: 70%;
+                  font-size: 15px;
+
+                  padding: 2%;
+                }
+
+                .descriptionBtnContainer {
+                  flex-direction: row;
+
+                  button {
+                    width: 40%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 767px) {
+  .FavContainer {
+    width: 70%;
+    height: 55%;
+    align-items: center;
+
+    .favTitle {
+      width: 80%;
+      height: 15%;
+
+      header {
+        font-size: 30px;
+
+        .favIcon {
+          font-size: 20px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .favContents {
+      height: 93%;
+      flex-direction: column;
+
+      .favourites {
+        width: 80%;
+        height: 45%;
+
+        .favList {
+          li {
+            height: 20%;
+            margin-block: 0%;
+
+            padding-inline: 1%;
+
+            p {
+              width: 48%;
+              font-size: 20px;
+            }
+
+            .btnContainer {
+              width: 52%;
+
+              button {
+                width: auto;
+                height: 70%;
+                font-size: 15px;
+                box-shadow: 0px 0px 0px 2px sienna;
+              }
+            }
+          }
+        }
+      }
+
+      .favDetailContainer {
+        width: 100%;
+        height: 55%;
+        max-height: 300px;
+
+        .favDetailsNot {
+          height: 100%;
+
+          background-image: none;
+
+          svg {
+            display: flex;
+          }
+        }
+
+        .favDetails {
+          max-height: 300px;
+
+          .detailsContainer {
+            flex-direction: row;
+            justify-content: flex-start;
+            max-height: 500px;
+
+            .details {
+              width: 100%;
+              height: 100%;
+
+              .favName {
+                height: 15%;
+              }
+            }
+            .detailCustomSetting {
+              width: 100%;
+              height: 100%;
+
+              .favName {
+                height: 15%;
+              }
+            }
+
+            .customContainer {
+              width: 100%;
+              height: 100%;
+
+              .customOptions {
+                justify-content: space-evenly;
+                height: 100%;
+
+                p {
+                  font-size: 25px;
+                }
+
+                button {
+                  height: 20%;
+                }
+              }
+
+              .customDetail {
+                max-height: 250px;
+                justify-content: center;
+
+                .customfavName {
+                  height: 90%;
+                }
+                .customMenuName {
+                  height: 60%;
+                }
+                .customMethodName {
+                  height: 60%;
+
+                  overflow: scroll;
+                }
+                .customCoffee {
+                  height: 50%;
+                }
+              }
+
+              .customDescription {
+                justify-content: center;
+
+                p {
+                  display: flex;
+                  height: 15%;
+                }
+
+                .descriptionInput {
+                  min-height: 50%;
+                  font-size: 16px;
+
+                  padding: 3%;
+                }
+
+                .descriptionBtnContainer {
+                  flex-direction: row;
+
+                  button {
+                    width: 40%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1279px) {
+  .FavContainer {
+    width: 100%;
+    height: 35%;
+    justify-content: center;
+    align-items: center;
+
+    .favTitle {
+      width: 100%;
+      height: 25%;
+
+      header {
+        font-size: 40px;
+
+        .favIcon {
+          font-size: 30px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .favContents {
+      height: 75%;
+      flex-direction: row;
+
+      .favourites {
+        width: 50%;
+        height: 100%;
+
+        .favList {
+          li {
+            height: 20%;
+            margin-block: 0%;
+
+            padding-inline: 1%;
+
+            p {
+              width: 50%;
+              font-size: 25px;
+            }
+
+            .btnContainer {
+              width: 45%;
+
+              button {
+                width: auto;
+                height: 60%;
+                font-size: 15px;
+                box-shadow: 0px 0px 0px 2px sienna;
+              }
+            }
+          }
+        }
+      }
+
+      .favDetailContainer {
+        width: 50%;
+        height: 100%;
+        max-height: 300px;
+
+        .favDetailsNot {
+          height: 100%;
+
+          background-image: none;
+
+          svg {
+            display: flex;
+          }
+        }
+
+        .favDetails {
+          max-height: 300px;
+
+          .detailsContainer {
+            flex-direction: row;
+            justify-content: flex-start;
+            max-height: 500px;
+
+            .details {
+              width: 57%;
+              height: 100%;
+
+              .favName {
+                height: 15%;
+              }
+            }
+            .detailCustomSetting {
+              width: 57%;
+              height: 100%;
+
+              .favName {
+                height: 15%;
+              }
+            }
+
+            .customContainer {
+              width: 43%;
+              height: 100%;
+
+              .customOptions {
+                justify-content: space-evenly;
+                height: 100%;
+
+                p {
+                  font-size: 25px;
+                }
+
+                button {
+                  width: 100%;
+                  height: 15%;
+                }
+              }
+
+              .customDetail {
+                max-height: 270px;
+                justify-content: center;
+
+                .customDetailBasic {
+                  .customDetailBasicText {
+                    p {
+                      font-size: 18px;
+                    }
+                  }
+                }
+
+                .customfavName {
+                  height: 90%;
+                }
+                .customMenuName {
+                  height: 60%;
+                }
+                .customMethodName {
+                  height: 60%;
+
+                  overflow: scroll;
+                }
+                .customCoffee {
+                  height: 50%;
+                }
+              }
+
+              .customDescription {
+                justify-content: center;
+
+                p {
+                  display: flex;
+                  height: 15%;
+                }
+
+                .descriptionInput {
+                  min-height: 50%;
+                  font-size: 16px;
+
+                  padding: 3%;
+                }
+
+                .descriptionBtnContainer {
+                  flex-direction: row;
+
+                  button {
+                    width: 40%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

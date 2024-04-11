@@ -143,7 +143,7 @@ export default function Fav({ favUpdated }) {
               setCustomDetail("name");
             }}
           >
-            Name: {favList.favName}
+            {favList.favName}
           </p>
           <p
             onClick={() => {
@@ -192,7 +192,7 @@ export default function Fav({ favUpdated }) {
     } else if (customFav === "" || customFav === "description") {
       return (
         <div className="details">
-          <p className="favName">Name: {favList.favName}</p>
+          <p className="favName">{favList.favName}</p>
           <p>Coffee: {favList.menuName}</p>
           <p>Method: {favList.methodName}</p>
           <p>Water: {favList.water}</p>
