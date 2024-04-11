@@ -60,8 +60,8 @@ export default function History(getFavUpdated, favUpdated) {
                   Go Brew
                 </button>
                 <button
-                  onClick={() => {
-                    const result = async () => await saveFavourites(userEmail, brew);
+                  onClick={async () => {
+                    const result = await saveFavourites(userEmail, brew);
                     if (result) {
                       setFavResponse(false);
                       getFavUpdated(true);
