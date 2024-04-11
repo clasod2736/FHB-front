@@ -45,7 +45,7 @@ export default function SlideMenu() {
           <div className="aboutMe">
             <header>Developed By Joon Park</header>
             <div className="personalLinks">
-              <a href="www.linkedin.com/in/joon-park-772a8820b">
+              <a href="https://www.linkedin.com/in/joondev">
                 <BsLinkedin />
               </a>
               <a href="https://github.com/clasod2736">
