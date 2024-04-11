@@ -34,7 +34,7 @@ export default function MyRecipe() {
               <p className="grind">Grind</p>
               <p className="functions">Functions</p>
             </div>
-            <History getFavUpdated={getFavUpdated} favUpdated={favUpdated} />
+            <History getFavUpdated={getFavUpdated} />
           </div>
         </div>
         <div className="myRecipeImg"></div>

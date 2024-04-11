@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { getOldbrews } from "../../../api/getOldbrews";
 import saveFavourites from "../../../api/saveFavourites";
 
-export default function History(getFavUpdated, favUpdated) {
+export default function History({ getFavUpdated }) {
   const userEmail = useSelector((state) => state.userEmail);
 
   const [oldBrews, setOldBrews] = useState([]);
