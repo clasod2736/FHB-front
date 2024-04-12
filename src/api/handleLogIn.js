@@ -15,12 +15,13 @@ export const handleLogIn = async (email, password) => {
       { withCredentials: true }
     );
 
-    console.log("Access Token:", response.headers["authorization"]);
-    console.log("Refresh Token:", response.headers["refresh-token"]);
+    console.log("Access Token:", response.headers["Authorization"]);
+    console.log("Refresh Token:", response.headers["Refresh-Token"]);
     console.log(`${response.data.email} Logged in.`);
 
     localStorage.setItem("accessToken", response.headers["Authorization"]);
     localStorage.setItem("refreshToken", response.headers["Refresh-Token"]);
+    console.log(response);
 
     return response;
   } catch (error) {
