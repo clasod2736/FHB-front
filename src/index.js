@@ -17,6 +17,10 @@ instance.interceptors.request.use(
     const accessToken = localStorage.getItem("accessToken");
     const refreshToken = localStorage.getItem("refreshToken");
 
+    if (!accessToken || !refreshToken) {
+      return config;
+    }
+
     if (accessToken) {
       config.headers.Authorization = accessToken;
     }

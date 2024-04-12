@@ -8,6 +8,7 @@ export const handleLogIn = async (email, password) => {
   try {
     const response = await axios.post(
       serverUrl,
+      { withCredentials: true },
       {
         email: email,
         password: password,
