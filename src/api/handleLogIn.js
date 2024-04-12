@@ -15,7 +15,9 @@ export const handleLogIn = async (email, password) => {
       { withCredentials: true }
     );
 
-    console.log(`${response}`);
+    console.log("Access Token:", response.headers["authorization"]);
+    console.log("Refresh Token:", response.headers["refresh-token"]);
+    console.log(`${response.data.email} Logged in.`);
     return response;
   } catch (error) {
     console.log(error);
