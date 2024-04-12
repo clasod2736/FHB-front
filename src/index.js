@@ -11,7 +11,7 @@ import store from "./store/store";
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: process.env.REACT_APP_API,
+  baseURL: "https://main--voluble-kashata-776f36.netlify.app/",
   headers: {
     "Content-Type": "application/json",
     withCredentials: true,
