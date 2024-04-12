@@ -15,7 +15,7 @@ export const handleLogIn = async (email, password) => {
       { withCredentials: true }
     );
 
-    console.log(`${response.userInfo.data.email} Logged in.`);
+    console.log(`${response.userInfo.email} Logged in.`);
 
     localStorage.setItem(response.accessToken);
     localStorage.setItem(response.refreshToken);
