@@ -19,7 +19,7 @@ export const handleLogIn = async (email, password) => {
 
     localStorage.setItem("accessToken", response.accessToken);
     localStorage.setItem("refreshToken", response.refreshToken);
-    console.log(response.accesstoken, response.refreshToken);
+    console.log(response);
 
     return response;
   } catch (error) {
