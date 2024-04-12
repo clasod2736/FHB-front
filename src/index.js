@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 
 //intercept every axios request and add header section for JWT
-import axios from "axios";
+// import axios from "axios";
 
 // export const instance = axios.create({
 //   baseURL: "https://main--voluble-kashata-776f36.netlify.app/",
@@ -21,29 +21,29 @@ import axios from "axios";
 //   },
 // });
 
-axios.interceptors.request.use(
-  function (config) {
-    const accessToken = localStorage.getItem("accessToken");
-    const refreshToken = localStorage.getItem("refreshToken");
+// instance.interceptors.request.use(
+//   function (config) {
+//     const accessToken = localStorage.getItem("accessToken");
+//     const refreshToken = localStorage.getItem("refreshToken");
 
-    if (!accessToken || !refreshToken) {
-      return config;
-    }
+//     if (!accessToken || !refreshToken) {
+//       return config;
+//     }
 
-    if (accessToken) {
-      config.headers.Authorization = accessToken;
-    }
+//     if (accessToken) {
+//       config.headers.Authorization = accessToken;
+//     }
 
-    if (refreshToken) {
-      config.headers["Refresh-Token"] = refreshToken;
-    }
+//     if (refreshToken) {
+//       config.headers["Refresh-Token"] = refreshToken;
+//     }
 
-    return config;
-  },
-  function (error) {
-    return Promise.reject(error);
-  }
-);
+//     return config;
+//   },
+//   function (error) {
+//     return Promise.reject(error);
+//   }
+// );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
