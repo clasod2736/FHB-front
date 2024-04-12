@@ -10,18 +10,18 @@ import store from "./store/store";
 //intercept every axios request and add header section for JWT
 import axios from "axios";
 
-export const instance = axios.create({
-  baseURL: "https://main--voluble-kashata-776f36.netlify.app/",
-  headers: {
-    "Content-Type": "application/json",
-    withCredentials: true,
-    "Access-Control-Allow-Headers":
-      "Origin, X-Requested-With, Content-Type, Accept, Authorization, Refresh-Token",
-    "Access-Control-Request-Method": "GET, POST, DELETE, PUT, OPTIONS",
-  },
-});
+// export const instance = axios.create({
+//   baseURL: "https://main--voluble-kashata-776f36.netlify.app/",
+//   headers: {
+//     "Content-Type": "application/json",
+//     withCredentials: true,
+//     "Access-Control-Allow-Headers":
+//       "Origin, X-Requested-With, Content-Type, Accept, Authorization, Refresh-Token",
+//     "Access-Control-Request-Method": "GET, POST, DELETE, PUT, OPTIONS",
+//   },
+// });
 
-instance.interceptors.request.use(
+axios.interceptors.request.use(
   function (config) {
     const accessToken = localStorage.getItem("accessToken");
     const refreshToken = localStorage.getItem("refreshToken");
