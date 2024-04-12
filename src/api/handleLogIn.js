@@ -19,7 +19,6 @@ export const handleLogIn = async (email, password) => {
 
     localStorage.setItem("accessToken", response.data.accessToken);
     localStorage.setItem("refreshToken", response.data.refreshToken);
-    console.log(response);
 
     return response;
   } catch (error) {
