@@ -15,11 +15,11 @@ export const handleLogIn = async (email, password) => {
       { withCredentials: true }
     );
 
-    console.log(`${response.userInfo.email} Logged in.`);
+    console.log(`${response.userInfo[1].email} Logged in.`);
 
     localStorage.setItem("accessToken", response.accessToken);
     localStorage.setItem("refreshToken", response.refreshToken);
-    console.log(response);
+    console.log(response.accesstoken, response.refreshToken);
 
     return response;
   } catch (error) {
