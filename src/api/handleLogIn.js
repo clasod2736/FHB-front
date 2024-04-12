@@ -17,8 +17,8 @@ export const handleLogIn = async (email, password) => {
 
     // console.log(`${response.userInfo.email} Logged in.`);
 
-    localStorage.setItem(response.accessToken);
-    localStorage.setItem(response.refreshToken);
+    localStorage.setItem("accessToken", response.accessToken);
+    localStorage.setItem("refreshToken", response.refreshToken);
     console.log(response);
 
     return response;
