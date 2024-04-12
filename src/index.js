@@ -31,11 +31,11 @@ instance.interceptors.request.use(
     }
 
     if (accessToken) {
-      config.headers.Authorization = accessToken;
+      config.headers.accessToken = accessToken;
     }
 
     if (refreshToken) {
-      config.headers["Refresh-Token"] = refreshToken;
+      config.headers.refreshToken = refreshToken;
     }
 
     return config;

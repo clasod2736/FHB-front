@@ -82,6 +82,10 @@ export default function App() {
 
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
+    const accesstToken = localStorage.getItem("accessToken");
+    const refreshToken = localStorage.getItem("refreshToken");
+    console.log(accesstToken, refreshToken);
+
     const getLogIn = async () => {
       try {
         const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
