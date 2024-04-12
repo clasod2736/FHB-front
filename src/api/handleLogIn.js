@@ -16,7 +16,7 @@ export const handleLogIn = async (email, password) => {
     );
 
     console.log(`${response.data.email} Logged in.`);
-    console.log(response.headers);
+    console.log(response);
     return response;
   } catch (error) {
     console.log(error);
