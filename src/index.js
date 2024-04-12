@@ -15,7 +15,8 @@ export const instance = axios.create({
   headers: {
     "Content-Type": "application/json",
     withCredentials: true,
-    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+    "Access-Control-Allow-Headers":
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization, Refresh-Token",
     "Access-Control-Request-Method": "GET, POST, DELETE, PUT, OPTIONS",
   },
 });
