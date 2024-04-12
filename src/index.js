@@ -10,7 +10,13 @@ import store from "./store/store";
 //intercept every axios request and add header section for JWT
 import axios from "axios";
 
-const instance = axios.create();
+export const instance = axios.create({
+  baseURL: process.env.REACT_APP_API,
+  headers: {
+    "Content-Type": "application/json",
+    withCredentials: true,
+  },
+});
 
 instance.interceptors.request.use(
   function (config) {
@@ -35,8 +41,6 @@ instance.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-
-export default instance;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
