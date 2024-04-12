@@ -24,7 +24,7 @@ axios.interceptors.request.use(
     }
 
     if (refreshToken) {
-      config.headers.Authorization = `Bearer ${refreshToken}`;
+      config.headers["Refresh-Token"] = refreshToken;
     }
 
     return config;
