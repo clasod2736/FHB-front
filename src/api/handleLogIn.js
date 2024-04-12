@@ -18,6 +18,10 @@ export const handleLogIn = async (email, password) => {
     console.log("Access Token:", response.headers["authorization"]);
     console.log("Refresh Token:", response.headers["refresh-token"]);
     console.log(`${response.data.email} Logged in.`);
+
+    localStorage.setItem("accessToken", response.headers["authorization"]);
+    localStorage.setItem("refreshToken", response.headers["refresh-token"]);
+
     return response;
   } catch (error) {
     console.log(error);
