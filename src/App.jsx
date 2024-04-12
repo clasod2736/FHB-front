@@ -82,7 +82,7 @@ export default function App() {
 
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
-    const getCookies = async () => {
+    const getLogIn = async () => {
       try {
         const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
 
@@ -102,7 +102,7 @@ export default function App() {
         console.log("User need to logIn");
       }
     };
-    getCookies();
+    getLogIn();
   }, [dispatch]);
 
   return (
