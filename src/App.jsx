@@ -59,7 +59,6 @@ export default function App() {
   useEffect(() => {
     const Auth = async () => {
       const response = await getAuth();
-      console.log(response);
 
       if (response) {
         console.log(`User ${response.data.userEmail} approved authentication`);
