@@ -82,15 +82,12 @@ export default function App() {
 
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
-    const accesstToken = localStorage.getItem("accessToken");
-    const refreshToken = localStorage.getItem("refreshToken");
-    console.log(accesstToken, refreshToken);
-
     const getLogIn = async () => {
       try {
         const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
+        console.log(response);
 
-        if (response.data.email !== undefined) {
+        if (response) {
           console.log(response.data.email);
           dispatch(updateEmail(response.data.email));
           dispatch({ type: "loginSuccess" });
@@ -99,8 +96,10 @@ export default function App() {
         } else {
           dispatch({ type: "loggedOut" });
           console.log("token rejected...");
-          console.log(response.data);
+          console.log(response.data.data.email + "logged in");
         }
+
+        console.log(response);
       } catch (error) {
         console.log(error);
         console.log("User need to logIn");
