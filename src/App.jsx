@@ -94,7 +94,7 @@ export default function App() {
           console.log("token approved");
 
           if (response.data.newAccessToken) {
-            localStorage.setItem("accesstoken", response.data.newAccessToken);
+            localStorage.setItem("accessToken", response.data.newAccessToken);
           }
         } else {
           dispatch({ type: "loggedOut" });
