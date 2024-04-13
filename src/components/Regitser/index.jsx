@@ -25,7 +25,7 @@ export default function Register() {
 
     if (isLogIn) {
       alert("You Already Logged In.");
-      navigate("/");
+      navigate(-1);
     } else
       try {
         const response = await axios.post(serverUrl, {
