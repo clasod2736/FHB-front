@@ -36,6 +36,8 @@ export default function Intro() {
     fetchData();
   }, [isLogIn, userEmail]);
 
+  console.log(recentBrew);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBtns(true);
