@@ -5,7 +5,6 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-import { gifArr } from "../../util/getPreload";
 import getTime from "../../util/getTime";
 
 export default function Finish() {
@@ -20,11 +19,6 @@ export default function Finish() {
   const navigate = useNavigate();
 
   const heroku = process.env.REACT_APP_HEROKU_URL;
-
-  useEffect(() => {
-    const preloading = gifArr(methodName);
-    console.log(methodName, preloading);
-  }, [methodName]);
 
   //Automatically Post brew history in DB after finish brewing
   useEffect(() => {
