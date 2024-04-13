@@ -1,20 +1,32 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import "./Brewing.css";
+
+import { useParams } from "react-router-dom";
+
 import StuffList from "./components/StuffList";
 import Steps from "./components/Steps";
 
 import FinalLogo from "../../assets/img/finalLogo2.jpg";
 
 import { preloadImg } from "../../util/getPreload";
+import { gifArr } from "../../util/getPreload";
 
 export default function Brewing() {
   const [width, setWidth] = useState(0);
   const [startBrewingMobile, setStartBrewingMobile] = useState(false);
 
+  const { methodName } = useParams();
+
   //Image preolading for next page
   useLayoutEffect(() => {
     preloadImg(FinalLogo);
   }, []);
+
+  //preloading gifs
+  useEffect(() => {
+    const preloading = gifArr(methodName);
+    console.log(methodName, preloading);
+  }, [methodName]);
 
   //Mobile setup
   const currentWidth = window.innerWidth;
