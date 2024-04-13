@@ -1,16 +1,10 @@
 import menuArr from "../util/StuffData/menu.json";
-import methodStpes from "../util/StuffData/MethodSteps.json";
+import methodSteps from "../util/StuffData/MethodSteps.json";
 
 const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
   name,
   img: data.find((item) => item.img)?.img,
 }));
-
-export const gifArr = Object.entries(methodStpes).flatMap(([name, steps]) =>
-  steps.flatMap((step) =>
-    step.step.filter((item) => item.gif).map((item) => ({ name: name, gif: item.gif }))
-  )
-);
 
 export function preloadingMenuImg() {
   console.log(menuImgArr);
@@ -27,4 +21,17 @@ export const preloadImg = (imgAdd) => {
   console.log("Final logo preloaded.");
 };
 
-export function getPreloadGifs() {}
+export function gifArr(methodName) {
+  // methodName에 해당하는 객체를 찾습니다.
+  const methodObj = methodSteps[methodName];
+  if (!methodObj) {
+    // methodName에 해당하는 객체가 없으면 빈 배열을 반환합니다.
+    return [];
+  }
+
+  // methodName에 해당하는 객체의 "step" 배열을 가져와서 각 항목에서 gif 값을 추출합니다.
+  const gifs = methodObj.map(({ step }) => step.map(({ gif }) => gif)).flat();
+
+  // 추출된 gif 값을 가지고 있는 배열을 반환합니다.
+  return gifs;
+}
