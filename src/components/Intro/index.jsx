@@ -25,6 +25,7 @@ export default function Intro() {
     const fetchData = async () => {
       if (isLogIn) {
         const fetchedRecentBrew = await getRecentbrews(userEmail);
+        console.log(fetchedRecentBrew.status);
 
         if (fetchedRecentBrew.response.status === 404) {
           setRecentBrew(false);
@@ -33,6 +34,8 @@ export default function Intro() {
     };
     fetchData();
   }, [isLogIn, userEmail]);
+
+  console.log(recentBrew);
 
   useEffect(() => {
     const timer = setTimeout(() => {

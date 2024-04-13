@@ -12,6 +12,7 @@ export async function getRecentbrews(userEmail) {
       },
     });
     console.log("Recent Brew loaded.");
+    console.log(response, response.data);
     return response.data;
   } catch (error) {
     console.log(error);
