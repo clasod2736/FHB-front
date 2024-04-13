@@ -30,7 +30,7 @@ export function gifArr(methodName) {
   }
 
   // methodName에 해당하는 객체의 "step" 배열을 가져와서 각 항목에서 gif 값을 추출합니다.
-  const gifs = methodObj.map(({ step }) => step.map(({ gif }) => gif)).flat();
+  const gifs = methodObj.flatMap(({ step }) => step.map(({ gif }) => gif));
 
   // 추출된 gif 값을 가지고 있는 배열을 반환합니다.
   return gifs;
