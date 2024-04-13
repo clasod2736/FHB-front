@@ -7,7 +7,6 @@ import { updateEmail } from "../../store/action";
 //Slide Menu component (react-bootstrap)
 import SlideMenu from "./SlideMenu";
 import Choices from "./Choices";
-import axios from "axios";
 
 export default function Navbar() {
   const isLogIn = useSelector((state) => state.logIn);
@@ -16,8 +15,6 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const [click, setClick] = useState(false);
-
-  const heroku = process.env.REACT_APP_HEROKU_URL;
 
   //render differrent Link element depends on LoggedIn
   const settingMyRecipe = () => {
