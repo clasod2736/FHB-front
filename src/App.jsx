@@ -53,57 +53,9 @@ export default function App() {
     },
   ]);
 
-  /* check Local data exist and update redux store for when react-app refresh */
-  // useEffect(() => {
-  //   const localInfo =  localStorage.getItem('userInfo')
-  //   const userInfo = JSON.parse(localInfo);
-
-  //   if (userInfo) {
-
-  //     if (userInfo.isLoggedIn) {
-
-  //       const userInfo = JSON.parse(localInfo);
-  //       const isLoggedIn = userInfo.isLoggedIn;
-  //       const userEmail = userInfo.userEmail;
-  //       console.log(userEmail, isLoggedIn)
-
-  //       dispatch(updateEmail(userEmail))
-  //       dispatch({ type: 'loginSuccess' })
-
-  //     } else if (!userInfo.isLoggedIn) {
-  //       return
-  //     }
-  //   } else {
-  //     console.log('Cannot get Data from Local Storage')
-  //   }
-  // })
-
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
-    // const getAuth = async () => {
-    //   try {
-    //     const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
-    //     console.log(response);
-
-    //     if (response) {
-    //       console.log(`User ${response.data.userEmail} approved authentication`);
-    //       dispatch(updateEmail(response.data.userEmail));
-    //       dispatch({ type: "loginSuccess" });
-
-    //       if (response.data.newAccessToken) {
-    //         localStorage.setItem("accessToken", response.data.newAccessToken);
-    //         console.log("New access token generated");
-    //       }
-    //     } else {
-    //       dispatch({ type: "loggedOut" });
-    //       console.log("token rejected...");
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //     console.log("User need to logIn");
-    //   }
-    // };
-    const response = getAuth();
+    const response = async () => await getAuth();
     console.log(response);
 
     if (response) {
