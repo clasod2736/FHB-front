@@ -45,7 +45,8 @@ export default function Login() {
       //         isLoggedIn : true
       //     }
       // ))
-      if (location === "/login") {
+      console.log(location.pathname);
+      if (location.pathname === "/login") {
         navigate("/");
       } else return;
     }
