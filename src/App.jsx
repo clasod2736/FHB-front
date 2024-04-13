@@ -55,22 +55,25 @@ export default function App() {
 
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
-    const response = async () => await getAuth();
-    console.log(response);
+    const Auth = async () => {
+      const response = async () => await getAuth();
+      console.log(response);
 
-    if (response) {
-      console.log(`User ${response.data.data.userEmail} approved authentication`);
-      dispatch(updateEmail(response.data.data.userEmail));
-      dispatch({ type: "loginSuccess" });
+      if (response) {
+        console.log(`User ${response.data.data.userEmail} approved authentication`);
+        dispatch(updateEmail(response.data.data.userEmail));
+        dispatch({ type: "loginSuccess" });
 
-      if (response.data.newAccessToken) {
-        localStorage.setItem("accessToken", response.data.data.newAccessToken);
-        console.log("New access token generated");
+        if (response.data.newAccessToken) {
+          localStorage.setItem("accessToken", response.data.data.newAccessToken);
+          console.log("New access token generated");
+        }
+      } else {
+        dispatch({ type: "loggedOut" });
+        console.log("token rejected...");
       }
-    } else {
-      dispatch({ type: "loggedOut" });
-      console.log("token rejected...");
-    }
+    };
+    Auth();
   }, [dispatch]);
 
   return (
