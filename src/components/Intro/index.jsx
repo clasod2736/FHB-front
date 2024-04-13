@@ -12,6 +12,7 @@ export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
   const userEmail = useSelector((state) => state.userEmail);
   const [recentBrew, setRecentBrew] = useState(null);
+  const [showBtns, setShowBtns] = useState(false);
 
   const navigate = useNavigate();
 
@@ -29,6 +30,14 @@ export default function Intro() {
     };
     fetchData();
   }, [isLogIn, userEmail]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBtns(true);
+    }, 1800);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   //Set right Buttons with loggedIn or not
   const settingButtons = () => {
@@ -70,7 +79,7 @@ export default function Intro() {
       <div className="logoContainer">
         <div className="gate">
           <Logo />
-          {settingButtons()}
+          {showBtns ? settingButtons() : ""}
         </div>
       </div>
     </div>

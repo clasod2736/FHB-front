@@ -3,9 +3,10 @@ import "./App.css";
 import Root from "./Root/Root";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+//Redux
 import { useDispatch } from "react-redux";
 import { updateEmail } from "./store/action";
-import axios from "axios";
 import { useSelector } from "react-redux";
 
 //Components
@@ -20,8 +21,7 @@ import {
   MyRecipe,
   Brewing,
 } from "./components";
-
-const heroku = process.env.REACT_APP_HEROKU_URL;
+import { getAuth } from "./api/getAuth";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -55,54 +55,26 @@ export default function App() {
     },
   ]);
 
-  /* check Local data exist and update redux store for when react-app refresh */
-  // useEffect(() => {
-  //   const localInfo =  localStorage.getItem('userInfo')
-  //   const userInfo = JSON.parse(localInfo);
-
-  //   if (userInfo) {
-
-  //     if (userInfo.isLoggedIn) {
-
-  //       const userInfo = JSON.parse(localInfo);
-  //       const isLoggedIn = userInfo.isLoggedIn;
-  //       const userEmail = userInfo.userEmail;
-  //       console.log(userEmail, isLoggedIn)
-
-  //       dispatch(updateEmail(userEmail))
-  //       dispatch({ type: 'loginSuccess' })
-
-  //     } else if (!userInfo.isLoggedIn) {
-  //       return
-  //     }
-  //   } else {
-  //     console.log('Cannot get Data from Local Storage')
-  //   }
-  // })
-
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
-    const getCookies = async () => {
-      try {
-        const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
+    const Auth = async () => {
+      const response = await getAuth();
 
-        if (response.data.email !== undefined) {
-          console.log(response.data.email);
-          dispatch(updateEmail(response.data.email));
-          dispatch({ type: "loginSuccess" });
-          console.log("token approved");
-          console.log(response);
-        } else {
-          dispatch({ type: "loggedOut" });
-          console.log("token rejected...");
-          console.log(response.data);
+      if (response) {
+        console.log(`User ${response.data.userEmail} approved authentication`);
+        dispatch(updateEmail(response.data.userEmail));
+        dispatch({ type: "loginSuccess" });
+
+        if (response.data.newAccessToken) {
+          localStorage.setItem("accessToken", response.data.newAccessToken);
+          console.log("New access token generated");
         }
-      } catch (error) {
-        console.log(error);
-        console.log("User need to logIn");
+      } else {
+        dispatch({ type: "loggedOut" });
+        console.log("token rejected...");
       }
     };
-    getCookies();
+    Auth();
   }, [dispatch]);
 
   return (

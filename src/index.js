@@ -1,18 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-import { Provider } from 'react-redux';
-import store from './store/store';
+import { Provider } from "react-redux";
+import store from "./store/store";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//intercept every axios request and add header section for JWT
+import axios from "axios";
+
+axios.interceptors.request.use(
+  function (config) {
+    const accessToken = localStorage.getItem("accessToken");
+    const refreshToken = localStorage.getItem("refreshToken");
+
+    if (!refreshToken) {
+      return config;
+    }
+
+    if (accessToken) {
+      config.headers.authorization = `Bearer ${accessToken}`;
+    }
+
+    if (refreshToken) {
+      config.headers["refresh-token"] = refreshToken;
+    }
+
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </Provider>
 );
 

@@ -15,7 +15,10 @@ export const handleLogIn = async (email, password) => {
       { withCredentials: true }
     );
 
-    console.log(`${response.data.email} Logged in.`);
+    console.log(`${response.data.userInfo.email} Logged in.`);
+
+    localStorage.setItem("accessToken", response.data.accessToken);
+    localStorage.setItem("refreshToken", response.data.refreshToken);
 
     return response;
   } catch (error) {
