@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateEmail } from "../../store/action";
 import { useSelector } from "react-redux";
@@ -19,6 +19,7 @@ export default function Login() {
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   // Get api from database for userinformation.
   const getLogIn = async () => {
@@ -29,7 +30,7 @@ export default function Login() {
       return;
     } else if (isLogIn) {
       alert("You Logged In Already.");
-      navigate("");
+      navigate("/");
       return;
     }
 
@@ -44,7 +45,9 @@ export default function Login() {
       //         isLoggedIn : true
       //     }
       // ))
-      navigate(-1);
+      if (location === "/login") {
+        navigate("/");
+      } else return;
     }
   };
 
