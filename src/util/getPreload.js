@@ -1,12 +1,12 @@
 import menuArr from "../util/StuffData/menu.json";
-import methodStpes from "../util/StuffData/methodSteps.json";
+import methodStpes from "../util/StuffData/MethodSteps.json";
 
 const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
   name,
   img: data.find((item) => item.img)?.img,
 }));
 
-const gifArr = Object.entries(methodStpes).flatMap(([name, steps]) =>
+export const gifArr = Object.entries(methodStpes).flatMap(([name, steps]) =>
   steps.flatMap((step) =>
     step.step.filter((item) => item.gif).map((item) => ({ name: name, gif: item.gif }))
   )
