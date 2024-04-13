@@ -28,5 +28,10 @@ export function gifArr(methodName) {
 
   const gifs = methodObj.flatMap(({ step }) => step.map(({ gif }) => gif)).filter(Boolean);
 
+  gifs.forEach((gifUrl) => {
+    const image = new Image();
+    image.src = gifUrl;
+  });
+
   return gifs;
 }
