@@ -20,11 +20,11 @@ axios.interceptors.request.use(
     }
 
     if (accessToken) {
-      config.headers.Authorization = `Bearer ${accessToken}`;
+      config.headers.authorization = `Bearer ${accessToken}`;
     }
 
     if (refreshToken) {
-      config.headers["Refresh-Token"] = refreshToken;
+      config.headers["refresh-token"] = refreshToken;
     }
 
     return config;
