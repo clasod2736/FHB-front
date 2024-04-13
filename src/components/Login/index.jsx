@@ -29,7 +29,7 @@ export default function Login() {
       return;
     } else if (isLogIn) {
       alert("You Logged In Already.");
-      navigate("/");
+      navigate(-1);
       return;
     }
 
