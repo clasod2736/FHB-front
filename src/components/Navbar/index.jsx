@@ -44,7 +44,7 @@ export default function Navbar() {
     //   }
     dispatch(updateEmail(""));
     dispatch({ type: "loggedOut" });
-    localStorage.removeItem("acesstoken");
+    localStorage.removeItem("accesstoken");
     localStorage.removeItem("refreshToken");
   };
 
