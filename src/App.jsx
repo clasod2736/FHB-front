@@ -59,9 +59,9 @@ export default function App() {
   useEffect(() => {
     const Auth = async () => {
       const response = await getAuth();
-      console.log(response);
+      console.log(response.response);
 
-      if (response.status === 404) {
+      if (response.response.status === 404) {
         console.log("User need to logIn");
         dispatch({ type: "loggedOut" });
         return;
