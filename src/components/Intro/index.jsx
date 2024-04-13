@@ -11,7 +11,7 @@ import { preloadingMenuImg } from "../../util/getPreload";
 export default function Intro() {
   const isLogIn = useSelector((state) => state.logIn);
   const userEmail = useSelector((state) => state.userEmail);
-  const [recentBrew, setRecentBrew] = useState(null);
+  const [recentBrew, setRecentBrew] = useState({});
   const [showBtns, setShowBtns] = useState(false);
 
   const navigate = useNavigate();
@@ -25,7 +25,10 @@ export default function Intro() {
     const fetchData = async () => {
       if (isLogIn) {
         const fetchedRecentBrew = await getRecentbrews(userEmail);
-        console.log(fetchedRecentBrew);
+
+        if (!fetchedRecentBrew) {
+          setRecentBrew(fetchedRecentBrew.response.status === 404);
+        }
         setRecentBrew(fetchedRecentBrew);
       }
     };
@@ -57,7 +60,7 @@ export default function Intro() {
             className="exploreBtn"
             onClick={() => {
               if (isLogIn) {
-                recentBrew !== null
+                recentBrew !== false
                   ? navigate(
                       `/menu/${recentBrew.menuName}/method/${recentBrew.methodName}/recipe/${recentBrew.water}/${recentBrew.coffee}/${recentBrew.roasting}/${recentBrew.grind}/brewing`
                     )
