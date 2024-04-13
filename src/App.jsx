@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
 import { updateEmail } from "./store/action";
 import { useSelector } from "react-redux";
-import axios from "axios";
 
 //Components
 import {
@@ -21,8 +20,6 @@ import {
   Brewing,
 } from "./components";
 import { getAuth } from "./api/getAuth";
-
-const heroku = process.env.REACT_APP_HEROKU_URL;
 
 export default function App() {
   const dispatch = useDispatch();
