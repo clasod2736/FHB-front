@@ -88,13 +88,13 @@ export default function App() {
         console.log(response);
 
         if (response) {
-          console.log(response.data.userEmail);
+          console.log(`User ${response.data.userEmail} approved authentication`);
           dispatch(updateEmail(response.data.userEmail));
           dispatch({ type: "loginSuccess" });
-          console.log("token approved");
 
           if (response.data.newAccessToken) {
             localStorage.setItem("accessToken", response.data.newAccessToken);
+            console.log("New access token generated");
           }
         } else {
           dispatch({ type: "loggedOut" });
