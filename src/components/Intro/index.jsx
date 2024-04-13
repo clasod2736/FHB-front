@@ -25,6 +25,7 @@ export default function Intro() {
     const fetchData = async () => {
       if (isLogIn) {
         const fetchedRecentBrew = await getRecentbrews(userEmail);
+        console.log(fetchedRecentBrew.response.status);
 
         if (fetchedRecentBrew.response.status === 404) {
           setRecentBrew(false);
