@@ -104,14 +104,15 @@ export default function App() {
     //   }
     // };
     const response = getAuth();
+    console.log(response);
 
     if (response) {
-      console.log(`User ${response.data.userEmail} approved authentication`);
-      dispatch(updateEmail(response.data.userEmail));
+      console.log(`User ${response.data.data.userEmail} approved authentication`);
+      dispatch(updateEmail(response.data.data.userEmail));
       dispatch({ type: "loginSuccess" });
 
       if (response.data.newAccessToken) {
-        localStorage.setItem("accessToken", response.data.newAccessToken);
+        localStorage.setItem("accessToken", response.data.data.newAccessToken);
         console.log("New access token generated");
       }
     } else {
