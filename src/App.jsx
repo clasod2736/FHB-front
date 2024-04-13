@@ -88,15 +88,13 @@ export default function App() {
         console.log(response);
 
         if (response) {
-          console.log(response.data.email);
-          dispatch(updateEmail(response.data.email));
+          console.log(response.data.userEmail);
+          dispatch(updateEmail(response.data.userEmail));
           dispatch({ type: "loginSuccess" });
           console.log("token approved");
-          console.log(response);
         } else {
           dispatch({ type: "loggedOut" });
           console.log("token rejected...");
-          console.log(response.data.data.email + "logged in");
         }
       } catch (error) {
         console.log(error);
