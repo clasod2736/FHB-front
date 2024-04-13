@@ -5,8 +5,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
 import { updateEmail } from "./store/action";
-import axios from "axios";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 //Components
 import {
@@ -20,6 +20,7 @@ import {
   MyRecipe,
   Brewing,
 } from "./components";
+import { getAuth } from "./api/getAuth";
 
 const heroku = process.env.REACT_APP_HEROKU_URL;
 
@@ -82,30 +83,44 @@ export default function App() {
 
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
-    const getAuth = async () => {
-      try {
-        const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
-        console.log(response);
+    // const getAuth = async () => {
+    //   try {
+    //     const response = await axios.get(`${heroku}/isAuth`, { withCredentials: true });
+    //     console.log(response);
 
-        if (response) {
-          console.log(`User ${response.data.userEmail} approved authentication`);
-          dispatch(updateEmail(response.data.userEmail));
-          dispatch({ type: "loginSuccess" });
+    //     if (response) {
+    //       console.log(`User ${response.data.userEmail} approved authentication`);
+    //       dispatch(updateEmail(response.data.userEmail));
+    //       dispatch({ type: "loginSuccess" });
 
-          if (response.data.newAccessToken) {
-            localStorage.setItem("accessToken", response.data.newAccessToken);
-            console.log("New access token generated");
-          }
-        } else {
-          dispatch({ type: "loggedOut" });
-          console.log("token rejected...");
-        }
-      } catch (error) {
-        console.log(error);
-        console.log("User need to logIn");
+    //       if (response.data.newAccessToken) {
+    //         localStorage.setItem("accessToken", response.data.newAccessToken);
+    //         console.log("New access token generated");
+    //       }
+    //     } else {
+    //       dispatch({ type: "loggedOut" });
+    //       console.log("token rejected...");
+    //     }
+    //   } catch (error) {
+    //     console.log(error);
+    //     console.log("User need to logIn");
+    //   }
+    // };
+    const response = getAuth();
+
+    if (response) {
+      console.log(`User ${response.data.userEmail} approved authentication`);
+      dispatch(updateEmail(response.data.userEmail));
+      dispatch({ type: "loginSuccess" });
+
+      if (response.data.newAccessToken) {
+        localStorage.setItem("accessToken", response.data.newAccessToken);
+        console.log("New access token generated");
       }
-    };
-    getAuth();
+    } else {
+      dispatch({ type: "loggedOut" });
+      console.log("token rejected...");
+    }
   }, [dispatch]);
 
   return (

@@ -34,7 +34,7 @@ export default function Intro() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBtns(true);
-    }, 1500);
+    }, 1800);
 
     return () => clearTimeout(timer);
   }, []);
