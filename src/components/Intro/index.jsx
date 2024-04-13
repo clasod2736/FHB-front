@@ -26,7 +26,7 @@ export default function Intro() {
       if (isLogIn) {
         const fetchedRecentBrew = await getRecentbrews(userEmail);
         console.log(fetchedRecentBrew);
-        // setRecentBrew(fetchedRecentBrew);
+        setRecentBrew(fetchedRecentBrew);
       }
     };
     fetchData();
