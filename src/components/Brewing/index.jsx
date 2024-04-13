@@ -24,8 +24,7 @@ export default function Brewing() {
 
   //preloading gifs
   useEffect(() => {
-    const preloading = gifArr(methodName);
-    console.log(methodName, preloading);
+    gifArr(methodName);
   }, [methodName]);
 
   //Mobile setup

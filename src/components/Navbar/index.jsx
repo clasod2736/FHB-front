@@ -33,15 +33,7 @@ export default function Navbar() {
     }
   };
 
-  //update logIn information to local strogae, redux store
   const logOut = async () => {
-    // const localInfo = localStorage.getItem('userInfo');
-    //     const userInfo = JSON.parse(localInfo);
-    //     userInfo.userEmail = '';
-    //     userInfo.isLoggedIn = false;
-    //     localStorage.setItem('userInfo', JSON.stringify(userInfo));
-
-    //   }
     dispatch(updateEmail(""));
     dispatch({ type: "loggedOut" });
     localStorage.removeItem("accessToken");

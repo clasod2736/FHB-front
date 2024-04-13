@@ -35,8 +35,7 @@ export default function Methods() {
 
   //preloading gifs
   useEffect(() => {
-    const preloading = gifArr(method);
-    console.log(method, preloading);
+    gifArr(method);
   }, [method]);
 
   //Get props from child component(all the mothod components)

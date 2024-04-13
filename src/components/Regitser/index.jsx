@@ -32,14 +32,13 @@ export default function Register() {
       navigate("/");
     } else
       try {
-        const response = await axios.post(serverUrl, {
+        await axios.post(serverUrl, {
           email: email,
           password: password,
           oldBrews: [],
           favourites: [],
         });
 
-        console.log(response.data);
         alert("User  " + email + "  Registered!!");
         navigate(-1);
       } catch (error) {
