@@ -93,7 +93,9 @@ export default function App() {
           dispatch({ type: "loginSuccess" });
           console.log("token approved");
 
-          localStorage.setItem("accesstoken", response.data.newAccessToken);
+          if (response.data.newAccessToken) {
+            localStorage.setItem("accesstoken", response.data.newAccessToken);
+          }
         } else {
           dispatch({ type: "loggedOut" });
           console.log("token rejected...");
