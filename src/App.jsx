@@ -63,6 +63,7 @@ export default function App() {
       if (response.status === 404) {
         console.log("token access denied");
         dispatch({ type: "loggedOut" });
+        return;
       } else if (response) {
         console.log(`User ${response.data.userEmail} approved authentication`);
         dispatch(updateEmail(response.data.userEmail));
