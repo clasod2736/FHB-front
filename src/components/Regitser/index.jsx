@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Regitser.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -18,6 +18,10 @@ export default function Register() {
   const navigate = useNavigate();
 
   const heroku = process.env.REACT_APP_HEROKU_URL;
+
+  useEffect(() => {
+    if (isLogIn) navigate("/");
+  });
 
   //post user data in mongoDB
   const postUser = async () => {

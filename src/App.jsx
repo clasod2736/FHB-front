@@ -35,7 +35,7 @@ export default function App() {
       children: [
         { index: true, element: <Intro /> },
         { path: "/login", element: <Login /> },
-        { path: "/register", element: isLogIn ? <Register /> : <Login /> },
+        { path: "/register", element: <Register /> },
         { path: "/myRecipe", element: isLogIn ? <MyRecipe /> : <Login /> },
         { path: "/menu", element: isLogIn ? <Menu /> : <Login /> },
         { path: "/menu/:menuName/method", element: isLogIn ? <Methods /> : <Login /> },

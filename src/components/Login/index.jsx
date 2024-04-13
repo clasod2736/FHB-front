@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -20,6 +20,10 @@ export default function Login() {
 
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    if (isLogIn) navigate("/");
+  });
 
   // Get api from database for userinformation.
   const getLogIn = async () => {
