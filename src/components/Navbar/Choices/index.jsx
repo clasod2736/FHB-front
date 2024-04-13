@@ -55,7 +55,7 @@ export default function Choices({ click }) {
       }
     } catch (error) {
       console.log(error);
-      alert("Your favs over the 5, You can managing them in My Recipe page.");
+      alert("Your favs over the 5 or none, You can managing them in My Recipe page.");
     }
   };
 
