@@ -29,7 +29,7 @@ export default function Login() {
       return;
     } else if (isLogIn) {
       alert("You Logged In Already.");
-      navigate(-2);
+      navigate("");
       return;
     }
 
@@ -44,7 +44,7 @@ export default function Login() {
       //         isLoggedIn : true
       //     }
       // ))
-      navigate(`/`);
+      navigate(-1);
     }
   };
 
