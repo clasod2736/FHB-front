@@ -37,7 +37,7 @@ export default function Register() {
 
         console.log(response.data);
         alert("User  " + email + "  Registered!!");
-        navigate(-2);
+        navigate(-1);
       } catch (error) {
         console.log(error);
         setCaution("emailExist");
