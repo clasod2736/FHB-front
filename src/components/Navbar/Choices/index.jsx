@@ -123,7 +123,7 @@ export default function Choices({ click }) {
               </div>
             </div>
           ) : (
-            <header>Loading or No history.</header>
+            <header>No history.</header>
           )}
           <div className="btn-container">
             <button
