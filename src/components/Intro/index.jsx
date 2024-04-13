@@ -29,8 +29,7 @@ export default function Intro() {
 
         if (fetchedRecentBrew.response.status === 404) {
           setRecentBrew(false);
-        }
-        setRecentBrew(fetchedRecentBrew);
+        } else setRecentBrew(fetchedRecentBrew);
       }
     };
     fetchData();
