@@ -8,7 +8,7 @@ export const getAuth = async () => {
     return response;
   } catch (error) {
     console.log(error);
-    return error;
+    return error.response;
   }
 };
 
