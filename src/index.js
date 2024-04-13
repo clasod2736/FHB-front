@@ -15,7 +15,7 @@ axios.interceptors.request.use(
     const accessToken = localStorage.getItem("accessToken");
     const refreshToken = localStorage.getItem("refreshToken");
 
-    if (!accessToken || !refreshToken) {
+    if (!refreshToken) {
       return config;
     }
 

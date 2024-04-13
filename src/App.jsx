@@ -98,8 +98,6 @@ export default function App() {
           console.log("token rejected...");
           console.log(response.data.data.email + "logged in");
         }
-
-        console.log(response);
       } catch (error) {
         console.log(error);
         console.log("User need to logIn");
