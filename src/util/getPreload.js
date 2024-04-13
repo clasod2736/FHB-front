@@ -1,16 +1,10 @@
 import menuArr from "../util/StuffData/menu.json";
-import methodStpes from "../util/StuffData/methodSteps.json";
+import methodSteps from "../util/StuffData/MethodSteps.json";
 
 const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
   name,
   img: data.find((item) => item.img)?.img,
 }));
-
-export const gifArr = Object.entries(methodStpes).flatMap(([name, steps]) =>
-  steps.flatMap((step) =>
-    step.step.filter((item) => item.gif).map((item) => ({ name: name, gif: item.gif }))
-  )
-);
 
 export function preloadingMenuImg() {
   menuImgArr.forEach((img) => {
@@ -26,4 +20,18 @@ export const preloadImg = (imgAdd) => {
   console.log("Final logo preloaded.");
 };
 
-export function getPreloadGifs() {}
+export function gifArr(methodName) {
+  const methodObj = methodSteps[methodName];
+  if (!methodObj) {
+    return [];
+  }
+
+  const gifs = methodObj.flatMap(({ step }) => step.map(({ gif }) => gif)).filter(Boolean);
+
+  gifs.forEach((gifUrl) => {
+    const image = new Image();
+    image.src = gifUrl;
+  });
+
+  return gifs;
+}

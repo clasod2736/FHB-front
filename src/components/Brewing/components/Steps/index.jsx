@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Steps.css";
 import { useParams, useNavigate } from "react-router-dom";
-import methodSteps from "../../../../util/StuffData/methodSteps.json";
+import methodSteps from "../../../../util/StuffData/MethodSteps.json";
 import menuSteps from "../../../../util/StuffData/MenuSteps.json";
 
 export default function Steps({ isMobile }) {

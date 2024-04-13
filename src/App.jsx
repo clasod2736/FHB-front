@@ -22,7 +22,6 @@ import {
   Brewing,
 } from "./components";
 import { getAuth } from "./api/getAuth";
-import { gifArr } from "./util/getPreload";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -78,9 +77,6 @@ export default function App() {
     };
     Auth();
   }, [dispatch]);
-
-  const data = gifArr;
-  console.log(data);
 
   return (
     <div className="appContainer">
