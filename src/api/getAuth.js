@@ -8,7 +8,6 @@ export const getAuth = async () => {
     return response;
   } catch (error) {
     console.log(error);
-    console.log("User need to logIn");
     return error;
   }
 };
