@@ -6,13 +6,14 @@ const menuImgArr = Object.entries(menuArr).map(([name, data]) => ({
   img: data.find((item) => item.img)?.img,
 }));
 
-export const gifArr = Object.entries(methodStpes).flatMap(([name, steps]) =>
+const gifArr = Object.entries(methodStpes).flatMap(([name, steps]) =>
   steps.flatMap((step) =>
     step.step.filter((item) => item.gif).map((item) => ({ name: name, gif: item.gif }))
   )
 );
 
 export function preloadingMenuImg() {
+  console.log(menuImgArr);
   menuImgArr.forEach((img) => {
     const image = new Image();
     image.src = img.img;
