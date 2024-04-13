@@ -45,14 +45,10 @@ export default function Navbar() {
     //     localStorage.setItem('userInfo', JSON.stringify(userInfo));
 
     //   }
-    try {
-      const response = await axios.get(`${heroku}/logOut`, { withCredentials: true });
-      console.log(response);
-      dispatch(updateEmail(""));
-      dispatch({ type: "loggedOut" });
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(updateEmail(""));
+    dispatch({ type: "loggedOut" });
+    localStorage.removeItem("acesstoken");
+    localStorage.removeItem("refreshToken");
   };
 
   return (
