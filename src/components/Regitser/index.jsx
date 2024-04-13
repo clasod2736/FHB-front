@@ -25,7 +25,7 @@ export default function Register() {
 
     if (isLogIn) {
       alert("You Already Logged In.");
-      navigate(-1);
+      navigate("/");
     } else
       try {
         const response = await axios.post(serverUrl, {
@@ -37,7 +37,7 @@ export default function Register() {
 
         console.log(response.data);
         alert("User  " + email + "  Registered!!");
-        navigate(`/login`);
+        navigate(-1);
       } catch (error) {
         console.log(error);
         setCaution("emailExist");
