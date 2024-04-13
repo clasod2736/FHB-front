@@ -60,7 +60,10 @@ export default function App() {
     const Auth = async () => {
       const response = await getAuth();
 
-      if (response) {
+      if (response.status === 404) {
+        console.log("token access denied");
+        dispatch({ type: "loggedOut" });
+      } else if (response) {
         console.log(`User ${response.data.userEmail} approved authentication`);
         dispatch(updateEmail(response.data.userEmail));
         dispatch({ type: "loginSuccess" });
@@ -69,9 +72,6 @@ export default function App() {
           localStorage.setItem("accessToken", response.data.newAccessToken);
           console.log("New access token generated");
         }
-      } else {
-        dispatch({ type: "loggedOut" });
-        console.log("token rejected...");
       }
     };
     Auth();
