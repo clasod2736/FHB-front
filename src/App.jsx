@@ -3,6 +3,8 @@ import "./App.css";
 import Root from "./Root/Root";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+//Redux
 import { useDispatch } from "react-redux";
 import { updateEmail } from "./store/action";
 import { useSelector } from "react-redux";
@@ -56,7 +58,7 @@ export default function App() {
   //use JWT Token for authentication and keep user logIn
   useEffect(() => {
     const Auth = async () => {
-      const response = async () => await getAuth();
+      const response = await getAuth();
       console.log(response);
 
       if (response) {
