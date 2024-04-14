@@ -16,6 +16,6 @@ export async function getRecentbrews(userEmail) {
     return response;
   } catch (error) {
     console.log(error.response);
-    return error;
+    return error.response;
   }
 }
