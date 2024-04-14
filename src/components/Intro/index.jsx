@@ -27,7 +27,7 @@ export default function Intro() {
         const fetchedRecentBrew = await getRecentbrews(userEmail);
         console.log(fetchedRecentBrew.status);
 
-        if (fetchedRecentBrew.response.status === 404) {
+        if (!fetchedRecentBrew) {
           setRecentBrew(false);
         } else setRecentBrew(fetchedRecentBrew);
       }
