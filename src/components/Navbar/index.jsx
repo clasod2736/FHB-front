@@ -4,12 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateEmail } from "../../store/action";
 
+import { getLoggedOut } from "../../api/getLoggedOut";
+
 //Slide Menu component (react-bootstrap)
 import SlideMenu from "./SlideMenu";
 import Choices from "./Choices";
 
 export default function Navbar() {
   const isLogIn = useSelector((state) => state.logIn);
+  const userEmail = useSelector((state) => state.userEmail);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -34,10 +37,16 @@ export default function Navbar() {
   };
 
   const logOut = async () => {
-    dispatch(updateEmail(""));
-    dispatch({ type: "loggedOut" });
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("refreshToken");
+    try {
+      await getLoggedOut(userEmail);
+
+      dispatch(updateEmail(""));
+      dispatch({ type: "loggedOut" });
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
