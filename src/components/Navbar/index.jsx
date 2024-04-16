@@ -73,8 +73,8 @@ export default function Navbar() {
         <Link
           className="logOut"
           to={"/"}
-          onClick={() => {
-            logOut();
+          onClick={async () => {
+            await logOut();
           }}
         >
           Log Out
