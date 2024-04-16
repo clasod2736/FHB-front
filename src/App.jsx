@@ -60,7 +60,7 @@ export default function App() {
     const Auth = async () => {
       const response = await getAuth();
 
-      if (response.status === 404) {
+      if (response.status === 404 || !response) {
         console.log("User need to logIn");
         dispatch({ type: "loggedOut" });
         return;
